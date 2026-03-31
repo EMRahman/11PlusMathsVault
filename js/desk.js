@@ -46,7 +46,7 @@ export function init(questions) {
 // ── Filter controls ───────────────────────────────────────────
 
 function _bindFilterControls() {
-  document.getElementById('desk-start-btn')?.addEventListener('click', _startSession);
+  document.getElementById('desk-start-btn')?.addEventListener('click', () => _startSession());
 }
 
 function _buildFilteredSet() {
@@ -77,7 +77,7 @@ function _buildFilteredSet() {
 // ── Session lifecycle ─────────────────────────────────────────
 
 function _startSession(questionsOverride) {
-  _sessionQuestions = questionsOverride ?? _buildFilteredSet();
+  _sessionQuestions = Array.isArray(questionsOverride) ? questionsOverride : _buildFilteredSet();
   _currentIndex   = 0;
   _sessionResults = [];
   _sessionActive  = true;
