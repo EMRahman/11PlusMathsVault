@@ -18,6 +18,7 @@ let _allQuestions   = [];
 let _currentSet     = [];   // filtered + shuffled subset
 let _currentIndex   = 0;
 let _answerRevealed = false;
+let _selectedIndex  = -1;
 let _timerOn        = false;
 let _timerInterval  = null;
 let _timerRemaining = 0;
@@ -34,6 +35,7 @@ export function init(questions) {
   _timerOn = getSettings().walkTimer;
   _currentIndex   = 0;
   _answerRevealed = false;
+  _selectedIndex  = -1;
 
   _bindFilterControls();
   _applyFilters();
@@ -56,6 +58,7 @@ function _bindFilterControls() {
     _shuffle(_currentSet);
     _currentIndex   = 0;
     _answerRevealed = false;
+    _selectedIndex  = -1;
     _stopTimer();
     _renderCard();
   });
@@ -77,6 +80,7 @@ function _applyFilters() {
 
   _currentIndex   = 0;
   _answerRevealed = false;
+  _selectedIndex  = -1;
   _stopTimer();
   _renderCard();
 }
@@ -127,7 +131,7 @@ function _renderCard() {
 
       <ul class="options-list" role="list">
         ${q.options.map((opt, i) => `
-          <li class="option-item" role="listitem">
+          <li class="option-item${_selectedIndex === i ? ' option-item--selected' : ''}" role="button" tabindex="0" data-index="${i}" aria-pressed="${_selectedIndex === i}">
             <span class="option-label">${String.fromCharCode(65 + i)}</span>
             <span>${_escHtml(opt)}</span>
           </li>`).join('')}
@@ -161,10 +165,15 @@ function _revealAnswer(q) {
   const section = document.getElementById('walk-answer-section');
   if (!section) return;
 
-  // Highlight correct option
+  // Highlight correct option; mark selected-but-wrong option in red
   const items = document.querySelectorAll('.option-item');
   items.forEach((item, i) => {
-    if (i === q.answer_index) item.classList.add('option-item--correct');
+    item.classList.remove('option-item--selected');
+    if (i === q.answer_index) {
+      item.classList.add('option-item--correct');
+    } else if (i === _selectedIndex) {
+      item.classList.add('option-item--wrong');
+    }
   });
 
   section.innerHTML = `
@@ -213,6 +222,19 @@ function _revealAnswer(q) {
 // ── Card event binding ────────────────────────────────────────
 
 function _bindCardEvents(q) {
+  document.querySelectorAll('.option-item').forEach(item => {
+    const handler = () => {
+      if (_answerRevealed) return;
+      _selectedIndex = Number(item.dataset.index);
+      document.querySelectorAll('.option-item').forEach((el, j) => {
+        el.classList.toggle('option-item--selected', j === _selectedIndex);
+        el.setAttribute('aria-pressed', j === _selectedIndex ? 'true' : 'false');
+      });
+    };
+    item.addEventListener('click', handler);
+    item.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handler(); } });
+  });
+
   document.getElementById('walk-show-answer-btn')?.addEventListener('click', () => {
     if (!_answerRevealed) _revealAnswer(q);
   });
@@ -244,6 +266,7 @@ function _navigate(direction) {
   if (next < 0 || next >= _currentSet.length) return;
   _currentIndex   = next;
   _answerRevealed = false;
+  _selectedIndex  = -1;
   _stopTimer();
   _renderCard();
 }
