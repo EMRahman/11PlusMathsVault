@@ -336,6 +336,11 @@ img { display: block; max-width: 100%; }
   font-size: var(--text-lg);
   transition: border-color var(--transition), background var(--transition);
   min-height: 52px;
+  cursor: pointer;
+  user-select: none;
+}
+.option-item:hover:not(.option-item--correct):not(.option-item--selected):not(.option-item--wrong) {
+  border-color: var(--color-text-muted);
 }
 
 .option-label {
@@ -358,6 +363,22 @@ img { display: block; max-width: 100%; }
 }
 .option-item--correct .option-label {
   background: var(--color-correct);
+  color: #fff;
+}
+.option-item--selected {
+  border-color: var(--color-walk);
+  background: var(--color-walk-bg);
+}
+.option-item--selected .option-label {
+  background: var(--color-walk);
+  color: #fff;
+}
+.option-item--wrong {
+  border-color: var(--color-incorrect);
+  background: var(--color-incorrect-bg);
+}
+.option-item--wrong .option-label {
+  background: var(--color-incorrect);
   color: #fff;
 }
 
