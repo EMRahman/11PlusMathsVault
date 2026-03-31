@@ -25,8 +25,9 @@ const UNITS_TO_STRIP = [
   'ml', 'cl', 'dl',
   'm²', 'm³',
   '£', '€', '$',
-  'to',   // "4 to 1" ratio form handled separately
   '°', '%',
+  // NOTE: 'to' is intentionally NOT stripped here.
+  // "4 to 1" ratio form is handled by the regex below after unit stripping.
   // bare 'm' last — must not strip 'm' from 'cm'
   ' m',
 ];

@@ -43,8 +43,8 @@ export function initState() {
     write(KEYS.version, SCHEMA_VERSION);
   } else if (stored !== SCHEMA_VERSION) {
     // Future migrations would be handled here by version number.
-    // For now, clear and start fresh.
-    localStorage.clear();
+    // For now, wipe only this app's keys (not the whole origin).
+    _clearAppKeys();
     write(KEYS.version, SCHEMA_VERSION);
   }
 }
@@ -150,6 +150,10 @@ function _isoDate(date) {
 
 /** Clears all app data and re-stamps the schema version. */
 export function resetAll() {
-  localStorage.clear();
+  _clearAppKeys();
   write(KEYS.version, SCHEMA_VERSION);
+}
+
+function _clearAppKeys() {
+  Object.values(KEYS).forEach(key => localStorage.removeItem(key));
 }

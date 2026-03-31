@@ -192,10 +192,14 @@ function _revealAnswer(q) {
   const showBtn = document.getElementById('walk-show-answer-btn');
   if (showBtn) showBtn.style.display = 'none';
 
-  // Bind quick-result buttons
+  // Bind quick-result buttons — only the first click records a result
+  let resultRecorded = false;
   section.querySelectorAll('[data-result]').forEach(btn => {
     btn.addEventListener('click', () => {
-      recordResult(q.id, btn.dataset.result);
+      if (!resultRecorded) {
+        recordResult(q.id, btn.dataset.result);
+        resultRecorded = true;
+      }
       // Dim all result buttons, highlight selected
       section.querySelectorAll('[data-result]').forEach(b => b.style.opacity = '0.4');
       btn.style.opacity = '1';
