@@ -594,7 +594,7 @@ function _render() {
       <h2 id="hacks-title">Common maths hacks</h2>
       <p>${totalHacks} hacks across ${HACK_SECTIONS.length} topic areas — the shortcuts most often discussed by tutors and parents. Learn the rule, look at the example, then test yourself in the quiz below.</p>
       <nav class="hack-toc" aria-label="Hack sections">
-        ${HACK_SECTIONS.map(s => `<a href="#hack-section-${s.id}" class="hack-toc__link">${s.title}</a>`).join('')}
+        ${HACK_SECTIONS.map(s => `<button type="button" class="hack-toc__link" data-target="hack-section-${s.id}">${s.title}</button>`).join('')}
       </nav>
     </section>
 
@@ -665,6 +665,13 @@ function _renderQuizQuestion(item, index) {
 }
 
 function _bindQuiz(area) {
+  area.querySelectorAll('.hack-toc__link').forEach(link => {
+    link.addEventListener('click', () => {
+      const target = document.getElementById(link.dataset.target);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
   area.querySelectorAll('input[type="radio"]').forEach(input => {
     input.addEventListener('change', () => {
       _answers.set(input.name, input.value);
