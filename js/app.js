@@ -19,6 +19,7 @@ import { initRouter } from './router.js';
 import * as walk  from './walk.js';
 import * as desk  from './desk.js';
 import * as stats from './stats.js';
+import * as hacks from './hacks.js';
 
 async function main() {
   // Show loading overlay (it's visible by default in HTML)
@@ -40,6 +41,7 @@ async function main() {
     initRouter(questions, {
       walk:     walk,
       desk:     desk,
+      hacks:    hacks,
       stats:    stats,
       settings: { init: _initSettings },
     });

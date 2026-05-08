@@ -10,6 +10,7 @@ const ROUTES = {
   '/':         'home',
   '/walk':     'walk',
   '/desk':     'desk',
+  '/hacks':    'hacks',
   '/stats':    'stats',
   '/settings': 'settings',
 };
@@ -21,7 +22,7 @@ let _modules   = {};
  * Initialises the router.
  *
  * @param {object[]} questions  — full question array
- * @param {object}   modules   — { walk, desk, stats, settings }
+ * @param {object}   modules   — { walk, desk, hacks, stats, settings }
  *   Each module must export an `init(questions?)` function.
  */
 export function initRouter(questions, modules) {
