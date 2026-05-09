@@ -2,32 +2,47 @@
 
 A lightweight, static web app for Year 5/6 maths practice tailored to Nonsuch-style 11+ preparation.
 
-## What this repo contains
+**Live site: [emrahman.github.io/11PlusMathsVault](https://emrahman.github.io/11PlusMathsVault/)**
 
-- **Walk Mode**: quick verbal, multiple-choice questions for parent/child practice on the go.
-- **Desk Mode**: written, open-answer questions for seated practice.
-- **Question bank**: JSON-based dataset covering core KS2/11+ topics.
-- **Local progress tracking**: bookmarks, settings, and session data stored in `localStorage`.
+---
+
+## Features
+
+- **Walk Mode** — quick verbal, multiple-choice questions for parent/child practice on the go
+- **Desk Mode** — written, open-answer questions for seated practice
+- **Question bank** — JSON-based dataset covering core KS2/11+ topics
+- **Progress tracking** — bookmarks, settings, and session data stored in `localStorage` (no account needed)
 
 ## Tech stack
 
-- Vanilla **HTML/CSS/JavaScript** (no frameworks)
-- No build step, no backend, no external API dependency
-- Suitable for static hosting (e.g. GitHub Pages)
+- Vanilla **HTML/CSS/JavaScript** — no frameworks, no build step, no backend
+- Zero external dependencies
+- Hosted on GitHub Pages
 
 ## Project layout
 
-- `index.html` — app shell
-- `css/style.css` — styling
-- `js/` — app logic (routing, mode flows, state, validation, stats)
-- `data/questions.json` — question dataset
-- `SPEC.md` — full product and content specification
+```
+index.html          app shell
+css/
+  style.css         styling
+js/
+  app.js            app entry point
+  router.js         client-side routing
+  walk.js           Walk Mode logic
+  desk.js           Desk Mode logic
+  state.js          shared state management
+  stats.js          progress and statistics
+  validate.js       answer validation
+  hacks.js          browser quirk workarounds
+data/
+  questions.json    question dataset
+validate-data.js    data integrity validator (Node.js)
+SPEC.md             full product and content specification
+```
 
 ## Run locally
 
-Because this is a static app, open `index.html` directly in a browser, or serve the folder with any simple static server.
-
-Example:
+Open `index.html` directly in a browser, or serve with any static server:
 
 ```bash
 python3 -m http.server
@@ -37,14 +52,12 @@ Then visit `http://localhost:8000`.
 
 ## Data validation
 
-Use the included validator script:
-
 ```bash
 node validate-data.js
 ```
 
-This checks schema consistency and basic question-data integrity.
+Checks schema consistency and basic question-data integrity across the full question bank.
 
 ---
 
-For full product requirements, content rules, and UX details, see `SPEC.md`.
+For full product requirements, content rules, and UX details see [`SPEC.md`](SPEC.md).
