@@ -8,10 +8,9 @@
  * 5. Wires settings screen controls
  * 6. Hides loading overlay
  *
- * NOTE: Offline / PWA support is not implemented in v1.
- * The app requires a network connection (or local server) to load
- * questions.json. This is fine for typical home/school use over WiFi.
- * A service worker cache layer can be added in a future iteration.
+ * Offline support: a service worker (sw.js) caches the app shell and
+ * questions.json so Walk Mode works without a network. Registration is
+ * fire-and-forget — if it fails, the app behaves as if no SW were present.
  */
 
 import { initState, getSettings, updateSettings, resetAll } from './state.js';
@@ -115,3 +114,11 @@ function _initSettings() {
 // ── Boot ──────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', main);
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch((err) => {
+      console.warn('Service worker registration failed:', err);
+    });
+  });
+}
