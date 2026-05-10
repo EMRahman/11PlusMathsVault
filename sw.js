@@ -54,6 +54,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(req)
         .then((res) => {
+          if (!res.ok) return caches.match(req).then((cached) => cached || res);
           const copy = res.clone();
           caches.open(CACHE_VERSION).then((cache) => cache.put(req, copy));
           return res;
