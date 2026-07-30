@@ -1,0 +1,14 @@
+{
+  "name": "11+ Maths Vault",
+  "short_name": "11+ Vault",
+  "description": "Nonsuch-style 11+ maths practice for the walk and the desk.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#0f1117",
+  "theme_color": "#0f1117",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
