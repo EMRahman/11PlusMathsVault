@@ -10,7 +10,7 @@
  * cleared on the next visit.
  */
 
-const CACHE_VERSION = 'mathsvault-v1';
+const CACHE_VERSION = 'mathsvault-v2';
 
 const SHELL_ASSETS = [
   './',
@@ -25,6 +25,12 @@ const SHELL_ASSETS = [
   './js/validate.js',
   './js/hacks.js',
   './data/questions.json',
+  './favicon.svg',
+  './favicon.ico',
+  './apple-touch-icon.png',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
+  './site.webmanifest',
 ];
 
 self.addEventListener('install', (event) => {
