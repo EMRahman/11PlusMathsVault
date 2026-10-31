@@ -30,13 +30,15 @@
     </header>
     <main class="home-main">
       <p class="home-tagline">Nonsuch-style maths practice for the walk and the desk</p>
+      <section id="daily-home" class="daily-home" aria-label="Daily practice"></section>
+      <p id="bank-count" class="muted bank-count"></p>
       <div class="mode-cards">
         <a href="#/walk" class="mode-card mode-card--walk">
           <div class="mode-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="4" r="1.5"/><path d="M9 9l3-1 3 1M9 9l-2 5h10l-2-5M7 21l2-7M17 21l-2-7"/></svg>
           </div>
           <h2 class="mode-card__title">Walk Mode</h2>
-          <p class="mode-card__desc">Mental maths on the move. Parent reads, child answers.</p>
+          <p class="mode-card__desc">Short sessions to try aloud. Parent reads, child explains.</p>
           <span class="mode-card__badge">SET — Multiple Choice</span>
         </a>
         <a href="#/desk" class="mode-card mode-card--desk">
@@ -44,7 +46,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
           </div>
           <h2 class="mode-card__title">Desk Mode</h2>
-          <p class="mode-card__desc">Written problems with paper. Type your final answer.</p>
+          <p class="mode-card__desc">Hints, written practice, printable sets and exam sessions.</p>
           <span class="mode-card__badge">NWSSEE — Open Answer</span>
         </a>
         <a href="#/hacks" class="mode-card mode-card--hacks">
@@ -52,10 +54,18 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
           </div>
           <h2 class="mode-card__title">Common Hacks</h2>
-          <p class="mode-card__desc">Speed methods for percentages, ratios, averages, and mental arithmetic.</p>
+          <p class="mode-card__desc">Understand efficient methods, see why they work, then test yourself.</p>
           <span class="mode-card__badge">Revision — Mini Quiz</span>
         </a>
       </div>
+      <details class="parent-guide">
+        <summary>A quick guide for parents</summary>
+        <p>Start with daily practice, or choose a short walk. Ask your child to explain a method and check the answer. Use a hint when needed; supported work counts as practice, separately from independent accuracy.</p>
+        <p>For a paper-style session, open Desk Mode and choose SET multiple choice or NWSSEE written answers. You can skip, flag and return before submitting. Print a worksheet and its separate answer sheet for practice on paper.</p>
+        <p>The NWSSEE has written English and Maths papers, each lasting 40–50 minutes. Only the final maths answer is marked. Our original questions are practice materials; follow the school’s instructions for your child’s test.</p>
+        <p><a href="https://www.nonsuchschool.org/page/?pid=300&amp;title=Second+Stage+Entrance+Examination+(NWSSEE)" target="_blank" rel="noopener">Official Nonsuch guidance ↗</a> · <a href="https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study" target="_blank" rel="noopener">Maths curriculum ↗</a></p>
+        <p class="muted">Exam guidance checked October 2026. Progress stays in this browser. Offline reading voices depend on your device.</p>
+      </details>
     </main>
   </div>
 
@@ -82,13 +92,6 @@
     <div class="filter-bar" id="walk-filter-bar" role="search" aria-label="Filter questions">
       <select id="walk-topic-filter" class="filter-select" aria-label="Filter by topic">
         <option value="">All Topics</option>
-        <option value="number_operations">Number &amp; Arithmetic</option>
-        <option value="fractions">Fractions</option>
-        <option value="decimals">Decimals &amp; Place Value</option>
-        <option value="ratio">Ratio &amp; Proportion</option>
-        <option value="geometry">Geometry</option>
-        <option value="measures">Measures &amp; Units</option>
-        <option value="algebra">Algebra &amp; Sequences</option>
       </select>
       <select id="walk-difficulty-filter" class="filter-select" aria-label="Filter by difficulty">
         <option value="">All Difficulties</option>
@@ -100,6 +103,8 @@
         <option value="">All Questions</option>
         <option value="bookmarked">Bookmarked</option>
       </select>
+      <select id="walk-setsize-filter" class="filter-select" aria-label="Walk session size"><option value="5">Short walk · 5</option><option value="10">Longer walk · 10</option></select>
+      <select id="walk-oral-filter" class="filter-select" aria-label="Listening level"><option value="">All listening levels</option><option value="short">Easy to follow aloud</option><option value="steps">A few steps to remember</option><option value="visualise">Picture it in your mind</option></select>
       <button id="walk-shuffle-btn" class="filter-btn" aria-label="Shuffle questions">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
         Shuffle
@@ -131,16 +136,11 @@
       </nav>
     </header>
 
-    <div class="filter-bar" id="desk-filter-bar" role="search" aria-label="Filter questions">
+    <div class="filter-bar desk-filters" id="desk-filter-bar" role="search" aria-label="Choose your practice set">
+      <select id="desk-session-type" class="filter-select" aria-label="Session type"><option value="practice">Guided practice</option><option value="exam-set">Exam · SET choices</option><option value="exam-desk">Exam · NWSSEE written</option></select>
+      <label id="desk-exam-duration" hidden>Paper time <select id="desk-exam-minutes" class="filter-select" aria-label="Exam duration"><option value="40">40 minutes</option><option value="45" selected>45 minutes</option><option value="50">50 minutes</option></select></label>
       <select id="desk-topic-filter" class="filter-select" aria-label="Filter by topic">
         <option value="">All Topics</option>
-        <option value="number_operations">Number &amp; Arithmetic</option>
-        <option value="fractions">Fractions</option>
-        <option value="decimals">Decimals &amp; Place Value</option>
-        <option value="ratio">Ratio &amp; Proportion</option>
-        <option value="geometry">Geometry</option>
-        <option value="measures">Measures &amp; Units</option>
-        <option value="algebra">Algebra &amp; Sequences</option>
       </select>
       <select id="desk-difficulty-filter" class="filter-select" aria-label="Filter by difficulty">
         <option value="">All Difficulties</option>
@@ -155,7 +155,7 @@
       <select id="desk-setsize-filter" class="filter-select" aria-label="Set size">
         <option value="5">Quick 5</option>
         <option value="10" selected>Standard 10</option>
-        <option value="20">Full 20</option>
+        <option value="20">Longer 20</option><option value="50">Paper 50</option>
         <option value="all">All</option>
       </select>
       <button id="desk-start-btn" class="filter-btn filter-btn--start" aria-label="Start session">Start</button>
@@ -166,6 +166,11 @@
     </main>
   </div>
 
+
+  <div id="screen-daily" class="screen" role="main">
+    <header class="app-header app-header--desk"><a href="#/" class="back-btn">← Home</a><h1 class="screen-title">Daily practice</h1><a href="#/stats" class="back-btn">Progress</a></header>
+    <main class="question-area" id="daily-question-area"></main>
+  </div>
 
   <!-- ═══════════════════════════════════════════════════
        COMMON HACKS SCREEN
@@ -241,7 +246,7 @@
           <select id="setting-desk-setsize" class="filter-select" aria-label="Default set size">
             <option value="5">Quick 5</option>
             <option value="10">Standard 10</option>
-            <option value="20">Full 20</option>
+            <option value="20">Longer 20</option><option value="50">Paper 50</option>
           </select>
         </div>
       </div>

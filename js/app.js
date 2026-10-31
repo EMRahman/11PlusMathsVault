@@ -19,6 +19,8 @@ import * as walk  from './walk.js';
 import * as desk  from './desk.js';
 import * as stats from './stats.js';
 import * as hacks from './hacks.js';
+import * as daily from './daily.js';
+import { topicOptions } from './content.js';
 
 async function main() {
   // Show loading overlay (it's visible by default in HTML)
@@ -32,12 +34,17 @@ async function main() {
     const response = await fetch('data/questions.json');
     if (!response.ok) throw new Error(`Failed to load questions: ${response.status}`);
     const questions = await response.json();
+    for (const id of ['walk-topic-filter', 'desk-topic-filter']) {
+      document.getElementById(id).innerHTML = topicOptions();
+    }
 
     // Wire up settings screen
     _initSettings();
 
     // Start the router — modules receive questions on each route activation
     initRouter(questions, {
+      home:     { init: daily.home },
+      daily:    daily,
       walk:     walk,
       desk:     desk,
       hacks:    hacks,

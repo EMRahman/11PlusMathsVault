@@ -10,7 +10,7 @@
  * cleared on the next visit.
  */
 
-const CACHE_VERSION = 'mathsvault-v2';
+const CACHE_VERSION = 'mathsvault-v3';
 
 const SHELL_ASSETS = [
   './',
@@ -24,6 +24,11 @@ const SHELL_ASSETS = [
   './js/stats.js',
   './js/validate.js',
   './js/hacks.js',
+  './js/content.js',
+  './js/practice.js',
+  './js/daily.js',
+  './js/print.js',
+  './js/method-notes.js',
   './data/questions.json',
   './favicon.svg',
   './favicon.ico',
@@ -43,7 +48,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE_VERSION).map((k) => caches.delete(k)))
+      Promise.all(keys.filter((k) => k.startsWith('mathsvault-') && k !== CACHE_VERSION).map((k) => caches.delete(k)))
     ).then(() => self.clients.claim())
   );
 });

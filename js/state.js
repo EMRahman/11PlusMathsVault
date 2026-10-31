@@ -5,7 +5,7 @@
  * they never touch localStorage directly.
  */
 
-const SCHEMA_VERSION = 1;
+const SCHEMA_VERSION = 2;
 
 const KEYS = {
   version:   'mathsvault_schema_version',
@@ -13,6 +13,7 @@ const KEYS = {
   bookmarks: 'mathsvault_bookmarks',
   settings:  'mathsvault_settings',
   streak:    'mathsvault_streak',
+  daily:     'mathsvault_daily',
 };
 
 // ── Internal helpers ──────────────────────────────────────────
@@ -41,10 +42,17 @@ export function initState() {
   if (stored === null) {
     // First visit — just stamp the version
     write(KEYS.version, SCHEMA_VERSION);
-  } else if (stored !== SCHEMA_VERSION) {
-    // Future migrations would be handled here by version number.
-    // For now, wipe only this app's keys (not the whole origin).
-    _clearAppKeys();
+  } else if (stored < SCHEMA_VERSION) {
+    // Keep bookmarks, settings and progress. Only the most recent legacy
+    // discussion can be identified; older records did not store its count.
+    const progress = getProgress();
+    Object.values(progress).forEach(entry => {
+      if (entry.lastResult === 'discussed') {
+        entry.attempted = Math.max(entry.correct || 0, (entry.attempted || 0) - 1);
+        entry.discussed = 1;
+      }
+    });
+    write(KEYS.progress, progress);
     write(KEYS.version, SCHEMA_VERSION);
   }
 }
@@ -63,17 +71,29 @@ export function getProgress() {
  * @param {number} questionId
  * @param {'correct'|'incorrect'|'discussed'} result
  */
-export function recordResult(questionId, result) {
+export function recordResult(questionId, result, { assisted = false, usedSupport = false, now = new Date() } = {}) {
   const progress = getProgress();
   const entry = progress[questionId] ?? { attempted: 0, correct: 0 };
-  entry.attempted += 1;
-  if (result === 'correct') entry.correct += 1;
-  entry.lastResult = result;
-  entry.lastAttempted = new Date().toISOString();
+  const independent = !assisted && ['correct', 'incorrect'].includes(result);
+  if (independent) {
+    entry.attempted += 1;
+    if (result === 'correct') entry.correct += 1;
+  }
+  if (result === 'discussed') entry.discussed = (entry.discussed || 0) + 1;
+  else if (assisted || usedSupport || result === 'assisted') entry.supported = (entry.supported || 0) + 1;
+  const mastered = independent && result === 'correct' && !usedSupport;
+  entry.reviewLevel = mastered ? Math.min((entry.reviewLevel || 0) + 1, 5) : 0;
+  const days = mastered ? [1, 3, 7, 14, 30, 60][entry.reviewLevel] : 1;
+  entry.nextReview = new Date(now.getTime() + days * 86400000).toISOString();
+  entry.lastResult = assisted && result !== 'discussed' ? 'assisted' : result;
+  entry.lastAttempted = now.toISOString();
   progress[questionId] = entry;
   write(KEYS.progress, progress);
   _updateStreak();
 }
+
+export function getDaily() { return read(KEYS.daily, null); }
+export function saveDaily(plan) { write(KEYS.daily, plan); }
 
 // ── Bookmarks ─────────────────────────────────────────────────
 
@@ -131,10 +151,10 @@ export function getStreak() {
 
 function _updateStreak() {
   const streak = getStreak();
-  const today = _isoDate(new Date());
+  const today = localDate(new Date());
   if (streak.lastSessionDate === today) return; // already counted today
 
-  const yesterday = _isoDate(new Date(Date.now() - 86_400_000));
+  const yesterday = localDate(new Date(Date.now() - 86_400_000));
   streak.currentStreak = streak.lastSessionDate === yesterday
     ? streak.currentStreak + 1
     : 1;
@@ -142,8 +162,8 @@ function _updateStreak() {
   write(KEYS.streak, streak);
 }
 
-function _isoDate(date) {
-  return date.toISOString().slice(0, 10);
+export function localDate(date = new Date()) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 }
 
 // ── Reset ─────────────────────────────────────────────────────

@@ -10,6 +10,7 @@ const ROUTES = {
   '/':         'home',
   '/walk':     'walk',
   '/desk':     'desk',
+  '/daily':    'daily',
   '/hacks':    'hacks',
   '/stats':    'stats',
   '/settings': 'settings',
@@ -17,6 +18,7 @@ const ROUTES = {
 
 let _questions = [];
 let _modules   = {};
+let _activeModule;
 
 /**
  * Initialises the router.
@@ -47,6 +49,7 @@ function _onHashChange() {
 }
 
 function _showScreen(screenId) {
+  _activeModule?.dispose?.();
   // Hide all screens
   document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
 
@@ -59,7 +62,10 @@ function _showScreen(screenId) {
 
   // Call module init if registered
   const mod = _modules[screenId];
+  _activeModule = mod;
   if (mod?.init) {
     mod.init(_questions);
   }
+  target?.querySelector('h1')?.setAttribute('tabindex', '-1');
+  target?.querySelector('h1')?.focus({ preventScroll: true });
 }

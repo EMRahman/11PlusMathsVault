@@ -1,3 +1,6 @@
+import { METHOD_NOTES } from './method-notes.js';
+const EXTENSIONS = new Set(['square-fives', 'difference-squares', 'div-7', 'divide-fractions', 'reverse-percent', 'sdt-unit-convert', 'sdt-average-speed', 'nth-term-linear', 'parallel-lines', 'polygon-angles', 'pythagoras-stretch']);
+
 /**
  * hacks.js — Common 11+ maths hacks, organised by topic, plus a quick quiz.
  *
@@ -10,7 +13,7 @@ const HACK_SECTIONS = [
   {
     id: 'number-arithmetic',
     title: 'Number & Arithmetic',
-    intro: 'High-frequency mental arithmetic shortcuts that show up in nearly every SET paper.',
+    intro: 'Choose a method you understand and can check. Different numbers suit different approaches.',
     hacks: [
       {
         id: 'eleven-times',
@@ -21,7 +24,7 @@ const HACK_SECTIONS = [
       {
         id: 'times-five',
         title: '× 5 = halve, then × 10',
-        rule: 'Halving a number and adding a zero is faster than multiplying by 5 directly.',
+        rule: 'Multiply by 10, then halve. This works for decimals as well as whole numbers.',
         example: '48 × 5 = 24 × 10 = 240.',
       },
       {
@@ -82,7 +85,7 @@ const HACK_SECTIONS = [
       {
         id: 'div-3-9',
         title: 'Divisibility by 3 and 9',
-        rule: 'Add the digits. If the sum divides by 3, the number divides by 3. Same rule for 9.',
+        rule: 'Add the digits. If the sum is divisible by 3, the number is divisible by 3. The same rule holds for 9.',
         example: '4,752 → 4+7+5+2 = 18 → divisible by both 3 and 9.',
       },
       {
@@ -114,7 +117,7 @@ const HACK_SECTIONS = [
   {
     id: 'fractions',
     title: 'Fractions',
-    intro: 'The single biggest source of marks at 11+. Cancelling and converting fast wins time.',
+    intro: 'Connect equal parts, equivalent fractions and efficient calculation.',
     hacks: [
       {
         id: 'cancel-before',
@@ -157,7 +160,7 @@ const HACK_SECTIONS = [
   {
     id: 'percentages',
     title: 'Percentages',
-    intro: 'Anchor everything to 10% and 1%, then build up. The swap trick saves a third of the time on awkward percentages.',
+    intro: 'Anchor percentages to equal parts out of 100, then choose a convenient method.',
     hacks: [
       {
         id: 'ten-one-percent',
@@ -194,7 +197,7 @@ const HACK_SECTIONS = [
   {
     id: 'ratio-proportion',
     title: 'Ratio & Proportion',
-    intro: 'One of the highest-yield 11+ topics. Almost every Nonsuch-style paper has at least two ratio problems.',
+    intro: 'Find what the equal parts represent before calculating a share.',
     hacks: [
       {
         id: 'ratio-total-parts',
@@ -225,7 +228,7 @@ const HACK_SECTIONS = [
   {
     id: 'speed-distance-time',
     title: 'Speed, Distance & Time',
-    intro: 'Almost guaranteed to appear in NWSSEE Stage 2. Unit conversions are where most marks are dropped.',
+    intro: 'Relate distance, speed and time, and check that the units match.',
     hacks: [
       {
         id: 'sdt-triangle',
@@ -256,7 +259,7 @@ const HACK_SECTIONS = [
   {
     id: 'algebra-sequences',
     title: 'Algebra, Sequences & Function Machines',
-    intro: 'GL papers nearly always test sequences. Working backwards through a function machine is the most reliable method.',
+    intro: 'Explore patterns, inverse operations and relationships between numbers.',
     hacks: [
       {
         id: 'nth-term-linear',
@@ -293,7 +296,7 @@ const HACK_SECTIONS = [
   {
     id: 'geometry-measures',
     title: 'Geometry & Measures',
-    intro: 'Memorise the angle facts and area formulas — there is no time to derive them in the exam.',
+    intro: 'Understand the core shape facts first. Some formulas below are optional extensions.',
     hacks: [
       {
         id: 'angle-facts',
@@ -334,7 +337,7 @@ const HACK_SECTIONS = [
       {
         id: 'pythagoras-stretch',
         title: 'Recognise Pythagorean triples (stretch)',
-        rule: 'For top schools, spotting 3-4-5, 5-12-13 and their multiples avoids long calculation.',
+        rule: 'For right-angled triangles, 3-4-5, 5-12-13 and their multiples satisfy the Pythagorean relationship.',
         example: 'A right-angled triangle with legs 6 and 8 has hypotenuse 10 (a doubled 3-4-5).',
       },
     ],
@@ -353,7 +356,7 @@ const HACK_SECTIONS = [
       {
         id: 'hcf-lcm-product',
         title: 'HCF × LCM = product',
-        rule: 'For any two numbers, HCF × LCM equals the product of the two numbers. Useful for back-solving.',
+        rule: 'For two positive whole numbers, HCF × LCM equals their product. Useful for finding a missing value.',
         example: 'If HCF(a, b) = 6 and a × b = 432, then LCM = 432 ÷ 6 = 72.',
       },
       {
@@ -410,7 +413,7 @@ const HACK_SECTIONS = [
   {
     id: 'problem-solving',
     title: 'Problem-Solving & Exam Strategy',
-    intro: 'These are the meta-hacks that parents and tutors talk about most. They lift accuracy without learning new maths.',
+    intro: 'Plan the steps, explain the relationships and check the result.',
     hacks: [
       {
         id: 'bar-model',
@@ -426,8 +429,8 @@ const HACK_SECTIONS = [
       },
       {
         id: 'keyword-translate',
-        title: 'Translate the keywords',
-        rule: '"Of" = ×, "per" = ÷, "more than" = +, "difference" = −, "product" = ×, "sum" = +, "is" = equals.',
+        title: 'Translate the relationships',
+        rule: 'Describe how the quantities relate, then choose an operation. A word alone does not determine the calculation.',
         example: '"3 more than twice n" → 2n + 3.',
       },
       {
@@ -438,14 +441,14 @@ const HACK_SECTIONS = [
       },
       {
         id: 'pacing',
-        title: '60 seconds per question, then move on',
-        rule: 'On SET and most CEM-style papers, never let one question eat your time. Flag and skip, return at the end.',
-        example: 'A 50-question paper in 50 minutes = 1 minute per question, with no exceptions.',
+        title: 'Plan your time and return to difficult questions',
+        rule: 'Use the instructions and time for your paper. Move past a difficult question when needed, then return after answering others.',
+        example: 'A 50-minute practice set needs a sensible overall pace, with time to check. Some questions take longer than others.',
       },
       {
         id: 'multi-step-decompose',
         title: 'Decompose multi-step problems on paper',
-        rule: 'Before calculating, jot down the sub-quantities you actually need. Most lost marks come from solving the wrong sub-step.',
+        rule: 'Before calculating, jot down the quantities you actually need. Use each result to answer the next part of the problem.',
         example: '"Total cost after 15% discount" → write down (full price), then (discount), then (total).',
       },
       {
@@ -476,7 +479,7 @@ const QUIZ = [
   {
     sectionId: 'divisibility-rules',
     question: 'Which of these is divisible by 11?',
-    options: ['2,727', '2,728', '2,829', '3,003'],
+    options: ['2,727', '2,728', '2,829', '3,004'],
     answer: '2,728',
     explanation: 'For 2,728: (2+2) − (7+8) = −11, which is a multiple of 11.',
   },
@@ -590,9 +593,9 @@ function _render() {
 
   area.innerHTML = `
     <section class="hacks-hero" aria-labelledby="hacks-title">
-      <p class="hacks-kicker">Speed tricks for 11+</p>
+      <p class="hacks-kicker">Understand, practise, explain</p>
       <h2 id="hacks-title">Common maths hacks</h2>
-      <p>${totalHacks} hacks across ${HACK_SECTIONS.length} topic areas — the shortcuts most often discussed by tutors and parents. Learn the rule, look at the example, then test yourself in the quiz below.</p>
+      <p>${totalHacks} methods across ${HACK_SECTIONS.length} topic areas. Read the example, explore why it works and when to use it, then test yourself. Extension methods are optional.</p>
       <nav class="hack-toc" aria-label="Hack sections">
         ${HACK_SECTIONS.map(s => `<button type="button" class="hack-toc__link" data-target="hack-section-${s.id}">${s.title}</button>`).join('')}
       </nav>
@@ -632,8 +635,10 @@ function _renderSection(section) {
             <div class="hack-card__number">${index + 1}</div>
             <div class="hack-card__body">
               <h4>${hack.title}</h4>
+              ${EXTENSIONS.has(hack.id) ? '<span class="method-extension">Optional extension</span>' : ''}
               <p>${hack.rule}</p>
               <div class="hack-example"><strong>Example:</strong> ${hack.example}</div>
+              <details class="method-notes"><summary>Why it works · When to use it</summary><p><strong>Why:</strong> ${METHOD_NOTES[hack.id][0]}</p><p><strong>When:</strong> ${METHOD_NOTES[hack.id][1]}</p></details>
             </div>
           </article>
         `).join('')}
@@ -675,7 +680,7 @@ function _bindQuiz(area) {
   area.querySelectorAll('input[type="radio"]').forEach(input => {
     input.addEventListener('change', () => {
       _answers.set(input.name, input.value);
-      if (_submitted) _markQuestion(input.closest('.hack-quiz-card'));
+      if (_submitted) { _markQuestion(input.closest('.hack-quiz-card')); _renderScore(area); }
     });
   });
 
@@ -738,6 +743,6 @@ function _renderScore(area) {
 
   const result = area.querySelector('#hack-quiz-result');
   if (result) {
-    result.textContent = `Score: ${score}/${QUIZ.length}. ${score === QUIZ.length ? 'Brilliant — every shortcut is ready!' : 'Review the highlighted cards, then reset and try again.'}`;
+    result.textContent = `Score: ${score}/${QUIZ.length}. ${score === QUIZ.length ? 'Every answer is correct. Can you explain why the methods work?' : 'Review the highlighted cards, then reset and try again.'}`;
   }
 }
