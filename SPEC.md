@@ -1,5 +1,18 @@
 # Product Specification: 11+ Maths Vault
 
+## Implementation update — 30 October 2026
+
+The current app extends the original specification below. These additions take precedence where the original flows differ:
+
+- 210 main questions across ten balanced domains (12 Walk and 9 Desk per domain), including percentages, statistics and coordinates. Visual content uses declarative diagrams with text equivalents.
+- Each question adds `hints` (two steps), `parent_prompt`, and optional `diagram` and `answer_format`. Walk questions also have `oral_load` (`short`, `steps`, `visualise`) and `spoken_question`.
+- Daily practice selects up to ten minutes of target solving time, mixing due skills, weaker skills, new questions and revision. It persists the daily plan, answers and solving time locally.
+- Guided practice offers hints and retries before a solution, then a different question for the same skill. Independent first answers, supported answers and discussions are tracked separately.
+- Desk Mode also provides timed SET and NWSSEE practice, navigation, flags, review before submission and automatic submission at expiry. Worksheet and answer-sheet printing share one fixed set.
+- Walk Mode uses finishable sets of 5 or 10, optional choices, device speech and a session summary. Previously marked questions cannot be counted twice by navigating back.
+- Common Hacks includes a rationale and conditions for each method. Extension topics are identified; unsupported claims of topic frequency or time savings have been removed.
+- Storage schema 2 preserves earlier data. Legacy discussion history cannot be fully reconstructed because schema 1 retained only aggregate attempts and the last result.
+
 ## 1. Project Overview
 
 **11+ Maths Vault** (working title: `11PlusMathsVault`) is a lightweight, static web application that helps Year 5/6 students prepare for the Nonsuch High School for Girls 11+ entrance exams (SET and NWSSEE). It provides a curated bank of 210 original maths questions split across two distinct practice modes — **Walk Mode** (verbal/mental maths for parent-child practice on the go) and **Desk Mode** (written multi-step problems for seated practice with paper).
@@ -18,20 +31,20 @@ The Nonsuch 11+ has two stages. This app must reflect both:
 
 ### 3.1 Stage 1 — Selective Eligibility Test (SET)
 - **Format:** Multiple-choice (A–E), answers on a bubble sheet.
-- **Timing:** ~40–50 minutes for ~50 questions (~1 min per question).
+- **Timing:** 40–50 minutes per paper; follow current school instructions. Question counts and individual pacing are not guaranteed.
 - **Content:** KS2 maths curriculum. Topics evidenced in official sample questions: multi-step arithmetic, ratio word problems, fractions (simplifying), decimals (BODMAS/brackets), angles (triangle angle facts), fraction-of-a-shape/shading.
 - **Marking:** No negative marking. Distractors match common calculation errors.
 - **Key challenge:** Speed under time pressure.
 
 ### 3.2 Stage 2 — NWSSEE Maths
 - **Format:** Written open-answer (not multiple-choice). Multi-part sub-questions (a, b, c).
-- **Timing:** ~45 minutes.
+- **Timing:** 40–50 minutes per paper; practice offers 40, 45 or 50 minutes.
 - **Content:** Harder than SET. Evidenced topics: decimals in context (money/exchange rates), speed–distance–time, sequences/consecutive numbers, perimeter and geometry reasoning, unit conversions (g→kg), equivalent fractions, ratio linking area to volume.
 - **Marking:** No marks for working out — only the correct final answer scores. Difficulty is spread throughout the paper (not necessarily increasing).
 - **Key challenge:** Precision of final answer with no partial credit.
 
 ### 3.3 Weighting
-The final Nonsuch score = (SET aggregate ÷ 2) + NWSSEE English + NWSSEE Maths. In effect, Stage 2 is ~⅔ of the total score. Both stages matter but Stage 2 matters more.
+The current school guidance describes the final total as the SET score (re-standardised and divided by 2), plus the standardised NWSSEE English score and standardised NWSSEE Maths score. Use the school’s current admissions guidance for scoring details.
 
 ## 4. The Two Modes — Rationale
 
@@ -40,7 +53,7 @@ The app is built around a core insight: maths practice happens in two distinct p
 ### 4.1 Walk Mode
 - **Context:** Parent and child walking to school (~15 minutes). Parent holds the phone, reads questions aloud. Child answers verbally. No paper, no pencil.
 - **Question style:** MCQ with 5 options (A–E), solvable entirely in the head. Mirrors SET format.
-- **Pedagogy:** Builds mental arithmetic fluency, estimation, number sense, and MCQ elimination skills. Trains the rapid decision-making needed for SET's ~1-min-per-question pace.
+- **Pedagogy:** Builds mental arithmetic fluency, estimation, number sense, and MCQ elimination skills. Builds flexible pacing alongside fluency; there is no fixed time limit for each question.
 
 ### 4.2 Desk Mode
 - **Context:** Child sitting at a table with paper and pencil. Working independently or with parent nearby. ~20–30 minute sessions.
@@ -67,7 +80,7 @@ Every question in the bank is a JSON object with the following fields:
   "answer_index": 3,
   "answer_display": "D",
   "explanation": "38 × 24 = 38 × (6 × 4) = (38 × 6) × 4 = 228 × 4 = 912. Tip: break the multiplication into easier steps. You can also check: 38 × 25 = 950, so 38 × 24 = 950 − 38 = 912.",
-  "pitfall": "Common error: 38 × 24 ≈ 40 × 24 = 960 — but forgetting to subtract 2 × 24 = 48 gives wrong estimates. Option A (812) matches 38 × 21 (a digit slip).",
+  "pitfall": "Common error: 38 × 24 ≈ 40 × 24 = 960 — but forgetting to subtract 2 × 24 = 48 gives wrong estimates. Option A (812) is 100 too small; check that the partial product 38 × 4 is 152, not 52.",
   "unit": null,
   "time_target_seconds": 60
 }
@@ -132,7 +145,7 @@ Add an optional field:
 
 ## 6. Topic Taxonomy
 
-Seven domains, directly mapped from official SET/NWSSEE sample materials and KS2 programme of study:
+Ten domains, informed by the KS2 programme of study and SET/NWSSEE sample styles:
 
 ### 6.1 Topic Enum Values and Descriptions
 
@@ -145,21 +158,27 @@ Seven domains, directly mapped from official SET/NWSSEE sample materials and KS2
 | `geometry` | Geometry | Angle facts (triangles, straight lines, around a point), properties of 2D/3D shapes, perimeter of compound shapes, area, volume of cuboids, "not to scale" diagram reasoning |
 | `measures` | Measures & Units | Metric unit conversions (g↔kg, mm↔cm↔m, ml↔l), time arithmetic, speed–distance–time, interpreting multi-step word problems with units |
 | `algebra` | Algebra & Sequences | Number sequences, find-the-rule, consecutive number problems, using letters for unknowns, simple equations, parity constraints |
+| `percentages` | Percentages | Percentages of amounts, percentage changes and fraction equivalents |
+| `statistics` | Data & Averages | Mean, missing values, range, tables, bar charts, line graphs and pie charts |
+| `coordinates` | Coordinates | Position, translation, reflection and rectangle reasoning on a coordinate grid |
 
 ### 6.2 Question Distribution
 
-Target distribution across 210 questions, weighted by evidence of frequency in official materials:
+The current bank gives every domain equal coverage. This is a content design choice, not an estimate of exam-topic frequency.
 
-| Topic | Walk Mode (120) | Desk Mode (90) | Total | % of Bank |
-|---|---|---|---|---|
-| `number_operations` | 22 | 15 | 37 | 17.6% |
-| `fractions` | 20 | 15 | 35 | 16.7% |
-| `decimals` | 20 | 14 | 34 | 16.2% |
-| `ratio` | 18 | 13 | 31 | 14.8% |
-| `geometry` | 16 | 13 | 29 | 13.8% |
-| `measures` | 12 | 10 | 22 | 10.5% |
-| `algebra` | 12 | 10 | 22 | 10.5% |
-| **Total** | **120** | **90** | **210** | **100%** |
+| Topic | Walk | Desk | Total |
+|---|---|---|---|
+| `number_operations` | 12 | 9 | 21 |
+| `fractions` | 12 | 9 | 21 |
+| `decimals` | 12 | 9 | 21 |
+| `ratio` | 12 | 9 | 21 |
+| `percentages` | 12 | 9 | 21 |
+| `geometry` | 12 | 9 | 21 |
+| `measures` | 12 | 9 | 21 |
+| `algebra` | 12 | 9 | 21 |
+| `statistics` | 12 | 9 | 21 |
+| `coordinates` | 12 | 9 | 21 |
+| **Total** | **120** | **90** | **210** |
 
 ### 6.3 Difficulty Distribution
 
@@ -396,7 +415,7 @@ These 20 questions demonstrate the expected style, difficulty range, and data fo
     "answer_index": 3,
     "answer_display": "D",
     "explanation": "38 × 24: break it into 38 × 20 = 760, plus 38 × 4 = 152. Total: 760 + 152 = 912. Check: 40 × 24 = 960, minus 2 × 24 = 48, gives 960 − 48 = 912. ✓",
-    "pitfall": "Option A (812) matches a common slip of calculating 38 × 21 instead of 38 × 24. Option E (962) is close to 40 × 24 = 960 — an estimation error.",
+    "pitfall": "812 is 100 too small. Check the partial product: 38 × 4 is 152, not 52. Estimation with 40 × 24 also helps catch the slip.",
     "unit": null,
     "answer_alt": null,
     "time_target_seconds": 60
@@ -583,7 +602,7 @@ These 20 questions demonstrate the expected style, difficulty range, and data fo
     "answer_index": null,
     "answer_display": null,
     "explanation": "Method 1: 7.85 × 9 = 7.85 × (10 − 1) = 78.50 − 7.85 = 70.65.\nMethod 2: 7 × 9 = 63, 0.85 × 9 = 7.65, total = 63 + 7.65 = 70.65.\nCheck: 9 tickets at roughly £8 each would be £72, so £70.65 is sensible. ✓",
-    "pitfall": "Decimal point misplacement — the most common error flagged in official NWSSEE commentary. Writing £7.065 or £706.5 means the decimal point has shifted. Always estimate first to check your answer makes sense.",
+    "pitfall": "Check the decimal point. Writing £7.065 or £706.5 changes the place value. Nine tickets at about £8 each cost about £72, so your answer should be close to that estimate.",
     "unit": "£",
     "answer_alt": ["£70.65"],
     "time_target_seconds": 120
@@ -655,7 +674,7 @@ These 20 questions demonstrate the expected style, difficulty range, and data fo
     "answer_index": null,
     "answer_display": null,
     "explanation": "Large box volume = 6 × 6 × 10 = 360 cm³. Small box volume = 3 × 3 × 10 = 90 cm³. Ratio = 360:90 = 4:1 (divide both by 90).",
-    "pitfall": "Children often think halving the side halves the volume — but it actually quarters the volume (because area scales as the square of the side). 2:1 is the most common wrong answer here.",
+    "pitfall": "The heights stay the same. Halving each base side quarters the base area and the volume. A ratio of 2:1 compares side lengths, rather than the volumes requested.",
     "unit": null,
     "answer_alt": ["4 : 1", "4 to 1"],
     "time_target_seconds": 180

@@ -7,6 +7,7 @@
  */
 
 import { getProgress, getStreak } from './state.js';
+import { TOPICS as TOPIC_LABELS } from './content.js';
 
 let _allQuestions = [];
 
@@ -27,8 +28,10 @@ function _render() {
   const attempted = Object.values(progress);
   const totalAttempted = attempted.reduce((s, e) => s + e.attempted, 0);
   const totalCorrect   = attempted.reduce((s, e) => s + e.correct,   0);
+  const supported = attempted.reduce((s, e) => s + (e.supported || 0), 0);
+  const discussed = attempted.reduce((s, e) => s + (e.discussed || 0), 0);
 
-  if (totalAttempted === 0) {
+  if (totalAttempted + supported + discussed === 0) {
     content.innerHTML = `
       <div class="stats-empty">
         <p>No progress yet.</p>
@@ -44,10 +47,7 @@ function _render() {
   const deskStats = _statsByFilter(progress, q => q.mode === 'desk');
 
   // By topic
-  const TOPICS = [
-    'number_operations', 'fractions', 'decimals',
-    'ratio', 'geometry', 'measures', 'algebra',
-  ];
+  const TOPICS = Object.keys(TOPIC_LABELS);
   const topicStats = TOPICS.map(topic => ({
     topic,
     label: _topicLabel(topic),
@@ -65,7 +65,7 @@ function _render() {
   const subtopicMap = {};
   _allQuestions.forEach(q => {
     const entry = progress[q.id];
-    if (!entry || entry.attempted < 2) return;
+    if (!entry || !entry.attempted) return;
     const key = `${q.topic}__${q.subtopic}`;
     if (!subtopicMap[key]) subtopicMap[key] = { topic: q.topic, subtopic: q.subtopic, correct: 0, attempted: 0 };
     subtopicMap[key].correct  += entry.correct;
@@ -73,12 +73,13 @@ function _render() {
   });
   const weakSpots = Object.values(subtopicMap)
     .map(s => ({ ...s, pct: _pct(s.correct, s.attempted) }))
-    .filter(s => s.pct < 60)
+    .filter(s => s.attempted >= 2 && s.pct < 60)
     .sort((a, b) => a.pct - b.pct)
     .slice(0, 3);
 
   content.innerHTML = `
     ${_sectionOverall(totalCorrect, totalAttempted, overallPct)}
+    <div class="stats-section"><div class="stats-section-title">Learning together</div><p>${supported} supported answers · ${discussed} discussions</p><p class="muted">Hints and discussions count as practice. Independent accuracy uses first answers given without help.</p><a class="text-button" href="#/daily">Open daily practice →</a></div>
     ${_sectionStreak(streak)}
     ${_sectionByMode(walkStats, deskStats)}
     ${_sectionByTopic(topicStats)}
@@ -92,9 +93,9 @@ function _render() {
 function _sectionOverall(correct, attempted, pct) {
   return `
     <div class="stats-section">
-      <div class="stats-section-title">Overall</div>
-      <div class="stats-big-number">${pct}%</div>
-      <div class="stats-sub">${correct} correct out of ${attempted} attempts</div>
+      <div class="stats-section-title">Independent accuracy</div>
+      <div class="stats-big-number">${attempted ? pct + '%' : '—'}</div>
+      <div class="stats-sub">${correct} correct out of ${attempted} independent first attempts</div>
     </div>`;
 }
 
@@ -189,16 +190,7 @@ function _pct(correct, attempted) {
 }
 
 function _topicLabel(topic) {
-  const labels = {
-    number_operations: 'Number & Arithmetic',
-    fractions:         'Fractions',
-    decimals:          'Decimals & Place Value',
-    ratio:             'Ratio & Proportion',
-    geometry:          'Geometry',
-    measures:          'Measures & Units',
-    algebra:           'Algebra & Sequences',
-  };
-  return labels[topic] ?? topic;
+  return TOPIC_LABELS[topic] ?? topic;
 }
 
 function _escHtml(str) {

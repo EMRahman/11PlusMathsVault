@@ -29,18 +29,11 @@ try {
 const VALID_TOPICS = [
   'number_operations', 'fractions', 'decimals',
   'ratio', 'geometry', 'measures', 'algebra',
+  'percentages', 'statistics', 'coordinates',
 ];
 
-const TOPIC_TARGETS = {
-  // [walkTarget, deskTarget]
-  number_operations: [22, 15],
-  fractions:         [20, 15],
-  decimals:          [20, 14],
-  ratio:             [18, 13],
-  geometry:          [16, 13],
-  measures:          [12, 10],
-  algebra:           [12, 10],
-};
+// The expanded bank gives each of ten domains 12 oral and 9 written questions.
+const TOPIC_TARGETS = Object.fromEntries(VALID_TOPICS.map(topic => [topic, [12, 9]]));
 
 const DISPLAY_MAP = ['A', 'B', 'C', 'D', 'E'];
 
@@ -108,6 +101,7 @@ const REQUIRED_FIELDS = [
   'id', 'mode', 'topic', 'subtopic', 'stage', 'difficulty',
   'question', 'options', 'answer', 'answer_index', 'answer_display',
   'explanation', 'time_target_seconds',
+  'hints', 'parent_prompt',
 ];
 
 test('D7', 'All required fields present on every question', () => {
@@ -204,7 +198,7 @@ test('D19', 'Topic distribution within ±2 of targets', () => {
 
 // ── D20: Difficulty distribution ──────────────────────────────
 
-test('D20', 'Difficulty distribution roughly 25/50/25 per topic (±10%)', () => {
+test('D20', 'Difficulty distribution roughly 25/50/25 per topic (±15%)', () => {
   const errors = [];
   VALID_TOPICS.forEach(topic => {
     const qs = questions.filter(q => q.topic === topic);

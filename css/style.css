@@ -1320,3 +1320,117 @@ img { display: block; max-width: 100%; }
   white-space: nowrap;
   border-width: 0;
 }
+
+/* Guided practice, daily plans and paper sessions */
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid var(--color-desk); outline-offset: 4px; }
+.muted { color: var(--color-text-muted); font-size: .875rem; }
+.eyebrow { color: var(--color-desk); text-transform: uppercase; letter-spacing: .08em; font-size: .75rem; font-weight: 700; }
+.daily-home { width: 100%; max-width: var(--content-max); padding: 1.5rem; background: var(--color-desk-bg); border: 1px solid var(--color-desk-dark); border-radius: var(--radius-lg); display: grid; gap: 1rem; }
+.daily-home h2 { margin: .3rem 0 .5rem; font-size: 1.5rem; }
+.daily-home .btn { text-align: center; justify-content: center; }
+.bank-count { text-align: center; max-width: var(--content-max); }
+.parent-guide { width: 100%; max-width: var(--content-max); border-top: 1px solid var(--color-border); padding: 1rem 0; }
+.parent-guide summary { cursor: pointer; color: var(--color-text-muted); }
+.parent-guide p { margin-top: .75rem; }
+.parent-guide a { color: var(--color-desk); text-decoration: underline; }
+.desk-filters { flex-wrap: wrap; overflow: visible; }
+.desk-filters.session-running { display: none; }
+.desk-filters label { font-size: .85rem; }
+.question-area > .session-meta, .question-area > .exam-nav, .question-area > .btn { width: 100%; max-width: var(--content-max); }
+.session-meta { gap: 1rem; font-size: .85rem; align-items: center; }
+.session-meta > span:last-child { white-space: nowrap; }
+.action-row { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin: 1rem 0; }
+.action-row .btn { flex: 1 1 auto; }
+.text-button { color: var(--color-desk); text-decoration: underline; padding: .5rem; min-height: 44px; }
+.answer-label { display: block; font-weight: 600; margin: 1rem 0 .5rem; }
+.answer-input { width: 100%; }
+.answer-status { min-height: 1.5rem; margin-top: .75rem; }
+.answer-status.incorrect { color: #fca5a5; }
+.explanation-box { white-space: pre-line; }
+.hint-box, .parent-prompt { padding: 1rem; border-radius: var(--radius-md); background: var(--color-desk-bg); border: 1px solid var(--color-desk-dark); margin: 1rem 0; }
+.hint-box ol { list-style: decimal; padding-left: 1.4rem; }
+.hint-box li { margin: .5rem 0; }
+.hint-box .muted { margin-top: .75rem; }
+.question-card .card-meta .bookmark-btn { margin-left: auto; font-size: 1.4rem; }
+.exam-choices { border: 0; margin: 1rem 0; }
+.exam-option { display: flex; gap: .8rem; align-items: center; border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: .8rem; margin: .5rem 0; cursor: pointer; }
+.exam-option:has(input:checked) { border-color: var(--color-desk); background: var(--color-desk-bg); }
+.flag-control { display: flex; gap: .6rem; align-items: center; margin: 1rem 0; cursor: pointer; }
+.exam-nav { display: flex; flex-wrap: wrap; gap: .5rem; padding: 1rem 0; }
+.exam-number { min-width: 44px; min-height: 44px; padding: .5rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: var(--color-text); background: var(--color-surface); }
+.exam-number.answered { background: var(--color-desk-bg); border-color: var(--color-desk-dark); }
+.exam-number.flagged { border-color: var(--color-walk); }
+.exam-number[aria-current] { outline: 2px solid var(--color-desk); }
+.answer-review { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1rem; margin: .75rem 0; text-align: left; }
+.answer-review summary { cursor: pointer; font-weight: 600; }
+.answer-review p { margin: .75rem 0; }
+.summary-screen { width: 100%; max-width: var(--content-max); }
+.summary-screen h3 { margin-top: 1.5rem; }
+.maths-figure { margin: 1rem 0; color: var(--color-text); }
+.maths-figure svg { width: 100%; max-width: 430px; margin: auto; fill: currentColor; font-size: 12px; }
+.maths-figure .shape-outline { stroke: var(--color-desk); fill: none; stroke-width: 2; }
+.maths-figure .axis { stroke: currentColor; fill: none; stroke-width: 1.5; }
+.maths-figure .grid-line { stroke: var(--color-border); stroke-width: 1; fill: none; }
+.maths-figure .chart-bar { fill: var(--color-desk); }
+.maths-figure figcaption { font-size: .8rem; color: var(--color-text-muted); text-align: center; }
+.maths-table-wrap { overflow-x: auto; margin: 1rem 0; }
+.maths-table { width: 100%; border-collapse: collapse; }
+.maths-table caption { text-align: left; padding: .5rem 0; font-weight: 600; }
+.maths-table th, .maths-table td { border: 1px solid var(--color-border); padding: .65rem; text-align: left; }
+.maths-table thead { background: var(--color-surface-2); }
+.oral-tag { color: var(--color-text-muted); font-size: .75rem; }
+.walk-choice-controls { margin: 1rem 0; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.walk-choice-controls label { display: flex; gap: .5rem; align-items: center; font-size: .9rem; }
+#walk-options .option-item { width: 100%; color: inherit; text-align: left; }
+#walk-options .option-item:disabled { opacity: 1; cursor: default; }
+.result-buttons { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1rem 0; }
+.result-buttons .btn { flex: 1 1 100px; }
+.btn--correct { color: var(--color-correct); border: 1px solid var(--color-correct); }
+.btn--incorrect { color: #fca5a5; border: 1px solid var(--color-incorrect); }
+.walk-summary { margin: 1rem 0; text-align: left; }
+.method-notes { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid var(--color-border); }
+.method-notes summary { color: var(--color-hacks); cursor: pointer; }
+.method-notes p { margin-top: .5rem; }
+#print-sheet { display: none; }
+@media (max-width: 520px) {
+  .home-main { padding-top: 1.5rem; }
+  .daily-home { padding: 1.1rem; }
+  .desk-filters > .filter-select { max-width: 100%; flex: 1 1 140px; }
+  .session-meta { flex-wrap: wrap; gap: .25rem; }
+  .card-meta { flex-wrap: wrap; }
+  .question-card .card-nav { gap: .5rem; }
+}
+@media print {
+  body { background: white; color: black; font-size: 11pt; }
+  body.printing > :not(#print-sheet) { display: none !important; }
+  body.printing #print-sheet { display: block; }
+  #print-sheet { --color-text: #111; --color-text-muted: #333; --color-border: #bbb; --color-desk: #111; --color-surface-2: #eee; }
+  @page { size: A4; margin: 16mm; }
+  #print-sheet h1 { font-size: 18pt; margin-bottom: .4cm; }
+  #print-sheet h2 { font-size: 12pt; }
+  #print-sheet p { margin: .2cm 0; }
+  .print-set-code { font-size: 8pt; overflow-wrap: anywhere; }
+  .print-question { break-inside: avoid; margin: .7cm 0; border-top: 1px solid #aaa; padding-top: .3cm; }
+  #print-sheet .question-text { font-size: 11pt; margin: .2cm 0; }
+  #print-sheet .maths-figure svg { max-width: 8cm; max-height: 5cm; }
+  #print-sheet .maths-figure { margin: .2cm 0; }
+  #print-sheet .maths-figure figcaption { font-size: 9pt; }
+  #print-sheet .maths-table th, #print-sheet .maths-table td { padding: .1cm .3cm; }
+  .print-options { display: flex; flex-wrap: wrap; gap: .5cm; }
+  .working-space { height: 2.3cm; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+.question-card--walk .card-controls { position: static; align-self: flex-end; }
+.question-card--walk .timer-toggle-btn { width: auto; min-width: 100px; min-height: 44px; padding: .5rem; }
+.question-card .bookmark-btn { min-width: 44px; min-height: 44px; }
+button:disabled { opacity: .55; cursor: default; }
+#walk-filter-bar { flex-wrap: wrap; overflow: visible; }
+.filter-select, .filter-btn { min-height: 44px; }
+@media (max-width: 520px) {
+  #walk-filter-bar .filter-select { flex: 1 1 140px; max-width: 100%; }
+}
+.method-extension { display: inline-block; font-size: .75rem; color: var(--color-hacks); margin: .25rem 0; }
