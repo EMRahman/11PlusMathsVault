@@ -49,6 +49,39 @@ test('units do not conceal a place-value or conversion error', () => {
   assert.ok(checkAnswer('8°C',{answer:'8',unit:'°C'}));
   assert.equal(answerText({answer:'£24',unit:'£'}),'£24');
 });
+test('generated conversion and duration questions accept answers with the requested units', () => {
+  const cases = [
+    { id: 75, answer: '2500', unit: 'g', forms: ['g', 'grams'], wrong: 'kg' },
+    { id: 79, answer: '1750', unit: 'ml', forms: ['ml', 'millilitres'], wrong: 'l' },
+    { id: 83, answer: '320', unit: 'cm', forms: ['cm', 'centimetres'], wrong: 'm' },
+    { id: 76, answer: '35', unit: 'minutes', forms: ['minutes', 'mins'], wrong: 'hours' },
+    { id: 80, answer: '45', unit: 'minutes', forms: ['minutes', 'min'], wrong: 'hours' },
+    { id: 84, answer: '85', unit: 'minutes', forms: ['minutes', 'minute'], wrong: 'hours' },
+  ];
+  for (const { id, answer, unit, forms, wrong } of cases) {
+    const q = questions.find(q => q.id === id);
+    assert.equal(q.unit, unit, `Q${id} must declare the requested unit`);
+    assert.ok(checkAnswer(answer, q), `Q${id} must still accept a bare answer`);
+    for (const form of forms) assert.ok(checkAnswer(`${answer} ${form}`, q), `Q${id} must accept ${form}`);
+    assert.ok(!checkAnswer(`${answer} ${wrong}`, q), `Q${id} must reject the same number in ${wrong}`);
+    assert.ok(!checkAnswer(`${Number(answer) * 10} ${unit}`, q), `Q${id} must reject a wrong value`);
+  }
+});
+test('rounding explanations teach the correct direction for both hundredths cases', () => {
+  const down = questions.find(q => q.id === 38);
+  assert.equal(down.question, 'Round 7.83 to one decimal place.');
+  assert.equal(down.answer, '7.8');
+  assert.match(down.explanation, /hundredths digit is 3/);
+  assert.match(down.explanation, /less than 5/);
+  assert.match(down.explanation, /keep the tenths digit unchanged/);
+  assert.doesNotMatch(down.explanation, /increase the tenths digit/);
+  const up = questions.find(q => q.id === 34);
+  assert.equal(up.question, 'Round 4.67 to one decimal place.');
+  assert.equal(up.answer, '4.7');
+  assert.match(up.explanation, /hundredths digit is 7/);
+  assert.match(up.explanation, /at least 5/);
+  assert.match(up.explanation, /increase the tenths digit/);
+});
 test('every skill has a different question for transfer practice', () => {
   for (const q of questions) {
     const other=followUp(q,questions,{});

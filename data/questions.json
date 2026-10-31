@@ -1035,7 +1035,7 @@
     "difficulty": 1,
     "question": "Round 4.67 to one decimal place.",
     "answer": "4.7",
-    "explanation": "Look at the hundredths digit to round to tenths. It is at least 5, so increase the tenths digit, carrying if necessary. 4.67 rounds to 4.7. This is the nearest tenth.",
+    "explanation": "Look at the hundredths digit to round to tenths. The hundredths digit is 7. It is at least 5, so increase the tenths digit, carrying if necessary. 4.67 rounds to 4.7. This is the nearest tenth.",
     "hints": [
       "One decimal place means the nearest tenth.",
       "Use the hundredths digit to decide whether to round up."
@@ -1159,7 +1159,7 @@
     "difficulty": 2,
     "question": "Round 7.83 to one decimal place.",
     "answer": "7.8",
-    "explanation": "Look at the hundredths digit to round to tenths. It is at least 5, so increase the tenths digit, carrying if necessary. 7.83 rounds to 7.8. This is the nearest tenth.",
+    "explanation": "Look at the hundredths digit to round to tenths. The hundredths digit is 3. It is less than 5, so keep the tenths digit unchanged. 7.83 rounds to 7.8. This is the nearest tenth.",
     "hints": [
       "One decimal place means the nearest tenth.",
       "Use the hundredths digit to decide whether to round up."
@@ -2312,8 +2312,8 @@
       "There are 1000 of the smaller units in one larger unit."
     ],
     "pitfall": "Multiply when converting to smaller units; the quantity itself stays the same.",
+    "unit": "g",
     "id": 75,
-    "unit": null,
     "answer_alt": null,
     "stage": "SET",
     "time_target_seconds": 60,
@@ -2343,8 +2343,8 @@
       "Add the minutes before the hour to the minutes after it."
     ],
     "pitfall": "An hour has 60 minutes, not 100.",
+    "unit": "minutes",
     "id": 76,
-    "unit": null,
     "answer_alt": null,
     "stage": "SET",
     "time_target_seconds": 60,
@@ -2436,8 +2436,8 @@
       "There are 1000 of the smaller units in one larger unit."
     ],
     "pitfall": "Multiply when converting to smaller units; the quantity itself stays the same.",
+    "unit": "ml",
     "id": 79,
-    "unit": null,
     "answer_alt": null,
     "stage": "SET",
     "time_target_seconds": 60,
@@ -2467,8 +2467,8 @@
       "Add the minutes before the hour to the minutes after it."
     ],
     "pitfall": "An hour has 60 minutes, not 100.",
+    "unit": "minutes",
     "id": 80,
-    "unit": null,
     "answer_alt": null,
     "stage": "SET",
     "time_target_seconds": 60,
@@ -2560,8 +2560,8 @@
       "There are 100 of the smaller units in one larger unit."
     ],
     "pitfall": "Multiply when converting to smaller units; the quantity itself stays the same.",
+    "unit": "cm",
     "id": 83,
-    "unit": null,
     "answer_alt": null,
     "stage": "SET",
     "time_target_seconds": 60,
@@ -2591,8 +2591,8 @@
       "Add the minutes before the hour to the minutes after it."
     ],
     "pitfall": "An hour has 60 minutes, not 100.",
+    "unit": "minutes",
     "id": 84,
-    "unit": null,
     "answer_alt": null,
     "stage": "SET",
     "time_target_seconds": 60,
