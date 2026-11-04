@@ -5,6 +5,7 @@ import { checkAnswer } from '../js/validate.js';
 import { dailyPlan, skillProgress, skillKey, followUp } from '../js/practice.js';
 import { diagram, TOPICS, answerText } from '../js/content.js';
 import { METHOD_NOTES } from '../js/method-notes.js';
+import { getTutorial } from '../js/tutorials.js';
 import { initState, recordResult, getProgress, getBookmarks, resetAll, getSettings, localDate } from '../js/state.js';
 const questions = JSON.parse(fs.readFileSync(new URL('../data/questions.json', import.meta.url)));
 const storage = new Map();
@@ -205,4 +206,25 @@ test('bank generation is deterministic and preserves the original IDs', async ()
   execFileSync(process.execPath,['scripts/build-questions.cjs','--check'],{cwd:new URL('..',import.meta.url)});
   assert.equal(fs.readFileSync(new URL('../data/questions.json',import.meta.url),'utf8'),before);
   for(const id of [1,2,3,4,5,6,7,8,9,10,121,122,123,124,125,126,127,128,129,130]) assert.ok(questions.some(q=>q.id===id));
+});
+
+test('tutorial guidance matches the specific question variant across modes', () => {
+  const qXReflect = questions.find(q => q.id === 110);
+  const qYReflect = questions.find(q => q.id === 203);
+  const tX = getTutorial(qXReflect);
+  const tY = getTutorial(qYReflect);
+  assert.ok(tX.concept.includes('x-axis') && tX.steps[2].includes('y → −y'));
+  assert.ok(tY.concept.includes('y-axis') && tY.steps[2].includes('x → −x'));
+
+  const qConsec3 = questions.find(q => q.id === 7);
+  const qConsec5 = questions.find(q => q.id === 127);
+  const t3 = getTutorial(qConsec3);
+  const t5 = getTutorial(qConsec5);
+  assert.ok(t3.concept.includes('Three') && t3.steps[0].includes('÷ 3'));
+  assert.ok(t5.concept.includes('Five') && t5.steps[0].includes('÷ 5'));
+
+  const qRemFrac = questions.find(q => q.id === 139);
+  const qDirFrac = questions.find(q => q.id === 9);
+  assert.ok(getTutorial(qRemFrac).concept.includes('Remainder'));
+  assert.ok(getTutorial(qDirFrac).concept.includes('Unitary Method'));
 });

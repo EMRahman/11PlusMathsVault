@@ -29,6 +29,7 @@ const SHELL_ASSETS = [
   './js/daily.js',
   './js/print.js',
   './js/method-notes.js',
+  './js/tutorials.js',
   './data/questions.json',
   './favicon.svg',
   './favicon.ico',
