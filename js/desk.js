@@ -23,13 +23,24 @@ export function init(all) {
   for (const id of ['desk-topic-filter', 'desk-difficulty-filter', 'desk-bookmark-filter', 'desk-setsize-filter', 'desk-exam-minutes']) document.getElementById(id).onchange = prompt;
   prompt();
 }
-function filtered() {
+function pool() {
   const val = id => document.getElementById(id).value;
   const mode = val('desk-session-type') === 'exam-set' ? 'walk' : 'desk';
   const bookmarks = getBookmarks();
-  const pool = bank.filter(q => q.mode === mode && (!val('desk-topic-filter') || q.topic === val('desk-topic-filter')) && (!val('desk-difficulty-filter') || q.difficulty === Number(val('desk-difficulty-filter'))) && (val('desk-bookmark-filter') !== 'bookmarked' || bookmarks.includes(q.id)));
-  const size = val('desk-setsize-filter');
-  return shuffle(pool).slice(0, size === 'all' ? pool.length : Number(size));
+  return bank.filter(q => q.mode === mode && (!val('desk-topic-filter') || q.topic === val('desk-topic-filter')) && (!val('desk-difficulty-filter') || q.difficulty === Number(val('desk-difficulty-filter'))) && (val('desk-bookmark-filter') !== 'bookmarked' || bookmarks.includes(q.id)));
+}
+function filtered() {
+  const all = pool(), size = document.getElementById('desk-setsize-filter').value;
+  return shuffle(all).slice(0, size === 'all' ? all.length : Number(size));
+}
+function browse() {
+  const list = pool(), choices = config.kind === 'exam-set';
+  area().innerHTML = `<section class="browse-list"><div class="browse-head"><h2>All questions</h2><button class="btn btn--secondary btn--sm" id="browse-back-btn">← Back</button></div><p class="muted">${list.length} questions match your filters. Open one to see its answer and explanation, or practise it on its own.</p>${list.map((q, i) => `<details class="answer-review"><summary>${i + 1}. ${esc(TOPICS[q.topic])} ${difficulty(q.difficulty)} — ${esc(String(q.question).slice(0, 80))}${String(q.question).length > 80 ? '…' : ''}</summary>${questionBody(q)}${choices && q.options ? `<ul class="browse-options">${q.options.map((o, n) => `<li>${String.fromCharCode(65 + n)}. ${esc(o)}</li>`).join('')}</ul>` : ''}<p><strong>Answer: ${esc(answerText(q))}</strong></p><div class="explanation-box">${esc(q.explanation)}</div><button class="btn btn--primary-desk btn--sm" data-practise="${i}">Practise this question</button></details>`).join('') || '<p class="empty-state">No questions match. Change your filters.</p>'}</section>`;
+  area().querySelector('#browse-back-btn').onclick = prompt;
+  area().querySelectorAll('[data-practise]').forEach(b => b.onclick = () => {
+    mount(bank, { kind: config.kind, container: 'desk-question-area', questions: [list[Number(b.dataset.practise)]], minutes: Number(document.getElementById('desk-exam-minutes').value) });
+    document.getElementById('desk-filter-bar').classList.add('session-running');
+  });
 }
 function prompt() {
   dispose();
@@ -37,8 +48,9 @@ function prompt() {
   config = { container: 'desk-question-area', kind: document.getElementById('desk-session-type').value };
   const prepared = filtered(), count = prepared.length, examMode = exam();
   document.getElementById('desk-exam-duration').hidden = !examMode;
-  area().innerHTML = `<div class="desk-start-prompt"><h2>${examMode ? 'Practise a paper at your own level' : 'Learn a method, then try it yourself'}</h2><p>${examMode ? 'Skip, flag and return to questions. Answers and explanations stay hidden until you submit or the timer ends.' : 'Use a hint when you need one. Try again before opening the worked solution, then practise the same skill with new numbers.'}</p><p class="muted">${count} questions match your selection. ${examMode ? 'These are original practice sets, not official exam papers.' : 'The timer is a guide; there is no time limit.'}</p><div class="action-row"><button id="desk-print-questions" class="btn btn--secondary" ${count ? '' : 'disabled'}>Print worksheet</button><button id="desk-print-answers" class="btn btn--secondary" ${count ? '' : 'disabled'}>Print answer sheet</button></div><p class="muted">Printing uses one fixed set. The question numbers match its separate answer sheet.</p></div>`;
+  area().innerHTML = `<div class="desk-start-prompt"><h2>${examMode ? 'Practise a paper at your own level' : 'Learn a method, then try it yourself'}</h2><p>${examMode ? 'Skip, flag and return to questions. Answers and explanations stay hidden until you submit or the timer ends.' : 'Use a hint when you need one. Try again before opening the worked solution, then practise the same skill with new numbers.'}</p><p class="muted">${count} questions match your selection. ${examMode ? 'These are original practice sets, not official exam papers.' : 'The timer is a guide; there is no time limit.'}</p><div class="action-row"><button id="desk-browse-btn" class="btn btn--secondary">Browse all questions</button><button id="desk-print-questions" class="btn btn--secondary" ${count ? '' : 'disabled'}>Print worksheet</button><button id="desk-print-answers" class="btn btn--secondary" ${count ? '' : 'disabled'}>Print answer sheet</button></div><p class="muted">Printing uses one fixed set. The question numbers match its separate answer sheet.</p></div>`;
   document.getElementById('desk-start-btn').onclick = () => startFromFilters(prepared);
+  document.getElementById('desk-browse-btn').onclick = browse;
   document.getElementById('desk-print-questions').onclick = () => printWorksheet(prepared, { multipleChoice: config.kind === 'exam-set' });
   document.getElementById('desk-print-answers').onclick = () => printWorksheet(prepared, { answers: true, multipleChoice: config.kind === 'exam-set' });
 }
@@ -77,6 +89,7 @@ function render() {
     <article class="question-card question-card--desk" aria-label="Question ${qNumber}">
       <div class="card-meta"><span class="topic-tag">${esc(TOPICS[q.topic])}</span>${difficulty(q.difficulty)}<button class="bookmark-btn ${isBookmarked(q.id) ? 'bookmarked' : ''}" id="desk-bookmark-btn" aria-pressed="${isBookmarked(q.id)}" aria-label="Bookmark this question">★</button></div>
       ${questionBody(q)}
+      <section class="workpad" aria-label="Working out"><div class="workpad-bar"><strong>Working out</strong><span class="workpad-tools"><button type="button" class="btn btn--secondary btn--sm" id="wp-pen" aria-pressed="true">Pen</button><button type="button" class="btn btn--secondary btn--sm" id="wp-eraser" aria-pressed="false">Rub out</button><button type="button" class="btn btn--secondary btn--sm" id="wp-undo">Undo</button><button type="button" class="btn btn--secondary btn--sm" id="wp-clear">Clear</button></span></div><canvas class="workpad-canvas" id="workpad" role="img" aria-label="Freehand space for working out. Draw with a finger or pen."></canvas></section>
       <form id="desk-answer-form">
       ${config.kind === 'exam-set' ? `<fieldset class="exam-choices"><legend class="sr-only">Choose your answer</legend>${q.options.map((opt, i) => `<label class="exam-option"><input type="radio" name="exam-answer" value="${esc(opt)}" ${st.input === opt ? 'checked' : ''}><span>${String.fromCharCode(65 + i)}. ${esc(opt)}</span></label>`).join('')}</fieldset>` : `<label class="answer-label" for="desk-answer-input">Your final answer${q.unit ? ` (in ${esc(q.unit)})` : ''}</label><input type="text" class="answer-input" id="desk-answer-input" value="${esc(st.input)}" autocomplete="off" spellcheck="false" ${st.finished ? 'disabled' : ''} placeholder="Type your answer">`}
       ${!exam() && !st.finished ? `<p class="answer-status ${wrong ? 'incorrect' : ''}" role="status">${wrong ? 'Not quite yet. Try again, or use a hint to get started.' : ''}</p><div class="action-row"><button class="btn btn--primary-desk" type="submit" id="desk-check-btn">${wrong ? 'Try again' : 'Check answer'}</button><button class="btn btn--secondary" type="button" id="desk-hint-btn" ${st.hints >= q.hints.length ? 'disabled' : ''}>${st.hints ? 'Next hint' : 'Give me a hint'}</button><button class="text-button" type="button" id="desk-solution-btn">Show worked solution</button></div>` : ''}
@@ -88,6 +101,39 @@ function render() {
     </article>
     ${exam() ? `<nav class="exam-nav" aria-label="Jump to a question">${questions.map((item, i) => `<button class="exam-number ${states[item.id]?.input ? 'answered' : ''} ${states[item.id]?.flagged ? 'flagged' : ''}" data-jump="${i}" aria-label="Question ${i + 1}${states[item.id]?.flagged ? ', flagged' : ''}${states[item.id]?.input ? ', answered' : ', unanswered'}" ${i === index ? 'aria-current="step"' : ''}>${i + 1}${states[item.id]?.flagged ? ' ⚑' : ''}</button>`).join('')}</nav><button class="btn btn--secondary btn--full" id="exam-review-btn">Review and submit paper</button>` : ''}`;
   bind(q, st, availableFollowUp);
+  workpad(q);
+}
+const pads = new Map();
+function workpad(q) {
+  const cv = area().querySelector('#workpad'); if (!cv) return;
+  const strokes = pads.get(q.id) ?? pads.set(q.id, []).get(q.id), ctx = cv.getContext('2d');
+  let tool = 'pen', live = null, w = 0, h = 0;
+  const ink = () => getComputedStyle(cv).color;
+  const paint = () => {
+    ctx.clearRect(0, 0, w, h); ctx.lineCap = ctx.lineJoin = 'round';
+    for (const s of strokes) {
+      ctx.strokeStyle = ink(); ctx.lineWidth = s.erase ? 18 : 2.5;
+      ctx.globalCompositeOperation = s.erase ? 'destination-out' : 'source-over';
+      ctx.beginPath(); s.pts.forEach(([x, y], i) => i ? ctx.lineTo(x * w, y * h) : ctx.moveTo(x * w, y * h));
+      if (s.pts.length === 1) ctx.lineTo(s.pts[0][0] * w + .1, s.pts[0][1] * h);
+      ctx.stroke();
+    }
+    ctx.globalCompositeOperation = 'source-over';
+  };
+  const size = () => {
+    const r = cv.getBoundingClientRect(), d = window.devicePixelRatio || 1;
+    w = r.width; h = r.height; cv.width = w * d; cv.height = h * d; ctx.setTransform(d, 0, 0, d, 0, 0); paint();
+  };
+  const pt = e => { const r = cv.getBoundingClientRect(); return [(e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height]; };
+  cv.onpointerdown = e => { cv.setPointerCapture(e.pointerId); live = { erase: tool === 'eraser', pts: [pt(e)] }; strokes.push(live); paint(); };
+  cv.onpointermove = e => { if (!live) return; for (const ev of e.getCoalescedEvents?.() ?? [e]) live.pts.push(pt(ev)); paint(); };
+  cv.onpointerup = cv.onpointercancel = () => { live = null; };
+  const root = area(), $ = id => root.querySelector(id);
+  const setTool = t => { tool = t; $('#wp-pen').setAttribute('aria-pressed', t === 'pen'); $('#wp-eraser').setAttribute('aria-pressed', t === 'eraser'); };
+  $('#wp-pen').onclick = () => setTool('pen'); $('#wp-eraser').onclick = () => setTool('eraser');
+  $('#wp-undo').onclick = () => { strokes.pop(); paint(); };
+  $('#wp-clear').onclick = () => { strokes.length = 0; paint(); };
+  size(); new ResizeObserver(size).observe(cv);
 }
 function bind(q, st, nextQuestion) {
   const root = area(), input = root.querySelector('#desk-answer-input');

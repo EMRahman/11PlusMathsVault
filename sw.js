@@ -10,7 +10,7 @@
  * cleared on the next visit.
  */
 
-const CACHE_VERSION = 'mathsvault-v5';
+const CACHE_VERSION = 'mathsvault-v6';
 
 const SHELL_ASSETS = [
   './',
