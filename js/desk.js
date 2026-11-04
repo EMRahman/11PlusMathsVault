@@ -15,6 +15,7 @@ const save = () => config.onSave?.(JSON.parse(JSON.stringify(states)), seconds);
 export function dispose() {
   if (timer && config.kind === 'daily') save();
   clearInterval(timer); timer = null;
+  padObserver?.disconnect(); padObserver = null;
 }
 export function init(all) {
   dispose(); bank = all; config = { container: 'desk-question-area', kind: 'practice' }; submitted = false;
@@ -104,10 +105,12 @@ function render() {
   workpad(q);
 }
 const pads = new Map();
+let padObserver = null;
 function workpad(q) {
+  padObserver?.disconnect(); padObserver = null;
   const cv = area().querySelector('#workpad'); if (!cv) return;
   const strokes = pads.get(q.id) ?? pads.set(q.id, []).get(q.id), ctx = cv.getContext('2d');
-  let tool = 'pen', live = null, w = 0, h = 0;
+  let tool = 'pen', live = null, activeId = null, w = 0, h = 0;
   const ink = () => getComputedStyle(cv).color;
   const paint = () => {
     ctx.clearRect(0, 0, w, h); ctx.lineCap = ctx.lineJoin = 'round';
@@ -125,15 +128,15 @@ function workpad(q) {
     w = r.width; h = r.height; cv.width = w * d; cv.height = h * d; ctx.setTransform(d, 0, 0, d, 0, 0); paint();
   };
   const pt = e => { const r = cv.getBoundingClientRect(); return [(e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height]; };
-  cv.onpointerdown = e => { cv.setPointerCapture(e.pointerId); live = { erase: tool === 'eraser', pts: [pt(e)] }; strokes.push(live); paint(); };
-  cv.onpointermove = e => { if (!live) return; for (const ev of e.getCoalescedEvents?.() ?? [e]) live.pts.push(pt(ev)); paint(); };
-  cv.onpointerup = cv.onpointercancel = () => { live = null; };
+  cv.onpointerdown = e => { if (live) return; activeId = e.pointerId; cv.setPointerCapture(e.pointerId); live = { erase: tool === 'eraser', pts: [pt(e)] }; strokes.push(live); paint(); };
+  cv.onpointermove = e => { if (!live || e.pointerId !== activeId) return; for (const ev of e.getCoalescedEvents?.() ?? [e]) live.pts.push(pt(ev)); paint(); };
+  cv.onpointerup = cv.onpointercancel = e => { if (e.pointerId === activeId) live = null; };
   const root = area(), $ = id => root.querySelector(id);
   const setTool = t => { tool = t; $('#wp-pen').setAttribute('aria-pressed', t === 'pen'); $('#wp-eraser').setAttribute('aria-pressed', t === 'eraser'); };
   $('#wp-pen').onclick = () => setTool('pen'); $('#wp-eraser').onclick = () => setTool('eraser');
   $('#wp-undo').onclick = () => { strokes.pop(); paint(); };
   $('#wp-clear').onclick = () => { strokes.length = 0; paint(); };
-  size(); new ResizeObserver(size).observe(cv);
+  size(); padObserver = new ResizeObserver(size); padObserver.observe(cv);
 }
 function bind(q, st, nextQuestion) {
   const root = area(), input = root.querySelector('#desk-answer-input');
