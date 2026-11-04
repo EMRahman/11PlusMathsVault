@@ -442,16 +442,15 @@ img { display: block; max-width: 100%; }
 .explanation-box strong { color: var(--color-text); }
 
 .pitfall-box {
-  display: flex;
-  gap: var(--space-3);
   padding: var(--space-4);
   background: var(--color-pitfall-bg);
   border: 1px solid var(--color-pitfall);
   border-radius: var(--radius-md);
   font-size: var(--text-sm);
   line-height: 1.6;
-  color: var(--color-pitfall-bg);
+  color: var(--color-text);
 }
+.pitfall-box strong { color: var(--color-pitfall); }
 .pitfall-box__icon {
   font-size: var(--text-lg);
   flex-shrink: 0;
