@@ -70,7 +70,7 @@ function tick() {
 }
 function render() {
   const q = questions[index], st = current(), qNumber = index + 1;
-  const tutorial = getTutorial(q.subtopic);
+  const tutorial = getTutorial(q);
   const availableFollowUp = !exam() && config.kind !== 'daily' && st.finished ? followUp(q, bank, getProgress(), questions.filter(item => states[item.id]?.finished).map(item => item.id)) : null;
   const wrong = st.firstAnswer && !st.firstAnswer.correct && !st.finished;
   area().innerHTML = `<div class="session-meta"><span>Q${qNumber} of ${questions.length} · ${exam() ? 'Exam practice' : config.kind === 'daily' ? esc(config.reasons?.[q.id]) : 'Guided practice'}</span><span><span data-session-clock>${time(exam() ? (deadline - Date.now()) / 1000 : seconds)}</span> ${exam() ? 'left' : 'solving time'}</span></div>

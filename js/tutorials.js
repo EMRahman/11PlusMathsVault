@@ -1,4 +1,6 @@
-// Curated public tutorial websites, step-by-step strategies, and YouTube video lessons for each skill
+// Curated public tutorial websites, step-by-step strategies, and YouTube video lessons for each skill.
+// Supports dynamic variant adaptation so shared skills match the specific question variant (e.g. in daily practice).
+
 export const TUTORIALS = {
   "order_operations": {
     "concept": "Hierarchical Operator Precedence (BODMAS / BIDMAS)",
@@ -691,6 +693,287 @@ export const TUTORIALS = {
   }
 };
 
-export function getTutorial(subtopic) {
-  return TUTORIALS[subtopic] || null;
+/**
+ * Returns tailored tutorial guidance for a question.
+ * Selects variant-specific strategies when a subtopic spans multiple question styles
+ * (e.g., x-axis vs y-axis reflection, 3 vs 5 consecutive numbers, remainder vs direct fractions).
+ *
+ * @param {Object|string} qOrSubtopic - Full question object or subtopic string
+ * @returns {Object|null}
+ */
+export function getTutorial(qOrSubtopic) {
+  if (!qOrSubtopic) return null;
+  const q = typeof qOrSubtopic === 'object' ? qOrSubtopic : { subtopic: qOrSubtopic };
+  const sub = q.subtopic;
+  const base = TUTORIALS[sub];
+  if (!base) return null;
+
+  const result = { ...base };
+  const text = q.question || '';
+  const mode = q.mode || 'desk';
+
+  // 1. Reflection variants: x-axis (walk) vs y-axis (desk)
+  if (sub === 'reflection') {
+    if (text.includes('x-axis') || mode === 'walk') {
+      result.concept = 'Reflection in the x-axis (Horizontal Mirror Line)';
+      result.steps = [
+        'Identify the mirror line: the x-axis is the horizontal line y = 0.',
+        'Horizontal position is unchanged: the x-coordinate stays exactly the same.',
+        'Vertical position reflects across the axis: the y-coordinate changes sign (y → −y).',
+        'Write the reflected coordinate: (x, −y).'
+      ];
+      result.check = 'A point above the x-axis reflects to the same distance below the x-axis.';
+    } else {
+      result.concept = 'Reflection in the y-axis (Vertical Mirror Line)';
+      result.steps = [
+        'Identify the mirror line: the y-axis is the vertical line x = 0.',
+        'Vertical position is unchanged: the y-coordinate stays exactly the same.',
+        'Horizontal position reflects across the axis: the x-coordinate changes sign (x → −x).',
+        'Write the reflected coordinate: (−x, y).'
+      ];
+      result.check = 'The original and reflected points must be equal distances from the y-axis.';
+    }
+  }
+
+  // 2. Consecutive numbers variants: 3 consecutive numbers (walk) vs 5 consecutive odd numbers (desk)
+  if (sub === 'consecutive_numbers') {
+    if (text.includes('Three') || text.includes('three') || mode === 'walk') {
+      result.concept = 'Three Consecutive Whole Numbers';
+      result.steps = [
+        'Find the middle number by dividing the sum by 3: Middle = Sum ÷ 3.',
+        'Consecutive whole numbers have a step size of 1: (Middle − 1), Middle, (Middle + 1).',
+        'To find the largest number, add 1 to the middle: Largest = Middle + 1.'
+      ];
+      result.check = 'Add the three numbers (Middle − 1) + Middle + (Middle + 1) to verify they equal the given sum.';
+    } else {
+      result.concept = 'Five Consecutive Odd Numbers';
+      result.steps = [
+        'Find the middle (3rd) number by dividing the sum by 5: Middle = Sum ÷ 5.',
+        'Consecutive odd numbers have a step size of 2: (Middle − 4), (Middle − 2), Middle, (Middle + 2), (Middle + 4).',
+        'To find the smallest number, subtract two steps of 2: Smallest = Middle − 4.'
+      ];
+      result.check = 'Sum all 5 odd numbers; the total must match the prompt value.';
+    }
+  }
+
+  // 3. Fraction of amount variants: remainder multi-step (desk) vs direct fraction of amount (walk)
+  if (sub === 'fraction_of_amount') {
+    if (text.includes('not blue') || text.includes('remainder') || mode === 'desk') {
+      result.concept = 'Remainder Fractioning & Sequential Partitioning';
+      result.steps = [
+        'Calculate the primary group: divide total by denominator and multiply by numerator.',
+        'CRITICAL STEP: Calculate the non-matching remainder (Total − Primary Group).',
+        'Apply the second fraction strictly to the remainder, not the original total.'
+      ];
+      result.check = 'Sum all parts to verify they equal the starting whole.';
+    } else {
+      result.concept = 'Fraction of an Amount (Unitary Method)';
+      result.steps = [
+        'Divide the whole amount by the denominator to find the value of 1 equal part.',
+        'Multiply the value of 1 part by the numerator to find the requested share.',
+        'For a proper fraction, the answer must be smaller than the starting total.'
+      ];
+      result.check = 'Check by dividing your answer by the numerator, then multiplying by the denominator.';
+    }
+  }
+
+  // 4. Number sequences variants: next term (walk) vs nth term rule (desk)
+  if (sub === 'number_sequences') {
+    if (text.includes('comes next') || mode === 'walk') {
+      result.concept = 'Term-to-Term Sequence Rule';
+      result.steps = [
+        'Find the difference between consecutive terms: Difference = Term 2 − Term 1.',
+        'Verify the same difference applies across all given terms.',
+        'Add the difference to the last given term to find the next term.'
+      ];
+      result.check = 'Subtract the common difference from your answer to recover the previous term.';
+    } else {
+      result.concept = 'Linear Arithmetic Sequences (nth Term Rule)';
+      result.steps = [
+        'Find the common difference d between consecutive terms.',
+        'Count the jumps: from term 1 to term n, there are exactly (n − 1) jumps.',
+        'Calculate: Target Term = Term 1 + (n − 1) × d.'
+      ];
+      result.check = 'Verify with the linear nth term formula against the first three terms.';
+    }
+  }
+
+  // 5. Perimeter variants: boundary with gate deduction (desk) vs L-shaped corner cutout (walk)
+  if (sub === 'perimeter') {
+    if (text.includes('gate')) {
+      result.concept = 'Boundary Distance with Gate Deductions';
+      result.steps = [
+        'Calculate the complete rectangular perimeter: 2 × (Length + Width).',
+        'Deduct the width of the gate that replaces fencing: Fence = Perimeter − Gate.',
+        'State the answer in metres.'
+      ];
+      result.check = 'Add the gate width back to your answer; the sum must equal the complete perimeter.';
+    } else if (text.includes('L-shape') || text.includes('corner') || text.includes('cut out')) {
+      result.concept = 'Perimeter of an L-Shaped Cutout';
+      result.steps = [
+        'When a rectangular corner is cut out, the two new inside edges equal the two outside edges removed.',
+        'Therefore, cutting out a rectangular corner leaves the total perimeter unchanged.',
+        'Calculate the perimeter of the original full rectangle: 2 × (Length + Width).'
+      ];
+      result.check = 'Trace all 6 edges around the shape to verify their sum equals 2 × (Length + Width).';
+    }
+  }
+
+  // 6. Speed, distance, time variants: closing speed (desk) vs minute conversions vs steady distance (walk)
+  if (sub === 'speed_distance_time') {
+    if (text.includes('towards each other') || text.includes('apart')) {
+      result.concept = 'Rate-Distance-Time Triangle & Closing Speeds';
+      result.steps = [
+        'For two objects moving towards each other: Closing Speed = Speed 1 + Speed 2.',
+        'Calculate travel time in hours: Time = Distance ÷ Closing Speed.',
+        'Convert hours to minutes by multiplying by 60.'
+      ];
+      result.check = 'Multiply closing speed by time in hours to confirm the starting gap is covered.';
+    } else if (text.includes('minutes') && mode === 'desk') {
+      result.concept = 'Speed, Distance, Time & Minute Conversions';
+      result.steps = [
+        'Use the relationship: Time in hours = Distance ÷ Speed.',
+        'Convert hours into minutes by multiplying by 60: Minutes = Hours × 60.',
+        'Check that speed multiplied by time in hours gives the original distance.'
+      ];
+      result.check = 'Divide distance by speed to verify the hours, then convert to minutes.';
+    } else {
+      result.concept = 'Distance at Constant Speed';
+      result.steps = [
+        'Use the formula: Distance = Speed × Time.',
+        'Multiply the speed (km/h) by the elapsed hours.',
+        'No unit conversion is needed when speed and time use compatible units.'
+      ];
+      result.check = 'Divide distance by time to verify it equals the speed.';
+    }
+  }
+
+  // 7. Fraction equivalence variants: odd one out (desk) vs missing numerator
+  if (sub === 'fraction_equivalence') {
+    if (text.includes('odd one out')) {
+      result.concept = 'Simplifying Fractions to Identify the Odd One Out';
+      result.steps = [
+        'Simplify each fraction to lowest terms by dividing numerator and denominator by their HCF.',
+        'Compare all simplified forms; four will simplify to the same fraction (2/5).',
+        'The fraction that simplifies to a different value is the odd one out.'
+      ];
+      result.check = 'Check each fraction: 6/15 = 2/5, 8/20 = 2/5, 14/35 = 2/5, but 10/24 = 5/12.';
+    } else {
+      result.concept = 'Equivalent Fractions & Scale Factors';
+      result.steps = [
+        'Find the scale factor between denominators: Factor = New Denominator ÷ Original Denominator.',
+        'Multiply the numerator by the exact same scale factor.',
+        'Confirm both fractions represent the exact same proportion.'
+      ];
+      result.check = 'Cross-multiply numerator and denominator (a × d = b × c) to confirm equality.';
+    }
+  }
+
+  // 8. Translation variants: 2D vector move (desk) vs single-axis move (walk)
+  if (sub === 'translation') {
+    if (text.includes('down') || text.includes('up')) {
+      result.concept = 'Two-Dimensional Vector Translation (x ± dx, y ± dy)';
+      result.steps = [
+        'Read the starting coordinates (x, y).',
+        'Adjust x for horizontal movement: right = +dx, left = −dx.',
+        'Adjust y for vertical movement: up = +dy, down = −dy.',
+        'Write the new coordinate as (x_new, y_new).'
+      ];
+      result.check = 'Re-plot the point visually to verify direction on the grid.';
+    } else {
+      result.concept = 'Single-Axis Coordinate Shift';
+      result.steps = [
+        'A horizontal move changes only the x-coordinate; y remains unchanged.',
+        'Moving right adds to x; moving left subtracts from x.',
+        'Write the new coordinate.'
+      ];
+      result.check = 'Check that the non-moving coordinate is untouched.';
+    }
+  }
+
+  // 9. Missing mean variants: 5-score table (desk) vs 3-score mental (walk)
+  if (sub === 'missing_mean') {
+    if (text.includes('five') || text.includes('Five') || mode === 'desk') {
+      result.concept = 'Reconstructing Missing Value from Mean of 5 Scores';
+      result.steps = [
+        'Calculate total sum needed for all 5 scores: Target Total = Mean × 5.',
+        'Sum the 4 known scores in the table.',
+        'Subtract the known sum from the target total: Missing Score = Target Total − Known Sum.'
+      ];
+      result.check = 'Add all 5 scores together and divide by 5; the result must equal the given mean.';
+    } else {
+      result.concept = 'Finding a Missing Value from the Mean of 3 Scores';
+      result.steps = [
+        'Calculate total sum of all 3 scores: Target Total = Mean × 3.',
+        'Add the 2 known scores together.',
+        'Subtract the sum of the 2 known scores from the target total.'
+      ];
+      result.check = 'Sum all 3 scores and divide by 3 to verify the mean.';
+    }
+  }
+
+  // 10. Data comparison variants: bar chart readings (desk) vs survey counts (walk)
+  if (sub === 'data_comparison') {
+    if (text.includes('bar chart') || mode === 'desk') {
+      result.concept = 'Reading and Comparing Bar Chart Heights';
+      result.steps = [
+        'Calibrate the vertical axis: check what each grid line represents.',
+        'Read the bar heights for both requested categories.',
+        'Subtract the smaller value from the larger value to find the difference.'
+      ];
+      result.check = 'Confirm the prompt asks "how many more", which requires subtraction, not addition.';
+    } else {
+      result.concept = 'Comparing Two Survey Counts';
+      result.steps = [
+        'Identify the counts for both groups.',
+        'Subtract the smaller group from the larger group: Difference = Group 1 − Group 2.',
+        '"How many more" always asks for the difference between counts.'
+      ];
+      result.check = 'Add the difference to the smaller count; it must equal the larger count.';
+    }
+  }
+
+  // 11. Unit conversion variants: multi-batch mass (desk) vs direct metric conversions (walk)
+  if (sub === 'unit_conversion') {
+    if (text.includes('batch') || text.includes('batches')) {
+      result.concept = 'Multi-Batch Mass Scaling & Gram-to-Kilogram Conversion';
+      result.steps = [
+        'Calculate the total mass in grams first: Total Grams = Batches × Grams per Batch.',
+        'Convert grams to kilograms by dividing by 1,000 (shift decimal point 3 places left).',
+        'Ensure the answer is expressed in kilograms with required decimal places.'
+      ];
+      result.check = '1 kg = 1,000 g. A kilogram number must always be 1,000 times smaller than the gram number.';
+    } else {
+      result.concept = 'Metric Unit Scaling (Grams, Metres, Litres)';
+      result.steps = [
+        'Identify the metric conversion factor (1 kg = 1,000 g; 1 L = 1,000 ml; 1 m = 100 cm).',
+        'Converting to smaller units makes the count larger: multiply by the conversion factor.',
+        'Converting to larger units makes the count smaller: divide by the conversion factor.'
+      ];
+      result.check = 'Ask: should there be more or fewer of the new unit?';
+    }
+  }
+
+  // 12. Time duration variants: 24-hr arrival calculation (desk) vs elapsed minutes (walk)
+  if (sub === 'time_duration') {
+    if (text.includes('arrive') || text.includes('24-hour')) {
+      result.concept = '24-Hour Clock Arrival Time Calculation';
+      result.steps = [
+        'Add full journey hours to departure time first.',
+        'Add remaining minutes, bridging through the 60-minute hour boundary as needed.',
+        'Format in standard 24-hour time notation (HH:MM).'
+      ];
+      result.check = 'Count backwards from the arrival time by the duration to verify the departure time.';
+    } else {
+      result.concept = 'Calculating Elapsed Minutes Across an Hour Boundary';
+      result.steps = [
+        'Bridge to the next full hour: count minutes from start time to the next hour (60 − starting minutes).',
+        'Add the minutes after the full hour.',
+        'Remember: an hour has 60 minutes, not 100.'
+      ];
+      result.check = 'Add elapsed minutes to the start time to confirm the end time.';
+    }
+  }
+
+  return result;
 }
