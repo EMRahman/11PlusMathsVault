@@ -24,8 +24,8 @@ export const TUTORIALS = {
       "Subtract Outflow from Inflow to determine Remaining stock."
     ],
     "check": "Sum the remaining items and distributed items; the result must equal the initial count.",
-    "webTitle": "BBC Bitesize \u2014 Multi-Step Word Problems",
-    "webUrl": "https://www.bbc.co.uk/bitesize/articles/z7b8qp3",
+    "webTitle": "Corbettmaths Primary — Practice Questions",
+    "webUrl": "https://corbettmathsprimary.com/content/",
     "videoTitle": "Math Antics \u2014 Multi-Digit Multiplication",
     "videoUrl": "https://www.youtube.com/watch?v=FJ5qLWP3Fqo",
     "videoId": "FJ5qLWP3Fqo"
@@ -54,9 +54,9 @@ export const TUTORIALS = {
     "check": "Cross-multiply numerator and denominator (a \u00d7 d = b \u00d7 c) to confirm equality.",
     "webTitle": "Corbettmaths Primary \u2014 Equivalent Fractions",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Math Antics \u2014 Equivalent Fractions",
-    "videoUrl": "https://www.youtube.com/watch?v=qcHHhd6H67s",
-    "videoId": "qcHHhd6H67s"
+    "videoTitle": "Corbettmaths — Equivalent Fractions",
+    "videoUrl": "https://www.youtube.com/watch?v=2Gbe6J0JzHE",
+    "videoId": "2Gbe6J0JzHE"
   },
   "fraction_of_amount": {
     "concept": "Remainder Fractioning & Sequential Partitioning",
@@ -136,11 +136,11 @@ export const TUTORIALS = {
       "Split decimals mentally (e.g. \u00d7 1.15 = 100% + 10% + 5%)."
     ],
     "check": "If 1 pound buys more than 1 euro, you must finish with more euros than pounds.",
-    "webTitle": "Corbettmaths \u2014 Exchange Rates",
-    "webUrl": "https://corbettmaths.com/2013/05/15/exchange-rates/",
-    "videoTitle": "Corbettmaths \u2014 Currency Exchange",
-    "videoUrl": "https://www.youtube.com/watch?v=LpUeZ8T29iY",
-    "videoId": "LpUeZ8T29iY"
+    "webTitle": "Corbettmaths Primary — Practice Questions",
+    "webUrl": "https://corbettmathsprimary.com/content/",
+    "videoTitle": "Corbettmaths Primary — Proportion",
+    "videoUrl": "https://www.youtube.com/watch?v=bg283xTWtxc",
+    "videoId": "bg283xTWtxc"
   },
   "money_change": {
     "concept": "Multi-Item Expenditure & Complementary Subtraction",
@@ -150,8 +150,8 @@ export const TUTORIALS = {
       "Subtract using counting-up complementary addition across zero."
     ],
     "check": "Add final change to total cost; the sum must equal the cash note handed over.",
-    "webTitle": "BBC Bitesize \u2014 Money Problems and Change",
-    "webUrl": "https://www.bbc.co.uk/bitesize/articles/zsbp7yc",
+    "webTitle": "Corbettmaths Primary — Practice Questions",
+    "webUrl": "https://corbettmathsprimary.com/content/",
     "videoTitle": "Math Antics \u2014 Decimal Arithmetic",
     "videoUrl": "https://www.youtube.com/watch?v=kwh4SD1ToFc",
     "videoId": "kwh4SD1ToFc"
@@ -250,9 +250,9 @@ export const TUTORIALS = {
     "check": "Compare scaling factors (e.g. 15 items is 2.5 times 6 items; multiply cost by 2.5).",
     "webTitle": "Corbettmaths Primary \u2014 Proportion: Unitary Method",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Corbettmaths \u2014 Proportion Unitary Method",
-    "videoUrl": "https://www.youtube.com/watch?v=Yf1oT552-kE",
-    "videoId": "Yf1oT552-kE"
+    "videoTitle": "Corbettmaths Primary — Proportion",
+    "videoUrl": "https://www.youtube.com/watch?v=bg283xTWtxc",
+    "videoId": "bg283xTWtxc"
   },
   "scaling_recipe": {
     "concept": "Direct Proportion in Recipes",
@@ -264,9 +264,9 @@ export const TUTORIALS = {
     "check": "If people double, ingredient amounts must double.",
     "webTitle": "Corbettmaths Primary \u2014 Recipes & Scaling",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Math Antics \u2014 Proportions",
-    "videoUrl": "https://www.youtube.com/watch?v=USmit5zIasI",
-    "videoId": "USmit5zIasI"
+    "videoTitle": "Corbettmaths — Recipes",
+    "videoUrl": "https://www.youtube.com/watch?v=HpbJA9HxuTk",
+    "videoId": "HpbJA9HxuTk"
   },
   "ratio_difference": {
     "concept": "Ratio Sharing with a Given Difference",
@@ -320,9 +320,9 @@ export const TUTORIALS = {
     "check": "Never submit just the increase amount when the question asks for the new total.",
     "webTitle": "Corbettmaths Primary \u2014 Percentage Increase/Decrease",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Corbettmaths \u2014 Percentage Increase and Decrease",
-    "videoUrl": "https://www.youtube.com/watch?v=rKj1W3k64g0",
-    "videoId": "rKj1W3k64g0"
+    "videoTitle": "Corbettmaths — Increasing & Decreasing by a Percentage",
+    "videoUrl": "https://www.youtube.com/watch?v=tUtgC7ZrsRc",
+    "videoId": "tUtgC7ZrsRc"
   },
   "compound_area": {
     "concept": "Subtractive Rectilinear Geometry (Bounding Box Subtraction)",
@@ -348,9 +348,9 @@ export const TUTORIALS = {
     "check": "Never use the sloping side as the height.",
     "webTitle": "Corbettmaths Primary \u2014 Area of a Triangle",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Math Antics \u2014 Triangle Area",
-    "videoUrl": "https://www.youtube.com/watch?v=zphAgT04OF8",
-    "videoId": "zphAgT04OF8"
+    "videoTitle": "Corbettmaths — Area of a Triangle",
+    "videoUrl": "https://www.youtube.com/watch?v=6WsQH1cAYMM",
+    "videoId": "6WsQH1cAYMM"
   },
   "perimeter": {
     "concept": "Boundary Distance with Real-World Deductions",
@@ -418,9 +418,9 @@ export const TUTORIALS = {
     "check": "Multiply closing speed by time in hours to confirm the total starting gap.",
     "webTitle": "Corbettmaths \u2014 Speed, Distance, Time",
     "webUrl": "https://corbettmaths.com/2016/01/01/speed-distance-time/",
-    "videoTitle": "Corbettmaths \u2014 Speed, Distance and Time",
-    "videoUrl": "https://www.youtube.com/watch?v=680gI2v1NnQ",
-    "videoId": "680gI2v1NnQ"
+    "videoTitle": "Corbettmaths — Speed, Distance, Time",
+    "videoUrl": "https://www.youtube.com/watch?v=dHVK7IeLGT8",
+    "videoId": "dHVK7IeLGT8"
   },
   "unit_conversion": {
     "concept": "Metric Place-Value Scaling (Grams to Kilograms)",
@@ -432,9 +432,9 @@ export const TUTORIALS = {
     "check": "1 kg = 1,000 g. A kilogram number must always be 1,000 times smaller than the gram number.",
     "webTitle": "Corbettmaths Primary \u2014 Units: Metric",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Math Antics \u2014 Intro to the Metric System",
-    "videoUrl": "https://www.youtube.com/watch?v=kOJFSH_Bn80",
-    "videoId": "kOJFSH_Bn80"
+    "videoTitle": "Changing Between Units of Measurement (Primary Lesson)",
+    "videoUrl": "https://www.youtube.com/watch?v=XEdjr-Yru7U",
+    "videoId": "XEdjr-Yru7U"
   },
   "time_duration": {
     "concept": "Base-60 Chronological Bridging & 24-Hour Clock",
@@ -445,10 +445,7 @@ export const TUTORIALS = {
     ],
     "check": "Count backwards from arrival time by the journey duration to verify departure time.",
     "webTitle": "Corbettmaths Primary \u2014 Time Calculations",
-    "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Maths with Mum \u2014 Adding Time and Journey Durations",
-    "videoUrl": "https://www.youtube.com/watch?v=aG4e1g8iH3U",
-    "videoId": "aG4e1g8iH3U"
+    "webUrl": "https://corbettmathsprimary.com/content/"
   },
   "mass_difference": {
     "concept": "Mixed Unit Mass Subtraction",
@@ -458,11 +455,11 @@ export const TUTORIALS = {
       "Never subtract grams directly from kilograms."
     ],
     "check": "Add the remaining grams to the used grams; the sum must equal the starting mass.",
-    "webTitle": "BBC Bitesize \u2014 Metric Units of Mass",
-    "webUrl": "https://www.bbc.co.uk/bitesize/articles/zvxwgwx",
-    "videoTitle": "Math Antics \u2014 Intro to the Metric System",
-    "videoUrl": "https://www.youtube.com/watch?v=kOJFSH_Bn80",
-    "videoId": "kOJFSH_Bn80"
+    "webTitle": "Corbettmaths Primary — Practice Questions",
+    "webUrl": "https://corbettmathsprimary.com/content/",
+    "videoTitle": "Changing Between Units of Measurement (Primary Lesson)",
+    "videoUrl": "https://www.youtube.com/watch?v=XEdjr-Yru7U",
+    "videoId": "XEdjr-Yru7U"
   },
   "consecutive_numbers": {
     "concept": "Mean-Symmetry of Uniformly Spaced Integers",
@@ -472,8 +469,8 @@ export const TUTORIALS = {
       "The smallest number is two steps below the middle: Middle \u2212 4."
     ],
     "check": "List all 5 numbers and sum them; their total must equal the prompt value.",
-    "webTitle": "NRICH \u2014 Consecutive Numbers Problem",
-    "webUrl": "https://nrich.maths.org/2180",
+    "webTitle": "Corbettmaths Primary — Practice Questions",
+    "webUrl": "https://corbettmathsprimary.com/content/",
     "videoTitle": "Math Antics \u2014 Mean, Median and Mode",
     "videoUrl": "https://www.youtube.com/watch?v=B1HEzNTGeZ4",
     "videoId": "B1HEzNTGeZ4"
@@ -502,9 +499,9 @@ export const TUTORIALS = {
     "check": "Check with the nth term formula (dn + c) against the first 3 terms.",
     "webTitle": "Corbettmaths Primary \u2014 Sequences",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Corbettmaths \u2014 Sequences: Finding the nth Term",
-    "videoUrl": "https://www.youtube.com/watch?v=d_k8w_wzZqM",
-    "videoId": "d_k8w_wzZqM"
+    "videoTitle": "Corbettmaths — The nth Term",
+    "videoUrl": "https://www.youtube.com/watch?v=qnVVTBAfNu4",
+    "videoId": "qnVVTBAfNu4"
   },
   "function_machines": {
     "concept": "Sequential Machine Operations",
@@ -544,9 +541,9 @@ export const TUTORIALS = {
     "check": "Confirm the question asks for a difference, not a combined total.",
     "webTitle": "Corbettmaths Primary \u2014 Bar Charts",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Corbettmaths \u2014 Reading Bar Charts",
-    "videoUrl": "https://www.youtube.com/watch?v=YpP3lR7mXb8",
-    "videoId": "YpP3lR7mXb8"
+    "videoTitle": "Corbettmaths — Reading Bar Charts",
+    "videoUrl": "https://www.youtube.com/watch?v=3e1SIAPan8E",
+    "videoId": "3e1SIAPan8E"
   },
   "line_graphs": {
     "concept": "Continuous Coordinate Trends & Rate-of-Change Drop",
@@ -558,9 +555,9 @@ export const TUTORIALS = {
     "check": "A fall in temperature is a positive magnitude of decrease.",
     "webTitle": "Corbettmaths Primary \u2014 Line Graphs",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Corbettmaths \u2014 Line Graphs Tutorial",
-    "videoUrl": "https://www.youtube.com/watch?v=2v-pGZ7sJb4",
-    "videoId": "2v-pGZ7sJb4"
+    "videoTitle": "Corbettmaths — Line Graphs",
+    "videoUrl": "https://www.youtube.com/watch?v=E1fYceXHIr4",
+    "videoId": "E1fYceXHIr4"
   },
   "pie_charts": {
     "concept": "Proportional Sector Population Allocation",
@@ -572,9 +569,9 @@ export const TUTORIALS = {
     "check": "Calculate the remaining sector; both groups must add to the total population.",
     "webTitle": "Corbettmaths Primary \u2014 Pie Charts",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Corbettmaths \u2014 Pie Charts Walkthrough",
-    "videoUrl": "https://www.youtube.com/watch?v=7u7P3o_mK44",
-    "videoId": "7u7P3o_mK44"
+    "videoTitle": "Corbettmaths Primary — Reading Pie Charts",
+    "videoUrl": "https://www.youtube.com/watch?v=Ruc9n6ho3l4",
+    "videoId": "Ruc9n6ho3l4"
   },
   "range": {
     "concept": "Statistical Spread (Maximum \u2212 Minimum)",
@@ -601,9 +598,9 @@ export const TUTORIALS = {
     "check": "Re-plot the point visually to verify direction on the grid.",
     "webTitle": "Corbettmaths Primary \u2014 Translations",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Corbettmaths \u2014 Translations on a Coordinate Grid",
-    "videoUrl": "https://www.youtube.com/watch?v=t1lE8r5N7xI",
-    "videoId": "t1lE8r5N7xI"
+    "videoTitle": "Corbettmaths Primary — Translations",
+    "videoUrl": "https://www.youtube.com/watch?v=8Dtz5fBe7_Q",
+    "videoId": "8Dtz5fBe7_Q"
   },
   "reflection": {
     "concept": "Orthogonal Axis Reflection & Sign Inversion",
@@ -616,9 +613,9 @@ export const TUTORIALS = {
     "check": "The original and reflected points must be equal distances from the mirror axis.",
     "webTitle": "Corbettmaths Primary \u2014 Reflections",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Corbettmaths \u2014 Reflections across Axes",
-    "videoUrl": "https://www.youtube.com/watch?v=Qf6V4z8B5iE",
-    "videoId": "Qf6V4z8B5iE"
+    "videoTitle": "Corbettmaths Primary — Reflections",
+    "videoUrl": "https://www.youtube.com/watch?v=LJtKs8SClSI",
+    "videoId": "LJtKs8SClSI"
   },
   "rectangle_coordinates": {
     "concept": "Axis-Aligned Rectangle Geometry & Vertex Matching",
@@ -631,9 +628,9 @@ export const TUTORIALS = {
     "check": "Check that side lengths |AB| = |DC| and |BC| = |AD|.",
     "webTitle": "Corbettmaths Primary \u2014 Coordinates & 2D Shapes",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Corbettmaths \u2014 Coordinates and Missing Vertices",
-    "videoUrl": "https://www.youtube.com/watch?v=1OEMXFxExx8",
-    "videoId": "1OEMXFxExx8"
+    "videoTitle": "Corbettmaths Primary — Coordinates",
+    "videoUrl": "https://www.youtube.com/watch?v=6eX4PZJjofI",
+    "videoId": "6eX4PZJjofI"
   },
   "coordinate_distance": {
     "concept": "Horizontal / Vertical Distance on Grid",
@@ -645,9 +642,9 @@ export const TUTORIALS = {
     "check": "Distance is always positive.",
     "webTitle": "Corbettmaths Primary \u2014 Coordinates",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Math Antics \u2014 The Coordinate Plane",
-    "videoUrl": "https://www.youtube.com/watch?v=1OEMXFxExx8",
-    "videoId": "1OEMXFxExx8"
+    "videoTitle": "Corbettmaths Primary — Coordinates",
+    "videoUrl": "https://www.youtube.com/watch?v=6eX4PZJjofI",
+    "videoId": "6eX4PZJjofI"
   },
   "coordinate_position": {
     "concept": "Vertical Displacement on Grid",
@@ -659,9 +656,9 @@ export const TUTORIALS = {
     "check": "Add the move back to y_new to recover the starting y-coordinate.",
     "webTitle": "Corbettmaths Primary \u2014 Coordinates",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Math Antics \u2014 The Coordinate Plane",
-    "videoUrl": "https://www.youtube.com/watch?v=1OEMXFxExx8",
-    "videoId": "1OEMXFxExx8"
+    "videoTitle": "Corbettmaths Primary — Coordinates",
+    "videoUrl": "https://www.youtube.com/watch?v=6eX4PZJjofI",
+    "videoId": "6eX4PZJjofI"
   },
   "factors": {
     "concept": "Factor Finding and Proper Factors",
@@ -673,9 +670,9 @@ export const TUTORIALS = {
     "check": "Multiply the factor by its pair to verify it equals the original number.",
     "webTitle": "Corbettmaths Primary \u2014 Factors",
     "webUrl": "https://corbettmathsprimary.com/content/",
-    "videoTitle": "Math Antics \u2014 Factoring",
-    "videoUrl": "https://www.youtube.com/watch?v=0vg_kK8G-08",
-    "videoId": "0vg_kK8G-08"
+    "videoTitle": "Corbettmaths — Factors",
+    "videoUrl": "https://www.youtube.com/watch?v=YkbMTSqE1vM",
+    "videoId": "YkbMTSqE1vM"
   },
   "estimation": {
     "concept": "Rounding to Friendly Tens for Fast Estimation",
