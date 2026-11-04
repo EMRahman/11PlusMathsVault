@@ -1434,3 +1434,162 @@ button:disabled { opacity: .55; cursor: default; }
   #walk-filter-bar .filter-select { flex: 1 1 140px; max-width: 100%; }
 }
 .method-extension { display: inline-block; font-size: .75rem; color: var(--color-hacks); margin: .25rem 0; }
+
+/* ── Online Tutorial & Video Refresher ──────────────────────── */
+.tutorial-card {
+  margin: 1.25rem 0;
+  padding: 1.15rem;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-desk);
+  border-radius: var(--radius-md);
+}
+.tutorial-card-header {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: .8rem;
+}
+.tutorial-badge {
+  display: inline-block;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: 700;
+  background: var(--color-desk-bg);
+  color: var(--color-desk);
+  border: 1px solid var(--color-desk-dark);
+  padding: .2rem .5rem;
+  border-radius: var(--radius-sm);
+}
+.tutorial-card-title {
+  font-weight: 600;
+  font-size: var(--text-base);
+  color: var(--color-text);
+}
+.tutorial-approach {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: .9rem 1rem;
+  margin: .75rem 0;
+  font-size: var(--text-sm);
+}
+.tutorial-approach strong {
+  color: var(--color-desk-light);
+}
+.tutorial-steps {
+  list-style: decimal;
+  padding-left: 1.4rem;
+  margin: .5rem 0 .75rem;
+}
+.tutorial-steps li {
+  margin: .4rem 0;
+  line-height: 1.45;
+}
+.tutorial-check {
+  margin-top: .6rem;
+  padding-top: .6rem;
+  border-top: 1px dashed var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+.tutorial-media-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  align-items: center;
+  margin-top: .8rem;
+}
+.tutorial-video-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  background: var(--color-desk);
+  color: #042f2e;
+  font-weight: 600;
+  border: 0;
+  padding: .5rem .9rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.tutorial-video-toggle:hover {
+  background: var(--color-desk-light);
+}
+.tutorial-ext-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .45rem .8rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  transition: all .15s;
+}
+.tutorial-ext-link:hover, .tutorial-ext-link:focus-visible {
+  border-color: var(--color-desk);
+  color: var(--color-text);
+  background: var(--color-desk-bg);
+}
+.tutorial-video-container {
+  margin-top: 1rem;
+}
+.video-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: #000;
+  border: 1px solid var(--color-border);
+}
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.hint-tutorial {
+  margin-top: .8rem;
+  padding-top: .8rem;
+  border-top: 1px dashed var(--color-border);
+}
+.hint-tutorial-text {
+  font-size: var(--text-sm);
+  color: var(--color-desk-light);
+  margin-bottom: .4rem;
+}
+.hint-tutorial-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  align-items: center;
+}
+.hint-video-toggle {
+  font-size: var(--text-xs);
+  padding: .35rem .65rem;
+  background: var(--color-desk);
+  color: #042f2e;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+}
+.hint-video-toggle:hover {
+  background: var(--color-desk-light);
+}
+.hint-tutorial-link {
+  font-size: var(--text-sm);
+  color: var(--color-desk);
+  text-decoration: underline;
+}
+.hint-tutorial-link:hover {
+  color: var(--color-desk-light);
+}
+

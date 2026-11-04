@@ -3,6 +3,7 @@ import { getProgress, getSettings, recordResult, isBookmarked, toggleBookmark, g
 import { TOPICS, esc, shuffle, time, difficulty, questionBody, answerText } from './content.js';
 import { followUp } from './practice.js';
 import { printWorksheet } from './print.js';
+import { getTutorial } from './tutorials.js';
 
 let bank = [], questions = [], states = {}, index = 0, config = {}, timer;
 let seconds = 0, deadline = 0, lastTick = 0, submitted = false;
@@ -69,6 +70,7 @@ function tick() {
 }
 function render() {
   const q = questions[index], st = current(), qNumber = index + 1;
+  const tutorial = getTutorial(q.subtopic);
   const availableFollowUp = !exam() && config.kind !== 'daily' && st.finished ? followUp(q, bank, getProgress(), questions.filter(item => states[item.id]?.finished).map(item => item.id)) : null;
   const wrong = st.firstAnswer && !st.firstAnswer.correct && !st.finished;
   area().innerHTML = `<div class="session-meta"><span>Q${qNumber} of ${questions.length} · ${exam() ? 'Exam practice' : config.kind === 'daily' ? esc(config.reasons?.[q.id]) : 'Guided practice'}</span><span><span data-session-clock>${time(exam() ? (deadline - Date.now()) / 1000 : seconds)}</span> ${exam() ? 'left' : 'solving time'}</span></div>
@@ -79,8 +81,8 @@ function render() {
       ${config.kind === 'exam-set' ? `<fieldset class="exam-choices"><legend class="sr-only">Choose your answer</legend>${q.options.map((opt, i) => `<label class="exam-option"><input type="radio" name="exam-answer" value="${esc(opt)}" ${st.input === opt ? 'checked' : ''}><span>${String.fromCharCode(65 + i)}. ${esc(opt)}</span></label>`).join('')}</fieldset>` : `<label class="answer-label" for="desk-answer-input">Your final answer${q.unit ? ` (in ${esc(q.unit)})` : ''}</label><input type="text" class="answer-input" id="desk-answer-input" value="${esc(st.input)}" autocomplete="off" spellcheck="false" ${st.finished ? 'disabled' : ''} placeholder="Type your answer">`}
       ${!exam() && !st.finished ? `<p class="answer-status ${wrong ? 'incorrect' : ''}" role="status">${wrong ? 'Not quite yet. Try again, or use a hint to get started.' : ''}</p><div class="action-row"><button class="btn btn--primary-desk" type="submit" id="desk-check-btn">${wrong ? 'Try again' : 'Check answer'}</button><button class="btn btn--secondary" type="button" id="desk-hint-btn" ${st.hints >= q.hints.length ? 'disabled' : ''}>${st.hints ? 'Next hint' : 'Give me a hint'}</button><button class="text-button" type="button" id="desk-solution-btn">Show worked solution</button></div>` : ''}
       </form>
-      ${!exam() && st.hints ? `<div class="hint-box" aria-live="polite"><strong>A step at a time</strong><ol>${q.hints.slice(0, st.hints).map(h => `<li>${esc(h)}</li>`).join('')}</ol><p class="muted">Answers using hints are tracked as supported practice.</p></div>` : ''}
-      ${st.finished ? `<div class="desk-result-msg ${st.independentCorrect ? 'correct' : ''}" role="status">${st.independentCorrect ? '✓ Correct independently' : st.finalCorrect ? '✓ You got there — keep practising this skill' : `The answer is ${esc(answerText(q))}`}</div><div class="explanation-box">${esc(q.explanation)}</div>${q.pitfall ? `<div class="pitfall-box"><strong>Watch out:</strong> ${esc(q.pitfall)}</div>` : ''}<p class="parent-prompt">Explain it: ${esc(q.parent_prompt || 'How could you check that your answer makes sense?')}</p>${availableFollowUp ? '<button class="btn btn--secondary" id="desk-followup-btn">Try a similar question</button>' : ''}` : ''}
+      ${!exam() && st.hints ? `<div class="hint-box" aria-live="polite"><strong>A step at a time</strong><ol>${q.hints.slice(0, st.hints).map(h => `<li>${esc(h)}</li>`).join('')}</ol><p class="muted">Answers using hints are tracked as supported practice.</p>${tutorial && st.hints >= q.hints.length ? `<div class="hint-tutorial"><p class="hint-tutorial-text">Still stuck? <strong>${esc(tutorial.concept)}</strong></p><div class="hint-tutorial-actions">${tutorial.videoId ? `<button type="button" class="btn btn--secondary btn--sm hint-video-toggle" id="desk-hint-video-toggle" aria-expanded="false"><span class="btn-icon">▶</span> <span class="btn-text">Watch video</span></button>` : ''}<a href="${esc(tutorial.videoUrl)}" target="_blank" rel="noopener noreferrer" class="hint-tutorial-link">Open on YouTube ↗</a><a href="${esc(tutorial.webUrl)}" target="_blank" rel="noopener noreferrer" class="hint-tutorial-link">Read guide ↗</a></div>${tutorial.videoId ? `<div class="tutorial-video-container" id="desk-hint-video-container" hidden><div class="video-responsive"><iframe data-src="https://www.youtube-nocookie.com/embed/${esc(tutorial.videoId)}?rel=0" title="${esc(tutorial.videoTitle)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>` : ''}</div>` : ''}</div>` : ''}
+      ${st.finished ? `<div class="desk-result-msg ${st.independentCorrect ? 'correct' : ''}" role="status">${st.independentCorrect ? '✓ Correct independently' : st.finalCorrect ? '✓ You got there — keep practising this skill' : `The answer is ${esc(answerText(q))}`}</div><div class="explanation-box">${esc(q.explanation)}</div>${q.pitfall ? `<div class="pitfall-box"><strong>Watch out:</strong> ${esc(q.pitfall)}</div>` : ''}<p class="parent-prompt">Explain it: ${esc(q.parent_prompt || 'How could you check that your answer makes sense?')}</p>${tutorial ? `<div class="tutorial-card"><div class="tutorial-card-header"><span class="tutorial-badge">Tutorial Insight</span><div class="tutorial-card-title">${esc(tutorial.concept)}</div></div>${tutorial.steps ? `<div class="tutorial-approach"><strong>How to approach this:</strong><ol class="tutorial-steps">${tutorial.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol>${tutorial.check ? `<p class="tutorial-check"><strong>Sanity check:</strong> ${esc(tutorial.check)}</p>` : ''}</div>` : ''}<div class="tutorial-media-actions">${tutorial.videoId ? `<button type="button" class="btn btn--secondary tutorial-video-toggle" id="desk-video-toggle" aria-expanded="false"><span class="btn-icon">▶</span> <span class="btn-text">Watch video walkthrough</span></button>` : ''}<a href="${esc(tutorial.videoUrl)}" target="_blank" rel="noopener noreferrer" class="tutorial-ext-link"><span>Open video on YouTube ↗</span></a><a href="${esc(tutorial.webUrl)}" target="_blank" rel="noopener noreferrer" class="tutorial-ext-link"><span>${esc(tutorial.webTitle)} ↗</span></a></div>${tutorial.videoId ? `<div class="tutorial-video-container" id="desk-video-container" hidden><div class="video-responsive"><iframe data-src="https://www.youtube-nocookie.com/embed/${esc(tutorial.videoId)}?rel=0" title="${esc(tutorial.videoTitle)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>` : ''}</div>` : ''}${availableFollowUp ? '<button class="btn btn--secondary" id="desk-followup-btn">Try a similar question</button>' : ''}` : ''}
       ${exam() ? `<label class="flag-control"><input type="checkbox" id="desk-flag" ${st.flagged ? 'checked' : ''}> Flag to return to</label>` : ''}
       <div class="card-nav"><button class="btn btn--secondary" id="desk-prev-btn" ${index === 0 ? 'disabled' : ''}>← Back</button>${exam() || st.finished ? `<button class="btn btn--primary-desk" id="desk-next-btn">${index === questions.length - 1 ? exam() ? 'Review paper' : 'See results' : 'Next →'}</button>` : ''}</div>
     </article>
@@ -128,6 +130,23 @@ function bind(q, st, nextQuestion) {
   root.querySelectorAll('[data-jump]').forEach(el => el.onclick = () => { index = Number(el.dataset.jump); render(); });
   const review = root.querySelector('#exam-review-btn');
   if (review) review.onclick = reviewExam;
+  const setupVideoToggle = (btnId, containerId) => {
+    const btn = root.querySelector(btnId), container = root.querySelector(containerId);
+    if (!btn || !container) return;
+    btn.onclick = () => {
+      const isHidden = container.hidden;
+      container.hidden = !isHidden;
+      btn.setAttribute('aria-expanded', String(isHidden));
+      const textSpan = btn.querySelector('.btn-text');
+      if (textSpan) textSpan.textContent = isHidden ? 'Hide video walkthrough' : 'Watch video walkthrough';
+      if (isHidden) {
+        const iframe = container.querySelector('iframe');
+        if (iframe && !iframe.src && iframe.dataset.src) iframe.src = iframe.dataset.src;
+      }
+    };
+  };
+  setupVideoToggle('#desk-video-toggle', '#desk-video-container');
+  setupVideoToggle('#desk-hint-video-toggle', '#desk-hint-video-container');
 }
 function finish(q, st, revealed) {
   if (st.finished) return;
