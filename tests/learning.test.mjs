@@ -6,6 +6,7 @@ import { dailyPlan, skillProgress, skillKey, followUp, listPapers, paperQuestion
 import { diagram, TOPICS, answerText } from '../js/content.js';
 import { METHOD_NOTES } from '../js/method-notes.js';
 import { getTutorial } from '../js/tutorials.js';
+import { worksheetHtml } from '../js/print.js';
 import { initState, recordResult, getProgress, getBookmarks, resetAll, getSettings, localDate } from '../js/state.js';
 const questions = JSON.parse(fs.readFileSync(new URL('../data/questions.json', import.meta.url)));
 const storage = new Map();
@@ -327,4 +328,17 @@ test('Walk Mode mistake notes describe working that gives the chosen value', () 
   assert.match(note(103, '18'), /7 \+ 11 = 18/);
   assert.match(note(59, '80'), /4\/5 is 80%/);
   assert.match(note(49, '8'), /5 \+ 3 = 8/);
+});
+
+test('mixed worksheets keep the options on multiple-choice questions only', () => {
+  const choice = questions.find(q => q.id === 342), written = questions.find(q => q.id === 121);
+  const sheet = worksheetHtml([choice, written]);
+  assert.equal(sheet.match(/print-options/g).length, 1);
+  for (const opt of choice.options) assert.ok(sheet.includes(opt));
+  assert.equal(sheet.match(/Final answer:/g).length, 1);
+  assert.match(sheet, /Multiple choice and written answers/);
+  assert.doesNotMatch(sheet, /separate answer grid/);
+  assert.match(worksheetHtml([choice, written], { answers: true }), new RegExp(`<strong>${choice.answer_display} — `));
+  assert.match(worksheetHtml([choice]), /separate answer grid/);
+  assert.match(worksheetHtml([written]), /Written answers/);
 });

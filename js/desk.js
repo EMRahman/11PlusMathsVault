@@ -84,10 +84,10 @@ function prompt() {
   document.getElementById('desk-start-btn').onclick = () => startFromFilters(prepared, minutes);
   const browseBtn = document.getElementById('desk-browse-btn');
   if (browseBtn) browseBtn.onclick = browse;
-  document.getElementById('desk-print-questions').onclick = () => printWorksheet(prepared, { multipleChoice: choices });
+  document.getElementById('desk-print-questions').onclick = () => printWorksheet(prepared);
   const grid = document.getElementById('desk-print-grid');
-  if (grid) grid.onclick = () => printWorksheet(prepared, { grid: true, multipleChoice: true });
-  document.getElementById('desk-print-answers').onclick = () => printWorksheet(prepared, { answers: true, multipleChoice: choices });
+  if (grid) grid.onclick = () => printWorksheet(prepared, { grid: true });
+  document.getElementById('desk-print-answers').onclick = () => printWorksheet(prepared, { answers: true });
 }
 function startFromFilters(prepared, minutes) {
   const sel = document.getElementById('desk-session-type').value;
@@ -271,9 +271,8 @@ function summary() {
     const selected = mistakes.map(q => followUp(q, practiceBank(bank), getProgress(), questions.map(item => item.id)) || q);
     mount(bank, { kind: 'practice', container: config.container, questions: [...new Map(selected.map(q => [q.id, q])).values()] });
   };
-  const choices = allChoices(questions);
-  root.querySelector('#summary-print-btn').onclick = () => printWorksheet(questions, { multipleChoice: choices });
+  root.querySelector('#summary-print-btn').onclick = () => printWorksheet(questions);
   const grid = root.querySelector('#summary-grid-btn');
-  if (grid) grid.onclick = () => printWorksheet(questions, { grid: true, multipleChoice: true });
-  root.querySelector('#summary-answers-btn').onclick = () => printWorksheet(questions, { answers: true, multipleChoice: choices });
+  if (grid) grid.onclick = () => printWorksheet(questions, { grid: true });
+  root.querySelector('#summary-answers-btn').onclick = () => printWorksheet(questions, { answers: true });
 }
