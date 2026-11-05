@@ -1,0 +1,1030 @@
+[
+  {
+    "id": 334,
+    "topic": "percentages",
+    "subtopic": "percent_of_amount_harder",
+    "difficulty": 2,
+    "question": "A tablet costs £240 before VAT is added. VAT is 17.5%. How much VAT is added?",
+    "answer": "£42",
+    "unit": "£",
+    "answer_format": null,
+    "check": "240*0.175",
+    "distractors": [
+      {
+        "value": "£36",
+        "why": "Finds 10% (£24) and 5% (£12) but forgets the 2.5%."
+      },
+      {
+        "value": "£48",
+        "why": "Adds 10% and 5%, then adds 5% again (£12) instead of 2.5% (£6)."
+      },
+      {
+        "value": "£39",
+        "why": "Adds 10% and 5%, then adds £3, halving the 2.5% part a second time."
+      },
+      {
+        "value": "£4.20",
+        "why": "Treats 17.5% as 1.75%, so finds a tenth of the right amount."
+      }
+    ],
+    "explanation": "10% of £240 is £24. 5% is half of that, £12. 2.5% is half of 5%, £6. Add: 24 + 12 + 6 = £42.",
+    "hints": [
+      "Build 17.5% from 10%, 5% and a smaller part.",
+      "2.5% is half of 5%."
+    ],
+    "pitfall": "Missing or mis-halving the 2.5% part of 17.5%.",
+    "diagram": null
+  },
+  {
+    "id": 335,
+    "topic": "percentages",
+    "subtopic": "percent_of_amount_harder",
+    "difficulty": 2,
+    "question": "There are 360 pupils at a school. 35% of them walk to school. How many pupils do not walk to school?",
+    "answer": "234",
+    "unit": null,
+    "answer_format": null,
+    "check": "360*0.65",
+    "distractors": [
+      {
+        "value": "126",
+        "why": "Finds the number who walk (108 + 18) and stops."
+      },
+      {
+        "value": "252",
+        "why": "Takes off only 30% (108) and forgets the extra 5%."
+      },
+      {
+        "value": "325",
+        "why": "Subtracts 35 pupils instead of 35%."
+      },
+      {
+        "value": "486",
+        "why": "Adds the 126 walkers to 360 instead of subtracting."
+      }
+    ],
+    "explanation": "Not walking is 100% - 35% = 65%. 10% of 360 is 36, so 60% is 216 and 5% is 18. 216 + 18 = 234.",
+    "hints": [
+      "Which percentage does not walk?",
+      "Find 10%, then build 65% from it."
+    ],
+    "pitfall": "Answering for the group that walks instead of the group asked about.",
+    "diagram": null
+  },
+  {
+    "id": 336,
+    "topic": "percentages",
+    "subtopic": "percent_of_amount_harder",
+    "difficulty": 2,
+    "question": "A charity raises £1600 at a fair. 7.5% of the money pays for costs. How much money pays for costs?",
+    "answer": "£120",
+    "unit": "£",
+    "answer_format": null,
+    "check": "1600*0.075",
+    "distractors": [
+      {
+        "value": "£112",
+        "why": "Treats 7.5% as 7% (7 x 16)."
+      },
+      {
+        "value": "£160",
+        "why": "Finds 10% and stops."
+      },
+      {
+        "value": "£1200",
+        "why": "Treats 7.5% as 75%."
+      },
+      {
+        "value": "£1480",
+        "why": "Finds the money left after costs instead of the costs."
+      }
+    ],
+    "explanation": "10% of £1600 is £160. 5% is £80 and 2.5% is £40. 7.5% = 5% + 2.5% = £80 + £40 = £120.",
+    "hints": [
+      "Find 10% first, then halve it.",
+      "7.5% is 5% plus 2.5%."
+    ],
+    "pitfall": "Reading 7.5% as 75% or 7%.",
+    "diagram": null
+  },
+  {
+    "id": 337,
+    "topic": "percentages",
+    "subtopic": "percent_of_amount_harder",
+    "difficulty": 3,
+    "question": "In a survey of 480 people about their favourite drink, 17.5% chose tea, 35% chose coffee and the rest chose juice. How many people chose juice?",
+    "answer": "228",
+    "unit": null,
+    "answer_format": null,
+    "check": "480-480*0.175-480*0.35",
+    "distractors": [
+      {
+        "value": "252",
+        "why": "Adds the tea and coffee numbers (84 + 168) and stops."
+      },
+      {
+        "value": "240",
+        "why": "Finds tea as 72 (10% + 5% only), then subtracts 72 and 168."
+      },
+      {
+        "value": "312",
+        "why": "Subtracts only the coffee group (168) from 480."
+      },
+      {
+        "value": "396",
+        "why": "Subtracts only the tea group (84) from 480."
+      }
+    ],
+    "explanation": "10% of 480 is 48, 5% is 24 and 2.5% is 12. Tea: 48 + 24 + 12 = 84. Coffee 35% is 168. Together 252, so juice is 480 - 252 = 228.",
+    "hints": [
+      "Find how many chose tea and how many chose coffee.",
+      "35% is 17.5% doubled."
+    ],
+    "pitfall": "Stopping after finding the two given groups.",
+    "diagram": null
+  },
+  {
+    "id": 338,
+    "topic": "percentages",
+    "subtopic": "percent_change_problems",
+    "difficulty": 1,
+    "question": "A scooter costs £40. In a sale its price is reduced by 25%. What is the sale price?",
+    "answer": "£30",
+    "unit": "£",
+    "answer_format": null,
+    "check": "40*0.75",
+    "distractors": [
+      {
+        "value": "£10",
+        "why": "Gives the amount taken off, not the new price."
+      },
+      {
+        "value": "£15",
+        "why": "Subtracts 25 pounds from 40."
+      },
+      {
+        "value": "£50",
+        "why": "Adds 25% instead of subtracting."
+      },
+      {
+        "value": "£65",
+        "why": "Adds 25 pounds to 40."
+      }
+    ],
+    "explanation": "25% is the same as one quarter. A quarter of £40 is £10, which is the amount taken off. The sale price is £40 - £10 = £30.",
+    "hints": [
+      "What fraction is 25%?",
+      "Subtract the reduction from the original price."
+    ],
+    "pitfall": "Giving the reduction rather than the new price.",
+    "diagram": null
+  },
+  {
+    "id": 339,
+    "topic": "percentages",
+    "subtopic": "percent_change_problems",
+    "difficulty": 2,
+    "question": "A town had 4000 people ten years ago. Now it has 4600 people. By what percentage has the population increased?",
+    "answer": "15%",
+    "unit": "%",
+    "answer_format": null,
+    "check": "600/4000*100",
+    "distractors": [
+      {
+        "value": "13%",
+        "why": "Divides the increase by the new population (600 out of 4600)."
+      },
+      {
+        "value": "115%",
+        "why": "Writes 4600 out of 4000 as a percentage."
+      },
+      {
+        "value": "600%",
+        "why": "Reads the increase of 600 as a percentage."
+      },
+      {
+        "value": "0.15%",
+        "why": "Finds 0.15 correctly but then labels it 0.15%."
+      }
+    ],
+    "explanation": "The increase is 4600 - 4000 = 600 people. Compare this with the original population, not the new one: 600/4000 = 15/100 = 15%.",
+    "hints": [
+      "Work out how many people were added first.",
+      "Write the increase as a fraction of the starting number."
+    ],
+    "pitfall": "Dividing by the new amount instead of the original.",
+    "diagram": null
+  },
+  {
+    "id": 340,
+    "topic": "percentages",
+    "subtopic": "percent_change_problems",
+    "difficulty": 2,
+    "question": "Hana's rent is £150 per week. In March it goes up by 10%. In September the new rent falls by 10%. What is her rent after the fall?",
+    "answer": "£148.50",
+    "unit": "£",
+    "answer_format": null,
+    "check": "150*1.1*0.9",
+    "distractors": [
+      {
+        "value": "£150",
+        "why": "Assumes a 10% rise then a 10% fall cancel out."
+      },
+      {
+        "value": "£165",
+        "why": "Stops after the rise."
+      },
+      {
+        "value": "£16.50",
+        "why": "Gives the size of the fall (10% of £165)."
+      },
+      {
+        "value": "£135",
+        "why": "Takes 10% off £150 and ignores the rise."
+      }
+    ],
+    "explanation": "10% of £150 is £15, so the rent rises to £165. 10% of £165 is £16.50. £165 - £16.50 = £148.50.",
+    "hints": [
+      "The second 10% is of a different amount.",
+      "Find the rent after the rise first."
+    ],
+    "pitfall": "Taking both percentages from the original price.",
+    "diagram": null
+  },
+  {
+    "id": 341,
+    "topic": "percentages",
+    "subtopic": "percent_change_problems",
+    "difficulty": 3,
+    "question": "The price of a phone went up by one fifth of its old price. It now costs £84. What was the old price?",
+    "answer": "£70",
+    "unit": "£",
+    "answer_format": null,
+    "check": "84/6*5",
+    "distractors": [
+      {
+        "value": "£67.20",
+        "why": "Takes one fifth of £84 (£16.80) off £84."
+      },
+      {
+        "value": "£64",
+        "why": "Subtracts 20 from £84."
+      },
+      {
+        "value": "£100.80",
+        "why": "Adds one fifth of £84 to £84, going the wrong way."
+      },
+      {
+        "value": "£16.80",
+        "why": "Gives one fifth of £84, not the old price."
+      }
+    ],
+    "explanation": "After the rise the price is 6 fifths of the old price. 6 fifths = £84, so 1 fifth = £14 and 5 fifths = £70. Check: one fifth of £70 is £14, and £70 + £14 = £84.",
+    "hints": [
+      "The new price is more than the old price. How many fifths of the old price is it?",
+      "If 6 fifths is £84, find 1 fifth."
+    ],
+    "pitfall": "Taking one fifth of the new price instead of undoing the rise.",
+    "diagram": null
+  },
+  {
+    "id": 342,
+    "topic": "percentages",
+    "subtopic": "fdp_compare_order",
+    "difficulty": 2,
+    "question": "Which of these is the largest?",
+    "answer": "0.4",
+    "unit": null,
+    "answer_format": null,
+    "check": "0.4",
+    "distractors": [
+      {
+        "value": "3/8",
+        "why": "Thinks 3/8 is large because 8 is a big digit; it is 0.375."
+      },
+      {
+        "value": "38%",
+        "why": "Compares 38 with 0.4 and ignores that 38% is 0.38."
+      },
+      {
+        "value": "0.349",
+        "why": "Thinks more digits means a bigger decimal."
+      },
+      {
+        "value": "7/20",
+        "why": "Reads 7/20 as 0.72 instead of 0.35."
+      }
+    ],
+    "explanation": "Change all to decimals. 3/8 = 0.375, 38% = 0.38, 7/20 = 0.35, 0.349 stays as it is and 0.4 = 0.400. The largest is 0.4.",
+    "hints": [
+      "Write each one as a decimal.",
+      "Compare tenths first."
+    ],
+    "pitfall": "Comparing the digits without changing to the same form.",
+    "diagram": null
+  },
+  {
+    "id": 343,
+    "topic": "percentages",
+    "subtopic": "fdp_compare_order",
+    "difficulty": 2,
+    "question": "Which of these is the smallest?",
+    "answer": "0.205",
+    "unit": null,
+    "answer_format": null,
+    "check": "0.205",
+    "distractors": [
+      {
+        "value": "1/4",
+        "why": "Takes the numerator 1 as the smallest value; 1/4 is 0.25."
+      },
+      {
+        "value": "0.3",
+        "why": "Has only one digit, so it looks smallest."
+      },
+      {
+        "value": "22%",
+        "why": "Thinks 0.205 is bigger than 0.22 because 205 is more than 22."
+      },
+      {
+        "value": "0.21",
+        "why": "Compares 21 with 205 and thinks 0.21 is smaller than 0.205."
+      }
+    ],
+    "explanation": "Write all as decimals: 1/4 = 0.25, 22% = 0.22, 0.3 = 0.300, 0.21 = 0.210 and 0.205. Comparing hundredths, 0.205 has 20 hundredths, the least.",
+    "hints": [
+      "Convert the fraction and the percentage to decimals.",
+      "Give every decimal three places."
+    ],
+    "pitfall": "Reading the digits after the point as a whole number.",
+    "diagram": null
+  },
+  {
+    "id": 344,
+    "topic": "percentages",
+    "subtopic": "fdp_compare_order",
+    "difficulty": 3,
+    "question": "Which list puts the numbers 0.28, 3/10, 31% and 1/3 in order, smallest first?",
+    "answer": "0.28, 3/10, 31%, 1/3",
+    "unit": null,
+    "answer_format": null,
+    "check": null,
+    "check_note": "The answer is an ordered list, so no single arithmetic check applies; the order was found by converting to 0.28, 0.30, 0.31, 0.333.",
+    "distractors": [
+      {
+        "value": "3/10, 0.28, 31%, 1/3",
+        "why": "Thinks 0.28 is bigger than 3/10 because 28 is bigger than 3."
+      },
+      {
+        "value": "0.28, 31%, 3/10, 1/3",
+        "why": "Mistakenly converts 3/10 to about 0.32, above 31%."
+      },
+      {
+        "value": "1/3, 31%, 3/10, 0.28",
+        "why": "Puts the values in order largest first."
+      },
+      {
+        "value": "0.28, 3/10, 1/3, 31%",
+        "why": "Writes 1/3 as 0.3, which puts it below 31%."
+      }
+    ],
+    "explanation": "As decimals: 0.28, 3/10 = 0.30, 31% = 0.31 and 1/3 = 0.333.... In order from smallest: 0.28, 3/10, 31%, 1/3.",
+    "hints": [
+      "Change every number to a decimal.",
+      "1/3 is a recurring decimal, 0.333..."
+    ],
+    "pitfall": "Treating 1/3 as 0.3.",
+    "diagram": null
+  },
+  {
+    "id": 345,
+    "topic": "percentages",
+    "subtopic": "fdp_compare_order",
+    "difficulty": 2,
+    "question": "Which of these numbers lies between 3/5 and 7/10?",
+    "answer": "0.65",
+    "unit": null,
+    "answer_format": null,
+    "check": "13/20",
+    "distractors": [
+      {
+        "value": "58%",
+        "why": "Thinks 3/5 is 0.5, so 58% looks inside the gap."
+      },
+      {
+        "value": "0.72",
+        "why": "Treats 7/10 as 0.75."
+      },
+      {
+        "value": "3/4",
+        "why": "Treats 7/10 as 0.8."
+      },
+      {
+        "value": "0.065",
+        "why": "Sees the digits 6 and 5 and ignores place value."
+      }
+    ],
+    "explanation": "3/5 = 0.6 and 7/10 = 0.7. Only 0.65 is between 0.6 and 0.7. 58% = 0.58, 0.72 and 3/4 = 0.75 are too big or small, and 0.065 is far smaller.",
+    "hints": [
+      "Write the two limits as decimals.",
+      "Check each option against both limits."
+    ],
+    "pitfall": "Ignoring place value when reading decimals.",
+    "diagram": null
+  },
+  {
+    "id": 346,
+    "topic": "algebra",
+    "subtopic": "formula_substitution",
+    "difficulty": 1,
+    "question": "T = 4n + 3. Work out T when n = 6.",
+    "answer": "27",
+    "unit": null,
+    "answer_format": null,
+    "check": "4*6+3",
+    "distractors": [
+      {
+        "value": "24",
+        "why": "Works out 4 x 6 and forgets to add 3."
+      },
+      {
+        "value": "36",
+        "why": "Adds 3 first and then multiplies: 4 x (6 + 3)."
+      },
+      {
+        "value": "49",
+        "why": "Reads 4n as 46 and adds 3."
+      },
+      {
+        "value": "10",
+        "why": "Adds 4 and 6 instead of multiplying."
+      }
+    ],
+    "explanation": "4n means 4 x n. Put n = 6: 4 x 6 = 24. Then add 3 to get 27.",
+    "hints": [
+      "4n means 4 times n.",
+      "Multiply first, then add."
+    ],
+    "pitfall": "Reading 4n as the digits 4 and 6 side by side.",
+    "diagram": null
+  },
+  {
+    "id": 347,
+    "topic": "algebra",
+    "subtopic": "formula_substitution",
+    "difficulty": 2,
+    "question": "A plumber charges a call-out fee of £35 plus £18 for each hour of work. The cost in pounds is C = 35 + 18h for h hours. Work out the cost of a job lasting 2.5 hours.",
+    "answer": "£80",
+    "unit": "£",
+    "answer_format": null,
+    "check": "35+18*2.5",
+    "distractors": [
+      {
+        "value": "£45",
+        "why": "Finds the work charge (18 x 2.5) and forgets the call-out fee."
+      },
+      {
+        "value": "£53",
+        "why": "Uses h = 1 instead of 2.5."
+      },
+      {
+        "value": "£89",
+        "why": "Rounds 2.5 hours up to 3 hours."
+      },
+      {
+        "value": "£132.50",
+        "why": "Adds 35 and 18 first, then multiplies by 2.5."
+      }
+    ],
+    "explanation": "18 x 2.5 = 18 x 2 + 9 = 45. Add the call-out fee: 35 + 45 = £80.",
+    "hints": [
+      "Replace h with 2.5.",
+      "Multiply before adding."
+    ],
+    "pitfall": "Doing the addition before the multiplication.",
+    "diagram": null
+  },
+  {
+    "id": 348,
+    "topic": "algebra",
+    "subtopic": "formula_substitution",
+    "difficulty": 2,
+    "question": "s = (3a + b) ÷ 2. Work out s when a = 5 and b = 9.",
+    "answer": "12",
+    "unit": null,
+    "answer_format": null,
+    "check": "(3*5+9)/2",
+    "distractors": [
+      {
+        "value": "7.5",
+        "why": "Works out 3a ÷ 2 and leaves out b."
+      },
+      {
+        "value": "19.5",
+        "why": "Divides only b by 2: 15 + 4.5."
+      },
+      {
+        "value": "22",
+        "why": "Reads 3a as 35, giving (35 + 9) ÷ 2."
+      },
+      {
+        "value": "24",
+        "why": "Finds 3a + b = 24 and forgets to divide by 2."
+      }
+    ],
+    "explanation": "3a means 3 x 5 = 15. Then 3a + b = 15 + 9 = 24. The whole bracket is divided by 2, so s = 24 ÷ 2 = 12.",
+    "hints": [
+      "Work out the bracket first.",
+      "3a means 3 times a."
+    ],
+    "pitfall": "Forgetting that the division applies to the whole bracket.",
+    "diagram": null
+  },
+  {
+    "id": 349,
+    "topic": "algebra",
+    "subtopic": "missing_number_equations",
+    "difficulty": 1,
+    "question": "2n + 7 = 31. Find n.",
+    "answer": "12",
+    "unit": null,
+    "answer_format": null,
+    "check": "(31-7)/2",
+    "distractors": [
+      {
+        "value": "15.5",
+        "why": "Divides 31 by 2 and ignores the 7."
+      },
+      {
+        "value": "19",
+        "why": "Adds 7 to 31 and then divides by 2."
+      },
+      {
+        "value": "24",
+        "why": "Subtracts 7 and forgets to divide by 2."
+      },
+      {
+        "value": "38",
+        "why": "Adds 7 to 31 and stops."
+      }
+    ],
+    "explanation": "Undo the +7 first: 31 - 7 = 24. So 2n = 24, which means two lots of n make 24. Then n = 24 ÷ 2 = 12. Check: 2 x 12 + 7 = 31.",
+    "hints": [
+      "Undo the addition first.",
+      "Then undo the multiplication."
+    ],
+    "pitfall": "Adding where the equation needs subtracting.",
+    "diagram": null
+  },
+  {
+    "id": 350,
+    "topic": "algebra",
+    "subtopic": "missing_number_equations",
+    "difficulty": 2,
+    "question": "Find the missing number: 3 × (□ + 4) = 45",
+    "answer": "11",
+    "unit": null,
+    "answer_format": null,
+    "check": "45/3-4",
+    "distractors": [
+      {
+        "value": "15",
+        "why": "Divides 45 by 3 and forgets to take away 4."
+      },
+      {
+        "value": "19",
+        "why": "Divides 45 by 3 and then adds 4."
+      },
+      {
+        "value": "33",
+        "why": "Takes away 12 and stops at 3 x □."
+      },
+      {
+        "value": "41",
+        "why": "Subtracts 4 from 45 without dividing."
+      }
+    ],
+    "explanation": "Divide by 3 first: □ + 4 = 15. So □ = 15 - 4 = 11. Check: 3 x 15 = 45.",
+    "hints": [
+      "What is inside the bracket equal to?",
+      "Undo the multiplication first."
+    ],
+    "pitfall": "Stopping after the first reverse step.",
+    "diagram": null
+  },
+  {
+    "id": 351,
+    "topic": "algebra",
+    "subtopic": "missing_number_equations",
+    "difficulty": 3,
+    "question": "I think of a number. I double it, subtract 9, and then divide by 3. My answer is 9. What number did I think of?",
+    "answer": "18",
+    "unit": null,
+    "answer_format": null,
+    "check": "(9*3+9)/2",
+    "distractors": [
+      {
+        "value": "13.5",
+        "why": "Reverses the division (27) and halves, forgetting to add 9 back."
+      },
+      {
+        "value": "27",
+        "why": "Reverses the division only and stops."
+      },
+      {
+        "value": "36",
+        "why": "Multiplies by 3 and adds 9 but forgets to halve."
+      },
+      {
+        "value": "72",
+        "why": "Doubles instead of halving after adding 9."
+      }
+    ],
+    "explanation": "Work backwards. Undo ÷3: 9 x 3 = 27. Undo -9: 27 + 9 = 36. Undo doubling: 36 ÷ 2 = 18. Check: 18 x 2 = 36, 36 - 9 = 27, 27 ÷ 3 = 9.",
+    "hints": [
+      "Work backwards from 9.",
+      "Do the opposite operations in reverse order."
+    ],
+    "pitfall": "Undoing the steps in the original order.",
+    "diagram": null
+  },
+  {
+    "id": 352,
+    "topic": "algebra",
+    "subtopic": "sequence_rules",
+    "difficulty": 1,
+    "question": "A sequence starts at 4. Each term is 7 more than the term before. What is the 5th term?",
+    "answer": "32",
+    "unit": null,
+    "answer_format": null,
+    "check": "4+4*7",
+    "distractors": [
+      {
+        "value": "11",
+        "why": "Adds 7 just once to the first term."
+      },
+      {
+        "value": "25",
+        "why": "Finds the 4th term."
+      },
+      {
+        "value": "28",
+        "why": "Multiplies 4 by 7."
+      },
+      {
+        "value": "35",
+        "why": "Multiplies the term number 5 by 7."
+      }
+    ],
+    "explanation": "Write the terms out, adding 7 each time: 4, 11, 18, 25, 32. The first term is 4, so the 5th term is 32, after four additions of 7.",
+    "hints": [
+      "Write out the terms one by one.",
+      "Count carefully which term you want."
+    ],
+    "pitfall": "Stopping a term early or multiplying instead of adding.",
+    "diagram": null
+  },
+  {
+    "id": 353,
+    "topic": "algebra",
+    "subtopic": "sequence_rules",
+    "difficulty": 2,
+    "question": "The rule for a sequence is: term = 6 × (term number) - 4. What is the 20th term?",
+    "answer": "116",
+    "unit": null,
+    "answer_format": null,
+    "check": "6*20-4",
+    "distractors": [
+      {
+        "value": "140",
+        "why": "Adds 20 to 6 x 20 instead of subtracting 4."
+      },
+      {
+        "value": "120",
+        "why": "Multiplies 6 by 20 and forgets to subtract 4."
+      },
+      {
+        "value": "124",
+        "why": "Adds 4 instead of subtracting 4."
+      },
+      {
+        "value": "616",
+        "why": "Reads 6 and 20 as 620, then subtracts 4."
+      }
+    ],
+    "explanation": "Put 20 in place of the term number in the rule. First multiply: 6 x 20 = 120. Then subtract 4 as the rule says: 120 - 4 = 116.",
+    "hints": [
+      "Put 20 in place of the term number.",
+      "Multiply first."
+    ],
+    "pitfall": "Not applying the -4 at the end.",
+    "diagram": null
+  },
+  {
+    "id": 354,
+    "topic": "algebra",
+    "subtopic": "sequence_rules",
+    "difficulty": 3,
+    "question": "A sequence begins 5, 11, 23, 47. Every term is made from the one before using the same rule. What is the 6th term?",
+    "answer": "191",
+    "unit": null,
+    "answer_format": null,
+    "check": "(47*2+1)*2+1",
+    "distractors": [
+      {
+        "value": "95",
+        "why": "Stops at the 5th term."
+      },
+      {
+        "value": "143",
+        "why": "Adds 96 to the 4th term, skipping a step in the differences."
+      },
+      {
+        "value": "190",
+        "why": "Doubles 95 and forgets to add 1."
+      },
+      {
+        "value": "382",
+        "why": "Doubles the 6th term again, giving the 7th."
+      }
+    ],
+    "explanation": "Look at 5 to 11: double and add 1 (5 x 2 + 1 = 11). Check 11 x 2 + 1 = 23 and 23 x 2 + 1 = 47. Then 47 x 2 + 1 = 95 and 95 x 2 + 1 = 191.",
+    "hints": [
+      "Try to turn 5 into 11 in two steps.",
+      "Check your rule on 11 to 23."
+    ],
+    "pitfall": "Using just one of the two steps of the rule.",
+    "diagram": null
+  },
+  {
+    "id": 355,
+    "topic": "statistics",
+    "subtopic": "chart_reading_problems",
+    "difficulty": 2,
+    "question": "The bar chart shows how many books were borrowed from a school library on five days. How many more books were borrowed on the busiest day than the mean number of books borrowed per day?",
+    "answer": "10",
+    "unit": null,
+    "answer_format": null,
+    "check": "30-(10+25+15+30+20)/5",
+    "distractors": [
+      {
+        "value": "5",
+        "why": "Subtracts the second busiest day from the busiest."
+      },
+      {
+        "value": "15",
+        "why": "Compares the busiest day with Wednesday."
+      },
+      {
+        "value": "20",
+        "why": "Subtracts the quietest day from the busiest day (the range)."
+      },
+      {
+        "value": "100",
+        "why": "Finds the total number of books borrowed."
+      }
+    ],
+    "explanation": "Read the bars: 10, 25, 15, 30, 20. The total is 100, so the mean is 100 ÷ 5 = 20. The busiest day had 30, so 30 - 20 = 10 more.",
+    "hints": [
+      "Read each bar carefully, then find the mean.",
+      "Which day is the busiest?"
+    ],
+    "pitfall": "Using the range or the total instead of the mean.",
+    "diagram": {
+      "type": "bars",
+      "labels": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri"
+      ],
+      "values": [
+        10,
+        25,
+        15,
+        30,
+        20
+      ],
+      "max": 40,
+      "axis_label": "Books borrowed",
+      "description": "Bar chart of books borrowed: Monday 10, Tuesday 25, Wednesday 15, Thursday 30, Friday 20."
+    }
+  },
+  {
+    "id": 356,
+    "topic": "statistics",
+    "subtopic": "chart_reading_problems",
+    "difficulty": 2,
+    "question": "120 children chose their favourite sport. The pie chart shows the results. How many more children chose swimming than gymnastics?",
+    "answer": "12",
+    "unit": null,
+    "answer_format": null,
+    "check": "120*10/100",
+    "distractors": [
+      {
+        "value": "10",
+        "why": "Gives the difference in percentages, not children."
+      },
+      {
+        "value": "18",
+        "why": "Finds the number who chose gymnastics only."
+      },
+      {
+        "value": "24",
+        "why": "Uses the tennis slice instead of the difference."
+      },
+      {
+        "value": "30",
+        "why": "Finds the number who chose swimming only."
+      }
+    ],
+    "explanation": "Swimming is 25% of the pie and gymnastics is 15%, a difference of 10%. Now find 10% of the 120 children: 120 ÷ 10 = 12 children.",
+    "hints": [
+      "Find the difference between the two slices.",
+      "Turn the percentage into a number of children."
+    ],
+    "pitfall": "Giving a percentage when a number of children is asked for.",
+    "diagram": {
+      "type": "pie",
+      "labels": [
+        "Football",
+        "Swimming",
+        "Tennis",
+        "Gymnastics"
+      ],
+      "values": [
+        40,
+        25,
+        20,
+        15
+      ],
+      "description": "Pie chart of favourite sports: Football 40 percent, Swimming 25 percent, Tennis 20 percent, Gymnastics 15 percent."
+    }
+  },
+  {
+    "id": 357,
+    "topic": "statistics",
+    "subtopic": "chart_reading_problems",
+    "difficulty": 3,
+    "question": "The line graph shows the depth of water in a tank at the start of each hour. On average, by how many centimetres did the depth rise per hour between 1pm and 5pm?",
+    "answer": "15 cm",
+    "unit": "cm",
+    "answer_format": null,
+    "check": "(80-20)/4",
+    "distractors": [
+      {
+        "value": "10 cm",
+        "why": "Uses the 6pm reading, finding (70 - 20) ÷ 5."
+      },
+      {
+        "value": "12 cm",
+        "why": "Divides the rise by 5 readings instead of 4 hours."
+      },
+      {
+        "value": "20 cm",
+        "why": "Divides the 5pm depth by 4 and ignores the starting depth."
+      },
+      {
+        "value": "60 cm",
+        "why": "Gives the total rise without dividing."
+      }
+    ],
+    "explanation": "At 1pm the depth is 20 cm and at 5pm it is 80 cm, a rise of 60 cm. That takes 4 hours (1pm to 5pm), so 60 ÷ 4 = 15 cm per hour.",
+    "hints": [
+      "Read the depth at 1pm and at 5pm.",
+      "How many hours are there between 1pm and 5pm?"
+    ],
+    "pitfall": "Dividing by the number of readings rather than the number of hours.",
+    "diagram": {
+      "type": "line",
+      "labels": [
+        "1pm",
+        "2pm",
+        "3pm",
+        "4pm",
+        "5pm",
+        "6pm"
+      ],
+      "values": [
+        20,
+        30,
+        50,
+        60,
+        80,
+        70
+      ],
+      "max": 80,
+      "axis_label": "Depth (cm)",
+      "description": "Line graph of water depth in cm: 1pm 20, 2pm 30, 3pm 50, 4pm 60, 5pm 80, 6pm 70."
+    }
+  },
+  {
+    "id": 358,
+    "topic": "statistics",
+    "subtopic": "mean_problems",
+    "difficulty": 1,
+    "question": "Five friends score 7, 12, 8, 14 and 9 points in a quiz. What is the mean score?",
+    "answer": "10",
+    "unit": null,
+    "answer_format": null,
+    "check": "(7+12+8+14+9)/5",
+    "distractors": [
+      {
+        "value": "12.5",
+        "why": "Divides the total by 4 instead of 5."
+      },
+      {
+        "value": "14",
+        "why": "Picks the highest score."
+      },
+      {
+        "value": "25",
+        "why": "Divides the total by 2."
+      },
+      {
+        "value": "50",
+        "why": "Adds the scores and does not divide."
+      }
+    ],
+    "explanation": "Total: 7 + 12 + 8 + 14 + 9 = 50. There are 5 scores, so the mean is 50 ÷ 5 = 10.",
+    "hints": [
+      "Add all the scores.",
+      "Divide by how many scores there are."
+    ],
+    "pitfall": "Dividing by the wrong count or mixing up mean and median.",
+    "diagram": null
+  },
+  {
+    "id": 359,
+    "topic": "statistics",
+    "subtopic": "mean_problems",
+    "difficulty": 2,
+    "question": "The mean mass of four parcels is 6 kg. A fifth parcel of mass 11 kg is added. What is the mean mass of all five parcels, in kg?",
+    "answer": "7 kg",
+    "unit": "kg",
+    "answer_format": null,
+    "check": "(6*4+11)/5",
+    "distractors": [
+      {
+        "value": "8.5 kg",
+        "why": "Averages 6 and 11 only."
+      },
+      {
+        "value": "8.2 kg",
+        "why": "Divides only the new parcel by 5, then adds the old mean: 6 + 11/5."
+      },
+      {
+        "value": "17 kg",
+        "why": "Adds the old mean 6 and the new mass 11 together."
+      },
+      {
+        "value": "35 kg",
+        "why": "Finds the total of all five but does not divide."
+      }
+    ],
+    "explanation": "The four parcels have total mass 6 x 4 = 24 kg. With the fifth: 24 + 11 = 35 kg. Mean = 35 ÷ 5 = 7 kg.",
+    "hints": [
+      "How can you get the total of the first four parcels from their mean?",
+      "Divide the new total by 5."
+    ],
+    "pitfall": "Averaging the old mean and the new value.",
+    "diagram": null
+  },
+  {
+    "id": 360,
+    "topic": "statistics",
+    "subtopic": "mean_problems",
+    "difficulty": 3,
+    "question": "The mean of five test scores is 14. Sam does a sixth test, and the mean of all six scores is now 15. What was Sam’s score on the sixth test?",
+    "answer": "20",
+    "unit": null,
+    "answer_format": null,
+    "check": "6*15-5*14",
+    "distractors": [
+      {
+        "value": "6",
+        "why": "Treats the old total as 6 x 14 = 84 and subtracts it from 90."
+      },
+      {
+        "value": "15",
+        "why": "Gives the new mean as the score."
+      },
+      {
+        "value": "29",
+        "why": "Adds the two means."
+      },
+      {
+        "value": "90",
+        "why": "Finds the total of all six scores."
+      }
+    ],
+    "explanation": "Five scores total 5 x 14 = 70. Six scores total 6 x 15 = 90. The sixth score is 90 - 70 = 20.",
+    "hints": [
+      "Find the total of the first five scores.",
+      "Find the total of all six scores."
+    ],
+    "pitfall": "Using the means directly instead of the totals.",
+    "diagram": null
+  }
+]

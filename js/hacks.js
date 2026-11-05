@@ -69,6 +69,12 @@ const HACK_SECTIONS = [
         rule: 'Round both numbers up to the nearest 10, add, then subtract whatever you added on.',
         example: '644 + 238 → 650 + 240 − 6 − 2 = 890 − 8 = 882.',
       },
+      {
+        id: 'last-digit-check',
+        title: 'Rule out answers with a last-digit check',
+        rule: 'In a multiplication, the last digit of the answer must match the last digit of (last digit × last digit). Cross out any option that ends differently before doing the full sum. It can rule answers out but cannot prove one right.',
+        example: '37 × 48: 7 × 8 = 56, so the answer must end in 6. Of 1,774, 1,776 and 1,779, only 1,776 survives. If two options both ended in 6, you would still need to work it out.',
+      },
     ],
   },
   {

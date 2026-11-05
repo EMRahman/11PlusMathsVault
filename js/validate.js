@@ -59,7 +59,8 @@ export function checkAnswer(input, question) {
     return Boolean(a && b && a.every((v,i)=>v===b[i]));
   }
   if (question.answer_format === 'time') {
-    const normal = s => /^\d{1,2}:\d{2}$/.test(s) ? s.split(':').map(Number) : null;
+    // Children commonly write a time as 11:20 or 11.20; both mean the same.
+    const normal = s => /^\d{1,2}[:.]\d{2}$/.test(s) ? s.split(/[:.]/).map(Number) : null;
     const a=normal(user), b=normal(answer);
     return Boolean(a && b && a[0] < 24 && a[1] < 60 && a.every((v,i)=>v===b[i]));
   }

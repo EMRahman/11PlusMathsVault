@@ -1,0 +1,2522 @@
+[
+  {
+    "id": 1,
+    "distractors": [
+      {
+        "value": "812",
+        "why": "Drops the hundred from 38 × 4 = 152 and uses only 52, so 760 + 52 = 812."
+      },
+      {
+        "value": "872",
+        "why": "Splits 38 into 30 + 8 correctly for 24 × 30 = 720, then uses 38 × 4 = 152 in place of 24 × 8 = 192, giving 872."
+      },
+      {
+        "value": "892",
+        "why": "Writes 4 × 8 as 12 inside 38 × 4, so 38 × 4 = 132 and 760 + 132 = 892."
+      },
+      {
+        "value": "962",
+        "why": "Works 40 × 24 = 960 then adds 2 instead of subtracting 2 × 24 = 48 for the difference between 38 and 40."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "distractors": [
+      {
+        "value": "1/10",
+        "why": "Cancels the 5 wrongly, reading 5/10 as 1/10, and then drops the second fraction."
+      },
+      {
+        "value": "3/6",
+        "why": "Simplifies 5/10 to 1/2 then ignores 3/12, writing 3/6 from the 3 and half of 12."
+      },
+      {
+        "value": "5/4",
+        "why": "Keeps the 5 from 5/10 and turns 3/12 upside down, dividing 12 by 3 to get 4, so 5/4."
+      },
+      {
+        "value": "15/120",
+        "why": "Multiplies tops and bottoms correctly but never simplifies, so equal in value to 1/8 but not in simplest form."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "distractors": [
+      {
+        "value": "£12",
+        "why": "Finds one share (84 ÷ 7 = 12) and stops, forgetting the 2 parts for the second charity."
+      },
+      {
+        "value": "£28",
+        "why": "Divides £84 by 3 instead of by the 7 total parts."
+      },
+      {
+        "value": "£60",
+        "why": "Gives the first charity's share, 5 parts of £12."
+      },
+      {
+        "value": "£72",
+        "why": "Subtracts one share from the total: £84 − £12 = £72."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "distractors": [
+      {
+        "value": "85°",
+        "why": "Subtracts 35 and 60 from 180, misreading the 70 as 60."
+      },
+      {
+        "value": "95°",
+        "why": "Subtracts 35 and 50 from 180, misreading the 70 as 50."
+      },
+      {
+        "value": "105°",
+        "why": "Adds the two given angles, 35 + 70, and forgets to take the total from 180."
+      },
+      {
+        "value": "115°",
+        "why": "Subtracts 35 and 30 from 180, misreading the 70 as 30."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "distractors": [
+      {
+        "value": "0.09",
+        "why": "Reads 0.9 as 0.09 by shifting the place value."
+      },
+      {
+        "value": "0.19",
+        "why": "Compares the digits after the point as whole numbers, so 19 looks bigger than 9."
+      },
+      {
+        "value": "0.091",
+        "why": "Ignores the point, so 91 looks bigger than 9 and the longer decimal seems larger."
+      },
+      {
+        "value": "0.85",
+        "why": "Ignores the point and compares 85 with 9, so 0.85 looks larger than 0.9."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "distractors": [
+      {
+        "value": "32.5",
+        "why": "Multiplies 3.25 by 10 instead of 1000, moving the point only one place."
+      },
+      {
+        "value": "325",
+        "why": "Multiplies by 100 instead of 1000, moving the point only two places."
+      },
+      {
+        "value": "3025",
+        "why": "Reads 3.25 kg as 3 kg 25 g and writes it as 3025 g, so the decimal part is not scaled."
+      },
+      {
+        "value": "32500",
+        "why": "Multiplies by 10 000 instead of 1000, moving the point one place too far."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "distractors": [
+      {
+        "value": "28",
+        "why": "Gives the smallest of the three numbers (28, 29, 30) instead of the largest."
+      },
+      {
+        "value": "29",
+        "why": "Stops at 87 ÷ 3 = 29, which is the middle number, not the largest."
+      },
+      {
+        "value": "31",
+        "why": "Finds the middle number 29, then adds 2 as if the numbers went up in twos."
+      },
+      {
+        "value": "44",
+        "why": "Halves 87 instead of dividing by 3, because it treats the sum as two numbers: 87 ÷ 2 rounds to 44."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "distractors": [
+      {
+        "value": "800",
+        "why": "Rounds 49 down to 40 and 21 down to 20, then multiplies: 40 × 20 = 800."
+      },
+      {
+        "value": "900",
+        "why": "Rounds 49 to 45 instead of the nearest ten, then multiplies: 45 × 20 = 900."
+      },
+      {
+        "value": "1100",
+        "why": "Rounds 49 up to 50 but changes 21 to 22, then multiplies: 50 × 22 = 1100."
+      },
+      {
+        "value": "1200",
+        "why": "Rounds 49 down to 40 but 21 up to 30, then multiplies: 40 × 30 = 1200."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "distractors": [
+      {
+        "value": "30",
+        "why": "Takes 1/8 of 240 (÷ 8) and forgets to multiply by the 3."
+      },
+      {
+        "value": "60",
+        "why": "Takes 1/8 of 240 and multiplies by 2 instead of 3."
+      },
+      {
+        "value": "80",
+        "why": "Divides 240 by the numerator 3 instead of the denominator 8."
+      },
+      {
+        "value": "120",
+        "why": "Takes half of 240 instead of 3/8."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "distractors": [
+      {
+        "value": "26 cm",
+        "why": "Subtracts the four cut edges (4 + 2 + 4 + 2 = 12 cm) from 38 cm and forgets the new inner edges."
+      },
+      {
+        "value": "34 cm",
+        "why": "Subtracts only the 4 cm of the removed corner from 38 cm."
+      },
+      {
+        "value": "42 cm",
+        "why": "Adds two inner 2 cm edges to 38 cm and forgets the two 4 cm inner edges."
+      },
+      {
+        "value": "50 cm",
+        "why": "Adds all four cut-out sides (12 cm) to 38 cm, so the cut seems to add to the outside."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "distractors": [
+      {
+        "value": "9",
+        "why": "Drops the zero from 90."
+      },
+      {
+        "value": "50",
+        "why": "Works 10 × 5 and ignores the 8 in 18."
+      },
+      {
+        "value": "85",
+        "why": "Works 17 × 5, misreading 18 as 17."
+      },
+      {
+        "value": "95",
+        "why": "Adds 5 after multiplying: 90 + 5 = 95."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "distractors": [
+      {
+        "value": "13",
+        "why": "Works 6 + 4 = 10, then adds 3 instead of multiplying."
+      },
+      {
+        "value": "22",
+        "why": "Multiplies 6 by 3 and then adds 4, using the first number for the multiplication."
+      },
+      {
+        "value": "24",
+        "why": "Multiplies 6 × 4 and drops the 3, misreading the plus sign."
+      },
+      {
+        "value": "30",
+        "why": "Does the addition first: (6 + 4) × 3 = 30."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "distractors": [
+      {
+        "value": "1",
+        "why": "Divides 18 by itself, 18 ÷ 18 = 1, and takes that as the factor."
+      },
+      {
+        "value": "2",
+        "why": "Gives the smallest prime factor rather than the largest factor below 18."
+      },
+      {
+        "value": "3",
+        "why": "Finds 18 ÷ 6 = 3 and stops at the first factor found."
+      },
+      {
+        "value": "6",
+        "why": "Finds 18 ÷ 3 = 6, a factor but not the largest."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "distractors": [
+      {
+        "value": "180",
+        "why": "Rounds 39 down to 30 by mistake, then multiplies by 6."
+      },
+      {
+        "value": "234",
+        "why": "Multiplies 39 × 6 exactly and does not round first."
+      },
+      {
+        "value": "244",
+        "why": "Works 39 × 6 with a carry slip: 9 × 6 = 54 is written as 64, giving 244."
+      },
+      {
+        "value": "400",
+        "why": "Rounds the 6 to 10 as well, then multiplies 40 × 10 = 400."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "distractors": [
+      {
+        "value": "125",
+        "why": "Works 20 × 5 = 100, then 4 × 5 as 25 instead of 20, giving 125."
+      },
+      {
+        "value": "130",
+        "why": "Works 20 × 5 = 100, then 4 × 5 as 30 instead of 20, giving 130."
+      },
+      {
+        "value": "150",
+        "why": "Rounds 24 up to 30 and multiplies 30 × 5 = 150."
+      },
+      {
+        "value": "240",
+        "why": "Works 24 × 10 = 240 and forgets to halve it for ×5."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "distractors": [
+      {
+        "value": "11",
+        "why": "Adds 8 + 3 and ignores the 4."
+      },
+      {
+        "value": "12",
+        "why": "Works 4 × 3 = 12 and ignores the 8."
+      },
+      {
+        "value": "15",
+        "why": "Adds 8 + 4 + 3 instead of multiplying the 4 and 3."
+      },
+      {
+        "value": "36",
+        "why": "Does the addition first: (8 + 4) × 3 = 36."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "distractors": [
+      {
+        "value": "8",
+        "why": "Finds 24 ÷ 3 = 8, a factor but not the largest one below 24."
+      },
+      {
+        "value": "16",
+        "why": "Subtracts 24 − 8 = 16 instead of finding a factor."
+      },
+      {
+        "value": "24",
+        "why": "Includes the number itself, forgetting the question says smaller than 24."
+      },
+      {
+        "value": "48",
+        "why": "Doubles 24 and treats the result as a factor."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "distractors": [
+      {
+        "value": "36",
+        "why": "Rounds 59 to 6 tens and multiplies 6 × 6 = 36, forgetting the tens are worth 10 each."
+      },
+      {
+        "value": "300",
+        "why": "Rounds 59 down to 50 and multiplies 50 × 6 = 300."
+      },
+      {
+        "value": "304",
+        "why": "Works 59 × 6 but forgets the carried 5 in the tens column, giving 304."
+      },
+      {
+        "value": "354",
+        "why": "Works 59 × 6 exactly and does not round first."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "distractors": [
+      {
+        "value": "150",
+        "why": "Rounds 36 down to 30 and multiplies 30 × 5 = 150."
+      },
+      {
+        "value": "170",
+        "why": "Works 30 × 5 = 150, then writes 6 × 5 as 20 instead of 30, giving 170."
+      },
+      {
+        "value": "200",
+        "why": "Rounds 36 up to 40 and multiplies 40 × 5 = 200."
+      },
+      {
+        "value": "216",
+        "why": "Multiplies 36 by 6 instead of 5."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "distractors": [
+      {
+        "value": "27",
+        "why": "Works 9 × 3 and drops the 4 altogether."
+      },
+      {
+        "value": "31",
+        "why": "Multiplies first, 9 × 3 = 27, then adds 4 to get 31."
+      },
+      {
+        "value": "36",
+        "why": "Multiplies 9 × 4 and ignores the 3."
+      },
+      {
+        "value": "39",
+        "why": "Does the addition first: (9 + 4) × 3 = 39."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "distractors": [
+      {
+        "value": "20",
+        "why": "Takes only a quarter of 80: 80 ÷ 4 = 20."
+      },
+      {
+        "value": "40",
+        "why": "Takes only half of 80: 80 ÷ 2 = 40."
+      },
+      {
+        "value": "48",
+        "why": "Divides 80 by 5 and multiplies by 3, using the wrong denominator."
+      },
+      {
+        "value": "64",
+        "why": "Takes 4/5 of 80, adding 1 to both the top and bottom of 3/4."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "distractors": [
+      {
+        "value": "1/6",
+        "why": "Uses 1/2 × 1/3, dropping the numerator 2 of 2/3."
+      },
+      {
+        "value": "2/6",
+        "why": "Multiplies across (1 × 2 over 2 × 3) and stops before simplifying."
+      },
+      {
+        "value": "3/5",
+        "why": "Adds 1/2 + 2/3 by adding the tops and the bottoms."
+      },
+      {
+        "value": "3/4",
+        "why": "Divides 1/2 ÷ 2/3 = 3/4 instead of multiplying."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "distractors": [
+      {
+        "value": "1",
+        "why": "Copies the numerator 1 without scaling it."
+      },
+      {
+        "value": "2",
+        "why": "Subtracts 1 from 3 instead of scaling."
+      },
+      {
+        "value": "3",
+        "why": "Divides 12 by 4 instead of by 3, using the wrong number."
+      },
+      {
+        "value": "6",
+        "why": "Halves the denominator, 12 ÷ 2 = 6."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "distractors": [
+      {
+        "value": "2/5",
+        "why": "Uses only the second fraction and ignores the first."
+      },
+      {
+        "value": "3/10",
+        "why": "Adds the tops and the bottoms: (1 + 2)/(5 + 5) = 3/10."
+      },
+      {
+        "value": "6/10",
+        "why": "Converts to tenths (2/10 + 4/10 = 6/10) and stops before simplifying."
+      },
+      {
+        "value": "4/5",
+        "why": "Adds 2/5 to itself instead of adding 1/5."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "distractors": [
+      {
+        "value": "26",
+        "why": "Adds the numerator 2 to 24 instead of using it as a multiplier."
+      },
+      {
+        "value": "30",
+        "why": "Takes half of 60 instead of two fifths."
+      },
+      {
+        "value": "36",
+        "why": "Takes three fifths (60 − 24) instead of two fifths."
+      },
+      {
+        "value": "120",
+        "why": "Multiplies 60 by 2 instead of finding two fifths."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "distractors": [
+      {
+        "value": "1/6",
+        "why": "Keeps only the 2 from the top of 2/3 over 3 × 4 = 12, giving 2/12 = 1/6, and drops the 3."
+      },
+      {
+        "value": "6/12",
+        "why": "Multiplies across (2 × 3 over 3 × 4) and does not simplify to 1/2."
+      },
+      {
+        "value": "2/3",
+        "why": "Keeps the first fraction and forgets to multiply by 3/4."
+      },
+      {
+        "value": "3/4",
+        "why": "Keeps the second fraction and forgets to multiply by 2/3."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "distractors": [
+      {
+        "value": "4",
+        "why": "Divides 20 by 5 instead of scaling 2 up, giving 4."
+      },
+      {
+        "value": "10",
+        "why": "Divides 20 by the numerator 2 instead of the denominator 5."
+      },
+      {
+        "value": "18",
+        "why": "Subtracts 2 from 20 instead of scaling."
+      },
+      {
+        "value": "22",
+        "why": "Adds 2 to 20 instead of scaling."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "distractors": [
+      {
+        "value": "2/7",
+        "why": "Uses only the first fraction and ignores the second."
+      },
+      {
+        "value": "3/7",
+        "why": "Uses only the second fraction and ignores the first."
+      },
+      {
+        "value": "5/14",
+        "why": "Adds the denominators as well: 2 + 3 over 7 + 7 = 5/14."
+      },
+      {
+        "value": "10/14",
+        "why": "Converts to fourteenths (4/14 + 6/14 = 10/14) and stops before simplifying."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "distractors": [
+      {
+        "value": "8",
+        "why": "Divides 64 by 8 and forgets to multiply by the 5."
+      },
+      {
+        "value": "32",
+        "why": "Takes half of 64 instead of five eighths."
+      },
+      {
+        "value": "48",
+        "why": "Takes three quarters of 64 instead of five eighths."
+      },
+      {
+        "value": "56",
+        "why": "Subtracts one eighth from 64 (64 − 8 = 56) instead of taking five eighths."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "distractors": [
+      {
+        "value": "15/30",
+        "why": "Multiplies across (3 × 5 over 5 × 6) and does not simplify to 1/2."
+      },
+      {
+        "value": "3/5",
+        "why": "Keeps only the first fraction and ignores the second."
+      },
+      {
+        "value": "5/6",
+        "why": "Keeps only the second fraction and ignores the first."
+      },
+      {
+        "value": "18/25",
+        "why": "Divides 3/5 ÷ 5/6 = 18/25 instead of multiplying."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "distractors": [
+      {
+        "value": "0.7",
+        "why": "Looks only at the first decimal digit and misses that 0.75 is larger."
+      },
+      {
+        "value": "0.65",
+        "why": "Treats 65 as bigger than 7 by ignoring the point, and misses that 0.75 is bigger still."
+      },
+      {
+        "value": "0.07",
+        "why": "Misplaces the decimal point, so 0.07 looks like 7."
+      },
+      {
+        "value": "0.705",
+        "why": "Treats 705 as bigger than 75 because it has more digits."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "distractors": [
+      {
+        "value": "0.75",
+        "why": "Subtracts 0.5 from 1.25 instead of adding it."
+      },
+      {
+        "value": "1.875",
+        "why": "Multiplies 1.25 by 1.5 instead of adding."
+      },
+      {
+        "value": "2.25",
+        "why": "Reads 0.5 as 1 and adds 1 to 1.25."
+      },
+      {
+        "value": "2.75",
+        "why": "Reads 0.5 as 1.5 and adds 1.5 to 1.25."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "distractors": [
+      {
+        "value": "0.0135",
+        "why": "Divides 1.35 by 100 instead of multiplying."
+      },
+      {
+        "value": "13.5",
+        "why": "Multiplies by 10 instead of 100."
+      },
+      {
+        "value": "35",
+        "why": "Multiplies only the 0.35 by 100, dropping the 1."
+      },
+      {
+        "value": "130",
+        "why": "Drops the 0.05 and calculates 1.3 × 100."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "distractors": [
+      {
+        "value": "4.6",
+        "why": "Cuts off the 7 instead of rounding up."
+      },
+      {
+        "value": "4.67",
+        "why": "Does not round at all and keeps two decimal places."
+      },
+      {
+        "value": "5",
+        "why": "Rounds to the nearest whole number instead of one decimal place."
+      },
+      {
+        "value": "5.7",
+        "why": "Rounds the whole number up to 5 and keeps the 0.7."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "distractors": [
+      {
+        "value": "0.4",
+        "why": "Stops after the first decimal digit and misses that 0.45 is bigger."
+      },
+      {
+        "value": "0.39",
+        "why": "Judges by the last digit, 9 > 5, so 0.39 looks bigger."
+      },
+      {
+        "value": "0.405",
+        "why": "Treats 405 as bigger than 45 because it has more digits."
+      },
+      {
+        "value": "0.04",
+        "why": "Treats its digit 4 as the largest, ignoring the zero in the tenths place."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "distractors": [
+      {
+        "value": "2.81",
+        "why": "Adds the decimal parts as whole numbers: 6 + 75 = 81, giving 2.81."
+      },
+      {
+        "value": "3.1",
+        "why": "Treats 0.75 as 0.5 and adds 2.6 + 0.5."
+      },
+      {
+        "value": "3.5",
+        "why": "Rounds 2.6 up to 3 and 0.75 down to 0.5."
+      },
+      {
+        "value": "3.6",
+        "why": "Adds the whole number 1 to 2.6 and ignores the 0.75."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "distractors": [
+      {
+        "value": "2.48",
+        "why": "Does not multiply at all."
+      },
+      {
+        "value": "24.8",
+        "why": "Multiplies by 10 instead of 100."
+      },
+      {
+        "value": "250",
+        "why": "Rounds 2.48 to 2.5 first, then multiplies to get 250."
+      },
+      {
+        "value": "2480",
+        "why": "Moves the decimal point three places instead of two."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "distractors": [
+      {
+        "value": "6.8",
+        "why": "Reads the whole part as 6 when rounding, so 7.83 becomes 6.8."
+      },
+      {
+        "value": "7",
+        "why": "Cuts off the decimal part and keeps the whole number."
+      },
+      {
+        "value": "7.38",
+        "why": "Reverses the two decimal digits to get 7.38."
+      },
+      {
+        "value": "8",
+        "why": "Rounds to the nearest whole number instead of one decimal place."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "distractors": [
+      {
+        "value": "0.8",
+        "why": "Stops after the first decimal digit and misses that 0.82 is bigger."
+      },
+      {
+        "value": "0.802",
+        "why": "Treats 802 as bigger than 82 because it has more digits."
+      },
+      {
+        "value": "0.28",
+        "why": "Picks the number with the largest single digit (8) regardless of place."
+      },
+      {
+        "value": "0.082",
+        "why": "Treats 082 as larger because it has more decimal places."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "distractors": [
+      {
+        "value": "4.3",
+        "why": "Rounds 3.45 up to 3.5, then adds 0.8 to get 4.3."
+      },
+      {
+        "value": "4.45",
+        "why": "Adds 1 instead of 0.8 to 3.45."
+      },
+      {
+        "value": "5.25",
+        "why": "Adds 1 to 3.45 by mistake, making 4.45, then adds 0.8."
+      },
+      {
+        "value": "11.45",
+        "why": "Treats 0.8 as 8 and adds whole numbers."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "distractors": [
+      {
+        "value": "3.07",
+        "why": "Does not multiply at all."
+      },
+      {
+        "value": "30.7",
+        "why": "Multiplies by 10 instead of 100."
+      },
+      {
+        "value": "300.7",
+        "why": "Multiplies the whole part by 100 but the decimal part by only 10."
+      },
+      {
+        "value": "3070",
+        "why": "Moves the decimal point three places instead of two."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "distractors": [
+      {
+        "value": "8",
+        "why": "Works 40 ÷ 5 = 8 and forgets to multiply by the 3 blue parts."
+      },
+      {
+        "value": "16",
+        "why": "Gives the red share, 2 parts of 8."
+      },
+      {
+        "value": "40",
+        "why": "Gives the total number of counters."
+      },
+      {
+        "value": "60",
+        "why": "Divides 40 by 2 instead of 5, then multiplies by 3."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "distractors": [
+      {
+        "value": "£2",
+        "why": "Gives the cost of one pencil only."
+      },
+      {
+        "value": "£3",
+        "why": "Divides £6 by 2 instead of 3 to find the price of one pencil."
+      },
+      {
+        "value": "£8",
+        "why": "Adds the price of one pencil to £6, which is the cost of 4 pencils, not 5."
+      },
+      {
+        "value": "£9",
+        "why": "Adds the number of pencils to the cost: £6 + 3 = £9."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "distractors": [
+      {
+        "value": "100",
+        "why": "Leaves the amount for 2 people unchanged."
+      },
+      {
+        "value": "200",
+        "why": "Doubles the 100 g instead of multiplying by 3."
+      },
+      {
+        "value": "400",
+        "why": "Works 100 × (6 + 2) ÷ 2 = 400, adding the 2 people in the wrong place."
+      },
+      {
+        "value": "600",
+        "why": "Multiplies 100 g by 6, the new number of people, without dividing by 2."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "distractors": [
+      {
+        "value": "10",
+        "why": "Multiplies the ratio numbers 2 × 5 = 10."
+      },
+      {
+        "value": "12",
+        "why": "Gives the difference between the two bead counts."
+      },
+      {
+        "value": "14",
+        "why": "Adds the small ratio part 2 to the difference 12."
+      },
+      {
+        "value": "20",
+        "why": "Gives the number of large beads, 5 × 4, instead of the small ones."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "distractors": [
+      {
+        "value": "14",
+        "why": "Divides 56 by 4, the blue ratio number, instead of by 7 total parts."
+      },
+      {
+        "value": "24",
+        "why": "Gives the red count, 3 parts of 8."
+      },
+      {
+        "value": "28",
+        "why": "Takes half of 56 instead of four sevenths."
+      },
+      {
+        "value": "42",
+        "why": "Takes three quarters of 56 instead of four sevenths."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "distractors": [
+      {
+        "value": "15",
+        "why": "Adds the 3 extra pencils to £12 instead of their price."
+      },
+      {
+        "value": "24",
+        "why": "Works £12 × 2, treating 7 pencils as two packs of four."
+      },
+      {
+        "value": "28",
+        "why": "Works 7 × 4, multiplying by the pencil count of the first purchase."
+      },
+      {
+        "value": "84",
+        "why": "Multiplies the total £12 by 7 instead of dividing it by 4 first."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "distractors": [
+      {
+        "value": "50",
+        "why": "Divides 150 by 3 to get the amount per person and stops there."
+      },
+      {
+        "value": "150",
+        "why": "Leaves the amount for 3 people unchanged."
+      },
+      {
+        "value": "300",
+        "why": "Doubles 150 instead of tripling it."
+      },
+      {
+        "value": "600",
+        "why": "Multiplies 150 by 4, using the wrong multiplier."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "distractors": [
+      {
+        "value": "5",
+        "why": "Gives one part only (20 ÷ 4) and forgets to multiply by 3."
+      },
+      {
+        "value": "8",
+        "why": "Finds one part (20 ÷ 4 = 5), then adds the 3 instead of multiplying: 5 + 3 = 8."
+      },
+      {
+        "value": "20",
+        "why": "Gives the difference of 20 instead of the small count."
+      },
+      {
+        "value": "35",
+        "why": "Gives the large count, 7 × 5, instead of the small count."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "distractors": [
+      {
+        "value": "45",
+        "why": "Works 72 × 5/8, using 8 parts instead of 9."
+      },
+      {
+        "value": "54",
+        "why": "Takes three quarters of 72 instead of five ninths."
+      },
+      {
+        "value": "72",
+        "why": "Gives the total number of counters."
+      },
+      {
+        "value": "90",
+        "why": "Divides 72 by 4, the red ratio number, then multiplies by 5."
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "distractors": [
+      {
+        "value": "18",
+        "why": "Adds £3 once to £15 instead of working out 8 pencils."
+      },
+      {
+        "value": "20",
+        "why": "Adds the 5 pencils to £15 instead of working with their price."
+      },
+      {
+        "value": "23",
+        "why": "Adds 15 + 8 instead of finding the price of 8 pencils."
+      },
+      {
+        "value": "30",
+        "why": "Doubles £15 instead of working out 8 pencils."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "distractors": [
+      {
+        "value": "50",
+        "why": "Divides 200 g by 4 to get the amount per person and stops there."
+      },
+      {
+        "value": "600",
+        "why": "Works 200 × 3, using the wrong multiplier."
+      },
+      {
+        "value": "1000",
+        "why": "Works 200 × 5 after halving 10 instead of dividing 10 by 4 as a ratio."
+      },
+      {
+        "value": "2000",
+        "why": "Multiplies 200 g by the 10 people without using the ratio."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "distractors": [
+      {
+        "value": "0.09",
+        "why": "Divides by 1000 instead of 10."
+      },
+      {
+        "value": "0.9",
+        "why": "Divides by 100 instead of 10."
+      },
+      {
+        "value": "4.5",
+        "why": "Halves 9, which finds 5% instead of 10%."
+      },
+      {
+        "value": "10",
+        "why": "Divides 90 by 9 instead of by 10."
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "distractors": [
+      {
+        "value": "10",
+        "why": "Gives the discount alone, not the new price."
+      },
+      {
+        "value": "30",
+        "why": "Takes £20 off instead of 20%."
+      },
+      {
+        "value": "45",
+        "why": "Takes 10% off instead of 20%."
+      },
+      {
+        "value": "60",
+        "why": "Adds 20% instead of taking it off."
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "distractors": [
+      {
+        "value": "100",
+        "why": "Treats 1/2 as both halves, a whole."
+      },
+      {
+        "value": "150",
+        "why": "Adds 1 and 1/2 to get 150%."
+      },
+      {
+        "value": "200",
+        "why": "Flips the fraction, 2 ÷ 1 = 200%."
+      },
+      {
+        "value": "500",
+        "why": "Moves the decimal point one place too far from 0.5."
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "distractors": [
+      {
+        "value": "4",
+        "why": "Gives just the 10% increase, 10% of 40."
+      },
+      {
+        "value": "36",
+        "why": "Subtracts 10% instead of adding it."
+      },
+      {
+        "value": "40",
+        "why": "Forgets to add the increase and leaves 40 unchanged."
+      },
+      {
+        "value": "48",
+        "why": "Uses 20% instead of 10%."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "distractors": [
+      {
+        "value": "8",
+        "why": "Takes 10% of 80 instead of 25%."
+      },
+      {
+        "value": "25",
+        "why": "Gives the percentage number itself."
+      },
+      {
+        "value": "40",
+        "why": "Takes half of 80 (50%) instead of a quarter."
+      },
+      {
+        "value": "80",
+        "why": "Gives the original amount with no percentage taken."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "distractors": [
+      {
+        "value": "15",
+        "why": "Gives only the discount, 25% of £60."
+      },
+      {
+        "value": "30",
+        "why": "Halves £60 (takes 50% off) instead of 25%."
+      },
+      {
+        "value": "35",
+        "why": "Takes off £25, treating the 25% as £25."
+      },
+      {
+        "value": "42",
+        "why": "Takes off 30% (£18) instead of 25%."
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "distractors": [
+      {
+        "value": "25",
+        "why": "Gives 1/4 instead of 3/4."
+      },
+      {
+        "value": "60",
+        "why": "Writes 3/5 as 60%, using 5 as the denominator."
+      },
+      {
+        "value": "80",
+        "why": "Changes 3/4 to 4/5 by adding 1 to the top and bottom, and 4/5 is 80%."
+      },
+      {
+        "value": "300",
+        "why": "Multiplies 3 by 100 without dividing by 4."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "distractors": [
+      {
+        "value": "78",
+        "why": "Uses 30% instead of 20%."
+      },
+      {
+        "value": "80",
+        "why": "Adds 20 instead of 20% of 60."
+      },
+      {
+        "value": "84",
+        "why": "Uses 40% instead of 20%."
+      },
+      {
+        "value": "120",
+        "why": "Doubles 60 instead of adding 20%."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "distractors": [
+      {
+        "value": "6",
+        "why": "Takes 5% (1/20) of 120 instead of 15%."
+      },
+      {
+        "value": "12",
+        "why": "Takes 10% of 120 instead of 15%."
+      },
+      {
+        "value": "15",
+        "why": "Gives the percentage number 15 as the answer."
+      },
+      {
+        "value": "24",
+        "why": "Takes 20% of 120 instead of 15%."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "distractors": [
+      {
+        "value": "64",
+        "why": "Takes 20% off instead of 10%."
+      },
+      {
+        "value": "80",
+        "why": "Leaves the price unchanged and forgets the discount."
+      },
+      {
+        "value": "88",
+        "why": "Adds 10% instead of taking it off."
+      },
+      {
+        "value": "90",
+        "why": "Adds £10 instead of working out 10%."
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "distractors": [
+      {
+        "value": "0.4",
+        "why": "Writes 2/5 as 0.4 and forgets to multiply by 100."
+      },
+      {
+        "value": "2",
+        "why": "Uses the numerator 2 as the percentage."
+      },
+      {
+        "value": "5",
+        "why": "Uses the denominator 5 as the percentage."
+      },
+      {
+        "value": "20",
+        "why": "Writes 2/5 as 2/10 = 20%."
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "distractors": [
+      {
+        "value": "20",
+        "why": "Gives only the 25% increase, not the new total."
+      },
+      {
+        "value": "96",
+        "why": "Adds 20% instead of 25%."
+      },
+      {
+        "value": "105",
+        "why": "Adds 25 instead of 25% of 80, which is 20."
+      },
+      {
+        "value": "160",
+        "why": "Doubles 80 instead of increasing it by 25%."
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "distractors": [
+      {
+        "value": "80",
+        "why": "Subtracts 50 twice from 180, taking one angle away twice."
+      },
+      {
+        "value": "110",
+        "why": "Adds the two angles, 50 + 60, and forgets to subtract from 180."
+      },
+      {
+        "value": "120",
+        "why": "Subtracts only the 60 from 180."
+      },
+      {
+        "value": "130",
+        "why": "Subtracts only the 50 from 180."
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "distractors": [
+      {
+        "value": "13",
+        "why": "Gives 8 + 5, half the perimeter."
+      },
+      {
+        "value": "16",
+        "why": "Gives 2 × 8, only the two long sides."
+      },
+      {
+        "value": "21",
+        "why": "Adds 8 + 5 + 8, missing one side."
+      },
+      {
+        "value": "40",
+        "why": "Gives the area, 8 × 5."
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "distractors": [
+      {
+        "value": "26",
+        "why": "Gives the perimeter, 2 × (6 + 7), not the area."
+      },
+      {
+        "value": "49",
+        "why": "Works 7 × 7, using 7 twice."
+      },
+      {
+        "value": "56",
+        "why": "Works 8 × 7, misreading the 6 as 8."
+      },
+      {
+        "value": "84",
+        "why": "Doubles the area, 2 × 42."
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "distractors": [
+      {
+        "value": "25",
+        "why": "Works 90 − 65, using a right angle instead of a straight line."
+      },
+      {
+        "value": "65",
+        "why": "Copies the given angle."
+      },
+      {
+        "value": "90",
+        "why": "Gives a right angle, which is not the sum on a straight line."
+      },
+      {
+        "value": "245",
+        "why": "Adds 180 to 65 instead of subtracting."
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "distractors": [
+      {
+        "value": "30",
+        "why": "Subtracts 75 twice from 180 (180 − 75 − 75 = 30)."
+      },
+      {
+        "value": "45",
+        "why": "Copies the given 45."
+      },
+      {
+        "value": "75",
+        "why": "Copies the given 75."
+      },
+      {
+        "value": "105",
+        "why": "Subtracts only one angle, 180 − 75 = 105."
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "distractors": [
+      {
+        "value": "36",
+        "why": "Uses 6 twice, working 6 × 6."
+      },
+      {
+        "value": "44",
+        "why": "Uses 11 for all four sides: 11 + 11 + 11 + 11 = 44."
+      },
+      {
+        "value": "66",
+        "why": "Gives the area, 11 × 6."
+      },
+      {
+        "value": "68",
+        "why": "Doubles the perimeter, 2 × 34."
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "distractors": [
+      {
+        "value": "17",
+        "why": "Gives half the perimeter, 8 + 9."
+      },
+      {
+        "value": "34",
+        "why": "Gives the perimeter, 2 × (8 + 9)."
+      },
+      {
+        "value": "64",
+        "why": "Works 8 × 8, using 8 twice."
+      },
+      {
+        "value": "81",
+        "why": "Works 9 × 9, using 9 twice."
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "distractors": [
+      {
+        "value": "55",
+        "why": "Misreads 115 as 125 and subtracts from 180."
+      },
+      {
+        "value": "115",
+        "why": "Copies the given angle."
+      },
+      {
+        "value": "245",
+        "why": "Works 360 − 115 and uses a full turn instead of a straight line."
+      },
+      {
+        "value": "295",
+        "why": "Adds 180 to 115 instead of subtracting."
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "distractors": [
+      {
+        "value": "10",
+        "why": "Subtracts 85 twice from 180 (180 − 85 − 85 = 10)."
+      },
+      {
+        "value": "35",
+        "why": "Copies the given 35."
+      },
+      {
+        "value": "120",
+        "why": "Adds the two given angles, 35 + 85."
+      },
+      {
+        "value": "145",
+        "why": "Subtracts only the 35 from 180."
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "distractors": [
+      {
+        "value": "23",
+        "why": "Gives half the perimeter, 14 + 9."
+      },
+      {
+        "value": "28",
+        "why": "Works 14 × 2, using only the two long sides."
+      },
+      {
+        "value": "56",
+        "why": "Works 2 × (14 + 14), using 14 twice."
+      },
+      {
+        "value": "126",
+        "why": "Gives the area, 14 × 9."
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "distractors": [
+      {
+        "value": "2502.5",
+        "why": "Converts 2.5 kg to 2500 g and then adds 2.5 g."
+      },
+      {
+        "value": "2520",
+        "why": "Reads 2.5 kg as 2.52 kg, so 2520 g."
+      },
+      {
+        "value": "2550",
+        "why": "Reads 2.5 kg as 2.55 kg, so 2550 g."
+      },
+      {
+        "value": "25000",
+        "why": "Moves the decimal point four places instead of three."
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "distractors": [
+      {
+        "value": "15",
+        "why": "Gives just the minutes past 10, 10:15."
+      },
+      {
+        "value": "20",
+        "why": "Counts 9:40 to 10:00 only and forgets the 15 minutes."
+      },
+      {
+        "value": "25",
+        "why": "Works 40 − 15 = 25 and does not borrow from the hour."
+      },
+      {
+        "value": "45",
+        "why": "Works 60 − 15 = 45, counting back from 10:15 the wrong way."
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "distractors": [
+      {
+        "value": "7",
+        "why": "Adds the speed and time, 4 + 3 = 7."
+      },
+      {
+        "value": "16",
+        "why": "Multiplies the speed by itself, 4 × 4."
+      },
+      {
+        "value": "24",
+        "why": "Doubles the answer, 12 × 2."
+      },
+      {
+        "value": "48",
+        "why": "Multiplies the answer 12 by the speed 4 again."
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "distractors": [
+      {
+        "value": "350",
+        "why": "Copies the amount used instead of subtracting it."
+      },
+      {
+        "value": "600",
+        "why": "Rounds 350 up to 400 and works 1000 − 400 = 600."
+      },
+      {
+        "value": "965",
+        "why": "Reads 350 g as 35 g and works 1000 − 35 = 965."
+      },
+      {
+        "value": "1350",
+        "why": "Adds 350 to 1000 instead of subtracting."
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "distractors": [
+      {
+        "value": "175",
+        "why": "Multiplies by 100 instead of 1000."
+      },
+      {
+        "value": "1075",
+        "why": "Works 1000 + 75, reading 0.75 litres as 75 ml."
+      },
+      {
+        "value": "1800",
+        "why": "Rounds 1.75 litres up to 1.8 litres before converting."
+      },
+      {
+        "value": "17500",
+        "why": "Multiplies by 10 000 instead of 1000."
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "distractors": [
+      {
+        "value": "25",
+        "why": "Counts 13:35 to 14:00 only and forgets the 20 minutes."
+      },
+      {
+        "value": "55",
+        "why": "Adds the minutes, 35 + 20 = 55."
+      },
+      {
+        "value": "85",
+        "why": "Works 60 + 25 and adds an extra hour."
+      },
+      {
+        "value": "105",
+        "why": "Works 60 + 45 and adds an extra hour."
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "distractors": [
+      {
+        "value": "9",
+        "why": "Adds the speed and time, 5 + 4 = 9."
+      },
+      {
+        "value": "10",
+        "why": "Works 5 × 2, using two hours instead of four."
+      },
+      {
+        "value": "15",
+        "why": "Works 5 × 3, using one hour too few."
+      },
+      {
+        "value": "25",
+        "why": "Works 5 × 5, using five hours instead of four."
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "distractors": [
+      {
+        "value": "1000",
+        "why": "Treats 750 g as 1000 g and works 2000 − 1000 = 1000."
+      },
+      {
+        "value": "1300",
+        "why": "Rounds 750 down to 700 and works 2000 − 700 = 1300."
+      },
+      {
+        "value": "1750",
+        "why": "Subtracts 250 instead of 750 from 2000."
+      },
+      {
+        "value": "2750",
+        "why": "Adds 750 to 2000 instead of subtracting."
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "distractors": [
+      {
+        "value": "3.2",
+        "why": "Gives the metres without converting to centimetres."
+      },
+      {
+        "value": "32",
+        "why": "Multiplies by 10 instead of 100."
+      },
+      {
+        "value": "300",
+        "why": "Works 3 × 100 and forgets the 0.2 metre."
+      },
+      {
+        "value": "302",
+        "why": "Reads 3.2 m as 3 m 2 cm, which is 302 cm."
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "distractors": [
+      {
+        "value": "25",
+        "why": "Works 60 − 45 + 10 = 25, forgetting the hour."
+      },
+      {
+        "value": "75",
+        "why": "Counts 15:45 to 17:00 only and forgets the 10 minutes."
+      },
+      {
+        "value": "95",
+        "why": "Counts the last 10 minutes twice: 75 + 10 + 10 = 95."
+      },
+      {
+        "value": "105",
+        "why": "Works 60 + 45 and adds an extra hour."
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "distractors": [
+      {
+        "value": "35",
+        "why": "Adds an extra hour: 30 + 5 = 35."
+      },
+      {
+        "value": "36",
+        "why": "Works 6 × 6, using six hours instead of five."
+      },
+      {
+        "value": "40",
+        "why": "Works 8 × 5, misreading the speed 6 as 8."
+      },
+      {
+        "value": "60",
+        "why": "Works 6 × 10, doubling the time."
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "distractors": [
+      {
+        "value": "13",
+        "why": "Repeats the last term instead of adding the step."
+      },
+      {
+        "value": "14",
+        "why": "Adds 1 each time instead of 3."
+      },
+      {
+        "value": "15",
+        "why": "Adds 2 each time instead of 3."
+      },
+      {
+        "value": "17",
+        "why": "Adds the first term 4 instead of the step of 3."
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "distractors": [
+      {
+        "value": "12",
+        "why": "Gives the middle number, 36 ÷ 3."
+      },
+      {
+        "value": "14",
+        "why": "Reads consecutive as consecutive even numbers: 10 + 12 + 14 = 36."
+      },
+      {
+        "value": "18",
+        "why": "Divides the total by 2 instead of 3."
+      },
+      {
+        "value": "36",
+        "why": "Gives the total instead of the largest number."
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "distractors": [
+      {
+        "value": "7",
+        "why": "Works 5 + 2, forgetting the multiply by 3."
+      },
+      {
+        "value": "10",
+        "why": "Adds 5 + 3 + 2 instead of multiplying by 3."
+      },
+      {
+        "value": "13",
+        "why": "Works 5 × 2 + 3, multiplying by 2 instead of 3."
+      },
+      {
+        "value": "15",
+        "why": "Works 5 × 3, forgetting the add 2."
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "distractors": [
+      {
+        "value": "3",
+        "why": "Works (19 − 4) ÷ 5 = 3, dividing by the wrong number."
+      },
+      {
+        "value": "4",
+        "why": "Works (19 − 3) ÷ 4 = 4, swapping the 3 and the 4."
+      },
+      {
+        "value": "6",
+        "why": "Works 19 ÷ 3, ignoring the add 4 and dropping the remainder, to get 6."
+      },
+      {
+        "value": "15",
+        "why": "Works 19 − 4 = 15 and forgets to divide by 3."
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "distractors": [
+      {
+        "value": "24",
+        "why": "Adds 5 each time instead of the step of 4."
+      },
+      {
+        "value": "26",
+        "why": "Adds 7, which is the first term."
+      },
+      {
+        "value": "31",
+        "why": "Adds 12, which is three steps at once."
+      },
+      {
+        "value": "33",
+        "why": "Adds the three earlier terms, 7 + 11 + 15 = 33."
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "distractors": [
+      {
+        "value": "20",
+        "why": "Gives the smallest of the three numbers, 21 − 1."
+      },
+      {
+        "value": "21",
+        "why": "Gives the middle number, 63 ÷ 3."
+      },
+      {
+        "value": "23",
+        "why": "Adds 2 to the middle number, a counting slip."
+      },
+      {
+        "value": "32",
+        "why": "Divides 63 by 2 instead of 3, then rounds 31.5 up to 32."
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "distractors": [
+      {
+        "value": "24",
+        "why": "Works 4 × 6 and forgets the + 3."
+      },
+      {
+        "value": "30",
+        "why": "Adds first: (4 + 6) × 3 = 30."
+      },
+      {
+        "value": "36",
+        "why": "Adds first: (6 + 3) × 4 = 36."
+      },
+      {
+        "value": "72",
+        "why": "Multiplies everything: 4 × 6 × 3 = 72."
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "distractors": [
+      {
+        "value": "3",
+        "why": "Works (29 − 5) ÷ 8 = 3, dividing by 8 instead of 4."
+      },
+      {
+        "value": "5",
+        "why": "Works (29 − 4) ÷ 5 = 5, swapping the 4 and the 5."
+      },
+      {
+        "value": "12",
+        "why": "Works (29 − 5) ÷ 2 = 12, halving instead of dividing by 4."
+      },
+      {
+        "value": "24",
+        "why": "Works 29 − 5 = 24 and forgets to divide by 4."
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "distractors": [
+      {
+        "value": "26",
+        "why": "Adds 2 each time instead of 5."
+      },
+      {
+        "value": "28",
+        "why": "Adds 4 each time instead of 5."
+      },
+      {
+        "value": "33",
+        "why": "Adds the first and last terms, 9 + 24 = 33."
+      },
+      {
+        "value": "38",
+        "why": "Adds the last two terms, 24 + 14 = 38."
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "distractors": [
+      {
+        "value": "34",
+        "why": "Reads consecutive as even numbers: 30, 32, 34 add to 96."
+      },
+      {
+        "value": "35",
+        "why": "Adds 3 to the middle number 32."
+      },
+      {
+        "value": "64",
+        "why": "Takes two thirds of 96 instead of one third."
+      },
+      {
+        "value": "96",
+        "why": "Gives the total instead of the largest number."
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "distractors": [
+      {
+        "value": "12",
+        "why": "Works 8 + 4 and forgets the × 5."
+      },
+      {
+        "value": "39",
+        "why": "Works 5 × 7 + 4, misreading the 8 as 7."
+      },
+      {
+        "value": "40",
+        "why": "Works 5 × 8 and forgets the + 4."
+      },
+      {
+        "value": "60",
+        "why": "Adds first: (8 + 4) × 5 = 60."
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "distractors": [
+      {
+        "value": "4",
+        "why": "Gives the range, 8 − 4, instead of the mean."
+      },
+      {
+        "value": "8",
+        "why": "Gives the largest value instead of the mean."
+      },
+      {
+        "value": "9",
+        "why": "Divides the total 18 by 2 instead of 3."
+      },
+      {
+        "value": "18",
+        "why": "Gives the total without dividing by the number of values."
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "distractors": [
+      {
+        "value": "2",
+        "why": "Works 8 − 6 = 2, subtracting from the mean instead of the total."
+      },
+      {
+        "value": "6",
+        "why": "Copies one of the given scores."
+      },
+      {
+        "value": "7.5",
+        "why": "Averages the two given scores, (6 + 9) ÷ 2 = 7.5."
+      },
+      {
+        "value": "8",
+        "why": "Gives the mean itself instead of the third score."
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "distractors": [
+      {
+        "value": "2",
+        "why": "Works the largest minus the middle, 8 − 6 = 2."
+      },
+      {
+        "value": "3",
+        "why": "Gives the smallest value instead of the range."
+      },
+      {
+        "value": "6",
+        "why": "Gives the middle value instead of the range."
+      },
+      {
+        "value": "17",
+        "why": "Gives the total 3 + 8 + 6 instead of the range."
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "distractors": [
+      {
+        "value": "6",
+        "why": "Counts the gap between 7 and 12 inclusively, giving 6."
+      },
+      {
+        "value": "7",
+        "why": "Gives the number of pears."
+      },
+      {
+        "value": "12",
+        "why": "Gives the number of apples."
+      },
+      {
+        "value": "19",
+        "why": "Adds the apples and pears, 12 + 7 = 19."
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "distractors": [
+      {
+        "value": "4",
+        "why": "Gives the range, 11 − 7, instead of the mean."
+      },
+      {
+        "value": "7",
+        "why": "Gives the smallest value instead of the mean."
+      },
+      {
+        "value": "8",
+        "why": "Averages only the first two values, (7 + 9) ÷ 2 = 8."
+      },
+      {
+        "value": "27",
+        "why": "Gives the total without dividing by 3."
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "distractors": [
+      {
+        "value": "10",
+        "why": "Gives the mean instead of the third score."
+      },
+      {
+        "value": "19",
+        "why": "Adds the two given scores, 8 + 11."
+      },
+      {
+        "value": "21",
+        "why": "Adds the mean 10 to the given 11."
+      },
+      {
+        "value": "30",
+        "why": "Gives the total of all three scores."
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "distractors": [
+      {
+        "value": "4",
+        "why": "Works 11 − 7 and stops at the middle gap."
+      },
+      {
+        "value": "7",
+        "why": "Gives the smallest value instead of the range."
+      },
+      {
+        "value": "15",
+        "why": "Gives the largest value instead of the range."
+      },
+      {
+        "value": "18",
+        "why": "Adds the two smallest values, 7 + 11 = 18, instead of subtracting."
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "distractors": [
+      {
+        "value": "2",
+        "why": "Works 18 ÷ 9 = 2, dividing instead of subtracting."
+      },
+      {
+        "value": "8",
+        "why": "Counts the gap one short, 8 instead of 9."
+      },
+      {
+        "value": "27",
+        "why": "Adds 18 + 9 instead of subtracting."
+      },
+      {
+        "value": "162",
+        "why": "Multiplies 18 × 9 instead of subtracting."
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "distractors": [
+      {
+        "value": "18",
+        "why": "Averages only the last two values: (16 + 20) ÷ 2 = 18."
+      },
+      {
+        "value": "20",
+        "why": "Gives the largest value instead of the mean."
+      },
+      {
+        "value": "28",
+        "why": "Adds the first two values, 12 + 16."
+      },
+      {
+        "value": "48",
+        "why": "Gives the total of the three values without dividing."
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "distractors": [
+      {
+        "value": "9",
+        "why": "Copies the lower given score."
+      },
+      {
+        "value": "12",
+        "why": "Gives the mean instead of the third score."
+      },
+      {
+        "value": "13",
+        "why": "Copies the higher given score."
+      },
+      {
+        "value": "22",
+        "why": "Adds the two given scores, 9 + 13."
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "distractors": [
+      {
+        "value": "7",
+        "why": "Works 19 − 12, the gap from smallest to middle."
+      },
+      {
+        "value": "16",
+        "why": "Counts the numbers from 12 to 27 inclusively, which gives 16."
+      },
+      {
+        "value": "27",
+        "why": "Gives the largest value instead of the range."
+      },
+      {
+        "value": "58",
+        "why": "Gives the total of the three values."
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "distractors": [
+      {
+        "value": "1.6",
+        "why": "Works 24 ÷ 15 = 1.6, dividing instead of subtracting."
+      },
+      {
+        "value": "6",
+        "why": "Adds the digits of 24, 2 + 4 = 6, instead of comparing the two groups."
+      },
+      {
+        "value": "8",
+        "why": "Counts the gap one short, 8 instead of 9."
+      },
+      {
+        "value": "39",
+        "why": "Adds 24 + 15 instead of subtracting."
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "distractors": [
+      {
+        "value": "-2",
+        "why": "Works 1 − 3 = −2, moving 3 squares left instead of right."
+      },
+      {
+        "value": "3",
+        "why": "Gives only the number of squares moved, not the new position."
+      },
+      {
+        "value": "5",
+        "why": "Counts the starting square too, 1 + 3 + 1 = 5."
+      },
+      {
+        "value": "6",
+        "why": "Moves 3 squares twice, 3 + 3 = 6."
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "distractors": [
+      {
+        "value": "-1",
+        "why": "Works 2 − 3 = −1, using x minus y."
+      },
+      {
+        "value": "2",
+        "why": "Swaps the coordinates and gives the x-value 2 as the new y."
+      },
+      {
+        "value": "3",
+        "why": "Copies the original y-coordinate without reflecting it."
+      },
+      {
+        "value": "5",
+        "why": "Adds the coordinates, 2 + 3 = 5."
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "distractors": [
+      {
+        "value": "1",
+        "why": "Works 3 − 2 = 1, dropping the sign of −2."
+      },
+      {
+        "value": "3",
+        "why": "Gives the larger x-coordinate instead of the distance."
+      },
+      {
+        "value": "4",
+        "why": "Counts only the squares between the points, not the distance."
+      },
+      {
+        "value": "6",
+        "why": "Counts 3 + 2 + 1 and adds an extra square."
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "distractors": [
+      {
+        "value": "-4",
+        "why": "Counts 4 down from 0, ignoring the starting y-coordinate of 1."
+      },
+      {
+        "value": "-2",
+        "why": "Works 1 − 3 = −2, counting only 3 squares down."
+      },
+      {
+        "value": "3",
+        "why": "Works 4 − 1 = 3, reversing the subtraction."
+      },
+      {
+        "value": "5",
+        "why": "Works 1 + 4 = 5, moving up instead of down."
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "distractors": [
+      {
+        "value": "-2",
+        "why": "Moves 2 squares left twice, 2 − 2 − 2 = −2."
+      },
+      {
+        "value": "0",
+        "why": "Works 2 − 2 = 0, moving left instead of right."
+      },
+      {
+        "value": "2",
+        "why": "Does not move at all."
+      },
+      {
+        "value": "3",
+        "why": "Moves only 1 square right."
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "distractors": [
+      {
+        "value": "-4",
+        "why": "Reflects the point and then moves it 2 squares further down."
+      },
+      {
+        "value": "-3",
+        "why": "Copies the x-coordinate instead of the y-coordinate."
+      },
+      {
+        "value": "-1",
+        "why": "Works 2 − 3 = −1, using the wrong subtraction."
+      },
+      {
+        "value": "2",
+        "why": "Copies the y-coordinate without reflecting it."
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "distractors": [
+      {
+        "value": "7",
+        "why": "Counts the squares from −4 to 2 inclusively, giving 7."
+      },
+      {
+        "value": "8",
+        "why": "Works 4 + 4, using the 4 twice."
+      },
+      {
+        "value": "10",
+        "why": "Works 4 + 2 + 4, counting the distance from zero twice."
+      },
+      {
+        "value": "12",
+        "why": "Doubles the answer, 6 × 2."
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "distractors": [
+      {
+        "value": "-5",
+        "why": "Counts 5 down from 0, ignoring the starting y-coordinate of 2."
+      },
+      {
+        "value": "-4",
+        "why": "Moves 6 squares down instead of 5."
+      },
+      {
+        "value": "-1",
+        "why": "Works 2 − 3 = −1, moving only 3 squares down."
+      },
+      {
+        "value": "7",
+        "why": "Works 2 + 5 = 7, moving up instead of down."
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "distractors": [
+      {
+        "value": "-7",
+        "why": "Moves 5 squares left instead of right."
+      },
+      {
+        "value": "4",
+        "why": "Moves 6 squares right instead of 5."
+      },
+      {
+        "value": "5",
+        "why": "Gives the number of squares moved, not the new position."
+      },
+      {
+        "value": "7",
+        "why": "Works 2 + 5 = 7, dropping the minus sign of −2."
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "distractors": [
+      {
+        "value": "-2",
+        "why": "Copies the y-coordinate without changing its sign."
+      },
+      {
+        "value": "-4",
+        "why": "Reflects the x-coordinate instead of the y-coordinate."
+      },
+      {
+        "value": "0",
+        "why": "Sets the new y-coordinate to zero."
+      },
+      {
+        "value": "1",
+        "why": "Works −2 + 3 = 1, moving up 3 squares."
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "distractors": [
+      {
+        "value": "2",
+        "why": "Works 5 − 3 = 2, ignoring the sign of −3."
+      },
+      {
+        "value": "7",
+        "why": "Counts the squares between −3 and 5, not the distance."
+      },
+      {
+        "value": "9",
+        "why": "Counts the squares from −3 to 5 inclusively, giving 9."
+      },
+      {
+        "value": "16",
+        "why": "Doubles the distance, 8 × 2 = 16."
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "distractors": [
+      {
+        "value": "-2",
+        "why": "Works 3 − 5 = −2, counting only 5 squares down."
+      },
+      {
+        "value": "-1",
+        "why": "Works 3 − 4 = −1, counting only 4 squares down."
+      },
+      {
+        "value": "3",
+        "why": "Copies the original y-coordinate, so the point does not move."
+      },
+      {
+        "value": "9",
+        "why": "Works 3 + 6 = 9, moving up instead of down."
+      }
+    ]
+  }
+]

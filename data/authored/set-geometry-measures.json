@@ -1,0 +1,2929 @@
+[
+  {
+    "unit": null,
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              100,
+              210
+            ],
+            [
+              270,
+              210
+            ],
+            [
+              100,
+              50
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            100,
+            195
+          ],
+          "to": [
+            115,
+            195
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            115,
+            195
+          ],
+          "to": [
+            115,
+            210
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 230,
+          "y": 202,
+          "text": "46°",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A right-angled triangle. The right angle is at the bottom left corner and is marked with two short lines. The angle at the bottom right corner is labelled 46°. Not to scale."
+    },
+    "id": 298,
+    "topic": "geometry",
+    "subtopic": "triangle_angle_reasoning",
+    "difficulty": 2,
+    "question": "A right-angled triangle has one angle of 46°. Which pair gives the sizes of its other two angles?",
+    "answer": "44° and 90°",
+    "check": [
+      "180-90-46",
+      "90"
+    ],
+    "distractors": [
+      {
+        "value": "134° and 90°",
+        "why": "Works out 180° − 46° = 134° and treats it as the missing angle, ignoring that the 90° angle has already used up part of the 180°."
+      },
+      {
+        "value": "46° and 88°",
+        "why": "Assumes the triangle is isosceles: a second 46° angle leaves 180° − 92° = 88°."
+      },
+      {
+        "value": "44° and 46°",
+        "why": "Finds 90° − 46° = 44° correctly, then lists the given 46° instead of the 90° angle."
+      },
+      {
+        "value": "136° and 90°",
+        "why": "Adds 90° + 46° = 136° and stops, never subtracting that total from 180°."
+      }
+    ],
+    "explanation": "The three angles of a triangle add up to 180°. One angle is the right angle, 90°, and another is 46°. Together they make 90° + 46° = 136°. The third angle is 180° − 136° = 44°. So the other two angles are 44° and 90°. Check: 44° + 46° = 90°, which is what the two acute angles of a right-angled triangle always make.",
+    "hints": [
+      "A right-angled triangle always has one angle that is exactly 90°. Where does that fit in the 180° total?",
+      "Add the 90° angle and the 46° angle, then take that total away from 180°."
+    ],
+    "pitfall": "Subtracting only 46° from 180° and forgetting that the right angle is also part of the triangle."
+  },
+  {
+    "unit": null,
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              190,
+              40
+            ],
+            [
+              90,
+              200
+            ],
+            [
+              290,
+              200
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            133,
+            116
+          ],
+          "to": [
+            147,
+            124
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            233,
+            124
+          ],
+          "to": [
+            247,
+            116
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 190,
+          "y": 92,
+          "text": "40°",
+          "anchor": "middle"
+        }
+      ],
+      "description": "An isosceles triangle with its point at the top. The two sloping sides each have one short tick mark to show they are equal. The angle at the top is labelled 40°. Not to scale."
+    },
+    "id": 299,
+    "topic": "geometry",
+    "subtopic": "triangle_angle_reasoning",
+    "difficulty": 2,
+    "question": "An isosceles triangle has two equal sides that meet at the top, where the angle is 40°. Which pair gives the sizes of the other two angles?",
+    "answer": "70° and 70°",
+    "check": [
+      "(180-40)/2",
+      "(180-40)/2"
+    ],
+    "distractors": [
+      {
+        "value": "140° and 140°",
+        "why": "Finds 180° − 40° = 140° but forgets to share it between the two equal angles."
+      },
+      {
+        "value": "40° and 100°",
+        "why": "Treats 40° as one of the two equal base angles, so the third angle is 180° − 80° = 100°."
+      },
+      {
+        "value": "50° and 50°",
+        "why": "Uses the right-angled rule 90° − 40° = 50° and gives 50° to both base angles."
+      },
+      {
+        "value": "20° and 20°",
+        "why": "Halves the 40° angle instead of halving the 140° that is left."
+      }
+    ],
+    "explanation": "The angles of a triangle add up to 180°. The top angle is 40°, so the other two angles add up to 180° − 40° = 140°. In an isosceles triangle the angles opposite the equal sides are equal, so each one is 140° ÷ 2 = 70°. The two angles are 70° and 70°.",
+    "hints": [
+      "The two angles at the bottom are equal because the two sides above them are equal.",
+      "First find what is left of the 180° after the top angle, then share it equally."
+    ],
+    "pitfall": "Finding 140° and forgetting to split it between the two equal angles."
+  },
+  {
+    "unit": null,
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              90,
+              205
+            ],
+            [
+              330,
+              205
+            ],
+            [
+              90,
+              65
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            90,
+            190
+          ],
+          "to": [
+            105,
+            190
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            105,
+            190
+          ],
+          "to": [
+            105,
+            205
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 90,
+          "y": 55,
+          "text": "A",
+          "anchor": "middle"
+        },
+        {
+          "x": 76,
+          "y": 222,
+          "text": "B",
+          "anchor": "middle"
+        },
+        {
+          "x": 344,
+          "y": 214,
+          "text": "C",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A right-angled triangle ABC. A is at the top left, B at the bottom left and C at the bottom right. The right angle at B is marked with two short lines. Not to scale."
+    },
+    "id": 300,
+    "topic": "geometry",
+    "subtopic": "triangle_angle_reasoning",
+    "difficulty": 3,
+    "question": "Triangle ABC has a right angle at B. Angle A is twice as big as angle C. Which pair gives the sizes of angle A and angle C, in that order?",
+    "answer": "60° and 30°",
+    "check": [
+      "90/3*2",
+      "90/3"
+    ],
+    "distractors": [
+      {
+        "value": "45° and 45°",
+        "why": "Assumes the two acute angles are equal, ignoring that A is twice C."
+      },
+      {
+        "value": "120° and 60°",
+        "why": "Shares 180° in the ratio 2 : 1 instead of 90°, forgetting that the right angle has taken 90° of the total."
+      },
+      {
+        "value": "30° and 60°",
+        "why": "Splits 90° correctly but gives the smaller share to A, reversing which angle is twice the other."
+      },
+      {
+        "value": "It's not possible to say",
+        "why": "Thinks that no angle size is given, missing that the right angle fixes the other two to add up to 90°."
+      }
+    ],
+    "explanation": "The angles of a triangle add up to 180°. The right angle at B uses 90°, so angles A and C together make 90°. A is twice C, so the 90° is 3 equal parts of 90° ÷ 3 = 30° each. Angle C is 1 part, 30°, and angle A is 2 parts, 60°. Check: 60° + 30° = 90°.",
+    "hints": [
+      "After the right angle, how many degrees are left for angles A and C together?",
+      "Angle A is 2 parts and angle C is 1 part, so the 90° is shared into 3 equal parts."
+    ],
+    "pitfall": "Sharing 180° instead of 90°, or swapping which angle is the larger one."
+  },
+  {
+    "unit": null,
+    "answer_format": null,
+    "diagram": null,
+    "id": 301,
+    "topic": "geometry",
+    "subtopic": "triangle_angle_reasoning",
+    "difficulty": 3,
+    "question": "An isosceles triangle has one angle of 50°. Which pair must be the sizes of its other two angles?",
+    "answer": "It's not possible to say",
+    "check": null,
+    "check_note": "The 50° angle could be the angle between the equal sides (giving 65° and 65°) or one of the equal base angles (giving 50° and 80°), so the other two angles are not fixed.",
+    "distractors": [
+      {
+        "value": "65° and 65°",
+        "why": "Assumes the 50° angle is the one between the equal sides, so (180° − 50°) ÷ 2 = 65° each. This is only one possibility."
+      },
+      {
+        "value": "50° and 80°",
+        "why": "Assumes the 50° angle is a base angle, so a second 50° angle leaves 80°. This is only one possibility."
+      },
+      {
+        "value": "40° and 90°",
+        "why": "Uses the right-angled rule 90° − 50° = 40°, but nothing says the triangle has a right angle."
+      },
+      {
+        "value": "130° and 130°",
+        "why": "Finds 180° − 50° = 130° and gives that to both remaining angles without sharing it."
+      }
+    ],
+    "explanation": "There are two different isosceles triangles with a 50° angle. If 50° is the angle between the two equal sides, the other two angles share 130° and are 65° and 65°. If 50° is one of the two equal angles, there is another 50° angle and the last angle is 180° − 100° = 80°. Both work, so the angles are not fixed.",
+    "hints": [
+      "In an isosceles triangle, two of the angles are equal. Which angle could the 50° be?",
+      "Try the 50° as the odd one out, then try it as one of the matching pair. Do you get the same answer?"
+    ],
+    "pitfall": "Picking the first case that works, without checking whether the 50° could be a different angle of the triangle."
+  },
+  {
+    "unit": null,
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              80,
+              210
+            ],
+            [
+              270,
+              210
+            ],
+            [
+              80,
+              20
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            80,
+            195
+          ],
+          "to": [
+            95,
+            195
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            95,
+            195
+          ],
+          "to": [
+            95,
+            210
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            175,
+            203
+          ],
+          "to": [
+            175,
+            217
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            73,
+            115
+          ],
+          "to": [
+            87,
+            115
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [],
+      "description": "A right-angled triangle. The right angle is at the bottom left corner. The two sides that meet at the right angle each have one short tick mark to show they are equal. Not to scale."
+    },
+    "id": 302,
+    "topic": "geometry",
+    "subtopic": "triangle_angle_reasoning",
+    "difficulty": 1,
+    "question": "A triangle is right-angled and isosceles. Apart from the right angle, which pair gives the sizes of its other two angles?",
+    "answer": "45° and 45°",
+    "check": [
+      "90/2",
+      "90/2"
+    ],
+    "distractors": [
+      {
+        "value": "90° and 90°",
+        "why": "Shares 180° equally between the two angles, forgetting the right angle already takes 90°."
+      },
+      {
+        "value": "45° and 90°",
+        "why": "Finds 45° correctly but then includes the right angle as one of the other two."
+      },
+      {
+        "value": "60° and 30°",
+        "why": "Remembers the 30°, 60°, 90° set square, which is right-angled but not isosceles."
+      },
+      {
+        "value": "It's not possible to say",
+        "why": "Thinks that without a given angle size nothing can be found, missing that isosceles means two angles are equal."
+      }
+    ],
+    "explanation": "The angles of a triangle add up to 180°. The right angle is 90°, so the other two angles add up to 90°. An isosceles triangle has two equal angles, and the right angle cannot be one of them (two right angles would be too big). So the other two angles are equal: 90° ÷ 2 = 45° each.",
+    "hints": [
+      "How many degrees are left for the other two angles after the right angle?",
+      "In an isosceles triangle two angles are equal. Which two must they be here?"
+    ],
+    "pitfall": "Forgetting that the right angle already uses 90° of the 180°."
+  },
+  {
+    "unit": "°",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              70,
+              210
+            ],
+            [
+              300,
+              210
+            ],
+            [
+              235,
+              55
+            ],
+            [
+              70,
+              45
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            70,
+            195
+          ],
+          "to": [
+            85,
+            195
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            85,
+            195
+          ],
+          "to": [
+            85,
+            210
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 212,
+          "y": 82,
+          "text": "118°",
+          "anchor": "middle"
+        },
+        {
+          "x": 262,
+          "y": 200,
+          "text": "67°",
+          "anchor": "middle"
+        },
+        {
+          "x": 96,
+          "y": 78,
+          "text": "?",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A four-sided shape. The bottom left corner is a right angle, marked with two short lines. The bottom right angle is labelled 67°, the top right angle is labelled 118°, and the top left angle is marked with a question mark. Not to scale."
+    },
+    "id": 303,
+    "topic": "geometry",
+    "subtopic": "polygon_angle_facts",
+    "difficulty": 2,
+    "question": "The diagram shows a quadrilateral. Three of its angles are 90°, 67° and 118°. What is the size of the fourth angle, marked ?",
+    "answer": "85°",
+    "check": "360-90-67-118",
+    "distractors": [
+      {
+        "value": "175°",
+        "why": "Subtracts only 67° and 118° from 360°, forgetting the right angle."
+      },
+      {
+        "value": "113°",
+        "why": "Uses 180° − 67° = 113°, treating the angles as if they were on a straight line."
+      },
+      {
+        "value": "62°",
+        "why": "Uses 180° − 118° = 62°, again treating the angles as if they were on a straight line."
+      },
+      {
+        "value": "275°",
+        "why": "Adds the three known angles (90° + 67° + 118°) and stops, never taking the total away from 360°."
+      }
+    ],
+    "explanation": "The angles inside any quadrilateral add up to 360°. The three known angles make 90° + 67° + 118° = 275°. The fourth angle is 360° − 275° = 85°.",
+    "hints": [
+      "What do the four angles of any quadrilateral add up to?",
+      "Add the three angles you know, then find how far that total is below 360°."
+    ],
+    "pitfall": "Forgetting to include the right angle, or using 180° (the total for a triangle) instead of 360°."
+  },
+  {
+    "unit": "°",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              290,
+              122
+            ],
+            [
+              240,
+              209
+            ],
+            [
+              140,
+              209
+            ],
+            [
+              90,
+              122
+            ],
+            [
+              140,
+              35
+            ],
+            [
+              240,
+              35
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            190,
+            122
+          ],
+          "to": [
+            290,
+            122
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            190,
+            122
+          ],
+          "to": [
+            240,
+            209
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            190,
+            122
+          ],
+          "to": [
+            140,
+            209
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            190,
+            122
+          ],
+          "to": [
+            90,
+            122
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            190,
+            122
+          ],
+          "to": [
+            140,
+            35
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            190,
+            122
+          ],
+          "to": [
+            240,
+            35
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [],
+      "description": "A regular hexagon with lines drawn from its centre to all six corners, making six triangles. The interior angle at the right-hand corner is marked with a question mark. Not to scale."
+    },
+    "id": 304,
+    "topic": "geometry",
+    "subtopic": "polygon_angle_facts",
+    "difficulty": 2,
+    "question": "A regular hexagon is split into six identical equilateral triangles by lines from its centre to each corner. What is the size of one whole interior angle of the hexagon, such as the one at its right-hand corner?",
+    "answer": "120°",
+    "check": "2*60",
+    "distractors": [
+      {
+        "value": "60°",
+        "why": "Gives the angle of one equilateral triangle, but each interior angle of the hexagon is made from two triangle angles."
+      },
+      {
+        "value": "90°",
+        "why": "Assumes the angle is a right angle, as in a square."
+      },
+      {
+        "value": "720°",
+        "why": "Finds the total of all the interior angles, (6 − 2) × 180°, and does not divide it by 6."
+      },
+      {
+        "value": "30°",
+        "why": "Halves the 60° angle of a triangle, as if the line from the centre were an angle bisector of the triangle."
+      }
+    ],
+    "explanation": "Every angle of an equilateral triangle is 60°. At each corner of the hexagon, two of the triangles meet, so one interior angle of the hexagon is 60° + 60° = 120°. Check: six interior angles of 120° make 720°, the total for a hexagon.",
+    "hints": [
+      "What size is each angle of an equilateral triangle?",
+      "How many of these triangle angles fit together at one corner of the hexagon?"
+    ],
+    "pitfall": "Giving the angle of a single triangle instead of the angle of the whole hexagon corner."
+  },
+  {
+    "unit": "°",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              70,
+              205
+            ],
+            [
+              250,
+              205
+            ],
+            [
+              310,
+              60
+            ],
+            [
+              130,
+              60
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [],
+      "labels": [
+        {
+          "x": 112,
+          "y": 195,
+          "text": "68°",
+          "anchor": "middle"
+        },
+        {
+          "x": 236,
+          "y": 190,
+          "text": "?",
+          "anchor": "middle"
+        },
+        {
+          "x": 56,
+          "y": 218,
+          "text": "P",
+          "anchor": "middle"
+        },
+        {
+          "x": 262,
+          "y": 222,
+          "text": "Q",
+          "anchor": "middle"
+        },
+        {
+          "x": 324,
+          "y": 56,
+          "text": "R",
+          "anchor": "middle"
+        },
+        {
+          "x": 118,
+          "y": 54,
+          "text": "S",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A parallelogram PQRS with P at the bottom left, Q at the bottom right, R at the top right and S at the top left. The angle at P is labelled 68° and the angle at Q is marked with a question mark. Not to scale."
+    },
+    "id": 305,
+    "topic": "geometry",
+    "subtopic": "polygon_angle_facts",
+    "difficulty": 2,
+    "question": "PQRS is a parallelogram. Angle P is 68°. What is the size of angle Q, marked ?",
+    "answer": "112°",
+    "check": "180-68",
+    "distractors": [
+      {
+        "value": "22°",
+        "why": "Works out 90° − 68°, treating the angle as if it needed to make a right angle."
+      },
+      {
+        "value": "68°",
+        "why": "Copies angle P, mixing up the next angle with the opposite angle."
+      },
+      {
+        "value": "224°",
+        "why": "Finds 360° − 68° − 68° = 224°, the total of the other two angles, and does not share it."
+      },
+      {
+        "value": "292°",
+        "why": "Subtracts only one angle from 360°: 360° − 68° = 292°."
+      }
+    ],
+    "explanation": "Opposite angles of a parallelogram are equal, so the angle opposite P is also 68°. The four angles add up to 360°, which leaves 360° − 68° − 68° = 224° for angles Q and S. These two are equal, so angle Q is 224° ÷ 2 = 112°. (The angles next to each other always add up to 180°.)",
+    "hints": [
+      "In a parallelogram, the opposite angles are equal. What is the angle opposite P?",
+      "The four angles make 360°. Take away the two you know, then share what is left between the last two."
+    ],
+    "pitfall": "Stopping at 224° (the total for two angles) or copying 68° into the neighbouring angle."
+  },
+  {
+    "unit": "°",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "lines": [
+        {
+          "from": [
+            30,
+            170
+          ],
+          "to": [
+            350,
+            170
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            190,
+            170
+          ],
+          "to": [
+            119,
+            61
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            190,
+            170
+          ],
+          "to": [
+            257,
+            59
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 128,
+          "y": 141,
+          "text": "57°",
+          "anchor": "middle"
+        },
+        {
+          "x": 188,
+          "y": 92,
+          "text": "64°",
+          "anchor": "middle"
+        },
+        {
+          "x": 252,
+          "y": 140,
+          "text": "x",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A straight horizontal line with two lines rising from the same point on it, dividing the half-turn above the line into three angles. From left to right the angles are 57°, 64° and x. Not to scale."
+    },
+    "id": 306,
+    "topic": "geometry",
+    "subtopic": "angle_facts_combined",
+    "difficulty": 1,
+    "question": "Three angles lie along a straight line. Two of them are 57° and 64°. What is the size of the angle marked x?",
+    "answer": "59°",
+    "check": "180-57-64",
+    "distractors": [
+      {
+        "value": "123°",
+        "why": "Calculates 180° − 57° and ignores the 64° angle."
+      },
+      {
+        "value": "116°",
+        "why": "Calculates 180° − 64° and ignores the 57° angle."
+      },
+      {
+        "value": "121°",
+        "why": "Adds 57° + 64° = 121° and stops, without taking it away from 180°."
+      },
+      {
+        "value": "239°",
+        "why": "Takes 121° away from 360°, using the total for angles around a point instead of angles on a line."
+      }
+    ],
+    "explanation": "Angles on a straight line add up to 180°. The two known angles make 57° + 64° = 121°. So x = 180° − 121° = 59°.",
+    "hints": [
+      "What do angles on a straight line add up to?",
+      "Add the two angles you know first, then take the total away from 180°."
+    ],
+    "pitfall": "Using only one of the two known angles, or using 360° for a straight line."
+  },
+  {
+    "unit": "°",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "lines": [
+        {
+          "from": [
+            190,
+            122
+          ],
+          "to": [
+            190,
+            27
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            190,
+            122
+          ],
+          "to": [
+            97,
+            139
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            190,
+            122
+          ],
+          "to": [
+            164,
+            213
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            190,
+            122
+          ],
+          "to": [
+            284,
+            135
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 148,
+          "y": 90,
+          "text": "100°",
+          "anchor": "middle"
+        },
+        {
+          "x": 145,
+          "y": 165,
+          "text": "64°",
+          "anchor": "middle"
+        },
+        {
+          "x": 223,
+          "y": 176,
+          "text": "a",
+          "anchor": "middle"
+        },
+        {
+          "x": 228,
+          "y": 78,
+          "text": "a",
+          "anchor": "middle"
+        }
+      ],
+      "description": "Four lines meeting at one point, making four angles all the way round. Going round, the angles are 100°, 64°, a and a. The two angles marked a are equal. Not to scale."
+    },
+    "id": 307,
+    "topic": "geometry",
+    "subtopic": "angle_facts_combined",
+    "difficulty": 3,
+    "question": "Four angles meet at a point. Two of them are 100° and 64°. The other two are equal and each is marked a. What is the size of a?",
+    "answer": "98°",
+    "check": "(360-100-64)/2",
+    "distractors": [
+      {
+        "value": "196°",
+        "why": "Finds 360° − 100° − 64° = 196° but forgets to share it between the two equal angles."
+      },
+      {
+        "value": "8°",
+        "why": "Uses 180° instead of 360°: (180° − 164°) ÷ 2 = 8°."
+      },
+      {
+        "value": "130°",
+        "why": "Forgets the 64° angle: (360° − 100°) ÷ 2 = 130°."
+      },
+      {
+        "value": "148°",
+        "why": "Forgets the 100° angle: (360° − 64°) ÷ 2 = 148°."
+      }
+    ],
+    "explanation": "Angles around a point add up to 360°. The two known angles make 100° + 64° = 164°. That leaves 360° − 164° = 196° for the two equal angles a. Each one is 196° ÷ 2 = 98°. Check: 100° + 64° + 98° + 98° = 360°.",
+    "hints": [
+      "What do angles around a point add up to?",
+      "Take both known angles away from the total, then remember that two angles share what is left."
+    ],
+    "pitfall": "Using 180° instead of 360°, or leaving out one of the angles or the final halving."
+  },
+  {
+    "unit": "°",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              60,
+              205
+            ],
+            [
+              205,
+              205
+            ],
+            [
+              125,
+              40
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            205,
+            205
+          ],
+          "to": [
+            350,
+            205
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 125,
+          "y": 31,
+          "text": "A",
+          "anchor": "middle"
+        },
+        {
+          "x": 46,
+          "y": 218,
+          "text": "B",
+          "anchor": "middle"
+        },
+        {
+          "x": 205,
+          "y": 224,
+          "text": "C",
+          "anchor": "middle"
+        },
+        {
+          "x": 350,
+          "y": 224,
+          "text": "D",
+          "anchor": "middle"
+        },
+        {
+          "x": 108,
+          "y": 195,
+          "text": "72°",
+          "anchor": "middle"
+        },
+        {
+          "x": 127,
+          "y": 110,
+          "text": "55°",
+          "anchor": "middle"
+        },
+        {
+          "x": 240,
+          "y": 185,
+          "text": "?",
+          "anchor": "middle"
+        }
+      ],
+      "description": "Triangle ABC with A at the top, B at the bottom left and C at the bottom right. The side BC is extended to the right as a straight line to D. The angle at B is 72°, the angle at A is 55°, and the angle between CA and CD, outside the triangle, is marked with a question mark. Not to scale."
+    },
+    "id": 308,
+    "topic": "geometry",
+    "subtopic": "angle_facts_combined",
+    "difficulty": 2,
+    "question": "In triangle ABC, angle A is 55° and angle B is 72°. The side BC is extended to D. What is the size of angle ACD, marked ?",
+    "answer": "127°",
+    "check": "55+72",
+    "distractors": [
+      {
+        "value": "53°",
+        "why": "Finds the angle inside the triangle at C (180° − 55° − 72°) but not the angle on the straight line."
+      },
+      {
+        "value": "108°",
+        "why": "Uses 180° − 72°, ignoring the 55° angle."
+      },
+      {
+        "value": "125°",
+        "why": "Uses 180° − 55°, ignoring the 72° angle."
+      },
+      {
+        "value": "233°",
+        "why": "Adds the inside angle 53° to 180° instead of taking it away."
+      }
+    ],
+    "explanation": "First find the angle inside the triangle at C. The angles of a triangle add up to 180°, so angle ACB = 180° − 55° − 72° = 53°. Angles ACB and ACD lie on a straight line, so they add up to 180°. Angle ACD = 180° − 53° = 127°. (This is also 55° + 72°.)",
+    "hints": [
+      "Which angle of the triangle can you find first, using the angles of a triangle?",
+      "Angle ACB and angle ACD sit together on a straight line."
+    ],
+    "pitfall": "Stopping at the angle inside the triangle (53°), which is not the angle the question asks for."
+  },
+  {
+    "unit": "°",
+    "answer_format": null,
+    "diagram": null,
+    "id": 309,
+    "topic": "geometry",
+    "subtopic": "angle_facts_combined",
+    "difficulty": 3,
+    "question": "Two straight lines cross. Two neighbouring angles are in the ratio 2 : 3. What is the size of the angle opposite the larger of these two?",
+    "answer": "108°",
+    "check": "180/5*3",
+    "distractors": [
+      {
+        "value": "72°",
+        "why": "Finds the smaller of the two neighbouring angles instead of the larger."
+      },
+      {
+        "value": "90°",
+        "why": "Assumes the two neighbouring angles are equal, as if the lines crossed at right angles."
+      },
+      {
+        "value": "60°",
+        "why": "Divides 180° by 3, using only the bigger number in the ratio instead of the 5 parts in total."
+      },
+      {
+        "value": "36°",
+        "why": "Finds the size of one part (180° ÷ 5) and does not multiply by 3."
+      }
+    ],
+    "explanation": "Neighbouring angles where two lines cross lie on a straight line, so they add up to 180°. The ratio 2 : 3 has 5 parts, and one part is 180° ÷ 5 = 36°. The larger angle is 3 × 36° = 108°. Vertically opposite angles are equal, so the angle opposite the larger one is also 108°.",
+    "hints": [
+      "Neighbouring angles where two lines cross add up to 180°. How many equal parts does the ratio 2 : 3 make?",
+      "Work out the larger angle first. Then think about which angle is opposite it."
+    ],
+    "pitfall": "Picking the smaller angle, or dividing 180° by one of the ratio numbers instead of by the total of 5 parts."
+  },
+  {
+    "unit": "cm²",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              50,
+              35
+            ],
+            [
+              158,
+              35
+            ],
+            [
+              158,
+              144
+            ],
+            [
+              320,
+              144
+            ],
+            [
+              320,
+              210
+            ],
+            [
+              50,
+              210
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [],
+      "labels": [
+        {
+          "x": 104,
+          "y": 27,
+          "text": "4 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 25,
+          "y": 125,
+          "text": "8 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 185,
+          "y": 229,
+          "text": "10 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 346,
+          "y": 181,
+          "text": "3 cm",
+          "anchor": "middle"
+        }
+      ],
+      "description": "An L-shape with all right angles. The top edge is 4 cm. The left edge is 8 cm and the bottom edge is 10 cm. The right-hand end of the bottom arm is 3 cm tall. Not to scale."
+    },
+    "id": 310,
+    "topic": "geometry",
+    "subtopic": "area_perimeter_compound",
+    "difficulty": 2,
+    "question": "The diagram shows an L-shape made from rectangles. All the corners are right angles. What is its area?",
+    "answer": "50 cm²",
+    "check": "10*8-6*5",
+    "distractors": [
+      {
+        "value": "80 cm²",
+        "why": "Finds the area of the whole 10 cm by 8 cm rectangle and does not remove the missing corner."
+      },
+      {
+        "value": "110 cm²",
+        "why": "Adds the missing corner (6 × 5 = 30) to the big rectangle instead of subtracting it."
+      },
+      {
+        "value": "62 cm²",
+        "why": "Adds a 10 × 3 rectangle and a 4 × 8 rectangle, which counts the 4 × 3 overlap twice."
+      },
+      {
+        "value": "36 cm²",
+        "why": "Adds up all the side lengths to find the perimeter instead of the area."
+      }
+    ],
+    "explanation": "Split the L-shape into a tall rectangle 4 cm wide and 8 cm high, and a bottom rectangle that sticks out to the right. The tall rectangle has area 4 × 8 = 32 cm². The right-hand piece is 10 − 4 = 6 cm wide and 3 cm high, so its area is 6 × 3 = 18 cm². The total is 32 + 18 = 50 cm².",
+    "hints": [
+      "Try cutting the L-shape into two rectangles that do not overlap.",
+      "You will need to work out one length that is not labelled, by using the lengths that are."
+    ],
+    "pitfall": "Counting the overlap twice when splitting the shape, or not working out the unlabelled lengths."
+  },
+  {
+    "unit": "cm",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              60,
+              30
+            ],
+            [
+              221,
+              30
+            ],
+            [
+              221,
+              110
+            ],
+            [
+              336,
+              110
+            ],
+            [
+              336,
+              210
+            ],
+            [
+              60,
+              210
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [],
+      "labels": [
+        {
+          "x": 247,
+          "y": 75,
+          "text": "4 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 278,
+          "y": 100,
+          "text": "5 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 198,
+          "y": 229,
+          "text": "12 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 34,
+          "y": 125,
+          "text": "9 cm",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A rectangle 12 cm wide and 9 cm tall with a rectangular notch removed from the top right corner. The notch is 5 cm wide and 4 cm deep. All corners are right angles. Not to scale."
+    },
+    "id": 311,
+    "topic": "geometry",
+    "subtopic": "area_perimeter_compound",
+    "difficulty": 2,
+    "question": "A rectangle 12 cm long and 9 cm wide has a rectangular notch cut from one corner, as shown. All the corners are right angles. What is the perimeter of the shape that is left?",
+    "answer": "42 cm",
+    "check": "2*(12+9)",
+    "distractors": [
+      {
+        "value": "30 cm",
+        "why": "Adds only the four lengths written on the diagram: 12 + 9 + 5 + 4."
+      },
+      {
+        "value": "33 cm",
+        "why": "Takes the notch sides away from the rectangle perimeter: 42 − 5 − 4."
+      },
+      {
+        "value": "51 cm",
+        "why": "Adds the two notch sides once to the rectangle perimeter: 42 + 5 + 4."
+      },
+      {
+        "value": "60 cm",
+        "why": "Adds both notch sides twice to the rectangle perimeter: 42 + 2 × (5 + 4)."
+      }
+    ],
+    "explanation": "Moving the cut-out corner edges across to the outside shows the new edge is exactly as long as the edges that were removed. The two new notch sides (5 cm across and 4 cm down) replace the 5 cm and 4 cm of edge that were cut away. So the perimeter is the same as the full rectangle: 2 × (12 + 9) = 42 cm.",
+    "hints": [
+      "Try to picture how far you travel round the outside of the full rectangle, then round the shape with the notch.",
+      "The notch steps across and down. Compare those steps with the edge they replace."
+    ],
+    "pitfall": "Adding the notch lengths to the perimeter, or only adding the lengths shown."
+  },
+  {
+    "unit": "m²",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              60,
+              30
+            ],
+            [
+              340,
+              30
+            ],
+            [
+              340,
+              210
+            ],
+            [
+              60,
+              210
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              100,
+              70
+            ],
+            [
+              300,
+              70
+            ],
+            [
+              300,
+              170
+            ],
+            [
+              100,
+              170
+            ]
+          ],
+          "shaded": true
+        }
+      ],
+      "lines": [],
+      "labels": [
+        {
+          "x": 200,
+          "y": 54,
+          "text": "2 m",
+          "anchor": "middle"
+        },
+        {
+          "x": 200,
+          "y": 229,
+          "text": "14 m",
+          "anchor": "middle"
+        },
+        {
+          "x": 34,
+          "y": 125,
+          "text": "9 m",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A rectangle representing a garden, 14 m long and 9 m wide. A smaller shaded rectangle inside it is the lawn. The unshaded border between them is the path, which is 2 m wide. Not to scale."
+    },
+    "id": 312,
+    "topic": "geometry",
+    "subtopic": "area_perimeter_compound",
+    "difficulty": 3,
+    "question": "A rectangular garden is 14 m long and 9 m wide. A path 2 m wide runs all the way round the inside of the fence, leaving a rectangular lawn in the middle. What is the area of the path?",
+    "answer": "76 m²",
+    "check": "14*9-(14-4)*(9-4)",
+    "distractors": [
+      {
+        "value": "36 m²",
+        "why": "Adds only the two short strips (2 × 9 × 2) and misses the long strips."
+      },
+      {
+        "value": "42 m²",
+        "why": "Takes only 2 m off each length, so the lawn is 12 m by 7 m: 126 − 84 = 42."
+      },
+      {
+        "value": "50 m²",
+        "why": "Finds the area of the lawn (10 × 5) instead of the path."
+      },
+      {
+        "value": "56 m²",
+        "why": "Adds only the two long strips (2 × 14 × 2) and misses the short strips."
+      }
+    ],
+    "explanation": "The path is 2 m wide on both sides, so the lawn is 4 m shorter and 4 m narrower than the garden: 10 m by 5 m. The whole garden has area 14 × 9 = 126 m² and the lawn has area 10 × 5 = 50 m². The path is the difference: 126 − 50 = 76 m².",
+    "hints": [
+      "If you know the area of the whole garden and the area of the lawn, how can you find the path?",
+      "The path is on both sides of the lawn, so take 2 m off each end of each length, not just one."
+    ],
+    "pitfall": "Taking away only 2 m from each length, instead of 2 m from both ends (4 m in total)."
+  },
+  {
+    "unit": "cm",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "circles": [
+        {
+          "cx": 190,
+          "cy": 122,
+          "r": 95
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            95,
+            122
+          ],
+          "to": [
+            285,
+            122
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 190,
+          "y": 110,
+          "text": "1.2 m",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A circle with a straight line drawn across its widest part, through the centre, labelled 1.2 m. Not to scale."
+    },
+    "id": 313,
+    "topic": "geometry",
+    "subtopic": "circle_parts",
+    "difficulty": 2,
+    "question": "A round table has a diameter of 1.2 m. What is its radius, in centimetres?",
+    "answer": "60 cm",
+    "check": "1.2*100/2",
+    "distractors": [
+      {
+        "value": "120 cm",
+        "why": "Changes 1.2 m to 120 cm but forgets to halve the diameter to get the radius."
+      },
+      {
+        "value": "6 cm",
+        "why": "Halves the diameter to 0.6 m and then multiplies by 10 instead of 100."
+      },
+      {
+        "value": "12 cm",
+        "why": "Multiplies 1.2 by 10 instead of 100 and does not halve."
+      },
+      {
+        "value": "240 cm",
+        "why": "Doubles the diameter instead of halving it."
+      }
+    ],
+    "explanation": "The radius is half of the diameter, so the radius is 1.2 ÷ 2 = 0.6 m. There are 100 cm in 1 m, so 0.6 m = 0.6 × 100 = 60 cm.",
+    "hints": [
+      "How is the radius of a circle related to its diameter?",
+      "Choose whether to halve first or change to centimetres first, but do both."
+    ],
+    "pitfall": "Forgetting to halve, or multiplying by the wrong power of 10 when changing metres to centimetres."
+  },
+  {
+    "unit": "cm",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              30,
+              82
+            ],
+            [
+              350,
+              82
+            ],
+            [
+              350,
+              162
+            ],
+            [
+              30,
+              162
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "circles": [
+        {
+          "cx": 70,
+          "cy": 122,
+          "r": 40
+        },
+        {
+          "cx": 150,
+          "cy": 122,
+          "r": 40
+        },
+        {
+          "cx": 230,
+          "cy": 122,
+          "r": 40
+        },
+        {
+          "cx": 310,
+          "cy": 122,
+          "r": 40
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            30,
+            190
+          ],
+          "to": [
+            350,
+            190
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            30,
+            182
+          ],
+          "to": [
+            30,
+            198
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            350,
+            182
+          ],
+          "to": [
+            350,
+            198
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 190,
+          "y": 216,
+          "text": "48 cm",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A long rectangle containing four identical circles side by side. Each circle touches its neighbours and the top, bottom and ends of the rectangle. A line under the rectangle shows its length as 48 cm. Not to scale."
+    },
+    "id": 314,
+    "topic": "geometry",
+    "subtopic": "circle_parts",
+    "difficulty": 2,
+    "question": "Four identical circles touch in a straight row inside a rectangle, as shown. The rectangle is 48 cm long. What is the radius of each circle?",
+    "answer": "6 cm",
+    "check": "48/4/2",
+    "distractors": [
+      {
+        "value": "12 cm",
+        "why": "Divides 48 by 4 to get the diameter and forgets to halve it."
+      },
+      {
+        "value": "24 cm",
+        "why": "Divides 48 by 2, as if there were two circles, or as if 48 were the diameter."
+      },
+      {
+        "value": "16 cm",
+        "why": "Divides 48 by 3, counting the places where the circles touch instead of the circles."
+      },
+      {
+        "value": "96 cm",
+        "why": "Multiplies 48 by 2, mixing up how the radius and diameter are related."
+      }
+    ],
+    "explanation": "The four circles share the length of the rectangle equally, so each diameter is 48 ÷ 4 = 12 cm. The radius is half of the diameter, so each radius is 12 ÷ 2 = 6 cm.",
+    "hints": [
+      "How many diameters fit along the 48 cm?",
+      "That gives you one diameter. What is the radius, compared with the diameter?"
+    ],
+    "pitfall": "Stopping at the diameter (12 cm) without halving to get the radius."
+  },
+  {
+    "unit": "°",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "circles": [
+        {
+          "cx": 190,
+          "cy": 122,
+          "r": 95
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            190,
+            122
+          ],
+          "to": [
+            112,
+            176
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            190,
+            122
+          ],
+          "to": [
+            165,
+            30
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            112,
+            176
+          ],
+          "to": [
+            165,
+            30
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 162,
+          "y": 116,
+          "text": "110°",
+          "anchor": "middle"
+        },
+        {
+          "x": 203,
+          "y": 136,
+          "text": "O",
+          "anchor": "middle"
+        },
+        {
+          "x": 98,
+          "y": 186,
+          "text": "A",
+          "anchor": "middle"
+        },
+        {
+          "x": 160,
+          "y": 18,
+          "text": "B",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A circle with centre O. Two straight lines run from O to points A and B on the circle, and a third line joins A and B. The angle at O between OA and OB is 110°. Not to scale."
+    },
+    "id": 315,
+    "topic": "geometry",
+    "subtopic": "circle_parts",
+    "difficulty": 2,
+    "question": "O is the centre of a circle. A and B are points on the circle, so OA and OB are radii. Angle AOB is 110°. What is the size of angle OAB?",
+    "answer": "35°",
+    "check": "(180-110)/2",
+    "distractors": [
+      {
+        "value": "55°",
+        "why": "Halves the 110° angle at the centre instead of halving the 70° that is left in the triangle."
+      },
+      {
+        "value": "70°",
+        "why": "Works out 180° − 110° = 70° but does not share it between the two equal base angles."
+      },
+      {
+        "value": "60°",
+        "why": "Assumes triangle OAB is equilateral."
+      },
+      {
+        "value": "110°",
+        "why": "Copies the angle at the centre rather than finding a different angle."
+      }
+    ],
+    "explanation": "OA and OB are both radii, so they are the same length. Triangle OAB is therefore isosceles, and angles OAB and OBA are equal. The angles of a triangle add up to 180°, so these two angles share 180° − 110° = 70°. Each one is 70° ÷ 2 = 35°.",
+    "hints": [
+      "What can you say about the lengths OA and OB, and so about the triangle OAB?",
+      "The two base angles of an isosceles triangle are equal. How much of the 180° is left for them?"
+    ],
+    "pitfall": "Not noticing that two radii make an isosceles triangle, or forgetting to halve the remaining 70°."
+  },
+  {
+    "unit": null,
+    "answer_format": null,
+    "diagram": null,
+    "id": 316,
+    "topic": "geometry",
+    "subtopic": "nets_3d_shapes",
+    "difficulty": 1,
+    "question": "How many edges does a triangular prism have?",
+    "answer": "9",
+    "check": "3+3+3",
+    "distractors": [
+      {
+        "value": "5",
+        "why": "Counts the faces (2 triangles and 3 rectangles) instead of the edges."
+      },
+      {
+        "value": "6",
+        "why": "Counts the vertices (3 on each triangle) instead of the edges."
+      },
+      {
+        "value": "11",
+        "why": "Adds the faces and the vertices (5 + 6) without taking 2 away."
+      },
+      {
+        "value": "12",
+        "why": "Gives the number of edges of a cuboid, or doubles the 6 vertices."
+      }
+    ],
+    "explanation": "A triangular prism has two triangular ends. Each triangle has 3 edges, which is 6 edges. Then 3 more edges join the matching corners of the two triangles along the length of the prism. The total is 3 + 3 + 3 = 9 edges.",
+    "hints": [
+      "Count the edges on each triangular end first.",
+      "Then count the edges that join the two ends together."
+    ],
+    "pitfall": "Mixing up faces, edges and vertices."
+  },
+  {
+    "unit": "cm²",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              140,
+              82
+            ],
+            [
+              240,
+              82
+            ],
+            [
+              240,
+              162
+            ],
+            [
+              140,
+              162
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              140,
+              22
+            ],
+            [
+              240,
+              22
+            ],
+            [
+              240,
+              82
+            ],
+            [
+              140,
+              82
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              140,
+              162
+            ],
+            [
+              240,
+              162
+            ],
+            [
+              240,
+              222
+            ],
+            [
+              140,
+              222
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              80,
+              82
+            ],
+            [
+              140,
+              82
+            ],
+            [
+              140,
+              162
+            ],
+            [
+              80,
+              162
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              240,
+              82
+            ],
+            [
+              300,
+              82
+            ],
+            [
+              300,
+              162
+            ],
+            [
+              240,
+              162
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [],
+      "labels": [
+        {
+          "x": 190,
+          "y": 126,
+          "text": "5 × 4",
+          "anchor": "middle"
+        },
+        {
+          "x": 190,
+          "y": 56,
+          "text": "5 × 3",
+          "anchor": "middle"
+        },
+        {
+          "x": 190,
+          "y": 196,
+          "text": "5 × 3",
+          "anchor": "middle"
+        },
+        {
+          "x": 110,
+          "y": 126,
+          "text": "4 × 3",
+          "anchor": "middle"
+        },
+        {
+          "x": 270,
+          "y": 126,
+          "text": "4 × 3",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A cross-shaped net made of five rectangles, with a central base rectangle. Above and below it are two rectangles labelled 5 × 3, and on the left and right are two rectangles labelled 4 × 3. The base is labelled 5 × 4. All sizes are in centimetres. Not to scale."
+    },
+    "id": 317,
+    "topic": "geometry",
+    "subtopic": "nets_3d_shapes",
+    "difficulty": 3,
+    "question": "An open box with no lid is made from one piece of card. Its base is 5 cm by 4 cm and its height is 3 cm. The diagram shows the net, with the size of each face in cm. What is the total area of card needed?",
+    "answer": "74 cm²",
+    "check": "5*4+2*5*3+2*4*3",
+    "distractors": [
+      {
+        "value": "94 cm²",
+        "why": "Adds a lid as well, using all 6 faces of a closed cuboid."
+      },
+      {
+        "value": "54 cm²",
+        "why": "Adds the four side faces but forgets the base."
+      },
+      {
+        "value": "47 cm²",
+        "why": "Adds one face of each size (20 + 15 + 12) and forgets there are two of the side faces."
+      },
+      {
+        "value": "60 cm²",
+        "why": "Multiplies 5 × 4 × 3, which gives the volume, not the area."
+      }
+    ],
+    "explanation": "The net has 5 faces. The base is 5 × 4 = 20 cm². Two sides are 5 × 3 = 15 cm² each, which is 30 cm². The other two sides are 4 × 3 = 12 cm² each, which is 24 cm². The total is 20 + 30 + 24 = 74 cm².",
+    "hints": [
+      "Count the faces in the net. Does it have a lid?",
+      "Find the area of each face, noticing that the faces come in matching pairs."
+    ],
+    "pitfall": "Adding a sixth face for a lid, or finding the volume instead of the area."
+  },
+  {
+    "unit": "cm",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              135,
+              40
+            ],
+            [
+              190,
+              40
+            ],
+            [
+              190,
+              95
+            ],
+            [
+              135,
+              95
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              80,
+              95
+            ],
+            [
+              135,
+              95
+            ],
+            [
+              135,
+              150
+            ],
+            [
+              80,
+              150
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              135,
+              95
+            ],
+            [
+              190,
+              95
+            ],
+            [
+              190,
+              150
+            ],
+            [
+              135,
+              150
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              190,
+              95
+            ],
+            [
+              245,
+              95
+            ],
+            [
+              245,
+              150
+            ],
+            [
+              190,
+              150
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              245,
+              95
+            ],
+            [
+              300,
+              95
+            ],
+            [
+              300,
+              150
+            ],
+            [
+              245,
+              150
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              135,
+              150
+            ],
+            [
+              190,
+              150
+            ],
+            [
+              190,
+              205
+            ],
+            [
+              135,
+              205
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [],
+      "labels": [
+        {
+          "x": 162,
+          "y": 223,
+          "text": "4 cm",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A cross-shaped net made of six equal squares. Four squares make a row across the middle, with one square above and one below the second square from the left. The side of each square is 4 cm. Not to scale."
+    },
+    "id": 318,
+    "topic": "geometry",
+    "subtopic": "nets_3d_shapes",
+    "difficulty": 2,
+    "question": "The diagram shows a net of a cube made from six squares. Each square has sides of 4 cm. What is the perimeter of the whole net?",
+    "answer": "56 cm",
+    "check": "14*4",
+    "distractors": [
+      {
+        "value": "24 cm",
+        "why": "Gives 6 × 4, one side length for each face, rather than all the outside edges."
+      },
+      {
+        "value": "40 cm",
+        "why": "Finds the perimeter of the row of four squares only (10 edges) and ignores the two squares above and below."
+      },
+      {
+        "value": "48 cm",
+        "why": "Uses the 12 edges of the cube, but the net has more outside edges than that."
+      },
+      {
+        "value": "96 cm",
+        "why": "Finds the total area of the six faces (6 × 16) instead of the perimeter."
+      }
+    ],
+    "explanation": "Count the edges around the outside of the net. The row of four squares has 4 edges along the top and 4 along the bottom, and 2 at the ends, which is 10. Each of the two extra squares adds 2 more edges. So there are 14 edges of 4 cm. The perimeter is 14 × 4 = 56 cm.",
+    "hints": [
+      "Count how many square edges you meet when you walk around the outside of the whole net.",
+      "Be careful not to count edges that are shared between two squares inside the net."
+    ],
+    "pitfall": "Counting the inner edges between squares, or confusing the perimeter with the area."
+  },
+  {
+    "unit": "minutes",
+    "answer_format": null,
+    "diagram": {
+      "type": "table",
+      "caption": "Number 42 bus",
+      "headers": [
+        "Stop",
+        "Time"
+      ],
+      "rows": [
+        [
+          "Station",
+          "07:48"
+        ],
+        [
+          "Library",
+          "08:05"
+        ],
+        [
+          "Market",
+          "08:31"
+        ],
+        [
+          "Hospital",
+          "08:54"
+        ]
+      ]
+    },
+    "id": 319,
+    "topic": "measures",
+    "subtopic": "timetable_time_problems",
+    "difficulty": 1,
+    "question": "The table shows when the Number 42 bus is at each stop. How many minutes does the bus take to go from Station to Hospital?",
+    "answer": "66 minutes",
+    "check": "8*60+54-(7*60+48)",
+    "distractors": [
+      {
+        "value": "6 minutes",
+        "why": "Subtracts only the minutes (54 − 48) and ignores the hour."
+      },
+      {
+        "value": "72 minutes",
+        "why": "Counts 07:48 to 09:00 (72 minutes) instead of stopping at 08:54."
+      },
+      {
+        "value": "106 minutes",
+        "why": "Subtracts 8.54 − 7.48 as decimals to get 1.06 and reads it as 1 hour 46 minutes."
+      },
+      {
+        "value": "114 minutes",
+        "why": "Adds 60 + 54 and never takes away the 48 minutes already past 07:00."
+      }
+    ],
+    "explanation": "From 07:48 to 08:00 is 12 minutes. From 08:00 to 08:54 is 54 minutes. Together that is 12 + 54 = 66 minutes.",
+    "hints": [
+      "Try counting on to the next whole hour first.",
+      "Then add on the minutes after that hour."
+    ],
+    "pitfall": "Subtracting times as if they were decimals, when an hour is 60 minutes."
+  },
+  {
+    "unit": "minutes",
+    "answer_format": null,
+    "diagram": {
+      "type": "table",
+      "caption": "Trains to Bath",
+      "headers": [
+        "Train",
+        "Departs",
+        "Arrives"
+      ],
+      "rows": [
+        [
+          "A",
+          "09:12",
+          "10:41"
+        ],
+        [
+          "B",
+          "09:38",
+          "11:03"
+        ],
+        [
+          "C",
+          "10:05",
+          "11:27"
+        ],
+        [
+          "D",
+          "10:45",
+          "12:10"
+        ]
+      ]
+    },
+    "id": 320,
+    "topic": "measures",
+    "subtopic": "timetable_time_problems",
+    "difficulty": 3,
+    "question": "The table shows trains from the station to Bath. Mia arrives at the station at 09:40 and takes the first train she can catch. How many minutes after 09:40 does she arrive in Bath?",
+    "answer": "107 minutes",
+    "check": "11*60+27-(9*60+40)",
+    "distractors": [
+      {
+        "value": "82 minutes",
+        "why": "Counts only the journey time of train C (10:05 to 11:27) and leaves out the wait."
+      },
+      {
+        "value": "83 minutes",
+        "why": "Catches train B, which left at 09:38, two minutes before Mia arrived."
+      },
+      {
+        "value": "133 minutes",
+        "why": "Subtracts 40 − 27 = 13 minutes the wrong way round instead of borrowing an hour, then adds the 2 hours."
+      },
+      {
+        "value": "150 minutes",
+        "why": "Waits for train D instead of the first train she can catch."
+      }
+    ],
+    "explanation": "Mia arrives at 09:40, so train B at 09:38 has already left. The first train she can catch is C at 10:05, which arrives at 11:27. From 09:40 to 10:00 is 20 minutes, then from 10:00 to 11:27 is 87 minutes. The total is 20 + 87 = 107 minutes.",
+    "hints": [
+      "Which is the first train that has not already left when Mia arrives?",
+      "Count from 09:40 to that train’s arrival time, including the wait."
+    ],
+    "pitfall": "Choosing a train that has already left, or only counting the time on the train."
+  },
+  {
+    "unit": null,
+    "answer_format": "time",
+    "diagram": null,
+    "id": 321,
+    "topic": "measures",
+    "subtopic": "timetable_time_problems",
+    "difficulty": 2,
+    "question": "Jake must arrive at a football match by 14:15. The coach journey takes 2 hours 50 minutes, and the coach stop is a 10-minute walk from his house. What is the latest time he can leave home? Write it as a 24-hour time.",
+    "answer": "11:15",
+    "check": "14*60+15-170-10",
+    "distractors": [
+      {
+        "value": "11:25",
+        "why": "Takes off the coach journey but forgets the 10-minute walk."
+      },
+      {
+        "value": "11:35",
+        "why": "Adds the 10-minute walk instead of taking it off."
+      },
+      {
+        "value": "12:05",
+        "why": "Takes off 2 hours and the 10 minute walk, but forgets the 50 minutes."
+      },
+      {
+        "value": "17:15",
+        "why": "Adds the journey and the walk to 14:15 instead of working backwards."
+      }
+    ],
+    "explanation": "Work backwards from 14:15. Taking off 2 hours gives 12:15. Taking off 50 minutes gives 11:25, which is when the coach must leave. Jake also needs 10 minutes to walk to the stop, so he must leave home by 11:15.",
+    "hints": [
+      "You need to work backwards from 14:15. Which two amounts of time do you take away?",
+      "Take off the hours and minutes of the journey, and then the walk."
+    ],
+    "pitfall": "Adding the times when the question needs you to work backwards, or leaving out the walk."
+  },
+  {
+    "unit": null,
+    "answer_format": "time",
+    "diagram": null,
+    "id": 322,
+    "topic": "measures",
+    "subtopic": "timetable_time_problems",
+    "difficulty": 2,
+    "question": "A film is listed at 19:20. For the first 15 minutes after that time, adverts are shown. Then the film starts and lasts 2 hours 47 minutes. At what time does the film end? Write it as a 24-hour time.",
+    "answer": "22:22",
+    "check": "19*60+20+15+2*60+47",
+    "distractors": [
+      {
+        "value": "22:07",
+        "why": "Leaves out the 15 minutes of adverts."
+      },
+      {
+        "value": "21:22",
+        "why": "Adds 35 + 47 = 82 minutes and writes 22 minutes without carrying the extra hour."
+      },
+      {
+        "value": "22:03",
+        "why": "Changes 2 hours 47 minutes to 2.47 hours, which is 2 hours 28 minutes, as if 47 were a decimal of an hour."
+      },
+      {
+        "value": "21:52",
+        "why": "Takes the adverts away from 19:20 instead of adding them on."
+      }
+    ],
+    "explanation": "The film starts at 19:20 + 15 minutes = 19:35. Adding 2 hours gives 21:35. Adding 47 minutes: 21:35 + 25 minutes is 22:00, then 22 more minutes gives 22:22. So the film ends at 22:22.",
+    "hints": [
+      "At what time does the film itself start, once the adverts are over?",
+      "Add the hours first, then add the minutes in two steps, going up to the next whole hour."
+    ],
+    "pitfall": "Forgetting to carry an hour when the minutes go past 60."
+  },
+  {
+    "unit": "l",
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              50,
+              90
+            ],
+            [
+              250,
+              90
+            ],
+            [
+              250,
+              200
+            ],
+            [
+              50,
+              200
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              50,
+              90
+            ],
+            [
+              120,
+              30
+            ],
+            [
+              320,
+              30
+            ],
+            [
+              250,
+              90
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              250,
+              90
+            ],
+            [
+              320,
+              30
+            ],
+            [
+              320,
+              140
+            ],
+            [
+              250,
+              200
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [],
+      "labels": [
+        {
+          "x": 150,
+          "y": 219,
+          "text": "50 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 26,
+          "y": 150,
+          "text": "20 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 322,
+          "y": 188,
+          "text": "30 cm",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A cuboid drawn in 3D. The long front edge is 50 cm, the height is 20 cm and the depth going back is 30 cm. Not to scale."
+    },
+    "id": 323,
+    "topic": "measures",
+    "subtopic": "compound_unit_conversion",
+    "difficulty": 2,
+    "question": "A fish tank is a cuboid 50 cm long, 30 cm wide and 20 cm high. It is filled right to the top. 1 litre = 1000 cm³. How many litres of water does it hold?",
+    "answer": "30 l",
+    "check": "50*30*20/1000",
+    "distractors": [
+      {
+        "value": "3 l",
+        "why": "Divides the volume 30 000 cm³ by 10 000 instead of 1000."
+      },
+      {
+        "value": "300 l",
+        "why": "Divides the volume 30 000 cm³ by 100 instead of 1000."
+      },
+      {
+        "value": "3000 l",
+        "why": "Divides the volume 30 000 cm³ by 10 instead of 1000."
+      },
+      {
+        "value": "30000 l",
+        "why": "Finds the volume in cm³ but never converts to litres."
+      }
+    ],
+    "explanation": "The volume of a cuboid is length × width × height, so the volume is 50 × 30 × 20 = 30 000 cm³. There are 1000 cm³ in 1 litre, so the tank holds 30 000 ÷ 1000 = 30 litres.",
+    "hints": [
+      "How do you find the volume of a cuboid?",
+      "The volume is in cm³. How many cm³ make one litre?"
+    ],
+    "pitfall": "Dividing by the wrong power of 10 when changing cm³ to litres."
+  },
+  {
+    "unit": null,
+    "answer_format": null,
+    "diagram": null,
+    "id": 324,
+    "topic": "measures",
+    "subtopic": "compound_unit_conversion",
+    "difficulty": 2,
+    "question": "A rope is 3.6 m long. It is cut into pieces that are each 40 cm long, with none left over. How many pieces are there?",
+    "answer": "9",
+    "check": "3.6*100/40",
+    "distractors": [
+      {
+        "value": "0.9",
+        "why": "Changes 3.6 m to 36 cm (multiplying by 10 instead of 100) and divides by 40."
+      },
+      {
+        "value": "36",
+        "why": "Changes 3.6 m to 36 and stops, without dividing by 40."
+      },
+      {
+        "value": "90",
+        "why": "Changes 3.6 m to 3600 cm by multiplying by 1000, then divides by 40."
+      },
+      {
+        "value": "144",
+        "why": "Multiplies 3.6 by 40 instead of dividing."
+      }
+    ],
+    "explanation": "The rope and the pieces must be in the same units. 3.6 m = 3.6 × 100 = 360 cm. Each piece is 40 cm, so the number of pieces is 360 ÷ 40 = 9.",
+    "hints": [
+      "The lengths are in different units. Change one so that they match.",
+      "Once both are in centimetres, how many 40 cm pieces fit into the rope?"
+    ],
+    "pitfall": "Dividing without first changing both lengths to the same unit."
+  },
+  {
+    "unit": "kg",
+    "answer_format": null,
+    "diagram": null,
+    "id": 325,
+    "topic": "measures",
+    "subtopic": "compound_unit_conversion",
+    "difficulty": 2,
+    "question": "Each parcel has a mass of 2 kg 350 g. A van carries 6 of these parcels. What is the total mass of the parcels, in kg?",
+    "answer": "14.1 kg",
+    "check": "2.35*6",
+    "distractors": [
+      {
+        "value": "12.21 kg",
+        "why": "Writes the 2100 g as 0.21 kg instead of 2.1 kg."
+      },
+      {
+        "value": "12.35 kg",
+        "why": "Multiplies the 2 kg by 6 but adds the 350 g only once."
+      },
+      {
+        "value": "33 kg",
+        "why": "Writes the 2100 g as 21 kg instead of 2.1 kg, so 12 + 21 = 33."
+      },
+      {
+        "value": "1410 kg",
+        "why": "Multiplies 6 × 235 and loses the decimal point."
+      }
+    ],
+    "explanation": "Six lots of 2 kg make 12 kg. Six lots of 350 g make 2100 g, which is 2.1 kg. The total is 12 + 2.1 = 14.1 kg. Another way is to write each parcel as 2.35 kg and multiply: 2.35 × 6 = 14.1 kg.",
+    "hints": [
+      "Deal with the kilograms and the grams separately, or change each parcel to kg first.",
+      "There are 1000 g in 1 kg. What is 2100 g in kg?"
+    ],
+    "pitfall": "Making a place-value slip when changing grams to kilograms."
+  },
+  {
+    "unit": null,
+    "answer_format": null,
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              50,
+              50
+            ],
+            [
+              330,
+              50
+            ],
+            [
+              330,
+              170
+            ],
+            [
+              50,
+              170
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [],
+      "labels": [
+        {
+          "x": 190,
+          "y": 40,
+          "text": "4.5 m",
+          "anchor": "middle"
+        },
+        {
+          "x": 28,
+          "y": 115,
+          "text": "2.4 m",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A rectangle showing a floor. The top edge is 4.5 m long and the left edge is 2.4 m. Not to scale."
+    },
+    "id": 326,
+    "topic": "measures",
+    "subtopic": "compound_unit_conversion",
+    "difficulty": 3,
+    "question": "A floor is 4.5 m long and 2.4 m wide. It is covered with square tiles with sides of 30 cm, with no gaps. How many tiles are needed?",
+    "answer": "120",
+    "check": "4.5*100/30*2.4*100/30",
+    "distractors": [
+      {
+        "value": "12",
+        "why": "Uses 1 m² = 1000 cm², so the floor is 10 800 cm², and divides by the tile area of 900."
+      },
+      {
+        "value": "23",
+        "why": "Finds how many tiles fit along each side (15 and 8) and adds them instead of multiplying."
+      },
+      {
+        "value": "36",
+        "why": "Divides the floor area 10.8 m² by 0.3 (the side of a tile) instead of by the tile area 0.09 m²."
+      },
+      {
+        "value": "3600",
+        "why": "Changes the floor area to 108 000 cm² and divides by 30, the side of a tile, instead of the tile area."
+      }
+    ],
+    "explanation": "Work in centimetres. The floor is 450 cm by 240 cm. Along the length, 450 ÷ 30 = 15 tiles fit. Along the width, 240 ÷ 30 = 8 tiles fit. The number of tiles is 15 × 8 = 120.",
+    "hints": [
+      "Change the floor lengths to centimetres so they match the tiles.",
+      "How many tiles fit along the length, and how many along the width?"
+    ],
+    "pitfall": "Dividing an area by a length, or converting square metres to square centimetres by multiplying by only 100 or 1000."
+  },
+  {
+    "unit": "km",
+    "answer_format": null,
+    "diagram": null,
+    "id": 327,
+    "topic": "measures",
+    "subtopic": "speed_time_short",
+    "difficulty": 2,
+    "question": "A drone flies at a steady 48 km/h for 15 minutes. How far does it fly?",
+    "answer": "12 km",
+    "check": "48/4",
+    "distractors": [
+      {
+        "value": "3.2 km",
+        "why": "Divides 48 by 15, as if finding a speed instead of a distance."
+      },
+      {
+        "value": "33 km",
+        "why": "Subtracts 15 from 48."
+      },
+      {
+        "value": "63 km",
+        "why": "Adds 48 and 15."
+      },
+      {
+        "value": "720 km",
+        "why": "Multiplies 48 × 15 without changing 15 minutes into hours."
+      }
+    ],
+    "explanation": "15 minutes is a quarter of an hour. In one hour the drone flies 48 km, so in a quarter of an hour it flies 48 ÷ 4 = 12 km.",
+    "hints": [
+      "The speed is per hour, but the time is in minutes. What fraction of an hour is 15 minutes?",
+      "Find that fraction of 48 km."
+    ],
+    "pitfall": "Multiplying the speed by the minutes without changing them to hours."
+  },
+  {
+    "unit": "km/h",
+    "answer_format": null,
+    "diagram": null,
+    "id": 328,
+    "topic": "measures",
+    "subtopic": "speed_time_short",
+    "difficulty": 2,
+    "question": "A train travels 120 km in 1 hour 20 minutes at a steady speed. What is its speed, in km/h?",
+    "answer": "90 km/h",
+    "check": "120/4*3",
+    "distractors": [
+      {
+        "value": "1.5 km/h",
+        "why": "Divides 120 by 80, using the time in minutes."
+      },
+      {
+        "value": "40 km/h",
+        "why": "Subtracts 80 minutes from 120."
+      },
+      {
+        "value": "60 km/h",
+        "why": "Rounds the time up to 2 hours and divides 120 by 2."
+      },
+      {
+        "value": "80 km/h",
+        "why": "Writes 1 hour 20 minutes as 1.5 hours (a half instead of a third) and divides 120 by 1.5."
+      }
+    ],
+    "explanation": "20 minutes is one third of an hour, so 1 hour 20 minutes is 1 1/3 hours, which is 4/3 of an hour. In 4/3 of an hour the train goes 120 km. So in 1/3 of an hour it goes 120 ÷ 4 = 30 km, and in a whole hour (3 thirds) it goes 30 × 3 = 90 km. The speed is 90 km/h.",
+    "hints": [
+      "Change 1 hour 20 minutes into minutes, then think about how many 20-minute chunks make 80 minutes.",
+      "How far does the train travel in each 20-minute chunk? How many chunks are in one hour?"
+    ],
+    "pitfall": "Writing 1 hour 20 minutes as 1.2 or 1.5 hours."
+  },
+  {
+    "unit": "minutes",
+    "answer_format": null,
+    "diagram": null,
+    "id": 329,
+    "topic": "measures",
+    "subtopic": "speed_time_short",
+    "difficulty": 2,
+    "question": "A bus travels 54 km at an average speed of 36 km/h. How many minutes does the journey take?",
+    "answer": "90 minutes",
+    "check": "54/36*60",
+    "distractors": [
+      {
+        "value": "18 minutes",
+        "why": "Subtracts 36 from 54."
+      },
+      {
+        "value": "40 minutes",
+        "why": "Divides 36 by 54 (the wrong way round), getting 2/3 of an hour."
+      },
+      {
+        "value": "150 minutes",
+        "why": "Changes 1.5 hours to minutes by multiplying by 100 instead of 60."
+      },
+      {
+        "value": "1944 minutes",
+        "why": "Multiplies 54 by 36."
+      }
+    ],
+    "explanation": "Time = distance ÷ speed, so the journey takes 54 ÷ 36 = 1.5 hours. Half an hour is 30 minutes, so 1.5 hours = 60 + 30 = 90 minutes.",
+    "hints": [
+      "If you know the distance and the speed, how do you find the time?",
+      "The answer will come out in hours. Change it to minutes."
+    ],
+    "pitfall": "Changing 1.5 hours into 1 hour 50 minutes instead of 1 hour 30 minutes."
+  },
+  {
+    "unit": "minutes",
+    "answer_format": null,
+    "diagram": null,
+    "id": 330,
+    "topic": "measures",
+    "subtopic": "speed_time_short",
+    "difficulty": 3,
+    "question": "Ali cycles 12 km at 16 km/h. Bea runs the same 12 km at 10 km/h. How many more minutes than Ali does Bea take?",
+    "answer": "27 minutes",
+    "check": "12/10*60-12/16*60",
+    "distractors": [
+      {
+        "value": "45 minutes",
+        "why": "Finds the difference 1.2 − 0.75 = 0.45 hours and reads it as 45 minutes."
+      },
+      {
+        "value": "72 minutes",
+        "why": "Finds only Bea’s time, 1.2 hours = 72 minutes."
+      },
+      {
+        "value": "117 minutes",
+        "why": "Adds the two times (72 + 45) instead of finding the difference."
+      },
+      {
+        "value": "120 minutes",
+        "why": "Uses the difference in speed, 16 − 10 = 6 km/h, and finds 12 ÷ 6 = 2 hours."
+      }
+    ],
+    "explanation": "Bea takes 12 ÷ 10 = 1.2 hours, which is 1 hour 12 minutes = 72 minutes. Ali takes 12 ÷ 16 = 0.75 hours, which is 45 minutes. Bea takes 72 − 45 = 27 minutes more.",
+    "hints": [
+      "Work out how long each person takes, one at a time.",
+      "Change both times to minutes before you compare them."
+    ],
+    "pitfall": "Reading a decimal part of an hour as minutes, or taking the difference of the speeds."
+  },
+  {
+    "unit": null,
+    "answer_format": "coordinates",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -3,
+          "y": -1,
+          "label": "A"
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "label": "B"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "label": "C"
+        }
+      ],
+      "join": true,
+      "description": "A grid with three points joined by lines to make a triangle. A is at (-3, -1), B is at (1, -1) and C is at (3, 2)."
+    },
+    "id": 331,
+    "topic": "coordinates",
+    "subtopic": "coordinate_shapes",
+    "difficulty": 3,
+    "question": "A, B and C are three corners of a parallelogram ABCD, shown on the grid. A is at (-3, -1), B is at (1, -1) and C is at (3, 2). What are the coordinates of D?",
+    "answer": "(-1, 2)",
+    "check": [
+      "-1",
+      "2"
+    ],
+    "distractors": [
+      {
+        "value": "(-3, 2)",
+        "why": "Treats ABCD as a rectangle, placing D directly above A."
+      },
+      {
+        "value": "(2, -1)",
+        "why": "Swaps the x and y coordinates of the correct answer."
+      },
+      {
+        "value": "(1, 2)",
+        "why": "Takes the x-value from B and the y-value from C, as if D were directly above B."
+      },
+      {
+        "value": "(-5, -4)",
+        "why": "Moves from A in the wrong direction: 2 left and 3 down, instead of 2 right and 3 up."
+      }
+    ],
+    "explanation": "In a parallelogram, the side AD is the same length and direction as BC. To go from B (1, -1) to C (3, 2), you move 2 right and 3 up. Doing the same from A (-3, -1) gives D = (-3 + 2, -1 + 3) = (-1, 2).",
+    "hints": [
+      "In a parallelogram, opposite sides are parallel and equal. How do you get from B to C?",
+      "Make the same move from A to find D."
+    ],
+    "pitfall": "Treating the shape as a rectangle, or making the move from A in the wrong direction."
+  },
+  {
+    "unit": "cm²",
+    "answer_format": null,
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -4,
+          "y": 3,
+          "label": "P"
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "label": "Q"
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "label": "R"
+        }
+      ],
+      "join": true,
+      "description": "A grid with a triangle. P is at (-4, 3), Q is at (2, 3) and R is at (2, -2). The triangle has a right angle at Q."
+    },
+    "id": 332,
+    "topic": "coordinates",
+    "subtopic": "coordinate_shapes",
+    "difficulty": 2,
+    "question": "The points P(-4, 3), Q(2, 3) and R(2, -2) are the corners of a triangle on a grid. Each square on the grid has a side of 1 cm. What is the area of triangle PQR?",
+    "answer": "15 cm²",
+    "check": "6*5/2",
+    "distractors": [
+      {
+        "value": "11 cm²",
+        "why": "Adds the base and the height (6 + 5)."
+      },
+      {
+        "value": "21 cm²",
+        "why": "Counts the grid points instead of the gaps: 7 × 6 ÷ 2."
+      },
+      {
+        "value": "30 cm²",
+        "why": "Multiplies base by height and forgets to halve it."
+      },
+      {
+        "value": "60 cm²",
+        "why": "Multiplies 6 × 5 and then doubles it, instead of halving it."
+      }
+    ],
+    "explanation": "P and Q are both at y = 3, so PQ is horizontal with length 2 − (−4) = 6 cm. Q and R are both at x = 2, so QR is vertical with length 3 − (−2) = 5 cm. There is a right angle at Q. The area is half of base × height = 6 × 5 ÷ 2 = 15 cm².",
+    "hints": [
+      "Which two points share the same y-coordinate? Which two share the same x-coordinate?",
+      "Find the lengths of the two straight sides that meet at the right angle, then use half of base × height."
+    ],
+    "pitfall": "Forgetting to halve, or counting points instead of the spaces between them."
+  },
+  {
+    "unit": null,
+    "answer_format": "coordinates",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -4,
+          "y": -2,
+          "label": "A"
+        },
+        {
+          "x": 2,
+          "y": -2,
+          "label": "B"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "label": "C"
+        },
+        {
+          "x": -4,
+          "y": 4,
+          "label": "D"
+        }
+      ],
+      "join": true,
+      "description": "A grid with a rectangle. Its corners are at (-4, -2), (2, -2), (2, 4) and (-4, 4)."
+    },
+    "id": 333,
+    "topic": "coordinates",
+    "subtopic": "coordinate_shapes",
+    "difficulty": 2,
+    "question": "A rectangle has corners at (-4, -2), (2, -2), (2, 4) and (-4, 4). What are the coordinates of its centre?",
+    "answer": "(-1, 1)",
+    "check": [
+      "-1",
+      "1"
+    ],
+    "distractors": [
+      {
+        "value": "(1, 1)",
+        "why": "Finds the middle of the x-values but loses the minus sign."
+      },
+      {
+        "value": "(-1, 2)",
+        "why": "Finds the middle of the y-values by halving only the 4, ignoring the -2."
+      },
+      {
+        "value": "(3, 3)",
+        "why": "Halves the width (6) and the height (6) and uses them as coordinates."
+      },
+      {
+        "value": "(-2, 2)",
+        "why": "Halves the coordinates of the corner (-4, 4)."
+      }
+    ],
+    "explanation": "The centre is halfway across and halfway up. The x-values run from -4 to 2, and halfway between them is (-4 + 2) ÷ 2 = -1. The y-values run from -2 to 4, and halfway between them is (-2 + 4) ÷ 2 = 1. The centre is at (-1, 1).",
+    "hints": [
+      "The centre is the point halfway between the left and right sides, and halfway between the bottom and top.",
+      "Find the number halfway between -4 and 2, and the number halfway between -2 and 4."
+    ],
+    "pitfall": "Ignoring negative signs when finding the middle of two coordinates."
+  }
+]

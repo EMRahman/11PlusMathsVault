@@ -44,6 +44,7 @@ function _render() {
 
   // By mode
   const walkStats = _statsByFilter(progress, q => q.mode === 'walk');
+  const setStats = _statsByFilter(progress, q => q.mode === 'set');
   const deskStats = _statsByFilter(progress, q => q.mode === 'desk');
 
   // By topic
@@ -81,7 +82,7 @@ function _render() {
     ${_sectionOverall(totalCorrect, totalAttempted, overallPct)}
     <div class="stats-section"><div class="stats-section-title">Learning together</div><p>${supported} supported answers · ${discussed} discussions</p><p class="muted">Hints and discussions count as practice. Independent accuracy uses first answers given without help.</p><a class="text-button" href="#/daily">Open daily practice →</a></div>
     ${_sectionStreak(streak)}
-    ${_sectionByMode(walkStats, deskStats)}
+    ${_sectionByMode(walkStats, setStats, deskStats)}
     ${_sectionByTopic(topicStats)}
     ${_sectionByDifficulty(diffStats)}
     ${weakSpots.length ? _sectionWeakSpots(weakSpots) : ''}
@@ -111,12 +112,13 @@ function _sectionStreak(streak) {
     </div>`;
 }
 
-function _sectionByMode(walkStats, deskStats) {
+function _sectionByMode(walkStats, setStats, deskStats) {
   return `
     <div class="stats-section">
       <div class="stats-section-title">By Mode</div>
-      ${_statRow('Walk Mode (SET)', walkStats)}
-      ${_statRow('Desk Mode (NWSSEE)', deskStats)}
+      ${_statRow('Walk Mode (oral)', walkStats)}
+      ${_statRow('SET-style written', setStats)}
+      ${_statRow('NWSSEE-style written', deskStats)}
     </div>`;
 }
 

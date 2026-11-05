@@ -39,15 +39,15 @@
           </div>
           <h2 class="mode-card__title">Walk Mode</h2>
           <p class="mode-card__desc">Short sessions to try aloud. Parent reads, child explains.</p>
-          <span class="mode-card__badge">SET — Multiple Choice</span>
+          <span class="mode-card__badge">Oral warm-up</span>
         </a>
         <a href="#/desk" class="mode-card mode-card--desk">
           <div class="mode-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
           </div>
           <h2 class="mode-card__title">Desk Mode</h2>
-          <p class="mode-card__desc">Hints, written practice, printable sets and exam sessions.</p>
-          <span class="mode-card__badge">NWSSEE — Open Answer</span>
+          <p class="mode-card__desc">Guided practice, timed sets, mock papers and printable answer grids.</p>
+          <span class="mode-card__badge">SET &amp; NWSSEE · Mock papers</span>
         </a>
         <a href="#/hacks" class="mode-card mode-card--hacks">
           <div class="mode-card__icon" aria-hidden="true">
@@ -61,10 +61,12 @@
       <details class="parent-guide">
         <summary>A quick guide for parents</summary>
         <p>Start with daily practice, or choose a short walk. Ask your child to explain a method and check the answer. Use a hint when needed; supported work counts as practice, separately from independent accuracy.</p>
-        <p>For a paper-style session, open Desk Mode and choose SET multiple choice or NWSSEE written answers. You can skip, flag and return before submitting. Print a worksheet and its separate answer sheet for practice on paper.</p>
-        <p>The NWSSEE has written English and Maths papers, each lasting 40–50 minutes. Only the final maths answer is marked. Our original questions are practice materials; follow the school’s instructions for your child’s test.</p>
-        <p><a href="https://www.nonsuchschool.org/page/?pid=300&amp;title=Second+Stage+Entrance+Examination+(NWSSEE)" target="_blank" rel="noopener">Official Nonsuch guidance ↗</a> · <a href="https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study" target="_blank" rel="noopener">Maths curriculum ↗</a></p>
-        <p class="muted">Exam guidance checked October 2026. Progress stays in this browser. Offline reading voices depend on your device.</p>
+        <p>Walk Mode is an oral warm-up and is easier than the real papers. For exam practice, open Desk Mode: guided practice teaches a method, timed sets keep exam pace, and mock papers are fixed and balanced. Keep Paper 3 of each stage unseen until a final dress rehearsal.</p>
+        <p>SET (stage 1): multiple-choice maths and English papers of 40 to 50 minutes each, marked A to E on a separate answer sheet. No negative marking. No calculator and no rough paper. The total of both papers decides whether a child passes. <a href="https://www.nonsuchschool.org/_site/data/files/information/admissions/set2027/96D936786A72865A82CBAF7C7E2ECC0A.pdf" target="_blank" rel="noopener">See the official SET maths sample questions ↗</a></p>
+        <p>NWSSEE (stage 2): written maths and English papers of 40 to 50 minutes each. Only the final maths answer is marked, and both papers must be passed. Pencil for maths; cross mistakes out rather than rubbing them out. The school provides no specimen papers and says candidates “will need to adapt their learning” for some questions, so expect unfamiliar problems.</p>
+        <p>Our questions are original practice materials, not official papers, and difficulty labels are our judgement. The number of questions in each mock is an estimate, because the schools don’t publish it.</p>
+        <p><a href="https://www.nonsuchschool.org/page/?pid=300&amp;title=Second+Stage+Entrance+Examination+(NWSSEE)" target="_blank" rel="noopener">Official Nonsuch guidance ↗</a> · <a href="https://www.nonsuchschool.org/_site/data/files/information/admissions/set2027/A591D2C1E6F8BD03BBA671E854E30FF5.pdf" target="_blank" rel="noopener">NWSSEE FAQ ↗</a> · <a href="https://www.nonsuchschool.org/attachments/download.asp?file=495&amp;type=pdf" target="_blank" rel="noopener">SET FAQ ↗</a> · <a href="https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study" target="_blank" rel="noopener">Maths curriculum ↗</a></p>
+        <p class="muted">Exam guidance checked November 2026 for September 2027 entry; check the school’s current guidance for later years. Progress stays in this browser. Offline reading voices depend on your device.</p>
       </details>
     </main>
   </div>
@@ -137,7 +139,8 @@
     </header>
 
     <div class="filter-bar desk-filters" id="desk-filter-bar" role="search" aria-label="Choose your practice set">
-      <select id="desk-session-type" class="filter-select" aria-label="Session type"><option value="practice">Guided practice</option><option value="exam-set">Exam · SET choices</option><option value="exam-desk">Exam · NWSSEE written</option></select>
+      <select id="desk-session-type" class="filter-select" aria-label="Session type"><option value="practice">Guided practice · written</option><option value="practice-set">Guided practice · SET choices</option><option value="exam-set">Timed set · SET choices</option><option value="exam-desk">Timed set · NWSSEE written</option><option value="mock-set">Mock paper · SET</option><option value="mock-desk">Mock paper · NWSSEE</option></select>
+      <select id="desk-mock-paper" class="filter-select" aria-label="Mock paper" hidden></select>
       <label id="desk-exam-duration" hidden>Paper time <select id="desk-exam-minutes" class="filter-select" aria-label="Exam duration"><option value="40">40 minutes</option><option value="45" selected>45 minutes</option><option value="50">50 minutes</option></select></label>
       <select id="desk-topic-filter" class="filter-select" aria-label="Filter by topic">
         <option value="">All Topics</option>
@@ -155,7 +158,7 @@
       <select id="desk-setsize-filter" class="filter-select" aria-label="Set size">
         <option value="5">Quick 5</option>
         <option value="10" selected>Standard 10</option>
-        <option value="20">Longer 20</option><option value="50">Paper 50</option>
+        <option value="20">Longer 20</option>
         <option value="all">All</option>
       </select>
       <button id="desk-start-btn" class="filter-btn filter-btn--start" aria-label="Start session">Start</button>
@@ -246,7 +249,7 @@
           <select id="setting-desk-setsize" class="filter-select" aria-label="Default set size">
             <option value="5">Quick 5</option>
             <option value="10">Standard 10</option>
-            <option value="20">Longer 20</option><option value="50">Paper 50</option>
+            <option value="20">Longer 20</option>
           </select>
         </div>
       </div>

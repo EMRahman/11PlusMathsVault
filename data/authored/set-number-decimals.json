@@ -1,0 +1,1623 @@
+[
+  {
+    "id": 211,
+    "topic": "number_operations",
+    "subtopic": "long_multiplication",
+    "difficulty": 2,
+    "question": "Work out 47 × 36.",
+    "answer": "1692",
+    "unit": null,
+    "answer_format": null,
+    "check": "47*36",
+    "distractors": [
+      {
+        "value": "423",
+        "why": "Does not put the zero placeholder in, so adds 47 × 3 = 141 to 282 instead of 1410."
+      },
+      {
+        "value": "1652",
+        "why": "Forgets to carry the 4 in 47 × 6, getting 242 instead of 282, then adds 1410."
+      },
+      {
+        "value": "1242",
+        "why": "Multiplies tens by tens (40 × 30 = 1200) and units by units (7 × 6 = 42) and adds, missing the cross products."
+      },
+      {
+        "value": "1792",
+        "why": "Adds the partial products 1410 and 282 but slips 100 when carrying."
+      }
+    ],
+    "explanation": "Split 36 into 30 and 6. 47 × 6 = 282 and 47 × 30 = 1410. Add them: 1410 + 282 = 1692. Check the last digit: 7 × 6 = 42, so the answer must end in 2, which rules out 423.",
+    "hints": [
+      "Split 36 into 30 + 6.",
+      "What are 47 × 6 and 47 × 30?"
+    ],
+    "pitfall": "Forgetting the zero when multiplying by the tens digit.",
+    "diagram": null
+  },
+  {
+    "id": 212,
+    "topic": "number_operations",
+    "subtopic": "long_multiplication",
+    "difficulty": 2,
+    "question": "A theatre has 83 rows with 29 seats in each row. How many seats are there altogether?",
+    "answer": "2407",
+    "unit": null,
+    "answer_format": null,
+    "check": "83*29",
+    "distractors": [
+      {
+        "value": "913",
+        "why": "Leaves out the zero placeholder: adds 83 × 9 = 747 and 83 × 2 = 166."
+      },
+      {
+        "value": "2307",
+        "why": "Slips 100 when working out 83 × 20, getting 1560 instead of 1660."
+      },
+      {
+        "value": "2490",
+        "why": "Rounds 29 up to 30 but forgets to take off one lot of 83."
+      },
+      {
+        "value": "2573",
+        "why": "Rounds 29 up to 30 but adds one extra 83 instead of taking it off."
+      }
+    ],
+    "explanation": "29 is 30 take away 1. 83 × 30 = 2490, then take off one 83: 2490 − 83 = 2407. Check the last digit: 3 × 9 = 27, so the answer ends in 7. That rules out 2490, 2573 and 913.",
+    "hints": [
+      "29 is close to a friendly number.",
+      "If you use 30 lots of 83, what must you do afterwards?"
+    ],
+    "pitfall": "Rounding up and then adding the extra lot rather than subtracting it.",
+    "diagram": null
+  },
+  {
+    "id": 213,
+    "topic": "number_operations",
+    "subtopic": "long_multiplication",
+    "difficulty": 2,
+    "question": "Work out 316 × 24.",
+    "answer": "7584",
+    "unit": null,
+    "answer_format": null,
+    "check": "316*24",
+    "distractors": [
+      {
+        "value": "1896",
+        "why": "Adds 316 × 4 = 1264 and 316 × 2 = 632 with no zero placeholder."
+      },
+      {
+        "value": "7564",
+        "why": "Forgets to carry the 2 in 316 × 4, so gets 1244 instead of 1264."
+      },
+      {
+        "value": "7900",
+        "why": "Uses 25 lots of 316 (7900) and forgets to take off one 316."
+      },
+      {
+        "value": "8216",
+        "why": "Uses 25 lots of 316 but adds a 316 instead of taking one off."
+      }
+    ],
+    "explanation": "24 lots of 316: 316 × 4 = 1264 and 316 × 20 = 6320. Add: 1264 + 6320 = 7584. Another way: 25 × 316 = 7900, then subtract one 316 to get 7584. The last digit must be 4 (6 × 4 = 24).",
+    "hints": [
+      "Break 24 into 20 + 4.",
+      "What is 316 × 4? What is 316 × 20?"
+    ],
+    "pitfall": "Dropping a carry in the three-digit multiplication.",
+    "diagram": null
+  },
+  {
+    "id": 214,
+    "topic": "number_operations",
+    "subtopic": "long_multiplication",
+    "difficulty": 2,
+    "question": "Work out 74 × 58.",
+    "answer": "4292",
+    "unit": null,
+    "answer_format": null,
+    "check": "74*58",
+    "distractors": [
+      {
+        "value": "962",
+        "why": "Writes 74 × 50 as 370 (no zero placeholder) before adding 592."
+      },
+      {
+        "value": "4282",
+        "why": "Carries 5 instead of 6 in 74 × 8, getting 582 instead of 592."
+      },
+      {
+        "value": "4366",
+        "why": "Treats 58 as 60 − 1, taking off only one 74 instead of two."
+      },
+      {
+        "value": "4588",
+        "why": "Rounds 58 up to 60 but adds the 2 extra lots of 74 instead of subtracting them."
+      }
+    ],
+    "explanation": "58 is 60 take away 2. 74 × 60 = 4440 and 2 × 74 = 148. So 4440 − 148 = 4292. Or: 74 × 8 = 592 and 74 × 50 = 3700, which add to 4292. The last digit must be 2 (4 × 8 = 32).",
+    "hints": [
+      "Is 58 close to a number that is easier to multiply by?",
+      "Check the last digit: 4 × 8 ends in what?"
+    ],
+    "pitfall": "Taking away the wrong number of extra lots after rounding.",
+    "diagram": null
+  },
+  {
+    "id": 215,
+    "topic": "number_operations",
+    "subtopic": "long_multiplication",
+    "difficulty": 2,
+    "question": "Work out 236 × 35.",
+    "answer": "8260",
+    "unit": null,
+    "answer_format": null,
+    "check": "236*35",
+    "distractors": [
+      {
+        "value": "1888",
+        "why": "Adds 236 × 3 = 708 and 236 × 5 = 1180 without making the 3 worth 30."
+      },
+      {
+        "value": "7080",
+        "why": "Multiplies by 30 and forgets the 5 units."
+      },
+      {
+        "value": "8160",
+        "why": "Forgets to carry the 1 in 236 × 3, so 6980 instead of 7080, then adds 1180."
+      },
+      {
+        "value": "9440",
+        "why": "Rounds 35 up to 40 and does not adjust."
+      }
+    ],
+    "explanation": "236 × 5 = 1180 and 236 × 30 = 7080. Add: 1180 + 7080 = 8260. Check: 236 × 35 is a bit more than 236 × 30 = 7080 and a bit less than 236 × 40 = 9440, so 8260 is sensible.",
+    "hints": [
+      "Split 35 into 30 + 5.",
+      "Estimate first: the answer lies between 236 × 30 and 236 × 40."
+    ],
+    "pitfall": "Leaving out the zero placeholder on the tens line.",
+    "diagram": null
+  },
+  {
+    "id": 216,
+    "topic": "number_operations",
+    "subtopic": "long_multiplication",
+    "difficulty": 2,
+    "question": "Which of these is 59 × 67?",
+    "answer": "3953",
+    "unit": null,
+    "answer_format": null,
+    "check": "59*67",
+    "distractors": [
+      {
+        "value": "767",
+        "why": "Writes 59 × 60 as 354 (missing the zero) before adding 413."
+      },
+      {
+        "value": "4020",
+        "why": "Uses 60 lots of 67 and forgets to subtract one 67."
+      },
+      {
+        "value": "4087",
+        "why": "Uses 60 lots of 67 but adds another 67 instead of subtracting it."
+      },
+      {
+        "value": "4200",
+        "why": "Rounds both numbers up and gives that estimate as the answer."
+      }
+    ],
+    "explanation": "59 is 60 − 1. 60 × 67 = 4020. Take away one 67: 4020 − 67 = 3953. The last digit must be 3 (9 × 7 = 63), which agrees with 3953 and rules out 4020, 4200 and 4087.",
+    "hints": [
+      "59 is one less than a nice number.",
+      "60 × 67 first. Then correct it."
+    ],
+    "pitfall": "Estimating with rounded numbers but not correcting the result.",
+    "diagram": null
+  },
+  {
+    "id": 217,
+    "topic": "number_operations",
+    "subtopic": "written_division_remainders",
+    "difficulty": 1,
+    "question": "A baker packs 8 buns into each box. She has 357 buns. How many full boxes can she pack?",
+    "answer": "44",
+    "unit": null,
+    "answer_format": null,
+    "check": "(357-5)/8",
+    "distractors": [
+      {
+        "value": "4",
+        "why": "Divides 35 by 8 to get 4 and stops there."
+      },
+      {
+        "value": "5",
+        "why": "Gives the remainder instead of the number of full boxes."
+      },
+      {
+        "value": "43",
+        "why": "Divides 37 by 8 wrongly as 3, putting 3 in the units place."
+      },
+      {
+        "value": "45",
+        "why": "Rounds 44 remainder 5 up to 45, but the last box is not full."
+      }
+    ],
+    "explanation": "357 ÷ 8: 35 ÷ 8 = 4 remainder 3. Bring down 7 to make 37, and 37 ÷ 8 = 4 remainder 5. So 44 full boxes with 5 buns left over. Only full boxes count, so the answer is 44.",
+    "hints": [
+      "Divide 357 by 8 using short division.",
+      "The question asks only for full boxes."
+    ],
+    "pitfall": "Rounding up when only full boxes are wanted.",
+    "diagram": null
+  },
+  {
+    "id": 218,
+    "topic": "number_operations",
+    "subtopic": "written_division_remainders",
+    "difficulty": 1,
+    "question": "What is the remainder when 615 is divided by 7?",
+    "answer": "6",
+    "unit": null,
+    "answer_format": null,
+    "check": "615-7*87",
+    "distractors": [
+      {
+        "value": "87",
+        "why": "Gives the quotient (the number of sevens) instead of the remainder."
+      },
+      {
+        "value": "5",
+        "why": "Stops after the first step: 61 ÷ 7 = 8 remainder 5."
+      },
+      {
+        "value": "8",
+        "why": "Gives the first digit of the quotient instead of the remainder."
+      },
+      {
+        "value": "1",
+        "why": "Rounds up to 88 sevens (616) and takes the difference from 615."
+      }
+    ],
+    "explanation": "61 ÷ 7 = 8 remainder 5. Bring down the 5 to make 55. 55 ÷ 7 = 7 remainder 6. So 615 = 7 × 87 + 6. The remainder is 6.",
+    "hints": [
+      "Use short division and carry each remainder.",
+      "Check: 7 × 87 + remainder = 615."
+    ],
+    "pitfall": "Reporting the quotient or an intermediate remainder.",
+    "diagram": null
+  },
+  {
+    "id": 219,
+    "topic": "number_operations",
+    "subtopic": "written_division_remainders",
+    "difficulty": 2,
+    "question": "530 pupils are going on a trip. Each coach holds 48 pupils. How many coaches are needed?",
+    "answer": "12",
+    "unit": null,
+    "answer_format": null,
+    "check": "(530-2)/48+1",
+    "distractors": [
+      {
+        "value": "2",
+        "why": "Gives the remainder from 530 ÷ 48 = 11 remainder 2."
+      },
+      {
+        "value": "11",
+        "why": "Ignores the 2 pupils left over, who still need a coach."
+      },
+      {
+        "value": "13",
+        "why": "Adds the remainder 2 to the quotient 11 instead of one extra coach."
+      },
+      {
+        "value": "14",
+        "why": "Rounds up to 12 coaches and then adds the 2 left-over pupils as well."
+      }
+    ],
+    "explanation": "530 ÷ 48 = 11 remainder 2, because 48 × 11 = 528. The 2 extra pupils need another coach, so round up: 12 coaches.",
+    "hints": [
+      "Work out 530 ÷ 48 with a remainder.",
+      "What happens to the pupils left over?"
+    ],
+    "pitfall": "Ignoring or mishandling the remainder in context.",
+    "diagram": null
+  },
+  {
+    "id": 220,
+    "topic": "number_operations",
+    "subtopic": "written_division_remainders",
+    "difficulty": 3,
+    "question": "A rope is 9 m 50 cm long. Pieces of 35 cm are cut from it until no more can be cut. How many centimetres of rope are left over?",
+    "answer": "5 cm",
+    "unit": "cm",
+    "answer_format": null,
+    "check": "950-35*27",
+    "distractors": [
+      {
+        "value": "40 cm",
+        "why": "Stops at 26 pieces, leaving 40 cm, without noticing 40 cm is long enough for another piece."
+      },
+      {
+        "value": "27 cm",
+        "why": "Gives the number of pieces rather than the rope left over."
+      },
+      {
+        "value": "910 cm",
+        "why": "Gives the length used by 26 pieces (910 cm) instead of what is left."
+      },
+      {
+        "value": "945 cm",
+        "why": "Gives the length used by 27 pieces (945 cm) instead of what is left."
+      }
+    ],
+    "explanation": "Change to centimetres: 9 m 50 cm = 950 cm. 950 ÷ 35: 35 × 27 = 945, so 27 pieces and 950 − 945 = 5 cm left over.",
+    "hints": [
+      "Convert the length to centimetres first.",
+      "How many 35s fit into 950, and what remains?"
+    ],
+    "pitfall": "Leaving a remainder larger than the divisor.",
+    "diagram": null
+  },
+  {
+    "id": 221,
+    "topic": "number_operations",
+    "subtopic": "brackets_order_operations",
+    "difficulty": 1,
+    "question": "Work out 7 + 9 × 4 − 3.",
+    "answer": "40",
+    "unit": null,
+    "answer_format": null,
+    "check": "7+9*4-3",
+    "distractors": [
+      {
+        "value": "61",
+        "why": "Works left to right: 7 + 9 = 16, then × 4 = 64, then − 3 = 61."
+      },
+      {
+        "value": "46",
+        "why": "Adds the 3 instead of subtracting it."
+      },
+      {
+        "value": "16",
+        "why": "Does 4 − 3 first, as if it were in brackets."
+      },
+      {
+        "value": "64",
+        "why": "Works left to right and forgets to subtract 3."
+      }
+    ],
+    "explanation": "Multiplication comes before addition and subtraction, so do 9 × 4 = 36 first. Then work left to right: 7 + 36 = 43, and 43 − 3 = 40.",
+    "hints": [
+      "Which operation should be done first?",
+      "Do the multiplication, then work left to right."
+    ],
+    "pitfall": "Working strictly left to right.",
+    "diagram": null
+  },
+  {
+    "id": 222,
+    "topic": "number_operations",
+    "subtopic": "brackets_order_operations",
+    "difficulty": 3,
+    "question": "Work out 5 × (12 + 18 ÷ 3) − 4.",
+    "answer": "86",
+    "unit": null,
+    "answer_format": null,
+    "check": "5*(12+18/3)-4",
+    "distractors": [
+      {
+        "value": "46",
+        "why": "Works left to right inside the brackets: 12 + 18 = 30, then ÷ 3 = 10."
+      },
+      {
+        "value": "62",
+        "why": "Ignores the brackets: 60 + 6 − 4."
+      },
+      {
+        "value": "90",
+        "why": "Does the bracket correctly and forgets to subtract 4."
+      },
+      {
+        "value": "94",
+        "why": "Adds the 4 instead of subtracting it."
+      }
+    ],
+    "explanation": "Brackets first, and inside them divide before adding: 18 ÷ 3 = 6, then 12 + 6 = 18. Next 5 × 18 = 90. Finally 90 − 4 = 86.",
+    "hints": [
+      "Inside the brackets, which operation comes first?",
+      "Do the bracket completely before multiplying by 5."
+    ],
+    "pitfall": "Adding before dividing inside the brackets.",
+    "diagram": null
+  },
+  {
+    "id": 223,
+    "topic": "number_operations",
+    "subtopic": "brackets_order_operations",
+    "difficulty": 3,
+    "question": "Zainab works out 48 ÷ (2 + 4) × 3 + 1. What is her answer?",
+    "answer": "25",
+    "unit": null,
+    "answer_format": null,
+    "check": "48/(2+4)*3+1",
+    "distractors": [
+      {
+        "value": "24",
+        "why": "Forgets the final + 1."
+      },
+      {
+        "value": "37",
+        "why": "Ignores the brackets: 24 + 12 + 1."
+      },
+      {
+        "value": "32",
+        "why": "Adds 3 + 1 first, so multiplies 8 by 4."
+      },
+      {
+        "value": "12",
+        "why": "Treats the multiplication as an addition: 8 + 3 + 1."
+      }
+    ],
+    "explanation": "Brackets first: 2 + 4 = 6. Then work left to right with division and multiplication: 48 ÷ 6 = 8, and 8 × 3 = 24. Finally add 1 to get 25.",
+    "hints": [
+      "Start with the brackets.",
+      "Division and multiplication next, left to right. Addition last."
+    ],
+    "pitfall": "Ignoring brackets or doing the final addition too early.",
+    "diagram": null
+  },
+  {
+    "id": 224,
+    "topic": "number_operations",
+    "subtopic": "brackets_order_operations",
+    "difficulty": 3,
+    "question": "Work out 36 − 12 ÷ 4 × 2 + 1.",
+    "answer": "31",
+    "unit": null,
+    "answer_format": null,
+    "check": "36-12/4*2+1",
+    "distractors": [
+      {
+        "value": "13",
+        "why": "Works left to right: 36 − 12 = 24, ÷ 4 = 6, × 2 = 12, + 1 = 13."
+      },
+      {
+        "value": "27",
+        "why": "Adds 2 + 1 first, so subtracts 3 × 3 = 9."
+      },
+      {
+        "value": "29",
+        "why": "Subtracts 6 + 1 = 7 from 36, as if there were brackets."
+      },
+      {
+        "value": "67",
+        "why": "Subtracts 12 ÷ 4 first, then multiplies the result by 2."
+      }
+    ],
+    "explanation": "Division and multiplication come before subtraction and addition. 12 ÷ 4 = 3, then 3 × 2 = 6. So 36 − 6 + 1 = 31.",
+    "hints": [
+      "Underline the part you do first.",
+      "12 ÷ 4 × 2 is worked left to right."
+    ],
+    "pitfall": "Subtracting before dividing and multiplying.",
+    "diagram": null
+  },
+  {
+    "id": 225,
+    "topic": "number_operations",
+    "subtopic": "primes_squares_cubes",
+    "difficulty": 1,
+    "question": "What is the sum of the first four prime numbers?",
+    "answer": "17",
+    "unit": null,
+    "answer_format": null,
+    "check": "2+3+5+7",
+    "distractors": [
+      {
+        "value": "11",
+        "why": "Counts 1 as a prime number."
+      },
+      {
+        "value": "24",
+        "why": "Leaves out 2 because it is even, then counts 9 as prime: 3 + 5 + 7 + 9 = 24."
+      },
+      {
+        "value": "26",
+        "why": "Forgets that 2 is a prime number."
+      },
+      {
+        "value": "28",
+        "why": "Adds five primes instead of four."
+      }
+    ],
+    "explanation": "The first four primes are 2, 3, 5 and 7. 1 is not prime, and 2 is the only even prime. 2 + 3 + 5 + 7 = 17.",
+    "hints": [
+      "Is 1 a prime number?",
+      "List primes in order: 2, 3, ..."
+    ],
+    "pitfall": "Counting 1 as prime or leaving out 2.",
+    "diagram": null
+  },
+  {
+    "id": 226,
+    "topic": "number_operations",
+    "subtopic": "primes_squares_cubes",
+    "difficulty": 2,
+    "question": "Work out 5³ − 4².",
+    "answer": "109",
+    "unit": null,
+    "answer_format": null,
+    "check": "5*5*5-4*4",
+    "distractors": [
+      {
+        "value": "7",
+        "why": "Multiplies each base by its power: 15 − 8."
+      },
+      {
+        "value": "9",
+        "why": "Squares 5 instead of cubing it."
+      },
+      {
+        "value": "117",
+        "why": "Cubes correctly but works out 4² as 4 × 2."
+      },
+      {
+        "value": "141",
+        "why": "Adds instead of subtracting."
+      }
+    ],
+    "explanation": "5³ = 5 × 5 × 5 = 125 and 4² = 4 × 4 = 16. Then 125 − 16 = 109.",
+    "hints": [
+      "What does 5³ mean?",
+      "Work out each power on its own."
+    ],
+    "pitfall": "Treating a power as repeated addition (a multiplication).",
+    "diagram": null
+  },
+  {
+    "id": 227,
+    "topic": "number_operations",
+    "subtopic": "primes_squares_cubes",
+    "difficulty": 2,
+    "question": "Which of these numbers is prime?",
+    "answer": "97",
+    "unit": null,
+    "answer_format": null,
+    "check": "97",
+    "distractors": [
+      {
+        "value": "91",
+        "why": "91 = 7 × 13, so it has more than two factors."
+      },
+      {
+        "value": "93",
+        "why": "93 = 3 × 31 (digit sum 12, so divisible by 3)."
+      },
+      {
+        "value": "95",
+        "why": "95 ends in 5, so it is a multiple of 5."
+      },
+      {
+        "value": "99",
+        "why": "99 = 9 × 11, a multiple of 9 and 11."
+      }
+    ],
+    "explanation": "97 has no factors except 1 and itself. The others are not prime: 91 = 7 × 13, 93 = 3 × 31, 95 = 5 × 19 and 99 = 9 × 11.",
+    "hints": [
+      "Rule out multiples of 2, 3 and 5 first.",
+      "Try dividing the remaining numbers by 7."
+    ],
+    "pitfall": "Thinking that 91 is prime because it is not in the 2, 3, 5 tables.",
+    "diagram": null
+  },
+  {
+    "id": 228,
+    "topic": "number_operations",
+    "subtopic": "primes_squares_cubes",
+    "difficulty": 3,
+    "question": "What is the smallest square number that is a multiple of 15?",
+    "answer": "225",
+    "unit": null,
+    "answer_format": null,
+    "check": "15*15",
+    "distractors": [
+      {
+        "value": "15",
+        "why": "Picks 15, a multiple of itself but not a square number."
+      },
+      {
+        "value": "45",
+        "why": "Picks 45 = 15 × 3, but 5 appears only once in its prime factors."
+      },
+      {
+        "value": "75",
+        "why": "Picks 75 = 15 × 5, but 3 appears only once in its prime factors."
+      },
+      {
+        "value": "900",
+        "why": "Squares 30 (a multiple of 15) instead of looking for the smallest."
+      }
+    ],
+    "explanation": "15 = 3 × 5. A square needs every prime factor an even number of times, so we need 3 × 3 × 5 × 5 = 225, which is 15². Check: 45 and 75 are not squares, and 900 is square but bigger.",
+    "hints": [
+      "Write 15 as a product of primes.",
+      "A square number has each prime factor in pairs."
+    ],
+    "pitfall": "Choosing a multiple of 15 that is not a square.",
+    "diagram": null
+  },
+  {
+    "id": 229,
+    "topic": "number_operations",
+    "subtopic": "primes_squares_cubes",
+    "difficulty": 3,
+    "question": "Ben adds up all the cube numbers that are less than 200. What total does he get?",
+    "answer": "225",
+    "unit": null,
+    "answer_format": null,
+    "check": "1+8+27+64+125",
+    "distractors": [
+      {
+        "value": "100",
+        "why": "Stops at 4³ and misses 125."
+      },
+      {
+        "value": "441",
+        "why": "Includes 6³ = 216, which is greater than 200."
+      },
+      {
+        "value": "55",
+        "why": "Adds square numbers instead of cube numbers."
+      },
+      {
+        "value": "45",
+        "why": "Multiplies by 3 instead of cubing: 3, 6, 9, 12, 15."
+      }
+    ],
+    "explanation": "The cubes are 1³ = 1, 2³ = 8, 3³ = 27, 4³ = 64 and 5³ = 125. The next, 6³ = 216, is too big. Total: 1 + 8 + 27 + 64 + 125 = 225.",
+    "hints": [
+      "List cubes: 1, 8, 27, ...",
+      "When do the cubes go past 200?"
+    ],
+    "pitfall": "Stopping early or including 6³ = 216.",
+    "diagram": null
+  },
+  {
+    "id": 230,
+    "topic": "number_operations",
+    "subtopic": "multiples_factors_common",
+    "difficulty": 2,
+    "question": "Bus A leaves the station every 12 minutes and bus B every 18 minutes. They leave together at 9:00. After how many minutes will they next leave together?",
+    "answer": "36 minutes",
+    "unit": "minutes",
+    "answer_format": null,
+    "check": "12*18/6",
+    "distractors": [
+      {
+        "value": "6 minutes",
+        "why": "Gives the highest common factor instead of the lowest common multiple."
+      },
+      {
+        "value": "30 minutes",
+        "why": "Adds the two times."
+      },
+      {
+        "value": "72 minutes",
+        "why": "Finds 72, a common multiple but not the lowest."
+      },
+      {
+        "value": "216 minutes",
+        "why": "Multiplies 12 × 18, a common multiple but not the lowest."
+      }
+    ],
+    "explanation": "Multiples of 12: 12, 24, 36, 48. Multiples of 18: 18, 36. The first number in both lists is 36. So the buses next leave together 36 minutes later.",
+    "hints": [
+      "List multiples of each number.",
+      "You want the first multiple they share."
+    ],
+    "pitfall": "Mixing up the highest common factor and the lowest common multiple.",
+    "diagram": null
+  },
+  {
+    "id": 231,
+    "topic": "number_operations",
+    "subtopic": "multiples_factors_common",
+    "difficulty": 2,
+    "question": "A teacher has 36 pens and 84 pencils. She makes identical packs, using all of them, with no pens or pencils left over. What is the greatest number of packs she can make?",
+    "answer": "12",
+    "unit": null,
+    "answer_format": null,
+    "check": "36/3",
+    "distractors": [
+      {
+        "value": "4",
+        "why": "Uses 4 as the number of packs, a common factor but not the greatest."
+      },
+      {
+        "value": "6",
+        "why": "Uses 6 packs, a common factor but not the greatest."
+      },
+      {
+        "value": "252",
+        "why": "Finds 252, the lowest common multiple."
+      },
+      {
+        "value": "3024",
+        "why": "Multiplies the two numbers."
+      }
+    ],
+    "explanation": "The number of packs must divide both 36 and 84. The greatest such number is the highest common factor. 36 = 12 × 3 and 84 = 12 × 7, so the HCF is 12. That means 12 packs, each with 3 pens and 7 pencils.",
+    "hints": [
+      "The number of packs must divide into both amounts.",
+      "Find the greatest common factor of 36 and 84."
+    ],
+    "pitfall": "Choosing a common factor that is not the highest.",
+    "diagram": null
+  },
+  {
+    "id": 232,
+    "topic": "number_operations",
+    "subtopic": "multiples_factors_common",
+    "difficulty": 2,
+    "question": "Which of these is a common multiple of 6, 8 and 9?",
+    "answer": "72",
+    "unit": null,
+    "answer_format": null,
+    "check": "8*9",
+    "distractors": [
+      {
+        "value": "36",
+        "why": "36 is a multiple of 6 and 9 but not of 8."
+      },
+      {
+        "value": "48",
+        "why": "48 is a multiple of 6 and 8 but not of 9."
+      },
+      {
+        "value": "54",
+        "why": "54 is a multiple of 6 and 9 but not of 8."
+      },
+      {
+        "value": "24",
+        "why": "24 is a multiple of 6 and 8 but not of 9."
+      }
+    ],
+    "explanation": "72 = 6 × 12 = 8 × 9 = 9 × 8, so 72 is a multiple of all three. 24 and 48 fail for 9. 36 and 54 fail for 8.",
+    "hints": [
+      "Test each option against all three numbers.",
+      "Which options fail for 8, and which for 9?"
+    ],
+    "pitfall": "Stopping after checking only two of the three numbers.",
+    "diagram": null
+  },
+  {
+    "id": 233,
+    "topic": "number_operations",
+    "subtopic": "multiples_factors_common",
+    "difficulty": 3,
+    "question": "I am a multiple of 7 and a factor of 84. I am even but not a multiple of 4. I am between 10 and 30. What number am I?",
+    "answer": "14",
+    "unit": null,
+    "answer_format": null,
+    "check": "84/6",
+    "distractors": [
+      {
+        "value": "21",
+        "why": "21 is a multiple of 7 and a factor of 84, but it is odd, which breaks the even clue."
+      },
+      {
+        "value": "28",
+        "why": "28 is a multiple of 7 and a factor of 84, but it is a multiple of 4, which the clues forbid."
+      },
+      {
+        "value": "12",
+        "why": "12 is a factor of 84 but not a multiple of 7 (and is a multiple of 4)."
+      },
+      {
+        "value": "42",
+        "why": "42 fits every rule except being between 10 and 30."
+      }
+    ],
+    "explanation": "Factors of 84 that are multiples of 7: 7, 14, 21, 28, 42, 84. Between 10 and 30: 14, 21 and 28. 21 is odd and 28 is a multiple of 4, so the number is 14.",
+    "hints": [
+      "List factors of 84.",
+      "Cross out those that break each clue."
+    ],
+    "pitfall": "Not applying every clue.",
+    "diagram": null
+  },
+  {
+    "id": 234,
+    "topic": "number_operations",
+    "subtopic": "place_value_negative_numbers",
+    "difficulty": 1,
+    "question": "At midnight the temperature is -7°C. By morning it has risen by 12°C. What is the temperature in the morning?",
+    "answer": "5°C",
+    "unit": "°C",
+    "answer_format": null,
+    "check": "12-7",
+    "distractors": [
+      {
+        "value": "-19°C",
+        "why": "Subtracts 12 from -7 instead of adding."
+      },
+      {
+        "value": "-5°C",
+        "why": "Works out 12 − 7 = 5 and then copies the minus sign."
+      },
+      {
+        "value": "12°C",
+        "why": "Ignores the starting temperature."
+      },
+      {
+        "value": "19°C",
+        "why": "Ignores that the starting temperature is below zero."
+      }
+    ],
+    "explanation": "Start at -7°C. Going up 7 degrees reaches 0°C. There are 5 more degrees to go (12 − 7 = 5), so the temperature is 5°C.",
+    "hints": [
+      "Picture a thermometer.",
+      "How far to get from -7 up to 0?"
+    ],
+    "pitfall": "Getting the direction or sign wrong.",
+    "diagram": null
+  },
+  {
+    "id": 235,
+    "topic": "number_operations",
+    "subtopic": "place_value_negative_numbers",
+    "difficulty": 2,
+    "question": "On one day, Oslo has a temperature of -6°C and Cairo has a temperature of 19°C. How many degrees warmer is Cairo than Oslo?",
+    "answer": "25°C",
+    "unit": "°C",
+    "answer_format": null,
+    "check": "19-(0-6)",
+    "distractors": [
+      {
+        "value": "13°C",
+        "why": "Subtracts 6 from 19, ignoring that Oslo is below zero."
+      },
+      {
+        "value": "19°C",
+        "why": "Only counts the degrees from 0 to Cairo's 19°C and ignores Oslo being below zero."
+      },
+      {
+        "value": "31°C",
+        "why": "Adds the 6 twice."
+      },
+      {
+        "value": "-25°C",
+        "why": "Adds correctly but then gives a negative answer because one temperature is negative."
+      }
+    ],
+    "explanation": "From -6°C to 0°C is 6 degrees. From 0°C to 19°C is 19 degrees. The difference is 6 + 19 = 25 degrees.",
+    "hints": [
+      "Use zero as a stepping stone on a number line.",
+      "Add the distance below zero and above zero."
+    ],
+    "pitfall": "Subtracting numbers on opposite sides of zero.",
+    "diagram": null
+  },
+  {
+    "id": 236,
+    "topic": "number_operations",
+    "subtopic": "place_value_negative_numbers",
+    "difficulty": 1,
+    "question": "What is 100,000 less than 4,306,258?",
+    "answer": "4,206,258",
+    "unit": null,
+    "answer_format": null,
+    "check": "4306258-100000",
+    "distractors": [
+      {
+        "value": "3,306,258",
+        "why": "Subtracts 1,000,000 instead of 100,000."
+      },
+      {
+        "value": "4,296,258",
+        "why": "Subtracts 10,000 instead of 100,000."
+      },
+      {
+        "value": "4,305,258",
+        "why": "Subtracts 1,000 instead of 100,000."
+      },
+      {
+        "value": "4,306,158",
+        "why": "Subtracts 100 instead of 100,000."
+      }
+    ],
+    "explanation": "In 4,306,258 the digit 3 is in the hundred-thousands place. Taking away 100,000 reduces that digit by 1 and nothing else changes: 4,206,258.",
+    "hints": [
+      "Which digit is worth 100,000?",
+      "Change only that column."
+    ],
+    "pitfall": "Miscounting zeros and changing the wrong place.",
+    "diagram": null
+  },
+  {
+    "id": 237,
+    "topic": "number_operations",
+    "subtopic": "place_value_negative_numbers",
+    "difficulty": 3,
+    "question": "On a number line, Kai starts at -8. He moves 15 places to the right and then 20 places to the left. Where does he finish?",
+    "answer": "-13",
+    "unit": null,
+    "answer_format": null,
+    "check": "-8+15-20",
+    "distractors": [
+      {
+        "value": "-43",
+        "why": "Moves left both times."
+      },
+      {
+        "value": "-3",
+        "why": "Swaps the two directions."
+      },
+      {
+        "value": "7",
+        "why": "Stops after the first move."
+      },
+      {
+        "value": "27",
+        "why": "Moves right both times."
+      }
+    ],
+    "explanation": "Right means add and left means subtract. -8 + 15 = 7. Then 7 − 20 = -13. He finishes at -13.",
+    "hints": [
+      "Right is up in value. Left is down.",
+      "Do the moves one at a time."
+    ],
+    "pitfall": "Getting directions wrong or stopping early.",
+    "diagram": null
+  },
+  {
+    "id": 238,
+    "topic": "decimals",
+    "subtopic": "decimal_brackets_2dp",
+    "difficulty": 2,
+    "question": "Work out 12.45 − (3.78 − 1.29).",
+    "answer": "9.96",
+    "unit": null,
+    "answer_format": null,
+    "check": "12.45-(3.78-1.29)",
+    "distractors": [
+      {
+        "value": "7.38",
+        "why": "Ignores the brackets and subtracts both numbers."
+      },
+      {
+        "value": "14.94",
+        "why": "Adds the bracket (2.49) to 12.45 instead of subtracting."
+      },
+      {
+        "value": "9.86",
+        "why": "Slips in the bracket: gets 3.78 − 1.29 = 2.59 instead of 2.49."
+      },
+      {
+        "value": "17.52",
+        "why": "Adds all three numbers."
+      }
+    ],
+    "explanation": "Brackets first: 3.78 − 1.29 = 2.49. Then 12.45 − 2.49 = 9.96. Taking away the bracket means taking away 3.78 but putting 1.29 back.",
+    "hints": [
+      "Work out the bracket first.",
+      "Line up the decimal points."
+    ],
+    "pitfall": "Ignoring the brackets.",
+    "diagram": null
+  },
+  {
+    "id": 239,
+    "topic": "decimals",
+    "subtopic": "decimal_brackets_2dp",
+    "difficulty": 2,
+    "question": "Work out 15.60 − (8.35 − 4.72).",
+    "answer": "11.97",
+    "unit": null,
+    "answer_format": null,
+    "check": "15.60-(8.35-4.72)",
+    "distractors": [
+      {
+        "value": "2.53",
+        "why": "Ignores the brackets and subtracts both numbers."
+      },
+      {
+        "value": "12.97",
+        "why": "Forgets to exchange when subtracting 3.63 from 15.60, so is 1 too big."
+      },
+      {
+        "value": "19.23",
+        "why": "Adds the bracket (3.63) to 15.60 instead of subtracting."
+      },
+      {
+        "value": "28.67",
+        "why": "Adds all three numbers."
+      }
+    ],
+    "explanation": "Brackets first: 8.35 − 4.72 = 3.63. Then 15.60 − 3.63 = 11.97. Estimate: 16 − (8 − 5) = 13, so an answer near 12 is sensible.",
+    "hints": [
+      "Do the bracket first.",
+      "Write 15.60 with two decimal places and exchange where needed."
+    ],
+    "pitfall": "Subtracting from the wrong number or ignoring brackets.",
+    "diagram": null
+  },
+  {
+    "id": 240,
+    "topic": "decimals",
+    "subtopic": "decimal_brackets_2dp",
+    "difficulty": 2,
+    "question": "Work out 30.05 − (17.40 − 9.65).",
+    "answer": "22.30",
+    "unit": null,
+    "answer_format": null,
+    "check": "30.05-(17.40-9.65)",
+    "distractors": [
+      {
+        "value": "23.30",
+        "why": "Forgets to reduce the 30 when exchanging, so the answer is 1 too big."
+      },
+      {
+        "value": "23.70",
+        "why": "Takes the smaller digit from the larger in each part: 30 − 7 = 23 and 0.75 − 0.05 = 0.70, giving 23.70."
+      },
+      {
+        "value": "37.80",
+        "why": "Adds the bracket to 30.05 instead of subtracting."
+      },
+      {
+        "value": "57.10",
+        "why": "Adds all three numbers."
+      }
+    ],
+    "explanation": "Brackets first: 17.40 − 9.65 = 7.75. Then 30.05 − 7.75 = 22.30. Check by adding: 22.30 + 7.75 = 30.05, so the subtraction is right.",
+    "hints": [
+      "Work out 17.40 − 9.65 first.",
+      "Then subtract your answer from 30.05, exchanging carefully across the zero."
+    ],
+    "pitfall": "Subtracting the smaller digit from the larger in each column.",
+    "diagram": null
+  },
+  {
+    "id": 241,
+    "topic": "decimals",
+    "subtopic": "decimal_brackets_2dp",
+    "difficulty": 2,
+    "question": "Work out 48.20 − (19.75 − 6.38).",
+    "answer": "34.83",
+    "unit": null,
+    "answer_format": null,
+    "check": "48.20-(19.75-6.38)",
+    "distractors": [
+      {
+        "value": "22.07",
+        "why": "Ignores the brackets and subtracts both numbers."
+      },
+      {
+        "value": "28.45",
+        "why": "Subtracts only the first number inside the bracket."
+      },
+      {
+        "value": "33.83",
+        "why": "Slips 1.00 in the final subtraction."
+      },
+      {
+        "value": "13.37",
+        "why": "Does the bracket and forgets the 48.20."
+      }
+    ],
+    "explanation": "Brackets first: 19.75 − 6.38 = 13.37. Then 48.20 − 13.37 = 34.83. Estimate: 48 − (20 − 6) = 34.",
+    "hints": [
+      "Estimate first with whole numbers.",
+      "Work out the bracket, then subtract it."
+    ],
+    "pitfall": "Subtracting both numbers when only the bracket total is subtracted.",
+    "diagram": null
+  },
+  {
+    "id": 242,
+    "topic": "decimals",
+    "subtopic": "decimal_brackets_2dp",
+    "difficulty": 3,
+    "question": "Work out 25.00 − (7.46 + 8.19) − 3.58.",
+    "answer": "5.77",
+    "unit": null,
+    "answer_format": null,
+    "check": "25.00-(7.46+8.19)-3.58",
+    "distractors": [
+      {
+        "value": "22.15",
+        "why": "Ignores the brackets, so adds 8.19."
+      },
+      {
+        "value": "12.93",
+        "why": "Adds the final 3.58 instead of subtracting."
+      },
+      {
+        "value": "9.35",
+        "why": "Stops after the brackets and forgets the last subtraction."
+      },
+      {
+        "value": "5.87",
+        "why": "Slips 0.10 when subtracting 3.58."
+      }
+    ],
+    "explanation": "Brackets first: 7.46 + 8.19 = 15.65. Then 25.00 − 15.65 = 9.35. Finally 9.35 − 3.58 = 5.77. Check: 15.65 + 3.58 + 5.77 = 25.00.",
+    "hints": [
+      "Start with the bracket.",
+      "There are two subtractions after it."
+    ],
+    "pitfall": "Treating the bracket as if it were not there.",
+    "diagram": null
+  },
+  {
+    "id": 243,
+    "topic": "decimals",
+    "subtopic": "decimal_brackets_2dp",
+    "difficulty": 2,
+    "question": "Work out 7.04 − (2.96 + 1.58).",
+    "answer": "2.50",
+    "unit": null,
+    "answer_format": null,
+    "check": "7.04-(2.96+1.58)",
+    "distractors": [
+      {
+        "value": "5.66",
+        "why": "Ignores the brackets, so adds 1.58 instead of subtracting it."
+      },
+      {
+        "value": "4.08",
+        "why": "Takes away only 2.96 and forgets 1.58."
+      },
+      {
+        "value": "2.40",
+        "why": "Slips 0.10 in the subtraction."
+      },
+      {
+        "value": "11.58",
+        "why": "Adds the bracket to 7.04 instead of subtracting."
+      }
+    ],
+    "explanation": "Brackets first: 2.96 + 1.58 = 4.54. Then 7.04 − 4.54 = 2.50. Check by adding back: 4.54 + 2.50 = 7.04, so the answer is right.",
+    "hints": [
+      "Add the numbers in the bracket first.",
+      "Then take the total away from 7.04."
+    ],
+    "pitfall": "Adding 1.58 when it should be subtracted.",
+    "diagram": null
+  },
+  {
+    "id": 244,
+    "topic": "decimals",
+    "subtopic": "decimal_brackets_2dp",
+    "difficulty": 2,
+    "question": "Work out 9.00 − (5.37 − 2.84).",
+    "answer": "6.47",
+    "unit": null,
+    "answer_format": null,
+    "check": "9.00-(5.37-2.84)",
+    "distractors": [
+      {
+        "value": "6.57",
+        "why": "Slips 0.10 when subtracting 2.53 from 9.00."
+      },
+      {
+        "value": "7.53",
+        "why": "Subtracts the whole numbers (9 − 2 = 7) and then adds the decimals."
+      },
+      {
+        "value": "11.53",
+        "why": "Adds the bracket to 9 instead of subtracting."
+      },
+      {
+        "value": "17.21",
+        "why": "Adds all three numbers."
+      }
+    ],
+    "explanation": "Brackets first: 5.37 − 2.84 = 2.53. Then 9.00 − 2.53 = 6.47. Write 9 as 9.00 so the columns line up.",
+    "hints": [
+      "Work out the bracket first.",
+      "Write 9 as 9.00."
+    ],
+    "pitfall": "Not lining up the decimal places for the whole number.",
+    "diagram": null
+  },
+  {
+    "id": 245,
+    "topic": "decimals",
+    "subtopic": "decimal_multiply_divide",
+    "difficulty": 1,
+    "question": "Work out 4.5 × 6.",
+    "answer": "27",
+    "unit": null,
+    "answer_format": null,
+    "check": "4.5*6",
+    "distractors": [
+      {
+        "value": "2.7",
+        "why": "Works out 45 × 6 = 270, then moves the decimal point two places instead of one."
+      },
+      {
+        "value": "10.5",
+        "why": "Adds 4.5 + 6 instead of multiplying."
+      },
+      {
+        "value": "24.5",
+        "why": "Multiplies the 4 by 6 to get 24, then just keeps the .5 without multiplying it."
+      },
+      {
+        "value": "270",
+        "why": "Works out 45 × 6 = 270 and forgets to put the decimal point back."
+      }
+    ],
+    "explanation": "Ignore the decimal point first: 45 × 6 = 270. There is one decimal place in 4.5, so divide by 10 to get 27. Check by estimating: 4.5 is about 5, and 5 × 6 = 30, so 27 is sensible.",
+    "hints": [
+      "Work out 45 × 6 first.",
+      "How many decimal places does 4.5 have?"
+    ],
+    "pitfall": "Misplacing the decimal point, or multiplying only the whole-number part.",
+    "diagram": null
+  },
+  {
+    "id": 246,
+    "topic": "decimals",
+    "subtopic": "decimal_multiply_divide",
+    "difficulty": 2,
+    "question": "Work out 5.6 ÷ 7.",
+    "answer": "0.8",
+    "unit": null,
+    "answer_format": null,
+    "check": "5.6/7",
+    "distractors": [
+      {
+        "value": "0.08",
+        "why": "Works out 56 ÷ 7 = 8, then moves the decimal point two places instead of one."
+      },
+      {
+        "value": "8",
+        "why": "Works out 56 ÷ 7 = 8 and forgets the decimal point."
+      },
+      {
+        "value": "12.6",
+        "why": "Adds 5.6 + 7 instead of dividing."
+      },
+      {
+        "value": "39.2",
+        "why": "Multiplies 5.6 × 7 instead of dividing."
+      }
+    ],
+    "explanation": "56 ÷ 7 = 8. Since 5.6 is ten times smaller than 56, the answer is ten times smaller too: 0.8. Check: 0.8 × 7 = 5.6.",
+    "hints": [
+      "Which times table fact uses 56 and 7?",
+      "5.6 is ten times smaller than 56. What does that do to the answer?"
+    ],
+    "pitfall": "Forgetting the decimal point, because 56 ÷ 7 is such a familiar fact.",
+    "diagram": null
+  },
+  {
+    "id": 247,
+    "topic": "decimals",
+    "subtopic": "decimal_multiply_divide",
+    "difficulty": 2,
+    "question": "Work out 3.2 × 15.",
+    "answer": "48",
+    "unit": null,
+    "answer_format": null,
+    "check": "3.2*15",
+    "distractors": [
+      {
+        "value": "4.8",
+        "why": "Works out 32 × 15 = 480, then moves the decimal point two places instead of one."
+      },
+      {
+        "value": "18.2",
+        "why": "Adds 3.2 + 15 instead of multiplying."
+      },
+      {
+        "value": "45.2",
+        "why": "Multiplies the 3 by 15 to get 45, then just keeps the .2 without multiplying it."
+      },
+      {
+        "value": "480",
+        "why": "Works out 32 × 15 = 480 and forgets to put the decimal point back."
+      }
+    ],
+    "explanation": "Ignore the decimal point first: 32 × 15 = 480. There is one decimal place in 3.2, so divide by 10 to get 48. Check: 3 × 15 = 45 and 0.2 × 15 = 3, and 45 + 3 = 48.",
+    "hints": [
+      "Work out 32 × 15 first.",
+      "How many decimal places does 3.2 have?"
+    ],
+    "pitfall": "Placing the decimal point wrongly, or forgetting to multiply the 0.2.",
+    "diagram": null
+  },
+  {
+    "id": 248,
+    "topic": "decimals",
+    "subtopic": "decimal_multiply_divide",
+    "difficulty": 1,
+    "question": "Work out 6.37 × 100.",
+    "answer": "637",
+    "unit": null,
+    "answer_format": null,
+    "check": "6.37*100",
+    "distractors": [
+      {
+        "value": "63.7",
+        "why": "Multiplies by 10 instead of 100."
+      },
+      {
+        "value": "6370",
+        "why": "Multiplies by 1000 instead of 100."
+      },
+      {
+        "value": "0.0637",
+        "why": "Divides by 100 instead of multiplying."
+      },
+      {
+        "value": "600.37",
+        "why": "Multiplies only the whole-number part by 100."
+      }
+    ],
+    "explanation": "Multiplying by 100 moves each digit two places to the left, so the units digit 6 becomes hundreds. The number 6.37 becomes 637, and the digits 6, 3 and 7 keep their order.",
+    "hints": [
+      "Each digit moves two places.",
+      "Which way does it move?"
+    ],
+    "pitfall": "Moving the digits the wrong way.",
+    "diagram": null
+  },
+  {
+    "id": 249,
+    "topic": "decimals",
+    "subtopic": "decimal_multiply_divide",
+    "difficulty": 2,
+    "question": "A rectangle has an area of 7.56 cm² and a width of 3 cm. What is its length in cm?",
+    "answer": "2.52 cm",
+    "unit": "cm",
+    "answer_format": null,
+    "check": "7.56/3",
+    "distractors": [
+      {
+        "value": "0.252 cm",
+        "why": "Works out 756 ÷ 3 = 252, then moves the decimal point three places instead of two."
+      },
+      {
+        "value": "4.56 cm",
+        "why": "Subtracts 3 from 7.56 instead of dividing."
+      },
+      {
+        "value": "10.56 cm",
+        "why": "Adds 3 to 7.56 instead of dividing."
+      },
+      {
+        "value": "25.2 cm",
+        "why": "Works out 756 ÷ 3 = 252, then moves the decimal point only one place."
+      }
+    ],
+    "explanation": "Area = length × width, so length = 7.56 ÷ 3. Short division, keeping the decimal point lined up, gives 2.52. Check: 2.52 × 3 = 7.56.",
+    "hints": [
+      "Which operation finds the missing side when you know the area?",
+      "Divide 7.56 by 3, keeping the decimal point lined up."
+    ],
+    "pitfall": "Misplacing the decimal point when dividing.",
+    "diagram": null
+  },
+  {
+    "id": 250,
+    "topic": "decimals",
+    "subtopic": "decimal_money_problems",
+    "difficulty": 2,
+    "question": "Pens cost £1.35 each. Ravi buys 6 pens and pays with a £10 note. How much change does he get?",
+    "answer": "£1.90",
+    "unit": "£",
+    "answer_format": null,
+    "check": "10-6*1.35",
+    "distractors": [
+      {
+        "value": "£2.10",
+        "why": "Works out only the 35p part of each pen (6 × 35p = £2.10) and gives that as the change."
+      },
+      {
+        "value": "£2.65",
+        "why": "Adds 6 to the pen price instead of multiplying, giving £2.65."
+      },
+      {
+        "value": "£3.25",
+        "why": "Buys 5 pens instead of 6, giving £3.25 change."
+      },
+      {
+        "value": "£8.10",
+        "why": "Gives the total cost instead of the change."
+      }
+    ],
+    "explanation": "6 × £1.35 = £6 + 6 × 35p = £6 + £2.10 = £8.10. Change from £10: £10 − £8.10 = £1.90. Check: £8.10 + £1.90 = £10.",
+    "hints": [
+      "Find the cost of 6 pens first.",
+      "Then take it from £10."
+    ],
+    "pitfall": "Stopping after finding the total cost.",
+    "diagram": null
+  },
+  {
+    "id": 251,
+    "topic": "decimals",
+    "subtopic": "decimal_money_problems",
+    "difficulty": 3,
+    "question": "A taxi charges £3.20 plus £1.45 for each mile. A journey costs £13.35. How many miles was the journey?",
+    "answer": "7",
+    "unit": null,
+    "answer_format": null,
+    "check": "(13.35-3.20)/1.45",
+    "distractors": [
+      {
+        "value": "3",
+        "why": "Treats £3.20 + £1.45 = £4.65 as the cost of every mile, then divides £13.35 by £4.65 to get about 3."
+      },
+      {
+        "value": "9",
+        "why": "Divides £13.35 by £1.45 and rounds, forgetting the fixed charge."
+      },
+      {
+        "value": "10.15",
+        "why": "Takes off the fixed charge but does not divide by the price per mile."
+      },
+      {
+        "value": "11",
+        "why": "Adds the fixed charge to the fare before dividing, then rounds."
+      }
+    ],
+    "explanation": "The £3.20 is a fixed charge, so take it off first: £13.35 − £3.20 = £10.15. This pays for the miles. £10.15 ÷ £1.45 = 7 miles. Check: 7 × 1.45 = 10.15, plus 3.20 = 13.35.",
+    "hints": [
+      "Part of the fare does not depend on the miles.",
+      "Remove that part before dividing."
+    ],
+    "pitfall": "Dividing the whole fare by the price per mile.",
+    "diagram": null
+  },
+  {
+    "id": 252,
+    "topic": "decimals",
+    "subtopic": "decimal_money_problems",
+    "difficulty": 2,
+    "question": "Sam buys 3 notebooks at £2.45 each and 2 rulers at 85p each. He pays with a £20 note. How much change does he get?",
+    "answer": "£10.95",
+    "unit": "£",
+    "answer_format": null,
+    "check": "20-(3*2.45+2*0.85)",
+    "distractors": [
+      {
+        "value": "£12.65",
+        "why": "Works out change from the notebooks only and leaves out the rulers."
+      },
+      {
+        "value": "£11.80",
+        "why": "Buys only one ruler."
+      },
+      {
+        "value": "£9.05",
+        "why": "Gives the total spent instead of the change."
+      },
+      {
+        "value": "£11.95",
+        "why": "Forgets to exchange when subtracting 9.05 from 20.00."
+      }
+    ],
+    "explanation": "Notebooks: 3 × £2.45 = £7.35. Rulers: 2 × £0.85 = £1.70. Total £9.05. Change from £20: £20 − £9.05 = £10.95.",
+    "hints": [
+      "Work out each item cost separately.",
+      "Rulers are in pence: 85p = £0.85."
+    ],
+    "pitfall": "Missing a purchase or giving the total.",
+    "diagram": null
+  },
+  {
+    "id": 253,
+    "topic": "decimals",
+    "subtopic": "rounding_ordering_mixed",
+    "difficulty": 1,
+    "question": "Round 4.0756 to 2 decimal places.",
+    "answer": "4.08",
+    "unit": null,
+    "answer_format": null,
+    "check": "4+8/100",
+    "distractors": [
+      {
+        "value": "4.07",
+        "why": "Cuts off after two decimal places instead of rounding up."
+      },
+      {
+        "value": "4.1",
+        "why": "Rounds to 1 decimal place."
+      },
+      {
+        "value": "4.076",
+        "why": "Rounds to 3 decimal places instead of 2, giving 4.076."
+      },
+      {
+        "value": "4.00",
+        "why": "Looks at the 0 in the tenths place and rounds to 4.00."
+      }
+    ],
+    "explanation": "Two decimal places means hundredths. 4.0756 has 7 in the hundredths place. The next digit is 5, so round up: 4.08.",
+    "hints": [
+      "Which digit is in the hundredths place?",
+      "Look at the digit after it."
+    ],
+    "pitfall": "Truncating instead of rounding.",
+    "diagram": null
+  },
+  {
+    "id": 254,
+    "topic": "decimals",
+    "subtopic": "rounding_ordering_mixed",
+    "difficulty": 2,
+    "question": "What number is exactly halfway between 2.4 and 3.1?",
+    "answer": "2.75",
+    "unit": null,
+    "answer_format": null,
+    "check": "(2.4+3.1)/2",
+    "distractors": [
+      {
+        "value": "5.5",
+        "why": "Adds the two numbers and does not halve."
+      },
+      {
+        "value": "0.7",
+        "why": "Finds the difference and stops."
+      },
+      {
+        "value": "0.35",
+        "why": "Halves the difference but does not add it to 2.4."
+      },
+      {
+        "value": "2.8",
+        "why": "Rounds the halfway number up to one decimal place."
+      }
+    ],
+    "explanation": "Add the numbers and halve: 2.4 + 3.1 = 5.5, and 5.5 ÷ 2 = 2.75. Or find the gap, 0.7, halve it to 0.35 and add that to 2.4.",
+    "hints": [
+      "How far apart are the two numbers?",
+      "Halfway is half of that distance from either end."
+    ],
+    "pitfall": "Stopping before the final step.",
+    "diagram": null
+  },
+  {
+    "id": 255,
+    "topic": "decimals",
+    "subtopic": "rounding_ordering_mixed",
+    "difficulty": 3,
+    "question": "Here are five numbers: 0.8, 0.75, 0.805, 0.08, 0.7. Put them in order from smallest to largest. Which number is in the middle?",
+    "answer": "0.75",
+    "unit": null,
+    "answer_format": null,
+    "check": null,
+    "distractors": [
+      {
+        "value": "0.805",
+        "why": "Takes the middle number in the list as written without ordering them."
+      },
+      {
+        "value": "0.8",
+        "why": "Reads the decimals as whole numbers (8, 75, 805, 8, 7), puts them in order and picks 8."
+      },
+      {
+        "value": "0.7",
+        "why": "Orders the numbers correctly but picks the second smallest."
+      },
+      {
+        "value": "0.627",
+        "why": "Adds the five numbers and divides by 5 instead of picking the middle one."
+      }
+    ],
+    "explanation": "Compare the numbers by writing them with three decimal places: 0.800, 0.750, 0.805, 0.080, 0.700. In order: 0.080, 0.700, 0.750, 0.800, 0.805. The middle number, the third of the five, is 0.75.",
+    "hints": [
+      "Write every number with 3 decimal places.",
+      "Put them in order, then find the one in the middle."
+    ],
+    "pitfall": "Comparing the digits after the point as if they were whole numbers.",
+    "diagram": null,
+    "check_note": "Ordering, not arithmetic: 0.08, 0.7, 0.75, 0.8, 0.805, so the third of five is 0.75."
+  }
+]

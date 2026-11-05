@@ -1,12 +1,12 @@
 import { getProgress, getDaily, saveDaily, localDate } from './state.js';
-import { dailyPlan } from './practice.js';
+import { dailyPlan, practiceBank } from './practice.js';
 import * as desk from './desk.js';
 
 function today() { return localDate(); }
 export function getPlan(questions) {
   let plan = getDaily();
   if (plan?.date !== today() || !plan.items?.every(item => questions.some(q => q.id === item.id))) {
-    const result = dailyPlan(questions, getProgress());
+    const result = dailyPlan(practiceBank(questions), getProgress());
     plan = { date: today(), items: result.items.map(item => ({ id: item.question.id, reason: item.reason })), seconds: result.seconds, answers: {}, completed: false };
     saveDaily(plan);
   }
@@ -21,7 +21,7 @@ export function home(questions) {
 }
 export function init(questions) {
   const plan = getPlan(questions);
-  desk.mount(questions, {
+  desk.mount(practiceBank(questions), {
     kind: 'daily', container: 'daily-question-area',
     questions: plan.items.map(item => questions.find(q => q.id === item.id)),
     reasons: Object.fromEntries(plan.items.map(item => [item.id, item.reason])),

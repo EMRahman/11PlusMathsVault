@@ -93,6 +93,8 @@ function _initSettings() {
     const fresh = deskSizeEl.cloneNode(true);
     deskSizeEl.replaceWith(fresh);
     fresh.value = String(settings.deskSetSize);
+    // A saved size may no longer exist (the old "Paper 50" became fixed mock papers).
+    if (!fresh.value) fresh.value = '10';
     fresh.addEventListener('change', () => {
       updateSettings({ deskSetSize: parseInt(fresh.value, 10) });
       // Also update the desk filter bar to reflect new default

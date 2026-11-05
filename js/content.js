@@ -57,15 +57,31 @@ export function diagram(d) {
     drawing = Array.from({ length: 11 }, (_, i) => i - 5).map(n => `<path d="M${p(n)} 8 V228 M80 ${py(n)} H300" class="grid-line"/>${n ? `<text x="${p(n)}" y="133" text-anchor="middle">${n}</text><text x="180" y="${py(n) + 4}" text-anchor="end">${n}</text>` : ''}`).join('');
     drawing += `<path d="M70 118 H312 M190 235 V4" class="axis"/><text x="316" y="120">x</text><text x="195" y="12">y</text><text x="180" y="133">0</text>`;
     if (d.join) drawing += `<polygon points="${d.points.map(pt => `${p(pt.x)},${py(pt.y)}`).join(' ')}" class="shape-outline"/>`;
-    drawing += d.points.map(pt => `<circle cx="${p(pt.x)}" cy="${py(pt.y)}" r="4"/><text x="${p(pt.x) + 7}" y="${py(pt.y) - 7}">${esc(pt.label)}</text>`).join('');
+    // Labels move clear of the axis numbers, which sit just below the x-axis and just left of the y-axis.
+    drawing += d.points.map(pt => `<circle cx="${p(pt.x)}" cy="${py(pt.y)}" r="4"/><text x="${pt.x === -1 ? p(pt.x) - 7 : p(pt.x) + 7}" y="${pt.y === -1 ? py(pt.y) + 16 : py(pt.y) - 7}"${pt.x === -1 ? ' text-anchor="end"' : ''}>${esc(pt.label)}</text>`).join('');
   } else if (d.type === 'rectangle') {
     drawing = `<rect x="75" y="45" width="220" height="130" class="shape-outline"/><text x="185" y="200" text-anchor="middle">${esc(d.width)}</text><text x="310" y="112">${esc(d.height)}</text>`;
   } else if (d.type === 'triangle') {
     drawing = `<path d="M65 180 H310 L190 40 Z" class="shape-outline"/><path d="M190 40 V180" class="shape-outline" stroke-dasharray="5 4"/><path d="M190 167 H203 V180" class="shape-outline"/><text x="185" y="205" text-anchor="middle">${esc(d.base)}</text><text x="200" y="125">${esc(d.height)}</text>`;
   } else if (d.type === 'l_shape') {
     drawing = `<path d="M65 40 H200 V110 H300 V185 H65 Z" class="shape-outline"/><text x="180" y="210" text-anchor="middle">${esc(d.width)}</text><text x="12" y="115">${esc(d.height)}</text><text x="245" y="100" text-anchor="middle">${esc(d.cutWidth)}</text><text x="205" y="70">${esc(d.cutHeight)}</text>`;
+  } else if (d.type === 'shaded_grid') {
+    const size = Math.min(340 / d.cols, 225 / d.rows);
+    const left = (380 - size * d.cols) / 2, top = (245 - size * d.rows) / 2;
+    const filled = new Set((d.shaded || []).map(([row, col]) => row + ':' + col));
+    for (let row = 0; row < d.rows; row++) for (let col = 0; col < d.cols; col++) {
+      drawing += `<rect x="${left + col * size}" y="${top + row * size}" width="${size}" height="${size}" class="grid-cell${filled.has(row + ':' + col) ? ' grid-cell--shaded' : ''}"/>`;
+    }
+  } else if (d.type === 'shape') {
+    const points = list => list.map(([x, y]) => x + ',' + y).join(' ');
+    drawing = (d.polygons || []).map(s => `<polygon points="${points(s.points)}" class="${s.shaded ? 'shape-filled' : 'shape-outline'}"/>`).join('');
+    drawing += (d.circles || []).map(s => `<circle cx="${s.cx}" cy="${s.cy}" r="${s.r}" class="shape-outline"/>`).join('');
+    drawing += (d.lines || []).map(s => `<line x1="${s.from[0]}" y1="${s.from[1]}" x2="${s.to[0]}" y2="${s.to[1]}" class="shape-outline"${s.dashed ? ' stroke-dasharray="5 4"' : ''}/>`).join('');
+    drawing += (d.labels || []).map(s => `<text x="${s.x}" y="${s.y}" text-anchor="${['start', 'middle', 'end'].includes(s.anchor) ? s.anchor : 'middle'}">${esc(s.text)}</text>`).join('');
   }
-  return `<figure class="maths-figure"><svg viewBox="0 0 380 245" role="img" aria-label="${esc(d.description)}"><title>${esc(d.description)}</title>${drawing}</svg><figcaption>${esc(d.caption || d.description)}${['rectangle', 'triangle', 'l_shape'].includes(d.type) ? ' (not to scale)' : ''}</figcaption></figure>`;
+  // The description is for assistive technology only: showing it would read the chart for the child.
+  const note = d.caption || (['rectangle', 'triangle', 'l_shape', 'shape'].includes(d.type) ? 'Not to scale' : '');
+  return `<figure class="maths-figure"><svg viewBox="0 0 380 245" role="img" aria-label="${esc(d.description)}">${drawing}</svg>${note ? `<figcaption>${esc(note)}</figcaption>` : ''}</figure>`;
 }
 
 export function questionBody(q) {
@@ -75,6 +91,7 @@ export function questionBody(q) {
 export function answerText(q) {
   const answer = String(q.answer);
   if (!q.unit || answer.includes(q.unit)) return answer;
-  if (['£', '€'].includes(q.unit)) return q.unit + answer;
+  // Money always shows two decimal places: £27.60, never £27.6.
+  if (['£', '€'].includes(q.unit)) return q.unit + (/^-?\d+\.\d$/.test(answer) ? answer + '0' : answer);
   return answer + ' ' + q.unit;
 }
