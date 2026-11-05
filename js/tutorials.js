@@ -698,22 +698,58 @@ export const TUTORIALS = {
  * @param {Object|string} qOrSubtopic - Full question object or subtopic string
  * @returns {Object|null}
  */
-// New subtopics that use the same method as an existing tutorial. Only variant-free tutorials are aliased.
+// New subtopics that reuse an existing tutorial's links. Add one only if its guidance suits every question in the subtopic.
 const TUTORIAL_ALIASES = {
   long_multiplication: 'multiplication_strategies',
   brackets_order_operations: 'order_operations',
   decimal_brackets_2dp: 'order_operations',
-  decimal_money_problems: 'money_multiplication',
   fraction_multiply_simplify: 'fraction_multiplication',
   ratio_share_pence: 'ratio_sharing',
   ratio_given_difference: 'ratio_difference',
-  proportion_best_buy: 'unitary_method',
   triangle_angle_reasoning: 'triangle_angles',
   angle_facts_combined: 'angles_on_line',
   area_perimeter_compound: 'compound_area',
-  area_reasoning: 'compound_area',
   percent_of_amount_harder: 'percent_of_amount',
-  percent_change_problems: 'percent_increase',
+};
+// Replaces the aliased wording where the subtopic is wider than the original tutorial.
+const TUTORIAL_OVERRIDES = {
+  long_multiplication: {
+    concept: 'Written Multiplication with Partial Products',
+    steps: [
+      'Split the second number into tens and ones.',
+      'Multiply the first number by each part, carrying carefully.',
+      'Add the partial products to get the answer.'
+    ],
+    check: 'Estimate by rounding each number, then check the last digit of your answer against the last digits of the two numbers.'
+  },
+  triangle_angle_reasoning: {
+    concept: 'Reasoning About the Angles in a Triangle',
+    steps: [
+      'Remember that the three angles in any triangle add up to 180°.',
+      'Turn each fact into an angle: right-angled means one angle is 90°, and isosceles means two angles are equal.',
+      'Find what is left from 180° and share it between the unknown angles as the question says.',
+      'If the facts allow more than one set of angles, the answer cannot be decided.'
+    ],
+    check: 'Add all three angles together; their sum must equal exactly 180°.'
+  },
+  angle_facts_combined: {
+    concept: 'Combining Angle Facts',
+    steps: [
+      'Decide which fact applies: a straight line makes 180°, a full turn at a point makes 360°, and a triangle has 180° inside.',
+      'Remember that when two straight lines cross, opposite angles are equal.',
+      'Find one missing angle at a time, and use it in the next step.'
+    ],
+    check: 'Add the angles in each group; they must make the total for that fact.'
+  },
+  area_perimeter_compound: {
+    concept: 'Area and Perimeter of Compound Shapes',
+    steps: [
+      'Decide whether the question asks for area (the space inside) or perimeter (the distance around the edge).',
+      'For area, split the shape into rectangles, or take the part you do not need away from the full rectangle.',
+      'For perimeter, work out any missing side lengths, then add every outside edge.'
+    ],
+    check: 'Area is in square units and perimeter is not. Work out the area a second way, or trace the edge again to check you counted every side.'
+  },
 };
 export function getTutorial(qOrSubtopic) {
   if (!qOrSubtopic) return null;
@@ -989,5 +1025,5 @@ export function getTutorial(qOrSubtopic) {
     }
   }
 
-  return result;
+  return { ...result, ...TUTORIAL_OVERRIDES[q.subtopic] };
 }

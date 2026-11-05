@@ -4,7 +4,7 @@
     "distractors": [
       {
         "value": "812",
-        "why": "Uses 38 × 4 = 52 (a wrong partial product) so 760 + 52 = 812."
+        "why": "Drops the hundred from 38 × 4 = 152 and uses only 52, so 760 + 52 = 812."
       },
       {
         "value": "872",
@@ -155,11 +155,11 @@
       },
       {
         "value": "900",
-        "why": "Rounds both numbers to 30 by mistake, then multiplies: 30 × 30 = 900."
+        "why": "Rounds 49 to 45 instead of the nearest ten, then multiplies: 45 × 20 = 900."
       },
       {
         "value": "1100",
-        "why": "Rounds 49 up to 55 by mistake and multiplies by 20, giving 1100."
+        "why": "Rounds 49 up to 50 but changes 21 to 22, then multiplies: 50 × 22 = 1100."
       },
       {
         "value": "1200",
@@ -319,7 +319,7 @@
     "distractors": [
       {
         "value": "11",
-        "why": "Works 8 + 3 and ignores the 4 × 3 part."
+        "why": "Adds 8 + 3 and ignores the 4."
       },
       {
         "value": "12",
@@ -436,7 +436,7 @@
       },
       {
         "value": "64",
-        "why": "Takes 4/5 of 80 by mixing up the fraction's top and bottom numbers."
+        "why": "Takes 4/5 of 80, adding 1 to both the top and bottom of 3/4."
       }
     ]
   },
@@ -529,7 +529,7 @@
     "distractors": [
       {
         "value": "1/6",
-        "why": "Keeps only the 2 from the top of 2/3 over 3 × 4 = 12, giving 2/12, and drops the 3."
+        "why": "Keeps only the 2 from the top of 2/3 over 3 × 4 = 12, giving 2/12 = 1/6, and drops the 3."
       },
       {
         "value": "6/12",
@@ -638,7 +638,7 @@
       },
       {
         "value": "0.65",
-        "why": "Treats 65 as bigger than 7 by ignoring the decimal point, so 0.65 looks larger than 0.7."
+        "why": "Treats 65 as bigger than 7 by ignoring the point, and misses that 0.75 is bigger still."
       },
       {
         "value": "0.07",
@@ -831,7 +831,7 @@
       },
       {
         "value": "5.25",
-        "why": "Rounds 3.45 up to 4.45, then adds 0.8."
+        "why": "Adds 1 to 3.45 by mistake, making 4.45, then adds 0.8."
       },
       {
         "value": "11.45",
@@ -894,7 +894,7 @@
       },
       {
         "value": "£8",
-        "why": "Adds the price of one pencil to £6, which is only 2 more pencils."
+        "why": "Adds the price of one pencil to £6, which is the cost of 4 pencils, not 5."
       },
       {
         "value": "£9",
@@ -1016,7 +1016,7 @@
       },
       {
         "value": "8",
-        "why": "Adds the ratio numbers 3 + 5 = 8."
+        "why": "Finds one part (20 ÷ 4 = 5), then adds the 3 instead of multiplying: 5 + 3 = 8."
       },
       {
         "value": "20",
@@ -1230,7 +1230,7 @@
       },
       {
         "value": "80",
-        "why": "Swaps the top and bottom of 3/4 to get 4/3 or 80%."
+        "why": "Changes 3/4 to 4/5 by adding 1 to the top and bottom, and 4/5 is 80%."
       },
       {
         "value": "300",
@@ -1457,7 +1457,7 @@
       },
       {
         "value": "44",
-        "why": "Adds 11 + 11 + 11 + 11 by using the 11 twice."
+        "why": "Uses 11 for all four sides: 11 + 11 + 11 + 11 = 44."
       },
       {
         "value": "66",
@@ -1566,7 +1566,7 @@
       },
       {
         "value": "2550",
-        "why": "Adds 50 g for the half kilogram, as if 0.5 kg were 50 g on top of 2500."
+        "why": "Reads 2.5 kg as 2.55 kg, so 2550 g."
       },
       {
         "value": "25000",
@@ -1755,7 +1755,7 @@
       },
       {
         "value": "95",
-        "why": "Adds an extra hour and 35 minutes."
+        "why": "Counts the last 10 minutes twice: 75 + 10 + 10 = 95."
       },
       {
         "value": "105",
@@ -1860,7 +1860,7 @@
       },
       {
         "value": "6",
-        "why": "Works 19 ÷ 3 = 6 and ignores the add 4."
+        "why": "Works 19 ÷ 3, ignoring the add 4 and dropping the remainder, to get 6."
       },
       {
         "value": "15",
@@ -1906,7 +1906,7 @@
       },
       {
         "value": "32",
-        "why": "Divides 63 by 2 instead of 3."
+        "why": "Divides 63 by 2 instead of 3, then rounds 31.5 up to 32."
       }
     ]
   },
@@ -2158,7 +2158,7 @@
       },
       {
         "value": "18",
-        "why": "Gives the total of the three values."
+        "why": "Adds the two smallest values, 7 + 11 = 18, instead of subtracting."
       }
     ]
   },
@@ -2188,7 +2188,7 @@
     "distractors": [
       {
         "value": "18",
-        "why": "Divides the total 48 by 2 instead of 3."
+        "why": "Averages only the last two values: (16 + 20) ÷ 2 = 18."
       },
       {
         "value": "20",
@@ -2255,7 +2255,7 @@
       },
       {
         "value": "6",
-        "why": "Works 24 ÷ 4 = 6, using the wrong operation."
+        "why": "Adds the digits of 24, 2 + 4 = 6, instead of comparing the two groups."
       },
       {
         "value": "8",

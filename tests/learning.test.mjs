@@ -310,3 +310,21 @@ test('new bank stays within KS2 wording: no median, no decimal divisors', () => 
     assert.doesNotMatch(q.question,/÷ 0\.\d/,`Q${q.id}`);
   }
 });
+
+test('tutorial guidance does not contradict the new question types', () => {
+  const tutorialFor = id => getTutorial(questions.find(q => q.id === id));
+  for (const id of [251, 292, 338, 339, 340, 341, 393, 394, 395]) assert.equal(tutorialFor(id), null, `Q${id} should have no tutorial`);
+  assert.match(tutorialFor(311).steps.join(' '), /perimeter/i);
+  assert.match(tutorialFor(299).steps.join(' '), /isosceles/i);
+  assert.match(tutorialFor(301).steps.join(' '), /cannot be decided/);
+  assert.match(tutorialFor(307).steps.join(' '), /360°/);
+  assert.doesNotMatch(tutorialFor(211).steps.join(' '), /\b15\b|\b25\b/);
+});
+
+test('Walk Mode mistake notes describe working that gives the chosen value', () => {
+  const note = (id, value) => questions.find(q => q.id === id).distractor_notes[value];
+  assert.match(note(105, '18'), /\(16 \+ 20\) ÷ 2 = 18/);
+  assert.match(note(103, '18'), /7 \+ 11 = 18/);
+  assert.match(note(59, '80'), /4\/5 is 80%/);
+  assert.match(note(49, '8'), /5 \+ 3 = 8/);
+});
