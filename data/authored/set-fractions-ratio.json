@@ -1,0 +1,2363 @@
+[
+  {
+    "id": 256,
+    "topic": "fractions",
+    "subtopic": "shaded_fraction_grid",
+    "difficulty": 1,
+    "question": "The plan shows a patio made of square slabs. The grey slabs are shaded. What fraction of the patio is grey? Give your answer in its simplest form.",
+    "answer": "3/8",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": null,
+    "distractors": [
+      {
+        "value": "9/24",
+        "why": "Counts 9 shaded cells out of 24 but leaves the fraction as 9/24 instead of simplifying it."
+      },
+      {
+        "value": "9/15",
+        "why": "Compares shaded with unshaded (9 to 15) instead of shaded with the whole grid of 24."
+      },
+      {
+        "value": "5/8",
+        "why": "Counts the 15 unshaded cells instead of the 9 shaded cells, giving 15/24 simplified."
+      },
+      {
+        "value": "10/24",
+        "why": "Miscounts the shaded cells as 10 instead of 9, giving 10/24."
+      }
+    ],
+    "explanation": "Count the shaded cells: there are 9. The grid has 4 × 6 = 24 cells altogether. So 9/24 of the grid is shaded. Divide the top and bottom by 3 to get 3/8.",
+    "hints": [
+      "Count the shaded cells carefully, row by row. Then count how many cells are in the whole grid.",
+      "Write the shaded cells over the total cells, then divide both numbers by the largest number that goes into both."
+    ],
+    "pitfall": "Stopping at 9/24 without simplifying, or comparing shaded cells with unshaded ones.",
+    "diagram": {
+      "type": "shaded_grid",
+      "rows": 4,
+      "cols": 6,
+      "shaded": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "description": "A grid with 4 rows and 6 columns. Shaded cells: row 1 columns 1, 3, 4, 5; row 2 columns 3, 6; row 3 columns 4; row 4 columns 2, 3. 9 cells are shaded out of 24."
+    }
+  },
+  {
+    "id": 257,
+    "topic": "fractions",
+    "subtopic": "shaded_fraction_grid",
+    "difficulty": 2,
+    "question": "A quilt is sewn from 40 square patches. The shaded patches are red. What fraction of the quilt is red? Write your answer in its simplest form.",
+    "answer": "7/20",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": null,
+    "distractors": [
+      {
+        "value": "14/40",
+        "why": "Counts 14 shaded cells out of 40 but leaves the fraction as 14/40 instead of simplifying it."
+      },
+      {
+        "value": "14/26",
+        "why": "Compares shaded with unshaded (14 to 26) instead of shaded with the whole grid of 40."
+      },
+      {
+        "value": "13/20",
+        "why": "Counts the 26 unshaded cells instead of the 14 shaded cells, giving 26/40 simplified."
+      },
+      {
+        "value": "13/40",
+        "why": "Miscounts the shaded cells as 13 instead of 14, giving 13/40."
+      }
+    ],
+    "explanation": "Count the shaded cells: there are 14. The grid has 5 × 8 = 40 cells altogether. So 14/40 of the grid is shaded. Divide the top and bottom by 2 to get 7/20.",
+    "hints": [
+      "Count the shaded cells carefully, row by row. Then count how many cells are in the whole grid.",
+      "Write the shaded cells over the total cells, then divide both numbers by the largest number that goes into both."
+    ],
+    "pitfall": "Stopping at 14/40 without simplifying, or comparing shaded cells with unshaded ones.",
+    "diagram": {
+      "type": "shaded_grid",
+      "rows": 5,
+      "cols": 8,
+      "shaded": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "description": "A grid with 5 rows and 8 columns. Shaded cells: row 1 columns 6; row 2 columns 1, 3, 5, 7; row 3 columns 3, 5, 7, 8; row 4 columns 2, 4, 5, 7; row 5 columns 3. 14 cells are shaded out of 40."
+    }
+  },
+  {
+    "id": 258,
+    "topic": "fractions",
+    "subtopic": "shaded_fraction_grid",
+    "difficulty": 2,
+    "question": "A window has 36 square panes of glass. The shaded panes are blue. What fraction of the panes are blue? Give your fraction in its simplest form.",
+    "answer": "5/12",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": null,
+    "distractors": [
+      {
+        "value": "15/36",
+        "why": "Counts 15 shaded cells out of 36 but leaves the fraction as 15/36 instead of simplifying it."
+      },
+      {
+        "value": "15/21",
+        "why": "Compares shaded with unshaded (15 to 21) instead of shaded with the whole grid of 36."
+      },
+      {
+        "value": "7/12",
+        "why": "Counts the 21 unshaded cells instead of the 15 shaded cells, giving 21/36 simplified."
+      },
+      {
+        "value": "16/36",
+        "why": "Miscounts the shaded cells as 16 instead of 15, giving 16/36."
+      }
+    ],
+    "explanation": "Count the shaded cells: there are 15. The grid has 6 × 6 = 36 cells altogether. So 15/36 of the grid is shaded. Divide the top and bottom by 3 to get 5/12.",
+    "hints": [
+      "Count the shaded cells carefully, row by row. Then count how many cells are in the whole grid.",
+      "Write the shaded cells over the total cells, then divide both numbers by the largest number that goes into both."
+    ],
+    "pitfall": "Stopping at 15/36 without simplifying, or comparing shaded cells with unshaded ones.",
+    "diagram": {
+      "type": "shaded_grid",
+      "rows": 6,
+      "cols": 6,
+      "shaded": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "description": "A grid with 6 rows and 6 columns. Shaded cells: row 1 columns 2, 4; row 2 columns 3, 4, 6; row 3 columns 3, 5; row 4 columns 2, 5, 6; row 5 columns 6; row 6 columns 2, 4, 5, 6. 15 cells are shaded out of 36."
+    }
+  },
+  {
+    "id": 259,
+    "topic": "fractions",
+    "subtopic": "shaded_fraction_grid",
+    "difficulty": 2,
+    "question": "The grid shows seats in a small hall. The shaded seats have been booked. What fraction of the seats are booked? Give your answer in its simplest form.",
+    "answer": "3/5",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": null,
+    "distractors": [
+      {
+        "value": "18/30",
+        "why": "Counts 18 shaded cells out of 30 but leaves the fraction as 18/30 instead of simplifying it."
+      },
+      {
+        "value": "18/12",
+        "why": "Compares shaded with unshaded (18 to 12) instead of shaded with the whole grid of 30."
+      },
+      {
+        "value": "2/5",
+        "why": "Counts the 12 unshaded cells instead of the 18 shaded cells, giving 12/30 simplified."
+      },
+      {
+        "value": "17/30",
+        "why": "Miscounts the shaded cells as 17 instead of 18, giving 17/30."
+      }
+    ],
+    "explanation": "Count the shaded cells: there are 18. The grid has 5 × 6 = 30 cells altogether. So 18/30 of the grid is shaded. Divide the top and bottom by 6 to get 3/5.",
+    "hints": [
+      "Count the shaded cells carefully, row by row. Then count how many cells are in the whole grid.",
+      "Write the shaded cells over the total cells, then divide both numbers by the largest number that goes into both."
+    ],
+    "pitfall": "Stopping at 18/30 without simplifying, or comparing shaded cells with unshaded ones.",
+    "diagram": {
+      "type": "shaded_grid",
+      "rows": 5,
+      "cols": 6,
+      "shaded": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "description": "A grid with 5 rows and 6 columns. Shaded cells: row 1 columns 1, 2, 3, 4, 6; row 2 columns 2, 3, 5, 6; row 3 columns 1, 4, 6; row 4 columns 3, 4, 5; row 5 columns 1, 3, 4. 18 cells are shaded out of 30."
+    }
+  },
+  {
+    "id": 260,
+    "topic": "fractions",
+    "subtopic": "shaded_fraction_grid",
+    "difficulty": 2,
+    "question": "A gardener marks out an allotment in equal plots. The shaded plots have already been dug. What fraction of the allotment has been dug? Answer in its simplest form.",
+    "answer": "7/12",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": null,
+    "distractors": [
+      {
+        "value": "28/48",
+        "why": "Counts 28 shaded cells out of 48 but leaves the fraction as 28/48 instead of simplifying it."
+      },
+      {
+        "value": "28/20",
+        "why": "Compares shaded with unshaded (28 to 20) instead of shaded with the whole grid of 48."
+      },
+      {
+        "value": "5/12",
+        "why": "Counts the 20 unshaded cells instead of the 28 shaded cells, giving 20/48 simplified."
+      },
+      {
+        "value": "29/48",
+        "why": "Miscounts the shaded cells as 29 instead of 28, giving 29/48."
+      }
+    ],
+    "explanation": "Count the shaded cells: there are 28. The grid has 6 × 8 = 48 cells altogether. So 28/48 of the grid is shaded. Divide the top and bottom by 4 to get 7/12.",
+    "hints": [
+      "Count the shaded cells carefully, row by row. Then count how many cells are in the whole grid.",
+      "Write the shaded cells over the total cells, then divide both numbers by the largest number that goes into both."
+    ],
+    "pitfall": "Stopping at 28/48 without simplifying, or comparing shaded cells with unshaded ones.",
+    "diagram": {
+      "type": "shaded_grid",
+      "rows": 6,
+      "cols": 8,
+      "shaded": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "description": "A grid with 6 rows and 8 columns. Shaded cells: row 1 columns 2, 4, 5, 8; row 2 columns 3, 4, 6, 7, 8; row 3 columns 5, 6, 8; row 4 columns 1, 2, 3, 6, 7; row 5 columns 1, 2, 3, 4, 5, 8; row 6 columns 2, 3, 6, 7, 8. 28 cells are shaded out of 48."
+    }
+  },
+  {
+    "id": 261,
+    "topic": "fractions",
+    "subtopic": "shaded_fraction_grid",
+    "difficulty": 2,
+    "question": "Priya has eaten some squares of a chocolate bar. The shaded squares show the pieces she has eaten. What fraction of the bar has she eaten? Give your answer in its simplest form.",
+    "answer": "3/7",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": null,
+    "distractors": [
+      {
+        "value": "24/56",
+        "why": "Counts 24 shaded cells out of 56 but leaves the fraction as 24/56 instead of simplifying it."
+      },
+      {
+        "value": "24/32",
+        "why": "Compares shaded with unshaded (24 to 32) instead of shaded with the whole grid of 56."
+      },
+      {
+        "value": "4/7",
+        "why": "Counts the 32 unshaded cells instead of the 24 shaded cells, giving 32/56 simplified."
+      },
+      {
+        "value": "23/56",
+        "why": "Miscounts the shaded cells as 23 instead of 24, giving 23/56."
+      }
+    ],
+    "explanation": "Count the shaded cells: there are 24. The grid has 7 × 8 = 56 cells altogether. So 24/56 of the grid is shaded. Divide the top and bottom by 8 to get 3/7.",
+    "hints": [
+      "Count the shaded cells carefully, row by row. Then count how many cells are in the whole grid.",
+      "Write the shaded cells over the total cells, then divide both numbers by the largest number that goes into both."
+    ],
+    "pitfall": "Stopping at 24/56 without simplifying, or comparing shaded cells with unshaded ones.",
+    "diagram": {
+      "type": "shaded_grid",
+      "rows": 7,
+      "cols": 8,
+      "shaded": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "description": "A grid with 7 rows and 8 columns. Shaded cells: row 1 columns 2, 4, 5, 7; row 2 columns 1, 4, 6, 8; row 3 columns 6, 7, 8; row 4 columns 1, 5, 7; row 5 columns 1, 3, 4, 6, 7; row 6 columns 4, 8; row 7 columns 2, 5, 7. 24 cells are shaded out of 56."
+    }
+  },
+  {
+    "id": 262,
+    "topic": "fractions",
+    "subtopic": "shaded_fraction_grid",
+    "difficulty": 2,
+    "question": "In a board game, the shaded squares are the ones a player has landed on so far. What fraction of the board has been landed on? Give your answer in its simplest form.",
+    "answer": "17/25",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": null,
+    "distractors": [
+      {
+        "value": "34/50",
+        "why": "Counts 34 shaded cells out of 50 but leaves the fraction as 34/50 instead of simplifying it."
+      },
+      {
+        "value": "34/16",
+        "why": "Compares shaded with unshaded (34 to 16) instead of shaded with the whole grid of 50."
+      },
+      {
+        "value": "8/25",
+        "why": "Counts the 16 unshaded cells instead of the 34 shaded cells, giving 16/50 simplified."
+      },
+      {
+        "value": "35/50",
+        "why": "Miscounts the shaded cells as 35 instead of 34, giving 35/50."
+      }
+    ],
+    "explanation": "Count the shaded cells: there are 34. The grid has 5 × 10 = 50 cells altogether. So 34/50 of the grid is shaded. Divide the top and bottom by 2 to get 17/25.",
+    "hints": [
+      "Count the shaded cells carefully, row by row. Then count how many cells are in the whole grid.",
+      "Write the shaded cells over the total cells, then divide both numbers by the largest number that goes into both."
+    ],
+    "pitfall": "Stopping at 34/50 without simplifying, or comparing shaded cells with unshaded ones.",
+    "diagram": {
+      "type": "shaded_grid",
+      "rows": 5,
+      "cols": 10,
+      "shaded": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          9
+        ]
+      ],
+      "description": "A grid with 5 rows and 10 columns. Shaded cells: row 1 columns 6, 8, 9, 10; row 2 columns 1, 4, 5, 7, 9, 10; row 3 columns 2, 3, 5, 6, 8; row 4 columns 1, 2, 3, 4, 5, 7, 8, 9, 10; row 5 columns 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. 34 cells are shaded out of 50."
+    }
+  },
+  {
+    "id": 263,
+    "topic": "fractions",
+    "subtopic": "shaded_fraction_grid",
+    "difficulty": 2,
+    "question": "A car park has equal bays. The shaded bays are taken. What fraction of the bays are taken? Give your answer in its simplest form.",
+    "answer": "4/9",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": null,
+    "distractors": [
+      {
+        "value": "24/54",
+        "why": "Counts 24 shaded cells out of 54 but leaves the fraction as 24/54 instead of simplifying it."
+      },
+      {
+        "value": "24/30",
+        "why": "Compares shaded with unshaded (24 to 30) instead of shaded with the whole grid of 54."
+      },
+      {
+        "value": "5/9",
+        "why": "Counts the 30 unshaded cells instead of the 24 shaded cells, giving 30/54 simplified."
+      },
+      {
+        "value": "23/54",
+        "why": "Miscounts the shaded cells as 23 instead of 24, giving 23/54."
+      }
+    ],
+    "explanation": "Count the shaded cells: there are 24. The grid has 6 × 9 = 54 cells altogether. So 24/54 of the grid is shaded. Divide the top and bottom by 6 to get 4/9.",
+    "hints": [
+      "Count the shaded cells carefully, row by row. Then count how many cells are in the whole grid.",
+      "Write the shaded cells over the total cells, then divide both numbers by the largest number that goes into both."
+    ],
+    "pitfall": "Stopping at 24/54 without simplifying, or comparing shaded cells with unshaded ones.",
+    "diagram": {
+      "type": "shaded_grid",
+      "rows": 6,
+      "cols": 9,
+      "shaded": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "description": "A grid with 6 rows and 9 columns. Shaded cells: row 1 columns 4; row 2 columns 2, 3, 4, 7; row 3 columns 1, 2, 6, 9; row 4 columns 1, 3, 4, 5, 6, 8, 9; row 5 columns 4, 6, 9; row 6 columns 2, 3, 5, 6, 9. 24 cells are shaded out of 54."
+    }
+  },
+  {
+    "id": 264,
+    "topic": "fractions",
+    "subtopic": "shaded_fraction_grid",
+    "difficulty": 2,
+    "question": "A wall is covered in equal tiles and the shaded tiles are patterned. What fraction of the tiles are patterned? Give your answer in its simplest form.",
+    "answer": "9/14",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": null,
+    "distractors": [
+      {
+        "value": "27/42",
+        "why": "Counts 27 shaded cells out of 42 but leaves the fraction as 27/42 instead of simplifying it."
+      },
+      {
+        "value": "27/15",
+        "why": "Compares shaded with unshaded (27 to 15) instead of shaded with the whole grid of 42."
+      },
+      {
+        "value": "5/14",
+        "why": "Counts the 15 unshaded cells instead of the 27 shaded cells, giving 15/42 simplified."
+      },
+      {
+        "value": "28/42",
+        "why": "Miscounts the shaded cells as 28 instead of 27, giving 28/42."
+      }
+    ],
+    "explanation": "Count the shaded cells: there are 27. The grid has 6 × 7 = 42 cells altogether. So 27/42 of the grid is shaded. Divide the top and bottom by 3 to get 9/14.",
+    "hints": [
+      "Count the shaded cells carefully, row by row. Then count how many cells are in the whole grid.",
+      "Write the shaded cells over the total cells, then divide both numbers by the largest number that goes into both."
+    ],
+    "pitfall": "Stopping at 27/42 without simplifying, or comparing shaded cells with unshaded ones.",
+    "diagram": {
+      "type": "shaded_grid",
+      "rows": 6,
+      "cols": 7,
+      "shaded": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "description": "A grid with 6 rows and 7 columns. Shaded cells: row 1 columns 1, 4, 5, 6, 7; row 2 columns 1, 2, 3, 5, 7; row 3 columns 1, 3, 5, 6; row 4 columns 3, 4, 5, 6; row 5 columns 3, 4, 6; row 6 columns 1, 3, 4, 5, 6, 7. 27 cells are shaded out of 42."
+    }
+  },
+  {
+    "id": 265,
+    "topic": "fractions",
+    "subtopic": "fraction_multiply_simplify",
+    "difficulty": 2,
+    "question": "Mia has a tub of paint that is 9/10 full. She uses 5/6 of the paint in the tub. What fraction of a full tub does she use? Give your answer in its simplest form.",
+    "answer": "3/4",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "5/6*9/10",
+    "distractors": [
+      {
+        "value": "45/60",
+        "why": "Multiplies the tops (5 × 9 = 45) and the bottoms (6 × 10 = 60) but does not simplify."
+      },
+      {
+        "value": "15/20",
+        "why": "Cancels a factor of 3 from 45/60 but stops before the fraction is fully simplified."
+      },
+      {
+        "value": "1/15",
+        "why": "Subtracts instead of multiplying: 9/10 − 5/6 = 27/30 − 25/30 = 2/30 = 1/15."
+      },
+      {
+        "value": "25/27",
+        "why": "Divides instead of multiplying: 5/6 ÷ 9/10 = 5/6 × 10/9 = 50/54 = 25/27."
+      }
+    ],
+    "explanation": "Of 9/10 of a tub, she uses 5/6. Multiply: 5/6 × 9/10 = 45/60. Both numbers divide by 15, so 45/60 = 3/4. You could cancel first: 9 and 6 share a factor of 3, and 5 and 10 share a factor of 5.",
+    "hints": [
+      "\"Of\" means multiply the two fractions.",
+      "Multiply the numerators, multiply the denominators, then simplify. Cancelling before you multiply keeps the numbers small."
+    ],
+    "pitfall": "Leaving the answer as 45/60 or 15/20 when the question asks for simplest form.",
+    "diagram": null
+  },
+  {
+    "id": 266,
+    "topic": "fractions",
+    "subtopic": "fraction_multiply_simplify",
+    "difficulty": 2,
+    "question": "A farmer plants 3/8 of a field with wheat. So far 4/9 of the wheat has been cut. What fraction of the whole field has been cut? Give your answer in its simplest form.",
+    "answer": "1/6",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "4/9*3/8",
+    "distractors": [
+      {
+        "value": "12/72",
+        "why": "Multiplies 4 × 3 = 12 and 9 × 8 = 72 and stops without simplifying."
+      },
+      {
+        "value": "6/36",
+        "why": "Halves 12/72 once but does not finish simplifying."
+      },
+      {
+        "value": "7/17",
+        "why": "Adds the tops (4 + 3 = 7) and the bottoms (9 + 8 = 17) instead of multiplying."
+      },
+      {
+        "value": "32/27",
+        "why": "Divides: 4/9 ÷ 3/8 = 4/9 × 8/3 = 32/27."
+      }
+    ],
+    "explanation": "The cut part is 4/9 of 3/8 of the field. Multiply: 4/9 × 3/8 = 12/72. Divide top and bottom by 12 to get 1/6. Cancelling first (4 with 8, and 3 with 9) also gives 1/3 × 1/2 = 1/6.",
+    "hints": [
+      "You need a fraction of a fraction, so multiply.",
+      "Look for numbers on the top that share a factor with numbers on the bottom, and cancel before multiplying."
+    ],
+    "pitfall": "Adding the tops and bottoms, or stopping before the fraction is fully simplified.",
+    "diagram": null
+  },
+  {
+    "id": 267,
+    "topic": "fractions",
+    "subtopic": "fraction_multiply_simplify",
+    "difficulty": 3,
+    "question": "A bag of marbles has 2/3 glass marbles. Of the glass marbles, 9/10 are blue, and 5/6 of the blue glass marbles are striped. What fraction of all the marbles are striped blue glass marbles? Give your answer in its simplest form.",
+    "answer": "1/2",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "2/3*9/10*5/6",
+    "distractors": [
+      {
+        "value": "90/180",
+        "why": "Multiplies the three tops (2 × 9 × 5 = 90) and the three bottoms (3 × 10 × 6 = 180) and does not simplify."
+      },
+      {
+        "value": "30/60",
+        "why": "Divides 90/180 by 3 only, so the fraction is still not in simplest form."
+      },
+      {
+        "value": "3/5",
+        "why": "Only does the first two steps: 2/3 × 9/10 = 18/30 = 3/5, leaving out the 5/6."
+      },
+      {
+        "value": "16/19",
+        "why": "Adds the tops (2 + 9 + 5 = 16) and bottoms (3 + 10 + 6 = 19) instead of multiplying."
+      }
+    ],
+    "explanation": "Each \"of\" means multiply. 2/3 × 9/10 × 5/6 = 90/180. Dividing both numbers by 90 gives 1/2. Cancelling as you go is quicker: 9 cancels with 3 and 6, and 5 cancels with 10.",
+    "hints": [
+      "Every \"of\" is a multiplication, and there are three fractions this time.",
+      "Cancel common factors across the whole product before you multiply, to keep the numbers small."
+    ],
+    "pitfall": "Stopping after two of the three fractions, or not simplifying.",
+    "diagram": null
+  },
+  {
+    "id": 268,
+    "topic": "fractions",
+    "subtopic": "fraction_multiply_simplify",
+    "difficulty": 1,
+    "question": "Sara has 5/8 of a bar of chocolate. She gives 2/5 of her piece to her brother. What fraction of the whole bar does her brother get? Give your answer in its simplest form.",
+    "answer": "1/4",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "2/5*5/8",
+    "distractors": [
+      {
+        "value": "10/40",
+        "why": "Multiplies 2 × 5 = 10 and 5 × 8 = 40 and does not simplify."
+      },
+      {
+        "value": "5/20",
+        "why": "Halves 10/40 but does not simplify fully."
+      },
+      {
+        "value": "16/25",
+        "why": "Divides instead of multiplying: 2/5 ÷ 5/8 = 2/5 × 8/5 = 16/25."
+      },
+      {
+        "value": "7/13",
+        "why": "Adds tops (2 + 5 = 7) and bottoms (5 + 8 = 13)."
+      }
+    ],
+    "explanation": "Her brother gets 2/5 of 5/8. Multiply: 2/5 × 5/8 = 10/40. Divide both by 10 to get 1/4. The 5s cancel straight away, leaving 2/8 = 1/4.",
+    "hints": [
+      "\"Of\" tells you which operation to use.",
+      "Multiply the fractions, then simplify. Look for a number that appears on the top of one and the bottom of the other."
+    ],
+    "pitfall": "Giving 10/40 or 5/20 instead of the simplest form.",
+    "diagram": null
+  },
+  {
+    "id": 269,
+    "topic": "fractions",
+    "subtopic": "fraction_multiply_simplify",
+    "difficulty": 2,
+    "question": "Work out 3/4 of 8/15. Give your answer as a fraction in its simplest form.",
+    "answer": "2/5",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "3/4*8/15",
+    "distractors": [
+      {
+        "value": "24/60",
+        "why": "Multiplies 3 × 8 = 24 and 4 × 15 = 60 and leaves it unsimplified."
+      },
+      {
+        "value": "12/30",
+        "why": "Halves 24/60 once and stops."
+      },
+      {
+        "value": "32/45",
+        "why": "Divides instead: 8/15 ÷ 3/4 = 8/15 × 4/3 = 32/45."
+      },
+      {
+        "value": "11/19",
+        "why": "Adds the tops (3 + 8 = 11) and the bottoms (4 + 15 = 19)."
+      }
+    ],
+    "explanation": "3/4 of 8/15 means 3/4 × 8/15 = 24/60. Both numbers divide by 12, giving 2/5. By cancelling first, 4 goes into 8 twice and 3 goes into 15 five times, so you get 1 × 2 over 5 × 1.",
+    "hints": [
+      "Turn \"of\" into a multiplication sign.",
+      "Multiply across, then simplify; or cancel 4 with 8 and 3 with 15 first."
+    ],
+    "pitfall": "Not simplifying, or adding the tops and bottoms.",
+    "diagram": null
+  },
+  {
+    "id": 270,
+    "topic": "fractions",
+    "subtopic": "mixed_numbers",
+    "difficulty": 2,
+    "question": "Aisha runs 1 5/6 km on Saturday and 2 3/4 km on Sunday. How far does she run altogether? Give your answer as a mixed number of kilometres.",
+    "answer": "4 7/12",
+    "unit": null,
+    "answer_format": null,
+    "check": "1+5/6+2+3/4",
+    "distractors": [
+      {
+        "value": "4 1/3",
+        "why": "Writes 3/4 as 6/12 (bottom times 3 but top only times 2), so adds 10/12 + 6/12 = 16/12 and gets 4 1/3."
+      },
+      {
+        "value": "3 7/12",
+        "why": "Adds the fractions to get 19/12 = 1 7/12 but forgets to carry the 1 into the whole numbers."
+      },
+      {
+        "value": "4 1/12",
+        "why": "Changes 3/4 to twelfths by multiplying only the bottom, giving 3/12, so adds 10/12 + 3/12 = 13/12 and gets 4 1/12."
+      },
+      {
+        "value": "3 8/10",
+        "why": "Adds the tops (5 + 3 = 8) and the bottoms (6 + 4 = 10) of the fractions and the whole numbers separately."
+      }
+    ],
+    "explanation": "Add the whole numbers: 1 + 2 = 3. Add the fractions with a common denominator of 12: 5/6 = 10/12 and 3/4 = 9/12, so the sum is 19/12 = 1 7/12. Then 3 + 1 7/12 = 4 7/12.",
+    "hints": [
+      "Split each mixed number into a whole number and a fraction.",
+      "Twelfths work for both 6 and 4. If the fractions make more than 1, carry it into the wholes."
+    ],
+    "pitfall": "Forgetting to carry the extra whole from the fraction total.",
+    "diagram": null
+  },
+  {
+    "id": 271,
+    "topic": "fractions",
+    "subtopic": "mixed_numbers",
+    "difficulty": 3,
+    "question": "A ribbon is 5 1/4 m long. A piece 2 2/3 m long is cut off. How much ribbon is left? Give your answer as a mixed number of metres.",
+    "answer": "2 7/12",
+    "unit": null,
+    "answer_format": null,
+    "check": "5+1/4-2-2/3",
+    "distractors": [
+      {
+        "value": "3 7/12",
+        "why": "Borrows 1 from the 5 and makes 15/12 − 8/12 = 7/12 but forgets to reduce 5 − 2 = 3 to 2 after borrowing."
+      },
+      {
+        "value": "2 5/12",
+        "why": "Subtracts the wholes (5 − 2 = 3, minus 1 for borrowing) correctly but takes the smaller fraction from the larger: 2/3 − 1/4 = 5/12."
+      },
+      {
+        "value": "3 5/12",
+        "why": "Subtracts the wholes 5 − 2 = 3 and, as 1/4 is smaller than 2/3, turns the fraction around: 2/3 − 1/4 = 5/12."
+      },
+      {
+        "value": "7 11/12",
+        "why": "Adds instead of subtracting: 5 + 2 = 7 and 3/12 + 8/12 = 11/12."
+      }
+    ],
+    "explanation": "Change both to twelfths: 5 3/12 − 2 8/12. You cannot take 8/12 from 3/12, so borrow one whole: 4 15/12 − 2 8/12. Subtract wholes 4 − 2 = 2 and fractions 15/12 − 8/12 = 7/12. The answer is 2 7/12.",
+    "hints": [
+      "The fraction part of the first number is smaller than that of the second. What can you do about that?",
+      "Write 5 1/4 as 4 and 15/12 (a whole is 12/12), then subtract the wholes and the fractions separately."
+    ],
+    "pitfall": "Taking the small fraction from the big one the wrong way round, instead of borrowing.",
+    "diagram": null
+  },
+  {
+    "id": 272,
+    "topic": "fractions",
+    "subtopic": "mixed_numbers",
+    "difficulty": 3,
+    "question": "A rectangular mat measures 2 2/5 m by 1 7/8 m. What is its area in square metres? Give your answer as a mixed number.",
+    "answer": "4 1/2",
+    "unit": null,
+    "answer_format": null,
+    "check": "12/5*15/8",
+    "distractors": [
+      {
+        "value": "2 7/20",
+        "why": "Multiplies the whole numbers (2 × 1 = 2) and the fractions (2/5 × 7/8 = 7/20) separately, missing the cross terms."
+      },
+      {
+        "value": "1 7/25",
+        "why": "Turns the second fraction upside down: 12/5 × 8/15 = 96/75 = 1 7/25."
+      },
+      {
+        "value": "4 11/40",
+        "why": "Adds the lengths instead of multiplying them: 2 2/5 + 1 7/8 = 4 11/40."
+      },
+      {
+        "value": "5 1/10",
+        "why": "Writes 1 7/8 as 17/8 instead of 15/8, so works out 12/5 × 17/8 = 204/40 = 5 1/10."
+      }
+    ],
+    "explanation": "Change to improper fractions: 2 2/5 = 12/5 and 1 7/8 = 15/8. Area = 12/5 × 15/8 = 180/40. Cancel by 20 to get 9/2, which is 4 1/2 square metres.",
+    "hints": [
+      "Area of a rectangle is length times width. First turn each mixed number into an improper fraction.",
+      "2 2/5 = 12/5. For 1 7/8, multiply 1 by 8 and add 7."
+    ],
+    "pitfall": "Multiplying whole parts and fraction parts separately, which misses two of the four parts.",
+    "diagram": null
+  },
+  {
+    "id": 273,
+    "topic": "fractions",
+    "subtopic": "fraction_add_subtract_unlike",
+    "difficulty": 1,
+    "question": "A baker uses 3/5 kg of flour for bread and 1/4 kg for rolls. How many kilograms of flour does the baker use altogether?",
+    "answer": "17/20",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "3/5+1/4",
+    "distractors": [
+      {
+        "value": "4/9",
+        "why": "Adds the tops (3 + 1 = 4) and the bottoms (5 + 4 = 9)."
+      },
+      {
+        "value": "4/5",
+        "why": "Writes 3/5 as 12/20 but writes 1/4 as 4/20, then adds to get 16/20 = 4/5."
+      },
+      {
+        "value": "1/5",
+        "why": "Changes to twentieths but adds only the original tops: 3 + 1 = 4, so 4/20 = 1/5."
+      },
+      {
+        "value": "7/20",
+        "why": "Subtracts instead of adding: 12/20 − 5/20 = 7/20."
+      }
+    ],
+    "explanation": "The lowest common denominator of 5 and 4 is 20. 3/5 = 12/20 and 1/4 = 5/20. Add: 12/20 + 5/20 = 17/20 kg. This does not simplify.",
+    "hints": [
+      "You cannot add fractions until the bottoms match.",
+      "Find a number that both 5 and 4 go into, and change both fractions."
+    ],
+    "pitfall": "Adding tops and bottoms separately.",
+    "diagram": null
+  },
+  {
+    "id": 274,
+    "topic": "fractions",
+    "subtopic": "fraction_add_subtract_unlike",
+    "difficulty": 2,
+    "question": "A water tank is 7/8 full. After a hot week it is only 2/3 full. What fraction of the tank has been used?",
+    "answer": "5/24",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "7/8-2/3",
+    "distractors": [
+      {
+        "value": "1",
+        "why": "Subtracts the tops (7 − 2 = 5) and the bottoms (8 − 3 = 5), giving 5/5 = 1."
+      },
+      {
+        "value": "37/24",
+        "why": "Adds instead of subtracting: 21/24 + 16/24 = 37/24."
+      },
+      {
+        "value": "7/12",
+        "why": "Multiplies instead of subtracting: 7/8 × 2/3 = 14/24 = 7/12."
+      },
+      {
+        "value": "13/24",
+        "why": "Writes 2/3 as 8/24 (multiplies the 2 by 4, not 8), so 21/24 − 8/24 = 13/24."
+      }
+    ],
+    "explanation": "Use 24ths, because 8 and 3 both go into 24. Then 7/8 = 21/24 and 2/3 = 16/24. The amount used is the difference, 21/24 − 16/24 = 5/24 of the tank.",
+    "hints": [
+      "Find a common multiple of 8 and 3.",
+      "Convert both fractions to 24ths, then subtract the tops."
+    ],
+    "pitfall": "Subtracting the tops and the bottoms separately.",
+    "diagram": null
+  },
+  {
+    "id": 275,
+    "topic": "fractions",
+    "subtopic": "fraction_add_subtract_unlike",
+    "difficulty": 2,
+    "question": "Priya spends 1/3 of her savings on a book and 1/4 of her savings on a game. What fraction of her savings is left?",
+    "answer": "5/12",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "1-1/3-1/4",
+    "distractors": [
+      {
+        "value": "7/12",
+        "why": "Adds 1/3 + 1/4 = 7/12 to find what was spent, and gives that as the amount left."
+      },
+      {
+        "value": "5/7",
+        "why": "Adds the tops and bottoms to get 2/7 spent, then does 1 − 2/7 = 5/7."
+      },
+      {
+        "value": "1/12",
+        "why": "Subtracts the two fractions from each other (1/3 − 1/4) instead of from the whole."
+      },
+      {
+        "value": "2/7",
+        "why": "Adds the tops (1 + 1) and bottoms (3 + 4) to get 2/7 and stops."
+      }
+    ],
+    "explanation": "The amount spent is 1/3 + 1/4 = 4/12 + 3/12 = 7/12. The fraction left is 1 − 7/12 = 12/12 − 7/12 = 5/12.",
+    "hints": [
+      "First find what fraction she has spent altogether.",
+      "The whole savings is 1, or 12/12. Take away the fraction spent."
+    ],
+    "pitfall": "Stopping at the amount spent, and not subtracting it from 1.",
+    "diagram": null
+  },
+  {
+    "id": 276,
+    "topic": "fractions",
+    "subtopic": "fraction_add_subtract_unlike",
+    "difficulty": 2,
+    "question": "A jug holds 2/3 litre of water. Then 3/4 litre is poured in and 1/2 litre is poured out. How many litres of water are now in the jug?",
+    "answer": "11/12",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "2/3+3/4-1/2",
+    "distractors": [
+      {
+        "value": "23/12",
+        "why": "Adds all three amounts, including the water poured out: 8/12 + 9/12 + 6/12 = 23/12."
+      },
+      {
+        "value": "17/12",
+        "why": "Adds 8/12 + 9/12 = 17/12 and forgets to take away the 1/2 litre."
+      },
+      {
+        "value": "4/9",
+        "why": "Adds and subtracts the tops (2 + 3 − 1 = 4) and adds all the bottoms (3 + 4 + 2 = 9)."
+      },
+      {
+        "value": "7/12",
+        "why": "Gets the signs muddled: 3/4 − 2/3 = 1/12, then adds 1/2 = 6/12 to get 7/12."
+      }
+    ],
+    "explanation": "Use twelfths: 2/3 = 8/12, 3/4 = 9/12, 1/2 = 6/12. Then 8/12 + 9/12 = 17/12, and 17/12 − 6/12 = 11/12 litre.",
+    "hints": [
+      "Pouring in means add, and pouring out means subtract. Use one common denominator for all three.",
+      "3, 4 and 2 all go into 12."
+    ],
+    "pitfall": "Adding the amount poured out, or forgetting a step.",
+    "diagram": null
+  },
+  {
+    "id": 277,
+    "topic": "fractions",
+    "subtopic": "fraction_divide_whole",
+    "difficulty": 1,
+    "question": "Four friends share 2/3 of a pizza equally. What fraction of the whole pizza does each friend get? Give your answer in its simplest form.",
+    "answer": "1/6",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "2/3/4",
+    "distractors": [
+      {
+        "value": "2/12",
+        "why": "Correctly multiplies the bottom by 4 to get 2/12 but does not simplify it."
+      },
+      {
+        "value": "8/3",
+        "why": "Multiplies by 4 instead of dividing: 2/3 × 4 = 8/3."
+      },
+      {
+        "value": "6",
+        "why": "Divides 4 by 2/3 (the wrong way round): 4 × 3/2 = 6."
+      },
+      {
+        "value": "1/2",
+        "why": "Divides only the top, 2 ÷ 4 = 1/2, and ignores the 3."
+      }
+    ],
+    "explanation": "Dividing by 4 is the same as multiplying by 1/4. So 2/3 ÷ 4 = 2/12, which simplifies to 1/6. Each friend gets 1/6 of the whole pizza.",
+    "hints": [
+      "Sharing equally between 4 means dividing by 4.",
+      "Dividing a fraction by a whole number makes the bottom number 4 times bigger."
+    ],
+    "pitfall": "Multiplying by 4 instead of dividing.",
+    "diagram": null
+  },
+  {
+    "id": 278,
+    "topic": "fractions",
+    "subtopic": "fraction_divide_whole",
+    "difficulty": 3,
+    "question": "A cafe has 6 litres of soup. Each bowl holds 3/4 of a litre. How many bowls can be filled?",
+    "answer": "8",
+    "unit": null,
+    "answer_format": null,
+    "check": "6/(3/4)",
+    "distractors": [
+      {
+        "value": "4 1/2",
+        "why": "Multiplies instead of dividing: 6 × 3/4 = 18/4 = 4 1/2."
+      },
+      {
+        "value": "1/8",
+        "why": "Divides the wrong way round: 3/4 ÷ 6 = 3/24 = 1/8."
+      },
+      {
+        "value": "5 1/4",
+        "why": "Subtracts: 6 − 3/4 = 5 1/4."
+      },
+      {
+        "value": "2",
+        "why": "Divides 6 by the 3 on top of the fraction and ignores the 4."
+      }
+    ],
+    "explanation": "Count how many 3/4s fit into 6. In every litre there are 4/3 of a bowl, so 6 litres gives 6 × 4/3 = 8. Or: there are 24 quarter-litres in 6 litres and each bowl takes 3 of them, so 24 ÷ 3 = 8.",
+    "hints": [
+      "How many quarter litres are there in 6 litres?",
+      "Each bowl uses 3 quarter litres. How many groups of 3 are in your total?"
+    ],
+    "pitfall": "Multiplying 6 by 3/4, which gives a smaller number when you expect more bowls than litres.",
+    "diagram": null
+  },
+  {
+    "id": 279,
+    "topic": "fractions",
+    "subtopic": "fraction_divide_whole",
+    "difficulty": 3,
+    "question": "3/4 of a litre of juice is poured equally into 9 glasses. Ali drinks the juice from 2 of the glasses. What fraction of a litre does Ali drink? Give your answer in its simplest form.",
+    "answer": "1/6",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "3/4/9*2",
+    "distractors": [
+      {
+        "value": "2/12",
+        "why": "Finds one glass as 3/36 = 1/12 and doubles to 2/12, but does not simplify."
+      },
+      {
+        "value": "1/12",
+        "why": "Works out the amount in one glass, 3/4 ÷ 9 = 1/12, and forgets Ali drinks two."
+      },
+      {
+        "value": "3/8",
+        "why": "Divides 3/4 by 2 instead of by 9."
+      },
+      {
+        "value": "27/2",
+        "why": "Multiplies by 9 and by 2: 3/4 × 9 × 2 = 54/4 = 27/2."
+      }
+    ],
+    "explanation": "One glass holds 3/4 ÷ 9 = 3/36 = 1/12 litre. Ali drinks 2 glasses: 2 × 1/12 = 2/12 = 1/6 litre.",
+    "hints": [
+      "First find the amount of juice in one glass.",
+      "Dividing by 9 is the same as multiplying by 1/9. Then use 2 glasses."
+    ],
+    "pitfall": "Dividing by the wrong number, or answering for one glass only.",
+    "diagram": null
+  },
+  {
+    "id": 280,
+    "topic": "ratio",
+    "subtopic": "ratio_share_pence",
+    "difficulty": 2,
+    "question": "Asha and Ben buy a present that costs £18.60. They share the cost in the ratio 3 : 2 (Asha : Ben). How much does each of them pay?",
+    "answer": "Asha pays £11.16 and Ben pays £7.44",
+    "unit": null,
+    "answer_format": null,
+    "check": [
+      "18.6/5*3",
+      "18.6/5*2"
+    ],
+    "distractors": [
+      {
+        "value": "Asha pays £7.44 and Ben pays £11.16",
+        "why": "Works out the correct amounts but gives the bigger share to Ben, reversing the ratio."
+      },
+      {
+        "value": "Asha pays £9.30 and Ben pays £9.30",
+        "why": "Splits the £18.60 equally and ignores the ratio."
+      },
+      {
+        "value": "Asha pays £10.80 and Ben pays £7.20",
+        "why": "Shares only the £18, ignoring the 60p: £18 ÷ 5 = £3.60 a part."
+      },
+      {
+        "value": "Asha pays £6.20 and Ben pays £9.30",
+        "why": "Divides £18.60 by 3 for Asha and by 2 for Ben."
+      }
+    ],
+    "explanation": "There are 3 + 2 = 5 parts. One part is £18.60 ÷ 5 = £3.72. Asha pays 3 × £3.72 = £11.16 and Ben pays 2 × £3.72 = £7.44. Check: £11.16 + £7.44 = £18.60.",
+    "hints": [
+      "Add the ratio numbers to find how many equal parts there are.",
+      "Divide the total by the number of parts, then multiply by each person's number. Asha has the bigger share."
+    ],
+    "pitfall": "Swapping the two shares, or dividing the total by each ratio number separately.",
+    "diagram": null
+  },
+  {
+    "id": 281,
+    "topic": "ratio",
+    "subtopic": "ratio_share_pence",
+    "difficulty": 2,
+    "question": "Cara and Dev share the £94.50 cost of a trip in the ratio 2 : 7 (Cara : Dev). How much does each of them pay?",
+    "answer": "Cara pays £21.00 and Dev pays £73.50",
+    "unit": null,
+    "answer_format": null,
+    "check": [
+      "94.5/9*2",
+      "94.5/9*7"
+    ],
+    "distractors": [
+      {
+        "value": "Cara pays £73.50 and Dev pays £21.00",
+        "why": "Swaps the shares, giving the larger share to Cara."
+      },
+      {
+        "value": "Cara pays £47.25 and Dev pays £13.50",
+        "why": "Divides £94.50 by 2 for Cara and by 7 for Dev."
+      },
+      {
+        "value": "Cara pays £20.00 and Dev pays £70.00",
+        "why": "Ignores the 50p: £94 ÷ 9 is about £10 a part, so 2 × £10 and 7 × £10."
+      },
+      {
+        "value": "Cara pays £21.00 and Dev pays £10.50",
+        "why": "Finds one part (£10.50) and multiplies it by 2 for Cara but forgets to multiply by 7 for Dev."
+      }
+    ],
+    "explanation": "There are 2 + 7 = 9 parts. One part is £94.50 ÷ 9 = £10.50. Cara pays 2 × £10.50 = £21.00 and Dev pays 7 × £10.50 = £73.50. Together that is £94.50.",
+    "hints": [
+      "Find the total number of parts first.",
+      "£94.50 ÷ 9 gives one part. Cara has 2 of them and Dev has 7."
+    ],
+    "pitfall": "Giving each person one part, or ignoring the pence.",
+    "diagram": null
+  },
+  {
+    "id": 282,
+    "topic": "ratio",
+    "subtopic": "ratio_share_pence",
+    "difficulty": 3,
+    "question": "£62.40 is shared between three cousins in the ratio 2 : 3 : 7. How much more does the cousin with the biggest share get than the cousin with the smallest share?",
+    "answer": "£26.00",
+    "unit": "£",
+    "answer_format": null,
+    "check": "62.4/12*(7-2)",
+    "distractors": [
+      {
+        "value": "£36.40",
+        "why": "Finds the largest share (7 × £5.20) but does not take away the smallest share."
+      },
+      {
+        "value": "£5.20",
+        "why": "Gives the value of one part rather than the difference of 5 parts."
+      },
+      {
+        "value": "£31.20",
+        "why": "Takes one part (£5.20) from the largest share instead of the smallest share, 2 parts."
+      },
+      {
+        "value": "£5.00",
+        "why": "Subtracts the ratio numbers (7 − 2 = 5) and writes it as pounds."
+      }
+    ],
+    "explanation": "There are 2 + 3 + 7 = 12 parts, so one part is £62.40 ÷ 12 = £5.20. The difference between the biggest and smallest shares is 7 − 2 = 5 parts: 5 × £5.20 = £26.00.",
+    "hints": [
+      "You do not need the middle share, but you do need the value of one part.",
+      "The difference is a number of parts. Multiply it by the value of one part."
+    ],
+    "pitfall": "Giving the number of parts rather than the money.",
+    "diagram": null
+  },
+  {
+    "id": 283,
+    "topic": "ratio",
+    "subtopic": "ratio_share_pence",
+    "difficulty": 2,
+    "question": "Jo and Ken win £13.65 in a raffle and share it in the ratio 5 : 8 (Jo : Ken). How much does each of them get?",
+    "answer": "Jo gets £5.25 and Ken gets £8.40",
+    "unit": null,
+    "answer_format": null,
+    "check": [
+      "13.65/13*5",
+      "13.65/13*8"
+    ],
+    "distractors": [
+      {
+        "value": "Jo gets £8.40 and Ken gets £5.25",
+        "why": "Reverses the shares, giving Ken the smaller amount."
+      },
+      {
+        "value": "Jo gets £5.25 and Ken gets £1.05",
+        "why": "Finds the correct amount for Jo, then gives Ken only one part (£1.05)."
+      },
+      {
+        "value": "Jo gets £6.83 and Ken gets £6.82",
+        "why": "Splits the £13.65 as equally as possible and ignores the ratio."
+      },
+      {
+        "value": "Jo gets £2.73 and Ken gets £10.92",
+        "why": "Divides £13.65 by 5 for Jo and gives Ken the rest."
+      }
+    ],
+    "explanation": "There are 5 + 8 = 13 parts. One part is £13.65 ÷ 13 = £1.05. Jo gets 5 × £1.05 = £5.25 and Ken gets 8 × £1.05 = £8.40.",
+    "hints": [
+      "How many equal parts are there in total? Does 13 go into 13.65 neatly?",
+      "One part is £1.05. Jo has 5 parts, Ken has 8."
+    ],
+    "pitfall": "Dividing by the wrong number of parts, or reversing the shares.",
+    "diagram": null
+  },
+  {
+    "id": 284,
+    "topic": "ratio",
+    "subtopic": "ratio_share_pence",
+    "difficulty": 1,
+    "question": "Zoe and Yusuf earn £7.20 washing cars and share it in the ratio 1 : 5 (Zoe : Yusuf). How much does Yusuf get?",
+    "answer": "£6.00",
+    "unit": "£",
+    "answer_format": null,
+    "check": "7.2/6*5",
+    "distractors": [
+      {
+        "value": "£1.20",
+        "why": "Finds the value of one part, which is Zoe's share, not Yusuf's."
+      },
+      {
+        "value": "£3.60",
+        "why": "Halves the total, ignoring the ratio."
+      },
+      {
+        "value": "£1.44",
+        "why": "Divides £7.20 by 5 and treats that as the answer."
+      },
+      {
+        "value": "£9.00",
+        "why": "Uses 5 − 1 = 4 parts: £7.20 ÷ 4 = £1.80 per part, then 5 × £1.80 = £9.00."
+      }
+    ],
+    "explanation": "There are 1 + 5 = 6 parts. One part is £7.20 ÷ 6 = £1.20. Yusuf has 5 parts: 5 × £1.20 = £6.00.",
+    "hints": [
+      "Add the numbers in the ratio to see how many equal parts there are.",
+      "Divide £7.20 by that number, then multiply by Yusuf's number."
+    ],
+    "pitfall": "Dividing by 5 or by 4 instead of by 1 + 5 = 6.",
+    "diagram": null
+  },
+  {
+    "id": 285,
+    "topic": "ratio",
+    "subtopic": "ratio_share_pence",
+    "difficulty": 2,
+    "question": "Lin and Max split the £29.70 bill for a meal in the ratio 4 : 5 (Lin : Max). How much does each of them pay?",
+    "answer": "Lin pays £13.20 and Max pays £16.50",
+    "unit": null,
+    "answer_format": null,
+    "check": [
+      "29.7/9*4",
+      "29.7/9*5"
+    ],
+    "distractors": [
+      {
+        "value": "Lin pays £16.50 and Max pays £13.20",
+        "why": "Reverses the shares."
+      },
+      {
+        "value": "Lin pays £14.85 and Max pays £14.85",
+        "why": "Halves the bill and ignores the ratio."
+      },
+      {
+        "value": "Lin pays £13.20 and Max pays £3.30",
+        "why": "Multiplies one part (£3.30) by 4 for Lin but forgets to multiply by 5 for Max."
+      },
+      {
+        "value": "Lin pays £12.00 and Max pays £15.00",
+        "why": "Leaves out the 70p: £29 ÷ 9 is about £3 a part, then 4 × £3 and 5 × £3."
+      }
+    ],
+    "explanation": "There are 4 + 5 = 9 parts. One part is £29.70 ÷ 9 = £3.30. Lin pays 4 × £3.30 = £13.20 and Max pays 5 × £3.30 = £16.50. Together that is £29.70.",
+    "hints": [
+      "Find how many parts there are, then the value of one part.",
+      "Lin pays 4 parts and Max pays 5 parts."
+    ],
+    "pitfall": "Not giving both people their full number of parts.",
+    "diagram": null
+  },
+  {
+    "id": 286,
+    "topic": "ratio",
+    "subtopic": "ratio_given_difference",
+    "difficulty": 2,
+    "question": "The counters in a box are red or blue, in the ratio red : blue = 5 : 3. There are 24 more red counters than blue counters. How many red counters are there?",
+    "answer": "60",
+    "unit": null,
+    "answer_format": null,
+    "check": "24/(5-3)*5",
+    "distractors": [
+      {
+        "value": "36",
+        "why": "Gives the number of blue counters (3 × 12)."
+      },
+      {
+        "value": "96",
+        "why": "Gives the total number of counters (8 × 12)."
+      },
+      {
+        "value": "12",
+        "why": "Gives the value of one part and stops."
+      },
+      {
+        "value": "120",
+        "why": "Multiplies the difference by 5 (24 × 5) without finding what one part is."
+      }
+    ],
+    "explanation": "Red is 5 parts and blue is 3 parts, so red has 5 − 3 = 2 more parts. Those 2 parts are 24 counters, so 1 part is 12. Red = 5 × 12 = 60 counters.",
+    "hints": [
+      "How many parts of difference are there between the colours?",
+      "The 24 counters match the difference in parts. Find one part."
+    ],
+    "pitfall": "Using the 24 as the number of red counters, or giving blue instead of red.",
+    "diagram": null
+  },
+  {
+    "id": 287,
+    "topic": "ratio",
+    "subtopic": "ratio_given_difference",
+    "difficulty": 3,
+    "question": "Yellow and blue paint are mixed in the ratio 3 : 8. There are 15 litres more blue paint than yellow paint. How many litres of yellow paint are there?",
+    "answer": "9",
+    "unit": null,
+    "answer_format": null,
+    "check": "15/(8-3)*3",
+    "distractors": [
+      {
+        "value": "24",
+        "why": "Finds the amount of blue paint, 8 × 3."
+      },
+      {
+        "value": "3",
+        "why": "Gives one part and stops."
+      },
+      {
+        "value": "33",
+        "why": "Gives the total, 11 × 3."
+      },
+      {
+        "value": "45",
+        "why": "Multiplies 15 by 3 without working out the value of one part."
+      }
+    ],
+    "explanation": "Blue has 8 − 3 = 5 more parts than yellow. So 5 parts are 15 litres and 1 part is 3 litres. Yellow is 3 parts: 3 × 3 = 9 litres.",
+    "hints": [
+      "Subtract the ratio numbers to find how many parts the 15 litres stand for.",
+      "Find one part, then multiply by the number for yellow."
+    ],
+    "pitfall": "Reading the question for the wrong colour, or stopping at one part.",
+    "diagram": null
+  },
+  {
+    "id": 288,
+    "topic": "ratio",
+    "subtopic": "ratio_given_difference",
+    "difficulty": 3,
+    "question": "Sam and Tia saved money in the ratio 3 : 5. Tia saved £9.60 more than Sam. How much did they save altogether?",
+    "answer": "£38.40",
+    "unit": "£",
+    "answer_format": null,
+    "check": "9.6/(5-3)*(3+5)",
+    "distractors": [
+      {
+        "value": "£14.40",
+        "why": "Gives Sam's savings only."
+      },
+      {
+        "value": "£24.00",
+        "why": "Gives Tia's savings only."
+      },
+      {
+        "value": "£4.80",
+        "why": "Gives the value of one part."
+      },
+      {
+        "value": "£76.80",
+        "why": "Multiplies the difference by the 8 parts: £9.60 × 8, skipping the step of finding a part."
+      }
+    ],
+    "explanation": "Tia has 5 − 3 = 2 more parts than Sam, and 2 parts are £9.60, so 1 part is £4.80. There are 3 + 5 = 8 parts altogether: 8 × £4.80 = £38.40.",
+    "hints": [
+      "What do the £9.60 correspond to in parts?",
+      "Find one part first. Then use all of the parts."
+    ],
+    "pitfall": "Giving one person's amount instead of the total.",
+    "diagram": null
+  },
+  {
+    "id": 289,
+    "topic": "ratio",
+    "subtopic": "ratio_compare_recipes",
+    "difficulty": 2,
+    "question": "Three squash recipes mix juice and water. Mix A: 3 cups of juice to 4 cups of water. Mix B: 5 cups of juice to 6 cups of water. Mix C: 7 cups of juice to 9 cups of water. Which mix tastes strongest, with the most juice for its water?",
+    "answer": "Mix B",
+    "unit": null,
+    "answer_format": null,
+    "check": null,
+    "distractors": [
+      {
+        "value": "Mix A",
+        "why": "Picks the mix with the least water (4 cups) rather than comparing the ratios."
+      },
+      {
+        "value": "Mix C",
+        "why": "Picks the mix with the most juice (7 cups) without checking how much water is used."
+      },
+      {
+        "value": "Mix A and Mix B are equally strong",
+        "why": "Sees that both have one more cup of water than juice and thinks the differences make them equal."
+      },
+      {
+        "value": "All three are equally strong",
+        "why": "Thinks the strength is the same because each has more water than juice."
+      }
+    ],
+    "explanation": "Compare the juice with the whole drink. A: 3 in 7 parts is 3/7 = 0.43. B: 5 in 11 parts is 5/11 = 0.45. C: 7 in 16 parts is 7/16 = 0.44. Mix B has the largest fraction of juice. Using 3/4, 5/6 and 7/9 also works: 0.75, 0.83, 0.78.",
+    "hints": [
+      "Looking at the difference between juice and water can be misleading.",
+      "Turn each mix into a fraction, such as juice out of the whole drink, or juice ÷ water, and compare."
+    ],
+    "pitfall": "Comparing the differences between the amounts, not the ratios.",
+    "diagram": null,
+    "check_note": "Juice as a fraction of the whole drink: A 3/7 = 0.429, B 5/11 = 0.455, C 7/16 = 0.4375, so B is the highest."
+  },
+  {
+    "id": 290,
+    "topic": "ratio",
+    "subtopic": "ratio_compare_recipes",
+    "difficulty": 3,
+    "question": "Recipe A makes 12 biscuits with 90 g of butter. Recipe B makes 20 biscuits with 140 g of butter. How many more grams of butter does Recipe A need than Recipe B to make 60 biscuits?",
+    "answer": "30 g",
+    "unit": "g",
+    "answer_format": null,
+    "check": "90*5-140*3",
+    "distractors": [
+      {
+        "value": "50 g",
+        "why": "Subtracts the butter in the two recipes, 140 − 90, ignoring the number of biscuits."
+      },
+      {
+        "value": "0.5 g",
+        "why": "Finds the difference per biscuit (7.5 g and 7 g) but does not scale up to 60 biscuits."
+      },
+      {
+        "value": "10 g",
+        "why": "Compares the recipes at 20 biscuits (150 g and 140 g) rather than 60."
+      },
+      {
+        "value": "450 g",
+        "why": "Gives the butter Recipe A needs for 60 biscuits, not the difference."
+      }
+    ],
+    "explanation": "For 60 biscuits, Recipe A is made 5 times (12 × 5 = 60): 90 × 5 = 450 g. Recipe B is made 3 times (20 × 3 = 60): 140 × 3 = 420 g. The difference is 450 − 420 = 30 g.",
+    "hints": [
+      "Find a number of biscuits that both batch sizes go into evenly.",
+      "How many batches of each recipe make 60 biscuits? Work out the butter for each and subtract."
+    ],
+    "pitfall": "Comparing the butter amounts without scaling both recipes to the same number of biscuits.",
+    "diagram": null
+  },
+  {
+    "id": 291,
+    "topic": "ratio",
+    "subtopic": "ratio_compare_recipes",
+    "difficulty": 3,
+    "question": "Mix A has red and yellow paint in the ratio 3 : 5. Mix B has red and yellow paint in the ratio 2 : 3. Each mix uses 30 tins of yellow paint. How many more tins of red paint does Mix B use than Mix A?",
+    "answer": "2",
+    "unit": null,
+    "answer_format": null,
+    "check": "30/3*2-30/5*3",
+    "distractors": [
+      {
+        "value": "1",
+        "why": "Subtracts the red numbers in the ratios, 3 − 2, and gets the wrong sign too."
+      },
+      {
+        "value": "6",
+        "why": "Uses the same multiplier (× 6, from Mix A) for both mixes, so Mix B has 12 red and Mix A has 18."
+      },
+      {
+        "value": "38",
+        "why": "Adds the reds (20 + 18) instead of finding the difference."
+      },
+      {
+        "value": "10",
+        "why": "Takes the red in Mix B (20) away from the 30 tins of yellow."
+      }
+    ],
+    "explanation": "Mix A: 30 yellow is 6 lots of 5, so red is 6 × 3 = 18. Mix B: 30 yellow is 10 lots of 3, so red is 10 × 2 = 20. Mix B uses 20 − 18 = 2 more tins of red.",
+    "hints": [
+      "Each mix needs its own multiplier, because the yellow part of each ratio is different.",
+      "Find the red for A and for B separately, then subtract."
+    ],
+    "pitfall": "Using one multiplier for both ratios.",
+    "diagram": null
+  },
+  {
+    "id": 292,
+    "topic": "ratio",
+    "subtopic": "proportion_best_buy",
+    "difficulty": 2,
+    "question": "A shop sells felt-tip pens in three packs: 6 pens for £2.10, 10 pens for £3.20, and 15 pens for £5.25. Which pack is the best value for money?",
+    "answer": "Pack of 10",
+    "unit": null,
+    "answer_format": null,
+    "check": null,
+    "distractors": [
+      {
+        "value": "Pack of 6",
+        "why": "Picks the pack with the lowest price without allowing for how many pens it holds."
+      },
+      {
+        "value": "Pack of 15",
+        "why": "Picks the biggest pack, assuming more pens always means better value."
+      },
+      {
+        "value": "Pack of 6 and pack of 15 are equally good",
+        "why": "Finds that both cost 35p a pen but does not compare with the pack of 10."
+      },
+      {
+        "value": "All three cost the same per pen",
+        "why": "Rounds each price to about 33p or 35p a pen and decides they are the same."
+      }
+    ],
+    "explanation": "Work out the cost of one pen. 6 pens: £2.10 ÷ 6 = 35p. 10 pens: £3.20 ÷ 10 = 32p. 15 pens: £5.25 ÷ 15 = 35p. The pack of 10 has the lowest cost per pen.",
+    "hints": [
+      "Compare the cost of the same number of pens, or the cost of one pen.",
+      "Work in pence: 210 ÷ 6, 320 ÷ 10 and 525 ÷ 15."
+    ],
+    "pitfall": "Choosing the cheapest pack, or the largest pack, without working out the unit price.",
+    "diagram": null,
+    "check_note": "Cost per pen: 210/6 = 35p, 320/10 = 32p, 525/15 = 35p, so the pack of 10 is cheapest per pen."
+  },
+  {
+    "id": 293,
+    "topic": "ratio",
+    "subtopic": "proportion_best_buy",
+    "difficulty": 2,
+    "question": "Rice costs £1.20 for a 500 g bag or £4.40 for a 2 kg bag. What is the cheapest way to buy exactly 6 kg of rice?",
+    "answer": "£13.20",
+    "unit": "£",
+    "answer_format": null,
+    "check": "4.4*3",
+    "distractors": [
+      {
+        "value": "£2.20",
+        "why": "Gives the price per kilogram of the large bag instead of the total for 6 kg."
+      },
+      {
+        "value": "£7.20",
+        "why": "Treats 6 kg as six 500 g bags, 6 × £1.20."
+      },
+      {
+        "value": "£14.40",
+        "why": "Buys twelve 500 g bags, 12 × £1.20, which costs more than the 2 kg bags."
+      },
+      {
+        "value": "£26.40",
+        "why": "Multiplies £4.40 by 6 as if 6 was the number of bags."
+      }
+    ],
+    "explanation": "The small bag costs £1.20 for 500 g, so £4.80 for 2 kg. The large bag is £4.40 for 2 kg, so it is cheaper. 6 kg needs 3 large bags: 3 × £4.40 = £13.20.",
+    "hints": [
+      "Compare the price of the same weight of rice in each type of bag.",
+      "Work out how many 2 kg bags you need for 6 kg."
+    ],
+    "pitfall": "Using the number of kilograms as the number of bags.",
+    "diagram": null
+  },
+  {
+    "id": 294,
+    "topic": "ratio",
+    "subtopic": "proportion_best_buy",
+    "difficulty": 3,
+    "question": "A school needs 40 pencils. Pencils are sold in packs: 4 for £3.40, 5 for £3.75, or 8 for £5.60. What is the lowest possible cost of exactly 40 pencils?",
+    "answer": "£28.00",
+    "unit": "£",
+    "answer_format": null,
+    "check": "5.6*5",
+    "distractors": [
+      {
+        "value": "£5.60",
+        "why": "Gives the price of just one pack of 8 pencils."
+      },
+      {
+        "value": "£30.00",
+        "why": "Buys the packs of 5 (8 packs at £3.75), which are not the cheapest."
+      },
+      {
+        "value": "£34.00",
+        "why": "Buys the packs of 4 (10 packs at £3.40), which are not the cheapest."
+      },
+      {
+        "value": "£56.00",
+        "why": "Uses the 8-pencil pack but divides 40 by 4 (the smallest pack) to get 10 packs."
+      }
+    ],
+    "explanation": "Price per pencil: 4-pack 85p, 5-pack 75p, 8-pack 70p. The 8-pack is cheapest. 40 ÷ 8 = 5 packs, which cost 5 × £5.60 = £28.00. The 5-pack would cost £30.00 and the 4-pack £34.00.",
+    "hints": [
+      "Work out the cost of one pencil from each pack, or compare costs for 40 pencils.",
+      "Check how many packs of the best size you need to get exactly 40."
+    ],
+    "pitfall": "Choosing the cheapest pack price instead of the cheapest price per pencil.",
+    "diagram": null
+  },
+  {
+    "id": 295,
+    "topic": "ratio",
+    "subtopic": "scale_maps",
+    "difficulty": 2,
+    "question": "A map has a scale of 1 : 50 000. Two villages are 4.5 cm apart on the map. How far apart are they in real life? Give your answer in kilometres.",
+    "answer": "2.25 km",
+    "unit": "km",
+    "answer_format": null,
+    "check": "4.5*50000/100000",
+    "distractors": [
+      {
+        "value": "22.5 km",
+        "why": "Converts 225 000 cm to km by dividing by 10 000 instead of 100 000."
+      },
+      {
+        "value": "0.225 km",
+        "why": "Divides 225 000 cm by 1 000 000 instead of 100 000."
+      },
+      {
+        "value": "4.5 km",
+        "why": "Treats 1 cm on the map as 1 km."
+      },
+      {
+        "value": "225 km",
+        "why": "Converts 225 000 cm to km by dividing by 1 000 only."
+      }
+    ],
+    "explanation": "1 cm on the map is 50 000 cm in real life. 4.5 × 50 000 = 225 000 cm. There are 100 000 cm in a kilometre, so 225 000 ÷ 100 000 = 2.25 km.",
+    "hints": [
+      "Multiply the map distance by the scale first. What unit does that give?",
+      "There are 100 cm in a metre and 1000 m in a kilometre."
+    ],
+    "pitfall": "Getting the wrong power of ten when changing centimetres to kilometres.",
+    "diagram": null
+  },
+  {
+    "id": 296,
+    "topic": "ratio",
+    "subtopic": "scale_maps",
+    "difficulty": 2,
+    "question": "A road is 30 km long. On a map with the scale 1 : 200 000, how long is the road in centimetres?",
+    "answer": "15 cm",
+    "unit": "cm",
+    "answer_format": null,
+    "check": "30*100000/200000",
+    "distractors": [
+      {
+        "value": "1.5 cm",
+        "why": "Changes 30 km to 300 000 cm, with one zero too few."
+      },
+      {
+        "value": "150 cm",
+        "why": "Changes 30 km to 30 000 000 cm, with one zero too many."
+      },
+      {
+        "value": "60 cm",
+        "why": "Reads the scale as 1 cm for every 0.5 km, then divides 30 by 0.5."
+      },
+      {
+        "value": "0.15 cm",
+        "why": "Changes 30 km to 30 000 cm using 1 km = 1 000 cm."
+      }
+    ],
+    "explanation": "30 km = 30 × 100 000 = 3 000 000 cm. At 1 : 200 000, the map length is 3 000 000 ÷ 200 000 = 15 cm. Equivalently, 1 cm is 2 km, so 30 km needs 15 cm.",
+    "hints": [
+      "First change 30 km into centimetres. How many centimetres are in 1 km?",
+      "Divide by the scale number, because the map is smaller than real life."
+    ],
+    "pitfall": "Converting kilometres to centimetres with the wrong number of zeros.",
+    "diagram": null
+  },
+  {
+    "id": 297,
+    "topic": "ratio",
+    "subtopic": "scale_maps",
+    "difficulty": 3,
+    "question": "On a map with the scale 1 : 25 000, a rectangular field measures 4 cm by 2.4 cm. What is the real perimeter of the field? Give your answer in kilometres.",
+    "answer": "3.2 km",
+    "unit": "km",
+    "answer_format": null,
+    "check": "(4+2.4)*2*25000/100000",
+    "distractors": [
+      {
+        "value": "1.6 km",
+        "why": "Adds just the length and width (1 km + 0.6 km) and forgets to double."
+      },
+      {
+        "value": "32 km",
+        "why": "Reads 1 cm as 2.5 km, so every length is ten times too big."
+      },
+      {
+        "value": "0.32 km",
+        "why": "Reads 1 cm as 0.025 km, so every length is ten times too small."
+      },
+      {
+        "value": "2.6 km",
+        "why": "Adds only three sides: 1 + 1 + 0.6 km."
+      }
+    ],
+    "explanation": "1 cm on the map is 25 000 cm = 250 m = 0.25 km. The field is 4 × 0.25 = 1 km by 2.4 × 0.25 = 0.6 km. The perimeter is 2 × (1 + 0.6) = 3.2 km.",
+    "hints": [
+      "Start with what 1 cm stands for in real life, in a unit that suits the answer.",
+      "Find the real length and width, then add up all four sides."
+    ],
+    "pitfall": "Adding only some of the sides, or a power of ten error.",
+    "diagram": null
+  }
+]

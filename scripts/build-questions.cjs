@@ -47,7 +47,7 @@ family('walk','decimals','rounding',[4.67,7.83,2.96],a=>{
     : 'It is less than 5, so keep the tenths digit unchanged.';
   return item(`Round ${a} to one decimal place.`,rounded,`Look at the hundredths digit to round to tenths. The hundredths digit is ${hundredths}. ${direction} ${a} rounds to ${rounded}. This is the nearest tenth.`,['One decimal place means the nearest tenth.','Use the hundredths digit to decide whether to round up.'],'Round to the requested place; do not simply delete the final digit.');
 });
-family('desk','decimals','money_multiplication',[[3.45,8],[6.75,7],[8.95,6]],([price,count])=>item(`${count} notebooks each cost £${price.toFixed(2)}. What is the total cost in pounds?`,n(price*count),`Multiply the price of one notebook by the number bought: ${price} × ${count} = ${n(price*count)} pounds. You can work in pence and divide by 100 afterwards. Estimate first to check the decimal point.`,['Find the cost in pence if decimals feel awkward.',`${Math.round(price*100)} pence per notebook × ${count}; convert back to pounds.`],'Keep pounds and pence consistent throughout the calculation.',{unit:'£'}));
+family('desk','decimals','money_multiplication',[[3.45,8],[6.75,7],[8.95,6]],([price,count])=>item(`${count} notebooks each cost £${price.toFixed(2)}. What is the total cost in pounds?`,n(price*count),`Multiply the price of one notebook by the number bought: £${price.toFixed(2)} × ${count} = £${(price*count).toFixed(2)}. You can work in pence and divide by 100 afterwards. Estimate first to check the decimal point.`,['Find the cost in pence if decimals feel awkward.',`${Math.round(price*100)} pence per notebook × ${count}; convert back to pounds.`],'Keep pounds and pence consistent throughout the calculation.',{unit:'£'}));
 family('desk','decimals','exchange_rate',[[40,1.2],[80,1.15],[120,1.25]],([pounds,rate])=>item(`At an exchange rate of £1 = €${rate.toFixed(2)}, how many euros are received for £${pounds}?`,n(pounds*rate),`Each pound buys ${rate} euros, so multiply ${pounds} by ${rate} to get ${n(pounds*rate)} euros. The rate is greater than one, so the number of euros should exceed the number of pounds.`,['How many euros does each pound buy?',`Multiply the pounds by ${rate}; do not divide by the rate.`],'Use the rate in the direction stated in the question.',{unit:'€'}));
 family('desk','decimals','money_change',[[20,2.35,4],[30,3.65,6],[50,4.85,7]],([paid,price,count])=>item(`Maya pays £${paid} for ${count} pens costing £${price.toFixed(2)} each. How much change does she receive, in pounds?`,n(paid-price*count),`First find the total cost: ${count} × £${price.toFixed(2)} = £${(price*count).toFixed(2)}. Subtract this from £${paid} to get £${(paid-price*count).toFixed(2)} change. Check that cost plus change equals the amount paid.`,['There are two calculations: total cost, then change.',`Find ${count} × ${price} before subtracting from ${paid}.`],'Subtract the total cost of all the pens, not just one pen.',{unit:'£'}));
 
@@ -78,7 +78,7 @@ family('desk','geometry','perimeter',[[13,8],[17,9],[21,12]],([w,h])=>item(`A re
 family('walk','measures','unit_conversion',[[2.5,1000,'kilograms','grams','g'],[1.75,1000,'litres','millilitres','ml'],[3.2,100,'metres','centimetres','cm']],([amount,factor,from,to,unit])=>item(`How many ${to} are in ${amount} ${from}?`,amount*factor,`One ${from === 'kilograms' ? 'kilogram' : from === 'litres' ? 'litre' : 'metre'} contains ${factor} ${to}. Multiply ${amount} by ${factor} to get ${amount*factor} ${to}. Changing to a smaller unit increases the number because more small units cover the same amount.`,['Are you changing to a bigger unit or a smaller unit?',`There are ${factor} of the smaller units in one larger unit.`],'Multiply when converting to smaller units; the quantity itself stays the same.',{unit}));
 family('walk','measures','time_duration',[[9,40,10,15],[13,35,14,20],[15,45,17,10]],([h,m,endH,endM])=>item(`How many minutes are there from ${h}:${String(m).padStart(2,'0')} to ${endH}:${String(endM).padStart(2,'0')} on the same day?`,(endH-h)*60+endM-m,`Count up to the next hour: ${60-m} minutes. Add the remaining time to ${endH}:${String(endM).padStart(2,'0')} to get ${(endH-h)*60+endM-m} minutes altogether. Hours contain 60 minutes, so ordinary decimal subtraction would not work.`,['Count up to the next full hour first.','Add the minutes before the hour to the minutes after it.'],'An hour has 60 minutes, not 100.',{unit:'minutes'}));
 family('walk','measures','speed_distance_time',[[4,3],[5,4],[6,5]],([speed,hours])=>item(`A walker travels ${speed} kilometres each hour for ${hours} hours. How many kilometres does the walker travel?`,speed*hours,`At a steady speed, each hour adds another ${speed} kilometres. Multiply speed by time: ${speed} × ${hours} = ${speed*hours} kilometres. Dividing the distance by ${hours} checks the speed.`,['How far is travelled in each hour?','Multiply the distance per hour by the number of hours.'],'The units are already compatible, so no conversion is needed.',{unit:'km'}));
-family('walk','measures','mass_difference',[[1,350],[2,750],[3,1250]],([kg,used])=>item(`A bag holds ${kg} kilograms of flour. ${used} grams are used. How many grams remain?`,kg*1000-used,`First convert ${kg} kilograms into ${kg*1000} grams. Subtract the ${used} grams used: ${kg*1000} − ${used} = ${kg*1000-used} grams. Both amounts must use the same unit before they can be subtracted.`,['Put both amounts into grams first.','Multiply the kilograms by 1000, then subtract the grams used.'],'Subtracting grams directly from kilograms mixes two different units.',{unit:'g',oral_load:'steps'}));
+family('walk','measures','mass_difference',[[1,350],[2,750],[3,1250]],([kg,used])=>item(`A bag holds ${kg} kilogram${kg === 1 ? '' : 's'} of flour. ${used} grams are used. How many grams remain?`,kg*1000-used,`First convert ${kg} kilogram${kg === 1 ? '' : 's'} into ${kg*1000} grams. Subtract the ${used} grams used: ${kg*1000} − ${used} = ${kg*1000-used} grams. Both amounts must use the same unit before they can be subtracted.`,['Put both amounts into grams first.','Multiply the kilograms by 1000, then subtract the grams used.'],'Subtracting grams directly from kilograms mixes two different units.',{unit:'g',oral_load:'steps'}));
 family('desk','measures','unit_conversion',[[450,6],[625,4],[850,8]],([grams,batches])=>item(`Each batch of a recipe uses ${grams} g of flour. How many kilograms are needed for ${batches} batches?`,grams*batches/1000,`Multiply to find the total in grams: ${grams} × ${batches} = ${grams*batches}. Divide by 1000 to convert to kilograms, giving ${grams*batches/1000} kg. Converting each batch first gives the same total.`,['Find the total mass before converting it.','Multiply grams per batch by the number of batches, then divide by 1000.'],'The final answer must be in kilograms.',{unit:'kg'}));
 family('desk','measures','speed_distance_time',[[48,12],[60,15],[84,14]],([distance,speed])=>item(`A cyclist travels ${distance} km at a steady ${speed} km/h. How many minutes does the journey take?`,distance/speed*60,`Time equals distance divided by speed: ${distance} ÷ ${speed} = ${distance/speed} hours. Multiply by 60 to convert to ${distance/speed*60} minutes. Check that speed multiplied by the time in hours gives the original distance.`,['Find the journey time in hours first.','Divide distance by speed, then multiply the hours by 60.'],'The question requests minutes, even though the speed uses hours.',{unit:'minutes'}));
 family('desk','measures','time_duration',[[8,45,2,35],[11,50,3,25],[14,35,2,50]],([h,m,dh,dm])=>{const end=h*60+m+dh*60+dm;return item(`A train leaves at ${h}:${String(m).padStart(2,'0')}. Its journey lasts ${dh} hours ${dm} minutes. At what time does it arrive? Use the 24-hour clock.`,`${Math.floor(end/60)}:${String(end%60).padStart(2,'0')}`,`Add the ${dh} full hours first, then add ${dm} minutes. Regroup every 60 minutes as one hour. The arrival time is ${Math.floor(end/60)}:${String(end%60).padStart(2,'0')}. Check by counting the journey duration back to departure.`,['Add the hours and minutes separately.','If the minutes reach 60, exchange 60 minutes for one hour.'],'Use 60 minutes per hour and keep the 24-hour clock format.',{answer_format:'time'});});
@@ -96,8 +96,8 @@ family('walk','statistics','missing_mean',[[8,6,9],[10,8,11],[12,9,13]],([mean,a
 family('walk','statistics','range',[[3,8,6],[7,15,11],[12,27,19]],values=>item(`What is the range of ${values.join(', ')}?`,Math.max(...values)-Math.min(...values),`The range is the largest value minus the smallest. Here that is ${Math.max(...values)} − ${Math.min(...values)} = ${Math.max(...values)-Math.min(...values)}. The middle value does not change the range because it is not an extreme.`,['Which is the largest value? Which is the smallest?','Subtract the smallest value from the largest.'],'Range is a difference, not the count or total of the values.'));
 family('walk','statistics','data_comparison',[[12,7],[18,9],[24,15]],([a,b])=>item(`A survey finds ${a} children prefer apples and ${b} prefer pears. How many more prefer apples?`,a-b,`Compare the two counts by subtracting: ${a} − ${b} = ${a-b}. This finds the extra children in the larger group. Adding the counts would instead give the total who chose either fruit.`,['Are you finding a total or a difference?','Subtract the smaller group from the larger group.'],'“How many more” asks for a difference between counts.'));
 family('desk','statistics','missing_mean',[[15,[12,16,14,18]],[20,[17,19,23,21]],[25,[20,26,28,24]]],([mean,known])=>item(`The five test scores have a mean of ${mean}. Use the table to find the missing score.`,mean*5-known.reduce((a,b)=>a+b),`The total of five scores is ${mean} × 5 = ${mean*5}. The four known scores total ${known.reduce((a,b)=>a+b)}. Subtract to find ${mean*5-known.reduce((a,b)=>a+b)} for the missing score, then check the resulting mean.`,['Find the total needed for all five scores.','Multiply the mean by five, then subtract the four scores given.'],'Include the missing score in the total number of values.',{diagram:{type:'table',caption:'Test scores',headers:['Test','Score'],rows:[...known.map((v,i)=>[String(i+1),v]),['5','?']]}}));
-family('desk','statistics','data_comparison',[[8,12,16,4],[12,20,16,8],[16,24,32,12]],values=>item(`The bar chart shows books borrowed on four days (Monday: ${values[0]}). How many more books were borrowed on Wednesday than on Monday?`,values[2]-values[0],`Read the heights on the number scale, not just the number of grid lines. Wednesday shows ${values[2]} books and Monday shows ${values[0]}. Subtract: ${values[2]} − ${values[0]} = ${values[2]-values[0]} more books.`,['Check the scale on the vertical axis.','Read Wednesday and Monday, then subtract Monday’s count from Wednesday’s.'],'Each grid step may represent more than one book.',{diagram:{type:'bars',labels:['Mon','Tue','Wed','Thu'],values,max:Math.ceil(Math.max(...values)/4)*4,axis_label:'Books',description:`Books borrowed: Monday ${values[0]}, Tuesday ${values[1]}, Wednesday ${values[2]}, Thursday ${values[3]}.`},variant_key:values.join('-')}));
-family('desk','statistics','line_graphs',[[8,12,20,16],[12,16,24,20],[16,20,32,24]],values=>item(`The line graph shows the temperature at four times (8 am: ${values[0]}°C). By how many degrees did it fall between noon and 2 pm?`,values[2]-values[3],`Read the temperature at noon (${values[2]}°C) and at 2 pm (${values[3]}°C). The fall is ${values[2]} − ${values[3]} = ${values[2]-values[3]} degrees. A downward segment represents a decrease, not a negative temperature.`,['Identify the two times named in the question.','Subtract the later temperature from the earlier, warmer temperature.'],'Read the axis scale carefully rather than counting the grid lines.',{unit:'°C',diagram:{type:'line',labels:['8 am','10 am','Noon','2 pm'],values,max:Math.ceil(Math.max(...values)/4)*4,axis_label:'Temperature (°C)',description:`Temperatures: 8 am ${values[0]}°C, 10 am ${values[1]}°C, noon ${values[2]}°C, 2 pm ${values[3]}°C.`},variant_key:values.join('-')}));
+family('desk','statistics','data_comparison',[[8,12,16,4],[12,20,16,8],[16,24,32,12]],(values,i)=>item(`The bar chart shows books borrowed from the ${['school','town','village'][i]} library on four days. How many more books were borrowed on Wednesday than on Monday?`,values[2]-values[0],`Read the heights on the number scale, not just the number of grid lines. Wednesday shows ${values[2]} books and Monday shows ${values[0]}. Subtract: ${values[2]} − ${values[0]} = ${values[2]-values[0]} more books.`,['Check the scale on the vertical axis.','Read Wednesday and Monday, then subtract Monday’s count from Wednesday’s.'],'Each grid step may represent more than one book.',{diagram:{type:'bars',labels:['Mon','Tue','Wed','Thu'],values,max:Math.ceil(Math.max(...values)/4)*4,axis_label:'Books',description:`Books borrowed: Monday ${values[0]}, Tuesday ${values[1]}, Wednesday ${values[2]}, Thursday ${values[3]}.`},variant_key:values.join('-')}));
+family('desk','statistics','line_graphs',[[8,12,20,16],[12,16,24,20],[16,20,32,24]],(values,i)=>item(`The line graph shows the temperature in a ${['garden','playground','greenhouse'][i]} at four times. By how many degrees did it fall between noon and 2 pm?`,values[2]-values[3],`Read the temperature at noon (${values[2]}°C) and at 2 pm (${values[3]}°C). The fall is ${values[2]} − ${values[3]} = ${values[2]-values[3]} degrees. A downward segment represents a decrease, not a negative temperature.`,['Identify the two times named in the question.','Subtract the later temperature from the earlier, warmer temperature.'],'Read the axis scale carefully rather than counting the grid lines.',{unit:'°C',diagram:{type:'line',labels:['8 am','10 am','Noon','2 pm'],values,max:Math.ceil(Math.max(...values)/4)*4,axis_label:'Temperature (°C)',description:`Temperatures: 8 am ${values[0]}°C, 10 am ${values[1]}°C, noon ${values[2]}°C, 2 pm ${values[3]}°C.`},variant_key:values.join('-')}));
 
 family('desk','statistics','pie_charts',[[80,25],[120,40],[160,35]],([total,percent])=>item(`The pie chart shows the favourite clubs of ${total} pupils. How many pupils chose art?`,total*percent/100,`The art sector represents ${percent}% of the pupils. Calculate ${percent}% of ${total}: ${total} × ${percent} ÷ 100 = ${total*percent/100}. The other sector accounts for the remaining ${100-percent}%, and both groups add to the total.`,['Read the percentage belonging to art.','Use the percentage of the whole group, rather than treating the percentage as a pupil count.'],'A percentage describes a share of the total; it is not itself the number of pupils.',{diagram:{type:'pie',labels:['Art','Sport'],values:[percent,100-percent],description:`Favourite clubs: Art ${percent}%, Sport ${100-percent}%.`}}));
 
@@ -153,23 +153,8 @@ for (const mode of ['walk','desk']) {
       q.answer = typeof q.answer === 'number' ? n(q.answer) : q.answer;
       q.time_target_seconds = mode === 'walk' ? q.oral_load === 'steps' ? 75 : 60 : 120;
       q.oral_load ??= mode === 'walk' ? 'short' : null;
-      if (mode === 'walk') {
-        const numeric = Number(q.answer);
-        const canonical = s => {
-          if (/^-?\d+\s*\/\s*\d+$/.test(s)) { const [a,b]=s.split('/').map(Number); return a/b; }
-          return Number(s);
-        };
-        let wrong = q.choices || q.wrong_answers || (Number.isFinite(numeric) ? [numeric-1,numeric+1,numeric+2,numeric+10,numeric*2,numeric/2] : ['1/2','1/3','1/4','2/3','3/4','1/5','2/5','3/5','4/5','5/6']);
-        const seen = new Set([canonical(q.answer)]);
-        wrong = wrong.map(v => typeof v === 'number' ? n(v) : String(v)).filter(v => {
-          const value = canonical(v);
-          if (seen.has(value)) return false;
-          seen.add(value); return true;
-        }).slice(0,4);
-        if (wrong.length !== 4) throw new Error(`Not enough distractors for ${q.question}`);
-        q.answer_index = (q.id - 1) % 5; wrong.splice(q.answer_index,0,String(q.answer));
-        q.options = wrong; q.answer_display = 'ABCDE'[q.answer_index];
-      } else { q.options = q.answer_index = q.answer_display = null; }
+      // Walk options come from data/authored/walk-distractors.json below.
+      if (mode !== 'walk') { q.options = q.answer_index = q.answer_display = null; }
       delete q.choices; delete q.wrong_answers; delete q.variant_key;
       bank.push(q);
     }
@@ -188,13 +173,6 @@ const prompts = {
   coordinates:'Which direction changes x, and which changes y?',
 };
 for (const q of bank) {
-  // Multi-step warm-ups and routine third variants belong in core practice.
-  const core = {
-    percentages: ['walk:percent_discount:1','desk:percent_increase:1','walk:fraction_percent:3','walk:percent_of_amount:3'],
-    statistics: ['walk:missing_mean:1','desk:missing_mean:1','walk:range:3','walk:data_comparison:3'],
-    coordinates: ['walk:reflection:1','desk:translation:1','walk:coordinate_position:3','walk:coordinate_distance:3'],
-  };
-  if (core[q.topic]?.includes(`${q.mode}:${q.subtopic}:${q.difficulty}`)) q.difficulty = 2;
   q.parent_prompt = prompts[q.topic];
   q.answer = /^-?\d+(\.\d+)?$/.test(q.answer) ? n(Number(q.answer)) : q.answer;
   if (q.mode === 'walk') {
@@ -202,6 +180,96 @@ for (const q of bank) {
     if (q.answer.includes('/')) q.answer_format = 'fraction_simplest';
   }
 }
+
+// ── Authored overlays ─────────────────────────────────────────
+const readAuthored = name => JSON.parse(fs.readFileSync(path.join(root, 'data/authored', name), 'utf8'));
+const optionValue = text => {
+  const s = String(text).replace(/[£€,]/g, '').replace(/\s*(cm²|m²|cm³|m³|km\/h|minutes|hours|°C|°|%|kg|km|cm|mm|ml|g|m|l)$/, '').trim();
+  const frac = s.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)$/);
+  if (frac) return Number(frac[1]) / Number(frac[2]);
+  const mixed = s.match(/^(\d+)\s+(\d+)\/(\d+)$/);
+  if (mixed) return Number(mixed[1]) + Number(mixed[2]) / Number(mixed[3]);
+  return /^-?\d+(\.\d+)?$/.test(s) ? Number(s) : NaN;
+};
+// Numeric options run smallest to largest, as in the official samples. Others take a position set by the ID.
+function setOptions(q, distractors) {
+  const all = [q.answer, ...distractors.map(d => d.value)];
+  const values = all.map(optionValue);
+  let options;
+  if (values.every(Number.isFinite) && !/largest|smallest|greatest/i.test(q.question)) {
+    options = all.map((text, i) => ({ text, value: values[i], tie: (i * 7 + q.id) % 5 }))
+      .sort((x, y) => x.value - y.value || x.tie - y.tie).map(o => o.text);
+  } else {
+    options = distractors.map(d => d.value);
+    options.splice(q.id % 5, 0, q.answer);
+  }
+  q.options = options;
+  q.answer_index = options.indexOf(q.answer);
+  q.answer_display = 'ABCDE'[q.answer_index];
+  q.distractor_notes = Object.fromEntries(distractors.map(d => [d.value, d.why]));
+}
+for (const { id, distractors } of readAuthored('walk-distractors.json')) setOptions(bank.find(q => q.id === id), distractors);
+
+const SET_SECONDS = { 1: 40, 2: 55, 3: 70 }, NWSSEE_SECONDS = { 1: 75, 2: 105, 3: 135 };
+const AUTHORED = [
+  ['set-number-decimals.json', 'SET'], ['set-fractions-ratio.json', 'SET'], ['set-geometry-measures.json', 'SET'], ['set-percent-algebra-data.json', 'SET'],
+  ['nwssee-number-ratio.json', 'NWSSEE'], ['nwssee-geometry-algebra.json', 'NWSSEE'],
+];
+for (const [file, stage] of AUTHORED) for (const raw of readAuthored(file)) {
+  const { distractors, check, check_note, ...q } = raw;
+  q.mode = stage === 'SET' ? 'set' : 'desk';
+  q.stage = stage;
+  if (q.answer_format == null) delete q.answer_format;
+  if (q.diagram == null) delete q.diagram;
+  q.unit ??= null;
+  q.answer_alt ??= null;
+  q.oral_load = null;
+  q.parent_prompt = prompts[q.topic];
+  q.time_target_seconds = (stage === 'SET' ? SET_SECONDS : NWSSEE_SECONDS)[q.difficulty];
+  if (stage === 'SET') setOptions(q, distractors);
+  else q.options = q.answer_index = q.answer_display = null;
+  bank.push(q);
+}
+
+// Difficulty for the original 210 is rated by hand against the official samples; see data/authored/README.md.
+for (const [id, difficulty] of Object.entries(readAuthored('difficulty-ratings.json'))) bank.find(q => q.id === Number(id)).difficulty = difficulty;
+
+// ── Fixed mock papers ─────────────────────────────────────────
+// Older NWSSEE questions strong enough to join the new ones, so each paper keeps its topic balance.
+const NWSSEE_TOP_UPS = [132, 135, 138, 139, 145, 149, 152, 125, 159, 167, 172, 175, 176, 122, 183];
+const seededShuffle = (items, seed) => {
+  const result = [...items];
+  let state = seed >>> 0;
+  const random = () => { state = (state + 0x6D2B79F5) >>> 0; let t = Math.imul(state ^ (state >>> 15), 1 | state); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  for (let i = result.length - 1; i > 0; i--) { const j = Math.floor(random() * (i + 1)); [result[i], result[j]] = [result[j], result[i]]; }
+  return result;
+};
+function buildPapers(stage, pool) {
+  const papers = [[], [], []];
+  const count = (list, test) => list.filter(test).length;
+  // Each paper gets the same number per topic. Within that, spread each subtopic, then balance difficulty,
+  // so that scores on different papers are comparable. Hardest questions are placed first.
+  for (const topic of topics) {
+    const inTopic = pool.filter(q => q.topic === topic).sort((x, y) => y.difficulty - x.difficulty || x.id - y.id);
+    const quota = inTopic.length / 3;
+    for (const q of inTopic) {
+      const best = [0, 1, 2].filter(p => count(papers[p], o => o.topic === topic) < quota).sort((p, r) =>
+        count(papers[p], o => o.subtopic === q.subtopic) - count(papers[r], o => o.subtopic === q.subtopic)
+        || count(papers[p], o => o.difficulty === q.difficulty) - count(papers[r], o => o.difficulty === q.difficulty)
+        || p - r)[0];
+      papers[best].push(q);
+    }
+  }
+  papers.forEach((questions, p) => seededShuffle(questions, (stage === 'SET' ? 1000 : 2000) + p).forEach((q, i) => {
+    q.paper_id = `${stage}-${p + 1}`;
+    q.paper_position = i + 1;
+    // Only questions new to the bank can be kept unseen for the dress rehearsal.
+    if (p === 2 && q.id > 210) q.reserved_mock = true;
+  }));
+}
+buildPapers('SET', bank.filter(q => q.mode === 'set'));
+buildPapers('NWSSEE', bank.filter(q => q.mode === 'desk' && (q.id > 210 || NWSSEE_TOP_UPS.includes(q.id))));
+
 bank.sort((a,b)=>a.id-b.id);
 const output = JSON.stringify(bank,null,2)+'\n';
 const destination = path.join(root, 'data/questions.json');
@@ -210,5 +278,5 @@ if (process.argv.includes('--check')) {
   console.log('Question bank matches its authoring sources.');
 } else {
   fs.writeFileSync(destination,output);
-  console.log(`Wrote ${bank.length} questions (${bank.filter(q=>q.mode==='walk').length} walk, ${bank.filter(q=>q.mode==='desk').length} desk).`);
+  console.log(`Wrote ${bank.length} questions (${bank.filter(q=>q.mode==='walk').length} walk, ${bank.filter(q=>q.mode==='set').length} set, ${bank.filter(q=>q.mode==='desk').length} desk).`);
 }

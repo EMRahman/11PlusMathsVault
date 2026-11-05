@@ -1,5 +1,21 @@
 # Product Specification: 11+ Maths Vault
 
+## Implementation update — 4 November 2026
+
+These additions take precedence over everything below.
+
+- **Banks:** 420 questions. Walk (`walk`, 1 to 120) is an oral warm-up and no longer feeds exam sessions. A new written bank (`set`, 211 to 360) feeds SET sessions. NWSSEE (`desk`) has grown to 150.
+- **Options:** every wrong option comes from a named mistake (`distractor_notes`). Numeric options are sorted smallest to largest, as in the official samples. Validation fails if any sorted position or answer letter is correct over 40% of the time.
+- **Sessions:** guided practice, timed sets with a paced timer, and fixed mock papers (`paper_id`, `paper_position`). Questions with `reserved_mock` stay out of everyday practice.
+- **Difficulty:** labels are rated by demand against the official samples. Earlier labels came from a question's position in its family.
+- **Diagrams:** adds `shaded_grid` and `shape`. A diagram's `description` is for assistive technology and is not displayed, so that charts must be read.
+
+**Evidence status.** Checked against the school's SET FAQ, NWSSEE FAQ and SET maths sample questions (2027 entry):
+
+- Confirmed: SET multiple choice with lozenges A to E, no negative marking, no calculator, no rough paper, 40 to 50 minutes. NWSSEE not multiple choice, final answer only, 40 to 50 minutes, pencil for maths with mistakes crossed out.
+- Not published: question counts. Our 50 and 25 are estimates from tutoring sites.
+- No source found: the statements in the sections below that NWSSEE is multi-part, that it is harder than the SET, that its difficulty is spread through the paper, and the references to "official NWSSEE commentary". The school provides no NWSSEE samples. Treat those statements as unverified.
+
 ## Implementation update — 30 October 2026
 
 The current app extends the original specification below. These additions take precedence where the original flows differ:

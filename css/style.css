@@ -1373,6 +1373,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
 .maths-figure .axis { stroke: currentColor; fill: none; stroke-width: 1.5; }
 .maths-figure .grid-line { stroke: var(--color-border); stroke-width: 1; fill: none; }
 .maths-figure .chart-bar { fill: var(--color-desk); }
+/* Fixed colours: in dark mode a themed fill would make shaded cells look unshaded. */
+.maths-figure .grid-cell { fill: #fff; stroke: #111; stroke-width: 1; }
+.maths-figure .grid-cell--shaded { fill: #111; }
+.maths-figure .shape-filled { fill: currentColor; fill-opacity: .3; stroke: var(--color-desk); stroke-width: 2; }
 .maths-figure figcaption { font-size: .8rem; color: var(--color-text-muted); text-align: center; }
 .maths-table-wrap { overflow-x: auto; margin: 1rem 0; }
 .maths-table { width: 100%; border-collapse: collapse; }
@@ -1419,6 +1423,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
   #print-sheet .maths-table th, #print-sheet .maths-table td { padding: .1cm .3cm; }
   .print-options { display: flex; flex-wrap: wrap; gap: .5cm; }
   .working-space { height: 2.3cm; }
+  .working-space--small { height: 1.1cm; }
+  .print-grid { list-style: none; padding: 0; margin: .4cm 0 0; column-count: 3; column-gap: .6cm; }
+  .print-grid-row { break-inside: avoid; display: flex; align-items: center; gap: .12cm; height: .78cm; font-size: 9pt; }
+  .print-grid-num { width: .7cm; text-align: right; font-weight: bold; margin-right: .08cm; }
+  .print-lozenge { display: inline-flex; align-items: center; justify-content: center; width: .62cm; height: .44cm; border: 1px solid #111; border-radius: .22cm; font-size: 7pt; line-height: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
@@ -1605,3 +1614,10 @@ button:disabled { opacity: .55; cursor: default; }
 .browse-options { list-style: none; padding: 0; margin: .5rem 0; }
 .browse-list .answer-review summary { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
 .btn--sm { padding: .35rem .75rem; font-size: var(--text-sm); min-height: 36px; }
+
+/* Session controls that use the hidden attribute despite display rules */
+.desk-filters [hidden], .workpad-tools [hidden] { display: none !important; }
+.exam-rules { border: 1px solid var(--color-border); border-left: 4px solid var(--color-desk); border-radius: var(--radius-sm); padding: .75rem 1rem; margin: 1rem 0; text-align: left; }
+.exam-rules h3 { margin: 0 0 .4rem; font-size: 1rem; }
+.exam-rules p { font-size: var(--text-base, 1rem); margin: .4rem 0; }
+.why-tempting { margin: .75rem 0; padding: .6rem .8rem; border-left: 3px solid var(--color-desk); background: var(--color-desk-bg); border-radius: var(--radius-sm); }

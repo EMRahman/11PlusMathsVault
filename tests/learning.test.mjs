@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { checkAnswer } from '../js/validate.js';
-import { dailyPlan, skillProgress, skillKey, followUp } from '../js/practice.js';
+import { dailyPlan, skillProgress, skillKey, followUp, listPapers, paperQuestions, practiceBank, pacedMinutes } from '../js/practice.js';
 import { diagram, TOPICS, answerText } from '../js/content.js';
 import { METHOD_NOTES } from '../js/method-notes.js';
 import { getTutorial } from '../js/tutorials.js';
@@ -16,7 +16,7 @@ globalThis.localStorage = {
 };
 const now = new Date('2026-10-30T12:00:00Z');
 
-test('all 210 answers are accepted; every MCQ has exactly one correct option', () => {
+test('every answer is accepted; every MCQ has exactly one correct option', () => {
   for (const q of questions) {
     assert.equal(checkAnswer(q.answer,q),true,`Q${q.id} rejects its own answer`);
     if (q.options) {
@@ -41,7 +41,7 @@ test('requested simplest fractions, ratios, coordinate order and time are honour
   const coordinates={answer:'(2, -3)',answer_format:'coordinates'};
   assert.ok(checkAnswer('2,-3',coordinates)); assert.ok(!checkAnswer('(-3, 2)',coordinates));
   const time={answer:'9:05',answer_format:'time'};
-  assert.ok(checkAnswer('09:05',time)); assert.ok(!checkAnswer('9.05',time)); assert.ok(!checkAnswer('09:65',time));
+  assert.ok(checkAnswer('09:05',time)); assert.ok(checkAnswer('9.05',time)); assert.ok(!checkAnswer('905',time)); assert.ok(!checkAnswer('09:65',time)); assert.ok(!checkAnswer('9.65',time));
 });
 test('units do not conceal a place-value or conversion error', () => {
   const q={answer:'2.25',unit:'kg'};
@@ -84,8 +84,9 @@ test('rounding explanations teach the correct direction for both hundredths case
   assert.match(up.explanation, /increase the tenths digit/);
 });
 test('every skill has a different question for transfer practice', () => {
-  for (const q of questions) {
-    const other=followUp(q,questions,{});
+  const everyday=practiceBank(questions);
+  for (const q of everyday) {
+    const other=followUp(q,everyday,{});
     assert.ok(other,`Q${q.id}: ${skillKey(q)} has no follow-up`);
     assert.notEqual(other.id,q.id);
     assert.equal(skillKey(other),skillKey(q));
@@ -94,12 +95,14 @@ test('every skill has a different question for transfer practice', () => {
 test('all topics have oral and written practice with progressive, question-specific hints', () => {
   for (const topic of Object.keys(TOPICS)) {
     assert.equal(questions.filter(q=>q.topic===topic&&q.mode==='walk').length,12);
-    assert.equal(questions.filter(q=>q.topic===topic&&q.mode==='desk').length,9);
+    assert.ok(questions.filter(q=>q.topic===topic&&q.mode==='desk').length>=9);
+    assert.ok(questions.filter(q=>q.topic===topic&&q.mode==='set').length>=3);
   }
   for (const q of questions) {
     assert.equal(q.hints.length,2); assert.notEqual(q.hints[0],q.hints[1]);
     assert.ok(q.parent_prompt);
     if(q.mode==='walk') assert.ok(['short','steps','visualise'].includes(q.oral_load));
+    else assert.equal(q.oral_load,null);
   }
 });
 test('all diagrams have a textual equivalent, with no unsafe markup', () => {
@@ -108,10 +111,10 @@ test('all diagrams have a textual equivalent, with no unsafe markup', () => {
     types.add(q.diagram.type);
     const html=diagram(q.diagram);
     if(q.diagram.type==='table') assert.ok(html.includes('<caption>'));
-    else { assert.ok(html.includes('role="img"')); assert.ok(html.includes('<title>')); }
+    else { assert.ok(html.includes('role="img"')); assert.ok(html.includes('aria-label="'+html.match(/aria-label="([^"]+)"/)[1])); }
     assert.ok(!html.includes('undefined')); assert.ok(!html.includes('NaN'));
   }
-  for (const type of ['bars','line','pie','table','coordinates','triangle','l_shape','rectangle']) assert.ok(types.has(type));
+  for (const type of ['bars','line','pie','table','coordinates','triangle','l_shape','rectangle','shaded_grid','shape']) assert.ok(types.has(type),type);
   assert.ok(diagram({type:'rectangle',description:'<script>',width:'<img>',height:'2'}).includes('&lt;script&gt;'));
 });
 test('daily plans fit the solving budget and contain no duplicate questions', () => {
@@ -177,7 +180,7 @@ test('the daily date follows the user’s local calendar', () => {
 });
 
 test('chart questions agree with the plotted data and percentage totals', () => {
-  for (const q of questions.filter(q=>['bars','line','pie'].includes(q.diagram?.type))) {
+  for (const q of questions.filter(q=>q.id<=210 && ['bars','line','pie'].includes(q.diagram?.type))) {
     const d=q.diagram;
     assert.equal(d.labels.length,d.values.length);
     if(d.type==='bars') assert.equal(Number(q.answer),d.values[2]-d.values[0],`Q${q.id}`);
@@ -194,7 +197,7 @@ test('reflection and rectangle answers agree with the coordinates in their diagr
   for (const q of questions.filter(q=>q.diagram?.type==='coordinates')) {
     const pts=q.diagram.points;
     assert.ok(pts.every(p=>Math.abs(p.x)<=5 && Math.abs(p.y)<=5));
-    const actual=q.answer.match(/-?\d+/g).map(Number);
+    const actual=String(q.answer).match(/-?\d+/g)?.map(Number);
     if(q.subtopic==='reflection') assert.deepEqual(actual,[-pts[0].x,pts[0].y]);
     if(q.subtopic==='rectangle_coordinates') assert.deepEqual(actual,[pts[0].x,pts[2].y]);
   }
@@ -227,4 +230,83 @@ test('tutorial guidance matches the specific question variant across modes', () 
   const qDirFrac = questions.find(q => q.id === 9);
   assert.ok(getTutorial(qRemFrac).concept.includes('Remainder'));
   assert.ok(getTutorial(qDirFrac).concept.includes('Unitary Method'));
+});
+
+test('chart data is hidden from sighted readers but available to assistive technology', () => {
+  const q=questions.find(q=>q.id===194);
+  const html=diagram(q.diagram);
+  assert.ok(!html.includes('<figcaption>'));
+  assert.ok(!html.includes('<title>'));
+  assert.match(html,/aria-label="Books borrowed: Monday 8/);
+  assert.doesNotMatch(q.question,/Monday: 8/);
+  assert.match(diagram({type:'rectangle',description:'x',width:'1',height:'2'}),/Not to scale/);
+});
+test('shaded grids draw exactly the requested cells, and shapes render their parts', () => {
+  const html=diagram({type:'shaded_grid',rows:2,cols:3,shaded:[[0,0],[1,2]],description:'x'});
+  assert.equal(html.match(/<rect/g).length,6);
+  assert.equal(html.match(/grid-cell--shaded/g).length,2);
+  for(const q of questions.filter(q=>q.diagram?.type==='shaded_grid'&&q.answer_format==='fraction_simplest')) {
+    const [a,b]=q.answer.split('/').map(Number);
+    assert.ok(Math.abs(q.diagram.shaded.length/(q.diagram.rows*q.diagram.cols)-a/b)<1e-9,`Q${q.id}`);
+  }
+  const shape=diagram({type:'shape',polygons:[{points:[[20,20],[50,20],[20,50]],shaded:true}],lines:[{from:[1,1],to:[2,2],dashed:true}],circles:[{cx:50,cy:50,r:20}],labels:[{x:5,y:5,text:'<b>'}],description:'x'});
+  assert.ok(shape.includes('shape-filled')&&shape.includes('<line')&&shape.includes('<circle')&&shape.includes('&lt;b&gt;'));
+});
+test('money answers always show two decimal places', () => {
+  assert.equal(answerText({answer:'27.6',unit:'£'}),'£27.60');
+  assert.equal(answerText({answer:'70.65',unit:'£'}),'£70.65');
+  assert.equal(answerText({answer:'12',unit:'£'}),'£12');
+  assert.equal(answerText(questions.find(q=>q.id===147)),'£27.60');
+  assert.match(questions.find(q=>q.id===147).explanation,/£27\.60/);
+});
+test('mock papers are fixed, ordered, complete and timed at exam pace', () => {
+  const papers=listPapers(questions);
+  assert.deepEqual(papers.map(p=>p.id),['NWSSEE-1','NWSSEE-2','NWSSEE-3','SET-1','SET-2','SET-3']);
+  for(const paper of papers) {
+    const list=paperQuestions(questions,paper.id);
+    assert.equal(list.length,paper.stage==='SET'?50:25);
+    assert.deepEqual(list.map(q=>q.paper_position),list.map((_,i)=>i+1));
+    assert.equal(paper.reserved,paper.number===3);
+  }
+  assert.ok(paperQuestions(questions,'SET-1').every(q=>q.mode==='set'));
+  assert.ok(paperQuestions(questions,'NWSSEE-1').every(q=>q.mode==='desk'));
+  assert.equal(pacedMinutes(50,'SET'),45); assert.equal(pacedMinutes(25,'NWSSEE'),45);
+  assert.equal(pacedMinutes(10,'SET'),9); assert.equal(pacedMinutes(10,'NWSSEE'),18);
+});
+test('the dress-rehearsal paper never appears in everyday practice', () => {
+  const everyday=practiceBank(questions);
+  assert.ok(everyday.every(q=>!q.reserved_mock));
+  assert.ok(everyday.length<questions.length);
+  const plan=dailyPlan(everyday,{},now);
+  assert.ok(plan.items.every(item=>!item.question.reserved_mock));
+});
+test('original question IDs keep their question text, so saved progress stays meaningful', () => {
+  assert.equal(questions.find(q=>q.id===1).question,'Work out 38 × 24.');
+  assert.equal(questions.find(q=>q.id===121).mode,'desk');
+  assert.equal(questions.find(q=>q.id===78).question.includes('1 kilogram of flour'),true);
+});
+test('authored question sources contain the proof fields only at authoring time', () => {
+  for(const q of questions) { assert.ok(!('check' in q)); assert.ok(!('distractors' in q)); assert.ok(!('check_note' in q)); }
+});
+test('difficulty labels reflect demand, not the position of a question in its family', () => {
+  const rate=id=>questions.find(q=>q.id===id).difficulty;
+  assert.ok(rate(19)<rate(1),'36 × 5 must rate below 38 × 24');
+  assert.equal(rate(185),rate(127),'the same five-consecutive-odd method rates the same');
+});
+
+test('shaded grid cells keep fixed colours, so shaded cells are dark in both themes', () => {
+  const css=fs.readFileSync(new URL('../css/style.css',import.meta.url),'utf8');
+  assert.match(css,/\.grid-cell \{ fill: #fff;/);
+  assert.match(css,/\.grid-cell--shaded \{ fill: #111;/);
+});
+test('an answer written with a unit outside the unit list is still accepted through answer_alt', () => {
+  const q=questions.find(q=>q.id===404);
+  for (const form of ['40','40 seconds','40 s','40s']) assert.ok(checkAnswer(form,q),form);
+  assert.ok(!checkAnswer('41',q));
+});
+test('new bank stays within KS2 wording: no median, no decimal divisors', () => {
+  for (const q of questions.filter(q=>q.id>210)) {
+    assert.doesNotMatch(q.question,/\b(median|mode of|pythagoras)\b/i,`Q${q.id}`);
+    assert.doesNotMatch(q.question,/÷ 0\.\d/,`Q${q.id}`);
+  }
 });

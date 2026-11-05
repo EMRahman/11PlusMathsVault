@@ -1,7 +1,7 @@
 import { checkAnswer } from './validate.js';
 import { getProgress, getSettings, recordResult, isBookmarked, toggleBookmark, getBookmarks } from './state.js';
 import { TOPICS, esc, shuffle, time, difficulty, questionBody, answerText } from './content.js';
-import { followUp } from './practice.js';
+import { followUp, listPapers, paperQuestions, practiceBank, pacedMinutes } from './practice.js';
 import { printWorksheet } from './print.js';
 import { getTutorial } from './tutorials.js';
 
@@ -10,6 +10,16 @@ let seconds = 0, deadline = 0, lastTick = 0, submitted = false;
 const area = () => document.getElementById(config.container || 'desk-question-area');
 const exam = () => config.kind?.startsWith('exam');
 const current = () => states[questions[index]?.id] ??= { input: '', hints: 0, firstAnswer: null, finished: false, flagged: false };
+const POOL_MODE = { practice: 'desk', 'exam-desk': 'desk', 'practice-set': 'set', 'exam-set': 'set' };
+const STAGE = { 'exam-set': 'SET', 'exam-desk': 'NWSSEE', 'mock-set': 'SET', 'mock-desk': 'NWSSEE' };
+const isMock = kind => kind === 'mock-set' || kind === 'mock-desk';
+const isTimed = kind => kind?.startsWith('exam') || isMock(kind);
+const allChoices = list => list.length > 0 && list.every(q => q.mode === 'set' && q.options);
+const tempting = (q, answer) => answer && q.distractor_notes && Object.hasOwn(q.distractor_notes, answer) ? `<p class="why-tempting">Why that answer is tempting: ${esc(q.distractor_notes[answer])}</p>` : '';
+const RULES = {
+  SET: 'No calculator. No rough paper: use the space on the question paper. Mark A to E on a separate answer sheet. There is no negative marking, so answer every question.',
+  NWSSEE: 'No calculator. No rough paper: use the space on the question paper. Only your final answer is marked, with no marks for working. If you make a mistake, cross it out neatly; don\u2019t rub it out.',
+};
 const save = () => config.onSave?.(JSON.parse(JSON.stringify(states)), seconds);
 
 export function dispose() {
@@ -19,54 +29,80 @@ export function dispose() {
 }
 export function init(all) {
   dispose(); bank = all; config = { container: 'desk-question-area', kind: 'practice' }; submitted = false;
-  document.getElementById('desk-setsize-filter').value = String(getSettings().deskSetSize);
+  const sizeEl = document.getElementById('desk-setsize-filter');
+  sizeEl.value = String(getSettings().deskSetSize);
+  if (!sizeEl.value) sizeEl.value = '10';
   document.getElementById('desk-session-type').onchange = prompt;
-  for (const id of ['desk-topic-filter', 'desk-difficulty-filter', 'desk-bookmark-filter', 'desk-setsize-filter', 'desk-exam-minutes']) document.getElementById(id).onchange = prompt;
+  for (const id of ['desk-topic-filter', 'desk-difficulty-filter', 'desk-bookmark-filter', 'desk-setsize-filter', 'desk-exam-minutes', 'desk-mock-paper']) document.getElementById(id).onchange = prompt;
   prompt();
 }
 function pool() {
   const val = id => document.getElementById(id).value;
-  const mode = val('desk-session-type') === 'exam-set' ? 'walk' : 'desk';
+  const mode = POOL_MODE[val('desk-session-type')] || 'desk';
   const bookmarks = getBookmarks();
-  return bank.filter(q => q.mode === mode && (!val('desk-topic-filter') || q.topic === val('desk-topic-filter')) && (!val('desk-difficulty-filter') || q.difficulty === Number(val('desk-difficulty-filter'))) && (val('desk-bookmark-filter') !== 'bookmarked' || bookmarks.includes(q.id)));
+  return practiceBank(bank).filter(q => q.mode === mode && (!val('desk-topic-filter') || q.topic === val('desk-topic-filter')) && (!val('desk-difficulty-filter') || q.difficulty === Number(val('desk-difficulty-filter'))) && (val('desk-bookmark-filter') !== 'bookmarked' || bookmarks.includes(q.id)));
 }
 function filtered() {
   const all = pool(), size = document.getElementById('desk-setsize-filter').value;
   return shuffle(all).slice(0, size === 'all' ? all.length : Number(size));
 }
 function browse() {
-  const list = pool(), choices = config.kind === 'exam-set';
-  area().innerHTML = `<section class="browse-list"><div class="browse-head"><h2>All questions</h2><button class="btn btn--secondary btn--sm" id="browse-back-btn">← Back</button></div><p class="muted">${list.length} questions match your filters. Open one to see its answer and explanation, or practise it on its own.</p>${list.map((q, i) => `<details class="answer-review"><summary>${i + 1}. ${esc(TOPICS[q.topic])} ${difficulty(q.difficulty)} — ${esc(String(q.question).slice(0, 80))}${String(q.question).length > 80 ? '…' : ''}</summary>${questionBody(q)}${choices && q.options ? `<ul class="browse-options">${q.options.map((o, n) => `<li>${String.fromCharCode(65 + n)}. ${esc(o)}</li>`).join('')}</ul>` : ''}<p><strong>Answer: ${esc(answerText(q))}</strong></p><div class="explanation-box">${esc(q.explanation)}</div><button class="btn btn--primary-desk btn--sm" data-practise="${i}">Practise this question</button></details>`).join('') || '<p class="empty-state">No questions match. Change your filters.</p>'}</section>`;
+  const list = pool();
+  area().innerHTML = `<section class="browse-list"><div class="browse-head"><h2>All questions</h2><button class="btn btn--secondary btn--sm" id="browse-back-btn">← Back</button></div><p class="muted">${list.length} questions match your filters. Open one to see its answer and explanation, or practise it on its own.</p>${list.map((q, i) => `<details class="answer-review"><summary>${i + 1}. ${esc(TOPICS[q.topic])} ${difficulty(q.difficulty)} — ${esc(String(q.question).slice(0, 80))}${String(q.question).length > 80 ? '…' : ''}</summary>${questionBody(q)}${q.options && q.mode === 'set' ? `<ul class="browse-options">${q.options.map((o, n) => `<li>${String.fromCharCode(65 + n)}. ${esc(o)}</li>`).join('')}</ul>` : ''}<p><strong>Answer: ${esc(answerText(q))}</strong></p><div class="explanation-box">${esc(q.explanation)}</div><button class="btn btn--primary-desk btn--sm" data-practise="${i}">Practise this question</button></details>`).join('') || '<p class="empty-state">No questions match. Change your filters.</p>'}</section>`;
   area().querySelector('#browse-back-btn').onclick = prompt;
   area().querySelectorAll('[data-practise]').forEach(b => b.onclick = () => {
-    mount(bank, { kind: config.kind, container: 'desk-question-area', questions: [list[Number(b.dataset.practise)]], minutes: Number(document.getElementById('desk-exam-minutes').value) });
+    const picked = list[Number(b.dataset.practise)];
+    mount(bank, { kind: picked.mode === 'set' ? 'practice-set' : 'practice', container: 'desk-question-area', questions: [picked] });
     document.getElementById('desk-filter-bar').classList.add('session-running');
   });
+}
+function setHidden(ids, hidden) { for (const id of ids) document.getElementById(id).hidden = hidden; }
+function mockPaperSelect(sel) {
+  const select = document.getElementById('desk-mock-paper'), previous = select.value;
+  const papers = listPapers(bank).filter(p => p.stage === STAGE[sel]);
+  select.innerHTML = papers.map(p => `<option value="${esc(p.id)}">${p.reserved ? `Paper ${p.number} (dress rehearsal: kept unseen)` : `Paper ${p.number}`}</option>`).join('');
+  if (papers.some(p => p.id === previous)) select.value = previous;
+  return select.value;
 }
 function prompt() {
   dispose();
   document.getElementById('desk-filter-bar').classList.remove('session-running');
-  config = { container: 'desk-question-area', kind: document.getElementById('desk-session-type').value };
-  const prepared = filtered(), count = prepared.length, examMode = exam();
-  document.getElementById('desk-exam-duration').hidden = !examMode;
-  area().innerHTML = `<div class="desk-start-prompt"><h2>${examMode ? 'Practise a paper at your own level' : 'Learn a method, then try it yourself'}</h2><p>${examMode ? 'Skip, flag and return to questions. Answers and explanations stay hidden until you submit or the timer ends.' : 'Use a hint when you need one. Try again before opening the worked solution, then practise the same skill with new numbers.'}</p><p class="muted">${count} questions match your selection. ${examMode ? 'These are original practice sets, not official exam papers.' : 'The timer is a guide; there is no time limit.'}</p><div class="action-row"><button id="desk-browse-btn" class="btn btn--secondary">Browse all questions</button><button id="desk-print-questions" class="btn btn--secondary" ${count ? '' : 'disabled'}>Print worksheet</button><button id="desk-print-answers" class="btn btn--secondary" ${count ? '' : 'disabled'}>Print answer sheet</button></div><p class="muted">Printing uses one fixed set. The question numbers match its separate answer sheet.</p></div>`;
-  document.getElementById('desk-start-btn').onclick = () => startFromFilters(prepared);
-  document.getElementById('desk-browse-btn').onclick = browse;
-  document.getElementById('desk-print-questions').onclick = () => printWorksheet(prepared, { multipleChoice: config.kind === 'exam-set' });
-  document.getElementById('desk-print-answers').onclick = () => printWorksheet(prepared, { answers: true, multipleChoice: config.kind === 'exam-set' });
+  const sel = document.getElementById('desk-session-type').value, mock = isMock(sel), timed = isTimed(sel);
+  config = { container: 'desk-question-area', kind: sel };
+  setHidden(['desk-topic-filter', 'desk-difficulty-filter', 'desk-bookmark-filter', 'desk-setsize-filter'], mock);
+  document.getElementById('desk-mock-paper').hidden = !mock;
+  document.getElementById('desk-exam-duration').hidden = !mock;
+  const paperId = mock ? mockPaperSelect(sel) : null;
+  const prepared = mock ? paperQuestions(bank, paperId) : filtered(), count = prepared.length;
+  const minutes = mock ? Number(document.getElementById('desk-exam-minutes').value) : timed ? pacedMinutes(count, STAGE[sel]) : 0;
+  const choices = allChoices(prepared);
+  const rules = timed ? `<div class="exam-rules"><h3>Exam rules</h3><p>${esc(RULES[STAGE[sel]])}</p>${mock ? '<p>The schools publish the paper length (40 to 50 minutes) but not the number of questions. This mock\u2019s length is an estimate from tutoring sites.</p>' : ''}</div>` : '';
+  const summaryLine = !timed ? `${count} questions match your selection. The timer is a guide; there is no time limit.`
+    : mock ? (count ? `${count} questions · ${minutes} minutes. These are original practice sets, not official exam papers.` : 'No mock paper is available yet. These are original practice sets, not official exam papers.')
+    : `${count} questions · ${minutes} minutes at exam pace. These are original practice sets, not official exam papers.`;
+  area().innerHTML = `<div class="desk-start-prompt"><h2>${mock ? 'Sit a fixed mock paper' : timed ? 'Practise a paper at your own level' : 'Learn a method, then try it yourself'}</h2><p>${timed ? 'Skip, flag and return to questions. Answers and explanations stay hidden until you submit or the timer ends.' : 'Use a hint when you need one. Try again before opening the worked solution, then practise the same skill with new numbers.'}</p>${rules}<p class="muted">${summaryLine}</p><div class="action-row">${mock ? '' : '<button id="desk-browse-btn" class="btn btn--secondary">Browse all questions</button>'}<button id="desk-print-questions" class="btn btn--secondary" ${count ? '' : 'disabled'}>Print worksheet</button>${choices ? `<button id="desk-print-grid" class="btn btn--secondary" ${count ? '' : 'disabled'}>Print answer grid</button>` : ''}<button id="desk-print-answers" class="btn btn--secondary" ${count ? '' : 'disabled'}>Print answer sheet</button></div><p class="muted">Printing uses one fixed set. The question numbers match its separate answer sheet.</p></div>`;
+  document.getElementById('desk-start-btn').onclick = () => startFromFilters(prepared, minutes);
+  const browseBtn = document.getElementById('desk-browse-btn');
+  if (browseBtn) browseBtn.onclick = browse;
+  document.getElementById('desk-print-questions').onclick = () => printWorksheet(prepared, { multipleChoice: choices });
+  const grid = document.getElementById('desk-print-grid');
+  if (grid) grid.onclick = () => printWorksheet(prepared, { grid: true, multipleChoice: true });
+  document.getElementById('desk-print-answers').onclick = () => printWorksheet(prepared, { answers: true, multipleChoice: choices });
 }
-function startFromFilters(prepared) {
-  const kind = document.getElementById('desk-session-type').value;
-  mount(bank, { kind, container: 'desk-question-area', questions: prepared || filtered(), minutes: Number(document.getElementById('desk-exam-minutes').value) });
+function startFromFilters(prepared, minutes) {
+  const sel = document.getElementById('desk-session-type').value;
+  const kind = sel === 'mock-set' ? 'exam-set' : sel === 'mock-desk' ? 'exam-desk' : sel;
+  mount(bank, { kind, container: 'desk-question-area', questions: prepared, minutes: isTimed(sel) ? minutes : undefined, paperId: isMock(sel) ? document.getElementById('desk-mock-paper').value : undefined });
   document.getElementById('desk-filter-bar').classList.add('session-running');
 }
 export function mount(all, options) {
-  dispose(); bank = all; config = options; questions = [...options.questions];
+  dispose(); pads.clear(); bank = all; config = options; questions = [...options.questions];
   states = structuredClone(options.saved || {}); seconds = options.savedSeconds || 0; submitted = false;
   index = questions.findIndex(q => !states[q.id]?.finished);
   if (!questions.length) { area().innerHTML = '<p class="empty-state">No questions match. Change your filters to build a set.</p>'; return; }
   if (index < 0) { index = 0; submitted = true; config.onComplete?.(); summary(); return; }
-  deadline = Date.now() + (options.minutes || 45) * 60000; lastTick = Date.now();
+  if (exam() && !config.minutes) config.minutes = pacedMinutes(questions.length, config.kind === 'exam-set' ? 'SET' : 'NWSSEE');
+  deadline = Date.now() + (config.minutes || 45) * 60000; lastTick = Date.now();
   timer = setInterval(tick, 500);
   render();
 }
@@ -84,19 +120,19 @@ function tick() {
 function render() {
   const q = questions[index], st = current(), qNumber = index + 1;
   const tutorial = getTutorial(q);
-  const availableFollowUp = !exam() && config.kind !== 'daily' && st.finished ? followUp(q, bank, getProgress(), questions.filter(item => states[item.id]?.finished).map(item => item.id)) : null;
+  const availableFollowUp = !exam() && config.kind !== 'daily' && st.finished ? followUp(q, practiceBank(bank), getProgress(), questions.filter(item => states[item.id]?.finished).map(item => item.id)) : null;
   const wrong = st.firstAnswer && !st.firstAnswer.correct && !st.finished;
-  area().innerHTML = `<div class="session-meta"><span>Q${qNumber} of ${questions.length} · ${exam() ? 'Exam practice' : config.kind === 'daily' ? esc(config.reasons?.[q.id]) : 'Guided practice'}</span><span><span data-session-clock>${time(exam() ? (deadline - Date.now()) / 1000 : seconds)}</span> ${exam() ? 'left' : 'solving time'}</span></div>
+  area().innerHTML = `<div class="session-meta"><span>Q${qNumber} of ${questions.length} · ${exam() ? (config.paperId ? 'Mock paper' : 'Exam practice') : config.kind === 'daily' ? esc(config.reasons?.[q.id]) : 'Guided practice'}</span><span><span data-session-clock>${time(exam() ? (deadline - Date.now()) / 1000 : seconds)}</span> ${exam() ? 'left' : 'solving time'}</span></div>
     <article class="question-card question-card--desk" aria-label="Question ${qNumber}">
       <div class="card-meta"><span class="topic-tag">${esc(TOPICS[q.topic])}</span>${difficulty(q.difficulty)}<button class="bookmark-btn ${isBookmarked(q.id) ? 'bookmarked' : ''}" id="desk-bookmark-btn" aria-pressed="${isBookmarked(q.id)}" aria-label="Bookmark this question">★</button></div>
       ${questionBody(q)}
-      <section class="workpad" aria-label="Working out"><div class="workpad-bar"><strong>Working out</strong><span class="workpad-tools"><button type="button" class="btn btn--secondary btn--sm" id="wp-pen" aria-pressed="true">Pen</button><button type="button" class="btn btn--secondary btn--sm" id="wp-eraser" aria-pressed="false">Rub out</button><button type="button" class="btn btn--secondary btn--sm" id="wp-undo">Undo</button><button type="button" class="btn btn--secondary btn--sm" id="wp-clear">Clear</button></span></div><canvas class="workpad-canvas" id="workpad" role="img" aria-label="Freehand space for working out. Draw with a finger or pen."></canvas></section>
+      <section class="workpad" aria-label="Working out"><div class="workpad-bar"><strong>Working out</strong><span class="workpad-tools"><button type="button" class="btn btn--secondary btn--sm" id="wp-pen" aria-pressed="true">Pen</button><button type="button" class="btn btn--secondary btn--sm" id="wp-eraser" aria-pressed="false" ${config.kind === 'exam-desk' ? 'hidden' : ''}>Rub out</button><button type="button" class="btn btn--secondary btn--sm" id="wp-undo">Undo</button><button type="button" class="btn btn--secondary btn--sm" id="wp-clear">Clear</button></span></div><canvas class="workpad-canvas" id="workpad" role="img" aria-label="Freehand space for working out. Draw with a finger or pen."></canvas></section>
       <form id="desk-answer-form">
-      ${config.kind === 'exam-set' ? `<fieldset class="exam-choices"><legend class="sr-only">Choose your answer</legend>${q.options.map((opt, i) => `<label class="exam-option"><input type="radio" name="exam-answer" value="${esc(opt)}" ${st.input === opt ? 'checked' : ''}><span>${String.fromCharCode(65 + i)}. ${esc(opt)}</span></label>`).join('')}</fieldset>` : `<label class="answer-label" for="desk-answer-input">Your final answer${q.unit ? ` (in ${esc(q.unit)})` : ''}</label><input type="text" class="answer-input" id="desk-answer-input" value="${esc(st.input)}" autocomplete="off" spellcheck="false" ${st.finished ? 'disabled' : ''} placeholder="Type your answer">`}
+      ${q.mode === 'set' ? `<fieldset class="exam-choices"><legend class="sr-only">Choose your answer</legend>${(q.options || []).map((opt, i) => `<label class="exam-option"><input type="radio" name="exam-answer" value="${esc(opt)}" ${st.input === opt ? 'checked' : ''} ${st.finished ? 'disabled' : ''}><span>${String.fromCharCode(65 + i)}. ${esc(opt)}</span></label>`).join('')}</fieldset>` : `<label class="answer-label" for="desk-answer-input">Your final answer${q.unit ? ` (in ${esc(q.unit)})` : ''}</label><input type="text" class="answer-input" id="desk-answer-input" value="${esc(st.input)}" autocomplete="off" spellcheck="false" ${st.finished ? 'disabled' : ''} placeholder="Type your answer">`}
       ${!exam() && !st.finished ? `<p class="answer-status ${wrong ? 'incorrect' : ''}" role="status">${wrong ? 'Not quite yet. Try again, or use a hint to get started.' : ''}</p><div class="action-row"><button class="btn btn--primary-desk" type="submit" id="desk-check-btn">${wrong ? 'Try again' : 'Check answer'}</button><button class="btn btn--secondary" type="button" id="desk-hint-btn" ${st.hints >= q.hints.length ? 'disabled' : ''}>${st.hints ? 'Next hint' : 'Give me a hint'}</button><button class="text-button" type="button" id="desk-solution-btn">Show worked solution</button></div>` : ''}
       </form>
       ${!exam() && st.hints ? `<div class="hint-box" aria-live="polite"><strong>A step at a time</strong><ol>${q.hints.slice(0, st.hints).map(h => `<li>${esc(h)}</li>`).join('')}</ol><p class="muted">Answers using hints are tracked as supported practice.</p>${tutorial && st.hints >= q.hints.length ? `<div class="hint-tutorial"><p class="hint-tutorial-text">Still stuck? <strong>${esc(tutorial.concept)}</strong></p><div class="hint-tutorial-actions">${tutorial.videoId ? `<button type="button" class="btn btn--secondary btn--sm hint-video-toggle" id="desk-hint-video-toggle" aria-expanded="false"><span class="btn-icon">▶</span> <span class="btn-text">Watch video</span></button>` : ''}${tutorial.videoUrl ? `<a href="${esc(tutorial.videoUrl)}" target="_blank" rel="noopener noreferrer" class="hint-tutorial-link">Open on YouTube ↗</a>` : ''}<a href="${esc(tutorial.webUrl)}" target="_blank" rel="noopener noreferrer" class="hint-tutorial-link">Read guide ↗</a></div>${tutorial.videoId ? `<div class="tutorial-video-container" id="desk-hint-video-container" hidden><div class="video-responsive"><iframe data-src="https://www.youtube-nocookie.com/embed/${esc(tutorial.videoId)}?rel=0" title="${esc(tutorial.videoTitle)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>` : ''}</div>` : ''}</div>` : ''}
-      ${st.finished ? `<div class="desk-result-msg ${st.independentCorrect ? 'correct' : ''}" role="status">${st.independentCorrect ? '✓ Correct independently' : st.finalCorrect ? '✓ You got there — keep practising this skill' : `The answer is ${esc(answerText(q))}`}</div><div class="explanation-box">${esc(q.explanation)}</div>${q.pitfall ? `<div class="pitfall-box"><strong>Watch out:</strong> ${esc(q.pitfall)}</div>` : ''}<p class="parent-prompt">Explain it: ${esc(q.parent_prompt || 'How could you check that your answer makes sense?')}</p>${tutorial ? `<div class="tutorial-card"><div class="tutorial-card-header"><span class="tutorial-badge">Tutorial Insight</span><div class="tutorial-card-title">${esc(tutorial.concept)}</div></div>${tutorial.steps ? `<div class="tutorial-approach"><strong>How to approach this:</strong><ol class="tutorial-steps">${tutorial.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol>${tutorial.check ? `<p class="tutorial-check"><strong>Sanity check:</strong> ${esc(tutorial.check)}</p>` : ''}</div>` : ''}<div class="tutorial-media-actions">${tutorial.videoId ? `<button type="button" class="btn btn--secondary tutorial-video-toggle" id="desk-video-toggle" aria-expanded="false"><span class="btn-icon">▶</span> <span class="btn-text">Watch video walkthrough</span></button>` : ''}${tutorial.videoUrl ? `<a href="${esc(tutorial.videoUrl)}" target="_blank" rel="noopener noreferrer" class="tutorial-ext-link"><span>Open video on YouTube ↗</span></a>` : ''}<a href="${esc(tutorial.webUrl)}" target="_blank" rel="noopener noreferrer" class="tutorial-ext-link"><span>${esc(tutorial.webTitle)} ↗</span></a></div>${tutorial.videoId ? `<div class="tutorial-video-container" id="desk-video-container" hidden><div class="video-responsive"><iframe data-src="https://www.youtube-nocookie.com/embed/${esc(tutorial.videoId)}?rel=0" title="${esc(tutorial.videoTitle)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>` : ''}</div>` : ''}${availableFollowUp ? '<button class="btn btn--secondary" id="desk-followup-btn">Try a similar question</button>' : ''}` : ''}
+      ${st.finished ? `<div class="desk-result-msg ${st.independentCorrect ? 'correct' : ''}" role="status">${st.independentCorrect ? '✓ Correct independently' : st.finalCorrect ? '✓ You got there — keep practising this skill' : `The answer is ${esc(answerText(q))}`}</div>${st.finalCorrect ? '' : tempting(q, st.input)}<div class="explanation-box">${esc(q.explanation)}</div>${q.pitfall ? `<div class="pitfall-box"><strong>Watch out:</strong> ${esc(q.pitfall)}</div>` : ''}<p class="parent-prompt">Explain it: ${esc(q.parent_prompt || 'How could you check that your answer makes sense?')}</p>${tutorial ? `<div class="tutorial-card"><div class="tutorial-card-header"><span class="tutorial-badge">Tutorial Insight</span><div class="tutorial-card-title">${esc(tutorial.concept)}</div></div>${tutorial.steps ? `<div class="tutorial-approach"><strong>How to approach this:</strong><ol class="tutorial-steps">${tutorial.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol>${tutorial.check ? `<p class="tutorial-check"><strong>Sanity check:</strong> ${esc(tutorial.check)}</p>` : ''}</div>` : ''}<div class="tutorial-media-actions">${tutorial.videoId ? `<button type="button" class="btn btn--secondary tutorial-video-toggle" id="desk-video-toggle" aria-expanded="false"><span class="btn-icon">▶</span> <span class="btn-text">Watch video walkthrough</span></button>` : ''}${tutorial.videoUrl ? `<a href="${esc(tutorial.videoUrl)}" target="_blank" rel="noopener noreferrer" class="tutorial-ext-link"><span>Open video on YouTube ↗</span></a>` : ''}<a href="${esc(tutorial.webUrl)}" target="_blank" rel="noopener noreferrer" class="tutorial-ext-link"><span>${esc(tutorial.webTitle)} ↗</span></a></div>${tutorial.videoId ? `<div class="tutorial-video-container" id="desk-video-container" hidden><div class="video-responsive"><iframe data-src="https://www.youtube-nocookie.com/embed/${esc(tutorial.videoId)}?rel=0" title="${esc(tutorial.videoTitle)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>` : ''}</div>` : ''}${availableFollowUp ? '<button class="btn btn--secondary" id="desk-followup-btn">Try a similar question</button>' : ''}` : ''}
       ${exam() ? `<label class="flag-control"><input type="checkbox" id="desk-flag" ${st.flagged ? 'checked' : ''}> Flag to return to</label>` : ''}
       <div class="card-nav"><button class="btn btn--secondary" id="desk-prev-btn" ${index === 0 ? 'disabled' : ''}>← Back</button>${exam() || st.finished ? `<button class="btn btn--primary-desk" id="desk-next-btn">${index === questions.length - 1 ? exam() ? 'Review paper' : 'See results' : 'Next →'}</button>` : ''}</div>
     </article>
@@ -145,12 +181,12 @@ function bind(q, st, nextQuestion) {
   root.querySelector('#desk-answer-form').onsubmit = event => {
     event.preventDefault();
     if (exam() || st.finished) return;
-    if (!st.input.trim()) { root.querySelector('.answer-status').textContent = 'Enter an answer, or choose a hint.'; input?.focus(); return; }
+    if (!st.input.trim()) { root.querySelector('.answer-status').textContent = 'Enter an answer, or choose a hint.'; (input || root.querySelector('[name="exam-answer"]'))?.focus(); return; }
     const correct = checkAnswer(st.input, q);
     st.firstAnswer ??= { correct, assisted: st.hints > 0 };
     if (correct) finish(q, st, false);
     save(); render();
-    if (!correct) area().querySelector('#desk-answer-input')?.focus();
+    if (!correct) area().querySelector('#desk-answer-input, [name="exam-answer"]:checked')?.focus();
   };
   const hint = root.querySelector('#desk-hint-btn');
   if (hint) hint.onclick = () => { st.hints = Math.min(st.hints + 1, q.hints.length); save(); render(); };
@@ -227,14 +263,17 @@ function summary() {
   dispose();
   const correct = questions.filter(q => states[q.id]?.independentCorrect).length;
   const mistakes = questions.filter(q => !states[q.id]?.independentCorrect);
-  area().innerHTML = `<section class="summary-screen"><div class="summary-hero"><h2>${config.kind === 'daily' ? 'Today’s practice' : 'Session complete'}</h2><div class="summary-score">${correct} / ${questions.length}</div><p>answered correctly on the first try, without hints</p><p>${time(seconds)} ${exam() ? 'paper time' : 'solving time'}${config.expired ? ' · Time is up; your paper was submitted.' : ''}</p></div><p class="muted">Supported work is useful practice. It is counted separately from independent accuracy.</p><div class="summary-actions">${config.kind !== 'daily' ? '<button class="btn btn--primary-desk" id="summary-new-set-btn">New set</button>' : '<a href="#/" class="btn btn--primary-desk">Home</a>'}${mistakes.length && config.kind !== 'daily' ? '<button class="btn btn--secondary" id="summary-review-btn">Practise missed skills</button>' : ''}<button class="btn btn--secondary" id="summary-print-btn">Print these questions</button><button class="btn btn--secondary" id="summary-answers-btn">Print answer sheet</button></div><h3>Review your answers</h3>${questions.map((q, i) => `<details class="answer-review"><summary>${i + 1}. ${esc(TOPICS[q.topic])} — ${states[q.id]?.independentCorrect ? '✓ Independent' : 'Keep practising'}</summary>${questionBody(q)}<p>Your answer: ${esc(states[q.id]?.input || 'Not answered')}</p><p><strong>Answer: ${esc(answerText(q))}</strong></p><div class="explanation-box">${esc(q.explanation)}</div>${q.pitfall ? `<p>Watch out: ${esc(q.pitfall)}</p>` : ''}</details>`).join('')}</section>`;
+  area().innerHTML = `<section class="summary-screen"><div class="summary-hero"><h2>${config.kind === 'daily' ? 'Today’s practice' : 'Session complete'}</h2><div class="summary-score">${correct} / ${questions.length}</div><p>answered correctly on the first try, without hints</p><p>${time(seconds)} ${exam() ? 'paper time' : 'solving time'}${config.expired ? ' · Time is up; your paper was submitted.' : ''}</p></div><p class="muted">Supported work is useful practice. It is counted separately from independent accuracy.</p><div class="summary-actions">${config.kind !== 'daily' ? '<button class="btn btn--primary-desk" id="summary-new-set-btn">New set</button>' : '<a href="#/" class="btn btn--primary-desk">Home</a>'}${mistakes.length && config.kind !== 'daily' ? '<button class="btn btn--secondary" id="summary-review-btn">Practise missed skills</button>' : ''}<button class="btn btn--secondary" id="summary-print-btn">Print these questions</button>${allChoices(questions) ? '<button class="btn btn--secondary" id="summary-grid-btn">Print answer grid</button>' : ''}<button class="btn btn--secondary" id="summary-answers-btn">Print answer sheet</button></div><h3>Review your answers</h3>${questions.map((q, i) => `<details class="answer-review"><summary>${i + 1}. ${esc(TOPICS[q.topic])} — ${states[q.id]?.independentCorrect ? '✓ Independent' : 'Keep practising'}</summary>${questionBody(q)}<p>Your answer: ${esc(states[q.id]?.input || 'Not answered')}</p>${states[q.id]?.independentCorrect ? '' : tempting(q, states[q.id]?.input)}<p><strong>Answer: ${esc(answerText(q))}</strong></p><div class="explanation-box">${esc(q.explanation)}</div>${q.pitfall ? `<p>Watch out: ${esc(q.pitfall)}</p>` : ''}</details>`).join('')}</section>`;
   const root = area(), newSet = root.querySelector('#summary-new-set-btn');
   if (newSet) newSet.onclick = prompt;
   const review = root.querySelector('#summary-review-btn');
   if (review) review.onclick = () => {
-    const selected = mistakes.map(q => followUp(q, bank, getProgress(), questions.map(item => item.id)) || q);
+    const selected = mistakes.map(q => followUp(q, practiceBank(bank), getProgress(), questions.map(item => item.id)) || q);
     mount(bank, { kind: 'practice', container: config.container, questions: [...new Map(selected.map(q => [q.id, q])).values()] });
   };
-  root.querySelector('#summary-print-btn').onclick = () => printWorksheet(questions, { multipleChoice: config.kind === 'exam-set' });
-  root.querySelector('#summary-answers-btn').onclick = () => printWorksheet(questions, { answers: true, multipleChoice: config.kind === 'exam-set' });
+  const choices = allChoices(questions);
+  root.querySelector('#summary-print-btn').onclick = () => printWorksheet(questions, { multipleChoice: choices });
+  const grid = root.querySelector('#summary-grid-btn');
+  if (grid) grid.onclick = () => printWorksheet(questions, { grid: true, multipleChoice: true });
+  root.querySelector('#summary-answers-btn').onclick = () => printWorksheet(questions, { answers: true, multipleChoice: choices });
 }

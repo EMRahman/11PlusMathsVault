@@ -9,6 +9,7 @@ export const METHOD_NOTES = {
   'difference-squares': ['(m − g)(m + g) = m² − g² because the two middle terms cancel.', 'Two factors equally far from a number whose square you know.'],
   'near-ten': ['The distributive rule lets you multiply a nearby number and then correct for exactly what you added or removed.', 'Factors close to a friendly ten, hundred or other convenient number.'],
   'add-round-adjust': ['Rounding up adds an amount to each original number. Subtracting those same additions restores the original sum.', 'Addition where rounding makes a simpler calculation; record both adjustments.'],
+  'last-digit-check': ['Only the units digits of the two numbers affect the units digit of the product, because every other part of the product is a multiple of ten.', 'Multiple-choice multiplication, to cross out options quickly. It cannot prove an answer right, because many numbers share a last digit.'],
   'div-2-5-10': ['Every multiple of ten is divisible by 2 and 5. Only the remaining units digit needs checking.', 'Testing whole numbers without doing the full division.'],
   'div-3-9': ['Each decimal place is one more than a multiple of 9, so a number and its digit sum have the same remainder on division by 9, and also by 3.', 'Divisibility of whole numbers by 3 or 9.'],
   'div-4-8': ['100 is divisible by 4 and 1000 is divisible by 8. Earlier digits therefore contribute complete groups.', 'Whole numbers; use two final digits for 4 and three for 8.'],

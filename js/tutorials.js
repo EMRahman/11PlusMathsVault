@@ -698,10 +698,27 @@ export const TUTORIALS = {
  * @param {Object|string} qOrSubtopic - Full question object or subtopic string
  * @returns {Object|null}
  */
+// New subtopics that use the same method as an existing tutorial. Only variant-free tutorials are aliased.
+const TUTORIAL_ALIASES = {
+  long_multiplication: 'multiplication_strategies',
+  brackets_order_operations: 'order_operations',
+  decimal_brackets_2dp: 'order_operations',
+  decimal_money_problems: 'money_multiplication',
+  fraction_multiply_simplify: 'fraction_multiplication',
+  ratio_share_pence: 'ratio_sharing',
+  ratio_given_difference: 'ratio_difference',
+  proportion_best_buy: 'unitary_method',
+  triangle_angle_reasoning: 'triangle_angles',
+  angle_facts_combined: 'angles_on_line',
+  area_perimeter_compound: 'compound_area',
+  area_reasoning: 'compound_area',
+  percent_of_amount_harder: 'percent_of_amount',
+  percent_change_problems: 'percent_increase',
+};
 export function getTutorial(qOrSubtopic) {
   if (!qOrSubtopic) return null;
   const q = typeof qOrSubtopic === 'object' ? qOrSubtopic : { subtopic: qOrSubtopic };
-  const sub = q.subtopic;
+  const sub = TUTORIAL_ALIASES[q.subtopic] || q.subtopic;
   const base = TUTORIALS[sub];
   if (!base) return null;
 

@@ -1,0 +1,2085 @@
+[
+  {
+    "id": 393,
+    "topic": "geometry",
+    "subtopic": "area_reasoning",
+    "difficulty": 2,
+    "question": "A rectangular lawn is 15 m long and 10 m wide. A path 1 m wide runs all the way round the inside edge of the lawn, next to the fence. What is the area of the path in m²?",
+    "answer": "46 m²",
+    "unit": "m²",
+    "answer_format": null,
+    "check": "15*10-(15-2)*(10-2)",
+    "explanation": "The grass inside the path is a smaller rectangle. The path takes 1 m from each end, so its length is 15 - 2 = 13 m, and 1 m from each side, so its width is 10 - 2 = 8 m. The grass area is 13 × 8 = 104 m². The whole lawn is 15 × 10 = 150 m². The path is the difference: 150 - 104 = 46 m².",
+    "hints": [
+      "Think of the whole rectangle and the rectangle left in the middle.",
+      "The path is 1 m wide at both ends of a side, so the inner rectangle loses 2 m from each measurement, not 1 m."
+    ],
+    "pitfall": "Taking only 1 m off each measurement for the inner rectangle, forgetting the path lies on both sides.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              60,
+              45
+            ],
+            [
+              340,
+              45
+            ],
+            [
+              340,
+              65
+            ],
+            [
+              60,
+              65
+            ]
+          ],
+          "shaded": true
+        },
+        {
+          "points": [
+            [
+              60,
+              185
+            ],
+            [
+              340,
+              185
+            ],
+            [
+              340,
+              205
+            ],
+            [
+              60,
+              205
+            ]
+          ],
+          "shaded": true
+        },
+        {
+          "points": [
+            [
+              60,
+              65
+            ],
+            [
+              80,
+              65
+            ],
+            [
+              80,
+              185
+            ],
+            [
+              60,
+              185
+            ]
+          ],
+          "shaded": true
+        },
+        {
+          "points": [
+            [
+              320,
+              65
+            ],
+            [
+              340,
+              65
+            ],
+            [
+              340,
+              185
+            ],
+            [
+              320,
+              185
+            ]
+          ],
+          "shaded": true
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            60,
+            55
+          ],
+          "to": [
+            70,
+            55
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            70,
+            45
+          ],
+          "to": [
+            70,
+            55
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            330,
+            45
+          ],
+          "to": [
+            330,
+            55
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            340,
+            55
+          ],
+          "to": [
+            330,
+            55
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            340,
+            195
+          ],
+          "to": [
+            330,
+            195
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            330,
+            205
+          ],
+          "to": [
+            330,
+            195
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            70,
+            205
+          ],
+          "to": [
+            70,
+            195
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            60,
+            195
+          ],
+          "to": [
+            70,
+            195
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 200,
+          "y": 34,
+          "text": "15 m",
+          "anchor": "middle"
+        },
+        {
+          "x": 30,
+          "y": 130,
+          "text": "10 m",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A rectangle 15 m long and 10 m wide. A shaded strip 1 m wide runs round the inside of all four edges, leaving an unshaded rectangle in the middle. The corners of the rectangle are right angles."
+    }
+  },
+  {
+    "id": 394,
+    "topic": "geometry",
+    "subtopic": "area_reasoning",
+    "difficulty": 3,
+    "question": "ABCD is a rectangle 12 cm long and 8 cm high, with AB the left side and BC the bottom side. M is a point on BC, 5 cm from B. What is the area of triangle AMD?",
+    "answer": "48 cm²",
+    "unit": "cm²",
+    "answer_format": null,
+    "check": "12*8-8*5/2-8*(12-5)/2",
+    "explanation": "The rectangle has area 12 × 8 = 96 cm². Triangle ABM has base 5 and height 8, so area 20 cm². Triangle MCD has base 12 - 5 = 7 and height 8, so area 28 cm². Triangle AMD is what remains: 96 - 20 - 28 = 48 cm². Notice it is exactly half the rectangle, whatever the position of M.",
+    "hints": [
+      "The rectangle is made of three triangles. Two of them have a right angle that you can use.",
+      "Find the areas of the two right-angled triangles at the sides and take them away from the rectangle."
+    ],
+    "pitfall": "Using 5 cm as the base of triangle AMD, or trying to find its height without splitting the rectangle.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              55,
+              35
+            ],
+            [
+              165,
+              211
+            ],
+            [
+              319,
+              35
+            ]
+          ],
+          "shaded": true
+        },
+        {
+          "points": [
+            [
+              55,
+              35
+            ],
+            [
+              55,
+              211
+            ],
+            [
+              319,
+              211
+            ],
+            [
+              319,
+              35
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            55,
+            200
+          ],
+          "to": [
+            66,
+            200
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            66,
+            211
+          ],
+          "to": [
+            66,
+            200
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 42,
+          "y": 28,
+          "text": "A",
+          "anchor": "middle"
+        },
+        {
+          "x": 42,
+          "y": 226,
+          "text": "B",
+          "anchor": "middle"
+        },
+        {
+          "x": 332,
+          "y": 226,
+          "text": "C",
+          "anchor": "middle"
+        },
+        {
+          "x": 332,
+          "y": 28,
+          "text": "D",
+          "anchor": "middle"
+        },
+        {
+          "x": 165,
+          "y": 228,
+          "text": "M",
+          "anchor": "middle"
+        },
+        {
+          "x": 187,
+          "y": 25,
+          "text": "12 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 26,
+          "y": 125,
+          "text": "8 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 110,
+          "y": 229,
+          "text": "5 cm",
+          "anchor": "middle"
+        }
+      ],
+      "description": "Rectangle ABCD with A top left, B bottom left, C bottom right, D top right. It is 12 cm long and 8 cm high, with a right angle at B. Point M is on the bottom side BC, 5 cm from B. Triangle AMD is shaded."
+    }
+  },
+  {
+    "id": 395,
+    "topic": "geometry",
+    "subtopic": "area_reasoning",
+    "difficulty": 2,
+    "question": "A square has sides of length 10 cm. The midpoints of its four sides are joined in order to make a smaller, tilted square inside it. What is the area of the smaller square in cm²?",
+    "answer": "50 cm²",
+    "unit": "cm²",
+    "answer_format": null,
+    "check": "10*10-4*(5*5/2)",
+    "explanation": "Joining the midpoints cuts off four identical right-angled triangles, one at each corner. Each has two short sides of 5 cm, so its area is 5 × 5 ÷ 2 = 12.5 cm². Four of them make 50 cm². The big square is 10 × 10 = 100 cm², so the tilted square is 100 - 50 = 50 cm², exactly half.",
+    "hints": [
+      "Look at what is left over when you take the tilted square out of the big one.",
+      "The leftover pieces are four matching triangles. What are their two short sides?"
+    ],
+    "pitfall": "Trying to measure the side of the tilted square, which is not a whole number of centimetres.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              190,
+              22
+            ],
+            [
+              290,
+              122
+            ],
+            [
+              190,
+              222
+            ],
+            [
+              90,
+              122
+            ]
+          ],
+          "shaded": true
+        },
+        {
+          "points": [
+            [
+              90,
+              22
+            ],
+            [
+              290,
+              22
+            ],
+            [
+              290,
+              222
+            ],
+            [
+              90,
+              222
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            90,
+            33
+          ],
+          "to": [
+            101,
+            33
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            101,
+            22
+          ],
+          "to": [
+            101,
+            33
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            279,
+            22
+          ],
+          "to": [
+            279,
+            33
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            290,
+            33
+          ],
+          "to": [
+            279,
+            33
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            290,
+            211
+          ],
+          "to": [
+            279,
+            211
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            279,
+            222
+          ],
+          "to": [
+            279,
+            211
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            101,
+            222
+          ],
+          "to": [
+            101,
+            211
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            90,
+            211
+          ],
+          "to": [
+            101,
+            211
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 332,
+          "y": 127,
+          "text": "10 cm",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A square with sides of 10 cm. A smaller square is drawn inside it by joining the midpoints of the four sides, and is shaded. The corners of the large square are right angles."
+    }
+  },
+  {
+    "id": 396,
+    "topic": "geometry",
+    "subtopic": "angle_reasoning_multi_step",
+    "difficulty": 3,
+    "question": "In triangle ABC, AB = AC and angle BAC = 36°. D is a point on AC such that BD = BC. What is the size of angle BDA?",
+    "answer": "108°",
+    "unit": "°",
+    "answer_format": null,
+    "check": "180-(180-36)/2",
+    "explanation": "AB = AC, so the base angles are equal: (180 - 36) ÷ 2 = 72°, giving angle BCA = 72°. In triangle BCD, BD = BC, so angle BDC equals angle BCD = 72°. A, D and C lie on a straight line, so angle BDA = 180 - 72 = 108°.",
+    "hints": [
+      "Start with the isosceles triangle ABC and find the angle at C.",
+      "Triangle BCD is also isosceles. Which two of its angles are equal, and how does angle BDA relate to angle BDC?"
+    ],
+    "pitfall": "Assuming BD = AD or that angle BDA is 72°, instead of using the straight line ADC.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              190,
+              30
+            ],
+            [
+              126,
+              225
+            ],
+            [
+              254,
+              225
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            126,
+            225
+          ],
+          "to": [
+            230,
+            152
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            163,
+            129
+          ],
+          "to": [
+            153,
+            126
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            227,
+            126
+          ],
+          "to": [
+            217,
+            129
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            188,
+            220
+          ],
+          "to": [
+            188,
+            230
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            193,
+            220
+          ],
+          "to": [
+            193,
+            230
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            173,
+            186
+          ],
+          "to": [
+            179,
+            194
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            177,
+            183
+          ],
+          "to": [
+            183,
+            191
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 190,
+          "y": 20,
+          "text": "A",
+          "anchor": "middle"
+        },
+        {
+          "x": 110,
+          "y": 232,
+          "text": "B",
+          "anchor": "middle"
+        },
+        {
+          "x": 270,
+          "y": 232,
+          "text": "C",
+          "anchor": "middle"
+        },
+        {
+          "x": 242,
+          "y": 150,
+          "text": "D",
+          "anchor": "start"
+        },
+        {
+          "x": 190,
+          "y": 100,
+          "text": "36°",
+          "anchor": "middle"
+        },
+        {
+          "x": 203,
+          "y": 157,
+          "text": "?",
+          "anchor": "middle"
+        }
+      ],
+      "description": "Triangle ABC with A at the top. AB and AC are equal and angle BAC is 36°. Point D is on side AC and a line joins B to D. BD and BC are marked equal. The angle BDA, at D between DA and DB, is marked with a question mark."
+    }
+  },
+  {
+    "id": 397,
+    "topic": "geometry",
+    "subtopic": "angle_reasoning_multi_step",
+    "difficulty": 2,
+    "question": "In triangle PQR, PQ = PR. The side QR is extended in a straight line to a point S, and angle PRS is 128°. What is the size of angle QPR?",
+    "answer": "76°",
+    "unit": "°",
+    "answer_format": null,
+    "check": "180-2*(180-128)",
+    "explanation": "Angles QRP and PRS lie on a straight line, so angle QRP = 180 - 128 = 52°. PQ = PR, so angle PQR is also 52°. The angles of triangle PQR add to 180°, so angle QPR = 180 - 52 - 52 = 76°.",
+    "hints": [
+      "The angle given is outside the triangle. Use the straight line to find the angle inside the triangle at R.",
+      "Because PQ = PR, the angle at Q matches the angle you just found."
+    ],
+    "pitfall": "Using 128° as one of the triangle angles, or thinking the equal angles are at P.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              60,
+              195
+            ],
+            [
+              140,
+              55
+            ],
+            [
+              220,
+              195
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            220,
+            195
+          ],
+          "to": [
+            340,
+            195
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            96,
+            123
+          ],
+          "to": [
+            104,
+            127
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            184,
+            123
+          ],
+          "to": [
+            176,
+            127
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 140,
+          "y": 45,
+          "text": "P",
+          "anchor": "middle"
+        },
+        {
+          "x": 48,
+          "y": 210,
+          "text": "Q",
+          "anchor": "middle"
+        },
+        {
+          "x": 220,
+          "y": 212,
+          "text": "R",
+          "anchor": "middle"
+        },
+        {
+          "x": 340,
+          "y": 212,
+          "text": "S",
+          "anchor": "middle"
+        },
+        {
+          "x": 264,
+          "y": 175,
+          "text": "128°",
+          "anchor": "middle"
+        },
+        {
+          "x": 140,
+          "y": 92,
+          "text": "?",
+          "anchor": "middle"
+        }
+      ],
+      "description": "Triangle PQR with P at the top and QR along the bottom. PQ and PR are marked equal. QR is extended to the right to S. The exterior angle PRS is marked 128°. The angle at P is marked with a question mark."
+    }
+  },
+  {
+    "id": 398,
+    "topic": "geometry",
+    "subtopic": "angle_reasoning_multi_step",
+    "difficulty": 3,
+    "question": "B, D and C lie on a straight line. AB = AD, angle ABD = 50° and angle ACD = 35°. What is the size of angle DAC?",
+    "answer": "15°",
+    "unit": "°",
+    "answer_format": null,
+    "check": "180-(180-50)-35",
+    "explanation": "AB = AD, so triangle ABD is isosceles and angle ADB equals angle ABD = 50°. B, D and C are on a straight line, so angle ADC = 180 - 50 = 130°. In triangle ADC the angles add to 180°, so angle DAC = 180 - 130 - 35 = 15°.",
+    "hints": [
+      "Triangle ABD is isosceles. Which angle at D matches the 50° at B?",
+      "Use the straight line BDC to find the angle ADC, then look at triangle ADC."
+    ],
+    "pitfall": "Forgetting that angle ADC is outside triangle ABD and using 50° inside triangle ADC.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              152,
+              86
+            ],
+            [
+              40,
+              220
+            ],
+            [
+              343,
+              220
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            152,
+            86
+          ],
+          "to": [
+            265,
+            220
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            100,
+            156
+          ],
+          "to": [
+            92,
+            150
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            212,
+            150
+          ],
+          "to": [
+            205,
+            156
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 152,
+          "y": 76,
+          "text": "A",
+          "anchor": "middle"
+        },
+        {
+          "x": 26,
+          "y": 234,
+          "text": "B",
+          "anchor": "middle"
+        },
+        {
+          "x": 265,
+          "y": 234,
+          "text": "D",
+          "anchor": "middle"
+        },
+        {
+          "x": 352,
+          "y": 234,
+          "text": "C",
+          "anchor": "middle"
+        },
+        {
+          "x": 92,
+          "y": 208,
+          "text": "50°",
+          "anchor": "middle"
+        },
+        {
+          "x": 300,
+          "y": 213,
+          "text": "35°",
+          "anchor": "middle"
+        },
+        {
+          "x": 188,
+          "y": 118,
+          "text": "?",
+          "anchor": "middle"
+        }
+      ],
+      "description": "Triangle ABC with base BC along the bottom and A above. D is a point on BC and a line joins A to D. AB and AD are marked equal. Angle ABD is 50° and angle ACD is 35°. The angle DAC is marked with a question mark."
+    }
+  },
+  {
+    "id": 399,
+    "topic": "geometry",
+    "subtopic": "perimeter_reasoning",
+    "difficulty": 2,
+    "question": "Five identical squares are joined edge to edge to make a plus-shaped cross. The perimeter of the cross is 84 cm. What is the area of the cross in cm²?",
+    "answer": "245 cm²",
+    "unit": "cm²",
+    "answer_format": null,
+    "check": "84/12*84/12*5",
+    "explanation": "Count the outside edges of the cross. Each of the four arms has three exposed edges, which gives 12 edges of one square side each. So 12 sides make 84 cm, and one side is 84 ÷ 12 = 7 cm. One square has area 7 × 7 = 49 cm², and five squares make 245 cm².",
+    "hints": [
+      "Count how many square sides make up the outside edge of the cross.",
+      "Once you know the side of one square, the area of the cross is five squares."
+    ],
+    "pitfall": "Counting 20 sides (all the edges) or 16 sides instead of the 12 on the outline.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              163,
+              95
+            ],
+            [
+              218,
+              95
+            ],
+            [
+              218,
+              150
+            ],
+            [
+              163,
+              150
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              163,
+              40
+            ],
+            [
+              218,
+              40
+            ],
+            [
+              218,
+              95
+            ],
+            [
+              163,
+              95
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              163,
+              150
+            ],
+            [
+              218,
+              150
+            ],
+            [
+              218,
+              205
+            ],
+            [
+              163,
+              205
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              108,
+              95
+            ],
+            [
+              163,
+              95
+            ],
+            [
+              163,
+              150
+            ],
+            [
+              108,
+              150
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              218,
+              95
+            ],
+            [
+              273,
+              95
+            ],
+            [
+              273,
+              150
+            ],
+            [
+              218,
+              150
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "description": "A plus-shaped cross made from five identical squares: one in the centre with a square joined to its top, bottom, left and right edges."
+    }
+  },
+  {
+    "id": 400,
+    "topic": "geometry",
+    "subtopic": "perimeter_reasoning",
+    "difficulty": 2,
+    "question": "The staircase shape has three steps cut from its top right and all its corners are right angles. Its left side is 9 cm and its bottom side is 14 cm. What is its perimeter in cm?",
+    "answer": "46 cm",
+    "unit": "cm",
+    "answer_format": null,
+    "check": "2*(14+9)",
+    "explanation": "Slide every horizontal edge of the steps down to the top of the shape. Together the horizontal edges across the top add up to the 14 cm of the bottom side. Slide the vertical edges across to the left. Together they add up to the 9 cm of the left side. So the perimeter equals that of a 14 by 9 rectangle: 2 × (14 + 9) = 46 cm.",
+    "hints": [
+      "You are not given every side, so try not to find them all.",
+      "Imagine pushing the steps outward until the shape fills a rectangle. What happens to the perimeter?"
+    ],
+    "pitfall": "Adding only the two given lengths, or trying to guess the missing step lengths.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              60,
+              40
+            ],
+            [
+              180,
+              40
+            ],
+            [
+              180,
+              100
+            ],
+            [
+              270,
+              100
+            ],
+            [
+              270,
+              160
+            ],
+            [
+              350,
+              160
+            ],
+            [
+              350,
+              210
+            ],
+            [
+              60,
+              210
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            60,
+            50
+          ],
+          "to": [
+            70,
+            50
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            70,
+            40
+          ],
+          "to": [
+            70,
+            50
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            170,
+            40
+          ],
+          "to": [
+            170,
+            50
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            180,
+            50
+          ],
+          "to": [
+            170,
+            50
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            260,
+            100
+          ],
+          "to": [
+            260,
+            110
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            270,
+            110
+          ],
+          "to": [
+            260,
+            110
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            340,
+            160
+          ],
+          "to": [
+            340,
+            170
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            350,
+            170
+          ],
+          "to": [
+            340,
+            170
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            350,
+            200
+          ],
+          "to": [
+            340,
+            200
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            340,
+            210
+          ],
+          "to": [
+            340,
+            200
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            70,
+            210
+          ],
+          "to": [
+            70,
+            200
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            60,
+            200
+          ],
+          "to": [
+            70,
+            200
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 205,
+          "y": 228,
+          "text": "14 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 30,
+          "y": 130,
+          "text": "9 cm",
+          "anchor": "middle"
+        }
+      ],
+      "description": "A staircase shape with right-angled corners. Its left side is 9 cm and its bottom side is 14 cm. The top right is cut away in three steps going down to the right."
+    }
+  },
+  {
+    "id": 401,
+    "topic": "geometry",
+    "subtopic": "perimeter_reasoning",
+    "difficulty": 3,
+    "question": "A rectangle has a perimeter of 52 cm. A straight cut, parallel to its shorter sides, splits it into two smaller rectangles. One piece has a perimeter of 30 cm and the other has a perimeter of 38 cm. How long is the cut in cm?",
+    "answer": "8 cm",
+    "unit": "cm",
+    "answer_format": null,
+    "check": "(30+38-52)/2",
+    "explanation": "Add the two small perimeters: 30 + 38 = 68 cm. This counts the original outline of 52 cm once, plus the cut twice, once for each piece. So the two copies of the cut make 68 - 52 = 16 cm, and the cut is 16 ÷ 2 = 8 cm.",
+    "hints": [
+      "What happens to the total length of edges when you cut a shape in two?",
+      "Compare the two small perimeters added together with the original 52 cm. What extra length appears, and how many times?"
+    ],
+    "pitfall": "Subtracting once and answering 16 cm, forgetting the cut is counted on both pieces.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              30,
+              60
+            ],
+            [
+              154,
+              60
+            ],
+            [
+              154,
+              180
+            ],
+            [
+              30,
+              180
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              154,
+              60
+            ],
+            [
+              350,
+              60
+            ],
+            [
+              350,
+              180
+            ],
+            [
+              154,
+              180
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            30,
+            70
+          ],
+          "to": [
+            40,
+            70
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            40,
+            60
+          ],
+          "to": [
+            40,
+            70
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            340,
+            60
+          ],
+          "to": [
+            340,
+            70
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            350,
+            70
+          ],
+          "to": [
+            340,
+            70
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            350,
+            170
+          ],
+          "to": [
+            340,
+            170
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            340,
+            180
+          ],
+          "to": [
+            340,
+            170
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            40,
+            180
+          ],
+          "to": [
+            40,
+            170
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            30,
+            170
+          ],
+          "to": [
+            40,
+            170
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 92,
+          "y": 125,
+          "text": "P = 30 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 252,
+          "y": 100,
+          "text": "P = 38 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 166,
+          "y": 130,
+          "text": "?",
+          "anchor": "start"
+        }
+      ],
+      "description": "A rectangle split by a vertical cut into a narrower left piece with perimeter 30 cm and a wider right piece with perimeter 38 cm. The length of the cut is marked with a question mark. The corners are right angles."
+    }
+  },
+  {
+    "id": 402,
+    "topic": "measures",
+    "subtopic": "speed_multi_leg",
+    "difficulty": 2,
+    "question": "Maya cycles 12 km at 24 km/h, then walks a further 6 km at 6 km/h. What is her average speed for the whole journey in km/h?",
+    "answer": "12 km/h",
+    "unit": "km/h",
+    "answer_format": null,
+    "check": "(12+6)/(12/24+6/6)",
+    "explanation": "Cycling takes 12 ÷ 24 = half an hour. Walking takes 6 ÷ 6 = 1 hour. The total distance is 12 + 6 = 18 km and the total time is 1.5 hours. Average speed = 18 ÷ 1.5 = 12 km/h.",
+    "hints": [
+      "Average speed uses the total distance and the total time, so find each time first.",
+      "Do not average the two speeds: she spends different lengths of time at each."
+    ],
+    "pitfall": "Finding the mean of 24 and 6 instead of using total distance over total time.",
+    "diagram": null
+  },
+  {
+    "id": 403,
+    "topic": "measures",
+    "subtopic": "speed_multi_leg",
+    "difficulty": 3,
+    "question": "Two towns, P and Q, are 120 km apart. A bus leaves P for Q at 09:00, travelling at 40 km/h. A second bus leaves Q for P along the same road at 09:30, travelling at 60 km/h. At what time do the buses pass each other? Give your answer on the 24-hour clock.",
+    "answer": "10:30",
+    "unit": null,
+    "answer_format": "time",
+    "check": "9*60+30+(120-40*0.5)/(40+60)*60",
+    "explanation": "In the first half hour the first bus travels 40 × 0.5 = 20 km, leaving 100 km between the buses at 09:30. They now close the gap at 40 + 60 = 100 km per hour, so they meet 1 hour later, at 10:30.",
+    "hints": [
+      "What has the first bus done by the time the second bus sets off?",
+      "Once both are moving, how quickly is the gap between them shrinking?"
+    ],
+    "pitfall": "Adding both speeds from 09:00, or forgetting the first bus travelled alone for 30 minutes.",
+    "diagram": null
+  },
+  {
+    "id": 404,
+    "topic": "measures",
+    "subtopic": "speed_multi_leg",
+    "difficulty": 3,
+    "question": "A train 160 m long travels at a steady 72 km/h through a tunnel 640 m long. How many seconds pass from the moment the front of the train enters the tunnel until the back of the train leaves it? Give your answer in seconds.",
+    "answer": "40",
+    "unit": null,
+    "answer_format": null,
+    "check": "(640+160)/(72*1000/3600)",
+    "explanation": "72 km/h is 72 000 m in 3600 seconds, which is 20 m every second. For the back of the train to leave, the front must travel the tunnel length plus the train length: 640 + 160 = 800 m. At 20 m per second this takes 800 ÷ 20 = 40 seconds.",
+    "hints": [
+      "Change the speed into metres per second first.",
+      "How far must the front of the train travel before the very back has cleared the tunnel?"
+    ],
+    "pitfall": "Using only the tunnel length of 640 m, forgetting that the train itself has length.",
+    "diagram": null,
+    "answer_alt": [
+      "40 seconds",
+      "40 second",
+      "40 s",
+      "40s",
+      "40 secs"
+    ]
+  },
+  {
+    "id": 405,
+    "topic": "measures",
+    "subtopic": "time_and_unit_puzzles",
+    "difficulty": 3,
+    "question": "A faulty clock loses 5 minutes in every real hour. It is set to the correct time at 06:30 in the morning. Later the same day it shows 17:30. What is the true time then? Give your answer on the 24-hour clock.",
+    "answer": "18:30",
+    "unit": null,
+    "answer_format": "time",
+    "check": "6*60+30+(11*60)*60/55",
+    "explanation": "The clock shows 11 hours have passed, which is 660 minutes. In every true hour the clock only counts 55 minutes. So the number of true hours is 660 ÷ 55 = 12 hours. 12 hours after 06:30 is 18:30.",
+    "hints": [
+      "In one real hour, how many minutes does the faulty clock count?",
+      "How many real hours does it take for the clock to count 11 hours?"
+    ],
+    "pitfall": "Taking 5 minutes off for each hour the clock shows, rather than for each real hour, or simply subtracting from 17:30.",
+    "diagram": null
+  },
+  {
+    "id": 406,
+    "topic": "measures",
+    "subtopic": "time_and_unit_puzzles",
+    "difficulty": 3,
+    "question": "A fish tank is a cuboid 50 cm long, 40 cm wide and 30 cm tall. A tap fills it at 2 litres per minute. How many minutes will it take to fill the tank to 3/5 of its height? (1 litre is 1000 cm³.)",
+    "answer": "18 minutes",
+    "unit": "minutes",
+    "answer_format": null,
+    "check": "50*40*30*3/5/1000/2",
+    "explanation": "The full tank holds 50 × 40 × 30 = 60 000 cm³, which is 60 litres. Filling to 3/5 of the height needs 3/5 of the volume: 60 ÷ 5 × 3 = 36 litres. At 2 litres per minute this takes 36 ÷ 2 = 18 minutes.",
+    "hints": [
+      "Find the volume of the whole tank and change it into litres.",
+      "Water filled to part of the height is the same fraction of the volume."
+    ],
+    "pitfall": "Forgetting to convert cm³ into litres, or filling the whole tank.",
+    "diagram": null
+  },
+  {
+    "id": 407,
+    "topic": "measures",
+    "subtopic": "time_and_unit_puzzles",
+    "difficulty": 2,
+    "question": "A library lends a book for 4 weeks. Priya borrowed a book on 17 October and handed it back on 26 November. The library charges 10p for each day a book is late. How much does Priya pay, in pounds?",
+    "answer": "£1.20",
+    "unit": "£",
+    "answer_format": null,
+    "check": "12*10/100",
+    "explanation": "4 weeks is 28 days. October has 31 days, so 17 October plus 28 days is 14 November (14 days to 31 October, then 14 more). From 14 November to 26 November is 12 days late. 12 × 10p = 120p, which is £1.20.",
+    "hints": [
+      "First work out the date the book was due back.",
+      "Count the days from the due date to the day it was returned. Remember how many days October has."
+    ],
+    "pitfall": "Counting all the days since 17 October, or using 30 days in October.",
+    "diagram": null
+  },
+  {
+    "id": 408,
+    "topic": "measures",
+    "subtopic": "time_and_unit_puzzles",
+    "difficulty": 2,
+    "question": "Joss has three bags of flour, each holding 1.2 kg. Each loaf needs 350 g. After baking as many whole loaves as possible, how many grams of flour are left over?",
+    "answer": "100 g",
+    "unit": "g",
+    "answer_format": null,
+    "check": "3*1200-10*350",
+    "explanation": "Three bags hold 3 × 1.2 = 3.6 kg, which is 3600 g. Ten loaves use 3500 g, and 11 loaves would need 3850 g, which is too much. So 10 whole loaves can be baked, leaving 3600 - 3500 = 100 g.",
+    "hints": [
+      "Change everything into the same unit before you divide.",
+      "Find how many whole loaves fit into the total amount, then see what is left."
+    ],
+    "pitfall": "Mixing kilograms and grams, or rounding the number of loaves up.",
+    "diagram": null
+  },
+  {
+    "id": 409,
+    "topic": "algebra",
+    "subtopic": "word_problems_unknowns",
+    "difficulty": 2,
+    "question": "Sam has three times as many stickers as Tia. Sam gives Tia 20 stickers and now they have exactly the same number. How many stickers did Sam have at the start?",
+    "answer": "60",
+    "unit": null,
+    "answer_format": null,
+    "check": "(20+20)/2*3",
+    "explanation": "After the gift they have the same number, so Sam must have given away enough to close the gap. Sam gave 20, and Tia gained 20, so the gap was 40. At the start Sam had 3 times Tia's amount, so the gap of 40 is 2 times what Tia had. Tia had 20, and Sam had 3 × 20 = 60.",
+    "hints": [
+      "How big was the gap between them at the start, if giving 20 made it zero?",
+      "The gap is \"three times minus one time\" of Tia's stickers. How many times Tia's stickers is that?"
+    ],
+    "pitfall": "Thinking Sam started with 20 + 20 = 40 stickers.",
+    "diagram": null
+  },
+  {
+    "id": 410,
+    "topic": "algebra",
+    "subtopic": "word_problems_unknowns",
+    "difficulty": 2,
+    "question": "A shop window shows bicycles and tricycles, 22 in all, with 56 wheels altogether. How many of them are tricycles?",
+    "answer": "12",
+    "unit": null,
+    "answer_format": null,
+    "check": "56-2*22",
+    "explanation": "If all 22 were bicycles there would be 44 wheels. There are 56 wheels, which is 12 more. Each tricycle has one more wheel than a bicycle, so each tricycle accounts for 1 extra wheel. There must be 12 tricycles (and 10 bicycles: 20 + 36 = 56 wheels).",
+    "hints": [
+      "Pretend every vehicle is a bicycle and count the wheels.",
+      "How many extra wheels does each tricycle add to your count?"
+    ],
+    "pitfall": "Dividing 56 by 5 or by 3 without using the total of 22 vehicles.",
+    "diagram": null
+  },
+  {
+    "id": 411,
+    "topic": "algebra",
+    "subtopic": "word_problems_unknowns",
+    "difficulty": 3,
+    "question": "A mother is 28 years older than her son. In 4 years' time she will be exactly 3 times as old as he will be then. How old is the son now?",
+    "answer": "10",
+    "unit": null,
+    "answer_format": null,
+    "check": "28/2-4",
+    "explanation": "The age gap stays 28 years. In 4 years the mother is 3 times as old as her son, so the gap of 28 is 2 times the son's age then. His age then is 28 ÷ 2 = 14, so now he is 14 - 4 = 10. Check: mother is 38 now and 42 in 4 years, and 3 × 14 = 42.",
+    "hints": [
+      "The difference in ages never changes. Use it in the future situation.",
+      "In 4 years the mother's age is \"3 times the son's age\", so the gap is how many times the son's age?"
+    ],
+    "pitfall": "Stopping at 14 (his age in 4 years) and forgetting to go back to the present.",
+    "diagram": null
+  },
+  {
+    "id": 412,
+    "topic": "algebra",
+    "subtopic": "pattern_generalising",
+    "difficulty": 2,
+    "question": "Matchsticks are used to make a row of squares. Pattern 1 is one square, pattern 2 is two squares joined side by side, and pattern 3 is three squares in a row. How many matchsticks are needed for pattern 40?",
+    "answer": "121",
+    "unit": null,
+    "answer_format": null,
+    "check": "3*40+1",
+    "explanation": "Pattern 1 uses 4 matchsticks. Each extra square shares a side with the last one, so it needs only 3 more sticks. The numbers go 4, 7, 10 and so on. Pattern 40 has 39 extra squares: 4 + 39 × 3 = 121 matchsticks.",
+    "hints": [
+      "Count the matchsticks in the first three patterns. How much does the number grow each time?",
+      "Each new square shares a side with the one before, so how many new sticks does it need?"
+    ],
+    "pitfall": "Multiplying 40 by 4 and forgetting that neighbouring squares share a stick.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              20,
+              90
+            ],
+            [
+              56,
+              90
+            ],
+            [
+              56,
+              126
+            ],
+            [
+              20,
+              126
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              100,
+              90
+            ],
+            [
+              136,
+              90
+            ],
+            [
+              136,
+              126
+            ],
+            [
+              100,
+              126
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              136,
+              90
+            ],
+            [
+              172,
+              90
+            ],
+            [
+              172,
+              126
+            ],
+            [
+              136,
+              126
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              210,
+              90
+            ],
+            [
+              246,
+              90
+            ],
+            [
+              246,
+              126
+            ],
+            [
+              210,
+              126
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              246,
+              90
+            ],
+            [
+              282,
+              90
+            ],
+            [
+              282,
+              126
+            ],
+            [
+              246,
+              126
+            ]
+          ],
+          "shaded": false
+        },
+        {
+          "points": [
+            [
+              282,
+              90
+            ],
+            [
+              318,
+              90
+            ],
+            [
+              318,
+              126
+            ],
+            [
+              282,
+              126
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 38,
+          "y": 150,
+          "text": "Pattern 1",
+          "anchor": "middle"
+        },
+        {
+          "x": 136,
+          "y": 150,
+          "text": "Pattern 2",
+          "anchor": "middle"
+        },
+        {
+          "x": 264,
+          "y": 150,
+          "text": "Pattern 3",
+          "anchor": "middle"
+        }
+      ],
+      "description": "Three patterns of squares made from matchsticks. Pattern 1 is a single square, pattern 2 is two squares side by side and pattern 3 is three squares in a row."
+    }
+  },
+  {
+    "id": 413,
+    "topic": "algebra",
+    "subtopic": "pattern_generalising",
+    "difficulty": 2,
+    "question": "A square of white tiles is surrounded by a border of grey tiles, one tile wide. The picture shows a square of 3 by 3 white tiles. How many grey tiles are needed to surround a square of 15 by 15 white tiles?",
+    "answer": "64",
+    "unit": null,
+    "answer_format": null,
+    "check": "4*15+4",
+    "explanation": "The border has a row of 15 grey tiles along the top and one along the bottom, and 15 down each side. That is 4 × 15 = 60. The four corner tiles are not yet counted, so add 4 more. The total is 64 grey tiles. For the 3 by 3 picture the same method gives 4 × 3 + 4 = 16.",
+    "hints": [
+      "Work out the number of grey tiles for the 3 by 3 square in the picture, then for a 1 by 1 and a 2 by 2 square.",
+      "Count the four sides of the border separately, then think about the corners."
+    ],
+    "pitfall": "Forgetting the four corner tiles, which gives 60.",
+    "diagram": {
+      "type": "shaded_grid",
+      "rows": 5,
+      "cols": 5,
+      "shaded": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "description": "A 5 by 5 grid of tiles. The central 3 by 3 block is white and the border of 16 tiles around it is shaded."
+    }
+  },
+  {
+    "id": 414,
+    "topic": "algebra",
+    "subtopic": "pattern_generalising",
+    "difficulty": 2,
+    "question": "The sequence 11, 18, 25, 32, … continues in the same way for ever. What is the first term in the sequence that is greater than 300?",
+    "answer": "305",
+    "unit": null,
+    "answer_format": null,
+    "check": "11+7*42",
+    "explanation": "The terms go up by 7 each time. To get from 11 to 300 we need to climb 289. 289 ÷ 7 is just over 41, so 41 steps reach 11 + 287 = 298, which is too small. 42 steps reach 11 + 294 = 305, the first term over 300.",
+    "hints": [
+      "How much is added each step? How many steps are needed to climb from 11 to 300?",
+      "The number of steps is not a whole number. Think carefully about which side to round to."
+    ],
+    "pitfall": "Rounding down to 298, or giving the term number instead of its value.",
+    "diagram": null
+  },
+  {
+    "id": 415,
+    "topic": "statistics",
+    "subtopic": "data_reasoning",
+    "difficulty": 2,
+    "question": "The mean of five test scores is 14. After a sixth test, the mean of all six scores is 15.5. What was the score in the sixth test?",
+    "answer": "23",
+    "unit": null,
+    "answer_format": null,
+    "check": "6*15.5-5*14",
+    "explanation": "Five scores with a mean of 14 add up to 5 × 14 = 70. Six scores with a mean of 15.5 add up to 6 × 15.5 = 93. The sixth score is the difference: 93 - 70 = 23.",
+    "hints": [
+      "Use the mean to find the total of the first five scores, and then the total of all six.",
+      "What is the difference between the two totals?"
+    ],
+    "pitfall": "Adding the two means or multiplying 1.5 by 6.",
+    "diagram": null
+  },
+  {
+    "id": 416,
+    "topic": "statistics",
+    "subtopic": "data_reasoning",
+    "difficulty": 2,
+    "question": "The bar chart shows the goals scored by a hockey team in its first five matches. In the sixth match the team scores enough goals to make the mean number of goals over all six matches exactly 4. How many goals did it score in the sixth match?",
+    "answer": "7",
+    "unit": null,
+    "answer_format": null,
+    "check": "6*4-(3+6+2+5+1)",
+    "explanation": "Reading the bars gives 3, 6, 2, 5 and 1 goals, a total of 17. For a mean of 4 over six matches the total must be 6 × 4 = 24. The sixth match needs 24 - 17 = 7 goals.",
+    "hints": [
+      "Read each bar carefully and find the total number of goals so far.",
+      "How many goals altogether are needed for a mean of 4 over six matches?"
+    ],
+    "pitfall": "Misreading a bar, or dividing 17 by 5 instead of working with totals.",
+    "diagram": {
+      "type": "bars",
+      "labels": [
+        "M1",
+        "M2",
+        "M3",
+        "M4",
+        "M5"
+      ],
+      "values": [
+        3,
+        6,
+        2,
+        5,
+        1
+      ],
+      "max": 8,
+      "axis_label": "Goals",
+      "description": "A bar chart of goals scored in matches 1 to 5: match 1 scored 3, match 2 scored 6, match 3 scored 2, match 4 scored 5 and match 5 scored 1."
+    }
+  },
+  {
+    "id": 417,
+    "topic": "statistics",
+    "subtopic": "data_reasoning",
+    "difficulty": 2,
+    "question": "The pie chart shows how pupils in one year group travel to school. 30 of the pupils cycle. How many pupils walk to school?",
+    "answer": "75",
+    "unit": null,
+    "answer_format": null,
+    "check": "30/10*25",
+    "explanation": "The cycling slice is 10% of the pupils and that is 30 pupils, so 1% is 3 pupils and the whole year group is 300 pupils. The walking slice is 25%, which is 25 × 3 = 75 pupils.",
+    "hints": [
+      "Use the slice for cycling to find how many pupils there are in total.",
+      "Then find the number that matches the walking slice."
+    ],
+    "pitfall": "Adding 30 to the percentage for walking, or treating the percentages as numbers of pupils.",
+    "diagram": {
+      "type": "pie",
+      "labels": [
+        "Walk",
+        "Bus",
+        "Car",
+        "Cycle"
+      ],
+      "values": [
+        25,
+        35,
+        30,
+        10
+      ],
+      "description": "A pie chart of how pupils travel to school: walk 25%, bus 35%, car 30%, cycle 10%."
+    }
+  },
+  {
+    "id": 418,
+    "topic": "coordinates",
+    "subtopic": "coordinate_geometry_reasoning",
+    "difficulty": 2,
+    "question": "P, Q and R are three corners of a parallelogram PQRS, with the corners in that order. They are shown on the grid. What are the coordinates of S?",
+    "answer": "(-2, 2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "-4+3-1",
+      "-2+2+2"
+    ],
+    "explanation": "In a parallelogram, going from Q to R is the same move as going from P to S. From Q(1, -2) to R(3, 2) is 2 right and 4 up. Apply that move to P(-4, -2): -4 + 2 = -2 and -2 + 4 = 2. So S is (-2, 2).",
+    "hints": [
+      "Opposite sides of a parallelogram are parallel and equal. Which side is parallel to PS?",
+      "Describe the move from Q to R, then make the same move starting at P."
+    ],
+    "pitfall": "Treating PQRS as a rectangle and using the wrong x value.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -4,
+          "y": -2,
+          "label": "P"
+        },
+        {
+          "x": 1,
+          "y": -2,
+          "label": "Q"
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "label": "R"
+        }
+      ],
+      "join": false,
+      "description": "A grid with three points: P at (-4, -2), Q at (1, -2) and R at (3, 2)."
+    }
+  },
+  {
+    "id": 419,
+    "topic": "coordinates",
+    "subtopic": "coordinate_geometry_reasoning",
+    "difficulty": 3,
+    "question": "A triangle ABC is drawn on a grid where each square has sides of 1 cm. Its corners are shown. What is the area of triangle ABC in cm²?",
+    "answer": "23 cm²",
+    "unit": "cm²",
+    "answer_format": null,
+    "check": "7*7-6*4/2-1*7/2-7*3/2",
+    "explanation": "Draw the smallest rectangle round the triangle: it runs from x = -4 to 3 and y = -3 to 4, so it is 7 by 7 with area 49 cm². Cut off three right-angled triangles at the corners: 6 × 4 ÷ 2 = 12, 1 × 7 ÷ 2 = 3.5 and 7 × 3 ÷ 2 = 10.5. Together they are 26 cm². The triangle has area 49 - 26 = 23 cm².",
+    "hints": [
+      "No side is horizontal or vertical, so enclose the triangle in a rectangle with sides along the grid lines.",
+      "The space between the triangle and the rectangle is made of three right-angled triangles."
+    ],
+    "pitfall": "Using base × height ÷ 2 with a slanting side as the base.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -4,
+          "y": 1,
+          "label": "A"
+        },
+        {
+          "x": 2,
+          "y": -3,
+          "label": "B"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "label": "C"
+        }
+      ],
+      "join": true,
+      "description": "A grid with a triangle joining A at (-4, 1), B at (2, -3) and C at (3, 4)."
+    }
+  },
+  {
+    "id": 420,
+    "topic": "coordinates",
+    "subtopic": "coordinate_geometry_reasoning",
+    "difficulty": 2,
+    "question": "ABCD is a rhombus. Its diagonals AC and BD cross at the point M, which is exactly halfway along each diagonal. A, B and M are shown on the grid. What are the coordinates of D?",
+    "answer": "(1, -2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "1",
+      "1-3"
+    ],
+    "explanation": "M is halfway along BD. B (1, 4) is 3 above M (1, 1), so D is 3 below M: (1, 1 − 3) = (1, -2).",
+    "hints": [
+      "M is halfway along BD. How far is B from M, across and up or down?",
+      "Make the same move again from M to reach D."
+    ],
+    "pitfall": "Choosing the reflection of A rather than B, which gives vertex C instead of D.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -3,
+          "y": 1,
+          "label": "A"
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "label": "B"
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "label": "M"
+        }
+      ],
+      "join": false,
+      "description": "A grid with three points: A at (-3, 1), B at (1, 4) and M at (1, 1)."
+    }
+  }
+]

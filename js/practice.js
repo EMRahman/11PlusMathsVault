@@ -56,3 +56,23 @@ export function followUp(q, questions, progress, excluded = []) {
   return questions.filter(other => other.id !== q.id && !excluded.includes(other.id) && skillKey(other) === skillKey(q))
     .sort((a, b) => (progress[a.id]?.lastAttempted || '').localeCompare(progress[b.id]?.lastAttempted || '') || Math.abs(a.difficulty - q.difficulty) - Math.abs(b.difficulty - q.difficulty))[0];
 }
+
+// Mock papers are fixed sets stored on the questions themselves (paper_id, paper_position).
+export const PAPER_FORMAT = {
+  // Question counts are planning estimates from tutoring sites. The schools publish only "40 to 50 minutes".
+  SET: { questions: 50, secondsPerQuestion: 54 },
+  NWSSEE: { questions: 25, secondsPerQuestion: 108 },
+};
+export function listPapers(questions) {
+  const ids = [...new Set(questions.filter(q => q.paper_id).map(q => q.paper_id))];
+  return ids.sort().map(id => ({ id, stage: id.split('-')[0], number: Number(id.split('-')[1]), reserved: questions.some(q => q.paper_id === id && q.reserved_mock) }));
+}
+export function paperQuestions(questions, paperId) {
+  return questions.filter(q => q.paper_id === paperId).sort((a, b) => a.paper_position - b.paper_position);
+}
+// The final paper of each stage stays unseen for a dress rehearsal, so it is left out of everyday practice.
+export function practiceBank(questions) { return questions.filter(q => !q.reserved_mock); }
+// A timed set keeps exam pace whatever its length, rounded up to a whole minute.
+export function pacedMinutes(count, stage) {
+  return Math.max(1, Math.ceil(count * PAPER_FORMAT[stage].secondsPerQuestion / 60));
+}

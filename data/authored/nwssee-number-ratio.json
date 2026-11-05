@@ -1,0 +1,578 @@
+[
+  {
+    "id": 361,
+    "topic": "number_operations",
+    "subtopic": "number_puzzle_reasoning",
+    "difficulty": 2,
+    "question": "A three-digit number has digits that add up to 14. The hundreds digit is double the units digit. The tens digit is 2 more than the units digit. What is the number?",
+    "answer": "653",
+    "unit": null,
+    "answer_format": null,
+    "check": "6*100+5*10+3",
+    "explanation": "Let the units digit be u. Then the hundreds digit is 2u and the tens digit is u + 2. The digit sum is 2u + (u+2) + u = 4u + 2 = 14, so u = 3. The digits are 6, 5 and 3, giving 653.",
+    "hints": [
+      "Call the units digit 'u' in your head and describe the other two digits using it.",
+      "The three digits together make 4 lots of u plus 2. What must u be for the total to be 14?"
+    ],
+    "pitfall": "Reading 'double' or '2 more' from the wrong digit.",
+    "diagram": null
+  },
+  {
+    "id": 362,
+    "topic": "number_operations",
+    "subtopic": "number_puzzle_reasoning",
+    "difficulty": 2,
+    "question": "Two numbers add up to 90. Their difference is 24. What is their product?",
+    "answer": "1881",
+    "unit": null,
+    "answer_format": null,
+    "check": "57*33",
+    "explanation": "The larger number is (90 + 24) / 2 = 57 and the smaller is (90 - 24) / 2 = 33. Check: 57 + 33 = 90 and 57 - 33 = 24. The product is 57 x 33 = 1881.",
+    "hints": [
+      "If you took the difference away from the total, you would have two equal small numbers.",
+      "Find the two numbers first, then multiply them. Check they really add to 90."
+    ],
+    "pitfall": "Giving the sum or difference of the numbers rather than their product.",
+    "diagram": null
+  },
+  {
+    "id": 363,
+    "topic": "number_operations",
+    "subtopic": "number_puzzle_reasoning",
+    "difficulty": 3,
+    "question": "Mei has the digit cards 2, 4, 5, 7 and 9. She uses all five cards once each to make a three-digit number and a two-digit number. She subtracts the two-digit number from the three-digit number. What is the smallest answer she can get?",
+    "answer": "148",
+    "unit": null,
+    "answer_format": null,
+    "check": "245-97",
+    "explanation": "To make the difference small the three-digit number must be small and the two-digit number large. The hundreds digit should be 2. Trying the options: 245 - 97 = 148, 247 - 95 = 152, 249 - 75 = 174, 254 - 97 = 157. Nothing beats 148.",
+    "hints": [
+      "Which card should go in the hundreds place to keep the first number as small as possible?",
+      "The two-digit number should be as big as possible, but it uses cards the three-digit number cannot. Compare a few choices."
+    ],
+    "pitfall": "Making the three-digit number smallest first without checking which cards are left for the two-digit number.",
+    "diagram": null
+  },
+  {
+    "id": 364,
+    "topic": "number_operations",
+    "subtopic": "prime_factor_reasoning",
+    "difficulty": 2,
+    "question": "Three different prime numbers multiply together to make 231. What is the sum of the three prime numbers?",
+    "answer": "21",
+    "unit": null,
+    "answer_format": null,
+    "check": "3+7+11",
+    "explanation": "231 is not even, and its digits add to 6 so 3 divides it: 231 / 3 = 77 = 7 x 11. The primes are 3, 7 and 11, and 3 + 7 + 11 = 21.",
+    "hints": [
+      "Try dividing 231 by the smallest primes first. Does 3 go into it?",
+      "Once you have divided by one prime, split what is left into two primes."
+    ],
+    "pitfall": "Stopping at 3 x 77 and not splitting 77 into primes.",
+    "diagram": null
+  },
+  {
+    "id": 365,
+    "topic": "number_operations",
+    "subtopic": "prime_factor_reasoning",
+    "difficulty": 3,
+    "question": "What is the smallest whole number you can multiply 504 by so that the answer is a square number?",
+    "answer": "14",
+    "unit": null,
+    "answer_format": null,
+    "check": "2*7",
+    "explanation": "504 = 2 x 2 x 2 x 3 x 3 x 7. A square number needs every prime to appear an even number of times. The 3s are already a pair, but there are three 2s and one 7. Multiplying by 2 x 7 = 14 gives 2^4 x 3^2 x 7^2 = 7056 = 84 x 84.",
+    "hints": [
+      "Break 504 into prime factors. What do you notice about how many times each prime appears?",
+      "In a square number the prime factors can be put into two identical groups. Which primes in 504 have no partner?"
+    ],
+    "pitfall": "Multiplying by 504 itself, which works but is not the smallest.",
+    "diagram": null
+  },
+  {
+    "id": 366,
+    "topic": "number_operations",
+    "subtopic": "prime_factor_reasoning",
+    "difficulty": 2,
+    "question": "Two buses leave a station together at 07:00. One bus then leaves every 12 minutes and the other every 18 minutes. Counting the departure at 07:00, how many times between 07:00 and 10:00 inclusive do both buses leave at the same moment?",
+    "answer": "6",
+    "unit": null,
+    "answer_format": null,
+    "check": "180/36+1",
+    "explanation": "Both leave together every LCM(12, 18) = 36 minutes. From 07:00 to 10:00 is 180 minutes, and 180 / 36 = 5 gaps, so there are 5 + 1 = 6 times, including 07:00 itself.",
+    "hints": [
+      "The buses meet again after a time that both 12 and 18 divide into. What is the smallest such time?",
+      "Count how many of those gaps fit into 3 hours, then think about whether the starting time counts."
+    ],
+    "pitfall": "Forgetting to count the 07:00 departure (giving 5).",
+    "diagram": null
+  },
+  {
+    "id": 367,
+    "topic": "number_operations",
+    "subtopic": "remainders_in_context",
+    "difficulty": 2,
+    "question": "A school trip has 150 pupils and 11 adults. Each minibus holds 14 people. What is the smallest number of minibuses needed so that everyone has a seat?",
+    "answer": "12",
+    "unit": null,
+    "answer_format": null,
+    "check": "168/14",
+    "explanation": "There are 150 + 11 = 161 people. 161 / 14 = 11 remainder 7, so 11 minibuses leave 7 people without a seat. A 12th minibus is needed.",
+    "hints": [
+      "Find the total number of people before dividing.",
+      "Check what happens to the people left over after dividing."
+    ],
+    "pitfall": "Rounding 11.5 down to 11, or forgetting the adults.",
+    "diagram": null
+  },
+  {
+    "id": 368,
+    "topic": "number_operations",
+    "subtopic": "remainders_in_context",
+    "difficulty": 3,
+    "question": "What is the smallest positive whole number that leaves a remainder of 3 when divided by 5 and a remainder of 4 when divided by 6?",
+    "answer": "28",
+    "unit": null,
+    "answer_format": null,
+    "check": "30-2",
+    "explanation": "Numbers leaving remainder 3 when divided by 5 are 3, 8, 13, 18, 23, 28, ... Of these, 28 = 4 x 6 + 4 leaves remainder 4 when divided by 6. Notice both are 2 short of a multiple (30), which is a multiple of both 5 and 6.",
+    "hints": [
+      "List the first few numbers that leave remainder 3 when divided by 5.",
+      "Test each one on the divide-by-6 rule. Or ask: how far is each remainder from the next full multiple?"
+    ],
+    "pitfall": "Matching only one of the two conditions.",
+    "diagram": null
+  },
+  {
+    "id": 369,
+    "topic": "number_operations",
+    "subtopic": "remainders_in_context",
+    "difficulty": 2,
+    "question": "In a year that is not a leap year (365 days), 1 January is a Tuesday. How many Tuesdays are there in that year?",
+    "answer": "53",
+    "unit": null,
+    "answer_format": null,
+    "check": "52+1",
+    "explanation": "365 = 52 x 7 + 1, so there are 52 complete weeks, each with exactly one Tuesday. The one extra day is the 365th, which falls on the same day as 1 January, a Tuesday. So there are 52 + 1 = 53 Tuesdays.",
+    "hints": [
+      "How many whole weeks are there in 365 days, and how many days are left over?",
+      "Which day of the week is the leftover day?"
+    ],
+    "pitfall": "Answering 52 and ignoring the extra day.",
+    "diagram": null
+  },
+  {
+    "id": 370,
+    "topic": "fractions",
+    "subtopic": "fraction_of_remainder_chain",
+    "difficulty": 2,
+    "question": "Sam has £84. He spends 1/3 of it on a game. He then spends 3/8 of the money he has left on sweets. How much money does Sam have now? Give your answer in pounds.",
+    "answer": "£35",
+    "unit": "£",
+    "answer_format": null,
+    "check": "84-84/3-(84-84/3)*3/8",
+    "explanation": "1/3 of 84 = 28, so he has 84 - 28 = 56 left. 3/8 of 56 = 21. He has 56 - 21 = 35 left.",
+    "hints": [
+      "The second fraction is of what is left, not of £84.",
+      "After the game, work out the money left, then take 3/8 of that amount."
+    ],
+    "pitfall": "Taking 3/8 of the original £84.",
+    "diagram": null
+  },
+  {
+    "id": 371,
+    "topic": "fractions",
+    "subtopic": "fraction_of_remainder_chain",
+    "difficulty": 2,
+    "question": "A farm collects 360 eggs. 1/5 of them are cracked and thrown away. 2/3 of the remaining eggs are sold at the market. Half of the eggs still left go to a café. How many eggs does the café get?",
+    "answer": "48",
+    "unit": null,
+    "answer_format": null,
+    "check": "(360-360/5)/3/2",
+    "explanation": "Cracked: 360 / 5 = 72, leaving 288. Sold: 2/3 of 288 = 192, leaving 96. The café gets half of 96 = 48.",
+    "hints": [
+      "Each fraction applies to the eggs left at that stage.",
+      "Write down how many eggs are left after each step."
+    ],
+    "pitfall": "Using 360 each time.",
+    "diagram": null
+  },
+  {
+    "id": 372,
+    "topic": "fractions",
+    "subtopic": "fraction_of_remainder_chain",
+    "difficulty": 3,
+    "question": "Priya reads 1/4 of a book on Monday. On Tuesday she reads 2/5 of the pages that are still left. She then has 54 pages left to read. How many pages are in the book?",
+    "answer": "120",
+    "unit": null,
+    "answer_format": null,
+    "check": "54/9*20",
+    "explanation": "After Monday, 3/4 of the book is left. On Tuesday she reads 2/5 of that, which is 3/10 of the book, so 3/5 of 3/4 = 9/20 of the book remains. 9/20 of the book is 54 pages, so 1/20 is 6 pages and the whole book is 120 pages.",
+    "hints": [
+      "After Monday, what fraction of the whole book is left? What fraction of the whole book is left after Tuesday?",
+      "Once you know what fraction of the book 54 pages is, find one share and scale up."
+    ],
+    "pitfall": "Treating 2/5 as a fraction of the whole book.",
+    "diagram": null
+  },
+  {
+    "id": 373,
+    "topic": "fractions",
+    "subtopic": "fraction_of_remainder_chain",
+    "difficulty": 3,
+    "question": "Some sweets are shared out. Ali takes 1/3 of them. Beth takes 1/4 of the sweets that are left. Cara then takes 1/5 of the sweets that are then left. 24 sweets remain at the end. How many sweets were there at the start?",
+    "answer": "60",
+    "unit": null,
+    "answer_format": null,
+    "check": "24/2*5",
+    "explanation": "After Ali, 2/3 are left. After Beth, 3/4 of that remains: 1/2. After Cara, 4/5 of that remains: 2/5 of the original. 2/5 of the total is 24, so 1/5 is 12 and the total is 60.",
+    "hints": [
+      "Each time, think about the fraction that is LEFT rather than the fraction taken.",
+      "Multiply the fractions that are left to see what fraction of the start remains."
+    ],
+    "pitfall": "Adding 1/3, 1/4 and 1/5 as if they were all fractions of the original.",
+    "diagram": null
+  },
+  {
+    "id": 374,
+    "topic": "fractions",
+    "subtopic": "fraction_work_backwards",
+    "difficulty": 2,
+    "question": "I think of a number. I multiply it by 3/4 and then add 6. My answer is 42. What number did I think of?",
+    "answer": "48",
+    "unit": null,
+    "answer_format": null,
+    "check": "(42-6)/3*4",
+    "explanation": "Undo the steps in reverse. 42 - 6 = 36. This is 3/4 of the number, so 1/4 is 12 and the number is 48. Check: 3/4 of 48 = 36, and 36 + 6 = 42.",
+    "hints": [
+      "Undo the last step first.",
+      "If 3/4 of a number is 36, what is 1/4 of it?"
+    ],
+    "pitfall": "Taking 3/4 of 36 instead of undoing it.",
+    "diagram": null
+  },
+  {
+    "id": 375,
+    "topic": "fractions",
+    "subtopic": "fraction_work_backwards",
+    "difficulty": 3,
+    "question": "Mia spends 2/5 of her money on a coat. She then spends £12 on a scarf. She now has 1/3 of her original money left. How much money did Mia have at the start? Give your answer in pounds.",
+    "answer": "£45",
+    "unit": "£",
+    "answer_format": null,
+    "check": "12/4*15",
+    "explanation": "After the coat she has 3/5 of her money. Then 3/5 - 1/3 = 9/15 - 5/15 = 4/15 of her money equals the £12 scarf. So 1/15 is £3 and the whole is £45. Check: coat £18, left £27, scarf £12, left £15 = 1/3 of £45.",
+    "hints": [
+      "The scarf is the difference between two fractions of her money. Which two?",
+      "Find what fraction of her money the £12 is, then scale up to the whole."
+    ],
+    "pitfall": "Subtracting £12 from the wrong amount.",
+    "diagram": null
+  },
+  {
+    "id": 376,
+    "topic": "fractions",
+    "subtopic": "fraction_work_backwards",
+    "difficulty": 3,
+    "question": "Tom and Jo start with the same number of marbles. Tom gives 1/4 of his marbles to Jo. Jo now has 30 more marbles than Tom. How many marbles did Tom have at the start?",
+    "answer": "60",
+    "unit": null,
+    "answer_format": null,
+    "check": "30*2",
+    "explanation": "Let each start with 4 equal parts. Tom gives away 1 part, so Tom has 3 parts and Jo has 5 parts. The difference is 2 parts = 30, so 1 part = 15. Tom started with 4 parts = 60.",
+    "hints": [
+      "Imagine Tom's marbles split into 4 equal piles. Where does one pile go?",
+      "How many piles does each person have now? What does the difference in piles equal?"
+    ],
+    "pitfall": "Thinking the difference is 1 pile rather than 2.",
+    "diagram": null
+  },
+  {
+    "id": 377,
+    "topic": "decimals",
+    "subtopic": "decimal_multi_step_context",
+    "difficulty": 2,
+    "question": "Mrs Khan buys 4 notebooks at £1.35 each and some pens at 95p each. She pays with a £10 note and gets £1.75 change. How many pens does she buy?",
+    "answer": "3",
+    "unit": null,
+    "answer_format": null,
+    "check": "(1000-175-4*135)/95",
+    "explanation": "She spends £10 - £1.75 = £8.25. Notebooks cost 4 x £1.35 = £5.40. The pens cost £8.25 - £5.40 = £2.85, and £2.85 / 95p = 3 pens.",
+    "hints": [
+      "Work out how much she spent altogether, using the change.",
+      "Take off the notebooks, then divide what is left by the price of one pen. Keep everything in pence or in pounds."
+    ],
+    "pitfall": "Mixing pence and pounds.",
+    "diagram": null
+  },
+  {
+    "id": 378,
+    "topic": "decimals",
+    "subtopic": "decimal_multi_step_context",
+    "difficulty": 2,
+    "question": "A car uses 6.5 litres of fuel for every 100 km. Fuel costs £1.40 per litre. How much does the fuel cost for a 240 km journey? Give your answer in pounds.",
+    "answer": "£21.84",
+    "unit": "£",
+    "answer_format": null,
+    "check": "6.5*2.4*1.4",
+    "explanation": "240 km is 2.4 lots of 100 km. Fuel used: 6.5 x 2.4 = 15.6 litres. Cost: 15.6 x £1.40 = £21.84.",
+    "hints": [
+      "How many litres are used for 240 km?",
+      "Multiply the litres by the price per litre."
+    ],
+    "pitfall": "Using 6.5 x 240 by mistake.",
+    "diagram": null
+  },
+  {
+    "id": 379,
+    "topic": "decimals",
+    "subtopic": "decimal_multi_step_context",
+    "difficulty": 2,
+    "question": "Lily needs 3 pieces of ribbon that are each 1.2 m long and 2 pieces that are each 0.75 m long. The shop sells ribbon at £2.50 per metre, but only in whole metres. How much does Lily have to pay? Give your answer in pounds.",
+    "answer": "£15",
+    "unit": "£",
+    "answer_format": null,
+    "check": "6*2.5",
+    "explanation": "She needs 3 x 1.2 = 3.6 m and 2 x 0.75 = 1.5 m, which is 5.1 m in total. Only whole metres are sold, so she must buy 6 m. 6 x £2.50 = £15.",
+    "hints": [
+      "First find the total length she needs.",
+      "Can she buy exactly that length?"
+    ],
+    "pitfall": "Charging for 5.1 m (£12.75).",
+    "diagram": null
+  },
+  {
+    "id": 380,
+    "topic": "decimals",
+    "subtopic": "decimal_multi_step_context",
+    "difficulty": 2,
+    "question": "The mean length of Kofi's five long jumps is 3.46 m. His first four jumps were 3.20 m, 3.55 m, 3.40 m and 3.60 m. How long, in metres, was his fifth jump?",
+    "answer": "3.55 m",
+    "unit": "m",
+    "answer_format": null,
+    "check": "(346*5-320-355-340-360)/100",
+    "explanation": "Total of all five jumps = 5 x 3.46 = 17.30 m. The first four add up to 3.20 + 3.55 + 3.40 + 3.60 = 13.75 m. The fifth jump was 17.30 - 13.75 = 3.55 m.",
+    "hints": [
+      "How can you use the mean to find the total length of all five jumps?",
+      "Take the four known jumps away from that total."
+    ],
+    "pitfall": "Averaging the four known jumps instead of using the mean given.",
+    "diagram": null
+  },
+  {
+    "id": 381,
+    "topic": "percentages",
+    "subtopic": "percent_work_backwards",
+    "difficulty": 1,
+    "question": "30% of a number is 45. What is the number?",
+    "answer": "150",
+    "unit": null,
+    "answer_format": null,
+    "check": "45/30*100",
+    "explanation": "30% of the number is 45. Divide by 3 to find 10%, which is 15. Multiply by 10 to get 100%, which is 150. Check: 30% of 150 = 45.",
+    "hints": [
+      "If 30% is 45, what is 10%?",
+      "Scale 10% up to 100%."
+    ],
+    "pitfall": "Finding 30% of 45.",
+    "diagram": null
+  },
+  {
+    "id": 382,
+    "topic": "percentages",
+    "subtopic": "percent_work_backwards",
+    "difficulty": 2,
+    "question": "A jacket is reduced by 20% in a sale and now costs £36. What did the jacket cost before the sale? Give your answer in pounds.",
+    "answer": "£45",
+    "unit": "£",
+    "answer_format": null,
+    "check": "36/80*100",
+    "explanation": "The sale price is 80% of the original. 80% = £36, so 10% = £4.50 and 100% = £45. Check: 20% of £45 is £9 and £45 - £9 = £36.",
+    "hints": [
+      "What percentage of the original price do you pay after a 20% reduction?",
+      "Use that to find 10%, then 100%."
+    ],
+    "pitfall": "Adding 20% of £36 to £36, giving £43.20.",
+    "diagram": null
+  },
+  {
+    "id": 383,
+    "topic": "percentages",
+    "subtopic": "percent_work_backwards",
+    "difficulty": 2,
+    "question": "In January the price of a bicycle went up by 20% to £90. In March it was reduced by 10%. What was the price of the bicycle before the January increase? Give your answer in pounds.",
+    "answer": "£75",
+    "unit": "£",
+    "answer_format": null,
+    "check": "90/120*100",
+    "explanation": "Before January the price was 100%, and after the 20% rise it was 120%. 120% = £90, so 10% = £7.50 and 100% = £75. The March reduction is not needed.",
+    "hints": [
+      "Which price is the 120%?",
+      "Not every number in the question is needed."
+    ],
+    "pitfall": "Using the March price, or taking 20% off £90 (£72).",
+    "diagram": null
+  },
+  {
+    "id": 384,
+    "topic": "percentages",
+    "subtopic": "percent_work_backwards",
+    "difficulty": 2,
+    "question": "45% of the pupils in a school are boys. There are 30 more girls than boys. How many pupils are in the school?",
+    "answer": "300",
+    "unit": null,
+    "answer_format": null,
+    "check": "30/10*100",
+    "explanation": "Girls are 55% and boys 45%, so the difference is 10% of the school. 10% = 30, so 100% = 300. Check: boys 135, girls 165, difference 30.",
+    "hints": [
+      "Work out what percentage of the school are girls.",
+      "The difference between girls and boys is a percentage of the whole school."
+    ],
+    "pitfall": "Treating 30 as the number of girls, or as 45% of the school.",
+    "diagram": null
+  },
+  {
+    "id": 385,
+    "topic": "percentages",
+    "subtopic": "percent_work_backwards",
+    "difficulty": 3,
+    "question": "Shop X sells a coat for £56 in a '30% off' sale. Shop Y sells the same coat for £63, which is 25% off its marked price. What is the difference between the two shops' marked (original) prices? Give your answer in pounds.",
+    "answer": "£4",
+    "unit": "£",
+    "answer_format": null,
+    "check": "63*4/3-56*10/7",
+    "explanation": "Shop X: £56 is 70% of the marked price, so the marked price is 56 / 70 x 100 = £80. Shop Y: £63 is 75% of the marked price, so the marked price is 63 / 75 x 100 = £84. The difference is £84 - £80 = £4.",
+    "hints": [
+      "What percentage of the marked price does each shop charge?",
+      "Find each marked price, then compare them."
+    ],
+    "pitfall": "Comparing the sale prices (£7) or taking 30% and 25% off the sale prices.",
+    "diagram": null
+  },
+  {
+    "id": 386,
+    "topic": "ratio",
+    "subtopic": "ratio_changing_amounts",
+    "difficulty": 2,
+    "question": "A choir has boys and girls in the ratio 3 : 4. When 6 more boys join, the numbers of boys and girls are equal. How many children are in the choir now?",
+    "answer": "48",
+    "unit": null,
+    "answer_format": null,
+    "check": "4*6*2",
+    "explanation": "Boys are 3 parts and girls 4 parts. Adding 6 boys makes the numbers equal, so 6 is the 1 part difference. Girls: 4 x 6 = 24. Boys now: 24. Total = 48.",
+    "hints": [
+      "The 6 boys that join fill the gap between the two groups. What does the gap represent in parts?",
+      "Find the value of one part, then the number of girls."
+    ],
+    "pitfall": "Giving 42, the number before the boys joined.",
+    "diagram": null
+  },
+  {
+    "id": 387,
+    "topic": "ratio",
+    "subtopic": "ratio_changing_amounts",
+    "difficulty": 3,
+    "question": "At a pet show the ratio of cats to dogs is 5 : 3. Then 12 more dogs arrive and the ratio of cats to dogs becomes 5 : 6. How many cats are at the show?",
+    "answer": "20",
+    "unit": null,
+    "answer_format": null,
+    "check": "12/(6-3)*5",
+    "explanation": "Cats stay at 5 parts. Dogs go from 3 parts to 6 parts, so the 12 new dogs are 3 parts. 1 part = 4, and cats are 5 x 4 = 20. Check: dogs 12 then 24, and 20 : 24 = 5 : 6.",
+    "hints": [
+      "The number of cats does not change. How many parts do the dogs gain?",
+      "Those new dogs equal that many parts, so work out one part."
+    ],
+    "pitfall": "Dividing 12 by the wrong number of parts.",
+    "diagram": null
+  },
+  {
+    "id": 388,
+    "topic": "ratio",
+    "subtopic": "ratio_changing_amounts",
+    "difficulty": 3,
+    "question": "Sam and Lee have money in the ratio 5 : 2. Sam gives Lee £18 and now they have the same amount. How much money did Lee have at the start? Give your answer in pounds.",
+    "answer": "£24",
+    "unit": "£",
+    "answer_format": null,
+    "check": "18*2/3*2",
+    "explanation": "Total is 7 parts. After sharing equally each has 3.5 parts, so Sam gave 1.5 parts. 1.5 parts = £18, so 1 part = £12. Lee started with 2 x £12 = £24. Check: Sam £60, Lee £24, then £42 each.",
+    "hints": [
+      "If they end up equal, what share of the total does each have?",
+      "How many parts did Sam lose? Use that to find the value of one part."
+    ],
+    "pitfall": "Using 3 parts as the gap instead of 1.5.",
+    "diagram": null
+  },
+  {
+    "id": 389,
+    "topic": "ratio",
+    "subtopic": "ratio_changing_amounts",
+    "difficulty": 2,
+    "question": "A mix of nuts and raisins has mass in the ratio 5 : 3. There is 400 g of mix altogether. How many grams of raisins must be added so that the ratio of nuts to raisins becomes 5 : 4? Give your answer in grams.",
+    "answer": "50 g",
+    "unit": "g",
+    "answer_format": null,
+    "check": "250/5*4-150",
+    "explanation": "Nuts are 5/8 of 400 = 250 g and raisins are 150 g. For 5 : 4 with 250 g of nuts, raisins must be 250 / 5 x 4 = 200 g. Add 200 - 150 = 50 g.",
+    "hints": [
+      "Find the mass of nuts and the mass of raisins first. Which one stays the same?",
+      "How much raisins would go with that amount of nuts in the new ratio?"
+    ],
+    "pitfall": "Giving the new mass of raisins (200 g) rather than the amount added.",
+    "diagram": null
+  },
+  {
+    "id": 390,
+    "topic": "ratio",
+    "subtopic": "ratio_three_way_problems",
+    "difficulty": 2,
+    "question": "Ali, Bea and Cal share sweets in the ratio 3 : 4 : 5. Cal gets 18 more sweets than Ali. How many sweets are there altogether?",
+    "answer": "108",
+    "unit": null,
+    "answer_format": null,
+    "check": "18/2*12",
+    "explanation": "Cal has 5 parts and Ali 3 parts, so the difference is 2 parts = 18. One part = 9. Total parts = 12, so 12 x 9 = 108.",
+    "hints": [
+      "What is the difference between Cal's and Ali's parts?",
+      "Find one part, then count the total parts."
+    ],
+    "pitfall": "Giving Cal's or Bea's share instead of the total.",
+    "diagram": null
+  },
+  {
+    "id": 391,
+    "topic": "ratio",
+    "subtopic": "ratio_three_way_problems",
+    "difficulty": 3,
+    "question": "For some stickers, A : B = 2 : 3 and B : C = 4 : 5. Altogether there are 105 stickers. How many belong to C?",
+    "answer": "45",
+    "unit": null,
+    "answer_format": null,
+    "check": "105/35*15",
+    "explanation": "Make B the same in both ratios (3 and 4 have common multiple 12). A : B = 8 : 12 and B : C = 12 : 15. So A : B : C = 8 : 12 : 15, which is 35 parts. 105 / 35 = 3 per part, and C has 15 x 3 = 45.",
+    "hints": [
+      "B appears in both ratios but with different numbers. Can you make them match?",
+      "Join the ratios into one ratio A : B : C, then share 105."
+    ],
+    "pitfall": "Joining the ratios as 2 : 3 : 5.",
+    "diagram": null
+  },
+  {
+    "id": 392,
+    "topic": "ratio",
+    "subtopic": "ratio_three_way_problems",
+    "difficulty": 2,
+    "question": "A bag holds red, green and yellow counters. The ratio of red to green is 3 : 2. There are half as many yellow counters as red counters. There are 12 more red counters than yellow counters. How many counters are in the bag?",
+    "answer": "52",
+    "unit": null,
+    "answer_format": null,
+    "check": "24+24*2/3+12",
+    "explanation": "Yellow is half of red, so red minus yellow is half of red, which is 12. So red = 24, yellow = 12. Green is 2/3 of red = 16. Total 24 + 16 + 12 = 52.",
+    "hints": [
+      "Yellow is half of red. So what does the 12 more tell you about red?",
+      "Once you know red, use the 3 : 2 ratio to find green."
+    ],
+    "pitfall": "Finding red but forgetting to add all three colours.",
+    "diagram": null
+  }
+]
