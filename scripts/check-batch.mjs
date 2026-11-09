@@ -8,6 +8,7 @@ import { diagram } from '../js/content.js';
 const args = process.argv.slice(2);
 const flag = name => { const i = args.indexOf('--' + name); return i >= 0 ? args[i + 1] : null; };
 const file = args[0], kind = flag('kind'), [first, last] = (flag('ids') || '0-0').split('-').map(Number);
+const replacements = args.includes('--replacements');
 const errors = [];
 const fail = (id, message) => errors.push(`Q${id}: ${message}`);
 const data = JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -129,14 +130,18 @@ if (kind === 'walk') {
 } else {
   const ids = data.map(q => q.id);
   if (new Set(ids).size !== ids.length) errors.push('Duplicate IDs in batch');
-  for (let id = first; id <= last; id++) if (!ids.includes(id)) fail(id, 'missing');
+  if (!replacements) for (let id = first; id <= last; id++) if (!ids.includes(id)) fail(id, 'missing');
   const subtopics = {};
   for (const q of data) {
     if (q.id < first || q.id > last) fail(q.id, `outside the ID range ${first}-${last}`);
     if (!TOPICS.includes(q.topic)) fail(q.id, `bad topic ${q.topic}`);
     if (![1, 2, 3].includes(q.difficulty)) fail(q.id, 'difficulty must be 1, 2 or 3');
     if (!/^[a-z0-9_]+$/.test(q.subtopic || '')) fail(q.id, 'bad subtopic');
-    if (OLD_SUBTOPICS.has(q.subtopic)) fail(q.id, `subtopic ${q.subtopic} is used by the old bank; use a name from your brief`);
+    if (replacements) {
+      const old = BANK.find(old => old.id === q.id);
+      if (!old || old.mode !== 'desk' || kind !== 'nwssee' || old.topic !== q.topic || old.subtopic !== q.subtopic) fail(q.id, 'replacement must preserve an existing written question’s topic and skill');
+      if (!Number.isInteger(q.content_revision) || q.content_revision < 2) fail(q.id, 'replacement needs a content_revision of at least 2');
+    } else if (OLD_SUBTOPICS.has(q.subtopic)) fail(q.id, `subtopic ${q.subtopic} is used by the old bank; use a name from your brief`);
     subtopics[q.subtopic] = (subtopics[q.subtopic] || 0) + 1;
     if (typeof q.question !== 'string' || q.question.length < 8) fail(q.id, 'question missing');
     if (typeof q.answer !== 'string' || !q.answer) { fail(q.id, 'answer must be a non-empty string'); continue; }
@@ -159,7 +164,7 @@ if (kind === 'walk') {
       checkFiller(q.id, q.answer, options);
     } else if (q.distractors) fail(q.id, 'NWSSEE questions must not have distractors');
   }
-  for (const [name, count] of Object.entries(subtopics)) if (count < 3) errors.push(`Subtopic ${name} has ${count} question(s); needs at least 3`);
+  if (!replacements) for (const [name, count] of Object.entries(subtopics)) if (count < 3) errors.push(`Subtopic ${name} has ${count} question(s); needs at least 3`);
   const texts = data.map(q => String(q.question).trim().toLowerCase());
   texts.forEach((t, i) => { if (texts.indexOf(t) !== i) fail(data[i].id, 'duplicate question text'); });
   const tally = key => Object.entries(data.reduce((m, q) => (m[q[key]] = (m[q[key]] || 0) + 1, m), {})).map(([k, v]) => `${k}:${v}`).join(' ');

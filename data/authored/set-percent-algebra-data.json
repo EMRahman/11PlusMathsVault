@@ -147,37 +147,38 @@
     "id": 338,
     "topic": "percentages",
     "subtopic": "percent_change_problems",
-    "difficulty": 1,
-    "question": "A scooter costs £40. In a sale its price is reduced by 25%. What is the sale price?",
-    "answer": "£30",
+    "difficulty": 2,
+    "question": "A scooter originally costs £40. Its price is reduced by 25%. A further 10% is then taken off the reduced price. What is the final price?",
+    "answer": "£27",
     "unit": "£",
     "answer_format": null,
-    "check": "40*0.75",
+    "check": "40*0.75*0.9",
     "distractors": [
       {
-        "value": "£10",
-        "why": "Gives the amount taken off, not the new price."
+        "value": "£30",
+        "why": "Applies only the first reduction of 25%."
       },
       {
-        "value": "£15",
-        "why": "Subtracts 25 pounds from 40."
+        "value": "£26",
+        "why": "Adds 25% and 10%, then takes 35% off the original £40."
       },
       {
-        "value": "£50",
-        "why": "Adds 25% instead of subtracting."
+        "value": "£33",
+        "why": "Increases the £30 reduced price by 10% instead of reducing it."
       },
       {
-        "value": "£65",
-        "why": "Adds 25 pounds to 40."
+        "value": "£14",
+        "why": "Reports 25% plus 10% of the original £40 as the final price."
       }
     ],
-    "explanation": "25% is the same as one quarter. A quarter of £40 is £10, which is the amount taken off. The sale price is £40 - £10 = £30.",
+    "explanation": "The first reduction is 25% of £40, which is £10, leaving £30. The second reduction is 10% of £30, which is £3. The final price is £27. Each percentage uses the price at that stage, so the discounts cannot simply be added.",
     "hints": [
-      "What fraction is 25%?",
-      "Subtract the reduction from the original price."
+      "Which price is the second discount a percentage of?",
+      "First find 75% of £40, then keep 90% of that new price."
     ],
-    "pitfall": "Giving the reduction rather than the new price.",
-    "diagram": null
+    "pitfall": "Successive reductions apply to different starting prices.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 339,
@@ -436,37 +437,38 @@
     "id": 346,
     "topic": "algebra",
     "subtopic": "formula_substitution",
-    "difficulty": 1,
-    "question": "T = 4n + 3. Work out T when n = 6.",
-    "answer": "27",
-    "unit": null,
+    "difficulty": 2,
+    "question": "A ticket machine charges C = 4n + 3 pounds for n tickets in one order. A club places three separate orders, each for 6 tickets. What is the total cost?",
+    "answer": "£81",
+    "unit": "£",
     "answer_format": null,
-    "check": "4*6+3",
+    "check": "3*(4*6+3)",
     "distractors": [
       {
-        "value": "24",
-        "why": "Works out 4 x 6 and forgets to add 3."
+        "value": "£24",
+        "why": "Calculates 4 × 6 but leaves out the charge and the other orders."
       },
       {
-        "value": "36",
-        "why": "Adds 3 first and then multiplies: 4 x (6 + 3)."
+        "value": "£27",
+        "why": "Prices just one of the three orders."
       },
       {
-        "value": "49",
-        "why": "Reads 4n as 46 and adds 3."
+        "value": "£75",
+        "why": "Treats all 18 tickets as one order: 4 × 18 + 3."
       },
       {
-        "value": "10",
-        "why": "Adds 4 and 6 instead of multiplying."
+        "value": "£108",
+        "why": "Uses 4 × (6 + 3) for each order, then multiplies by 3."
       }
     ],
-    "explanation": "4n means 4 x n. Put n = 6: 4 x 6 = 24. Then add 3 to get 27.",
+    "explanation": "Each order costs 4 × 6 + 3 = £27. There are three separate orders, so the total is 3 × £27 = £81. The £3 charge is paid on every order. One combined order for 18 tickets would have a different cost.",
     "hints": [
-      "4n means 4 times n.",
-      "Multiply first, then add."
+      "The formula gives the price of one order.",
+      "Substitute n = 6, then multiply the whole result by 3."
     ],
-    "pitfall": "Reading 4n as the digits 4 and 6 side by side.",
-    "diagram": null
+    "pitfall": "The fixed charge applies three times because there are three orders.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 347,
@@ -544,37 +546,38 @@
     "id": 349,
     "topic": "algebra",
     "subtopic": "missing_number_equations",
-    "difficulty": 1,
-    "question": "2n + 7 = 31. Find n.",
-    "answer": "12",
+    "difficulty": 2,
+    "question": "If 2n + 7 = 31, what is the value of 5n − 4?",
+    "answer": "56",
     "unit": null,
     "answer_format": null,
-    "check": "(31-7)/2",
+    "check": "(31-7)/2*5-4",
     "distractors": [
       {
-        "value": "15.5",
-        "why": "Divides 31 by 2 and ignores the 7."
+        "value": "12",
+        "why": "Finds n correctly but does not evaluate the requested expression."
       },
       {
-        "value": "19",
-        "why": "Adds 7 to 31 and then divides by 2."
+        "value": "116",
+        "why": "Subtracts 7 but forgets to halve: 5 × 24 − 4."
       },
       {
-        "value": "24",
-        "why": "Subtracts 7 and forgets to divide by 2."
+        "value": "91",
+        "why": "Adds 7 rather than subtracting when solving: 5 × ((31 + 7) ÷ 2) − 4."
       },
       {
-        "value": "38",
-        "why": "Adds 7 to 31 and stops."
+        "value": "64",
+        "why": "Finds n = 12 but adds the final 4 instead of subtracting it."
       }
     ],
-    "explanation": "Undo the +7 first: 31 - 7 = 24. So 2n = 24, which means two lots of n make 24. Then n = 24 ÷ 2 = 12. Check: 2 x 12 + 7 = 31.",
+    "explanation": "First solve for n. Subtract 7 from 31 to give 24, then divide by 2 to get n = 12. Substitute into the requested expression: 5 × 12 − 4 = 56. The answer is the value of 5n − 4, rather than n itself.",
     "hints": [
-      "Undo the addition first.",
-      "Then undo the multiplication."
+      "Find n first, then use it in the second expression.",
+      "Subtract 7, divide by 2, then work out five times your number minus 4."
     ],
-    "pitfall": "Adding where the equation needs subtracting.",
-    "diagram": null
+    "pitfall": "Do not stop after finding the unknown number.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 350,
@@ -652,37 +655,38 @@
     "id": 352,
     "topic": "algebra",
     "subtopic": "sequence_rules",
-    "difficulty": 1,
-    "question": "A sequence starts at 4. Each term is 7 more than the term before. What is the 5th term?",
-    "answer": "32",
+    "difficulty": 2,
+    "question": "A sequence starts at 4. Each term is 7 more than the previous term. What is the sum of its first five terms?",
+    "answer": "90",
     "unit": null,
     "answer_format": null,
-    "check": "4+4*7",
+    "check": "4+(4+7)+(4+14)+(4+21)+(4+28)",
     "distractors": [
       {
-        "value": "11",
-        "why": "Adds 7 just once to the first term."
+        "value": "32",
+        "why": "Gives the fifth term instead of adding the first five."
       },
       {
-        "value": "25",
-        "why": "Finds the 4th term."
+        "value": "58",
+        "why": "Adds only the first four terms: 4 + 11 + 18 + 25."
       },
       {
-        "value": "28",
-        "why": "Multiplies 4 by 7."
+        "value": "74",
+        "why": "Uses 4 followed by multiples of 7: 4 + 7 + 14 + 21 + 28."
       },
       {
-        "value": "35",
-        "why": "Multiplies the term number 5 by 7."
+        "value": "129",
+        "why": "Includes the sixth term 39 as well: 90 + 39."
       }
     ],
-    "explanation": "Write the terms out, adding 7 each time: 4, 11, 18, 25, 32. The first term is 4, so the 5th term is 32, after four additions of 7.",
+    "explanation": "The first five terms are 4, 11, 18, 25 and 32. Add them to get 90. A quick check pairs 4 with 32 and 11 with 25: each pair totals 36. Adding the middle term 18 gives 36 + 36 + 18 = 90.",
     "hints": [
-      "Write out the terms one by one.",
-      "Count carefully which term you want."
+      "Write all five terms before adding.",
+      "The fifth term is 32, but you need the total of all five terms."
     ],
-    "pitfall": "Stopping a term early or multiplying instead of adding.",
-    "diagram": null
+    "pitfall": "The sum of the terms is different from the final term.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 353,
@@ -923,37 +927,38 @@
     "id": 358,
     "topic": "statistics",
     "subtopic": "mean_problems",
-    "difficulty": 1,
-    "question": "Five friends score 7, 12, 8, 14 and 9 points in a quiz. What is the mean score?",
-    "answer": "10",
+    "difficulty": 2,
+    "question": "Five quiz scores have a mean of 10. Four scores are 7, 12, 8 and 14. The highest score is removed. What is the mean of the four remaining scores?",
+    "answer": "9",
     "unit": null,
     "answer_format": null,
-    "check": "(7+12+8+14+9)/5",
+    "check": "(5*10-14)/4",
     "distractors": [
       {
+        "value": "10",
+        "why": "Keeps the original mean without recalculating after removal."
+      },
+      {
         "value": "12.5",
-        "why": "Divides the total by 4 instead of 5."
+        "why": "Divides the original total of 50 by four without subtracting the removed score."
       },
       {
-        "value": "14",
-        "why": "Picks the highest score."
+        "value": "7.2",
+        "why": "Subtracts the highest score but still divides by five: 36 ÷ 5."
       },
       {
-        "value": "25",
-        "why": "Divides the total by 2."
-      },
-      {
-        "value": "50",
-        "why": "Adds the scores and does not divide."
+        "value": "36",
+        "why": "Reports the remaining total instead of its mean."
       }
     ],
-    "explanation": "Total: 7 + 12 + 8 + 14 + 9 = 50. There are 5 scores, so the mean is 50 ÷ 5 = 10.",
+    "explanation": "Five scores with mean 10 have total 50. The missing score is 50 − (7 + 12 + 8 + 14) = 9, so 14 is indeed the highest. Removing 14 leaves total 36 across four scores. Their mean is 36 ÷ 4 = 9.",
     "hints": [
-      "Add all the scores.",
-      "Divide by how many scores there are."
+      "First check the missing score so you know which score is highest.",
+      "The original total is 50. Remove 14 and divide the remaining total by four."
     ],
-    "pitfall": "Dividing by the wrong count or mixing up mean and median.",
-    "diagram": null
+    "pitfall": "The number of scores changes when the highest score is removed.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 359,

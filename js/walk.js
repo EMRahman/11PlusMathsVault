@@ -1,7 +1,9 @@
 import { recordResult, getSettings, updateSettings, isBookmarked, toggleBookmark, getBookmarks } from './state.js';
 import { TOPICS, esc, shuffle, time, difficulty } from './content.js';
+import { showQuestionBrowser } from './browse.js';
 
 let bank = [], questions = [], index = 0, answers = {}, timer, remaining = 0, timerOn = false;
+let browsing = false;
 const oralLabels = { short: 'Easy to follow aloud', steps: 'Hold a few steps in mind', visualise: 'Picture the shape or movement' };
 const area = () => document.getElementById('walk-question-area');
 export function dispose() {
@@ -12,14 +14,34 @@ export function init(all) {
   dispose(); bank = all.filter(q => q.mode === 'walk'); timerOn = getSettings().walkTimer;
   for (const id of ['walk-topic-filter', 'walk-difficulty-filter', 'walk-bookmark-filter', 'walk-setsize-filter', 'walk-oral-filter']) document.getElementById(id).onchange = start;
   document.getElementById('walk-shuffle-btn').onclick = start;
+  document.getElementById('walk-browse-btn').onclick = () => browse();
   start();
 }
-function start() {
-  dispose(); index = 0; answers = {};
+function pool() {
   const val = id => document.getElementById(id).value;
   const bookmarked = getBookmarks();
-  questions = shuffle(bank.filter(q => (!val('walk-topic-filter') || q.topic === val('walk-topic-filter')) && (!val('walk-difficulty-filter') || q.difficulty === Number(val('walk-difficulty-filter'))) && (val('walk-bookmark-filter') !== 'bookmarked' || bookmarked.includes(q.id)) && (!val('walk-oral-filter') || q.oral_load === val('walk-oral-filter')))).slice(0, Number(val('walk-setsize-filter')));
+  return bank.filter(q => (!val('walk-topic-filter') || q.topic === val('walk-topic-filter')) && (!val('walk-difficulty-filter') || q.difficulty === Number(val('walk-difficulty-filter'))) && (val('walk-bookmark-filter') !== 'bookmarked' || bookmarked.includes(q.id)) && (!val('walk-oral-filter') || q.oral_load === val('walk-oral-filter')));
+}
+function start() {
+  dispose(); index = 0; answers = {}; browsing = false;
+  questions = shuffle(pool()).slice(0, Number(document.getElementById('walk-setsize-filter').value));
   render();
+}
+function browse(session) {
+  dispose();
+  const list = session?.questions || pool();
+  showQuestionBrowser(area(), list, {
+    buttonClass: 'btn--primary', selectedId: session?.selectedId, onBack: start,
+    onSelect: selectedIndex => {
+      questions = list; index = selectedIndex; answers = session?.answers || {}; browsing = true;
+      render();
+    },
+  });
+}
+function moveTo(nextIndex) {
+  if (nextIndex < 0 || nextIndex >= questions.length) return;
+  index = nextIndex; render();
+  area().querySelector('.question-card')?.scrollIntoView({ block: 'start' });
 }
 function render() {
   dispose();
@@ -28,7 +50,7 @@ function render() {
   const st = answers[q.id] ??= { revealed: false, choice: -1, showChoices: false, result: null };
   st.deadline ??= Date.now() + q.time_target_seconds * 1000;
   remaining = Math.max(0, Math.ceil((st.deadline - Date.now()) / 1000));
-  area().innerHTML = `<div class="session-meta"><span>Question ${index + 1} of ${questions.length}</span><button class="text-button" id="walk-finish-btn">Finish walk</button></div><article class="question-card question-card--walk" id="walk-card" aria-label="Question ${index + 1}">
+  area().innerHTML = `<div class="session-meta"><span>Question ${index + 1} of ${questions.length}</span><button class="text-button" id="walk-finish-btn">${browsing ? 'All questions' : 'Finish walk'}</button></div><article class="question-card question-card--walk" id="walk-card" aria-label="Question ${index + 1}">
     <div class="card-meta"><span class="topic-tag">${esc(TOPICS[q.topic])}</span>${difficulty(q.difficulty)}<span class="oral-tag">${oralLabels[q.oral_load]}</span></div>
     <div class="card-controls"><button class="timer-toggle-btn" id="walk-timer-toggle" aria-pressed="${timerOn}">${timerOn ? '<span id="walk-timer-count">' + time(remaining) + '</span>' : 'Show timer'}</button><button class="bookmark-btn ${isBookmarked(q.id) ? 'bookmarked' : ''}" id="walk-bookmark-btn" aria-label="Bookmark this question" aria-pressed="${isBookmarked(q.id)}">★</button></div>
     <p class="question-text">${esc(q.question)}</p>
@@ -36,7 +58,7 @@ function render() {
     <div class="walk-choice-controls"><label><input type="checkbox" id="walk-recall-toggle" ${getSettings().walkRecall !== false ? 'checked' : ''}> Try without choices first</label>${getSettings().walkRecall !== false ? `<button class="text-button" id="walk-choices-btn" aria-expanded="${st.showChoices || st.revealed}">${st.showChoices || st.revealed ? 'Hide choices' : 'Show choices'}</button>` : ''}</div>
     <ul class="options-list" id="walk-options" ${!st.showChoices && getSettings().walkRecall !== false && !st.revealed ? 'hidden' : ''}>${q.options.map((opt, i) => `<li><button class="option-item ${st.choice === i ? 'option-item--selected' : ''} ${st.revealed && i === q.answer_index ? 'option-item--correct' : ''} ${st.revealed && st.choice === i && i !== q.answer_index ? 'option-item--wrong' : ''}" data-choice="${i}" aria-pressed="${st.choice === i}" ${st.revealed ? 'disabled' : ''}><span class="option-label">${String.fromCharCode(65 + i)}</span><span>${esc(opt)}</span></button></li>`).join('')}</ul>
     ${st.revealed ? `<div class="answer-reveal"><div class="correct-answer-banner">✓ ${q.answer_display} — ${esc(q.answer)}</div>${st.choice >= 0 && st.choice !== q.answer_index && q.distractor_notes?.[q.options[st.choice]] ? `<p class="why-tempting">Why that answer is tempting: ${esc(q.distractor_notes[q.options[st.choice]])}</p>` : ''}<div class="explanation-box">${esc(q.explanation)}</div>${q.pitfall ? `<div class="pitfall-box"><strong>Watch out:</strong> ${esc(q.pitfall)}</div>` : ''}<p class="parent-prompt">Ask together: ${esc(q.parent_prompt)}</p><div class="result-buttons"><button class="btn btn--correct" data-result="correct" ${st.result ? 'disabled' : ''}>✓ Got it</button><button class="btn btn--incorrect" data-result="incorrect" ${st.result ? 'disabled' : ''}>Try again later</button><button class="btn btn--secondary" data-result="discussed" ${st.result ? 'disabled' : ''}>Discussed together</button></div><p role="status">${st.result ? 'Saved. Ready for the next question.' : 'Mark how it went. Discussions are counted separately from accuracy.'}</p></div>` : '<button class="btn btn--primary btn--full" id="walk-show-answer-btn">Show answer</button>'}
-    <div class="card-nav"><button class="btn btn--secondary" id="walk-prev-btn" ${index === 0 ? 'disabled' : ''}>← Back</button><button class="btn btn--primary" id="walk-next-btn">${index === questions.length - 1 ? 'Finish walk' : 'Next →'}</button></div></article>`;
+    <div class="card-nav"><button class="btn btn--secondary" id="walk-prev-btn" ${index === 0 ? 'disabled' : ''}>← Previous</button><button class="btn btn--primary" id="walk-next-btn" ${browsing && index === questions.length - 1 ? 'disabled' : ''}>${index === questions.length - 1 ? browsing ? 'Last question' : 'Finish walk' : 'Next →'}</button></div></article>`;
   area().querySelectorAll('[data-choice]').forEach(el => el.onclick = () => { st.choice = Number(el.dataset.choice); render(); });
   const reveal = area().querySelector('#walk-show-answer-btn');
   if (reveal) reveal.onclick = () => { st.revealed = true; render(); };
@@ -44,9 +66,9 @@ function render() {
     if (st.result) return;
     st.result = el.dataset.result; recordResult(q.id, st.result); render();
   });
-  area().querySelector('#walk-prev-btn').onclick = () => { index--; render(); };
-  area().querySelector('#walk-next-btn').onclick = () => { if (index === questions.length - 1) summary(); else { index++; render(); } };
-  area().querySelector('#walk-finish-btn').onclick = summary;
+  area().querySelector('#walk-prev-btn').onclick = () => moveTo(index - 1);
+  area().querySelector('#walk-next-btn').onclick = () => { if (index < questions.length - 1) moveTo(index + 1); else if (!browsing) summary(); };
+  area().querySelector('#walk-finish-btn').onclick = () => browsing ? browse({ questions, answers, selectedId: q.id }) : summary();
   area().querySelector('#walk-bookmark-btn').onclick = () => { toggleBookmark(q.id); render(); };
   area().querySelector('#walk-timer-toggle').onclick = () => { timerOn = !timerOn; updateSettings({ walkTimer: timerOn }); render(); };
   area().querySelector('#walk-recall-toggle').onchange = event => { updateSettings({ walkRecall: event.target.checked }); st.showChoices = false; render(); };
@@ -66,8 +88,8 @@ function render() {
     const dx = event.changedTouches[0].clientX - touch.clientX;
     const dy = event.changedTouches[0].clientY - touch.clientY;
     if (Math.abs(dx) < 60 || Math.abs(dy) > Math.abs(dx)) return;
-    if (dx > 0 && index > 0) { index--; render(); }
-    else if (dx < 0) { if (index < questions.length - 1) { index++; render(); } else summary(); }
+    if (dx > 0 && index > 0) moveTo(index - 1);
+    else if (dx < 0) { if (index < questions.length - 1) moveTo(index + 1); else if (!browsing) summary(); }
   }, { passive: true });
   const listen = area().querySelector('#walk-listen-btn');
   if (listen) listen.onclick = () => {

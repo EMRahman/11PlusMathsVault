@@ -7,7 +7,8 @@ import { diagram, TOPICS, answerText } from '../js/content.js';
 import { METHOD_NOTES } from '../js/method-notes.js';
 import { getTutorial } from '../js/tutorials.js';
 import { worksheetHtml } from '../js/print.js';
-import { initState, recordResult, getProgress, getBookmarks, resetAll, getSettings, localDate } from '../js/state.js';
+import { initState, recordResult, getProgress, getBookmarks, resetAll, getSettings, localDate, saveDaily } from '../js/state.js';
+import { getPlan } from '../js/daily.js';
 const questions = JSON.parse(fs.readFileSync(new URL('../data/questions.json', import.meta.url)));
 const storage = new Map();
 globalThis.localStorage = {
@@ -181,16 +182,21 @@ test('the daily date follows the user’s local calendar', () => {
 });
 
 test('chart questions agree with the plotted data and percentage totals', () => {
+  const sum = values => values.reduce((a,b)=>a+b,0);
+  const solve = {
+    194: d => 5*12-sum(d.values),
+    195: d => d.values[3]-(d.values[2]-d.values[1])/2/2*3,
+    196: d => 24/((d.values[1]-d.values[0])/100),
+    198: d => sum(d.values)+d.values[0]*1.25,
+    199: d => (14+(d.values[3]-d.values[0])/((d.values[2]-d.values[3])/2))*60,
+    200: d => 2*12/((d.values[1]-d.values[0])/100),
+  };
   for (const q of questions.filter(q=>q.id<=210 && ['bars','line','pie'].includes(q.diagram?.type))) {
     const d=q.diagram;
     assert.equal(d.labels.length,d.values.length);
-    if(d.type==='bars') assert.equal(Number(q.answer),d.values[2]-d.values[0],`Q${q.id}`);
-    if(d.type==='line') assert.equal(Number(q.answer),d.values[2]-d.values[3],`Q${q.id}`);
-    if(d.type==='pie') {
-      assert.equal(d.values.reduce((a,b)=>a+b),100);
-      const total=Number(q.question.match(/of (\d+) pupils/)[1]);
-      assert.equal(Number(q.answer)*100,total*d.values[0],`Q${q.id}`);
-    }
+    if(d.type==='pie') assert.equal(sum(d.values),100);
+    const actual=q.answer_format==='time' ? q.answer.split(':').reduce((h,m)=>Number(h)*60+Number(m)) : Number(q.answer);
+    assert.equal(actual,solve[q.id](d),`Q${q.id}`);
   }
 });
 
@@ -199,7 +205,17 @@ test('reflection and rectangle answers agree with the coordinates in their diagr
     const pts=q.diagram.points;
     assert.ok(pts.every(p=>Math.abs(p.x)<=5 && Math.abs(p.y)<=5));
     const actual=String(q.answer).match(/-?\d+/g)?.map(Number);
-    if(q.subtopic==='reflection') assert.deepEqual(actual,[-pts[0].x,pts[0].y]);
+    if(q.subtopic==='reflection') {
+      const {x,y}=pts[0];
+      const expected={203:[-x+1,y-2],206:[x+2,-y+1],209:[-x+1,-y]}[q.id];
+      assert.deepEqual(actual,expected,`Q${q.id}`);
+    }
+    if(q.subtopic==='translation') {
+      const [p,target,r]=pts;
+      const expected=q.id===202 ? [r.x+target.x-p.x,r.y+target.y-p.y]
+        : q.id===205 ? [r.x-(target.x-p.x),r.y-(target.y-p.y)] : [p.x+6,p.y+3];
+      assert.deepEqual(actual,expected,`Q${q.id}`);
+    }
     if(q.subtopic==='rectangle_coordinates') assert.deepEqual(actual,[pts[0].x,pts[2].y]);
   }
 });
@@ -214,11 +230,12 @@ test('bank generation is deterministic and preserves the original IDs', async ()
 
 test('tutorial guidance matches the specific question variant across modes', () => {
   const qXReflect = questions.find(q => q.id === 110);
-  const qYReflect = questions.find(q => q.id === 203);
+  const qYReflect = {subtopic:'reflection',mode:'desk',question:'Reflect point P (2, 3) in the y-axis.'};
   const tX = getTutorial(qXReflect);
   const tY = getTutorial(qYReflect);
   assert.ok(tX.concept.includes('x-axis') && tX.steps[2].includes('y → −y'));
   assert.ok(tY.concept.includes('y-axis') && tY.steps[2].includes('x → −x'));
+  for(const q of questions.filter(q=>q.content_revision)) assert.equal(getTutorial(q),null,`Q${q.id} needs its own worked solution`);
 
   const qConsec3 = questions.find(q => q.id === 7);
   const qConsec5 = questions.find(q => q.id === 127);
@@ -248,7 +265,9 @@ test('shaded grids draw exactly the requested cells, and shapes render their par
   assert.equal(html.match(/grid-cell--shaded/g).length,2);
   for(const q of questions.filter(q=>q.diagram?.type==='shaded_grid'&&q.answer_format==='fraction_simplest')) {
     const [a,b]=q.answer.split('/').map(Number);
-    assert.ok(Math.abs(q.diagram.shaded.length/(q.diagram.rows*q.diagram.cols)-a/b)<1e-9,`Q${q.id}`);
+    const d=q.diagram, total=d.rows*d.cols;
+    const painted=q.id===256 ? d.shaded.length+(total-d.shaded.length)/3 : d.shaded.length;
+    assert.ok(Math.abs(painted/total-a/b)<1e-9,`Q${q.id}`);
   }
   const shape=diagram({type:'shape',polygons:[{points:[[20,20],[50,20],[20,50]],shaded:true}],lines:[{from:[1,1],to:[2,2],dashed:true}],circles:[{cx:50,cy:50,r:20}],labels:[{x:5,y:5,text:'<b>'}],description:'x'});
   assert.ok(shape.includes('shape-filled')&&shape.includes('<line')&&shape.includes('<circle')&&shape.includes('&lt;b&gt;'));
@@ -257,8 +276,8 @@ test('money answers always show two decimal places', () => {
   assert.equal(answerText({answer:'27.6',unit:'£'}),'£27.60');
   assert.equal(answerText({answer:'70.65',unit:'£'}),'£70.65');
   assert.equal(answerText({answer:'12',unit:'£'}),'£12');
-  assert.equal(answerText(questions.find(q=>q.id===147)),'£27.60');
-  assert.match(questions.find(q=>q.id===147).explanation,/£27\.60/);
+  assert.equal(answerText(questions.find(q=>q.id===150)),'£51.10');
+  assert.match(questions.find(q=>q.id===150).explanation,/£51\.10/);
 });
 test('mock papers are fixed, ordered, complete and timed at exam pace', () => {
   const papers=listPapers(questions);
@@ -281,10 +300,70 @@ test('the dress-rehearsal paper never appears in everyday practice', () => {
   const plan=dailyPlan(everyday,{},now);
   assert.ok(plan.items.every(item=>!item.question.reserved_mock));
 });
-test('original question IDs keep their question text, so saved progress stays meaningful', () => {
+test('unchanged original questions retain their wording and modes', () => {
   assert.equal(questions.find(q=>q.id===1).question,'Work out 38 × 24.');
   assert.equal(questions.find(q=>q.id===121).mode,'desk');
   assert.equal(questions.find(q=>q.id===78).question.includes('1 kilogram of flour'),true);
+});
+test('a revised daily question drops its stale answer while keeping other answers and progress', () => {
+  resetAll();
+  recordResult(147, 'correct');
+  const history = getProgress();
+  saveDaily({ date: localDate(), items: [{id:147}, {id:123}], answers: {
+    147: {finished:true, input:'27.60'}, 123: {finished:true, input:'48'},
+  }, completed:true });
+  const plan = getPlan(questions);
+  assert.equal(plan.answers[147], undefined);
+  assert.equal(plan.answers[123].input, '48');
+  assert.equal(plan.completed, false);
+  assert.deepEqual(getProgress(), history);
+  plan.answers[147] = {finished:true, input:'90.75'};
+  saveDaily(plan);
+  assert.equal(getPlan(questions).answers[147].input, '90.75');
+});
+
+test('bracket puzzle answers hold across every allowed bracket placement', () => {
+  const values = (a,b,c,d,ops) => {
+    const terms = [a,b,c,d];
+    const answers = [];
+    for (let start=0;start<4;start++) for(let end=start+1;end<4;end++) {
+      const expression=terms.map((n,i)=>(i===start?'(':'')+n+(i===end?')':'')+(ops[i]||'')).join('');
+      answers.push({value:Function(`return ${expression}`)(),inside:Function(`return ${terms.slice(start,end+1).map((n,i)=>n+(i<end-start?ops[start+i]:'')).join('')}`)()});
+    }
+    return answers;
+  };
+  assert.equal(Math.min(...values(36,12,3,1,['-','/','+']).map(v=>v.value)), Number(questions.find(q=>q.id===131).answer));
+  const target=values(18,6,4,2,['+','*','-']).filter(v=>v.value===94);
+  assert.equal(target.length,1);
+  assert.equal(target[0].inside,Number(questions.find(q=>q.id===137).answer));
+});
+test('stretch purchasing, cutting and seating answers satisfy whole-item constraints', () => {
+  // Enumerate purchasable pen packs rather than assuming all free-item offers invert uniquely.
+  const penCounts=Array.from({length:21},(_,packs)=>packs*3)
+    .filter(pens=>Math.abs(4*1.35+pens/3*2*0.95-(15-2))<1e-9);
+  assert.deepEqual(penCounts,[Number(questions.find(q=>q.id===377).answer)]);
+
+  // A length lower bound alone is insufficient: verify a real assignment to rolls exists.
+  const pieces=[120,120,120,75,75];
+  const fits=(rolls,index=0)=>{
+    if(index===pieces.length)return true;
+    for(let i=0;i<rolls.length;i++) {
+      if(rolls[i]+pieces[index]>200)continue;
+      const next=[...rolls]; next[i]+=pieces[index];
+      if(fits(next,index+1))return true;
+    }
+    return false;
+  };
+  const rolls=[1,2,3,4,5].find(count=>fits(Array(count).fill(0)));
+  assert.equal(Math.round(Number(questions.find(q=>q.id===379).answer)*100),rolls*480);
+
+  // Maximise passengers over available buses and supervising adults, then check an allocation.
+  let mostPupils=0;
+  for(let buses=1;buses<=11;buses++) for(let adults=buses;adults<=11;adults++) {
+    mostPupils=Math.max(mostPupils,Math.min(14*buses-adults,15*adults));
+  }
+  assert.equal(mostPupils,11*13);
+  assert.equal(Number(questions.find(q=>q.id===367).answer),150-mostPupils);
 });
 test('authored question sources contain the proof fields only at authoring time', () => {
   for(const q of questions) { assert.ok(!('check' in q)); assert.ok(!('distractors' in q)); assert.ok(!('check_note' in q)); }

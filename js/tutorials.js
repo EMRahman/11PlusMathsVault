@@ -753,6 +753,8 @@ const TUTORIAL_OVERRIDES = {
 };
 export function getTutorial(qOrSubtopic) {
   if (!qOrSubtopic) return null;
+  // Revised problems have their own worked solutions; legacy tutorials omit their extra steps.
+  if (typeof qOrSubtopic === 'object' && qOrSubtopic.content_revision >= 2) return null;
   const q = typeof qOrSubtopic === 'object' ? qOrSubtopic : { subtopic: qOrSubtopic };
   const sub = TUTORIAL_ALIASES[q.subtopic] || q.subtopic;
   const base = TUTORIALS[sub];

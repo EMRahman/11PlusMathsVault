@@ -328,112 +328,41 @@
     "pitfall": "Picking the first case that works, without checking whether the 50° could be a different angle of the triangle."
   },
   {
-    "unit": null,
+    "unit": "°",
     "answer_format": null,
-    "diagram": {
-      "type": "shape",
-      "polygons": [
-        {
-          "points": [
-            [
-              80,
-              210
-            ],
-            [
-              270,
-              210
-            ],
-            [
-              80,
-              20
-            ]
-          ],
-          "shaded": false
-        }
-      ],
-      "lines": [
-        {
-          "from": [
-            80,
-            195
-          ],
-          "to": [
-            95,
-            195
-          ],
-          "dashed": false
-        },
-        {
-          "from": [
-            95,
-            195
-          ],
-          "to": [
-            95,
-            210
-          ],
-          "dashed": false
-        },
-        {
-          "from": [
-            175,
-            203
-          ],
-          "to": [
-            175,
-            217
-          ],
-          "dashed": false
-        },
-        {
-          "from": [
-            73,
-            115
-          ],
-          "to": [
-            87,
-            115
-          ],
-          "dashed": false
-        }
-      ],
-      "labels": [],
-      "description": "A right-angled triangle. The right angle is at the bottom left corner. The two sides that meet at the right angle each have one short tick mark to show they are equal. Not to scale."
-    },
+    "diagram": null,
     "id": 302,
     "topic": "geometry",
     "subtopic": "triangle_angle_reasoning",
-    "difficulty": 1,
-    "question": "A triangle is right-angled and isosceles. Apart from the right angle, which pair gives the sizes of its other two angles?",
-    "answer": "45° and 45°",
-    "check": [
-      "90/2",
-      "90/2"
-    ],
+    "difficulty": 3,
+    "question": "Triangle ABC is right-angled at A and AB = AC. The side BC is extended beyond C to D. Angle ACD is split into two equal angles. What is the size of each of these two angles?",
+    "answer": "67.5°",
+    "check": "(180-(180-90)/2)/2",
     "distractors": [
       {
-        "value": "90° and 90°",
-        "why": "Shares 180° equally between the two angles, forgetting the right angle already takes 90°."
+        "value": "22.5°",
+        "why": "Halves the interior angle of 45° instead of the external angle."
       },
       {
-        "value": "45° and 90°",
-        "why": "Finds 45° correctly but then includes the right angle as one of the other two."
+        "value": "45°",
+        "why": "Reports the interior base angle without finding or halving the external angle."
       },
       {
-        "value": "60° and 30°",
-        "why": "Remembers the 30°, 60°, 90° set square, which is right-angled but not isosceles."
+        "value": "90°",
+        "why": "Reports the triangle’s right angle instead of the requested angle."
       },
       {
-        "value": "It's not possible to say",
-        "why": "Thinks that without a given angle size nothing can be found, missing that isosceles means two angles are equal."
+        "value": "135°",
+        "why": "Finds the full external angle but forgets to halve it."
       }
     ],
-    "explanation": "The angles of a triangle add up to 180°. The right angle is 90°, so the other two angles add up to 90°. An isosceles triangle has two equal angles, and the right angle cannot be one of them (two right angles would be too big). So the other two angles are equal: 90° ÷ 2 = 45° each.",
+    "explanation": "The two equal base angles of the right-angled isosceles triangle share 90°, so angle ACB is 45°. Angle ACD lies on a straight line with ACB, so it is 180° − 45° = 135°. Splitting that external angle equally gives 67.5° each.",
     "hints": [
-      "How many degrees are left for the other two angles after the right angle?",
-      "In an isosceles triangle two angles are equal. Which two must they be here?"
+      "Find the interior angle at C, then the angle outside the triangle.",
+      "The two base angles are 45° each. Subtract 45° from 180° before halving."
     ],
-    "pitfall": "Forgetting that the right angle already uses 90° of the 180°."
+    "pitfall": "The angle being halved is outside the triangle, not the 45° inside it.",
+    "content_revision": 2
   },
   {
     "unit": "°",
@@ -784,96 +713,39 @@
   {
     "unit": "°",
     "answer_format": null,
-    "diagram": {
-      "type": "shape",
-      "lines": [
-        {
-          "from": [
-            30,
-            170
-          ],
-          "to": [
-            350,
-            170
-          ],
-          "dashed": false
-        },
-        {
-          "from": [
-            190,
-            170
-          ],
-          "to": [
-            119,
-            61
-          ],
-          "dashed": false
-        },
-        {
-          "from": [
-            190,
-            170
-          ],
-          "to": [
-            257,
-            59
-          ],
-          "dashed": false
-        }
-      ],
-      "labels": [
-        {
-          "x": 128,
-          "y": 141,
-          "text": "57°",
-          "anchor": "middle"
-        },
-        {
-          "x": 188,
-          "y": 92,
-          "text": "64°",
-          "anchor": "middle"
-        },
-        {
-          "x": 252,
-          "y": 140,
-          "text": "x",
-          "anchor": "middle"
-        }
-      ],
-      "description": "A straight horizontal line with two lines rising from the same point on it, dividing the half-turn above the line into three angles. From left to right the angles are 57°, 64° and x. Not to scale."
-    },
+    "diagram": null,
     "id": 306,
     "topic": "geometry",
     "subtopic": "angle_facts_combined",
-    "difficulty": 1,
-    "question": "Three angles lie along a straight line. Two of them are 57° and 64°. What is the size of the angle marked x?",
-    "answer": "59°",
-    "check": "180-57-64",
+    "difficulty": 2,
+    "question": "Three adjacent angles make a straight line. One angle is 55°. The other two are in the ratio 2:3. What is the size of the smaller of those two angles?",
+    "answer": "50°",
+    "check": "(180-55)/(2+3)*2",
     "distractors": [
       {
-        "value": "123°",
-        "why": "Calculates 180° − 57° and ignores the 64° angle."
+        "value": "75°",
+        "why": "Gives the larger angle, three parts, instead of the smaller."
       },
       {
-        "value": "116°",
-        "why": "Calculates 180° − 64° and ignores the 57° angle."
+        "value": "125°",
+        "why": "Reports the total of the two unknown angles."
       },
       {
-        "value": "121°",
-        "why": "Adds 57° + 64° = 121° and stops, without taking it away from 180°."
+        "value": "25°",
+        "why": "Finds one ratio part but forgets that the smaller angle has two parts."
       },
       {
-        "value": "239°",
-        "why": "Takes 121° away from 360°, using the total for angles around a point instead of angles on a line."
+        "value": "55°",
+        "why": "Repeats the known angle rather than calculating an unknown one."
       }
     ],
-    "explanation": "Angles on a straight line add up to 180°. The two known angles make 57° + 64° = 121°. So x = 180° − 121° = 59°.",
+    "explanation": "The two unknown angles total 180° − 55° = 125°. Their ratio has 2 + 3 = 5 equal parts, so each part is 25°. The smaller angle has 2 parts and is 50°. The larger angle is 75°, and 55° + 50° + 75° = 180°.",
     "hints": [
-      "What do angles on a straight line add up to?",
-      "Add the two angles you know first, then take the total away from 180°."
+      "Remove the known angle before using the ratio.",
+      "The remaining 125° is five parts; the smaller angle uses two."
     ],
-    "pitfall": "Using only one of the two known angles, or using 360° for a straight line."
+    "pitfall": "The ratio applies only to the two unknown angles.",
+    "content_revision": 2
   },
   {
     "unit": "°",
@@ -1737,40 +1609,41 @@
     "pitfall": "Not noticing that two radii make an isosceles triangle, or forgetting to halve the remaining 70°."
   },
   {
-    "unit": null,
+    "unit": "cm",
     "answer_format": null,
     "diagram": null,
     "id": 316,
     "topic": "geometry",
     "subtopic": "nets_3d_shapes",
-    "difficulty": 1,
-    "question": "How many edges does a triangular prism have?",
-    "answer": "9",
-    "check": "3+3+3",
+    "difficulty": 2,
+    "question": "A wire frame forms all the edges of a triangular prism. Each triangular end has side lengths 4 cm, 5 cm and 6 cm. Each edge joining the two ends is 10 cm long. What length of wire is needed?",
+    "answer": "60 cm",
+    "check": "2*(4+5+6)+3*10",
     "distractors": [
       {
-        "value": "5",
-        "why": "Counts the faces (2 triangles and 3 rectangles) instead of the edges."
+        "value": "30 cm",
+        "why": "Counts only the two triangular ends or only the three joining edges."
       },
       {
-        "value": "6",
-        "why": "Counts the vertices (3 on each triangle) instead of the edges."
+        "value": "45 cm",
+        "why": "Counts one triangular end and all three joining edges: 15 + 30."
       },
       {
-        "value": "11",
-        "why": "Adds the faces and the vertices (5 + 6) without taking 2 away."
+        "value": "90 cm",
+        "why": "Counts nine edges correctly but incorrectly makes every edge 10 cm."
       },
       {
-        "value": "12",
-        "why": "Gives the number of edges of a cuboid, or doubles the 6 vertices."
+        "value": "80 cm",
+        "why": "Uses five joining edges instead of three: 30 + 5 × 10."
       }
     ],
-    "explanation": "A triangular prism has two triangular ends. Each triangle has 3 edges, which is 6 edges. Then 3 more edges join the matching corners of the two triangles along the length of the prism. The total is 3 + 3 + 3 = 9 edges.",
+    "explanation": "There are two triangular ends, each using 4 + 5 + 6 = 15 cm of wire. Together they use 30 cm. Three edges join corresponding corners of the ends, using 3 × 10 = 30 cm more. The frame needs 60 cm of wire altogether.",
     "hints": [
-      "Count the edges on each triangular end first.",
-      "Then count the edges that join the two ends together."
+      "Count the edges on both ends and the edges joining them.",
+      "Each end uses 15 cm, and there are three joining edges of 10 cm."
     ],
-    "pitfall": "Mixing up faces, edges and vertices."
+    "pitfall": "A prism has two triangular ends; its edges do not all have the same length.",
+    "content_revision": 2
   },
   {
     "unit": "cm²",
@@ -2159,34 +2032,35 @@
     "id": 319,
     "topic": "measures",
     "subtopic": "timetable_time_problems",
-    "difficulty": 1,
-    "question": "The table shows when the Number 42 bus is at each stop. How many minutes does the bus take to go from Station to Hospital?",
-    "answer": "66 minutes",
-    "check": "8*60+54-(7*60+48)",
+    "difficulty": 2,
+    "question": "A passenger takes the Number 42 bus from Station. At Library she gets off and walks for 25 minutes to Hospital. How many minutes earlier does she arrive than if she had stayed on the bus to Hospital?",
+    "answer": "24 minutes",
+    "check": "(8*60+54)-(8*60+5+25)",
     "distractors": [
       {
-        "value": "6 minutes",
-        "why": "Subtracts only the minutes (54 − 48) and ignores the hour."
+        "value": "66 minutes",
+        "why": "Reports the full Station-to-Hospital bus journey."
       },
       {
-        "value": "72 minutes",
-        "why": "Counts 07:48 to 09:00 (72 minutes) instead of stopping at 08:54."
+        "value": "49 minutes",
+        "why": "Reports the Library-to-Hospital bus journey without allowing for walking."
       },
       {
-        "value": "106 minutes",
-        "why": "Subtracts 8.54 − 7.48 as decimals to get 1.06 and reads it as 1 hour 46 minutes."
+        "value": "17 minutes",
+        "why": "Reports only the Station-to-Library leg."
       },
       {
-        "value": "114 minutes",
-        "why": "Adds 60 + 54 and never takes away the 48 minutes already past 07:00."
+        "value": "25 minutes",
+        "why": "Reports the walking time instead of the time saved."
       }
     ],
-    "explanation": "From 07:48 to 08:00 is 12 minutes. From 08:00 to 08:54 is 54 minutes. Together that is 12 + 54 = 66 minutes.",
+    "explanation": "The table shows the bus at Library at 08:05. A 25-minute walk gets her to Hospital at 08:30. Staying on the bus would bring her there at 08:54. The walk therefore gets her there 24 minutes earlier. Both journeys start on the same bus, so compare the two arrival times.",
     "hints": [
-      "Try counting on to the next whole hour first.",
-      "Then add on the minutes after that hour."
+      "Work out the arrival time after getting off, then compare with the Hospital row.",
+      "Add 25 minutes to the Library time, not to the Station time."
     ],
-    "pitfall": "Subtracting times as if they were decimals, when an hour is 60 minutes."
+    "pitfall": "Compare arrival times rather than subtracting the walking time from the entire bus journey.",
+    "content_revision": 2
   },
   {
     "unit": "minutes",

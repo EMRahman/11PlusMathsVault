@@ -10,6 +10,18 @@ export function getPlan(questions) {
     plan = { date: today(), items: result.items.map(item => ({ id: item.question.id, reason: item.reason })), seconds: result.seconds, answers: {}, completed: false };
     saveDaily(plan);
   }
+  // Keep the day's plan and history, but don't restore an old answer onto a revised question.
+  const revisions = Object.fromEntries(plan.items.map(item => [item.id, questions.find(q => q.id === item.id).content_revision || 1]));
+  const changed = plan.items.filter(item => (plan.revisions?.[item.id] || 1) !== revisions[item.id]);
+  if (changed.length) {
+    for (const item of changed) delete (plan.answers || {})[item.id];
+    plan.completed = false;
+  }
+  if (changed.length || !plan.revisions) {
+    plan.revisions = revisions;
+    plan.seconds = plan.items.reduce((sum, item) => sum + questions.find(q => q.id === item.id).time_target_seconds, 0);
+    saveDaily(plan);
+  }
   return plan;
 }
 export function home(questions) {
