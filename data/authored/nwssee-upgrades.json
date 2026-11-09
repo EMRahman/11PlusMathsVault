@@ -1,0 +1,1098 @@
+[
+  {
+    "id": 121,
+    "topic": "decimals",
+    "subtopic": "money_multiplication",
+    "difficulty": 3,
+    "question": "A cinema charges £7.85 per ticket. For every group of 8 tickets taken, one is free. A club takes 27 tickets and pays a single booking fee of £3.60. It collects £8 from each person. How much money is left after paying the cinema, in pounds?",
+    "answer": "24.00",
+    "unit": "£",
+    "answer_format": null,
+    "check": "27*8-((27-3)*7.85+3.6)",
+    "explanation": "There are three complete groups of 8 tickets, so 3 tickets are free. The club pays for 24 tickets: 24 × £7.85 = £188.40. Including the booking fee gives £192. The club collects 27 × £8 = £216. The money left is £216 − £192 = £24.",
+    "hints": [
+      "Separate the money collected from the cinema bill.",
+      "There are three free tickets. Add the single booking fee after pricing the paid tickets."
+    ],
+    "pitfall": "The booking fee is paid once; free tickets still belong to people who pay the club.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 128,
+    "topic": "decimals",
+    "subtopic": "exchange_rate",
+    "difficulty": 3,
+    "question": "Aisha exchanges £240 at £1 = €1.15. The bureau deducts a fee of 2.5% of the euros before handing them over. Aisha spends €87.10. How many euros does she have left?",
+    "answer": "182.00",
+    "unit": "€",
+    "answer_format": null,
+    "check": "240*1.15*(1-2.5/100)-87.10",
+    "explanation": "Before the fee, £240 buys 240 × 1.15 = €276. The fee is 2.5% of €276, or €6.90, leaving €269.10. Subtract the €87.10 spent to leave €182. The fee is a percentage of the euro amount, so calculate that amount first.",
+    "hints": [
+      "There are three stages: conversion, fee, then spending.",
+      "Find 2.5% of the euros received before the fee, not 2.5% of the pounds."
+    ],
+    "pitfall": "Keep the fee and spending in euros once the exchange has been made.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 129,
+    "topic": "measures",
+    "subtopic": "unit_conversion",
+    "difficulty": 3,
+    "question": "A recipe for 12 rolls uses 750 g of flour. A baker needs 50 rolls and increases the ingredients in exact proportion. The baker starts with 4 kg of flour. How many kilograms of flour remain?",
+    "answer": "0.875",
+    "unit": "kg",
+    "answer_format": null,
+    "check": "4-750/12*50/1000",
+    "explanation": "One roll needs 750 ÷ 12 = 62.5 g of flour. Fifty rolls need 50 × 62.5 = 3125 g, or 3.125 kg. Subtract this from the 4 kg available: 4 − 3.125 = 0.875 kg remains. Scale for 50 rolls rather than rounding up to whole batches.",
+    "hints": [
+      "The recipe can be scaled to part of a batch.",
+      "Find flour for one roll, multiply by 50, then convert to kilograms."
+    ],
+    "pitfall": "Do not buy or make a whole extra batch when the ingredients scale exactly.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 131,
+    "topic": "number_operations",
+    "subtopic": "order_operations",
+    "difficulty": 2,
+    "question": "Insert one pair of brackets into 36 − 12 ÷ 3 + 1 so that the result is as small as possible. What is that smallest result?",
+    "answer": "9",
+    "unit": null,
+    "answer_format": null,
+    "check": "(36-12)/3+1",
+    "explanation": "Try the different consecutive groups inside the brackets. Bracketing 36 − 12 gives 24 ÷ 3 + 1 = 9. The other placements give 31 or 33, so 9 is the smallest possible result. The brackets change which calculation happens first.",
+    "hints": [
+      "Try each possible consecutive group, rather than assuming the longest brackets give the smallest answer.",
+      "List the possible placements and evaluate each using division before addition."
+    ],
+    "pitfall": "Do not change the order of the numbers or the operation signs.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 133,
+    "topic": "number_operations",
+    "subtopic": "multiplication_strategies",
+    "difficulty": 2,
+    "question": "A theatre has 28 rows of 15 seats. Six rows are closed for repairs. Of the remaining seats, 37 are empty and all the rest are occupied. Tickets cost £8 each. How much ticket money is collected, in pounds?",
+    "answer": "2344",
+    "unit": "£",
+    "answer_format": null,
+    "check": "((28-6)*15-37)*8",
+    "explanation": "There are 28 − 6 = 22 open rows, containing 22 × 15 = 330 seats. Of these, 37 are empty, leaving 293 occupied seats. Each occupied seat brings in £8, so the total ticket money is 293 × £8 = £2344.",
+    "hints": [
+      "Find the number of occupied seats before calculating the money.",
+      "Remove the closed rows first, then the 37 empty seats."
+    ],
+    "pitfall": "A closed row removes 15 seats, rather than only one.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 134,
+    "topic": "number_operations",
+    "subtopic": "order_operations",
+    "difficulty": 2,
+    "question": "Work out 96 ÷ (18 − 6) × 5 − 7.",
+    "answer": "33",
+    "unit": null,
+    "answer_format": null,
+    "check": "96/(18-6)*5-7",
+    "explanation": "First calculate the brackets: 18 − 6 = 12. Division and multiplication then have equal priority, so work from left to right: 96 ÷ 12 = 8, then 8 × 5 = 40. Finally subtract 7 to get 33.",
+    "hints": [
+      "After the brackets, which operation comes first when reading from left to right?",
+      "Divide 96 by 12 before multiplying by 5. Subtract 7 last."
+    ],
+    "pitfall": "Multiplication does not take priority over a division to its left.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 136,
+    "topic": "number_operations",
+    "subtopic": "multiplication_strategies",
+    "difficulty": 3,
+    "question": "A theatre has 36 rows of 25 seats. For a performance, each of the first 12 rows has 5 seats reserved for equipment. Three quarters of the usable seats are sold at £12 each. What is the ticket income, in pounds?",
+    "answer": "7560",
+    "unit": "£",
+    "answer_format": null,
+    "check": "(36*25-12*5)*3/4*12",
+    "explanation": "The theatre originally has 36 × 25 = 900 seats. Equipment uses 12 × 5 = 60 seats, leaving 840 usable seats. Three quarters of 840 is 630 tickets. At £12 each these bring in 630 × £12 = £7560. Apply the fraction after removing the equipment seats.",
+    "hints": [
+      "The fraction applies to usable seats, not the original capacity.",
+      "Subtract the equipment seats, find three quarters of the remainder, then price the sold tickets."
+    ],
+    "pitfall": "Reserved equipment seats are removed before finding how many tickets sell.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 137,
+    "topic": "number_operations",
+    "subtopic": "order_operations",
+    "difficulty": 2,
+    "question": "Put one pair of brackets into 18 + 6 × 4 − 2 to make the answer 94. What is the value of the calculation inside your brackets?",
+    "answer": "24",
+    "unit": null,
+    "answer_format": null,
+    "check": "18+6",
+    "explanation": "Without brackets the expression is 40. To get 94, first add 18 and 6: (18 + 6) × 4 − 2 = 24 × 4 − 2 = 94. The value inside the brackets is therefore 24, rather than the final total 94.",
+    "hints": [
+      "Try brackets around an addition or a subtraction.",
+      "Evaluate the whole expression after trying each possible pair."
+    ],
+    "pitfall": "Give the value inside the brackets, rather than the value of the whole expression.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 140,
+    "topic": "fractions",
+    "subtopic": "fraction_equivalence",
+    "difficulty": 2,
+    "question": "A fraction is equivalent to 3/7. Its numerator and denominator add to 80. What is its numerator?",
+    "answer": "24",
+    "unit": null,
+    "answer_format": null,
+    "check": "80/(3+7)*3",
+    "explanation": "The numerator and denominator are 3 and 7 equal parts. Together they make 10 parts, so each part is 80 ÷ 10 = 8. The numerator is 3 × 8 = 24 and the denominator is 56. Check that 24 + 56 = 80.",
+    "hints": [
+      "Equivalent fractions multiply the numerator and denominator by the same number.",
+      "Think of the numerator and denominator as 3 parts and 7 parts of the total 80."
+    ],
+    "pitfall": "The total is the sum of numerator and denominator, not the denominator alone.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 141,
+    "topic": "fractions",
+    "subtopic": "fraction_multiplication",
+    "difficulty": 2,
+    "question": "A tank starts 3/4 full. A gardener uses 2/5 of the water in the tank, then adds water equal to 1/8 of the tank’s full capacity. What fraction of the full tank is now filled? Give your answer in simplest form.",
+    "answer": "23/40",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "3/4*(1-2/5)+1/8",
+    "explanation": "After using 2/5 of the water, 3/5 of the original water remains. This is 3/5 × 3/4 = 9/20 of the full tank. Add 1/8 of full capacity: 18/40 + 5/40 = 23/40. The second fraction refers to full capacity, not the remaining water.",
+    "hints": [
+      "Find the fraction left after the gardener uses some water.",
+      "Multiply 3/4 by 3/5, then add 1/8 using a common denominator."
+    ],
+    "pitfall": "Distinguish a fraction of the water present from a fraction of the full tank.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 143,
+    "topic": "fractions",
+    "subtopic": "fraction_equivalence",
+    "difficulty": 2,
+    "question": "A fraction is equivalent to 5/6. Its denominator is 9 greater than its numerator. What is its numerator?",
+    "answer": "45",
+    "unit": null,
+    "answer_format": null,
+    "check": "9/(6-5)*5",
+    "explanation": "In 5/6 the denominator exceeds the numerator by 1. In the required fraction that difference has been multiplied by 9, so both numbers are multiplied by 9. The fraction is 45/54, whose numerator is 45. Check that 54 − 45 = 9.",
+    "hints": [
+      "How much larger is the denominator than the numerator in 5/6?",
+      "The difference scales by the same factor as both parts of the fraction."
+    ],
+    "pitfall": "Adding 9 to both parts does not preserve the value of the fraction.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 144,
+    "topic": "fractions",
+    "subtopic": "fraction_multiplication",
+    "difficulty": 3,
+    "question": "A jug contains 5/6 litre of juice. First 3/10 of the juice is poured out. Then 2/7 of what remains is poured out. How many litres remain? Give your answer as a fraction in simplest form.",
+    "answer": "5/12",
+    "unit": "l",
+    "answer_format": "fraction_simplest",
+    "check": "5/6*(1-3/10)*(1-2/7)",
+    "explanation": "The first pour leaves 7/10 of 5/6 litre, which is 7/12 litre. The second pour leaves 5/7 of that amount. Multiplying 7/12 by 5/7 gives 5/12 litre. Each pour removes a fraction of the juice present at that stage, so the fractions cannot simply be added.",
+    "hints": [
+      "Work with the fraction left after each pour.",
+      "Keep 7/10 of the original juice, then 5/7 of the result."
+    ],
+    "pitfall": "The second fraction is taken from the remainder, not from the original jug.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 146,
+    "topic": "fractions",
+    "subtopic": "fraction_equivalence",
+    "difficulty": 3,
+    "question": "A fraction is equivalent to 7/9. Adding 4 to its numerator and 4 to its denominator gives a fraction equivalent to 4/5. What was its original numerator?",
+    "answer": "28",
+    "unit": null,
+    "answer_format": null,
+    "check": "(5*4-4*4)/(4*9-5*7)*7",
+    "explanation": "Try equivalent fractions with numerators 7, 14, 21, 28 and matching denominators 9, 18, 27, 36. Adding 4 to both parts of 28/36 gives 32/40 = 4/5. For a check using equal parts, the new ratio requires four times the new denominator to equal five times the new numerator: 4 × (9 parts + 4) = 5 × (7 parts + 4), so one part is 4.",
+    "hints": [
+      "Try multiples of both 7 and 9, then check what adding 4 does.",
+      "The fraction before the addition has numerator 7 times a whole number and denominator 9 times that same number."
+    ],
+    "pitfall": "The fraction after adding 4 need only be equivalent to 4/5, not exactly 4 over 5.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 147,
+    "topic": "decimals",
+    "subtopic": "money_multiplication",
+    "difficulty": 2,
+    "question": "A school takes 36 notebooks priced at £2.75 each. In every group of 12 notebooks taken, one is free. How much does the school pay, in pounds?",
+    "answer": "90.75",
+    "unit": "£",
+    "answer_format": null,
+    "check": "(36-36/12)*2.75",
+    "explanation": "The 36 notebooks make three groups of 12. Each group has one free notebook, so 3 are free and the school pays for 33. The cost is 33 × £2.75 = £90.75. Check that the discount is 3 × £2.75 = £8.25.",
+    "hints": [
+      "How many complete groups of 12 are there?",
+      "Subtract the free notebooks before multiplying by the price of one notebook."
+    ],
+    "pitfall": "There are 36 notebooks altogether, including the free ones.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 148,
+    "topic": "decimals",
+    "subtopic": "exchange_rate",
+    "difficulty": 2,
+    "question": "A traveller needs exactly €186. The bureau offers £1 = €1.20 and charges a separate £4 fee. How many pounds must the traveller pay altogether?",
+    "answer": "159",
+    "unit": "£",
+    "answer_format": null,
+    "check": "186/1.2+4",
+    "explanation": "Each pound buys €1.20, so €186 costs 186 ÷ 1.20 = £155. The fee is charged separately in pounds, so add £4 to get £159. Check that £155 × 1.20 gives exactly €186 before the fee is included.",
+    "hints": [
+      "This time the euro amount is known and the pound amount is missing.",
+      "Find how many groups of €1.20 make €186, then add the pound fee."
+    ],
+    "pitfall": "The exchange calculation runs backwards, and the fee is not exchanged.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 150,
+    "topic": "decimals",
+    "subtopic": "money_multiplication",
+    "difficulty": 2,
+    "question": "A club buys 24 notebooks at £1.85 each and 18 pens at 65p each. It has a voucher worth £5 off the total. How much does it pay, in pounds?",
+    "answer": "51.10",
+    "unit": "£",
+    "answer_format": null,
+    "check": "24*1.85+18*0.65-5",
+    "explanation": "The notebooks cost 24 × £1.85 = £44.40. The pens cost 18 × £0.65 = £11.70. Together they cost £56.10. Subtract the £5 voucher once to get £51.10. Keep all amounts in pounds, or calculate entirely in pence.",
+    "hints": [
+      "Find the two separate costs using the same money unit.",
+      "Add £44.40 and the cost of the pens, then subtract the voucher once."
+    ],
+    "pitfall": "65p is £0.65, and the voucher applies to the whole order.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 151,
+    "topic": "decimals",
+    "subtopic": "exchange_rate",
+    "difficulty": 3,
+    "question": "At £1 = €1.15, a traveller exchanges £160 with no fee. After spending €46, the traveller changes the remaining euros back at €1 = £0.80. How many fewer pounds does the traveller have at the end than at the start?",
+    "answer": "49.60",
+    "unit": "£",
+    "answer_format": null,
+    "check": "160-(160*1.15-46)*0.8",
+    "explanation": "The first exchange gives 160 × 1.15 = €184. Spending €46 leaves €138. At the return rate this buys 138 × £0.80 = £110.40. The loss compared with the original money is £160 − £110.40 = £49.60. Use the stated return rate for the second exchange.",
+    "hints": [
+      "Keep track of the currency at each stage.",
+      "Find euros left after spending, convert those back to pounds, then compare with £160."
+    ],
+    "pitfall": "The return rate is different from simply undoing the first exchange.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 153,
+    "topic": "decimals",
+    "subtopic": "money_multiplication",
+    "difficulty": 3,
+    "question": "A club needs 45 notebooks. Shop A charges £2.40 each and gives one free for every 9 taken, including the free one. Shop B sells packs of 5 for £10.75. How much cheaper is the cheaper order, in pounds?",
+    "answer": "0.75",
+    "unit": "£",
+    "answer_format": null,
+    "check": "45/5*10.75-(45-45/9)*2.4",
+    "explanation": "At Shop A, 45 notebooks make five groups of 9, so 5 are free. The club pays for 40: 40 × £2.40 = £96. At Shop B it needs nine packs costing 9 × £10.75 = £96.75. Shop A is cheaper by £0.75.",
+    "hints": [
+      "Work out the price of all 45 notebooks at each shop.",
+      "At Shop A pay for 40 notebooks; at Shop B buy 9 packs. Compare the totals."
+    ],
+    "pitfall": "Compare complete orders rather than single prices or discount amounts.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 154,
+    "topic": "ratio",
+    "subtopic": "ratio_sharing",
+    "difficulty": 2,
+    "question": "A school shares a grant between art and sport in the ratio 3:5. Sport receives £28 more than art. Sport then spends 1/5 of its share on equipment. How much money does sport have left, in pounds?",
+    "answer": "56",
+    "unit": "£",
+    "answer_format": null,
+    "check": "28/(5-3)*(5-1)",
+    "explanation": "The difference between the shares is 2 ratio parts, worth £28. One part is £14, so sport gets 5 parts worth £70. It spends one of those 5 equal parts, leaving 4 parts: £56. The given difference is not the total grant.",
+    "hints": [
+      "Which part of the ratio corresponds to the difference in money?",
+      "Find one part using 5 − 3, then find sport’s share before taking away its spending."
+    ],
+    "pitfall": "The difference in the shares corresponds to the difference in the ratio parts.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 157,
+    "topic": "ratio",
+    "subtopic": "ratio_sharing",
+    "difficulty": 2,
+    "question": "A school shares a grant between art and sport in the ratio 4:7. Sport receives £33 more than art. Sport then spends 1/7 of its share on equipment. How much money does sport have left, in pounds?",
+    "answer": "66",
+    "unit": "£",
+    "answer_format": null,
+    "check": "33/(7-4)*(7-1)",
+    "explanation": "The difference between the shares is 3 ratio parts, worth £33. One part is £11, so sport gets 7 parts worth £77. It spends one of those 7 equal parts, leaving 6 parts: £66. The given difference is not the total grant.",
+    "hints": [
+      "Which part of the ratio corresponds to the difference in money?",
+      "Find one part using 7 − 4, then find sport’s share before taking away its spending."
+    ],
+    "pitfall": "The difference in the shares corresponds to the difference in the ratio parts.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 160,
+    "topic": "ratio",
+    "subtopic": "ratio_sharing",
+    "difficulty": 2,
+    "question": "A school shares a grant between art and sport in the ratio 5:8. Sport receives £42 more than art. Sport then spends 1/8 of its share on equipment. How much money does sport have left, in pounds?",
+    "answer": "98",
+    "unit": "£",
+    "answer_format": null,
+    "check": "42/(8-5)*(8-1)",
+    "explanation": "The difference between the shares is 3 ratio parts, worth £42. One part is £14, so sport gets 8 parts worth £112. It spends one of those 8 equal parts, leaving 7 parts: £98. The given difference is not the total grant.",
+    "hints": [
+      "Which part of the ratio corresponds to the difference in money?",
+      "Find one part using 8 − 5, then find sport’s share before taking away its spending."
+    ],
+    "pitfall": "The difference in the shares corresponds to the difference in the ratio parts.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 162,
+    "topic": "percentages",
+    "subtopic": "percent_of_amount",
+    "difficulty": 2,
+    "question": "A school has 240 pupils. 35% walk to school. After a travel campaign, 12 pupils who used to come by car start walking instead. The number of pupils stays the same. What percentage now walk?",
+    "answer": "40",
+    "unit": "%",
+    "answer_format": null,
+    "check": "(240*35/100+12)/240*100",
+    "explanation": "At first 240 × 35/100 = 84 pupils walk. Add the 12 new walkers to get 96. The whole school still has 240 pupils, so the new percentage is 96 ÷ 240 × 100 = 40%. The increase of 12 pupils is not an increase of 12 percentage points.",
+    "hints": [
+      "Find the new number of walkers before turning it into a percentage.",
+      "Add 12 to 35% of 240, then compare that result with the whole school."
+    ],
+    "pitfall": "An extra number of pupils is not the same as an extra percentage.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 165,
+    "topic": "percentages",
+    "subtopic": "percent_of_amount",
+    "difficulty": 2,
+    "question": "A school has 360 pupils. 45% walk to school. After a travel campaign, 18 pupils who used to come by car start walking instead. The number of pupils stays the same. What percentage now walk?",
+    "answer": "50",
+    "unit": "%",
+    "answer_format": null,
+    "check": "(360*45/100+18)/360*100",
+    "explanation": "At first 360 × 45/100 = 162 pupils walk. Add the 18 new walkers to get 180. The whole school still has 360 pupils, so the new percentage is 180 ÷ 360 × 100 = 50%. The increase of 18 pupils is not an increase of 18 percentage points.",
+    "hints": [
+      "Find the new number of walkers before turning it into a percentage.",
+      "Add 18 to 45% of 360, then compare that result with the whole school."
+    ],
+    "pitfall": "An extra number of pupils is not the same as an extra percentage.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 168,
+    "topic": "percentages",
+    "subtopic": "percent_of_amount",
+    "difficulty": 2,
+    "question": "A school has 480 pupils. 65% walk to school. After a travel campaign, 24 pupils who used to come by car start walking instead. The number of pupils stays the same. What percentage now walk?",
+    "answer": "70",
+    "unit": "%",
+    "answer_format": null,
+    "check": "(480*65/100+24)/480*100",
+    "explanation": "At first 480 × 65/100 = 312 pupils walk. Add the 24 new walkers to get 336. The whole school still has 480 pupils, so the new percentage is 336 ÷ 480 × 100 = 70%. The increase of 24 pupils is not an increase of 24 percentage points.",
+    "hints": [
+      "Find the new number of walkers before turning it into a percentage.",
+      "Add 24 to 65% of 480, then compare that result with the whole school."
+    ],
+    "pitfall": "An extra number of pupils is not the same as an extra percentage.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 171,
+    "topic": "geometry",
+    "subtopic": "triangle_area",
+    "difficulty": 2,
+    "question": "A triangular piece of card is shown. A rectangular piece with area 18 cm² is cut from it. What is the area of card left, in cm²?",
+    "answer": "45",
+    "unit": "cm²",
+    "answer_format": null,
+    "check": "14*9/2-18",
+    "explanation": "The triangle has area half its base times its perpendicular height: 14 × 9 ÷ 2 = 63 cm². Subtract the 18 cm² removed to leave 45 cm². The dimensions shown belong to the original triangle, so find its whole area first.",
+    "hints": [
+      "Which measurements give the area before the cut?",
+      "Find half of 14 × 9, then subtract the removed area."
+    ],
+    "pitfall": "The perpendicular height is used for triangle area; remember to halve before subtracting.",
+    "diagram": {
+      "type": "triangle",
+      "base": "14 cm",
+      "height": "9 cm",
+      "description": "Triangle with base 14 cm and perpendicular height 9 cm."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 174,
+    "topic": "geometry",
+    "subtopic": "triangle_area",
+    "difficulty": 2,
+    "question": "A triangular piece of card is shown. A rectangular piece with area 24 cm² is cut from it. What is the area of card left, in cm²?",
+    "answer": "39",
+    "unit": "cm²",
+    "answer_format": null,
+    "check": "18*7/2-24",
+    "explanation": "The triangle has area half its base times its perpendicular height: 18 × 7 ÷ 2 = 63 cm². Subtract the 24 cm² removed to leave 39 cm². The dimensions shown belong to the original triangle, so find its whole area first.",
+    "hints": [
+      "Which measurements give the area before the cut?",
+      "Find half of 18 × 7, then subtract the removed area."
+    ],
+    "pitfall": "The perpendicular height is used for triangle area; remember to halve before subtracting.",
+    "diagram": {
+      "type": "triangle",
+      "base": "18 cm",
+      "height": "7 cm",
+      "description": "Triangle with base 18 cm and perpendicular height 7 cm."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 177,
+    "topic": "geometry",
+    "subtopic": "triangle_area",
+    "difficulty": 2,
+    "question": "A triangular piece of card is shown. A rectangular piece with area 36 cm² is cut from it. What is the area of card left, in cm²?",
+    "answer": "96",
+    "unit": "cm²",
+    "answer_format": null,
+    "check": "22*12/2-36",
+    "explanation": "The triangle has area half its base times its perpendicular height: 22 × 12 ÷ 2 = 132 cm². Subtract the 36 cm² removed to leave 96 cm². The dimensions shown belong to the original triangle, so find its whole area first.",
+    "hints": [
+      "Which measurements give the area before the cut?",
+      "Find half of 22 × 12, then subtract the removed area."
+    ],
+    "pitfall": "The perpendicular height is used for triangle area; remember to halve before subtracting.",
+    "diagram": {
+      "type": "triangle",
+      "base": "22 cm",
+      "height": "12 cm",
+      "description": "Triangle with base 22 cm and perpendicular height 12 cm."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 178,
+    "topic": "measures",
+    "subtopic": "unit_conversion",
+    "difficulty": 2,
+    "question": "A baker makes 14 batches of bread, using 375 g of flour per batch. Flour is sold only in 1 kg bags. After buying the fewest bags possible, how many kilograms of flour will be left?",
+    "answer": "0.75",
+    "unit": "kg",
+    "answer_format": null,
+    "check": "6*1-375*14/1000",
+    "explanation": "The baker needs 14 × 375 = 5250 g, or 5.25 kg. Each bag holds 1 kg, so 6 whole bags are needed. They contain 6 kg altogether. Subtract the flour used to leave 0.75 kg.",
+    "hints": [
+      "Find the mass required, then decide how many whole bags must be bought.",
+      "Convert 14 × 375 g to kilograms. Round the number of bags upwards before finding what is left."
+    ],
+    "pitfall": "Round up the number of bags, rather than rounding the flour requirement.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 180,
+    "topic": "measures",
+    "subtopic": "time_duration",
+    "difficulty": 2,
+    "question": "A train leaves at 08:45 and takes 1 hour 38 minutes to reach a junction. Connecting trains leave at 10:30 and every 35 minutes after that. Passengers must reach the junction at least 10 minutes before departure. They catch the first train they can. Its journey takes 47 minutes. At what time do they arrive? Use the 24-hour clock.",
+    "answer": "11:52",
+    "unit": null,
+    "answer_format": "time",
+    "check": "10*60+30+35+47",
+    "explanation": "The first train arrives at 10:23. To catch the 10:30 connection, passengers must be there by 10:20, so they miss it. The next train leaves at 11:05. Adding 47 minutes gives arrival at 11:52. The waiting rule matters even though they arrive before 10:30.",
+    "hints": [
+      "Compare arrival with the latest permitted boarding time, not just departure.",
+      "The first arrival is 10:23. Check whether that is at least 10 minutes before 10:30."
+    ],
+    "pitfall": "Arriving before departure does not satisfy the ten-minute rule.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 181,
+    "topic": "measures",
+    "subtopic": "unit_conversion",
+    "difficulty": 2,
+    "question": "A baker makes 9 batches of bread, using 650 g of flour per batch. Flour is sold only in 2 kg bags. After buying the fewest bags possible, how many kilograms of flour will be left?",
+    "answer": "0.15",
+    "unit": "kg",
+    "answer_format": null,
+    "check": "3*2-650*9/1000",
+    "explanation": "The baker needs 9 × 650 = 5850 g, or 5.85 kg. Each bag holds 2 kg, so 3 whole bags are needed. They contain 6 kg altogether. Subtract the flour used to leave 0.15 kg.",
+    "hints": [
+      "Find the mass required, then decide how many whole bags must be bought.",
+      "Convert 9 × 650 g to kilograms. Round the number of bags upwards before finding what is left."
+    ],
+    "pitfall": "Round up the number of bags, rather than rounding the flour requirement.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 183,
+    "topic": "measures",
+    "subtopic": "time_duration",
+    "difficulty": 3,
+    "question": "A coach leaves at 21:50. It travels for 2 hours 35 minutes, stops for 25 minutes, then travels for another 1 hour 48 minutes. It arrives 18 minutes late. What was its scheduled arrival time? Give the 24-hour time on the following day.",
+    "answer": "02:20",
+    "unit": null,
+    "answer_format": "time",
+    "check": "21*60+50+2*60+35+25+60+48-18",
+    "explanation": "After the first journey it is 00:25 the next day. The stop ends at 00:50. The final journey ends at 02:38. This is 18 minutes later than scheduled, so subtract 18 minutes to get 02:20. Keep track of midnight and use 60 minutes per hour.",
+    "hints": [
+      "Find the actual arrival time first, including the stop.",
+      "Add both journeys and the 25-minute stop, then subtract the delay to find the scheduled time."
+    ],
+    "pitfall": "A late actual arrival is later than the scheduled arrival; subtract the delay.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 184,
+    "topic": "measures",
+    "subtopic": "unit_conversion",
+    "difficulty": 2,
+    "question": "A baker makes 8 batches of bread, using 825 g of flour per batch. Flour is sold only in 3 kg bags. After buying the fewest bags possible, how many kilograms of flour will be left?",
+    "answer": "2.4",
+    "unit": "kg",
+    "answer_format": null,
+    "check": "3*3-825*8/1000",
+    "explanation": "The baker needs 8 × 825 = 6600 g, or 6.6 kg. Each bag holds 3 kg, so 3 whole bags are needed. They contain 9 kg altogether. Subtract the flour used to leave 2.4 kg.",
+    "hints": [
+      "Find the mass required, then decide how many whole bags must be bought.",
+      "Convert 8 × 825 g to kilograms. Round the number of bags upwards before finding what is left."
+    ],
+    "pitfall": "Round up the number of bags, rather than rounding the flour requirement.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 186,
+    "topic": "algebra",
+    "subtopic": "simple_equations",
+    "difficulty": 2,
+    "question": "I think of a number. Multiplying it by 4 and adding 7 gives the same answer as subtracting the original number from 67. What is my number?",
+    "answer": "12",
+    "unit": null,
+    "answer_format": null,
+    "check": "(67-7)/(4+1)",
+    "explanation": "The two results are equal. Add back the original number to both results: this gives 5 copies of the number plus 7, making 67. Subtract 7 to leave 60. Divide by 5 to get 12. Substituting 12 into both instructions gives the same result.",
+    "hints": [
+      "The original number appears in both descriptions. Draw equal bars if that helps.",
+      "Adding the original number to both sides gives 5 equal copies plus 7, totalling 67."
+    ],
+    "pitfall": "Do not treat the second result as a fixed total; it also depends on the number.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 189,
+    "topic": "algebra",
+    "subtopic": "simple_equations",
+    "difficulty": 2,
+    "question": "I think of a number. Multiplying it by 5 and adding 9 gives the same answer as subtracting the original number from 93. What is my number?",
+    "answer": "14",
+    "unit": null,
+    "answer_format": null,
+    "check": "(93-9)/(5+1)",
+    "explanation": "The two results are equal. Add back the original number to both results: this gives 6 copies of the number plus 9, making 93. Subtract 9 to leave 84. Divide by 6 to get 14. Substituting 14 into both instructions gives the same result.",
+    "hints": [
+      "The original number appears in both descriptions. Draw equal bars if that helps.",
+      "Adding the original number to both sides gives 6 equal copies plus 9, totalling 93."
+    ],
+    "pitfall": "Do not treat the second result as a fixed total; it also depends on the number.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 192,
+    "topic": "algebra",
+    "subtopic": "simple_equations",
+    "difficulty": 2,
+    "question": "I think of a number. Multiplying it by 6 and adding 11 gives the same answer as subtracting the original number from 137. What is my number?",
+    "answer": "18",
+    "unit": null,
+    "answer_format": null,
+    "check": "(137-11)/(6+1)",
+    "explanation": "The two results are equal. Add back the original number to both results: this gives 7 copies of the number plus 11, making 137. Subtract 11 to leave 126. Divide by 7 to get 18. Substituting 18 into both instructions gives the same result.",
+    "hints": [
+      "The original number appears in both descriptions. Draw equal bars if that helps.",
+      "Adding the original number to both sides gives 7 equal copies plus 11, totalling 137."
+    ],
+    "pitfall": "Do not treat the second result as a fixed total; it also depends on the number.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 194,
+    "topic": "statistics",
+    "subtopic": "data_comparison",
+    "difficulty": 2,
+    "question": "The bar chart shows books borrowed on four days. On Friday, enough books are borrowed to make the mean for all five days exactly 12. How many books are borrowed on Friday?",
+    "answer": "20",
+    "unit": null,
+    "answer_format": null,
+    "check": "5*12-(8+12+16+4)",
+    "explanation": "Read the four bars: 8, 12, 16 and 4 books. Their total is 40. A mean of 12 over five days requires 5 × 12 = 60 books. Friday must therefore contribute 60 − 40 = 20 books. Check that the five-day total divided by 5 is 12.",
+    "hints": [
+      "A mean gives you a target total when you know the number of days.",
+      "Multiply 12 by 5, then subtract the total shown by the four bars."
+    ],
+    "pitfall": "The mean includes Friday, so there are five days in the final calculation.",
+    "diagram": {
+      "type": "bars",
+      "labels": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
+      ],
+      "values": [
+        8,
+        12,
+        16,
+        4
+      ],
+      "max": 16,
+      "axis_label": "Books",
+      "description": "Books borrowed: Monday 8, Tuesday 12, Wednesday 16, Thursday 4."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 195,
+    "topic": "statistics",
+    "subtopic": "line_graphs",
+    "difficulty": 2,
+    "question": "The graph shows garden temperatures. After 2 pm, the temperature falls by half as many degrees per hour as it rose per hour between 10 am and noon. If that fall continues steadily for 3 hours, what is the temperature at 5 pm, in °C?",
+    "answer": "10",
+    "unit": "°C",
+    "answer_format": null,
+    "check": "16-((20-12)/2)/2*3",
+    "explanation": "From 10 am to noon the temperature rises from 12°C to 20°C: 8 degrees in 2 hours, or 4 degrees per hour. The later fall is half that rate, or 2 degrees per hour. Starting at 16°C at 2 pm, a three-hour fall of 6 degrees gives 10°C.",
+    "hints": [
+      "Find a change per hour from the graph before halving it.",
+      "The rise takes two hours; halve the hourly rate, then apply it for three hours."
+    ],
+    "pitfall": "A change over two hours is not the same as a change in one hour.",
+    "diagram": {
+      "type": "line",
+      "labels": [
+        "8 am",
+        "10 am",
+        "Noon",
+        "2 pm"
+      ],
+      "values": [
+        8,
+        12,
+        20,
+        16
+      ],
+      "max": 32,
+      "axis_label": "Temperature (°C)",
+      "description": "Temperatures: 8 am 8°C, 10 am 12°C, noon 20°C, 2 pm 16°C."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 196,
+    "topic": "statistics",
+    "subtopic": "pie_charts",
+    "difficulty": 2,
+    "question": "The pie chart shows the favourite clubs of a group of pupils. There are 24 more pupils choosing sport than art. How many pupils are in the group?",
+    "answer": "48",
+    "unit": null,
+    "answer_format": null,
+    "check": "24/((75-25)/100)",
+    "explanation": "Sport represents 75% and art 25%, so their difference is 50% of the group. That 50% is 24 pupils. The whole group is twice as large: 48 pupils. Check that 36 choose sport and 12 choose art, a difference of 24.",
+    "hints": [
+      "Compare the two percentages before using the difference in pupils.",
+      "The 24-pupil difference represents 75% − 25% of the whole group."
+    ],
+    "pitfall": "The difference is a percentage of the group; it is not the sport group alone.",
+    "diagram": {
+      "type": "pie",
+      "labels": [
+        "Art",
+        "Sport"
+      ],
+      "values": [
+        25,
+        75
+      ],
+      "description": "Favourite clubs: Art 25%, Sport 75%."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 198,
+    "topic": "statistics",
+    "subtopic": "data_comparison",
+    "difficulty": 3,
+    "question": "The bar chart shows books borrowed on four days. On Friday, the number borrowed is 25% greater than on Monday. How many books are borrowed over all five days?",
+    "answer": "71",
+    "unit": null,
+    "answer_format": null,
+    "check": "12+20+16+8+12*1.25",
+    "explanation": "The chart shows 12 books on Monday, 20 on Tuesday, 16 on Wednesday and 8 on Thursday, totalling 56. Friday is 25% more than Monday: one quarter of 12 is 3, so Friday has 15. The total over five days is 56 + 15 = 71.",
+    "hints": [
+      "Use Monday’s bar to calculate Friday before adding the five days.",
+      "Twenty-five per cent more than Monday means Monday plus one quarter of Monday."
+    ],
+    "pitfall": "Friday is not 25% of the four-day total.",
+    "diagram": {
+      "type": "bars",
+      "labels": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu"
+      ],
+      "values": [
+        12,
+        20,
+        16,
+        8
+      ],
+      "max": 32,
+      "axis_label": "Books",
+      "description": "Books borrowed: Monday 12, Tuesday 20, Wednesday 16, Thursday 8."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 199,
+    "topic": "statistics",
+    "subtopic": "line_graphs",
+    "difficulty": 3,
+    "question": "The graph shows playground temperatures. After 2 pm, the temperature continues to fall at the same steady hourly rate as between noon and 2 pm. At what 24-hour time will it first reach the temperature recorded at 8 am?",
+    "answer": "18:00",
+    "unit": null,
+    "answer_format": "time",
+    "check": "14*60+(20-12)/((24-20)/2)*60",
+    "explanation": "Between noon and 2 pm the temperature falls from 24°C to 20°C, or 2 degrees per hour. At 8 am it was 12°C. From 20°C it must fall another 8 degrees to reach 12°C, taking 4 hours. Four hours after 14:00 is 18:00.",
+    "hints": [
+      "Read the target temperature at 8 am and the hourly fall after noon.",
+      "Find the fall needed from 2 pm, divide by degrees lost per hour, then add that time."
+    ],
+    "pitfall": "The graph’s last interval lasts two hours, not one.",
+    "diagram": {
+      "type": "line",
+      "labels": [
+        "8 am",
+        "10 am",
+        "Noon",
+        "2 pm"
+      ],
+      "values": [
+        12,
+        16,
+        24,
+        20
+      ],
+      "max": 32,
+      "axis_label": "Temperature (°C)",
+      "description": "Temperatures: 8 am 12°C, 10 am 16°C, noon 24°C, 2 pm 20°C."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 200,
+    "topic": "statistics",
+    "subtopic": "pie_charts",
+    "difficulty": 3,
+    "question": "The pie chart shows pupils’ favourite clubs. All pupils choose exactly one club. Then 12 pupils switch from sport to art, without changing the total number of pupils. The two clubs now have equal numbers. How many pupils are in the group?",
+    "answer": "120",
+    "unit": null,
+    "answer_format": null,
+    "check": "12*2/((60-40)/100)",
+    "explanation": "Originally sport has 60% and art 40%, a difference of 20% of the group. Each pupil switching reduces this difference by 2: sport loses one and art gains one. Twelve switches close a gap of 24 pupils. If 20% is 24, the whole group is 120.",
+    "hints": [
+      "One pupil switching changes both club totals.",
+      "Twelve switches close a gap of 24 pupils. Which percentage of the whole was that gap?"
+    ],
+    "pitfall": "A transfer closes a difference twice as quickly as adding pupils to the smaller group.",
+    "diagram": {
+      "type": "pie",
+      "labels": [
+        "Art",
+        "Sport"
+      ],
+      "values": [
+        40,
+        60
+      ],
+      "description": "Favourite clubs: Art 40%, Sport 60%."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 202,
+    "topic": "coordinates",
+    "subtopic": "translation",
+    "difficulty": 2,
+    "question": "The grid shows P, Q and R. The translation that moves P to Q is also applied to R. What are the coordinates of R after this move? Write (x, y).",
+    "answer": "(1, 1)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "-2+(4-1)",
+      "4+(-1-2)"
+    ],
+    "explanation": "From P(1, 2) to Q(4, −1), move 3 squares right and 3 squares down. Apply that same move to R(−2, 4): x becomes −2 + 3 = 1 and y becomes 4 − 3 = 1. The new point is (1, 1).",
+    "hints": [
+      "Find both coordinate changes between P and Q.",
+      "Use the same horizontal and vertical changes on R, rather than copying Q’s coordinates."
+    ],
+    "pitfall": "A translation applies the same movement to every point.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": 1,
+          "y": 2,
+          "label": "P"
+        },
+        {
+          "x": 4,
+          "y": -1,
+          "label": "Q"
+        },
+        {
+          "x": -2,
+          "y": 4,
+          "label": "R"
+        }
+      ],
+      "description": "P is at (1, 2); Q is at (4, -1); R is at (-2, 4). Each grid step is one unit."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 203,
+    "topic": "coordinates",
+    "subtopic": "reflection",
+    "difficulty": 2,
+    "question": "Reflect P in the y-axis, then move the reflected point 1 square right and 2 squares down. What are the final coordinates? Write (x, y).",
+    "answer": "(-1, 1)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "-2+1",
+      "3-2"
+    ],
+    "explanation": "P starts at (2, 3). Reflection in the y-axis changes x to −2 and leaves y at 3. Moving 1 right gives x = −1; moving 2 down gives y = 1. The final point is (−1, 1). Do the reflection before the translation.",
+    "hints": [
+      "Carry out the reflection and translation as separate moves.",
+      "Reflect (2, 3) to (−2, 3), then adjust those coordinates for the move."
+    ],
+    "pitfall": "The order matters: reflect first, then translate.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": 2,
+          "y": 3,
+          "label": "P"
+        }
+      ],
+      "description": "P is at (2, 3). Each grid step is one unit."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 205,
+    "topic": "coordinates",
+    "subtopic": "translation",
+    "difficulty": 3,
+    "question": "The translation that maps P to Q on the grid also maps R to S. S is at (4, −2). What were the coordinates of R? Write (x, y).",
+    "answer": "(1, 2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "4-(1-(-2))",
+      "-2-(-1-3)"
+    ],
+    "explanation": "P is (−2, 3) and Q is (1, −1), so the translation moves 3 right and 4 down. To recover R from S(4, −2), undo that move: 3 left and 4 up. This gives x = 1 and y = 2, so R is (1, 2).",
+    "hints": [
+      "The destination is known, so you need to undo the translation.",
+      "Read the P-to-Q movement, then reverse both changes from S."
+    ],
+    "pitfall": "Applying the forward translation again gives a point beyond S, not R.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -2,
+          "y": 3,
+          "label": "P"
+        },
+        {
+          "x": 1,
+          "y": -1,
+          "label": "Q"
+        },
+        {
+          "x": 4,
+          "y": -2,
+          "label": "S"
+        }
+      ],
+      "description": "P is at (-2, 3); Q is at (1, -1); S is at (4, -2). Each grid step is one unit."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 206,
+    "topic": "coordinates",
+    "subtopic": "reflection",
+    "difficulty": 3,
+    "question": "Reflect P in the x-axis, then move the reflected point 2 squares right and 1 square up. What are the final coordinates? Write (x, y).",
+    "answer": "(-1, -3)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "-3+2",
+      "-4+1"
+    ],
+    "explanation": "P starts at (−3, 4). Reflection in the x-axis leaves x unchanged and reverses y, giving (−3, −4). Moving 2 right and 1 up gives (−1, −3). Check that the reflection uses the horizontal axis, so the original height changes sign.",
+    "hints": [
+      "Identify which coordinate changes when reflecting in the x-axis.",
+      "After reflecting, the point is below the x-axis. Then apply the move."
+    ],
+    "pitfall": "An x-axis reflection reverses y, not x.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -3,
+          "y": 4,
+          "label": "P"
+        }
+      ],
+      "description": "P is at (-3, 4). Each grid step is one unit."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 208,
+    "topic": "coordinates",
+    "subtopic": "translation",
+    "difficulty": 2,
+    "question": "Point P is shown on the grid. The same translation, 2 squares right and 1 square up, is applied three times. What are the final coordinates? Write (x, y).",
+    "answer": "(3, 2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "-3+3*2",
+      "-1+3"
+    ],
+    "explanation": "P begins at (−3, −1). Three translations together move it 6 squares right and 3 squares up. The final x-coordinate is −3 + 6 = 3 and the final y-coordinate is −1 + 3 = 2. Check by following all three moves separately.",
+    "hints": [
+      "Combine the repeated horizontal moves and the repeated vertical moves.",
+      "Three moves of 2 right give 6 right; three moves of 1 up give 3 up."
+    ],
+    "pitfall": "Repeat both parts of the translation three times.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -3,
+          "y": -1,
+          "label": "P"
+        }
+      ],
+      "description": "P is at (-3, -1). Each grid step is one unit."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 209,
+    "topic": "coordinates",
+    "subtopic": "reflection",
+    "difficulty": 3,
+    "question": "Reflect P in the y-axis and then reflect that result in the x-axis. Finally move 1 square right. What are the final coordinates? Write (x, y).",
+    "answer": "(-3, 2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "-4+1",
+      "-(-2)"
+    ],
+    "explanation": "P starts at (4, −2). Reflection in the y-axis gives (−4, −2). Reflection in the x-axis then gives (−4, 2). Finally move 1 right to get (−3, 2). The two reflections change both signs, but the last move changes only x.",
+    "hints": [
+      "Write down the coordinates after each reflection.",
+      "The two reflections take (4, −2) to (−4, 2); then move right once."
+    ],
+    "pitfall": "Do not reverse the order of coordinates when you change their signs.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": 4,
+          "y": -2,
+          "label": "P"
+        }
+      ],
+      "description": "P is at (4, -2). Each grid step is one unit."
+    },
+    "content_revision": 2
+  }
+]

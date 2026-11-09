@@ -1,5 +1,18 @@
 # Product Specification: 11+ Maths Vault
 
+## Implementation update — 9 November 2026
+
+At the user's request for harder questions, strengthened a further 45 exercises: 34 written answers and 11 SET choices. The cumulative review now covers 83 questions. All remaining written warm-ups were replaced with problems combining methods; each NWSSEE mock also received four additional stretch questions. The 300 written questions now have difficulty 2 or 3, while Walk Mode remains an oral warm-up. IDs, skill groups, mock order and unseen reservations are preserved. This harder practice mix is informed by the published samples, not empirically matched to the real papers. See [the follow-up evidence note](data/authored/exam-evidence.md#harder-practice-requested-on-9-november).
+
+## Implementation update — 8 November 2026
+
+This update takes precedence over earlier evidence assessments below.
+
+- Strengthened 38 questions: 26 legacy written exercises and 12 SET questions, with revised solutions, hints and mistake-based options. The 420-question total is unchanged. Oral practice remains a warm-up.
+- Found [official historical NWSSEE maths samples and worked answers](https://www.wallingtongirls.org.uk/_site/data/files/admissions/admissions-2025/012EDD9C6D576D0BF137A7D0B5213CED.pdf) on Wallington's site, for the joint Nonsuch and Wallington exam. This resolves the earlier claim that no samples existed. These are selected past-test questions, not a complete paper. They support a mixture of calculation and unfamiliar reasoning, with difficulty distributed through the paper. See [the evidence review](data/authored/exam-evidence.md).
+- Paper membership and order are fixed in `data/authored/paper-layout.json`. Content revisions keep existing IDs and historical progress; daily practice discards saved answers for revised wording. Legacy generic tutorials are omitted for revised problems in favour of their specific worked solutions.
+- Sample alignment is an author judgement, not empirical calibration or a prediction of admission. Current paper counts and precise difficulty remain unpublished.
+
 ## Implementation update — 4 November 2026
 
 These additions take precedence over everything below.
@@ -14,7 +27,7 @@ These additions take precedence over everything below.
 
 - Confirmed: SET multiple choice with lozenges A to E, no negative marking, no calculator, no rough paper, 40 to 50 minutes. NWSSEE not multiple choice, final answer only, 40 to 50 minutes, pencil for maths with mistakes crossed out.
 - Not published: question counts. Our 50 and 25 are estimates from tutoring sites.
-- No source found: the statements in the sections below that NWSSEE is multi-part, that it is harder than the SET, that its difficulty is spread through the paper, and the references to "official NWSSEE commentary". The school provides no NWSSEE samples. Treat those statements as unverified.
+- At this review, no source had been found for the statements below about NWSSEE question structure, relative difficulty or official commentary. The 8 November review above subsequently located official samples and commentary. It does not establish that every second-stage question is harder than a SET question.
 
 ## Implementation update — 30 October 2026
 

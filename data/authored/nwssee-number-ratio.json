@@ -3,19 +3,20 @@
     "id": 361,
     "topic": "number_operations",
     "subtopic": "number_puzzle_reasoning",
-    "difficulty": 2,
-    "question": "A three-digit number has digits that add up to 14. The hundreds digit is double the units digit. The tens digit is 2 more than the units digit. What is the number?",
-    "answer": "653",
+    "difficulty": 3,
+    "question": "A three-digit number has digits adding to 15. The hundreds digit is 3 more than the units digit. Reversing the digits reduces the number by 297. The number is divisible by 5. What is the number?",
+    "answer": "825",
     "unit": null,
     "answer_format": null,
-    "check": "6*100+5*10+3",
-    "explanation": "Let the units digit be u. Then the hundreds digit is 2u and the tens digit is u + 2. The digit sum is 2u + (u+2) + u = 4u + 2 = 14, so u = 3. The digits are 6, 5 and 3, giving 653.",
+    "check": "8*100+2*10+5",
+    "explanation": "A three-digit multiple of 5 ends in 0 or 5. If the units digit were 0, the hundreds digit would be 3 and the tens digit would need to be 12, which is impossible. Therefore the units digit is 5, the hundreds digit is 8 and the tens digit is 2. Check: 825 − 528 = 297.",
     "hints": [
-      "Call the units digit 'u' in your head and describe the other two digits using it.",
-      "The three digits together make 4 lots of u plus 2. What must u be for the total to be 14?"
+      "Use divisibility by 5 to limit the units digit.",
+      "Try a units digit of 0 and of 5, using the digit sum and the hundreds-digit rule."
     ],
-    "pitfall": "Reading 'double' or '2 more' from the wrong digit.",
-    "diagram": null
+    "pitfall": "A digit must be between 0 and 9; do not allow a two-digit tens digit.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 362,
@@ -111,19 +112,20 @@
     "id": 367,
     "topic": "number_operations",
     "subtopic": "remainders_in_context",
-    "difficulty": 2,
-    "question": "A school trip has 150 pupils and 11 adults. Each minibus holds 14 people. What is the smallest number of minibuses needed so that everyone has a seat?",
-    "answer": "12",
+    "difficulty": 3,
+    "question": "A trip has 150 pupils and 11 adults, excluding drivers. Each minibus has 14 passenger seats. Every bus carrying pupils must carry at least one of the adults, and each adult can supervise at most 15 pupils. At most 11 minibuses are available. How many pupils cannot travel?",
+    "answer": "7",
     "unit": null,
     "answer_format": null,
-    "check": "168/14",
-    "explanation": "There are 150 + 11 = 161 people. 161 / 14 = 11 remainder 7, so 11 minibuses leave 7 people without a seat. A 12th minibus is needed.",
+    "check": "150-(11*14-11)",
+    "explanation": "Eleven buses have 154 passenger seats. Eleven adults occupy 11 of those seats, leaving 143 seats for pupils. This arrangement can place one adult and 13 pupils in each bus, within the supervision limit. Therefore 150 − 143 = 7 pupils cannot travel. The drivers do not use passenger seats.",
     "hints": [
-      "Find the total number of people before dividing.",
-      "Check what happens to the people left over after dividing."
+      "Adults need passenger seats as well as pupils.",
+      "Use all 11 buses with one adult in each; compare the remaining pupil seats with 150."
     ],
-    "pitfall": "Rounding 11.5 down to 11, or forgetting the adults.",
-    "diagram": null
+    "pitfall": "A driver is excluded, but supervising adults must still occupy passenger seats.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 368,
@@ -165,19 +167,20 @@
     "id": 370,
     "topic": "fractions",
     "subtopic": "fraction_of_remainder_chain",
-    "difficulty": 2,
-    "question": "Sam has £84. He spends 1/3 of it on a game. He then spends 3/8 of the money he has left on sweets. How much money does Sam have now? Give your answer in pounds.",
-    "answer": "£35",
+    "difficulty": 3,
+    "question": "Sam spends 1/3 of his money on a game. He then spends 3/8 of what remains on a book. After receiving £7, he has £42. How much money did he have at the start, in pounds?",
+    "answer": "84",
     "unit": "£",
     "answer_format": null,
-    "check": "84-84/3-(84-84/3)*3/8",
-    "explanation": "1/3 of 84 = 28, so he has 84 - 28 = 56 left. 3/8 of 56 = 21. He has 56 - 21 = 35 left.",
+    "check": "(42-7)/(1-3/8)/(1-1/3)",
+    "explanation": "Before receiving £7, Sam has £35. That is 5/8 of the money left after the game, so the amount after the game was £35 ÷ 5 × 8 = £56. This was 2/3 of the starting money. The starting amount was £56 ÷ 2 × 3 = £84.",
     "hints": [
-      "The second fraction is of what is left, not of £84.",
-      "After the game, work out the money left, then take 3/8 of that amount."
+      "Work backwards from the final amount.",
+      "Remove the £7 first, then undo keeping 5/8 and keeping 2/3."
     ],
-    "pitfall": "Taking 3/8 of the original £84.",
-    "diagram": null
+    "pitfall": "Each fraction applies to a different amount, so reverse the steps in order.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 371,
@@ -291,55 +294,58 @@
     "id": 377,
     "topic": "decimals",
     "subtopic": "decimal_multi_step_context",
-    "difficulty": 2,
-    "question": "Mrs Khan buys 4 notebooks at £1.35 each and some pens at 95p each. She pays with a £10 note and gets £1.75 change. How many pens does she buy?",
-    "answer": "3",
+    "difficulty": 3,
+    "question": "Mrs Khan buys 4 notebooks at £1.35 each and some pens. Pens cost 95p each but are sold only in packs of 3, with each pack costing the price of 2 pens. She pays with £15 and receives £2 change. How many pens does she take?",
+    "answer": "12",
     "unit": null,
     "answer_format": null,
-    "check": "(1000-175-4*135)/95",
-    "explanation": "She spends £10 - £1.75 = £8.25. Notebooks cost 4 x £1.35 = £5.40. The pens cost £8.25 - £5.40 = £2.85, and £2.85 / 95p = 3 pens.",
+    "check": "(15-2-4*1.35)/0.95/2*3",
+    "explanation": "The total spent is £13. The notebooks cost £5.40, leaving £7.60 for pens. This pays for 8 pens at 95p each. In each group of 3 pens, 2 are paid for and 1 is free. Eight paid pens make four complete groups, giving 12 pens taken.",
     "hints": [
-      "Work out how much she spent altogether, using the change.",
-      "Take off the notebooks, then divide what is left by the price of one pen. Keep everything in pence or in pounds."
+      "Find how many pens she pays for before counting free pens.",
+      "Subtract the notebook cost from £13. Each group of three pens costs the price of two."
     ],
-    "pitfall": "Mixing pence and pounds.",
-    "diagram": null
+    "pitfall": "Count pens taken, including the free ones, rather than only pens paid for.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 378,
     "topic": "decimals",
     "subtopic": "decimal_multi_step_context",
-    "difficulty": 2,
-    "question": "A car uses 6.5 litres of fuel for every 100 km. Fuel costs £1.40 per litre. How much does the fuel cost for a 240 km journey? Give your answer in pounds.",
-    "answer": "£21.84",
+    "difficulty": 3,
+    "question": "A car uses 6.5 litres of fuel per 100 km. It starts a 240 km journey with 9 litres in the tank. The driver wants 4.4 litres left at the end. Fuel is sold at £1.40 per litre with 5% off the bill. How much does the extra fuel cost, in pounds?",
+    "answer": "14.63",
     "unit": "£",
     "answer_format": null,
-    "check": "6.5*2.4*1.4",
-    "explanation": "240 km is 2.4 lots of 100 km. Fuel used: 6.5 x 2.4 = 15.6 litres. Cost: 15.6 x £1.40 = £21.84.",
+    "check": "(240/100*6.5+4.4-9)*1.4*0.95",
+    "explanation": "The journey uses 240 ÷ 100 × 6.5 = 15.6 litres. Including the desired 4.4 litres left over requires 20 litres before departure. There are already 9 litres, so buy 11 litres. The normal cost is £15.40; 5% off removes £0.77, leaving £14.63.",
     "hints": [
-      "How many litres are used for 240 km?",
-      "Multiply the litres by the price per litre."
+      "Account for both the fuel already present and the required fuel left over.",
+      "Find litres to buy first, then price them and apply the discount."
     ],
-    "pitfall": "Using 6.5 x 240 by mistake.",
-    "diagram": null
+    "pitfall": "Do not price all the journey fuel when some is already in the tank.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 379,
     "topic": "decimals",
     "subtopic": "decimal_multi_step_context",
-    "difficulty": 2,
-    "question": "Lily needs 3 pieces of ribbon that are each 1.2 m long and 2 pieces that are each 0.75 m long. The shop sells ribbon at £2.50 per metre, but only in whole metres. How much does Lily have to pay? Give your answer in pounds.",
-    "answer": "£15",
+    "difficulty": 3,
+    "question": "Lily needs 3 pieces of ribbon each 1.2 m long and 2 pieces each 0.75 m long. Each piece must be uncut from a single roll. Ribbon comes only in 2 m rolls costing £4.80 each. What is the least total cost, in pounds?",
+    "answer": "14.40",
     "unit": "£",
     "answer_format": null,
-    "check": "6*2.5",
-    "explanation": "She needs 3 x 1.2 = 3.6 m and 2 x 0.75 = 1.5 m, which is 5.1 m in total. Only whole metres are sold, so she must buy 6 m. 6 x £2.50 = £15.",
+    "check": "3*4.8",
+    "explanation": "The total ribbon length is 5.1 m, so two 2 m rolls cannot be enough. Three rolls do work: cut 1.2 m and 0.75 m from each of two rolls, using 1.95 m on each. Cut the last 1.2 m from the third roll. Three rolls cost £14.40.",
     "hints": [
-      "First find the total length she needs.",
-      "Can she buy exactly that length?"
+      "Find a lower bound from the total length, then check that all pieces can be cut.",
+      "A 1.2 m piece and a 0.75 m piece together fit on one 2 m roll."
     ],
-    "pitfall": "Charging for 5.1 m (£12.75).",
-    "diagram": null
+    "pitfall": "A total-length calculation needs a feasible cutting arrangement as well.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 380,
@@ -363,19 +369,20 @@
     "id": 381,
     "topic": "percentages",
     "subtopic": "percent_work_backwards",
-    "difficulty": 1,
-    "question": "30% of a number is 45. What is the number?",
-    "answer": "150",
-    "unit": null,
+    "difficulty": 3,
+    "question": "A shop reduces the price of a bag by 30%, then takes a further £6 off. The bag now costs £43. What was the price before either reduction, in pounds?",
+    "answer": "70",
+    "unit": "£",
     "answer_format": null,
-    "check": "45/30*100",
-    "explanation": "30% of the number is 45. Divide by 3 to find 10%, which is 15. Multiply by 10 to get 100%, which is 150. Check: 30% of 150 = 45.",
+    "check": "(43+6)/(1-30/100)",
+    "explanation": "Undo the fixed reduction first: £43 + £6 = £49. This £49 is 70% of the original price because 30% was removed. Ten per cent is £7, so the original 100% is £70. Check forwards: 70% of £70 is £49, then £6 off leaves £43.",
     "hints": [
-      "If 30% is 45, what is 10%?",
-      "Scale 10% up to 100%."
+      "Undo the changes in reverse order.",
+      "Add back £6. That result is 70% of the original price."
     ],
-    "pitfall": "Finding 30% of 45.",
-    "diagram": null
+    "pitfall": "Adding 30% of the final price will not undo a 30% reduction.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 382,
@@ -399,19 +406,20 @@
     "id": 383,
     "topic": "percentages",
     "subtopic": "percent_work_backwards",
-    "difficulty": 2,
-    "question": "In January the price of a bicycle went up by 20% to £90. In March it was reduced by 10%. What was the price of the bicycle before the January increase? Give your answer in pounds.",
-    "answer": "£75",
+    "difficulty": 3,
+    "question": "A bicycle’s price rises by 20%. Later the increased price is reduced by 10%, then a £6 voucher is used. The buyer pays £75. What was the price before the increase, in pounds?",
+    "answer": "75",
     "unit": "£",
     "answer_format": null,
-    "check": "90/120*100",
-    "explanation": "Before January the price was 100%, and after the 20% rise it was 120%. 120% = £90, so 10% = £7.50 and 100% = £75. The March reduction is not needed.",
+    "check": "(75+6)/0.9/1.2",
+    "explanation": "Undo the voucher: £75 + £6 = £81. This is 90% of the increased price, so that price was £81 ÷ 9 × 10 = £90. The £90 is 120% of the original price. Dividing £90 by 12 and multiplying by 10 gives £75 originally.",
     "hints": [
-      "Which price is the 120%?",
-      "Not every number in the question is needed."
+      "Reverse the voucher, reduction and increase in that order.",
+      "After adding £6, undo keeping 90%, then undo increasing to 120%."
     ],
-    "pitfall": "Using the March price, or taking 20% off £90 (£72).",
-    "diagram": null
+    "pitfall": "The two percentage changes do not cancel, even though the first and last prices happen to match.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 384,
@@ -507,19 +515,20 @@
     "id": 389,
     "topic": "ratio",
     "subtopic": "ratio_changing_amounts",
-    "difficulty": 2,
-    "question": "A mix of nuts and raisins has mass in the ratio 5 : 3. There is 400 g of mix altogether. How many grams of raisins must be added so that the ratio of nuts to raisins becomes 5 : 4? Give your answer in grams.",
-    "answer": "50 g",
+    "difficulty": 3,
+    "question": "A 400 g mixture contains nuts and raisins in the ratio 5:3. A quarter of the nuts are removed, without removing any raisins. How many grams of raisins must then be added to make the ratio of nuts to raisins 5:4?",
+    "answer": "0",
     "unit": "g",
     "answer_format": null,
-    "check": "250/5*4-150",
-    "explanation": "Nuts are 5/8 of 400 = 250 g and raisins are 150 g. For 5 : 4 with 250 g of nuts, raisins must be 250 / 5 x 4 = 200 g. Add 200 - 150 = 50 g.",
+    "check": "(400/8*5*3/4)/5*4-400/8*3",
+    "explanation": "Originally there are 250 g of nuts and 150 g of raisins. Removing a quarter of the nuts leaves 187.5 g. For a 5:4 ratio, the matching raisins mass is 187.5 ÷ 5 × 4 = 150 g. There are already 150 g of raisins, so no raisins need to be added: the answer is 0 g.",
     "hints": [
-      "Find the mass of nuts and the mass of raisins first. Which one stays the same?",
-      "How much raisins would go with that amount of nuts in the new ratio?"
+      "Calculate both ingredient amounts after removing nuts.",
+      "Compare the raisins needed for the new ratio with the raisins already present."
     ],
-    "pitfall": "Giving the new mass of raisins (200 g) rather than the amount added.",
-    "diagram": null
+    "pitfall": "A question asking how much to add can have an answer of zero.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 390,
@@ -561,18 +570,19 @@
     "id": 392,
     "topic": "ratio",
     "subtopic": "ratio_three_way_problems",
-    "difficulty": 2,
-    "question": "A bag holds red, green and yellow counters. The ratio of red to green is 3 : 2. There are half as many yellow counters as red counters. There are 12 more red counters than yellow counters. How many counters are in the bag?",
-    "answer": "52",
+    "difficulty": 3,
+    "question": "A bag contains red, green and yellow counters. Red:green is 3:2 and there are half as many yellow as red. Nine red counters are removed. Now red:green is 3:4. How many yellow counters were in the bag?",
+    "answer": "9",
     "unit": null,
     "answer_format": null,
-    "check": "24+24*2/3+12",
-    "explanation": "Yellow is half of red, so red minus yellow is half of red, which is 12. So red = 24, yellow = 12. Green is 2/3 of red = 16. Total 24 + 16 + 12 = 52.",
+    "check": "9/(3-2*3/4)*3/2",
+    "explanation": "Use starting parts: red has 3 parts, green 2 and yellow 1.5. Green stays fixed. In the final 3:4 ratio, red is 3/4 of green, or 1.5 starting parts. Red falls from 3 parts to 1.5 parts, so 1.5 parts represent 9 counters. Yellow originally also has 1.5 parts, so there are 9 yellow counters.",
     "hints": [
-      "Yellow is half of red. So what does the 12 more tell you about red?",
-      "Once you know red, use the 3 : 2 ratio to find green."
+      "Use the unchanged green counters to compare the old and new red totals.",
+      "The final red count is three quarters of the unchanged green count."
     ],
-    "pitfall": "Finding red but forgetting to add all three colours.",
-    "diagram": null
+    "pitfall": "The ratio parts before and after removal do not have the same value.",
+    "diagram": null,
+    "content_revision": 2
   }
 ]

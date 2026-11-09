@@ -19,7 +19,19 @@ node scripts/check-batch.mjs data/authored/<file>.json --kind set|nwssee|walk --
 
 The school says these do not show every question type used, so we also cover the wider KS2 curriculum.
 
-**NWSSEE** (stage 2). There are no official samples. The school says written paper, final answer only, content broadly KS2, and "candidates will need to adapt their learning to tackle some of the questions". So write problems that a strong Year 6 has not drilled in that exact form: multi-step, and needing a decision about the method, while using only KS2 knowledge.
+**NWSSEE** (stage 2). Wallington, which shares the exam with Nonsuch, hosts an [official older selection with worked answers](https://www.wallingtongirls.org.uk/_site/data/files/admissions/admissions-2025/012EDD9C6D576D0BF137A7D0B5213CED.pdf). Its introduction identifies these as past-test questions. This corrects our earlier claim that no official samples existed. Use the mix of calculation and reasoning as a benchmark, alongside current Nonsuch guidance. Do not make every question a long puzzle: the samples include straightforward calculation, too. See [the evidence review](exam-evidence.md).
+
+The current school guidance specifies written answers, final answer only, content broadly KS2, with some unfamiliar applications. Stretch should come from deciding how to combine familiar methods, rather than introducing secondary-school content.
+
+## Revising existing questions
+
+`nwssee-upgrades.json` replaces 47 legacy written exercises after their original difficulty ratings are applied. Keep the ID, topic and subtopic so bookmarks and skill groups continue to work. Include `content_revision: 2` (increment it for later substantive changes). Revised questions from the newer SET and NWSSEE banks live in their original source files with the same revision field. Daily practice uses this field to discard an answer saved against older wording. Historical progress is kept; it is a history of earlier attempts, not a claim that the revised question has been passed. Revised questions use their own hints and worked solutions without the older generic tutorial.
+
+```bash
+node scripts/check-batch.mjs data/authored/nwssee-upgrades.json --kind nwssee --ids 121-209 --replacements
+```
+
+This mode checks existing IDs and skill groups and permits a sparse replacement list. All the usual arithmetic, marking, wording-length and diagram checks still apply. `paper-layout.json` fixes paper membership and question order; changing a question’s rating must not silently reshuffle the unseen paper.
 
 **Never copy** an official sample or any commercial paper. Write original questions with different contexts and numbers.
 

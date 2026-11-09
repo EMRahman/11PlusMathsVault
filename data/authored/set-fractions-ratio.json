@@ -3,36 +3,36 @@
     "id": 256,
     "topic": "fractions",
     "subtopic": "shaded_fraction_grid",
-    "difficulty": 1,
-    "question": "The plan shows a patio made of square slabs. The grey slabs are shaded. What fraction of the patio is grey? Give your answer in its simplest form.",
-    "answer": "3/8",
+    "difficulty": 2,
+    "question": "The shaded slabs have already been painted. A third of the unshaded slabs are then painted too. What fraction of all the slabs are now painted? Give your answer in simplest form.",
+    "answer": "7/12",
     "unit": null,
     "answer_format": "fraction_simplest",
-    "check": null,
+    "check": "(9+(24-9)/3)/24",
     "distractors": [
       {
-        "value": "9/24",
-        "why": "Counts 9 shaded cells out of 24 but leaves the fraction as 9/24 instead of simplifying it."
+        "value": "3/8",
+        "why": "Reports the original painted fraction, 9 out of 24."
       },
       {
-        "value": "9/15",
-        "why": "Compares shaded with unshaded (9 to 15) instead of shaded with the whole grid of 24."
+        "value": "17/24",
+        "why": "Adds a third of all 24 slabs to the 9 already painted."
       },
       {
-        "value": "5/8",
-        "why": "Counts the 15 unshaded cells instead of the 9 shaded cells, giving 15/24 simplified."
+        "value": "1/3",
+        "why": "Reports the fraction of unshaded slabs newly painted instead of the final total."
       },
       {
-        "value": "10/24",
-        "why": "Miscounts the shaded cells as 10 instead of 9, giving 10/24."
+        "value": "5/12",
+        "why": "Reports the ten slabs still unpainted out of 24."
       }
     ],
-    "explanation": "Count the shaded cells: there are 9. The grid has 4 × 6 = 24 cells altogether. So 9/24 of the grid is shaded. Divide the top and bottom by 3 to get 3/8.",
+    "explanation": "The grid has 24 slabs, of which 9 are shaded and 15 are unshaded. A third of the 15 unshaded slabs is 5. There are now 9 + 5 = 14 painted slabs out of 24. Simplify 14/24 to get 7/12.",
     "hints": [
-      "Count the shaded cells carefully, row by row. Then count how many cells are in the whole grid.",
-      "Write the shaded cells over the total cells, then divide both numbers by the largest number that goes into both."
+      "Count the unshaded slabs separately from the already painted ones.",
+      "Add one third of the unshaded count to the shaded count, then divide by all slabs."
     ],
-    "pitfall": "Stopping at 9/24 without simplifying, or comparing shaded cells with unshaded ones.",
+    "pitfall": "The extra third applies to unshaded slabs, not the whole patio.",
     "diagram": {
       "type": "shaded_grid",
       "rows": 4,
@@ -76,7 +76,8 @@
         ]
       ],
       "description": "A grid with 4 rows and 6 columns. Shaded cells: row 1 columns 1, 3, 4, 5; row 2 columns 3, 6; row 3 columns 4; row 4 columns 2, 3. 9 cells are shaded out of 24."
-    }
+    },
+    "content_revision": 2
   },
   {
     "id": 257,
@@ -1270,37 +1271,38 @@
     "id": 268,
     "topic": "fractions",
     "subtopic": "fraction_multiply_simplify",
-    "difficulty": 1,
-    "question": "Sara has 5/8 of a bar of chocolate. She gives 2/5 of her piece to her brother. What fraction of the whole bar does her brother get? Give your answer in its simplest form.",
-    "answer": "1/4",
+    "difficulty": 3,
+    "question": "Sara has 5/8 of a chocolate bar. She gives 2/5 of her piece to her brother. She then gives 1/3 of what remains to her sister. What fraction of the whole bar does her sister receive? Give your answer in simplest form.",
+    "answer": "1/8",
     "unit": null,
     "answer_format": "fraction_simplest",
-    "check": "2/5*5/8",
+    "check": "5/8*(1-2/5)/3",
     "distractors": [
       {
-        "value": "10/40",
-        "why": "Multiplies 2 × 5 = 10 and 5 × 8 = 40 and does not simplify."
+        "value": "1/4",
+        "why": "Reports the brother’s share: 2/5 of 5/8."
       },
       {
-        "value": "5/20",
-        "why": "Halves 10/40 but does not simplify fully."
+        "value": "3/8",
+        "why": "Reports the piece left before the sister receives anything."
       },
       {
-        "value": "16/25",
-        "why": "Divides instead of multiplying: 2/5 ÷ 5/8 = 2/5 × 8/5 = 16/25."
+        "value": "5/24",
+        "why": "Takes one third of the original 5/8 instead of the remainder."
       },
       {
-        "value": "7/13",
-        "why": "Adds tops (2 + 5 = 7) and bottoms (5 + 8 = 13)."
+        "value": "2/15",
+        "why": "Multiplies the two gift fractions 2/5 and 1/3 without applying them to the remaining bar."
       }
     ],
-    "explanation": "Her brother gets 2/5 of 5/8. Multiply: 2/5 × 5/8 = 10/40. Divide both by 10 to get 1/4. The 5s cancel straight away, leaving 2/8 = 1/4.",
+    "explanation": "After the gift to her brother, Sara keeps 3/5 of her original piece. That is 3/5 × 5/8 = 3/8 of a whole bar. Her sister gets one third of this remainder: 1/3 × 3/8 = 1/8. Both gifts are fractions of the piece at that stage.",
     "hints": [
-      "\"Of\" tells you which operation to use.",
-      "Multiply the fractions, then simplify. Look for a number that appears on the top of one and the bottom of the other."
+      "Find Sara’s remaining piece before working out the sister’s share.",
+      "Keep 3/5 of 5/8, then take one third of that result."
     ],
-    "pitfall": "Giving 10/40 or 5/20 instead of the simplest form.",
-    "diagram": null
+    "pitfall": "The sister gets a third of the remainder, not a third of Sara’s original piece.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 269,
@@ -1450,37 +1452,38 @@
     "id": 273,
     "topic": "fractions",
     "subtopic": "fraction_add_subtract_unlike",
-    "difficulty": 1,
-    "question": "A baker uses 3/5 kg of flour for bread and 1/4 kg for rolls. How many kilograms of flour does the baker use altogether?",
-    "answer": "17/20",
-    "unit": null,
+    "difficulty": 2,
+    "question": "One batch of baking uses 3/5 kg of flour for bread and 1/4 kg for rolls. A baker starts with 2 kg and makes two complete batches. How many kilograms of flour remain? Give your answer as a fraction in simplest form.",
+    "answer": "3/10",
+    "unit": "kg",
     "answer_format": "fraction_simplest",
-    "check": "3/5+1/4",
+    "check": "2-2*(3/5+1/4)",
     "distractors": [
       {
-        "value": "4/9",
-        "why": "Adds the tops (3 + 1 = 4) and the bottoms (5 + 4 = 9)."
+        "value": "17/10",
+        "why": "Reports the flour used in two batches instead of the flour left."
+      },
+      {
+        "value": "23/20",
+        "why": "Subtracts the flour for only one batch from 2 kg."
+      },
+      {
+        "value": "8/5",
+        "why": "Adds numerators over a common denominator without scaling: 2 − 2 × (4/20)."
       },
       {
         "value": "4/5",
-        "why": "Writes 3/5 as 12/20 but writes 1/4 as 4/20, then adds to get 16/20 = 4/5."
-      },
-      {
-        "value": "1/5",
-        "why": "Changes to twentieths but adds only the original tops: 3 + 1 = 4, so 4/20 = 1/5."
-      },
-      {
-        "value": "7/20",
-        "why": "Subtracts instead of adding: 12/20 − 5/20 = 7/20."
+        "why": "Counts only bread flour: 2 − 2 × 3/5."
       }
     ],
-    "explanation": "The lowest common denominator of 5 and 4 is 20. 3/5 = 12/20 and 1/4 = 5/20. Add: 12/20 + 5/20 = 17/20 kg. This does not simplify.",
+    "explanation": "Each batch uses 3/5 + 1/4 = 12/20 + 5/20 = 17/20 kg. Two batches use 34/20 = 17/10 kg. Starting with 2 kg leaves 20/10 − 17/10 = 3/10 kg. Include both types of baking in each batch.",
     "hints": [
-      "You cannot add fractions until the bottoms match.",
-      "Find a number that both 5 and 4 go into, and change both fractions."
+      "Calculate flour for one complete batch first.",
+      "Add the fractions, double that amount, then subtract it from 2 kg."
     ],
-    "pitfall": "Adding tops and bottoms separately.",
-    "diagram": null
+    "pitfall": "There are two complete batches, each using flour for both bread and rolls.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 274,
@@ -1594,37 +1597,38 @@
     "id": 277,
     "topic": "fractions",
     "subtopic": "fraction_divide_whole",
-    "difficulty": 1,
-    "question": "Four friends share 2/3 of a pizza equally. What fraction of the whole pizza does each friend get? Give your answer in its simplest form.",
-    "answer": "1/6",
+    "difficulty": 2,
+    "question": "Four friends share 2/3 of a pizza equally. Two of them each eat 1/4 of their own share. What fraction of a whole pizza have those two friends eaten altogether? Give your answer in simplest form.",
+    "answer": "1/12",
     "unit": null,
     "answer_format": "fraction_simplest",
-    "check": "2/3/4",
+    "check": "2/3/4/4*2",
     "distractors": [
       {
-        "value": "2/12",
-        "why": "Correctly multiplies the bottom by 4 to get 2/12 but does not simplify it."
+        "value": "1/6",
+        "why": "Gives one friend’s whole share before any eating."
       },
       {
-        "value": "8/3",
-        "why": "Multiplies by 4 instead of dividing: 2/3 × 4 = 8/3."
+        "value": "1/24",
+        "why": "Counts the amount eaten by only one of the two friends."
       },
       {
-        "value": "6",
-        "why": "Divides 4 by 2/3 (the wrong way round): 4 × 3/2 = 6."
+        "value": "1/3",
+        "why": "Takes a quarter of the 2/3 pizza twice without first sharing among four."
       },
       {
-        "value": "1/2",
-        "why": "Divides only the top, 2 ÷ 4 = 1/2, and ignores the 3."
+        "value": "1/8",
+        "why": "Treats the friends as sharing a whole pizza: 1 ÷ 4 ÷ 4 × 2."
       }
     ],
-    "explanation": "Dividing by 4 is the same as multiplying by 1/4. So 2/3 ÷ 4 = 2/12, which simplifies to 1/6. Each friend gets 1/6 of the whole pizza.",
+    "explanation": "Each friend receives 2/3 ÷ 4 = 1/6 of a whole pizza. A quarter of one share is 1/6 ÷ 4 = 1/24. Two friends eat this amount each, so together they eat 2/24 = 1/12 of the whole pizza.",
     "hints": [
-      "Sharing equally between 4 means dividing by 4.",
-      "Dividing a fraction by a whole number makes the bottom number 4 times bigger."
+      "Find one friend’s full share before finding the part eaten.",
+      "Divide 2/3 by 4, take one quarter of that, then double for two friends."
     ],
-    "pitfall": "Multiplying by 4 instead of dividing.",
-    "diagram": null
+    "pitfall": "One quarter of a share is different from one quarter of the whole pizza.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 278,
@@ -1855,37 +1859,38 @@
     "id": 284,
     "topic": "ratio",
     "subtopic": "ratio_share_pence",
-    "difficulty": 1,
-    "question": "Zoe and Yusuf earn £7.20 washing cars and share it in the ratio 1 : 5 (Zoe : Yusuf). How much does Yusuf get?",
-    "answer": "£6.00",
+    "difficulty": 2,
+    "question": "Zoe and Yusuf share their earnings in the ratio 1:5. After Yusuf spends £2.35, he has £3.65 left. How much did they earn altogether?",
+    "answer": "£7.20",
     "unit": "£",
     "answer_format": null,
-    "check": "7.2/6*5",
+    "check": "(2.35+3.65)/5*6",
     "distractors": [
       {
+        "value": "£6.00",
+        "why": "Recovers Yusuf’s money but does not include Zoe’s share."
+      },
+      {
+        "value": "£21.90",
+        "why": "Treats Yusuf’s remaining £3.65 as one part and multiplies by six."
+      },
+      {
+        "value": "£30.00",
+        "why": "Multiplies Yusuf’s £6 by his ratio number 5 instead of finding one part."
+      },
+      {
         "value": "£1.20",
-        "why": "Finds the value of one part, which is Zoe's share, not Yusuf's."
-      },
-      {
-        "value": "£3.60",
-        "why": "Halves the total, ignoring the ratio."
-      },
-      {
-        "value": "£1.44",
-        "why": "Divides £7.20 by 5 and treats that as the answer."
-      },
-      {
-        "value": "£9.00",
-        "why": "Uses 5 − 1 = 4 parts: £7.20 ÷ 4 = £1.80 per part, then 5 × £1.80 = £9.00."
+        "why": "Finds just one part, which is Zoe’s share."
       }
     ],
-    "explanation": "There are 1 + 5 = 6 parts. One part is £7.20 ÷ 6 = £1.20. Yusuf has 5 parts: 5 × £1.20 = £6.00.",
+    "explanation": "Yusuf originally had £2.35 + £3.65 = £6. His share represents 5 ratio parts, so one part is £1.20. The total earnings represent 1 + 5 = 6 parts. Six parts are worth 6 × £1.20 = £7.20.",
     "hints": [
-      "Add the numbers in the ratio to see how many equal parts there are.",
-      "Divide £7.20 by that number, then multiply by Yusuf's number."
+      "Recover Yusuf’s original share before using the ratio.",
+      "His £6 is five parts. Find one part, then all six parts."
     ],
-    "pitfall": "Dividing by 5 or by 4 instead of by 1 + 5 = 6.",
-    "diagram": null
+    "pitfall": "The £6 belongs to Yusuf alone, rather than being the total earnings.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 285,

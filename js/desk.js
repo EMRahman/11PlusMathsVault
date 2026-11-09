@@ -4,6 +4,7 @@ import { TOPICS, esc, shuffle, time, difficulty, questionBody, answerText } from
 import { followUp, listPapers, paperQuestions, practiceBank, pacedMinutes } from './practice.js';
 import { printWorksheet } from './print.js';
 import { getTutorial } from './tutorials.js';
+import { showQuestionBrowser } from './browse.js';
 
 let bank = [], questions = [], states = {}, index = 0, config = {}, timer;
 let seconds = 0, deadline = 0, lastTick = 0, submitted = false;
@@ -46,14 +47,21 @@ function filtered() {
   const all = pool(), size = document.getElementById('desk-setsize-filter').value;
   return shuffle(all).slice(0, size === 'all' ? all.length : Number(size));
 }
-function browse() {
-  const list = pool();
-  area().innerHTML = `<section class="browse-list"><div class="browse-head"><h2>All questions</h2><button class="btn btn--secondary btn--sm" id="browse-back-btn">← Back</button></div><p class="muted">${list.length} questions match your filters. Open one to see its answer and explanation, or practise it on its own.</p>${list.map((q, i) => `<details class="answer-review"><summary>${i + 1}. ${esc(TOPICS[q.topic])} ${difficulty(q.difficulty)} — ${esc(String(q.question).slice(0, 80))}${String(q.question).length > 80 ? '…' : ''}</summary>${questionBody(q)}${q.options && q.mode === 'set' ? `<ul class="browse-options">${q.options.map((o, n) => `<li>${String.fromCharCode(65 + n)}. ${esc(o)}</li>`).join('')}</ul>` : ''}<p><strong>Answer: ${esc(answerText(q))}</strong></p><div class="explanation-box">${esc(q.explanation)}</div><button class="btn btn--primary-desk btn--sm" data-practise="${i}">Practise this question</button></details>`).join('') || '<p class="empty-state">No questions match. Change your filters.</p>'}</section>`;
-  area().querySelector('#browse-back-btn').onclick = prompt;
-  area().querySelectorAll('[data-practise]').forEach(b => b.onclick = () => {
-    const picked = list[Number(b.dataset.practise)];
-    mount(bank, { kind: picked.mode === 'set' ? 'practice-set' : 'practice', container: 'desk-question-area', questions: [picked] });
-    document.getElementById('desk-filter-bar').classList.add('session-running');
+function browse(session) {
+  dispose();
+  const list = session?.questions || pool();
+  document.getElementById('desk-filter-bar').classList.remove('session-running');
+  showQuestionBrowser(area(), list, {
+    buttonClass: 'btn--primary-desk', selectedId: session?.selectedId, onBack: prompt,
+    onSelect: startIndex => {
+      mount(bank, {
+        kind: list[startIndex].mode === 'set' ? 'practice-set' : 'practice',
+        container: 'desk-question-area', questions: list, startIndex, browsing: true,
+        saved: session?.states, savedSeconds: session?.seconds, keepPads: Boolean(session),
+        onBrowse: () => browse({ questions: list, states: structuredClone(states), seconds, selectedId: questions[index].id }),
+      });
+      document.getElementById('desk-filter-bar').classList.add('session-running');
+    },
   });
 }
 function setHidden(ids, hidden) { for (const id of ids) document.getElementById(id).hidden = hidden; }
@@ -83,7 +91,7 @@ function prompt() {
   area().innerHTML = `<div class="desk-start-prompt"><h2>${mock ? 'Sit a fixed mock paper' : timed ? 'Practise a paper at your own level' : 'Learn a method, then try it yourself'}</h2><p>${timed ? 'Skip, flag and return to questions. Answers and explanations stay hidden until you submit or the timer ends.' : 'Use a hint when you need one. Try again before opening the worked solution, then practise the same skill with new numbers.'}</p>${rules}<p class="muted">${summaryLine}</p><div class="action-row">${mock ? '' : '<button id="desk-browse-btn" class="btn btn--secondary">Browse all questions</button>'}<button id="desk-print-questions" class="btn btn--secondary" ${count ? '' : 'disabled'}>Print worksheet</button>${choices ? `<button id="desk-print-grid" class="btn btn--secondary" ${count ? '' : 'disabled'}>Print answer grid</button>` : ''}<button id="desk-print-answers" class="btn btn--secondary" ${count ? '' : 'disabled'}>Print answer sheet</button></div><p class="muted">Printing uses one fixed set. The question numbers match its separate answer sheet.</p></div>`;
   document.getElementById('desk-start-btn').onclick = () => startFromFilters(prepared, minutes);
   const browseBtn = document.getElementById('desk-browse-btn');
-  if (browseBtn) browseBtn.onclick = browse;
+  if (browseBtn) browseBtn.onclick = () => browse();
   document.getElementById('desk-print-questions').onclick = () => printWorksheet(prepared);
   const grid = document.getElementById('desk-print-grid');
   if (grid) grid.onclick = () => printWorksheet(prepared, { grid: true });
@@ -96,9 +104,9 @@ function startFromFilters(prepared, minutes) {
   document.getElementById('desk-filter-bar').classList.add('session-running');
 }
 export function mount(all, options) {
-  dispose(); pads.clear(); bank = all; config = options; questions = [...options.questions];
+  dispose(); if (!options.keepPads) pads.clear(); bank = all; config = options; questions = [...options.questions];
   states = structuredClone(options.saved || {}); seconds = options.savedSeconds || 0; submitted = false;
-  index = questions.findIndex(q => !states[q.id]?.finished);
+  index = options.browsing ? Math.max(0, Math.min(options.startIndex || 0, questions.length - 1)) : questions.findIndex(q => !states[q.id]?.finished);
   if (!questions.length) { area().innerHTML = '<p class="empty-state">No questions match. Change your filters to build a set.</p>'; return; }
   if (index < 0) { index = 0; submitted = true; config.onComplete?.(); summary(); return; }
   if (exam() && !config.minutes) config.minutes = pacedMinutes(questions.length, config.kind === 'exam-set' ? 'SET' : 'NWSSEE');
@@ -117,16 +125,21 @@ function tick() {
   const el = area()?.querySelector('[data-session-clock]');
   if (el) el.textContent = time(exam() ? (deadline - now) / 1000 : seconds);
 }
+function moveTo(nextIndex) {
+  if (nextIndex < 0 || nextIndex >= questions.length) return;
+  index = nextIndex; render();
+  area().querySelector('.question-card')?.scrollIntoView({ block: 'start' });
+}
 function render() {
   const q = questions[index], st = current(), qNumber = index + 1;
   const tutorial = getTutorial(q);
-  const availableFollowUp = !exam() && config.kind !== 'daily' && st.finished ? followUp(q, practiceBank(bank), getProgress(), questions.filter(item => states[item.id]?.finished).map(item => item.id)) : null;
+  const availableFollowUp = !exam() && !config.browsing && config.kind !== 'daily' && st.finished ? followUp(q, practiceBank(bank), getProgress(), questions.filter(item => states[item.id]?.finished).map(item => item.id)) : null;
   const wrong = st.firstAnswer && !st.firstAnswer.correct && !st.finished;
-  area().innerHTML = `<div class="session-meta"><span>Q${qNumber} of ${questions.length} · ${exam() ? (config.paperId ? 'Mock paper' : 'Exam practice') : config.kind === 'daily' ? esc(config.reasons?.[q.id]) : 'Guided practice'}</span><span><span data-session-clock>${time(exam() ? (deadline - Date.now()) / 1000 : seconds)}</span> ${exam() ? 'left' : 'solving time'}</span></div>
+  area().innerHTML = `<div class="session-meta"><span>Q${qNumber} of ${questions.length} · ${exam() ? (config.paperId ? 'Mock paper' : 'Exam practice') : config.browsing ? 'Browse practice' : config.kind === 'daily' ? esc(config.reasons?.[q.id]) : 'Guided practice'}</span><span><span data-session-clock>${time(exam() ? (deadline - Date.now()) / 1000 : seconds)}</span> ${exam() ? 'left' : 'solving time'}</span>${config.browsing ? '<button class="text-button" id="desk-all-questions-btn">All questions</button>' : ''}</div>
     <article class="question-card question-card--desk" aria-label="Question ${qNumber}">
       <div class="card-meta"><span class="topic-tag">${esc(TOPICS[q.topic])}</span>${difficulty(q.difficulty)}<button class="bookmark-btn ${isBookmarked(q.id) ? 'bookmarked' : ''}" id="desk-bookmark-btn" aria-pressed="${isBookmarked(q.id)}" aria-label="Bookmark this question">★</button></div>
       ${questionBody(q)}
-      <section class="workpad" aria-label="Working out"><div class="workpad-bar"><strong>Working out</strong><span class="workpad-tools"><button type="button" class="btn btn--secondary btn--sm" id="wp-pen" aria-pressed="true">Pen</button><button type="button" class="btn btn--secondary btn--sm" id="wp-eraser" aria-pressed="false" ${config.kind === 'exam-desk' ? 'hidden' : ''}>Rub out</button><button type="button" class="btn btn--secondary btn--sm" id="wp-undo">Undo</button><button type="button" class="btn btn--secondary btn--sm" id="wp-clear">Clear</button></span></div><canvas class="workpad-canvas" id="workpad" role="img" aria-label="Freehand space for working out. Draw with a finger or pen."></canvas></section>
+      <section class="workpad" aria-label="Working out"><div class="workpad-bar"><strong>Working out</strong><span class="workpad-tools"><button type="button" class="btn btn--secondary btn--sm" id="wp-pen" aria-pressed="true">Pen</button><button type="button" class="btn btn--secondary btn--sm" id="wp-eraser" aria-pressed="false" ${config.kind === 'exam-desk' ? 'hidden' : ''}>Rub out</button><button type="button" class="btn btn--secondary btn--sm" id="wp-undo">Undo</button><button type="button" class="btn btn--secondary btn--sm" id="wp-clear">Clear</button></span></div><div class="workpad-surface"><canvas class="workpad-canvas" id="workpad" role="img" aria-label="Freehand space for working out. Draw with a finger or pen."></canvas><div class="workpad-eraser-outline" id="workpad-eraser-outline" aria-hidden="true" hidden></div></div></section>
       <form id="desk-answer-form">
       ${q.mode === 'set' ? `<fieldset class="exam-choices"><legend class="sr-only">Choose your answer</legend>${(q.options || []).map((opt, i) => `<label class="exam-option"><input type="radio" name="exam-answer" value="${esc(opt)}" ${st.input === opt ? 'checked' : ''} ${st.finished ? 'disabled' : ''}><span>${String.fromCharCode(65 + i)}. ${esc(opt)}</span></label>`).join('')}</fieldset>` : `<label class="answer-label" for="desk-answer-input">Your final answer${q.unit ? ` (in ${esc(q.unit)})` : ''}</label><input type="text" class="answer-input" id="desk-answer-input" value="${esc(st.input)}" autocomplete="off" spellcheck="false" ${st.finished ? 'disabled' : ''} placeholder="Type your answer">`}
       ${!exam() && !st.finished ? `<p class="answer-status ${wrong ? 'incorrect' : ''}" role="status">${wrong ? 'Not quite yet. Try again, or use a hint to get started.' : ''}</p><div class="action-row"><button class="btn btn--primary-desk" type="submit" id="desk-check-btn">${wrong ? 'Try again' : 'Check answer'}</button><button class="btn btn--secondary" type="button" id="desk-hint-btn" ${st.hints >= q.hints.length ? 'disabled' : ''}>${st.hints ? 'Next hint' : 'Give me a hint'}</button><button class="text-button" type="button" id="desk-solution-btn">Show worked solution</button></div>` : ''}
@@ -134,7 +147,7 @@ function render() {
       ${!exam() && st.hints ? `<div class="hint-box" aria-live="polite"><strong>A step at a time</strong><ol>${q.hints.slice(0, st.hints).map(h => `<li>${esc(h)}</li>`).join('')}</ol><p class="muted">Answers using hints are tracked as supported practice.</p>${tutorial && st.hints >= q.hints.length ? `<div class="hint-tutorial"><p class="hint-tutorial-text">Still stuck? <strong>${esc(tutorial.concept)}</strong></p><div class="hint-tutorial-actions">${tutorial.videoId ? `<button type="button" class="btn btn--secondary btn--sm hint-video-toggle" id="desk-hint-video-toggle" aria-expanded="false"><span class="btn-icon">▶</span> <span class="btn-text">Watch video</span></button>` : ''}${tutorial.videoUrl ? `<a href="${esc(tutorial.videoUrl)}" target="_blank" rel="noopener noreferrer" class="hint-tutorial-link">Open on YouTube ↗</a>` : ''}<a href="${esc(tutorial.webUrl)}" target="_blank" rel="noopener noreferrer" class="hint-tutorial-link">Read guide ↗</a></div>${tutorial.videoId ? `<div class="tutorial-video-container" id="desk-hint-video-container" hidden><div class="video-responsive"><iframe data-src="https://www.youtube-nocookie.com/embed/${esc(tutorial.videoId)}?rel=0" title="${esc(tutorial.videoTitle)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>` : ''}</div>` : ''}</div>` : ''}
       ${st.finished ? `<div class="desk-result-msg ${st.independentCorrect ? 'correct' : ''}" role="status">${st.independentCorrect ? '✓ Correct independently' : st.finalCorrect ? '✓ You got there — keep practising this skill' : `The answer is ${esc(answerText(q))}`}</div>${st.finalCorrect ? '' : tempting(q, st.input)}<div class="explanation-box">${esc(q.explanation)}</div>${q.pitfall ? `<div class="pitfall-box"><strong>Watch out:</strong> ${esc(q.pitfall)}</div>` : ''}<p class="parent-prompt">Explain it: ${esc(q.parent_prompt || 'How could you check that your answer makes sense?')}</p>${tutorial ? `<div class="tutorial-card"><div class="tutorial-card-header"><span class="tutorial-badge">Tutorial Insight</span><div class="tutorial-card-title">${esc(tutorial.concept)}</div></div>${tutorial.steps ? `<div class="tutorial-approach"><strong>How to approach this:</strong><ol class="tutorial-steps">${tutorial.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol>${tutorial.check ? `<p class="tutorial-check"><strong>Sanity check:</strong> ${esc(tutorial.check)}</p>` : ''}</div>` : ''}<div class="tutorial-media-actions">${tutorial.videoId ? `<button type="button" class="btn btn--secondary tutorial-video-toggle" id="desk-video-toggle" aria-expanded="false"><span class="btn-icon">▶</span> <span class="btn-text">Watch video walkthrough</span></button>` : ''}${tutorial.videoUrl ? `<a href="${esc(tutorial.videoUrl)}" target="_blank" rel="noopener noreferrer" class="tutorial-ext-link"><span>Open video on YouTube ↗</span></a>` : ''}<a href="${esc(tutorial.webUrl)}" target="_blank" rel="noopener noreferrer" class="tutorial-ext-link"><span>${esc(tutorial.webTitle)} ↗</span></a></div>${tutorial.videoId ? `<div class="tutorial-video-container" id="desk-video-container" hidden><div class="video-responsive"><iframe data-src="https://www.youtube-nocookie.com/embed/${esc(tutorial.videoId)}?rel=0" title="${esc(tutorial.videoTitle)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>` : ''}</div>` : ''}${availableFollowUp ? '<button class="btn btn--secondary" id="desk-followup-btn">Try a similar question</button>' : ''}` : ''}
       ${exam() ? `<label class="flag-control"><input type="checkbox" id="desk-flag" ${st.flagged ? 'checked' : ''}> Flag to return to</label>` : ''}
-      <div class="card-nav"><button class="btn btn--secondary" id="desk-prev-btn" ${index === 0 ? 'disabled' : ''}>← Back</button>${exam() || st.finished ? `<button class="btn btn--primary-desk" id="desk-next-btn">${index === questions.length - 1 ? exam() ? 'Review paper' : 'See results' : 'Next →'}</button>` : ''}</div>
+      <div class="card-nav"><button class="btn btn--secondary" id="desk-prev-btn" ${index === 0 ? 'disabled' : ''}>← Previous</button>${exam() || st.finished || config.browsing ? `<button class="btn btn--primary-desk" id="desk-next-btn" ${config.browsing && index === questions.length - 1 ? 'disabled' : ''}>${index === questions.length - 1 ? exam() ? 'Review paper' : config.browsing ? 'Last question' : 'See results' : 'Next →'}</button>` : ''}</div>
     </article>
     ${exam() ? `<nav class="exam-nav" aria-label="Jump to a question">${questions.map((item, i) => `<button class="exam-number ${states[item.id]?.input ? 'answered' : ''} ${states[item.id]?.flagged ? 'flagged' : ''}" data-jump="${i}" aria-label="Question ${i + 1}${states[item.id]?.flagged ? ', flagged' : ''}${states[item.id]?.input ? ', answered' : ', unanswered'}" ${i === index ? 'aria-current="step"' : ''}>${i + 1}${states[item.id]?.flagged ? ' ⚑' : ''}</button>`).join('')}</nav><button class="btn btn--secondary btn--full" id="exam-review-btn">Review and submit paper</button>` : ''}`;
   bind(q, st, availableFollowUp);
@@ -146,12 +159,14 @@ function workpad(q) {
   padObserver?.disconnect(); padObserver = null;
   const cv = area().querySelector('#workpad'); if (!cv) return;
   const strokes = pads.get(q.id) ?? pads.set(q.id, []).get(q.id), ctx = cv.getContext('2d');
+  const outline = area().querySelector('#workpad-eraser-outline');
+  const eraserWidth = 32;
   let tool = 'pen', live = null, activeId = null, w = 0, h = 0;
   const ink = () => getComputedStyle(cv).color;
   const paint = () => {
     ctx.clearRect(0, 0, w, h); ctx.lineCap = ctx.lineJoin = 'round';
     for (const s of strokes) {
-      ctx.strokeStyle = ink(); ctx.lineWidth = s.erase ? 18 : 2.5;
+      ctx.strokeStyle = ink(); ctx.lineWidth = s.width ?? (s.erase ? 18 : 2.5);
       ctx.globalCompositeOperation = s.erase ? 'destination-out' : 'source-over';
       ctx.beginPath(); s.pts.forEach(([x, y], i) => i ? ctx.lineTo(x * w, y * h) : ctx.moveTo(x * w, y * h));
       if (s.pts.length === 1) ctx.lineTo(s.pts[0][0] * w + .1, s.pts[0][1] * h);
@@ -164,11 +179,20 @@ function workpad(q) {
     w = r.width; h = r.height; cv.width = w * d; cv.height = h * d; ctx.setTransform(d, 0, 0, d, 0, 0); paint();
   };
   const pt = e => { const r = cv.getBoundingClientRect(); return [(e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height]; };
-  cv.onpointerdown = e => { if (live) return; activeId = e.pointerId; cv.setPointerCapture(e.pointerId); live = { erase: tool === 'eraser', pts: [pt(e)] }; strokes.push(live); paint(); };
-  cv.onpointermove = e => { if (!live || e.pointerId !== activeId) return; for (const ev of e.getCoalescedEvents?.() ?? [e]) live.pts.push(pt(ev)); paint(); };
-  cv.onpointerup = cv.onpointercancel = e => { if (e.pointerId === activeId) live = null; };
+  const showOutline = e => {
+    if (live && e.pointerId !== activeId) return;
+    outline.hidden = tool !== 'eraser';
+    if (!outline.hidden) {
+      const [x, y] = pt(e);
+      outline.style.left = `${x * 100}%`; outline.style.top = `${y * 100}%`;
+    }
+  };
+  cv.onpointerdown = e => { if (live) return; activeId = e.pointerId; cv.setPointerCapture(e.pointerId); showOutline(e); live = { erase: tool === 'eraser', width: tool === 'eraser' ? eraserWidth : 2.5, pts: [pt(e)] }; strokes.push(live); paint(); };
+  cv.onpointermove = e => { showOutline(e); if (!live || e.pointerId !== activeId) return; for (const ev of e.getCoalescedEvents?.() ?? [e]) live.pts.push(pt(ev)); paint(); };
+  cv.onpointerleave = () => { outline.hidden = true; };
+  cv.onpointerup = cv.onpointercancel = e => { if (e.pointerId === activeId) { live = null; activeId = null; if (e.pointerType !== 'mouse' || e.type === 'pointercancel') outline.hidden = true; } };
   const root = area(), $ = id => root.querySelector(id);
-  const setTool = t => { tool = t; $('#wp-pen').setAttribute('aria-pressed', t === 'pen'); $('#wp-eraser').setAttribute('aria-pressed', t === 'eraser'); };
+  const setTool = t => { tool = t; outline.hidden = true; cv.classList.toggle('is-erasing', t === 'eraser'); $('#wp-pen').setAttribute('aria-pressed', t === 'pen'); $('#wp-eraser').setAttribute('aria-pressed', t === 'eraser'); };
   $('#wp-pen').onclick = () => setTool('pen'); $('#wp-eraser').onclick = () => setTool('eraser');
   $('#wp-undo').onclick = () => { strokes.pop(); paint(); };
   $('#wp-clear').onclick = () => { strokes.length = 0; paint(); };
@@ -195,10 +219,12 @@ function bind(q, st, nextQuestion) {
   root.querySelector('#desk-bookmark-btn').onclick = event => {
     const value = toggleBookmark(q.id); event.currentTarget.classList.toggle('bookmarked', value); event.currentTarget.setAttribute('aria-pressed', String(value));
   };
-  root.querySelector('#desk-prev-btn').onclick = () => { index--; render(); };
+  root.querySelector('#desk-prev-btn').onclick = () => moveTo(index - 1);
+  const allQuestions = root.querySelector('#desk-all-questions-btn');
+  if (allQuestions) allQuestions.onclick = config.onBrowse;
   const next = root.querySelector('#desk-next-btn');
   if (next) next.onclick = () => {
-    if (index < questions.length - 1) { index++; render(); }
+    if (index < questions.length - 1) moveTo(index + 1);
     else if (exam()) reviewExam();
     else if (questions.every(item => states[item.id]?.finished)) { submitted = true; dispose(); config.onComplete?.(); save(); summary(); }
     else { index = questions.findIndex(item => !states[item.id]?.finished); render(); }

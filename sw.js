@@ -10,7 +10,7 @@
  * cleared on the next visit.
  */
 
-const CACHE_VERSION = 'mathsvault-v7';
+const CACHE_VERSION = 'mathsvault-v11';
 
 const SHELL_ASSETS = [
   './',
@@ -25,6 +25,7 @@ const SHELL_ASSETS = [
   './js/validate.js',
   './js/hacks.js',
   './js/content.js',
+  './js/browse.js',
   './js/practice.js',
   './js/daily.js',
   './js/print.js',

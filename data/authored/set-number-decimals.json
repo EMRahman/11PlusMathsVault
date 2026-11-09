@@ -219,73 +219,75 @@
     "id": 217,
     "topic": "number_operations",
     "subtopic": "written_division_remainders",
-    "difficulty": 1,
-    "question": "A baker packs 8 buns into each box. She has 357 buns. How many full boxes can she pack?",
-    "answer": "44",
+    "difficulty": 2,
+    "question": "A baker has 357 buns. She throws away 21 damaged buns and packs the rest into boxes of 8. She reserves 5 full boxes for a café. How many full boxes are left to sell?",
+    "answer": "37",
     "unit": null,
     "answer_format": null,
-    "check": "(357-5)/8",
+    "check": "(357-21)/8-5",
     "distractors": [
       {
-        "value": "4",
-        "why": "Divides 35 by 8 to get 4 and stops there."
+        "value": "39",
+        "why": "Ignores the damaged buns: 357 ÷ 8 gives 44 full boxes, then subtracts 5."
       },
       {
-        "value": "5",
-        "why": "Gives the remainder instead of the number of full boxes."
+        "value": "42",
+        "why": "Finds all 42 full boxes but forgets the five reserved boxes."
       },
       {
-        "value": "43",
-        "why": "Divides 37 by 8 wrongly as 3, putting 3 in the units place."
+        "value": "32",
+        "why": "Subtracts the five reserved boxes twice: 42 − 5 − 5."
       },
       {
-        "value": "45",
-        "why": "Rounds 44 remainder 5 up to 45, but the last box is not full."
+        "value": "47",
+        "why": "Adds the five reserved boxes instead of subtracting them: 42 + 5."
       }
     ],
-    "explanation": "357 ÷ 8: 35 ÷ 8 = 4 remainder 3. Bring down 7 to make 37, and 37 ÷ 8 = 4 remainder 5. So 44 full boxes with 5 buns left over. Only full boxes count, so the answer is 44.",
+    "explanation": "Subtract the damaged buns: 357 − 21 = 336. Divide by 8 to make 42 full boxes. Five boxes are reserved, so 42 − 5 = 37 full boxes remain to sell. Reserving boxes removes eight buns at a time.",
     "hints": [
-      "Divide 357 by 8 using short division.",
-      "The question asks only for full boxes."
+      "Find how many good buns can be packed.",
+      "Divide the good buns by 8, then subtract the five reserved boxes."
     ],
-    "pitfall": "Rounding up when only full boxes are wanted.",
-    "diagram": null
+    "pitfall": "Subtract damaged buns before packing, and reserved boxes after packing.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 218,
     "topic": "number_operations",
     "subtopic": "written_division_remainders",
-    "difficulty": 1,
-    "question": "What is the remainder when 615 is divided by 7?",
-    "answer": "6",
+    "difficulty": 2,
+    "question": "Pencils come in cartons of 12 packs, with 7 pencils per pack. A school needs 615 pencils and buys the fewest whole cartons possible. How many pencils will be left over?",
+    "answer": "57",
     "unit": null,
     "answer_format": null,
-    "check": "615-7*87",
+    "check": "8*12*7-615",
     "distractors": [
       {
-        "value": "87",
-        "why": "Gives the quotient (the number of sevens) instead of the remainder."
-      },
-      {
-        "value": "5",
-        "why": "Stops after the first step: 61 ÷ 7 = 8 remainder 5."
-      },
-      {
-        "value": "8",
-        "why": "Gives the first digit of the quotient instead of the remainder."
-      },
-      {
         "value": "1",
-        "why": "Rounds up to 88 sevens (616) and takes the difference from 615."
+        "why": "Buys 88 individual packs, giving 616 pencils, and ignores the whole-carton rule."
+      },
+      {
+        "value": "6",
+        "why": "Reports the remainder of 615 ÷ 7, instead of the surplus after buying cartons."
+      },
+      {
+        "value": "27",
+        "why": "Uses seven cartons and reports the shortage: 615 − 588."
+      },
+      {
+        "value": "141",
+        "why": "Buys nine cartons instead of eight: 9 × 84 − 615."
       }
     ],
-    "explanation": "61 ÷ 7 = 8 remainder 5. Bring down the 5 to make 55. 55 ÷ 7 = 7 remainder 6. So 615 = 7 × 87 + 6. The remainder is 6.",
+    "explanation": "One carton holds 12 × 7 = 84 pencils. Seven cartons hold 588, which is not enough. Eight cartons hold 672, so eight must be bought. The number left over is 672 − 615 = 57. Whole cartons must be bought, rather than individual packs.",
     "hints": [
-      "Use short division and carry each remainder.",
-      "Check: 7 × 87 + remainder = 615."
+      "How many pencils are in a complete carton?",
+      "Compare 7 × 84 and 8 × 84 with the 615 pencils needed."
     ],
-    "pitfall": "Reporting the quotient or an intermediate remainder.",
-    "diagram": null
+    "pitfall": "Round up to a whole carton before finding the surplus.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 219,
@@ -363,37 +365,38 @@
     "id": 221,
     "topic": "number_operations",
     "subtopic": "brackets_order_operations",
-    "difficulty": 1,
-    "question": "Work out 7 + 9 × 4 − 3.",
-    "answer": "40",
+    "difficulty": 2,
+    "question": "Work out 72 − (18 + 6) ÷ 3 × 5.",
+    "answer": "32",
     "unit": null,
     "answer_format": null,
-    "check": "7+9*4-3",
+    "check": "72-(18+6)/3*5",
     "distractors": [
       {
-        "value": "61",
-        "why": "Works left to right: 7 + 9 = 16, then × 4 = 64, then − 3 = 61."
-      },
-      {
-        "value": "46",
-        "why": "Adds the 3 instead of subtracting it."
-      },
-      {
-        "value": "16",
-        "why": "Does 4 − 3 first, as if it were in brackets."
+        "value": "80",
+        "why": "Calculates left to right after the brackets: (72 − 24) ÷ 3 × 5."
       },
       {
         "value": "64",
-        "why": "Works left to right and forgets to subtract 3."
+        "why": "Divides 24 by 3 but forgets to multiply the result by 5."
+      },
+      {
+        "value": "70.4",
+        "why": "Multiplies 3 × 5 before dividing: 72 − 24 ÷ 15."
+      },
+      {
+        "value": "-28",
+        "why": "Moves the division inside the brackets: 72 − (18 + 6 ÷ 3) × 5."
       }
     ],
-    "explanation": "Multiplication comes before addition and subtraction, so do 9 × 4 = 36 first. Then work left to right: 7 + 36 = 43, and 43 − 3 = 40.",
+    "explanation": "The brackets give 24. Division and multiplication have equal priority, so calculate 24 ÷ 3 = 8 and then 8 × 5 = 40. Finally 72 − 40 = 32. Do not subtract from 72 before completing the division and multiplication.",
     "hints": [
-      "Which operation should be done first?",
-      "Do the multiplication, then work left to right."
+      "Do the brackets first, then read division and multiplication from left to right.",
+      "After the brackets, subtract the result of 24 ÷ 3 × 5 from 72."
     ],
-    "pitfall": "Working strictly left to right.",
-    "diagram": null
+    "pitfall": "A division to the left of multiplication is done first.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 222,
@@ -507,37 +510,38 @@
     "id": 225,
     "topic": "number_operations",
     "subtopic": "primes_squares_cubes",
-    "difficulty": 1,
-    "question": "What is the sum of the first four prime numbers?",
-    "answer": "17",
+    "difficulty": 2,
+    "question": "Three different prime numbers multiply together to make 385. What is their sum?",
+    "answer": "23",
     "unit": null,
     "answer_format": null,
-    "check": "2+3+5+7",
+    "check": "5+7+11",
     "distractors": [
       {
-        "value": "11",
-        "why": "Counts 1 as a prime number."
+        "value": "16",
+        "why": "Adds 5 and 11 but leaves out the prime factor 7."
       },
       {
-        "value": "24",
-        "why": "Leaves out 2 because it is even, then counts 9 as prime: 3 + 5 + 7 + 9 = 24."
+        "value": "35",
+        "why": "Multiplies two factors, 5 × 7, and omits 11."
       },
       {
-        "value": "26",
-        "why": "Forgets that 2 is a prime number."
+        "value": "77",
+        "why": "Gives the quotient 385 ÷ 5 without finishing the factorisation or adding."
       },
       {
-        "value": "28",
-        "why": "Adds five primes instead of four."
+        "value": "385",
+        "why": "Reports the given product instead of the sum of its prime factors."
       }
     ],
-    "explanation": "The first four primes are 2, 3, 5 and 7. 1 is not prime, and 2 is the only even prime. 2 + 3 + 5 + 7 = 17.",
+    "explanation": "The number ends in 5, so one prime factor is 5. Dividing 385 by 5 gives 77, which is 7 × 11. The three primes are 5, 7 and 11. Their sum is 23. Check that 5 × 7 × 11 = 385.",
     "hints": [
-      "Is 1 a prime number?",
-      "List primes in order: 2, 3, ..."
+      "Which prime factor can you spot from the final digit?",
+      "Divide by 5, factor the remaining 77, then add the three primes."
     ],
-    "pitfall": "Counting 1 as prime or leaving out 2.",
-    "diagram": null
+    "pitfall": "The question asks for the sum of the prime factors, not their product.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 226,
@@ -831,37 +835,38 @@
     "id": 234,
     "topic": "number_operations",
     "subtopic": "place_value_negative_numbers",
-    "difficulty": 1,
-    "question": "At midnight the temperature is -7°C. By morning it has risen by 12°C. What is the temperature in the morning?",
-    "answer": "5°C",
+    "difficulty": 2,
+    "question": "Yesterday the lowest temperature was −7°C and the highest was 12°C. Today the difference between the lowest and highest temperatures is the same, but the lowest is −4°C. What is today’s highest temperature?",
+    "answer": "15°C",
     "unit": "°C",
     "answer_format": null,
-    "check": "12-7",
+    "check": "-4+(12-(-7))",
     "distractors": [
       {
-        "value": "-19°C",
-        "why": "Subtracts 12 from -7 instead of adding."
+        "value": "-23°C",
+        "why": "Subtracts the 19-degree range from −4 instead of adding it."
       },
       {
-        "value": "-5°C",
-        "why": "Works out 12 − 7 = 5 and then copies the minus sign."
+        "value": "8°C",
+        "why": "Adds today’s lowest temperature −4 directly to yesterday’s highest 12."
       },
       {
-        "value": "12°C",
-        "why": "Ignores the starting temperature."
+        "value": "1°C",
+        "why": "Treats yesterday’s range as 12 − 7 = 5, then adds it to −4."
       },
       {
-        "value": "19°C",
-        "why": "Ignores that the starting temperature is below zero."
+        "value": "23°C",
+        "why": "Treats today’s lowest temperature as positive 4, then adds 19."
       }
     ],
-    "explanation": "Start at -7°C. Going up 7 degrees reaches 0°C. There are 5 more degrees to go (12 − 7 = 5), so the temperature is 5°C.",
+    "explanation": "Yesterday the temperature range was 12 − (−7) = 19°C. Today starts at −4°C and has the same range, so the highest temperature is −4 + 19 = 15°C. Check that the difference between −4 and 15 is 19.",
     "hints": [
-      "Picture a thermometer.",
-      "How far to get from -7 up to 0?"
+      "Find yesterday’s full range across zero.",
+      "Add the 19-degree range to today’s lowest temperature of −4°C."
     ],
-    "pitfall": "Getting the direction or sign wrong.",
-    "diagram": null
+    "pitfall": "A range crossing zero includes the distances on both sides of zero.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 235,
@@ -903,37 +908,38 @@
     "id": 236,
     "topic": "number_operations",
     "subtopic": "place_value_negative_numbers",
-    "difficulty": 1,
-    "question": "What is 100,000 less than 4,306,258?",
-    "answer": "4,206,258",
+    "difficulty": 2,
+    "question": "A whole number rounds to 4,300,000 to the nearest 100,000. After 100,000 is subtracted from that number, what is the largest possible result?",
+    "answer": "4,249,999",
     "unit": null,
     "answer_format": null,
-    "check": "4306258-100000",
+    "check": "4349999-100000",
     "distractors": [
       {
-        "value": "3,306,258",
-        "why": "Subtracts 1,000,000 instead of 100,000."
+        "value": "4,200,000",
+        "why": "Subtracts from the rounded value instead of the largest possible original number."
       },
       {
-        "value": "4,296,258",
-        "why": "Subtracts 10,000 instead of 100,000."
+        "value": "4,250,000",
+        "why": "Includes 4,350,000 as a starting value even though it rounds up."
       },
       {
-        "value": "4,305,258",
-        "why": "Subtracts 1,000 instead of 100,000."
+        "value": "4,349,999",
+        "why": "Finds the largest starting number but forgets the subtraction."
       },
       {
-        "value": "4,306,158",
-        "why": "Subtracts 100 instead of 100,000."
+        "value": "4,150,000",
+        "why": "Uses the smallest valid starting number 4,250,000, then subtracts 100,000."
       }
     ],
-    "explanation": "In 4,306,258 the digit 3 is in the hundred-thousands place. Taking away 100,000 reduces that digit by 1 and nothing else changes: 4,206,258.",
+    "explanation": "The largest whole number that rounds to 4,300,000 is 4,349,999. The next number, 4,350,000, rounds up to 4,400,000. Subtracting 100,000 from the largest valid starting number gives 4,249,999. Use the rounding interval before doing the subtraction.",
     "hints": [
-      "Which digit is worth 100,000?",
-      "Change only that column."
+      "What is the first number that would round up to 4,400,000 instead?",
+      "The largest starting number is one less than 4,350,000. Then subtract 100,000."
     ],
-    "pitfall": "Miscounting zeros and changing the wrong place.",
-    "diagram": null
+    "pitfall": "The upper halfway boundary rounds up, so it is excluded.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 237,
@@ -1227,37 +1233,38 @@
     "id": 245,
     "topic": "decimals",
     "subtopic": "decimal_multiply_divide",
-    "difficulty": 1,
-    "question": "Work out 4.5 × 6.",
-    "answer": "27",
-    "unit": null,
+    "difficulty": 2,
+    "question": "A gardener has 6 rolls of wire, each 4.5 m long. From each roll, 0.35 m is damaged and cannot be used. What is the total usable length?",
+    "answer": "24.9 m",
+    "unit": "m",
     "answer_format": null,
-    "check": "4.5*6",
+    "check": "6*(4.5-0.35)",
     "distractors": [
       {
-        "value": "2.7",
-        "why": "Works out 45 × 6 = 270, then moves the decimal point two places instead of one."
+        "value": "27 m",
+        "why": "Multiplies 4.5 by 6 without removing any damaged wire."
       },
       {
-        "value": "10.5",
-        "why": "Adds 4.5 + 6 instead of multiplying."
+        "value": "26.65 m",
+        "why": "Subtracts only one damaged section: 27 − 0.35."
       },
       {
-        "value": "24.5",
-        "why": "Multiplies the 4 by 6 to get 24, then just keeps the .5 without multiplying it."
+        "value": "25.2 m",
+        "why": "Misreads 0.35 as 0.3: 6 × (4.5 − 0.3)."
       },
       {
-        "value": "270",
-        "why": "Works out 45 × 6 = 270 and forgets to put the decimal point back."
+        "value": "2.49 m",
+        "why": "Finds 24.9 but places the decimal point one place too far left."
       }
     ],
-    "explanation": "Ignore the decimal point first: 45 × 6 = 270. There is one decimal place in 4.5, so divide by 10 to get 27. Check by estimating: 4.5 is about 5, and 5 × 6 = 30, so 27 is sensible.",
+    "explanation": "Each roll has 4.5 − 0.35 = 4.15 m of usable wire. Six rolls therefore give 6 × 4.15 = 24.9 m. Alternatively, subtract the total damaged length, 6 × 0.35 = 2.1 m, from the original total of 27 m.",
     "hints": [
-      "Work out 45 × 6 first.",
-      "How many decimal places does 4.5 have?"
+      "The damaged length is removed from every roll.",
+      "Find the usable part of one roll, then multiply by 6."
     ],
-    "pitfall": "Misplacing the decimal point, or multiplying only the whole-number part.",
-    "diagram": null
+    "pitfall": "Subtract six damaged sections, rather than only one.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 246,
@@ -1335,37 +1342,38 @@
     "id": 248,
     "topic": "decimals",
     "subtopic": "decimal_multiply_divide",
-    "difficulty": 1,
-    "question": "Work out 6.37 × 100.",
-    "answer": "637",
-    "unit": null,
+    "difficulty": 2,
+    "question": "A box holds 100 bolts, each with mass 6.37 g. The empty box has mass 250 g. What is the mass of the full box?",
+    "answer": "887 g",
+    "unit": "g",
     "answer_format": null,
-    "check": "6.37*100",
+    "check": "6.37*100+250",
     "distractors": [
       {
-        "value": "63.7",
-        "why": "Multiplies by 10 instead of 100."
+        "value": "637 g",
+        "why": "Calculates the bolts’ mass but leaves out the empty box."
       },
       {
-        "value": "6370",
-        "why": "Multiplies by 1000 instead of 100."
+        "value": "643.37 g",
+        "why": "Adds the mass of one bolt to the 637 g total instead of adding the packaging."
       },
       {
-        "value": "0.0637",
-        "why": "Divides by 100 instead of multiplying."
+        "value": "256.37 g",
+        "why": "Adds only one bolt to the box: 250 + 6.37."
       },
       {
-        "value": "600.37",
-        "why": "Multiplies only the whole-number part by 100."
+        "value": "313.7 g",
+        "why": "Multiplies 6.37 by 10 rather than 100, then adds 250."
       }
     ],
-    "explanation": "Multiplying by 100 moves each digit two places to the left, so the units digit 6 becomes hundreds. The number 6.37 becomes 637, and the digits 6, 3 and 7 keep their order.",
+    "explanation": "The bolts have total mass 6.37 × 100 = 637 g. Add the empty box’s mass of 250 g to get 887 g. Multiplication by 100 moves each digit two place-value columns; the box’s mass is then added once.",
     "hints": [
-      "Each digit moves two places.",
-      "Which way does it move?"
+      "Find the total mass of the bolts before including the box.",
+      "Multiply 6.37 by 100, then add 250."
     ],
-    "pitfall": "Moving the digits the wrong way.",
-    "diagram": null
+    "pitfall": "The mass of a full box includes both its contents and its packaging.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 249,
@@ -1515,37 +1523,38 @@
     "id": 253,
     "topic": "decimals",
     "subtopic": "rounding_ordering_mixed",
-    "difficulty": 1,
-    "question": "Round 4.0756 to 2 decimal places.",
-    "answer": "4.08",
+    "difficulty": 3,
+    "question": "Two different numbers each have exactly three decimal places. Both round to 4.08 to two decimal places. What is the greatest possible difference between them?",
+    "answer": "0.009",
     "unit": null,
     "answer_format": null,
-    "check": "4+8/100",
+    "check": "4.084-4.075",
     "distractors": [
       {
-        "value": "4.07",
-        "why": "Cuts off after two decimal places instead of rounding up."
+        "value": "0.004",
+        "why": "Subtracts 4.08 from the largest allowed number 4.084."
       },
       {
-        "value": "4.1",
-        "why": "Rounds to 1 decimal place."
+        "value": "0.005",
+        "why": "Subtracts the lower boundary 4.075 from the rounded value 4.08."
       },
       {
-        "value": "4.076",
-        "why": "Rounds to 3 decimal places instead of 2, giving 4.076."
+        "value": "0.01",
+        "why": "Includes 4.085 as the upper endpoint even though it rounds to 4.09."
       },
       {
-        "value": "4.00",
-        "why": "Looks at the 0 in the tenths place and rounds to 4.00."
+        "value": "0.09",
+        "why": "Finds the correct gap but puts the decimal point one place too far right."
       }
     ],
-    "explanation": "Two decimal places means hundredths. 4.0756 has 7 in the hundredths place. The next digit is 5, so round up: 4.08.",
+    "explanation": "The smallest number with three decimal places that rounds to 4.08 is 4.075. The largest is 4.084, because 4.085 would round up to 4.09. Their difference is 4.084 − 4.075 = 0.009. The restriction to three decimal places fixes the allowed endpoints.",
     "hints": [
-      "Which digit is in the hundredths place?",
-      "Look at the digit after it."
+      "Find the smallest and largest allowed numbers, not just numbers close to 4.08.",
+      "The lower boundary is 4.075. The upper halfway value 4.085 is not allowed."
     ],
-    "pitfall": "Truncating instead of rounding.",
-    "diagram": null
+    "pitfall": "The upper halfway boundary rounds to 4.09.",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "id": 254,

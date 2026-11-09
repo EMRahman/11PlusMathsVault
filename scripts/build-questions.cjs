@@ -234,41 +234,29 @@ for (const [file, stage] of AUTHORED) for (const raw of readAuthored(file)) {
 // Difficulty for the original 210 is rated by hand against the official samples; see data/authored/README.md.
 for (const [id, difficulty] of Object.entries(readAuthored('difficulty-ratings.json'))) bank.find(q => q.id === Number(id)).difficulty = difficulty;
 
-// ── Fixed mock papers ─────────────────────────────────────────
-// Older NWSSEE questions strong enough to join the new ones, so each paper keeps its topic balance.
-const NWSSEE_TOP_UPS = [132, 135, 138, 139, 145, 149, 152, 125, 159, 167, 172, 175, 176, 122, 183];
-const seededShuffle = (items, seed) => {
-  const result = [...items];
-  let state = seed >>> 0;
-  const random = () => { state = (state + 0x6D2B79F5) >>> 0; let t = Math.imul(state ^ (state >>> 15), 1 | state); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
-  for (let i = result.length - 1; i > 0; i--) { const j = Math.floor(random() * (i + 1)); [result[i], result[j]] = [result[j], result[i]]; }
-  return result;
-};
-function buildPapers(stage, pool) {
-  const papers = [[], [], []];
-  const count = (list, test) => list.filter(test).length;
-  // Each paper gets the same number per topic. Within that, spread each subtopic, then balance difficulty,
-  // so that scores on different papers are comparable. Hardest questions are placed first.
-  for (const topic of topics) {
-    const inTopic = pool.filter(q => q.topic === topic).sort((x, y) => y.difficulty - x.difficulty || x.id - y.id);
-    const quota = inTopic.length / 3;
-    for (const q of inTopic) {
-      const best = [0, 1, 2].filter(p => count(papers[p], o => o.topic === topic) < quota).sort((p, r) =>
-        count(papers[p], o => o.subtopic === q.subtopic) - count(papers[r], o => o.subtopic === q.subtopic)
-        || count(papers[p], o => o.difficulty === q.difficulty) - count(papers[r], o => o.difficulty === q.difficulty)
-        || p - r)[0];
-      papers[best].push(q);
-    }
+// Replace repetitive legacy exercises while retaining their IDs and skill groups.
+for (const raw of readAuthored('nwssee-upgrades.json')) {
+  const { check, check_note, ...replacement } = raw;
+  const q = bank.find(q => q.id === replacement.id);
+  if (!q || q.mode !== 'desk' || q.topic !== replacement.topic || q.subtopic !== replacement.subtopic) {
+    throw new Error(`Invalid written replacement Q${replacement.id}`);
   }
-  papers.forEach((questions, p) => seededShuffle(questions, (stage === 'SET' ? 1000 : 2000) + p).forEach((q, i) => {
-    q.paper_id = `${stage}-${p + 1}`;
-    q.paper_position = i + 1;
-    // Only questions new to the bank can be kept unseen for the dress rehearsal.
-    if (p === 2 && q.id > 210) q.reserved_mock = true;
-  }));
+  Object.assign(q, replacement, { answer_alt: null, time_target_seconds: NWSSEE_SECONDS[replacement.difficulty] });
 }
-buildPapers('SET', bank.filter(q => q.mode === 'set'));
-buildPapers('NWSSEE', bank.filter(q => q.mode === 'desk' && (q.id > 210 || NWSSEE_TOP_UPS.includes(q.id))));
+
+// ── Fixed mock papers ─────────────────────────────────────────
+// Persist paper membership and order across edits, including which questions stay unseen.
+const assigned = new Set();
+for (const [paperId, ids] of Object.entries(readAuthored('paper-layout.json'))) {
+  ids.forEach((id, position) => {
+    const q = bank.find(q => q.id === id);
+    if (!q || assigned.has(id) || q.stage !== paperId.split('-')[0]) throw new Error(`Invalid paper entry ${paperId}: Q${id}`);
+    assigned.add(id);
+    q.paper_id = paperId;
+    q.paper_position = position + 1;
+    if (paperId.endsWith('-3') && id > 210) q.reserved_mock = true;
+  });
+}
 
 bank.sort((a,b)=>a.id-b.id);
 const output = JSON.stringify(bank,null,2)+'\n';
