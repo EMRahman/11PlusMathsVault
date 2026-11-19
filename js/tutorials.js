@@ -687,6 +687,148 @@ export const TUTORIALS = {
     "videoTitle": "Math Antics \u2014 Rounding and Estimation",
     "videoUrl": "https://www.youtube.com/watch?v=fd-E18EqSVk",
     "videoId": "fd-E18EqSVk"
+  },
+  "combinatorics_and_digits": {
+    "concept": "Counting Digits, Pairings & Roman Numerals",
+    "steps": [
+      "Split digit-counting problems into 1-digit (1–9), 2-digit (10–99) and 3-digit (100+) blocks.",
+      "For round-robin pairings of n items, take n × (n − 1) ÷ 2 so pairs are not counted twice.",
+      "For Roman numerals, decode subtractive pairs (CM = 900, XC = 90, XL = 40, IV = 4) before subtracting."
+    ],
+    "check": "Check inclusive page ranges using (last − first + 1).",
+    "webTitle": "Corbettmaths Primary \u2014 Roman Numerals & Number Puzzles",
+    "webUrl": "https://corbettmathsprimary.com/content/"
+  },
+  "combined_rates_fractions": {
+    "concept": "Combined Work Rates with Unit-Time Fractions",
+    "steps": [
+      "Turn each completion time T into the fraction completed in 1 unit of time: 1/T.",
+      "Add rates that work together (and subtract any drain or outflow rate).",
+      "Use the combined rate to find either total time (1 ÷ combined rate) or work left after a given time."
+    ],
+    "check": "Two taps filling together must always take less time than the faster tap alone.",
+    "webTitle": "Corbettmaths Primary \u2014 Fractions",
+    "webUrl": "https://corbettmathsprimary.com/content/",
+    "videoTitle": "Math Antics \u2014 Adding and Subtracting Fractions",
+    "videoUrl": "https://www.youtube.com/watch?v=52ZlXsFJULI",
+    "videoId": "52ZlXsFJULI"
+  },
+  "simultaneous_cost_problems": {
+    "concept": "Comparing Two Combined Orders (Elimination)",
+    "steps": [
+      "Compare the two totals: if one item has the same count in both orders, subtract to find the extra item's value.",
+      "If neither count matches yet, double or scale one order so one item has equal counts.",
+      "Substitute the first item's value back into the simpler order to find the other item or empty container."
+    ],
+    "check": "Plug both found values back into both original orders to verify both totals match.",
+    "webTitle": "Corbettmaths Primary \u2014 Problem Solving",
+    "webUrl": "https://corbettmathsprimary.com/content/"
+  },
+  "inverse_proportion_rates": {
+    "concept": "Inverse Proportion & Total Worker-Days",
+    "steps": [
+      "Multiply workers (or machines, horses, teeth) by time/turns to find the fixed total effort or distance.",
+      "If part of the job or supply has already been used, subtract that amount first.",
+      "Divide the remaining total by the new number of workers or consumers."
+    ],
+    "check": "More workers sharing the same task must always take fewer hours or days, not more.",
+    "webTitle": "Corbettmaths Primary \u2014 Proportion",
+    "webUrl": "https://corbettmathsprimary.com/content/",
+    "videoTitle": "Corbettmaths Primary — Proportion",
+    "videoUrl": "https://www.youtube.com/watch?v=bg283xTWtxc",
+    "videoId": "bg283xTWtxc"
+  },
+  "venn_percentage_overlap": {
+    "concept": "Two-Set Venn Overlaps (Both, Only & Neither)",
+    "steps": [
+      "Subtract the 'neither' group from the whole (100% or total count) to find everyone in at least one group.",
+      "Add the two main groups together: A + B counts the overlap ('both') twice.",
+      "Subtract the 'at least one' value from A + B to find the overlap ('both'), then subtract from A if 'A only' is asked."
+    ],
+    "check": "Verify that (A only) + (Both) + (B only) + (Neither) adds back to the full total.",
+    "webTitle": "Corbettmaths Primary \u2014 Venn Diagrams",
+    "webUrl": "https://corbettmathsprimary.com/content/"
+  },
+  "surface_area_and_painted_cubes": {
+    "concept": "3D Surface Area, Painted Cubes & 2D Mensuration",
+    "steps": [
+      "For a cuboid's surface area, add the areas of its three distinct rectangle pairs and double: 2(lw + lh + wh).",
+      "For a painted n × n × n cube, corners have 3 painted faces (always 8), edge-middles have 2 (12 × (n − 2)), and face-centres have 1 (6 × (n − 2)²).",
+      "For a parallelogram use base × perpendicular height; for a trapezium use ½ × (a + b) × h."
+    ],
+    "check": "On a 3 × 3 × 3 cube, 8 + 12 + 6 + 1 = 27 small cubes in total.",
+    "webTitle": "Corbettmaths Primary \u2014 Area & 3D Shapes",
+    "webUrl": "https://corbettmathsprimary.com/content/",
+    "videoTitle": "Math Antics \u2014 Area (Composite Shapes)",
+    "videoUrl": "https://www.youtube.com/watch?v=xCdxURXMdFY",
+    "videoId": "xCdxURXMdFY"
+  },
+  "clock_angles_and_miles": {
+    "concept": "Clock Hand Angles, Bearings & Miles–Kilometre Conversion",
+    "steps": [
+      "Clock angles: each hour mark is 30°. The minute hand moves 6° per minute and the hour hand moves 0.5° per minute.",
+      "Bearings: measure clockwise from North (000°). Add clockwise turns and subtract anticlockwise turns.",
+      "Miles and kilometres: use 5 miles = 8 km (divide km by 8 and multiply by 5 to convert to miles)."
+    ],
+    "check": "Remember that miles are longer than kilometres, so a distance in miles has a smaller number than in km.",
+    "webTitle": "Corbettmaths Primary \u2014 Measures & Angles",
+    "webUrl": "https://corbettmathsprimary.com/content/"
+  },
+  "simultaneous_unknowns_puzzles": {
+    "concept": "Balancing Unknowns & Paired Equations",
+    "steps": [
+      "Write each clue as a balanced statement relating the unknowns.",
+      "Add or subtract two statements (or scale one first) so one unknown cancels out.",
+      "For quiz scoring puzzles, compare the actual score with the maximum possible score and divide by (gain + penalty)."
+    ],
+    "check": "Substitute your answers back into every condition in the question.",
+    "webTitle": "Corbettmaths Primary \u2014 Forming and Solving Equations",
+    "webUrl": "https://corbettmathsprimary.com/content/",
+    "videoTitle": "Math Antics \u2014 Solving Basic Equations Pt 1",
+    "videoUrl": "https://www.youtube.com/watch?v=l3XzepN03KQ",
+    "videoId": "l3XzepN03KQ"
+  },
+  "combined_mean_and_probability": {
+    "concept": "Weighted Means, Pie-Chart Angles & Probability",
+    "steps": [
+      "Combined mean: find Total = Mean × Count for each group separately, add the totals, then divide by the overall count.",
+      "Pie-chart sectors: use (sector angle ÷ 360°) × total population to convert degrees into counts.",
+      "Probability: write (favourable outcomes) ÷ (total outcomes) after any additions, and simplify the fraction."
+    ],
+    "check": "A combined mean must lie closer to the larger group's mean than to the smaller group's mean.",
+    "webTitle": "Corbettmaths Primary \u2014 Averages, Pie Charts & Probability",
+    "webUrl": "https://corbettmathsprimary.com/content/",
+    "videoTitle": "Math Antics \u2014 Mean, Median and Mode",
+    "videoUrl": "https://www.youtube.com/watch?v=B1HEzNTGeZ4",
+    "videoId": "B1HEzNTGeZ4"
+  },
+  "mirror_lines_and_rotation": {
+    "concept": "Offset Mirror Lines (x = k, y = k) & Grid Rotations",
+    "steps": [
+      "For a vertical mirror line x = k, keep y unchanged and match the point's horizontal distance on the opposite side of k.",
+      "For a horizontal mirror line y = k, keep x unchanged and match the point's vertical distance on the opposite side of k.",
+      "For a 90° clockwise turn about the origin, swap step directions: (x, y) moves to (y, −x); for a 180° turn about M, repeat the step from P to M past M."
+    ],
+    "check": "Verify that the mirror line or centre of rotation sits exactly halfway between the original point and its image.",
+    "webTitle": "Corbettmaths Primary \u2014 Reflections & Rotations",
+    "webUrl": "https://corbettmathsprimary.com/content/",
+    "videoTitle": "Corbettmaths Primary — Reflections",
+    "videoUrl": "https://www.youtube.com/watch?v=LJtKs8SClSI",
+    "videoId": "LJtKs8SClSI"
+  },
+  "work_rate_fractions_set": {
+    "concept": "Fractions in Combined Rates & Probability",
+    "steps": [
+      "For combined taps or machines, add each 1-minute or 1-hour fraction (1/a + 1/b) using a common denominator.",
+      "For probability after adding items, update both the favourable count and the total count before simplifying.",
+      "Re-read whether the question asks for the completed part, remaining part, or NOT a given colour."
+    ],
+    "check": "Check that all fractions are simplified to lowest terms.",
+    "webTitle": "Corbettmaths Primary \u2014 Fractions",
+    "webUrl": "https://corbettmathsprimary.com/content/",
+    "videoTitle": "Math Antics \u2014 Adding and Subtracting Fractions",
+    "videoUrl": "https://www.youtube.com/watch?v=52ZlXsFJULI",
+    "videoId": "52ZlXsFJULI"
   }
 };
 
@@ -710,6 +852,15 @@ const TUTORIAL_ALIASES = {
   angle_facts_combined: 'angles_on_line',
   area_perimeter_compound: 'compound_area',
   percent_of_amount_harder: 'percent_of_amount',
+  roman_numerals_and_combinatorics: 'combinatorics_and_digits',
+  elimination_money_set: 'simultaneous_cost_problems',
+  inverse_proportion_set: 'inverse_proportion_rates',
+  venn_overlap_set: 'venn_percentage_overlap',
+  trapezium_parallelogram_cuboid_set: 'surface_area_and_painted_cubes',
+  bearings_clocks_miles_set: 'clock_angles_and_miles',
+  paired_equations_set: 'simultaneous_unknowns_puzzles',
+  probability_and_combined_mean_set: 'combined_mean_and_probability',
+  offset_reflection_rotation_set: 'mirror_lines_and_rotation',
 };
 // Replaces the aliased wording where the subtopic is wider than the original tutorial.
 const TUTORIAL_OVERRIDES = {

@@ -4829,24 +4829,27 @@
     "topic": "number_operations",
     "subtopic": "multi_step_cost",
     "difficulty": 2,
-    "question": "A club buys 8 packs of 18 pencils. It gives 12 pencils to each of 10 classes. How many pencils remain?",
-    "answer": "24",
-    "explanation": "First calculate the number bought: 8 × 18 = 144. The classes receive 12 × 10 = 120 pencils. Subtract to find 24 left. Check by adding the used and remaining pencils.",
+    "question": "A school shop buys 8 packs of 18 pencils for £28.80 in total. Twelve pencils are broken and thrown away. The shop sells all the remaining pencils at 35p each. How much profit does the shop make, in pounds?",
+    "answer": "17.40",
+    "explanation": "Altogether 8 × 18 = 144 pencils are bought. Removing 12 broken pencils leaves 132 to sell. At 35p each, sales bring in 132 × £0.35 = £46.20 (132 × 30p = £39.60 plus 132 × 5p = £6.60). Profit is sales minus cost: £46.20 − £28.80 = £17.40.",
     "hints": [
-      "Find the total bought and the total given away separately.",
-      "There are 8 × 18 pencils at the start; 12 × 10 are used."
+      "Find how many unbroken pencils are actually sold before working out the sales income.",
+      "Multiply 132 by 35p in pounds, then subtract the £28.80 cost."
     ],
-    "pitfall": "Subtract the number of pencils given away, not the number of classes.",
+    "pitfall": "Selling all 144 pencils without removing the 12 broken ones, or forgetting to subtract the £28.80 cost.",
     "id": 135,
-    "unit": null,
+    "unit": "£",
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
     "parent_prompt": "Which mental or written method did you choose, and how could you check it?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2,
     "paper_id": "NWSSEE-2",
     "paper_position": 21
   },
@@ -4909,24 +4912,27 @@
     "topic": "number_operations",
     "subtopic": "multi_step_cost",
     "difficulty": 2,
-    "question": "A club buys 9 packs of 16 pencils. It gives 12 pencils to each of 10 classes. How many pencils remain?",
-    "answer": "24",
-    "explanation": "First calculate the number bought: 9 × 16 = 144. The classes receive 12 × 10 = 120 pencils. Subtract to find 24 left. Check by adding the used and remaining pencils.",
+    "question": "A club needs 160 badges for an event. A supplier sells boxes of 12 badges for £5.40 per box, and adds 2 free extra badges inside every box bought. How much must the club spend to get at least 160 badges, in pounds?",
+    "answer": "64.80",
+    "explanation": "Each box provides 12 + 2 = 14 badges. Eleven boxes give 11 × 14 = 154 badges, which is 6 too few. Therefore the club must buy 12 boxes, giving 168 badges. At £5.40 per box, 12 boxes cost 12 × £5.40 = £64.80.",
     "hints": [
-      "Find the total bought and the total given away separately.",
-      "There are 9 × 16 pencils at the start; 12 × 10 are used."
+      "Count both the paid badges and the 2 free badges inside each box.",
+      "Divide 160 by 14 and remember you cannot buy a fraction of a box."
     ],
-    "pitfall": "Subtract the number of pencils given away, not the number of classes.",
+    "pitfall": "Dividing 160 by 12 instead of 14, or rounding 11.4 boxes down instead of up.",
     "id": 138,
-    "unit": null,
+    "unit": "£",
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
     "parent_prompt": "Which mental or written method did you choose, and how could you check it?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2,
     "paper_id": "NWSSEE-3",
     "paper_position": 11
   },
@@ -5015,24 +5021,27 @@
     "topic": "fractions",
     "subtopic": "fraction_of_amount",
     "difficulty": 2,
-    "question": "A box contains 90 cards. 2/3 are blue. Of the cards that are not blue, 1/5 are red. How many are red?",
-    "answer": "6",
-    "explanation": "Blue cards: 90 ÷ 3 × 2 = 60. That leaves 30 non-blue cards. Divide this remainder by 5 to find 6 red cards. The second fraction applies to the remainder, not the original total.",
+    "question": "Box A holds 90 cards, of which 2/3 are blue and the rest are red. Box B holds 60 cards, of which 1/4 are red and the rest are blue. One fifth of the blue cards in Box A are moved into Box B. How many blue cards are now in Box B?",
+    "answer": "57",
+    "explanation": "Box A starts with 2/3 of 90 = 60 blue cards. One fifth of these, 60 ÷ 5 = 12 blue cards, move to Box B. In Box B, 1/4 of 60 = 15 cards are red, so 60 − 15 = 45 cards were already blue. Adding the 12 moved cards gives 45 + 12 = 57 blue cards.",
     "hints": [
-      "First find how many cards are not blue.",
-      "Subtract 2/3 of 90, then find 1/5 of what remains."
+      "Find the starting number of blue cards in each box separately.",
+      "Take 1/5 of Box A's blue cards and add them to Box B's blue cards."
     ],
-    "pitfall": "The second fraction is of the remaining cards, not all the cards.",
+    "pitfall": "Taking 1/5 of all 90 cards in Box A instead of 1/5 of its blue cards, or counting Box B's red cards by mistake.",
     "id": 142,
     "unit": null,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "What does one equal part represent in this question?"
+    "parent_prompt": "What does one equal part represent in this question?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
@@ -5093,24 +5102,27 @@
     "topic": "fractions",
     "subtopic": "fraction_of_amount",
     "difficulty": 3,
-    "question": "A box contains 120 cards. 3/4 are blue. Of the cards that are not blue, 1/3 are red. How many are red?",
-    "answer": "10",
-    "explanation": "Blue cards: 120 ÷ 4 × 3 = 90. That leaves 30 non-blue cards. Divide this remainder by 3 to find 10 red cards. The second fraction applies to the remainder, not the original total.",
+    "question": "A shelf holds 120 books. Three quarters of them are fiction and the rest are non-fiction. During the morning, 2/5 of the fiction books and 1/3 of the non-fiction books are borrowed. How many books remain on the shelf?",
+    "answer": "74",
+    "explanation": "Fiction books: 3/4 of 120 = 90. Non-fiction: 120 − 90 = 30. Borrowed fiction: 2/5 of 90 = 36, leaving 54 fiction books. Borrowed non-fiction: 1/3 of 30 = 10, leaving 20 non-fiction books. Altogether 54 + 20 = 74 books remain on the shelf.",
     "hints": [
-      "First find how many cards are not blue.",
-      "Subtract 3/4 of 120, then find 1/3 of what remains."
+      "Split the 120 books into fiction and non-fiction first.",
+      "Work out how many books are borrowed from each group, then subtract from 120."
     ],
-    "pitfall": "The second fraction is of the remaining cards, not all the cards.",
+    "pitfall": "Applying 2/5 or 1/3 to all 120 books instead of to each separate group, or giving the number borrowed instead of remaining.",
     "id": 145,
     "unit": null,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 135,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
     "parent_prompt": "What does one equal part represent in this question?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2,
     "paper_id": "NWSSEE-1",
     "paper_position": 11
   },
@@ -5280,24 +5292,27 @@
     "topic": "decimals",
     "subtopic": "money_change",
     "difficulty": 2,
-    "question": "Maya pays £30 for 6 pens costing £3.65 each. How much change does she receive, in pounds?",
-    "answer": "8.1",
-    "explanation": "First find the total cost: 6 × £3.65 = £21.90. Subtract this from £30 to get £8.10 change. Check that cost plus change equals the amount paid.",
+    "question": "A shop sells notebooks at £3.60 each with an offer: buy 3 notebooks and get the 4th notebook half-price. Maya takes 8 notebooks and pays with a £30 note. How much change does she receive, in pounds?",
+    "answer": "4.80",
+    "explanation": "Each group of 4 notebooks contains 3 at full price (£3.60) and 1 at half price (£1.80), costing 3 × £3.60 + £1.80 = £12.60. For 8 notebooks, Maya pays for two groups: 2 × £12.60 = £25.20. Subtracting from £30 gives £30 − £25.20 = £4.80 change.",
     "hints": [
-      "There are two calculations: total cost, then change.",
-      "Find 6 × 3.65 before subtracting from 30."
+      "Group the 8 notebooks into two lots of 4 to apply the offer.",
+      "Work out the cost of 3 full-price notebooks plus 1 half-price notebook, double it, then subtract from £30."
     ],
-    "pitfall": "Subtract the total cost of all the pens, not just one pen.",
+    "pitfall": "Applying the half-price discount only once across 8 notebooks, or giving the total cost instead of the change.",
     "unit": "£",
     "id": 152,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
     "parent_prompt": "How does place value help you check the size of your answer?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2,
     "paper_id": "NWSSEE-2",
     "paper_position": 18
   },
@@ -5360,25 +5375,27 @@
     "topic": "ratio",
     "subtopic": "volume_ratio",
     "difficulty": 2,
-    "question": "Two boxes have square bases of side 8 cm and 4 cm. Both are 5 cm high. Give the large volume : small volume ratio in simplest form.",
-    "answer": "4:1",
-    "explanation": "The volumes are 8 × 8 × 5 = 320 and 4 × 4 × 5 = 80 cubic centimetres. Simplify their ratio by dividing both by their highest common factor. The equal heights cancel.",
+    "question": "Tank A has a square base of side 6 cm and is filled with water to a height of 8 cm. All this water is poured into an empty Tank B, which has a square base of side 12 cm and a height of 10 cm. Write the ratio of the new water depth in Tank B to the full height of Tank B in simplest form.",
+    "answer": "1:5",
+    "explanation": "The water volume is 6 × 6 × 8 = 288 cm³. Tank B has base area 12 × 12 = 144 cm², so the water reaches a depth of 288 ÷ 144 = 2 cm. Comparing this 2 cm depth to Tank B's height of 10 cm gives 2:10, which simplifies to 1:5.",
     "hints": [
-      "Calculate each base area first.",
-      "The heights are equal, so comparing the square base areas also compares the volumes."
+      "Find the volume of water in Tank A first, then divide by Tank B's base area to find the new depth.",
+      "Compare the new water depth with 10 cm and divide both sides by their highest common factor."
     ],
-    "pitfall": "Changing two base dimensions changes area by the square of the side scale.",
+    "pitfall": "Assuming the water depth halves because the base side doubled; doubling both base sides multiplies the base area by 4.",
     "answer_format": "ratio_simplest",
     "id": 155,
     "unit": null,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "What does one ratio part stand for?"
+    "parent_prompt": "What does one ratio part stand for?",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
@@ -5436,49 +5453,54 @@
     "topic": "ratio",
     "subtopic": "volume_ratio",
     "difficulty": 2,
-    "question": "Two boxes have square bases of side 9 cm and 3 cm. Both are 6 cm high. Give the large volume : small volume ratio in simplest form.",
-    "answer": "9:1",
-    "explanation": "The volumes are 9 × 9 × 6 = 486 and 3 × 3 × 6 = 54 cubic centimetres. Simplify their ratio by dividing both by their highest common factor. The equal heights cancel.",
+    "question": "Two cuboid boxes both have square bases. The side length of the large box's base is 3 times the side length of the small box's base. The height of the small box is 3 times the height of the large box. Give the ratio of the large box's volume to the small box's volume in simplest form.",
+    "answer": "3:1",
+    "explanation": "Test with simple lengths: let the small box be 1 cm by 1 cm by 3 cm (volume 3 cm³). Then the large box is 3 cm by 3 cm by 1 cm (volume 9 cm³). The ratio of large volume to small volume is 9:3, which simplifies to 3:1.",
     "hints": [
-      "Calculate each base area first.",
-      "The heights are equal, so comparing the square base areas also compares the volumes."
+      "Try choosing easy numbers for the small base side and the large height, such as 1 cm.",
+      "Remember that a square base multiplies the side scale factor twice, while height multiplies once."
     ],
-    "pitfall": "Changing two base dimensions changes area by the square of the side scale.",
+    "pitfall": "Thinking the scaling factors 3 and 3 cancel out to 1:1; squaring the base side factor gives 9:1 before dividing by 3.",
     "answer_format": "ratio_simplest",
     "id": 158,
     "unit": null,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "What does one ratio part stand for?"
+    "parent_prompt": "What does one ratio part stand for?",
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
     "topic": "ratio",
     "subtopic": "unitary_method",
     "difficulty": 3,
-    "question": "8 identical folders cost £6.40. How much will 25 folders cost, in pounds?",
+    "question": "Eight identical printers working together take 30 minutes to print a batch of 2400 leaflets. After 15 minutes of printing, 2 printers break down and stop. How many more minutes do the remaining printers need to finish the batch?",
     "answer": "20",
-    "explanation": "One folder costs £6.40 ÷ 8 = £0.80. Multiply this by 25 to get £20.00. Check your result is proportional to the number of identical folders bought.",
+    "explanation": "All 8 printers print 2400 ÷ 30 = 80 leaflets per minute, so 1 printer prints 10 leaflets per minute. In the first 15 minutes they print 15 × 80 = 1200 leaflets, leaving 1200 leaflets. With 6 printers left, the rate drops to 60 leaflets per minute, taking 1200 ÷ 60 = 20 more minutes.",
     "hints": [
-      "Work out the cost of a single folder first.",
-      "You may convert the cost into pence before dividing."
+      "Find how many leaflets one printer produces per minute, and how many are printed in the first 15 minutes.",
+      "Divide the remaining leaflets by the new combined rate of 6 printers."
     ],
-    "pitfall": "Round only if required; keep the exact unit cost for the multiplication.",
-    "unit": "£",
+    "pitfall": "Adding 20 minutes to 15 minutes to give the total time (35) instead of the extra time needed, or dividing by 2 printers.",
+    "unit": "minutes",
     "id": 159,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 135,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
     "parent_prompt": "What does one ratio part stand for?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2,
     "paper_id": "NWSSEE-1",
     "paper_position": 20
   },
@@ -5589,24 +5611,27 @@
     "topic": "percentages",
     "subtopic": "percent_discount",
     "difficulty": 2,
-    "question": "A coat costs £120. It is reduced by 25%. What is its sale price in pounds?",
-    "answer": "90",
-    "explanation": "25% of £120 is £30. Subtract that discount from the original price: £120 − £30 = £90. Check by finding 75% of the original price instead.",
+    "question": "A coat has a full price of £120 in two shops. Shop A gives 25% off the coat and charges £8 for delivery. Shop B gives 15% off with free delivery. How many pounds cheaper is the cheaper total cost?",
+    "answer": "4",
+    "explanation": "At Shop A, 25% of £120 is £30, so the coat is £90, plus £8 delivery gives £98. At Shop B, 15% of £120 is £18, so the coat with free delivery costs £120 − £18 = £102. Shop A is cheaper by £102 − £98 = £4.",
     "hints": [
-      "What proportion of the original price is still paid?",
-      "Find the discount and subtract it, or calculate the remaining percentage directly."
+      "Work out the full delivered cost at Shop A and at Shop B separately.",
+      "Remember to add Shop A's £8 delivery fee after taking 25% off £120."
     ],
-    "pitfall": "Giving the discount amount answers a different question.",
+    "pitfall": "Comparing only the percentage discounts without adding Shop A's delivery fee, or giving the cheaper total instead of the difference.",
     "unit": "£",
     "id": 164,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "Which familiar percentage or fraction could you use to check?"
+    "parent_prompt": "Which familiar percentage or fraction could you use to check?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
@@ -5640,48 +5665,54 @@
     "topic": "percentages",
     "subtopic": "percent_increase",
     "difficulty": 2,
-    "question": "A club has 160 members. Membership increases by 25%. How many members does it have now?",
-    "answer": "200",
-    "explanation": "The increase is 25% of 160, or 40. Add this to the original membership: 160 + 40 = 200. Check that the final number is above the starting membership.",
+    "question": "A club starts with 160 members. Its membership increases by 25% in Year 1, and then increases by 10% of the Year 1 total in Year 2. How many members does the club have at the end of Year 2?",
+    "answer": "220",
+    "explanation": "In Year 1, 25% of 160 is 40, raising membership to 160 + 40 = 200. In Year 2, the 10% increase is taken from 200, not 160: 10% of 200 is 20. Total membership at the end of Year 2 is 200 + 20 = 220.",
     "hints": [
-      "What is the increase, rather than the final total?",
-      "Calculate the percentage increase, then add it to the starting membership."
+      "Calculate the new number of members after Year 1 before finding Year 2's increase.",
+      "Use 10% of the Year 1 total, rather than 10% of 160."
     ],
-    "pitfall": "The new total includes both the original members and the increase.",
+    "pitfall": "Adding the percentages (25% + 10% = 35% of 160 = 216) instead of applying Year 2's 10% increase to the larger Year 1 total.",
     "id": 166,
     "unit": null,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "Which familiar percentage or fraction could you use to check?"
+    "parent_prompt": "Which familiar percentage or fraction could you use to check?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
     "topic": "percentages",
     "subtopic": "percent_discount",
     "difficulty": 2,
-    "question": "A coat costs £240. It is reduced by 35%. What is its sale price in pounds?",
-    "answer": "156",
-    "explanation": "35% of £240 is £84. Subtract that discount from the original price: £240 − £84 = £156. Check by finding 65% of the original price instead.",
+    "question": "Theatre tickets have a full price of £20 each. Children receive 35% off the full price, while adults pay full price. A group of 4 adults and 6 children uses an extra £15 group voucher off their final bill. How much does the group pay in pounds?",
+    "answer": "143",
+    "explanation": "Four adult tickets at full price cost 4 × £20 = £80. A child discount of 35% takes £7 off £20, so each child ticket costs £13. Six child tickets cost 6 × £13 = £78, giving £158 altogether. Subtracting the £15 voucher leaves £143.",
     "hints": [
-      "What proportion of the original price is still paid?",
-      "Find the discount and subtract it, or calculate the remaining percentage directly."
+      "Price the adult tickets and the discounted child tickets separately.",
+      "Subtract the £15 voucher once from the combined total, not from every ticket."
     ],
-    "pitfall": "Giving the discount amount answers a different question.",
+    "pitfall": "Applying the 35% discount to adult tickets too, or taking £15 off each ticket instead of off the group bill.",
     "unit": "£",
     "id": 167,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
     "parent_prompt": "Which familiar percentage or fraction could you use to check?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2,
     "paper_id": "NWSSEE-1",
     "paper_position": 3
   },
@@ -5717,56 +5748,61 @@
     "topic": "percentages",
     "subtopic": "percent_increase",
     "difficulty": 2,
-    "question": "A club has 240 members. Membership increases by 35%. How many members does it have now?",
-    "answer": "324",
-    "explanation": "The increase is 35% of 240, or 84. Add this to the original membership: 240 + 84 = 324. Check that the final number is above the starting membership.",
+    "question": "A sports club has 240 members, of whom 5/8 are juniors and the rest are seniors. Next season, junior numbers increase by 20% and senior numbers increase by 10%. How many members will the club have altogether next season?",
+    "answer": "279",
+    "explanation": "Juniors make up 5/8 of 240 = 150 members, leaving 240 − 150 = 90 seniors. A 20% rise adds 30 juniors, giving 180 juniors. A 10% rise adds 9 seniors, giving 99 seniors. Altogether there will be 180 + 99 = 279 members.",
     "hints": [
-      "What is the increase, rather than the final total?",
-      "Calculate the percentage increase, then add it to the starting membership."
+      "Find how many juniors and how many seniors are in the club at the start.",
+      "Increase the juniors by 20% and the seniors by 10%, then add the two new totals."
     ],
-    "pitfall": "The new total includes both the original members and the increase.",
+    "pitfall": "Applying a 30% increase to all 240 members instead of applying each percentage to its own group.",
     "id": 169,
     "unit": null,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "Which familiar percentage or fraction could you use to check?"
+    "parent_prompt": "Which familiar percentage or fraction could you use to check?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
     "topic": "geometry",
     "subtopic": "compound_area",
     "difficulty": 2,
-    "question": "Find the area of the L-shaped floor shown. It is a 12 m by 8 m rectangle with a 4 m by 3 m corner removed. Give square metres.",
-    "answer": "84",
-    "explanation": "The full rectangle covers 12 × 8 = 96 square metres. The missing corner covers 4 × 3 = 12. Subtract: 96 − 12 = 84 square metres. Splitting the L into two rectangles is another valid method.",
+    "question": "The L-shaped floor shown is an 11 m by 8 m rectangle with a 4 m by 3 m corner removed. Flooring packs cover 3 m² each and cost £24 per pack. How much does it cost to buy enough whole packs for the floor, in pounds?",
+    "answer": "624",
+    "explanation": "The whole 11 m by 8 m rectangle has area 88 m². Removing the 4 m by 3 m corner (12 m²) leaves 76 m². Twenty-five packs cover only 75 m², leaving 1 m² bare, so 26 whole packs must be bought. At £24 each, 26 × £24 = £624.",
     "hints": [
-      "Could you start with the whole rectangle?",
-      "Find the area of the full rectangle and subtract the area of the missing corner."
+      "Find the L-shape's area by subtracting the missing corner from the full rectangle.",
+      "Divide the area by 3 m² and round up to whole packs before multiplying by £24."
     ],
-    "pitfall": "Subtract areas rather than side lengths.",
-    "unit": "m²",
+    "pitfall": "Rounding down to 25 packs (leaving part of the floor uncovered) or finding the perimeter instead of the area.",
+    "unit": "£",
     "diagram": {
       "type": "l_shape",
-      "width": "12 m",
+      "width": "11 m",
       "height": "8 m",
       "cutWidth": "4 m",
       "cutHeight": "3 m",
-      "description": "12 m by 8 m rectangle with a 4 m by 3 m corner removed."
+      "description": "11 m by 8 m rectangle with a 4 m by 3 m corner removed."
     },
     "id": 170,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "Can you explain the shape or angle fact you used?"
+    "parent_prompt": "Can you explain the shape or angle fact you used?",
+    "answer_format": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
@@ -5837,14 +5873,14 @@
     "topic": "geometry",
     "subtopic": "compound_area",
     "difficulty": 2,
-    "question": "Find the area of the L-shaped floor shown. It is a 14 m by 9 m rectangle with a 5 m by 4 m corner removed. Give square metres.",
-    "answer": "106",
-    "explanation": "The full rectangle covers 14 × 9 = 126 square metres. The missing corner covers 5 × 4 = 20. Subtract: 126 − 20 = 106 square metres. Splitting the L into two rectangles is another valid method.",
+    "question": "The L-shaped courtyard shown is a 14 m by 9 m rectangle with a 5 m by 4 m corner removed. Inside the courtyard is a square flowerbed with perimeter 16 m. The rest of the courtyard is paved. What is the paved area, in m²?",
+    "answer": "90",
+    "explanation": "The enclosing 14 m by 9 m rectangle has area 126 m². Subtracting the 5 m by 4 m cut-out (20 m²) gives the courtyard area of 106 m². A square with perimeter 16 m has sides of 4 m and area 4 × 4 = 16 m². Paved area = 106 − 16 = 90 m².",
     "hints": [
-      "Could you start with the whole rectangle?",
-      "Find the area of the full rectangle and subtract the area of the missing corner."
+      "Find the total area of the L-shaped courtyard, then find the area of the flowerbed.",
+      "Use the perimeter of the square flowerbed to work out its side length first."
     ],
-    "pitfall": "Subtract areas rather than side lengths.",
+    "pitfall": "Subtracting the flowerbed's perimeter (16) directly as if it were an area, or forgetting the missing corner.",
     "unit": "m²",
     "diagram": {
       "type": "l_shape",
@@ -5857,12 +5893,14 @@
     "id": 173,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "Can you explain the shape or angle fact you used?"
+    "parent_prompt": "Can you explain the shape or angle fact you used?",
+    "answer_format": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
@@ -5901,15 +5939,15 @@
     "topic": "geometry",
     "subtopic": "perimeter",
     "difficulty": 2,
-    "question": "A rectangular garden has length 17 m and width 9 m. A 3 m gate occupies part of the boundary. How many metres of fencing are needed for the rest?",
-    "answer": "49",
-    "explanation": "The whole boundary is twice the length plus twice the width: 2 × (17 + 9) = 52 metres. Subtract the 3-metre gate, leaving 49 metres of fencing. Check by adding the gate back.",
+    "question": "A rectangular paddock has length 17 m and width 9 m. A 3 m gate fills part of the boundary, and the rest is enclosed using 2 m wide fence panels costing £18 each. How much do the fence panels cost in total, in pounds?",
+    "answer": "450",
+    "explanation": "The total perimeter is 2 × (17 + 9) = 52 m. Taking off the 3 m gate leaves 49 m to fence. Since panels are 2 m wide and sold whole, 24 panels cover only 48 m, so 25 panels are required. Total cost = 25 × £18 = £450.",
     "hints": [
-      "Find the whole perimeter before accounting for the gate.",
-      "Double the sum of length and width, then subtract the gate’s width."
+      "Find the perimeter minus the gate before working out how many panels are needed.",
+      "Twenty-four panels only reach 48 m; round the number of panels up."
     ],
-    "pitfall": "The gate replaces part of the fence, so its width is subtracted.",
-    "unit": "m",
+    "pitfall": "Using 24.5 panels in the cost calculation or forgetting to remove the 3 m gate.",
+    "unit": "£",
     "diagram": {
       "type": "rectangle",
       "width": "17 m",
@@ -5919,12 +5957,14 @@
     "id": 175,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
     "parent_prompt": "Can you explain the shape or angle fact you used?",
+    "answer_format": null,
+    "content_revision": 2,
     "paper_id": "NWSSEE-2",
     "paper_position": 11
   },
@@ -5933,15 +5973,15 @@
     "topic": "geometry",
     "subtopic": "compound_area",
     "difficulty": 2,
-    "question": "Find the area of the L-shaped floor shown. It is a 16 m by 10 m rectangle with a 6 m by 3 m corner removed. Give square metres.",
-    "answer": "142",
-    "explanation": "The full rectangle covers 16 × 10 = 160 square metres. The missing corner covers 6 × 3 = 18. Subtract: 160 − 18 = 142 square metres. Splitting the L into two rectangles is another valid method.",
+    "question": "The L-shaped hall shown is a 16 m by 10 m rectangle with a 6 m by 3 m corner removed. A rectangular stage measuring 4 m by 3 m inside the hall is left unfloored, and the rest is covered with wood at £15 per m². What is the cost of the wood, in pounds?",
+    "answer": "1950",
+    "explanation": "The full rectangle is 16 × 10 = 160 m². Subtract the 6 m by 3 m cut-out (18 m²) to get 142 m² for the hall. Subtract the 4 × 3 = 12 m² unfloored stage, leaving 130 m². Multiplying by £15 gives 130 × £15 = £1950.",
     "hints": [
-      "Could you start with the whole rectangle?",
-      "Find the area of the full rectangle and subtract the area of the missing corner."
+      "Subtract both the missing corner and the unfloored stage from the 16 m by 10 m rectangle.",
+      "Multiply the final floored area in m² by £15."
     ],
-    "pitfall": "Subtract areas rather than side lengths.",
-    "unit": "m²",
+    "pitfall": "Forgetting to subtract the unfloored stage, or adding the cut-out area instead of subtracting it.",
+    "unit": "£",
     "diagram": {
       "type": "l_shape",
       "width": "16 m",
@@ -5953,12 +5993,14 @@
     "id": 176,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
     "parent_prompt": "Can you explain the shape or angle fact you used?",
+    "answer_format": null,
+    "content_revision": 2,
     "paper_id": "NWSSEE-3",
     "paper_position": 12
   },
@@ -6104,24 +6146,27 @@
     "topic": "measures",
     "subtopic": "speed_distance_time",
     "difficulty": 2,
-    "question": "A cyclist travels 60 km at a steady 15 km/h. How many minutes does the journey take?",
-    "answer": "240",
-    "explanation": "Time equals distance divided by speed: 60 ÷ 15 = 4 hours. Multiply by 60 to convert to 240 minutes. Check that speed multiplied by the time in hours gives the original distance.",
+    "question": "A cyclist rides 30 km from town A to town B at a steady 15 km/h, rests for 15 minutes, then rides back along the same 30 km route at 20 km/h. How many minutes does the whole trip take, including the rest?",
+    "answer": "225",
+    "explanation": "The outward ride takes 30 ÷ 15 = 2 hours (120 minutes). The return ride takes 30 ÷ 20 = 1.5 hours (90 minutes). Adding the 15-minute rest stop gives 120 + 15 + 90 = 225 minutes altogether.",
     "hints": [
-      "Find the journey time in hours first.",
-      "Divide distance by speed, then multiply the hours by 60."
+      "Calculate the time for the outward journey, the rest stop, and the return journey separately.",
+      "Convert each journey time from hours into minutes before adding them."
     ],
-    "pitfall": "The question requests minutes, even though the speed uses hours.",
+    "pitfall": "Averaging the two speeds (17.5 km/h) instead of calculating each leg's time separately, or forgetting the rest stop.",
     "unit": "minutes",
     "id": 182,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "Why is that the right unit for the final answer?"
+    "parent_prompt": "Why is that the right unit for the final answer?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
@@ -6259,24 +6304,27 @@
     "topic": "algebra",
     "subtopic": "consecutive_numbers",
     "difficulty": 2,
-    "question": "Five consecutive odd numbers add to 165. What is the smallest?",
-    "answer": "29",
-    "explanation": "The middle number is the mean, 165 ÷ 5 = 33. Consecutive odd numbers differ by 2. The smallest lies two steps below the middle, so subtract 4 to get 29. Check all five add to 165.",
+    "question": "Five consecutive even numbers add up to 170. If the next consecutive even number after the largest is added to the list, what is the sum of the smallest and the new largest number?",
+    "answer": "70",
+    "explanation": "The middle of the five consecutive even numbers is the mean: 170 ÷ 5 = 34. Even numbers differ by 2, so the five numbers are 30, 32, 34, 36, 38. Adding the next even number gives 40. The sum of the smallest and new largest is 30 + 40 = 70.",
     "hints": [
-      "For five equally spaced numbers, the mean is the middle one.",
-      "Find the mean, then move two steps of size 2 down to the smallest."
+      "Divide 170 by 5 to find the middle even number, then list all five numbers.",
+      "Include the extra consecutive even number above the largest before adding smallest and largest."
     ],
-    "pitfall": "Consecutive odd numbers differ by two, rather than one.",
+    "pitfall": "Stepping by 1 instead of 2 for even numbers, or using 38 instead of the new largest number 40.",
     "id": 188,
     "unit": null,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "Does your rule work when you substitute the answer back?"
+    "parent_prompt": "Does your rule work when you substitute the answer back?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
@@ -6310,48 +6358,54 @@
     "topic": "algebra",
     "subtopic": "number_sequences",
     "difficulty": 3,
-    "question": "A sequence begins 7, 12, 17, 22. The same rule continues. What is the 15th term?",
-    "answer": "77",
-    "explanation": "The first term is 7 and the common difference is 5. There are 14 steps from the first to the 15th term, so calculate 7 + 14 × 5 = 77.",
+    "question": "Sequence A starts at 7 and adds 5 each time (7, 12, 17, …). Sequence B starts at 95 and subtracts 3 each time (95, 92, 89, …). Which number appears in the exact same position in both sequences?",
+    "answer": "62",
+    "explanation": "At position 1, the sequences are 95 − 7 = 88 apart. Each step brings them closer by 5 + 3 = 8, so they meet after 88 ÷ 8 = 11 steps (at the 12th term). The 12th term of Sequence A is 7 + 11 × 5 = 62 (check: 95 − 11 × 3 = 62).",
     "hints": [
-      "How many steps separate the first term from the requested term?",
-      "Multiply the step size by one less than the term number, then add the first term."
+      "Find the starting gap between 7 and 95, and by how much that gap shrinks each step.",
+      "Be careful to find the number itself, not its position number."
     ],
-    "pitfall": "The first term is already in place, so use one fewer step than the term number.",
+    "pitfall": "Giving the position (12) or number of steps (11) instead of the term value (62).",
     "id": 190,
     "unit": null,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 135,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "Does your rule work when you substitute the answer back?"
+    "parent_prompt": "Does your rule work when you substitute the answer back?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
     "topic": "algebra",
     "subtopic": "consecutive_numbers",
     "difficulty": 2,
-    "question": "Five consecutive odd numbers add to 195. What is the smallest?",
-    "answer": "35",
-    "explanation": "The middle number is the mean, 195 ÷ 5 = 39. Consecutive odd numbers differ by 2. The smallest lies two steps below the middle, so subtract 4 to get 35. Check all five add to 195.",
+    "question": "Four consecutive odd house numbers on one side of a street add up to 168. What is the largest of the four house numbers?",
+    "answer": "45",
+    "explanation": "With four consecutive odd numbers, the mean 168 ÷ 4 = 42 sits halfway between the two middle numbers. Those two odd numbers are 41 and 43, making the four numbers 39, 41, 43 and 45. The largest house number is 45.",
     "hints": [
-      "For five equally spaced numbers, the mean is the middle one.",
-      "Find the mean, then move two steps of size 2 down to the smallest."
+      "Dividing 168 by 4 gives an even number halfway between the two middle odd numbers.",
+      "Step outwards by 2 from the middle pair to find the smallest and largest."
     ],
-    "pitfall": "Consecutive odd numbers differ by two, rather than one.",
+    "pitfall": "Thinking 42 must be one of the numbers; with an even count of odd numbers, the mean is even and lies between the two middle terms.",
     "id": 191,
     "unit": null,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "Does your rule work when you substitute the answer back?"
+    "parent_prompt": "Does your rule work when you substitute the answer back?",
+    "answer_format": null,
+    "diagram": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
@@ -6565,14 +6619,14 @@
     "topic": "statistics",
     "subtopic": "missing_mean",
     "difficulty": 2,
-    "question": "The five test scores have a mean of 20. Use the table to find the missing score.",
-    "answer": "20",
-    "explanation": "The total of five scores is 20 × 5 = 100. The four known scores total 80. Subtract to find 20 for the missing score, then check the resulting mean.",
+    "question": "The five test scores in the table have a mean of 20. Both Test 4 and Test 5 are missing, and Test 5 is 6 marks higher than Test 4. What was the score in Test 5?",
+    "answer": "24",
+    "explanation": "The five scores must total 5 × 20 = 100. The three known scores add up to 17 + 23 + 18 = 58, leaving 100 − 58 = 42 for Tests 4 and 5 together. Since Test 5 is 6 higher, Test 4 is (42 − 6) ÷ 2 = 18 and Test 5 is 18 + 6 = 24.",
     "hints": [
-      "Find the total needed for all five scores.",
-      "Multiply the mean by five, then subtract the four scores given."
+      "Find the total needed for all five tests and subtract the three known scores.",
+      "Share the remaining total between Tests 4 and 5 using the 6-mark difference."
     ],
-    "pitfall": "Include the missing score in the total number of values.",
+    "pitfall": "Dividing 42 by 2 to get 21 and then adding 6 (which gives a difference of 12 instead of 6), or giving Test 4's score.",
     "diagram": {
       "type": "table",
       "caption": "Test scores",
@@ -6587,15 +6641,15 @@
         ],
         [
           "2",
-          19
-        ],
-        [
-          "3",
           23
         ],
         [
+          "3",
+          18
+        ],
+        [
           "4",
-          21
+          "?"
         ],
         [
           "5",
@@ -6607,12 +6661,14 @@
     "unit": null,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 105,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "What does the total, comparison or average tell you about the data?"
+    "parent_prompt": "What does the total, comparison or average tell you about the data?",
+    "answer_format": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
@@ -6745,14 +6801,14 @@
     "topic": "statistics",
     "subtopic": "missing_mean",
     "difficulty": 3,
-    "question": "The five test scores have a mean of 25. Use the table to find the missing score.",
-    "answer": "27",
-    "explanation": "The total of five scores is 25 × 5 = 125. The four known scores total 98. Subtract to find 27 for the missing score, then check the resulting mean.",
+    "question": "The table shows four of five test scores, with Test 5 missing. Including Test 5 lowers the mean of all five tests by 3 marks compared with the mean of the first four tests alone. What was the score in Test 5?",
+    "answer": "12",
+    "explanation": "The first four scores total 24 + 28 + 31 + 25 = 108, giving a mean of 108 ÷ 4 = 27. Including Test 5 lowers the mean by 3 to 24. Five scores with a mean of 24 total 5 × 24 = 120, so Test 5 was 120 − 108 = 12.",
     "hints": [
-      "Find the total needed for all five scores.",
-      "Multiply the mean by five, then subtract the four scores given."
+      "Find the mean of the four known scores in the table first.",
+      "Subtract 3 from that mean to get the five-test mean, find the new total of all five tests, and subtract 108."
     ],
-    "pitfall": "Include the missing score in the total number of values.",
+    "pitfall": "Subtracting 3 from the four-test total instead of from the mean, or multiplying 24 by 4 instead of 5.",
     "diagram": {
       "type": "table",
       "caption": "Test scores",
@@ -6763,19 +6819,19 @@
       "rows": [
         [
           "1",
-          20
+          24
         ],
         [
           "2",
-          26
-        ],
-        [
-          "3",
           28
         ],
         [
+          "3",
+          31
+        ],
+        [
           "4",
-          24
+          25
         ],
         [
           "5",
@@ -6787,12 +6843,14 @@
     "unit": null,
     "answer_alt": null,
     "stage": "NWSSEE",
-    "time_target_seconds": 120,
+    "time_target_seconds": 135,
     "oral_load": null,
     "answer_display": null,
     "answer_index": null,
     "options": null,
-    "parent_prompt": "What does the total, comparison or average tell you about the data?"
+    "parent_prompt": "What does the total, comparison or average tell you about the data?",
+    "answer_format": null,
+    "content_revision": 2
   },
   {
     "mode": "desk",
@@ -18414,5 +18472,2155 @@
     "options": null,
     "paper_id": "NWSSEE-2",
     "paper_position": 19
+  },
+  {
+    "id": 421,
+    "topic": "number_operations",
+    "subtopic": "combinatorics_and_digits",
+    "difficulty": 3,
+    "question": "A printer numbers every page of a 145-page book from 1 to 145. How many individual digits are printed altogether?",
+    "answer": "327",
+    "unit": null,
+    "explanation": "Count by the number of digits per page. Pages 1 to 9 have 1 digit each: 9 × 1 = 9 digits. Pages 10 to 99 are 90 pages with 2 digits each: 90 × 2 = 180 digits. Pages 100 to 145 are 46 pages with 3 digits each: 46 × 3 = 138 digits. Total = 9 + 180 + 138 = 327 digits.",
+    "hints": [
+      "Split the pages into 1-digit, 2-digit and 3-digit groups.",
+      "Count carefully how many pages are in 10–99 and 100–145, including both end pages."
+    ],
+    "pitfall": "Thinking there are 45 pages from 100 to 145 instead of 46, or multiplying 145 by 3.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which mental or written method did you choose, and how could you check it?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 422,
+    "topic": "number_operations",
+    "subtopic": "combinatorics_and_digits",
+    "difficulty": 2,
+    "question": "In a chess tournament, 12 players each play every other player once in the group stage. The top two players then play one final match to decide the champion. How many matches are played in total?",
+    "answer": "67",
+    "unit": null,
+    "explanation": "In the group stage, each of the 12 players faces 11 opponents, making 12 × 11 = 132 pairings. Since each match involves two players, halve this to avoid counting matches twice: 132 ÷ 2 = 66 group matches. Adding the single final match gives 66 + 1 = 67 matches.",
+    "hints": [
+      "First find how many group-stage matches take place when 12 players each meet once.",
+      "Count 11 opponents per player, halve to remove duplicates, then add the final match."
+    ],
+    "pitfall": "Forgetting to halve 12 × 11 (counting every match twice), or forgetting the final match.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which mental or written method did you choose, and how could you check it?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 423,
+    "topic": "number_operations",
+    "subtopic": "combinatorics_and_digits",
+    "difficulty": 2,
+    "question": "One town clock is dated in Roman numerals as MDCCCLXV, and a second clock is dated MCMXLII. How many years later was the second clock built than the first?",
+    "answer": "77",
+    "unit": null,
+    "explanation": "Convert each Roman numeral carefully. M = 1000, DCCC = 800, LX = 60, V = 5, so MDCCCLXV is 1865. For MCMXLII, M = 1000, CM = 900, XL = 40, II = 2, making 1942. Subtracting gives 1942 − 1865 = 77 years later.",
+    "hints": [
+      "Break each Roman numeral into thousands, hundreds, tens and ones.",
+      "Remember subtractive pairs: CM means 1000 − 100 = 900, and XL means 50 − 10 = 40."
+    ],
+    "pitfall": "Reading CM as 1100 or XL as 60 instead of using the subtractive rule.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which mental or written method did you choose, and how could you check it?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 424,
+    "topic": "fractions",
+    "subtopic": "combined_rates_fractions",
+    "difficulty": 2,
+    "question": "Tap A on its own fills an empty tank in 20 minutes. Tap B on its own fills the same tank in 30 minutes. How many minutes will it take to fill the empty tank if both taps run together?",
+    "answer": "12",
+    "unit": "minutes",
+    "explanation": "In 1 minute, Tap A fills 1/20 of the tank and Tap B fills 1/30. Together in 1 minute they fill 1/20 + 1/30 = 3/60 + 2/60 = 5/60 = 1/12 of the tank. Since they fill 1/12 each minute, the whole tank fills in 12 minutes.",
+    "hints": [
+      "Work out what fraction of the tank each tap fills in 1 minute.",
+      "Add the two 1-minute fractions together to find how long 1 whole tank takes."
+    ],
+    "pitfall": "Averaging 20 and 30 to get 25 minutes; running two taps together must be faster than either tap alone.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does one equal part represent in this question?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 425,
+    "topic": "fractions",
+    "subtopic": "combined_rates_fractions",
+    "difficulty": 3,
+    "question": "An inlet tap fills an empty tank in 15 minutes, while a drain pipe can empty a full tank in 45 minutes. If both the tap and the drain pipe are left open when the tank is empty, how many minutes does it take to fill the tank?",
+    "answer": "22.5",
+    "unit": "minutes",
+    "answer_alt": [
+      "22 1/2",
+      "22.5 minutes"
+    ],
+    "explanation": "In 1 minute, the tap adds 1/15 = 3/45 of the tank while the drain removes 1/45. The net gain each minute is 3/45 − 1/45 = 2/45 of the tank. To fill 45/45 takes 45 ÷ 2 = 22.5 minutes.",
+    "hints": [
+      "Find the fraction filled by the tap in 1 minute and the fraction emptied by the drain in 1 minute.",
+      "Subtract the drain's fraction from the tap's fraction to get the net gain per minute."
+    ],
+    "pitfall": "Adding the rates instead of subtracting the drain rate, or dividing 45 by 3 instead of 2.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "oral_load": null,
+    "parent_prompt": "What does one equal part represent in this question?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 426,
+    "topic": "fractions",
+    "subtopic": "combined_rates_fractions",
+    "difficulty": 3,
+    "question": "Ali can paint a whole fence in 6 hours working alone, and Bea can paint it in 4 hours working alone. They work together for 2 hours, then stop. What fraction of the fence is left unpainted? Give your answer in simplest form.",
+    "answer": "1/6",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "explanation": "In 1 hour, Ali paints 1/6 of the fence and Bea paints 1/4. Together in 1 hour they paint 1/6 + 1/4 = 2/12 + 3/12 = 5/12. In 2 hours they complete 2 × 5/12 = 10/12 = 5/6 of the fence, leaving 1 − 5/6 = 1/6 unpainted.",
+    "hints": [
+      "Add the fractions Ali and Bea each paint in 1 hour.",
+      "Double their 1-hour fraction for 2 hours of work, then subtract from 1 whole fence."
+    ],
+    "pitfall": "Giving the painted fraction (5/6) instead of the fraction left unpainted.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does one equal part represent in this question?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 427,
+    "topic": "decimals",
+    "subtopic": "simultaneous_cost_problems",
+    "difficulty": 2,
+    "question": "In a café, 3 teas and 2 scones cost £11.40 altogether. Meanwhile, 2 teas and 2 scones cost £9.20 altogether. What is the cost of one scone, in pounds?",
+    "answer": "2.40",
+    "unit": "£",
+    "explanation": "Comparing the two orders, the extra tea adds £11.40 − £9.20 = £2.20, so 1 tea costs £2.20. In the second order, 2 teas cost 2 × £2.20 = £4.40, leaving £9.20 − £4.40 = £4.80 for 2 scones. One scone costs £4.80 ÷ 2 = £2.40.",
+    "hints": [
+      "Notice that both orders contain 2 scones. What does the difference between the bills buy?",
+      "Find the price of 1 tea first, then substitute it into the smaller bill to find 2 scones."
+    ],
+    "pitfall": "Stopping at the price of 1 tea (£2.20) or the price of 2 scones (£4.80).",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "How does place value help you check the size of your answer?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 428,
+    "topic": "decimals",
+    "subtopic": "simultaneous_cost_problems",
+    "difficulty": 3,
+    "question": "Four adult tickets and 3 child tickets cost £50.50 altogether. Two adult tickets and 5 child tickets cost £44.50 altogether. How much does one adult ticket cost, in pounds?",
+    "answer": "8.50",
+    "unit": "£",
+    "explanation": "Double the second order so both have 4 adult tickets: 4 adult and 10 child tickets cost 2 × £44.50 = £89.00. Comparing with the first order (£50.50), the extra 7 child tickets cost £89.00 − £50.50 = £38.50, so 1 child ticket is £5.50. Then 4 adult tickets cost £50.50 − 3 × £5.50 = £34.00, so 1 adult ticket costs £8.50.",
+    "hints": [
+      "Double the second group of tickets so both orders include 4 adult tickets.",
+      "Subtract the first order from your doubled order to find the cost of 7 child tickets."
+    ],
+    "pitfall": "Subtracting the two original orders directly without matching the number of adult tickets first.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "How does place value help you check the size of your answer?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 429,
+    "topic": "decimals",
+    "subtopic": "simultaneous_cost_problems",
+    "difficulty": 3,
+    "question": "A wooden crate holding 8 identical tins of soup weighs 13.45 kg altogether. After 3 tins are removed, the crate and remaining 5 tins weigh 9.40 kg. How many kilograms does the empty crate weigh?",
+    "answer": "2.65",
+    "unit": "kg",
+    "explanation": "Removing 3 tins drops the total mass by 13.45 − 9.40 = 4.05 kg, so 1 tin weighs 4.05 ÷ 3 = 1.35 kg. Five tins weigh 5 × 1.35 = 6.75 kg. Subtracting the tins from 9.40 kg gives the empty crate mass: 9.40 − 6.75 = 2.65 kg.",
+    "hints": [
+      "Find the weight of the 3 removed tins from the drop in total mass.",
+      "Once you know the mass of 1 tin, subtract 5 tins from 9.40 kg."
+    ],
+    "pitfall": "Dividing 9.40 kg by 5 to find 1 tin's weight, which wrongly splits the crate's mass among the tins.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "How does place value help you check the size of your answer?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 430,
+    "topic": "ratio",
+    "subtopic": "inverse_proportion_rates",
+    "difficulty": 2,
+    "question": "Six identical printing machines working at the same speed take 15 hours to complete a book order. How many hours would it take 10 of these machines to complete the same order?",
+    "answer": "9",
+    "unit": "hours",
+    "explanation": "The whole order needs 6 × 15 = 90 machine-hours of work. When 10 machines share those 90 machine-hours equally, the time needed is 90 ÷ 10 = 9 hours. More machines finish the same job in fewer hours.",
+    "hints": [
+      "More machines make the job faster, not slower. Find the total machine-hours needed.",
+      "Multiply 6 × 15 to find how long 1 machine would take, then divide by 10."
+    ],
+    "pitfall": "Using direct proportion (15 ÷ 6 × 10 = 25 hours), which wrongly assumes more machines take longer.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does one ratio part stand for?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 431,
+    "topic": "ratio",
+    "subtopic": "inverse_proportion_rates",
+    "difficulty": 3,
+    "question": "A team of 8 workers can repair a roof in 12 days. All 8 workers work for 3 days, and then 4 more workers join them at the same work rate. How many days altogether does the repair take from start to finish?",
+    "answer": "9",
+    "unit": null,
+    "answer_alt": [
+      "9 days",
+      "9 day"
+    ],
+    "explanation": "The whole job takes 8 × 12 = 96 worker-days. In the first 3 days, 8 workers complete 8 × 3 = 24 worker-days, leaving 96 − 24 = 72 worker-days. Now 8 + 4 = 12 workers finish the rest in 72 ÷ 12 = 6 more days. Altogether the repair takes 3 + 6 = 9 days.",
+    "hints": [
+      "Calculate the total worker-days for the roof, then subtract the work done in the first 3 days.",
+      "Divide the remaining worker-days by the new total of 12 workers, then add the initial 3 days."
+    ],
+    "pitfall": "Giving only the extra 6 days instead of the total days from start to finish.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "oral_load": null,
+    "parent_prompt": "What does one ratio part stand for?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 432,
+    "topic": "ratio",
+    "subtopic": "inverse_proportion_rates",
+    "difficulty": 3,
+    "question": "A camp has enough food to feed 45 scouts for 10 days. After 2 days, 15 more scouts arrive at the camp, and everyone eats the same daily ration. For how many more days will the remaining food last?",
+    "answer": "6",
+    "unit": null,
+    "answer_alt": [
+      "6 days",
+      "6 day"
+    ],
+    "explanation": "At the start there are 45 × 10 = 450 daily scout rations. After 2 days, 45 × 2 = 90 rations are eaten, leaving 360 rations. With 45 + 15 = 60 scouts now sharing the rations, the food lasts 360 ÷ 60 = 6 more days.",
+    "hints": [
+      "Think in total daily rations: 45 scouts for 10 days gives 450 rations.",
+      "Subtract the rations eaten in the first 2 days, then divide by the new number of scouts."
+    ],
+    "pitfall": "Dividing the remaining rations by 15 new scouts instead of 60 total scouts, or forgetting the first 2 days.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "oral_load": null,
+    "parent_prompt": "What does one ratio part stand for?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 433,
+    "topic": "percentages",
+    "subtopic": "venn_percentage_overlap",
+    "difficulty": 2,
+    "question": "In a year group of 120 pupils, 65% play football, 45% play tennis, and 15% play neither sport. How many pupils play both football and tennis?",
+    "answer": "30",
+    "unit": null,
+    "explanation": "Since 15% play neither sport, 100% − 15% = 85% play at least one sport. Adding the two groups gives 65% + 45% = 110%, which counts those playing both sports twice. Therefore 110% − 85% = 25% play both, which is 25% of 120 = 30 pupils.",
+    "hints": [
+      "Find the percentage of pupils who play at least one of the two sports.",
+      "Compare 65% + 45% with that percentage to find the percentage counted twice."
+    ],
+    "pitfall": "Comparing 65% + 45% with 100% instead of 85%, forgetting the 15% who play neither.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which familiar percentage or fraction could you use to check?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 434,
+    "topic": "percentages",
+    "subtopic": "venn_percentage_overlap",
+    "difficulty": 3,
+    "question": "Of 200 visitors to a historic site, 58% visit the castle, 44% visit the maze, and 18% visit neither. How many visitors go to the castle only?",
+    "answer": "76",
+    "unit": null,
+    "explanation": "Visitors who see at least one attraction make up 100% − 18% = 82%. Since 58% + 44% = 102%, the overlap visiting both is 102% − 82% = 20%. Subtracting this overlap from the 58% castle visitors leaves 38% who visit the castle only: 38% of 200 = 76 visitors.",
+    "hints": [
+      "First find the percentage who visit both the castle and the maze.",
+      "Take the overlap away from the 58% castle visitors to leave castle only."
+    ],
+    "pitfall": "Finding the number who visit both (40) or all castle visitors (116) instead of castle only.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which familiar percentage or fraction could you use to check?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 435,
+    "topic": "percentages",
+    "subtopic": "venn_percentage_overlap",
+    "difficulty": 3,
+    "question": "In a language survey of a school year, 70% of pupils study French, 55% study German, and 10% study neither language. If 42 pupils study both French and German, how many pupils were surveyed altogether?",
+    "answer": "120",
+    "unit": null,
+    "explanation": "Pupils studying at least one language make up 100% − 10% = 90%. Adding 70% + 55% = 125% counts the overlap twice, so 125% − 90% = 35% study both languages. Since 35% is 42 pupils, 5% is 42 ÷ 7 = 6 pupils, giving 100% = 120 pupils altogether.",
+    "hints": [
+      "Work out what percentage of the year group studies both languages.",
+      "Equate that percentage to 42 pupils, then scale back to 100%."
+    ],
+    "pitfall": "Subtracting 100% instead of 90%, which makes the overlap 25% instead of 35%.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which familiar percentage or fraction could you use to check?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 436,
+    "topic": "geometry",
+    "subtopic": "surface_area_and_painted_cubes",
+    "difficulty": 2,
+    "question": "A closed cuboid gift box is 10 cm long, 6 cm wide and 4 cm high. What is the total surface area of all six outer faces, in cm²?",
+    "answer": "248",
+    "unit": "cm²",
+    "explanation": "A cuboid has three matching pairs of opposite faces. The top and bottom are 10 × 6 = 60 cm² each, the front and back are 10 × 4 = 40 cm² each, and the two ends are 6 × 4 = 24 cm² each. Total surface area = 2 × (60 + 40 + 24) = 248 cm².",
+    "hints": [
+      "List the three different rectangle sizes and multiply each by 2.",
+      "Add the areas of the top, front and end faces, then double the sum."
+    ],
+    "pitfall": "Calculating the volume (10 × 6 × 4 = 240) instead of surface area, or adding only three faces without doubling.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Can you explain the shape or angle fact you used?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 437,
+    "topic": "geometry",
+    "subtopic": "surface_area_and_painted_cubes",
+    "difficulty": 3,
+    "question": "A solid wooden cube measuring 4 cm by 4 cm by 4 cm is painted blue on all six outside faces, then cut into 64 small 1 cm cubes. How many of the small cubes have blue paint on exactly two faces?",
+    "answer": "24",
+    "unit": null,
+    "explanation": "Cubes with paint on exactly two faces sit along the 12 edges of the large cube, excluding the corners (which have 3 painted faces). Each 4 cm edge has 4 small cubes: 2 corners and 4 − 2 = 2 middle edge cubes. Across 12 edges there are 12 × 2 = 24 such cubes.",
+    "hints": [
+      "Think about where the 2-face painted cubes lie: corners have 3 faces, and face centres have 1 face.",
+      "Count how many cubes sit strictly between two corners along one edge, then multiply by 12 edges."
+    ],
+    "pitfall": "Including the 8 corner cubes, or counting 6 faces instead of 12 edges.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Can you explain the shape or angle fact you used?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 438,
+    "topic": "geometry",
+    "subtopic": "surface_area_and_painted_cubes",
+    "difficulty": 2,
+    "question": "The diagram shows the trapezium cross-section of a canal. Its parallel top and bottom widths are 14 m and 8 m, and its perpendicular depth is 4 m. What is the area of the trapezium, in m²?",
+    "answer": "44",
+    "unit": "m²",
+    "explanation": "The area of a trapezium equals the average of its two parallel sides multiplied by its perpendicular height: (14 + 8) ÷ 2 × 4 = 11 × 4 = 44 m². Alternatively, split it into an 8 m by 4 m rectangle (32 m²) and two side triangles (total base 6 m, area 12 m²).",
+    "hints": [
+      "Find the mean of the two parallel widths, or split the shape into a rectangle and two triangles.",
+      "Average the parallel sides 14 m and 8 m, then multiply by the perpendicular depth 4 m."
+    ],
+    "pitfall": "Multiplying (14 + 8) × 4 without dividing by 2, or subtracting the parallel sides instead of adding them.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              70,
+              55
+            ],
+            [
+              310,
+              55
+            ],
+            [
+              250,
+              185
+            ],
+            [
+              130,
+              185
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            130,
+            55
+          ],
+          "to": [
+            130,
+            185
+          ],
+          "dashed": true
+        },
+        {
+          "from": [
+            130,
+            173
+          ],
+          "to": [
+            142,
+            173
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            142,
+            173
+          ],
+          "to": [
+            142,
+            185
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 190,
+          "y": 42,
+          "text": "14 m",
+          "anchor": "middle"
+        },
+        {
+          "x": 190,
+          "y": 205,
+          "text": "8 m",
+          "anchor": "middle"
+        },
+        {
+          "x": 150,
+          "y": 125,
+          "text": "4 m",
+          "anchor": "start"
+        }
+      ],
+      "description": "A trapezium wider at the top than the bottom. The parallel top edge is 14 m, the parallel bottom edge is 8 m, and a dashed vertical line marks the perpendicular height as 4 m. Not to scale."
+    },
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Can you explain the shape or angle fact you used?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 439,
+    "topic": "measures",
+    "subtopic": "clock_angles_and_miles",
+    "difficulty": 3,
+    "question": "What is the smaller angle, in degrees, between the hour hand and the minute hand of an analogue clock at 04:20?",
+    "answer": "10°",
+    "unit": "°",
+    "explanation": "Each hour mark is 360° ÷ 12 = 30° apart. At 04:20, the minute hand points directly at the 4 (4 × 30° = 120°). Meanwhile, the hour hand has moved one third of the way from 4 towards 5: 1/3 of 30° = 10°. So the angle between the hands is 10°.",
+    "hints": [
+      "Where is the minute hand at 20 minutes past the hour? Remember each hour mark is 30° apart.",
+      "The hour hand does not stay still at 4: it moves one third of the gap towards 5."
+    ],
+    "pitfall": "Assuming the hour hand stays fixed on the 4, which gives 0°.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Why is that the right unit for the final answer?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 440,
+    "topic": "measures",
+    "subtopic": "clock_angles_and_miles",
+    "difficulty": 2,
+    "question": "Using the conversion 5 miles = 8 km, a delivery driver covers a 120 km motorway stage followed by a 35-mile country stage. How many miles does the driver travel in total?",
+    "answer": "110",
+    "unit": null,
+    "answer_alt": [
+      "110 miles",
+      "110 mile"
+    ],
+    "explanation": "Convert the 120 km stage into miles using 8 km = 5 miles. Since 120 ÷ 8 = 15, there are 15 groups of 5 miles, giving 15 × 5 = 75 miles. Adding the 35-mile country stage gives 75 + 35 = 110 miles in total.",
+    "hints": [
+      "Convert 120 km into miles before adding the 35-mile stage.",
+      "Find how many 8 km blocks fit into 120 km, then multiply by 5 miles."
+    ],
+    "pitfall": "Multiplying 120 by 8 and dividing by 5 (converting the wrong way) or adding 120 + 35 directly.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "oral_load": null,
+    "parent_prompt": "Why is that the right unit for the final answer?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 441,
+    "topic": "measures",
+    "subtopic": "clock_angles_and_miles",
+    "difficulty": 2,
+    "question": "A ship sails on a three-figure bearing of 065°. It turns 125° clockwise, and then turns 40° anticlockwise. What is its new bearing, in degrees?",
+    "answer": "150°",
+    "unit": "°",
+    "explanation": "Bearings are measured clockwise from North. Starting at 065°, turning 125° clockwise brings the bearing to 65° + 125° = 190°. Turning 40° anticlockwise reduces the clockwise angle from North: 190° − 40° = 150°.",
+    "hints": [
+      "Bearings increase when turning clockwise and decrease when turning anticlockwise.",
+      "Add 125° to 65°, then subtract 40°."
+    ],
+    "pitfall": "Adding the anticlockwise turn instead of subtracting it.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Why is that the right unit for the final answer?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 442,
+    "topic": "algebra",
+    "subtopic": "simultaneous_unknowns_puzzles",
+    "difficulty": 2,
+    "question": "On a balance scale, 3 red blocks and 2 blue blocks weigh 410 g altogether. Meanwhile, 3 red blocks and 5 blue blocks weigh 620 g altogether. What is the mass of one red block, in grams?",
+    "answer": "90",
+    "unit": "g",
+    "explanation": "The extra 3 blue blocks add 620 − 410 = 210 g, so 1 blue block weighs 210 ÷ 3 = 70 g. In the first weighing, 2 blue blocks weigh 140 g, leaving 410 − 140 = 270 g for 3 red blocks. Each red block weighs 270 ÷ 3 = 90 g.",
+    "hints": [
+      "Both weighings have 3 red blocks, so compare the difference in blue blocks.",
+      "Find the mass of one blue block first, then use the 410 g weighing to find one red block."
+    ],
+    "pitfall": "Giving the mass of a blue block (70 g) instead of a red block, or forgetting to divide 270 g by 3.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Does your rule work when you substitute the answer back?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 443,
+    "topic": "algebra",
+    "subtopic": "simultaneous_unknowns_puzzles",
+    "difficulty": 3,
+    "question": "In a 20-question quiz, a player earns 5 points for every correct answer and loses 2 points for every wrong answer. Priya answers all 20 questions and finishes with 58 points. How many questions did she answer correctly?",
+    "answer": "14",
+    "unit": null,
+    "explanation": "If Priya answered all 20 correctly, she would score 20 × 5 = 100 points. She scored 100 − 58 = 42 points fewer. Changing one right answer to a wrong one loses 5 points and deducts 2 more, a drop of 7 points. So she got 42 ÷ 7 = 6 wrong and 20 − 6 = 14 right.",
+    "hints": [
+      "Start by supposing all 20 answers were correct, giving 100 points.",
+      "How many points are lost each time a right answer is swapped for a wrong one?"
+    ],
+    "pitfall": "Dividing the 42-point shortfall by 5 or by 2 instead of 5 + 2 = 7.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Does your rule work when you substitute the answer back?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 444,
+    "topic": "algebra",
+    "subtopic": "simultaneous_unknowns_puzzles",
+    "difficulty": 3,
+    "question": "Three bags A, B and C hold bolts. Bags A and B together hold 54 bolts, bags B and C together hold 62 bolts, and bags A and C together hold 48 bolts. How many bolts are in bag B?",
+    "answer": "34",
+    "unit": null,
+    "explanation": "Adding all three pairs counts every bag twice: 2 × (A + B + C) = 54 + 62 + 48 = 164 bolts. Dividing by 2 gives A + B + C = 82 bolts altogether. Since A and C together hold 48 bolts, bag B holds 82 − 48 = 34 bolts.",
+    "hints": [
+      "What do you get if you add all three pair totals (54 + 62 + 48) together?",
+      "Halve that sum to find A + B + C, then subtract A + C."
+    ],
+    "pitfall": "Forgetting to divide 164 by 2 before subtracting 48.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Does your rule work when you substitute the answer back?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 445,
+    "topic": "statistics",
+    "subtopic": "combined_mean_and_probability",
+    "difficulty": 2,
+    "question": "In a maths test, the 12 girls in a class have a mean score of 75, and the 18 boys have a mean score of 65. What is the mean score of all 30 pupils in the class?",
+    "answer": "69",
+    "unit": null,
+    "explanation": "Find the total marks for each group: the girls score 12 × 75 = 900 marks and the boys score 18 × 65 = 1170 marks. Together all 30 pupils score 900 + 1170 = 2070 marks. Dividing by 30 gives a combined mean of 2070 ÷ 30 = 69.",
+    "hints": [
+      "The groups are different sizes, so do not just average 75 and 65.",
+      "Find the total score for the girls and the total score for the boys, then divide by 30."
+    ],
+    "pitfall": "Taking the simple mean of 75 and 65 to get 70, ignoring that there are more boys than girls.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does the total, comparison or average tell you about the data?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 446,
+    "topic": "statistics",
+    "subtopic": "combined_mean_and_probability",
+    "difficulty": 3,
+    "question": "A bag contains 14 blue counters and some red counters. After 4 more red counters are put into the bag, the probability of picking a red counter at random is 3/5. How many red counters were in the bag at first?",
+    "answer": "17",
+    "unit": null,
+    "explanation": "After adding 4 red counters, the probability of picking red is 3/5, so the probability of picking blue is 2/5. Those 2/5 represent the 14 blue counters, meaning 1/5 is 7 counters. There are now 3 × 7 = 21 red counters, so originally there were 21 − 4 = 17 red counters.",
+    "hints": [
+      "What fraction of the final bag is blue? Compare that with the 14 blue counters.",
+      "Find the final number of red counters first, then subtract the 4 counters that were added."
+    ],
+    "pitfall": "Leaving the answer as 21 (the final count of red counters) instead of subtracting 4.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does the total, comparison or average tell you about the data?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 447,
+    "topic": "statistics",
+    "subtopic": "combined_mean_and_probability",
+    "difficulty": 2,
+    "question": "A pie chart shows all 180 trees in an orchard. The sector for apple trees has an angle of 144°, and pear trees make up 35% of the orchard. How many trees in the orchard are neither apple nor pear?",
+    "answer": "45",
+    "unit": null,
+    "explanation": "A full pie chart has 360°. For 180 trees, every 2° represents 1 tree, so the 144° apple sector holds 144 ÷ 2 = 72 apple trees. Pear trees make up 35% of 180 = 63 trees. The remaining trees are 180 − 72 − 63 = 45 trees.",
+    "hints": [
+      "Convert the 144° sector out of 360° into a number of trees, and also find 35% of 180.",
+      "Subtract both the apple trees and pear trees from 180."
+    ],
+    "pitfall": "Treating 144° as 144 trees or 144%, instead of 144/360 of the 180 trees.",
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does the total, comparison or average tell you about the data?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 448,
+    "topic": "coordinates",
+    "subtopic": "mirror_lines_and_rotation",
+    "difficulty": 2,
+    "question": "Point P (−3, 2) is shown on the coordinate grid. Reflect P in the vertical mirror line x = 1. Write the coordinates of the reflected point as (x, y).",
+    "answer": "(5, 2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "explanation": "The vertical mirror line x = 1 runs vertically through x = 1. Point P (−3, 2) sits 4 units to the left of this line (from −3 to 1), so its reflection sits 4 units to the right at x = 1 + 4 = 5. The height y stays at 2, giving (5, 2).",
+    "hints": [
+      "Picture the vertical line passing through 1 on the x-axis. How far left of it is P?",
+      "Place the image the same distance to the right of x = 1, keeping y unchanged."
+    ],
+    "pitfall": "Reflecting in the y-axis (x = 0) to get (3, 2) instead of reflecting in x = 1.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -3,
+          "y": 2,
+          "label": "P"
+        }
+      ],
+      "description": "A coordinate grid showing point P at (-3, 2). Each grid step is one unit."
+    },
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which direction changes x, and which changes y?",
+    "time_target_seconds": 105,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 449,
+    "topic": "coordinates",
+    "subtopic": "mirror_lines_and_rotation",
+    "difficulty": 3,
+    "question": "Point A (3, 4) is shown on the coordinate grid. Reflect A in the horizontal mirror line y = 1, and then translate the reflected point 2 squares left. Write the final coordinates as (x, y).",
+    "answer": "(1, -2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "explanation": "Point A (3, 4) is 3 units above the horizontal mirror line y = 1, so reflecting across y = 1 places it 3 units below at y = 1 − 3 = −2, giving (3, −2). Translating 2 squares left subtracts 2 from x, finishing at (1, −2).",
+    "hints": [
+      "Find how many units A sits above the horizontal line y = 1, then go the same distance below it.",
+      "Once reflected, subtract 2 from the x-coordinate for the leftward move."
+    ],
+    "pitfall": "Reflecting in y = 0 to get (3, −4) instead of in y = 1, or moving 2 squares right.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": 3,
+          "y": 4,
+          "label": "A"
+        }
+      ],
+      "description": "A coordinate grid showing point A at (3, 4). Each grid step is one unit."
+    },
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which direction changes x, and which changes y?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 450,
+    "topic": "coordinates",
+    "subtopic": "mirror_lines_and_rotation",
+    "difficulty": 3,
+    "question": "Triangle OPQ is shown on the grid with O at (0, 0), P at (2, 4) and Q at (4, 1). The triangle is rotated 90° clockwise about the origin (0, 0). Write the new coordinates of P as (x, y).",
+    "answer": "(4, -2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "explanation": "From the origin O(0, 0), P(2, 4) is 2 units right and 4 units up. A 90° clockwise turn about O sends 'up' to 'right' and 'right' to 'down'. So P moves 4 units right and 2 units down from O, landing at (4, −2).",
+    "hints": [
+      "Describe the position of P from the origin as steps right and steps up.",
+      "A 90° clockwise turn rotates 'right' to 'down' and 'up' to 'right'."
+    ],
+    "pitfall": "Rotating anticlockwise to (−4, 2) or simply reflecting in the x-axis to (2, −4).",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": 0,
+          "y": 0,
+          "label": "O"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "label": "P"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "label": "Q"
+        }
+      ],
+      "join": true,
+      "description": "A coordinate grid showing triangle OPQ with O at (0, 0), P at (2, 4) and Q at (4, 1). Each grid step is one unit."
+    },
+    "mode": "desk",
+    "stage": "NWSSEE",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which direction changes x, and which changes y?",
+    "time_target_seconds": 135,
+    "answer_display": null,
+    "answer_index": null,
+    "options": null
+  },
+  {
+    "id": 451,
+    "topic": "number_operations",
+    "subtopic": "roman_numerals_and_combinatorics",
+    "difficulty": 2,
+    "question": "One stone bridge carries the Roman numeral date MDCCCLXXVI, and another carries MCMXCIV. How many years apart were the two bridges built?",
+    "answer": "118",
+    "unit": null,
+    "explanation": "Decode each date carefully: MDCCCLXXVI is 1000 + 800 + 70 + 6 = 1876, and MCMXCIV is 1000 + 900 + 90 + 4 = 1994. Subtracting gives 1994 − 1876 = 118 years.",
+    "hints": [
+      "Break each Roman numeral into thousands, hundreds, tens and ones.",
+      "Check subtractive pairs carefully: CM is 900, XC is 90 and IV is 4."
+    ],
+    "pitfall": "Misreading subtractive pairs such as CM, XC or IV by adding instead of subtracting.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which mental or written method did you choose, and how could you check it?",
+    "time_target_seconds": 55,
+    "options": [
+      "108",
+      "118",
+      "122",
+      "138",
+      "318"
+    ],
+    "answer_index": 1,
+    "answer_display": "B",
+    "distractor_notes": {
+      "108": "Subtracts 1876 from 1984 after misreading XCIV as 84 instead of 94.",
+      "122": "Computes 1996 − 1874 after misreading IV as 6 and VI as 4.",
+      "138": "Misreads MCMXCIV as 2014 (treating XC as 110) before subtracting 1876.",
+      "318": "Reads MCM as 2100 (1000 + 100 + 1000) instead of 1900, giving 2194 − 1876."
+    }
+  },
+  {
+    "id": 452,
+    "topic": "number_operations",
+    "subtopic": "roman_numerals_and_combinatorics",
+    "difficulty": 2,
+    "question": "Nine school teams enter a netball league where each team plays every other team exactly once. How many matches are played altogether?",
+    "answer": "36",
+    "unit": null,
+    "explanation": "Each of the 9 teams plays 8 opponents, giving 9 × 8 = 72 pairings. Because every match involves two teams, divide by 2 so no match is counted twice: 72 ÷ 2 = 36 matches.",
+    "hints": [
+      "How many other teams does each single team play?",
+      "Multiply 9 by 8, then halve because Team A playing Team B is the same match as Team B playing Team A."
+    ],
+    "pitfall": "Forgetting to divide by 2, which counts every match twice.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which mental or written method did you choose, and how could you check it?",
+    "time_target_seconds": 55,
+    "options": [
+      "18",
+      "36",
+      "45",
+      "72",
+      "81"
+    ],
+    "answer_index": 1,
+    "answer_display": "B",
+    "distractor_notes": {
+      "18": "Doubles 9 (9 × 2 = 18) instead of multiplying 9 by 8 and halving.",
+      "45": "Computes 9 × 10 ÷ 2 = 45, counting 10 opponents instead of 8.",
+      "72": "Multiplies 9 × 8 = 72 and forgets to halve to avoid counting each match twice.",
+      "81": "Squares 9 (9 × 9 = 81), forgetting teams cannot play themselves and matches involve pairs."
+    }
+  },
+  {
+    "id": 453,
+    "topic": "number_operations",
+    "subtopic": "roman_numerals_and_combinatorics",
+    "difficulty": 3,
+    "question": "A street has houses numbered from 1 to 120 inclusive. How many individual digits are needed to make all the house numbers?",
+    "answer": "252",
+    "unit": null,
+    "explanation": "Numbers 1–9 use 9 × 1 = 9 digits. Numbers 10–99 are 90 houses using 90 × 2 = 180 digits. Numbers 100–120 are 21 houses using 21 × 3 = 63 digits. Total = 9 + 180 + 63 = 252 digits.",
+    "hints": [
+      "Group the house numbers into 1-digit, 2-digit and 3-digit numbers.",
+      "Remember to include both 100 and 120 when counting the 3-digit houses."
+    ],
+    "pitfall": "Subtracting 120 − 100 = 20 instead of 21 for the count of 3-digit numbers.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which mental or written method did you choose, and how could you check it?",
+    "time_target_seconds": 70,
+    "options": [
+      "120",
+      "231",
+      "240",
+      "249",
+      "252"
+    ],
+    "answer_index": 4,
+    "answer_display": "E",
+    "distractor_notes": {
+      "120": "Counts 1 digit per house instead of counting multi-digit house numbers.",
+      "231": "Counts only 2 digits each for numbers 100–120: 9 + 180 + 42 = 231.",
+      "240": "Multiplies 120 × 2, treating all house numbers as having 2 digits.",
+      "249": "Uses 20 three-digit numbers (120 − 100 = 20) instead of 21, losing 3 digits."
+    }
+  },
+  {
+    "id": 454,
+    "topic": "fractions",
+    "subtopic": "work_rate_fractions_set",
+    "difficulty": 2,
+    "question": "A cold tap fills a water butt in 12 minutes, and a hose fills it in 24 minutes. How many minutes does it take to fill the water butt if both are turned on together?",
+    "answer": "8 minutes",
+    "unit": "minutes",
+    "explanation": "In 1 minute, the tap fills 1/12 = 2/24 of the butt and the hose fills 1/24. Together they fill 3/24 = 1/8 per minute, so the water butt fills in 8 minutes.",
+    "hints": [
+      "What fraction of the water butt does each fill in 1 minute?",
+      "Add 1/12 and 1/24 to find how much fills in 1 minute."
+    ],
+    "pitfall": "Averaging the two times instead of adding the fractions filled per minute.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does one equal part represent in this question?",
+    "time_target_seconds": 55,
+    "options": [
+      "6 minutes",
+      "8 minutes",
+      "12 minutes",
+      "18 minutes",
+      "36 minutes"
+    ],
+    "answer_index": 1,
+    "answer_display": "B",
+    "distractor_notes": {
+      "6 minutes": "Halves the shorter time (12 ÷ 2 = 6), assuming both fill at the faster rate.",
+      "12 minutes": "Halves 24 minutes instead of adding both filling fractions.",
+      "18 minutes": "Finds the mean of the two times: (12 + 24) ÷ 2 = 18 minutes.",
+      "36 minutes": "Adds the two times (12 + 24 = 36) instead of combining their per-minute rates."
+    }
+  },
+  {
+    "id": 455,
+    "topic": "fractions",
+    "subtopic": "work_rate_fractions_set",
+    "difficulty": 3,
+    "question": "Machine A packs 1/6 of an order per hour, and Machine B packs 1/4 of the order per hour. Both machines run together for 2 hours. What fraction of the order is still left to pack? Give your answer in simplest form.",
+    "answer": "1/6",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "explanation": "In 1 hour both machines pack 1/6 + 1/4 = 2/12 + 3/12 = 5/12. In 2 hours they pack 10/12 = 5/6 of the order, leaving 1 − 5/6 = 1/6 still to pack.",
+    "hints": [
+      "Add 1/6 and 1/4 to find the fraction packed in 1 hour, then double it for 2 hours.",
+      "Subtract the packed fraction from 1 whole order."
+    ],
+    "pitfall": "Giving the fraction completed (5/6) instead of the fraction remaining.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does one equal part represent in this question?",
+    "time_target_seconds": 70,
+    "options": [
+      "1/6",
+      "1/3",
+      "5/12",
+      "7/12",
+      "5/6"
+    ],
+    "answer_index": 0,
+    "answer_display": "A",
+    "distractor_notes": {
+      "1/3": "Doubles only Machine B (1/6 + 1/4 + 1/4 = 2/3) and subtracts from 1.",
+      "5/12": "Adds 1/6 + 1/4 = 5/12, finding the fraction packed in 1 hour and stopping.",
+      "7/12": "Subtracts only 1 hour's work (1 − 5/12 = 7/12) instead of 2 hours.",
+      "5/6": "Gives the fraction packed in 2 hours (2 × 5/12 = 5/6) instead of the fraction left."
+    }
+  },
+  {
+    "id": 456,
+    "topic": "fractions",
+    "subtopic": "work_rate_fractions_set",
+    "difficulty": 2,
+    "question": "A bag holds 4 red, 6 blue and 2 green marbles. Four more red marbles are added to the bag. If one marble is picked at random, what is the probability that it is NOT blue? Give your answer as a fraction in simplest form.",
+    "answer": "5/8",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "explanation": "After adding 4 red marbles, the bag has 8 red, 6 blue and 2 green marbles (16 in total). There are 8 + 2 = 10 marbles that are not blue, giving probability 10/16 = 5/8.",
+    "hints": [
+      "Update both the red marbles and the total number of marbles in the bag.",
+      "Count red plus green marbles out of the new total, then simplify."
+    ],
+    "pitfall": "Using the original total of 12 marbles after 4 new marbles were added.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does one equal part represent in this question?",
+    "time_target_seconds": 55,
+    "options": [
+      "1/4",
+      "3/8",
+      "1/2",
+      "5/8",
+      "5/6"
+    ],
+    "answer_index": 3,
+    "answer_display": "D",
+    "distractor_notes": {
+      "1/4": "Counts only the 4 newly added red marbles out of the 16 total: 4/16 = 1/4.",
+      "3/8": "Finds the probability of picking blue (6/16 = 3/8) instead of NOT blue.",
+      "1/2": "Forgets to add the 4 extra red marbles, computing (4 + 2)/12 = 6/12 = 1/2.",
+      "5/6": "Divides the 10 non-blue marbles by the original 12 instead of the new total 16: 10/12 = 5/6."
+    }
+  },
+  {
+    "id": 457,
+    "topic": "decimals",
+    "subtopic": "elimination_money_set",
+    "difficulty": 2,
+    "question": "Two sandwiches and 3 drinks cost £9.15 altogether. Two sandwiches and 1 drink cost £6.25 altogether. How much does one sandwich cost?",
+    "answer": "£2.40",
+    "unit": "£",
+    "explanation": "The extra 2 drinks add £9.15 − £6.25 = £2.90, so 1 drink costs £1.45. Subtracting 1 drink from £6.25 leaves £4.80 for 2 sandwiches, so 1 sandwich costs £4.80 ÷ 2 = £2.40.",
+    "hints": [
+      "Compare the two bills: the number of sandwiches is the same, so the difference comes from the drinks.",
+      "Find the cost of 1 drink first, then work out 1 sandwich from the £6.25 bill."
+    ],
+    "pitfall": "Stopping at the price of 1 drink or 2 sandwiches.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "How does place value help you check the size of your answer?",
+    "time_target_seconds": 55,
+    "options": [
+      "£1.45",
+      "£2.40",
+      "£2.90",
+      "£3.35",
+      "£4.80"
+    ],
+    "answer_index": 1,
+    "answer_display": "B",
+    "distractor_notes": {
+      "£1.45": "Finds the cost of 1 drink ((£9.15 − £6.25) ÷ 2 = £1.45) instead of 1 sandwich.",
+      "£2.90": "Subtracts £9.15 − £6.25 = £2.90 for 2 drinks and stops.",
+      "£3.35": "Subtracts £2.90 (2 drinks) from £6.25 and forgets to divide by 2.",
+      "£4.80": "Finds the cost of 2 sandwiches (£6.25 − £1.45 = £4.80) and forgets to halve."
+    }
+  },
+  {
+    "id": 458,
+    "topic": "decimals",
+    "subtopic": "elimination_money_set",
+    "difficulty": 2,
+    "question": "Five folders and 2 notebooks cost £11.60 altogether. Three folders and 2 notebooks cost £8.20 altogether. How much does one notebook cost?",
+    "answer": "£1.55",
+    "unit": "£",
+    "explanation": "Two extra folders cost £11.60 − £8.20 = £3.40, so 1 folder costs £1.70. Three folders cost 3 × £1.70 = £5.10, leaving £8.20 − £5.10 = £3.10 for 2 notebooks. One notebook costs £1.55.",
+    "hints": [
+      "The 2 notebooks appear in both totals, so the difference in cost is just 2 folders.",
+      "Find 1 folder's price, multiply by 3, subtract from £8.20 and halve."
+    ],
+    "pitfall": "Giving the cost of 1 folder (£1.70) or 2 notebooks (£3.10).",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "How does place value help you check the size of your answer?",
+    "time_target_seconds": 55,
+    "options": [
+      "£1.55",
+      "£1.70",
+      "£2.40",
+      "£3.10",
+      "£3.40"
+    ],
+    "answer_index": 0,
+    "answer_display": "A",
+    "distractor_notes": {
+      "£1.70": "Finds the cost of 1 folder ((£11.60 − £8.20) ÷ 2 = £1.70) instead of 1 notebook.",
+      "£2.40": "Subtracts 2 folders (£3.40) instead of 3 folders (£5.10) from £8.20, then halves.",
+      "£3.10": "Finds the cost of 2 notebooks (£8.20 − £5.10 = £3.10) and forgets to divide by 2.",
+      "£3.40": "Finds the difference (£11.60 − £8.20 = £3.40) for 2 folders and stops."
+    }
+  },
+  {
+    "id": 459,
+    "topic": "decimals",
+    "subtopic": "elimination_money_set",
+    "difficulty": 3,
+    "question": "A wooden box holding 12 identical jars weighs 5.45 kg altogether. When 5 jars are taken out, the box with the remaining 7 jars weighs 3.35 kg. What is the mass of the empty box, in kilograms?",
+    "answer": "0.41 kg",
+    "unit": "kg",
+    "explanation": "The 5 removed jars weigh 5.45 − 3.35 = 2.10 kg, so 1 jar weighs 2.10 ÷ 5 = 0.42 kg. Seven jars weigh 7 × 0.42 = 2.94 kg, leaving 3.35 − 2.94 = 0.41 kg for the empty box.",
+    "hints": [
+      "The difference between 5.45 kg and 3.35 kg is the mass of 5 jars alone.",
+      "Find 1 jar's mass, multiply by 7, and subtract from 3.35 kg."
+    ],
+    "pitfall": "Forgetting that the empty box's mass is included in both readings.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "How does place value help you check the size of your answer?",
+    "time_target_seconds": 70,
+    "options": [
+      "0.41 kg",
+      "0.42 kg",
+      "0.83 kg",
+      "1.25 kg",
+      "2.10 kg"
+    ],
+    "answer_index": 0,
+    "answer_display": "A",
+    "distractor_notes": {
+      "0.42 kg": "Gives the mass of 1 jar (2.10 ÷ 5 = 0.42 kg) instead of the empty box.",
+      "0.83 kg": "Subtracts 6 jars (2.52 kg) instead of 7 jars from 3.35 kg: 3.35 − 2.52 = 0.83 kg.",
+      "1.25 kg": "Subtracts the 5-jar drop (2.10 kg) directly from 3.35 kg: 3.35 − 2.10 = 1.25 kg.",
+      "2.10 kg": "Finds the mass of the 5 removed jars (5.45 − 3.35 = 2.10 kg) and stops."
+    }
+  },
+  {
+    "id": 460,
+    "topic": "ratio",
+    "subtopic": "inverse_proportion_set",
+    "difficulty": 2,
+    "question": "Twelve gardeners take 5 hours to clear a park. How many hours would it take 15 gardeners working at the same rate?",
+    "answer": "4 hours",
+    "unit": "hours",
+    "explanation": "The park needs 12 × 5 = 60 gardener-hours of work. Shared among 15 gardeners, the work takes 60 ÷ 15 = 4 hours.",
+    "hints": [
+      "More gardeners finish the job in less time, not more.",
+      "Multiply 12 × 5 to find the total gardener-hours, then divide by 15."
+    ],
+    "pitfall": "Applying direct proportion, which wrongly predicts more gardeners take longer.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does one ratio part stand for?",
+    "time_target_seconds": 55,
+    "options": [
+      "4 hours",
+      "5 hours",
+      "6.25 hours",
+      "8 hours",
+      "20 hours"
+    ],
+    "answer_index": 0,
+    "answer_display": "A",
+    "distractor_notes": {
+      "5 hours": "Uses the original 5 hours without adjusting for 15 gardeners.",
+      "6.25 hours": "Uses direct proportion instead of inverse proportion: 5 ÷ 12 × 15 = 6.25 hours.",
+      "8 hours": "Adds the 3 extra gardeners directly to 5 hours (5 + 3 = 8 hours).",
+      "20 hours": "Divides 60 gardener-hours by the 3 extra gardeners instead of by 15."
+    }
+  },
+  {
+    "id": 461,
+    "topic": "ratio",
+    "subtopic": "inverse_proportion_set",
+    "difficulty": 3,
+    "question": "Two gear wheels mesh together. The larger wheel has 36 teeth and the smaller wheel has 24 teeth. While the larger wheel makes 18 complete turns, how many complete turns does the smaller wheel make?",
+    "answer": "27",
+    "unit": null,
+    "explanation": "In 18 turns of the larger wheel, 36 × 18 = 648 teeth pass the meeting point. The smaller wheel must also pass 648 teeth, so it makes 648 ÷ 24 = 27 turns.",
+    "hints": [
+      "How many teeth of the larger wheel pass the mesh during 18 turns?",
+      "Divide the total teeth passed by 24 teeth per turn of the smaller wheel."
+    ],
+    "pitfall": "Multiplying 18 by 24/36 instead of 36/24; the smaller wheel must turn more times.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does one ratio part stand for?",
+    "time_target_seconds": 70,
+    "options": [
+      "12",
+      "18",
+      "24",
+      "27",
+      "30"
+    ],
+    "answer_index": 3,
+    "answer_display": "D",
+    "distractor_notes": {
+      "12": "Scales the wrong way using direct proportion: 18 × 24 ÷ 36 = 12 turns.",
+      "18": "Assumes both meshed wheels make the same 18 turns.",
+      "24": "Gives the number of teeth on the smaller wheel instead of its turns.",
+      "30": "Adds the tooth difference (36 − 24 = 12) to 18 turns: 18 + 12 = 30."
+    }
+  },
+  {
+    "id": 462,
+    "topic": "ratio",
+    "subtopic": "inverse_proportion_set",
+    "difficulty": 3,
+    "question": "A barn has enough hay to feed 15 horses for 12 days. For how many days will the same hay feed 10 horses?",
+    "answer": "18",
+    "unit": null,
+    "explanation": "The barn holds 15 × 12 = 180 horse-days of hay. Feeding 10 horses takes 180 ÷ 10 = 18 days. Fewer horses make the same hay last longer.",
+    "hints": [
+      "Find the total number of daily horse feeds (horse-days) stored in the barn.",
+      "Divide 15 × 12 by 10 horses."
+    ],
+    "pitfall": "Calculating 12 × 10 ÷ 15 = 8, which would mean fewer horses finish the hay sooner.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does one ratio part stand for?",
+    "time_target_seconds": 70,
+    "options": [
+      "7",
+      "8",
+      "17",
+      "18",
+      "24"
+    ],
+    "answer_index": 3,
+    "answer_display": "D",
+    "distractor_notes": {
+      "7": "Subtracts 5 from 12 days (12 − 5 = 7) because there are 5 fewer horses.",
+      "8": "Uses direct proportion: 12 × 10 ÷ 15 = 8 days.",
+      "17": "Adds 5 extra days directly to 12 days (12 + 5 = 17).",
+      "24": "Doubles 12 days without calculating 180 ÷ 10."
+    }
+  },
+  {
+    "id": 463,
+    "topic": "percentages",
+    "subtopic": "venn_overlap_set",
+    "difficulty": 2,
+    "question": "In a club of 80 children, 50% swim, 40% cycle and 25% do neither activity. How many children do both?",
+    "answer": "12",
+    "unit": null,
+    "explanation": "Children doing at least one activity make up 100% − 25% = 75%. Adding 50% + 40% = 90% counts those doing both twice, so 90% − 75% = 15% do both. 15% of 80 = 12 children.",
+    "hints": [
+      "Subtract 25% from 100% to find what percentage swim or cycle (or both).",
+      "Compare 50% + 40% with 75%, then find that percentage of 80."
+    ],
+    "pitfall": "Ignoring the 25% who do neither, or stopping at 15% without converting to children.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which familiar percentage or fraction could you use to check?",
+    "time_target_seconds": 55,
+    "options": [
+      "8",
+      "12",
+      "15",
+      "20",
+      "32"
+    ],
+    "answer_index": 1,
+    "answer_display": "B",
+    "distractor_notes": {
+      "8": "Compares 50% + 40% = 90% with 100% instead of 75%, giving 10% of 80 = 8.",
+      "15": "Finds the overlap percentage (50% + 40% − 75% = 15%) and stops without finding 15% of 80.",
+      "20": "Finds 25% of 80 = 20, the number who do neither activity.",
+      "32": "Finds 40% of 80 = 32, the total number who cycle."
+    }
+  },
+  {
+    "id": 464,
+    "topic": "percentages",
+    "subtopic": "venn_overlap_set",
+    "difficulty": 2,
+    "question": "In a class of 32 pupils, 21 have a dog, 16 have a cat, and 4 have neither pet. How many pupils have both a dog and a cat?",
+    "answer": "9",
+    "unit": null,
+    "explanation": "The number of pupils with at least one pet is 32 − 4 = 28. Adding dog and cat owners gives 21 + 16 = 37, which counts dual owners twice. Therefore 37 − 28 = 9 pupils have both pets.",
+    "hints": [
+      "First subtract the 4 pupils with neither pet from 32.",
+      "Compare 21 + 16 with that reduced total to find the overlap."
+    ],
+    "pitfall": "Subtracting 32 instead of 28 from 21 + 16.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which familiar percentage or fraction could you use to check?",
+    "time_target_seconds": 55,
+    "options": [
+      "5",
+      "7",
+      "9",
+      "12",
+      "28"
+    ],
+    "answer_index": 2,
+    "answer_display": "C",
+    "distractor_notes": {
+      "5": "Subtracts 32 from 21 + 16 (37 − 32 = 5), forgetting the 4 pupils with neither pet.",
+      "7": "Finds 28 − 21 = 7, the pupils who have a cat only.",
+      "12": "Finds 28 − 16 = 12, the pupils who have a dog only.",
+      "28": "Subtracts 4 from 32 (32 − 4 = 28), finding how many have at least one pet."
+    }
+  },
+  {
+    "id": 465,
+    "topic": "percentages",
+    "subtopic": "venn_overlap_set",
+    "difficulty": 3,
+    "question": "Of 150 pupils in Year 6, 60% belong to Choir, 48% belong to Drama, and 12% belong to neither club. How many pupils belong to Choir ONLY?",
+    "answer": "60",
+    "unit": null,
+    "explanation": "Those in at least one club make up 100% − 12% = 88%. Since 60% + 48% = 108%, the overlap in both is 108% − 88% = 20%. Choir only is 60% − 20% = 40%, and 40% of 150 = 60 pupils.",
+    "hints": [
+      "Work out the percentage in both clubs using 100% − 12% = 88%.",
+      "Subtract that overlap percentage from 60% before finding the fraction of 150."
+    ],
+    "pitfall": "Giving all Choir members (90) or those in both clubs (30) instead of Choir only.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which familiar percentage or fraction could you use to check?",
+    "time_target_seconds": 70,
+    "options": [
+      "18",
+      "30",
+      "42",
+      "60",
+      "90"
+    ],
+    "answer_index": 3,
+    "answer_display": "D",
+    "distractor_notes": {
+      "18": "Finds 12% of 150 = 18, the number belonging to neither club.",
+      "30": "Finds 20% of 150 = 30, the number belonging to both clubs.",
+      "42": "Finds 28% of 150 = 42, the number belonging to Drama only.",
+      "90": "Finds all Choir members (60% of 150 = 90) without removing those also in Drama."
+    }
+  },
+  {
+    "id": 466,
+    "topic": "geometry",
+    "subtopic": "trapezium_parallelogram_cuboid_set",
+    "difficulty": 2,
+    "question": "The diagram shows a parallelogram with a base of 14 cm, a sloping side of 10 cm and a perpendicular height of 8 cm. What is its area?",
+    "answer": "112 cm²",
+    "unit": "cm²",
+    "explanation": "The area of a parallelogram is base × perpendicular height = 14 × 8 = 112 cm². Do not use the 10 cm sloping side for the area.",
+    "hints": [
+      "Think of cutting a right-angled triangle off one end of the parallelogram and sliding it to the other end to form a rectangle.",
+      "Multiply the base by the perpendicular height, ignoring the 10 cm sloping side."
+    ],
+    "pitfall": "Multiplying base by the sloping side (14 × 10) instead of by the perpendicular height (14 × 8).",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              60,
+              190
+            ],
+            [
+              280,
+              190
+            ],
+            [
+              340,
+              60
+            ],
+            [
+              120,
+              60
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            120,
+            60
+          ],
+          "to": [
+            120,
+            190
+          ],
+          "dashed": true
+        },
+        {
+          "from": [
+            120,
+            178
+          ],
+          "to": [
+            132,
+            178
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            132,
+            178
+          ],
+          "to": [
+            132,
+            190
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 170,
+          "y": 212,
+          "text": "14 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 78,
+          "y": 120,
+          "text": "10 cm",
+          "anchor": "end"
+        },
+        {
+          "x": 138,
+          "y": 130,
+          "text": "8 cm",
+          "anchor": "start"
+        }
+      ],
+      "description": "A parallelogram with base 14 cm, sloping left side 10 cm, and a dashed vertical perpendicular height line of 8 cm inside with a right-angle mark. Not to scale."
+    },
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Can you explain the shape or angle fact you used?",
+    "time_target_seconds": 55,
+    "options": [
+      "48 cm²",
+      "56 cm²",
+      "80 cm²",
+      "112 cm²",
+      "140 cm²"
+    ],
+    "answer_index": 3,
+    "answer_display": "D",
+    "distractor_notes": {
+      "48 cm²": "Calculates the perimeter 2 × (14 + 10) = 48 instead of the area.",
+      "56 cm²": "Halves 14 × 8 = 56 as if the shape were a triangle.",
+      "80 cm²": "Multiplies the sloping side by the height (10 × 8 = 80 cm²) instead of the base.",
+      "140 cm²": "Multiplies the base by the sloping side (14 × 10 = 140 cm²) instead of the perpendicular height."
+    }
+  },
+  {
+    "id": 467,
+    "topic": "geometry",
+    "subtopic": "trapezium_parallelogram_cuboid_set",
+    "difficulty": 2,
+    "question": "The diagram shows a trapezium whose parallel sides measure 9 cm and 15 cm. Its perpendicular height is 7 cm. What is the area of the trapezium?",
+    "answer": "84 cm²",
+    "unit": "cm²",
+    "explanation": "Average the two parallel sides: (9 + 15) ÷ 2 = 12 cm. Multiply by the perpendicular height: 12 × 7 = 84 cm².",
+    "hints": [
+      "What is the average of the two parallel sides 9 cm and 15 cm?",
+      "Multiply that average width by the perpendicular height 7 cm."
+    ],
+    "pitfall": "Adding the parallel sides and multiplying by 7 without dividing by 2.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [
+              70,
+              190
+            ],
+            [
+              310,
+              190
+            ],
+            [
+              260,
+              60
+            ],
+            [
+              120,
+              60
+            ]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [
+            120,
+            60
+          ],
+          "to": [
+            120,
+            190
+          ],
+          "dashed": true
+        },
+        {
+          "from": [
+            120,
+            178
+          ],
+          "to": [
+            132,
+            178
+          ],
+          "dashed": false
+        },
+        {
+          "from": [
+            132,
+            178
+          ],
+          "to": [
+            132,
+            190
+          ],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 190,
+          "y": 45,
+          "text": "9 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 190,
+          "y": 212,
+          "text": "15 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 138,
+          "y": 130,
+          "text": "7 cm",
+          "anchor": "start"
+        }
+      ],
+      "description": "A trapezium with parallel top edge 9 cm, parallel bottom edge 15 cm, and a dashed vertical line marking perpendicular height 7 cm. Not to scale."
+    },
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Can you explain the shape or angle fact you used?",
+    "time_target_seconds": 55,
+    "options": [
+      "21 cm²",
+      "63 cm²",
+      "84 cm²",
+      "105 cm²",
+      "168 cm²"
+    ],
+    "answer_index": 2,
+    "answer_display": "C",
+    "distractor_notes": {
+      "21 cm²": "Subtracts the parallel sides instead of adding: ½ × (15 − 9) × 7 = 21 cm².",
+      "63 cm²": "Multiplies only the shorter parallel side by the height: 9 × 7 = 63 cm².",
+      "105 cm²": "Multiplies only the longer parallel side by the height: 15 × 7 = 105 cm².",
+      "168 cm²": "Computes (9 + 15) × 7 = 168 cm² and forgets to divide by 2."
+    }
+  },
+  {
+    "id": 468,
+    "topic": "geometry",
+    "subtopic": "trapezium_parallelogram_cuboid_set",
+    "difficulty": 3,
+    "question": "A 3 cm × 3 cm × 3 cm wooden cube is painted red on all six outside faces and then cut into twenty-seven 1 cm cubes. How many of the small cubes have red paint on exactly ONE face?",
+    "answer": "6",
+    "unit": null,
+    "explanation": "On each of the 6 outer 3 × 3 faces, the 4 corners have 3 red faces and the 4 edge-middles have 2 red faces. Only the 1 middle square on each face has exactly 1 red face, giving 6 × 1 = 6 cubes.",
+    "hints": [
+      "Look at one 3 × 3 face of the cube: corners touch three faces and edges touch two.",
+      "How many small cubes lie strictly in the centre of each of the 6 faces?"
+    ],
+    "pitfall": "Confusing the 6 face-centre cubes with the 8 corners (3 faces) or 12 edges (2 faces).",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Can you explain the shape or angle fact you used?",
+    "time_target_seconds": 70,
+    "options": [
+      "6",
+      "8",
+      "12",
+      "18",
+      "24"
+    ],
+    "answer_index": 0,
+    "answer_display": "A",
+    "distractor_notes": {
+      "8": "Counts the 8 corner cubes, which actually have 3 red faces each.",
+      "12": "Counts the 12 edge-middle cubes, which actually have 2 red faces each.",
+      "18": "Counts 3 cubes per face (6 × 3 = 18) instead of only the centre cube on each face.",
+      "24": "Counts 4 cubes per face (6 × 4 = 24), double-counting the edge cubes."
+    }
+  },
+  {
+    "id": 469,
+    "topic": "measures",
+    "subtopic": "bearings_clocks_miles_set",
+    "difficulty": 2,
+    "question": "Using the conversion 5 miles = 8 km, how many miles is a 64 km road race?",
+    "answer": "40",
+    "unit": null,
+    "explanation": "Since 8 km equals 5 miles, split 64 km into 8 km steps: 64 ÷ 8 = 8 steps. Each step is 5 miles, so 8 × 5 = 40 miles.",
+    "hints": [
+      "Should the number of miles be smaller or larger than 64?",
+      "Divide 64 by 8 to count the 8 km blocks, then multiply by 5."
+    ],
+    "pitfall": "Multiplying by 8 and dividing by 5 instead of dividing by 8 and multiplying by 5.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Why is that the right unit for the final answer?",
+    "time_target_seconds": 55,
+    "options": [
+      "8",
+      "32",
+      "40",
+      "56",
+      "102.4"
+    ],
+    "answer_index": 2,
+    "answer_display": "C",
+    "distractor_notes": {
+      "8": "Divides 64 by 8 to find the number of 8 km groups and forgets to multiply by 5.",
+      "32": "Divides 64 by 10 then multiplies by 5 (64 ÷ 10 × 5 = 32), using 10 km instead of 8 km.",
+      "56": "Subtracts 8 from 64 (64 − 8 = 56) instead of scaling proportionally.",
+      "102.4": "Converts the wrong way round, calculating 64 × 8 ÷ 5 = 102.4."
+    }
+  },
+  {
+    "id": 470,
+    "topic": "measures",
+    "subtopic": "bearings_clocks_miles_set",
+    "difficulty": 3,
+    "question": "What is the smaller angle between the hour hand and the minute hand of an analogue clock at 02:30?",
+    "answer": "105°",
+    "unit": "°",
+    "explanation": "Each hour interval is 30°. At 02:30, the minute hand points at 6 (6 × 30° = 180°). The hour hand is halfway between 2 and 3, at 2.5 × 30° = 75°. The angle between them is 180° − 75° = 105°.",
+    "hints": [
+      "At half past 2, the minute hand points to 6. Where exactly is the hour hand?",
+      "Each hour mark is 30° apart, so halfway between 2 and 3 is 15° past 2."
+    ],
+    "pitfall": "Leaving the hour hand directly on the 2 (giving 120°) instead of moving it halfway to 3.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Why is that the right unit for the final answer?",
+    "time_target_seconds": 70,
+    "options": [
+      "90°",
+      "105°",
+      "120°",
+      "135°",
+      "255°"
+    ],
+    "answer_index": 1,
+    "answer_display": "B",
+    "distractor_notes": {
+      "90°": "Measures from 3 to 6 (3 × 30° = 90°), assuming the hour hand is already at 3.",
+      "120°": "Measures from 2 to 6 (4 × 30° = 120°), ignoring that the hour hand moves past 2.",
+      "135°": "Adds 15° to 120° (120° + 15° = 135°) instead of subtracting 15°.",
+      "255°": "Gives the larger reflex angle around the clock (360° − 105° = 255°) instead of the smaller angle."
+    }
+  },
+  {
+    "id": 471,
+    "topic": "measures",
+    "subtopic": "bearings_clocks_miles_set",
+    "difficulty": 2,
+    "question": "A walker sets off North-East on a bearing of 045°. She turns 135° clockwise, and then turns 45° anticlockwise. What is her new three-figure bearing?",
+    "answer": "135°",
+    "unit": "°",
+    "explanation": "Turning 135° clockwise from 045° reaches 045° + 135° = 180°. Then turning 45° anticlockwise subtracts 45°, leaving 180° − 45° = 135°.",
+    "hints": [
+      "Clockwise turns add to a bearing; anticlockwise turns subtract from it.",
+      "Start at 45°, add 135°, then subtract 45°."
+    ],
+    "pitfall": "Adding an anticlockwise turn instead of subtracting it.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Why is that the right unit for the final answer?",
+    "time_target_seconds": 55,
+    "options": [
+      "045°",
+      "090°",
+      "135°",
+      "180°",
+      "225°"
+    ],
+    "answer_index": 2,
+    "answer_display": "C",
+    "distractor_notes": {
+      "045°": "Subtracts 135° from 180° instead of computing 045° + 135° − 45°.",
+      "090°": "Subtracts both 45° turns from 180° (180° − 45° − 45° = 090°).",
+      "180°": "Computes 045° + 135° = 180° and forgets the 45° anticlockwise turn.",
+      "225°": "Adds the 45° anticlockwise turn instead of subtracting it: 045° + 135° + 45° = 225°."
+    }
+  },
+  {
+    "id": 472,
+    "topic": "algebra",
+    "subtopic": "paired_equations_set",
+    "difficulty": 2,
+    "question": "In a 15-question quiz, a correct answer scores 4 points and a wrong answer loses 1 point. Sam answers all 15 questions and scores 45 points. How many questions did he answer correctly?",
+    "answer": "12",
+    "unit": null,
+    "explanation": "If all 15 were right, Sam would score 60 points. He scored 60 − 45 = 15 points fewer. Each wrong answer loses 4 + 1 = 5 points compared with a right answer, so he had 15 ÷ 5 = 3 wrong and 15 − 3 = 12 correct.",
+    "hints": [
+      "What would Sam score if all 15 questions were right?",
+      "Every wrong answer drops the maximum score by 5 points (4 not gained plus 1 lost)."
+    ],
+    "pitfall": "Dividing the 15-point shortfall by 4 instead of 5, or giving the number of wrong answers (3).",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Does your rule work when you substitute the answer back?",
+    "time_target_seconds": 55,
+    "options": [
+      "3",
+      "9",
+      "11",
+      "12",
+      "15"
+    ],
+    "answer_index": 3,
+    "answer_display": "D",
+    "distractor_notes": {
+      "3": "Finds the number of wrong answers ((60 − 45) ÷ 5 = 3) instead of correct answers.",
+      "9": "Divides the final score by 5 (45 ÷ 5 = 9) instead of finding the shortfall from 60.",
+      "11": "Divides 45 ÷ 4 = 11 remainder 1, ignoring the 1-point penalty on the remaining 4 questions.",
+      "15": "Stops at the point shortfall (60 − 45 = 15) without dividing by 5."
+    }
+  },
+  {
+    "id": 473,
+    "topic": "algebra",
+    "subtopic": "paired_equations_set",
+    "difficulty": 2,
+    "question": "If a + b = 29 and a − b = 7, what is the value of a × b?",
+    "answer": "198",
+    "unit": null,
+    "explanation": "Add the two equations: 2a = 29 + 7 = 36, so a = 18. Then b = 29 − 18 = 11 (check: 18 − 11 = 7). Finally, a × b = 18 × 11 = 198.",
+    "hints": [
+      "Find the larger number a by taking (29 + 7) ÷ 2.",
+      "Once you know a and b, multiply them together."
+    ],
+    "pitfall": "Using 22 and 7 as the two numbers instead of halving 29 + 7 and 29 − 7.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Does your rule work when you substitute the answer back?",
+    "time_target_seconds": 55,
+    "options": [
+      "110",
+      "154",
+      "180",
+      "198",
+      "203"
+    ],
+    "answer_index": 3,
+    "answer_display": "D",
+    "distractor_notes": {
+      "110": "Uses 10 and 11 (from 11 × 10 = 110), miscalculating a from 29 − 7.",
+      "154": "Uses a = 22 and b = 7 (from 29 − 7 = 22), multiplying 22 × 7 = 154.",
+      "180": "Halves incorrectly to get a = 18 and b = 10, giving 18 × 10 = 180.",
+      "203": "Multiplies the two given numbers directly: 29 × 7 = 203."
+    }
+  },
+  {
+    "id": 474,
+    "topic": "algebra",
+    "subtopic": "paired_equations_set",
+    "difficulty": 3,
+    "question": "On a balance scale, 2 cylinders and 1 sphere balance 17 cubes. Meanwhile, 1 cylinder and 2 spheres balance 19 cubes. How many cubes will balance 1 cylinder and 1 sphere?",
+    "answer": "12",
+    "unit": null,
+    "explanation": "Put both weighings together: 3 cylinders and 3 spheres balance 17 + 19 = 36 cubes. Divide everything by 3: 1 cylinder and 1 sphere balance 36 ÷ 3 = 12 cubes.",
+    "hints": [
+      "What happens if you combine everything from both balance scales onto one big scale?",
+      "Three cylinders and three spheres balance 36 cubes, so divide by 3."
+    ],
+    "pitfall": "Dividing 36 by 2 instead of 3, or stopping at 36.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Does your rule work when you substitute the answer back?",
+    "time_target_seconds": 70,
+    "options": [
+      "2",
+      "9",
+      "12",
+      "18",
+      "36"
+    ],
+    "answer_index": 2,
+    "answer_display": "C",
+    "distractor_notes": {
+      "2": "Subtracts 19 − 17 = 2 cubes, finding how much heavier a sphere is than a cylinder.",
+      "9": "Divides the mean (18 ÷ 2 = 9) instead of dividing the combined total 36 by 3.",
+      "18": "Finds the mean of 17 and 19 ((17 + 19) ÷ 2 = 18), dividing by 2 instead of 3.",
+      "36": "Adds both scales (17 + 19 = 36) for 3 cylinders and 3 spheres without dividing by 3."
+    }
+  },
+  {
+    "id": 475,
+    "topic": "statistics",
+    "subtopic": "probability_and_combined_mean_set",
+    "difficulty": 2,
+    "question": "Ten pupils in Group A have a mean score of 18, and 15 pupils in Group B have a mean score of 13. What is the mean score of all 25 pupils combined?",
+    "answer": "15",
+    "unit": null,
+    "explanation": "Group A's total is 10 × 18 = 180 and Group B's total is 15 × 13 = 195. Combined total = 180 + 195 = 375 across 25 pupils, giving a mean of 375 ÷ 25 = 15.",
+    "hints": [
+      "Because Group B is larger than Group A, do not simply average 18 and 13.",
+      "Find the total marks for each group, add them, and divide by 25."
+    ],
+    "pitfall": "Averaging the two means (15.5) instead of weighting by the number of pupils in each group.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does the total, comparison or average tell you about the data?",
+    "time_target_seconds": 55,
+    "options": [
+      "12.5",
+      "15",
+      "15.5",
+      "16",
+      "31"
+    ],
+    "answer_index": 1,
+    "answer_display": "B",
+    "distractor_notes": {
+      "16": "Swaps the group sizes when weighting: (15 × 18 + 10 × 13) ÷ 25 = 16.",
+      "31": "Adds the two means directly (18 + 13 = 31) instead of finding total marks.",
+      "12.5": "Divides 25 pupils by 2 (25 ÷ 2 = 12.5) instead of weighting the scores.",
+      "15.5": "Takes the simple mean of 18 and 13 ((18 + 13) ÷ 2 = 15.5), ignoring group sizes."
+    }
+  },
+  {
+    "id": 476,
+    "topic": "statistics",
+    "subtopic": "probability_and_combined_mean_set",
+    "difficulty": 2,
+    "question": "A pie chart shows how 240 commuters travel to work. The sector for travelling by train has an angle of 135°. How many commuters travel by train?",
+    "answer": "90",
+    "unit": null,
+    "explanation": "Simplify the sector fraction: 135/360 = 3/8 (since 45° is 1/8 of 360°, and 135 = 3 × 45). Then 3/8 of 240 = 3 × 30 = 90 commuters.",
+    "hints": [
+      "Write 135° out of 360° as a simplified fraction.",
+      "Notice that 45° is 1/8 of a full 360° turn."
+    ],
+    "pitfall": "Treating 135° as 135%, or dividing 135° by 360° wrongly.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does the total, comparison or average tell you about the data?",
+    "time_target_seconds": 55,
+    "options": [
+      "30",
+      "45",
+      "60",
+      "80",
+      "90"
+    ],
+    "answer_index": 4,
+    "answer_display": "E",
+    "distractor_notes": {
+      "30": "Finds 45° out of 360° (1/8 of 240 = 30) instead of 135°.",
+      "45": "Divides 135 by 3 (135 ÷ 3 = 45) instead of finding 135/360 of 240.",
+      "60": "Uses a 90° quarter circle (1/4 of 240 = 60) instead of 135°.",
+      "80": "Uses 120° (1/3 of 240 = 80) instead of 135°."
+    }
+  },
+  {
+    "id": 477,
+    "topic": "statistics",
+    "subtopic": "probability_and_combined_mean_set",
+    "difficulty": 3,
+    "question": "A fair spinner has 12 equal sections numbered 1 to 12. What is the probability that it lands on a number that is either a prime number or a multiple of 4? Give your answer as a fraction in simplest form.",
+    "answer": "2/3",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "explanation": "The primes from 1 to 12 are 2, 3, 5, 7 and 11 (five numbers; 1 is not prime). The multiples of 4 are 4, 8 and 12 (three numbers). None overlap, giving 8 favourable sections out of 12: 8/12 = 2/3.",
+    "hints": [
+      "List the prime numbers from 1 to 12 (remember 1 is not prime, and 2 is prime).",
+      "List the multiples of 4 from 1 to 12, count how many distinct numbers are in either list, and simplify."
+    ],
+    "pitfall": "Treating 1 as a prime number, or forgetting that 2 is prime.",
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "What does the total, comparison or average tell you about the data?",
+    "time_target_seconds": 70,
+    "options": [
+      "1/4",
+      "5/12",
+      "7/12",
+      "2/3",
+      "3/4"
+    ],
+    "answer_index": 3,
+    "answer_display": "D",
+    "distractor_notes": {
+      "1/4": "Counts only the multiples of 4 (3/12 = 1/4) and ignores the prime numbers.",
+      "5/12": "Counts only the prime numbers (5/12) and forgets the multiples of 4.",
+      "7/12": "Forgets that 2 is prime, counting {3, 5, 7, 11} and {4, 8, 12} to get 7/12.",
+      "3/4": "Wrongly counts 1 as a prime number, getting 9 out of 12 (9/12 = 3/4)."
+    }
+  },
+  {
+    "id": 478,
+    "topic": "coordinates",
+    "subtopic": "offset_reflection_rotation_set",
+    "difficulty": 2,
+    "question": "Point P (−2, 3) is shown on the grid. If P is reflected in the vertical mirror line x = 1, what are the coordinates of its image?",
+    "answer": "(4, 3)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "explanation": "Point P (−2, 3) is 3 units left of the vertical line x = 1. Its reflection sits 3 units right of x = 1, at x = 1 + 3 = 4, while y stays 3: (4, 3).",
+    "hints": [
+      "How many squares to the left of the line x = 1 is (−2, 3)?",
+      "Go the exact same distance to the right of x = 1, keeping y = 3."
+    ],
+    "pitfall": "Reflecting in the y-axis (x = 0) instead of the mirror line x = 1.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -2,
+          "y": 3,
+          "label": "P"
+        }
+      ],
+      "description": "A coordinate grid showing point P at (-2, 3). Each grid step is one unit."
+    },
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which direction changes x, and which changes y?",
+    "time_target_seconds": 55,
+    "options": [
+      "(2, 3)",
+      "(3, 3)",
+      "(-2, -1)",
+      "(4, 3)",
+      "(3, 4)"
+    ],
+    "answer_index": 3,
+    "answer_display": "D",
+    "distractor_notes": {
+      "(2, 3)": "Reflects in the y-axis (x = 0) instead of the mirror line x = 1.",
+      "(3, 3)": "Steps only 2 units past x = 1 instead of the 3-unit distance from −2 to 1.",
+      "(-2, -1)": "Reflects vertically in y = 1 instead of horizontally in x = 1.",
+      "(3, 4)": "Writes the reflected coordinates in (y, x) order instead of (x, y)."
+    }
+  },
+  {
+    "id": 479,
+    "topic": "coordinates",
+    "subtopic": "offset_reflection_rotation_set",
+    "difficulty": 2,
+    "question": "Point Q (2, −3) is shown on the grid. If Q is reflected in the horizontal mirror line y = −1, what are the coordinates of its image?",
+    "answer": "(2, 1)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "explanation": "Point Q (2, −3) lies 2 units below the horizontal line y = −1. Its reflection lies 2 units above y = −1, at y = −1 + 2 = 1, while x stays 2: (2, 1).",
+    "hints": [
+      "The horizontal line y = −1 keeps x unchanged. How far below y = −1 is y = −3?",
+      "Move 2 units above y = −1 to find the new y-coordinate."
+    ],
+    "pitfall": "Reflecting across y = 0 or confusing y = −1 with x = −1.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": 2,
+          "y": -3,
+          "label": "Q"
+        }
+      ],
+      "description": "A coordinate grid showing point Q at (2, -3). Each grid step is one unit."
+    },
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which direction changes x, and which changes y?",
+    "time_target_seconds": 55,
+    "options": [
+      "(2, 3)",
+      "(-4, -3)",
+      "(2, 2)",
+      "(1, 2)",
+      "(2, 1)"
+    ],
+    "answer_index": 4,
+    "answer_display": "E",
+    "distractor_notes": {
+      "(2, 3)": "Reflects in the x-axis (y = 0) instead of the mirror line y = −1.",
+      "(-4, -3)": "Reflects in the vertical line x = −1 instead of the horizontal line y = −1.",
+      "(2, 2)": "Steps 3 units above y = −1 instead of the 2-unit distance from −3 to −1.",
+      "(1, 2)": "Writes the coordinates in (y, x) order instead of (x, y)."
+    }
+  },
+  {
+    "id": 480,
+    "topic": "coordinates",
+    "subtopic": "offset_reflection_rotation_set",
+    "difficulty": 3,
+    "question": "Point R (−3, 2) and centre M (−1, 0) are shown on the grid. Point R is rotated 180° about M. What are the new coordinates of R?",
+    "answer": "(1, -2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "explanation": "To go from R (−3, 2) to M (−1, 0), move 2 right and 2 down. A 180° turn about M continues the exact same step past M: −1 + 2 = 1 and 0 − 2 = −2, giving (1, −2).",
+    "hints": [
+      "Rotating 180° about M places M directly halfway between the original point and its image.",
+      "Describe the step from R to M, then repeat that same step from M."
+    ],
+    "pitfall": "Rotating about the origin (0, 0) instead of the stated centre M (−1, 0).",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -3,
+          "y": 2,
+          "label": "R"
+        },
+        {
+          "x": -1,
+          "y": 0,
+          "label": "M"
+        }
+      ],
+      "description": "A coordinate grid showing point R at (-3, 2) and centre M at (-1, 0). Each grid step is one unit."
+    },
+    "mode": "set",
+    "stage": "SET",
+    "answer_alt": null,
+    "oral_load": null,
+    "parent_prompt": "Which direction changes x, and which changes y?",
+    "time_target_seconds": 70,
+    "options": [
+      "(1, -2)",
+      "(3, -2)",
+      "(1, 2)",
+      "(-3, -2)",
+      "(-2, 1)"
+    ],
+    "answer_index": 0,
+    "answer_display": "A",
+    "distractor_notes": {
+      "(3, -2)": "Rotates 180° about the origin (0, 0) instead of about M (−1, 0).",
+      "(1, 2)": "Reflects R across x = −1 without reversing the vertical offset from M.",
+      "(-3, -2)": "Reflects R across the x-axis (y = 0) instead of rotating 180° about M.",
+      "(-2, 1)": "Finds the midpoint between R and M instead of continuing an equal distance past M."
+    }
   }
 ]

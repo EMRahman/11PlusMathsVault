@@ -17,24 +17,26 @@ A static, offline-capable maths practice app for Year 5/6, aligned to the Nonsuc
 
 ## Content
 
-The bank contains **420 questions**, all with worked solutions, two hints and a pitfall:
+The bank contains **480 questions**, all with worked solutions, two hints and a pitfall:
 
 | Bank | IDs | Purpose |
 |---|---|---|
 | 120 oral (`walk`) | 1 to 120 | Warm-ups across ten domains. Each wrong option comes from a named mistake. |
-| 150 SET-style (`set`) | 211 to 360 | Written multiple choice, covering all six types in the official samples plus wider KS2 topics, weighted towards number, fractions, ratio and geometry. |
-| 150 NWSSEE-style (`desk`) | 121 to 210, 361 to 420 | Written answers. The newer questions are multi-step problems for the school's warning that candidates "will need to adapt their learning". |
+| 180 SET-style (`set`) | 211 to 360, 451 to 480 | Written multiple choice, covering all six types in the official samples plus wider KS2 and 3-year forum-reported topics (including Venn overlaps, Roman numerals, combinatorics, simultaneous bills, inverse proportion, trapeziums/parallelograms/painted cubes, clock angles, bearings, miles ↔ km, combined mean, probability and offset reflections/rotations). |
+| 180 NWSSEE-style (`desk`) | 121 to 210, 361 to 450 | Written answers. Multi-step and unfamiliar problems aligned with the school's warning that candidates "will need to adapt their learning". |
 
 `data/questions.json` is the static runtime bank, and original question IDs are preserved. To edit content, update the sources and regenerate:
 
 - `data/seed-questions.json` and the families in `scripts/build-questions.cjs`: the original 210 questions.
 - `data/authored/`: the SET and NWSSEE banks, Walk Mode wrong answers and difficulty ratings. See [its guide](data/authored/README.md).
 
-The November 2026 reviews strengthened 83 exercises: 23 SET questions and 60 written questions. The latest pass adds 45 harder replacements, including four stretch problems in each NWSSEE mock. The replacements add decisions about method, multiple stages and checks on constraints, with revised hints and solutions. All 300 written questions are now rated exam-level or stretch; these labels are author judgements. The harder bank is informed by the official samples, rather than an exact reconstruction of their difficulty mix. Walk Mode remains an oral warm-up. Mock paper membership and order are fixed in `data/authored/paper-layout.json`, so revising difficulty does not expose previously reserved questions. Historical progress and bookmarks are retained; saved daily answers are cleared only for questions whose content has changed.
+The November 2026 reviews strengthened 105 exercises (23 SET questions and 82 written questions across `nwssee-upgrades.json` and the newer banks) and added 60 new written questions (`421–450` NWSSEE and `451–480` SET) following a 3-year review of past-cycle exam guidance, Reddit, Mumsnet and ElevenPlusExams feedback. All 360 written questions are rated exam-level or stretch; these labels are author judgements. Walk Mode remains an oral warm-up. Mock paper membership and order are fixed in `data/authored/paper-layout.json`, so revising difficulty does not expose previously reserved questions. Historical progress and bookmarks are retained; saved daily answers are cleared only for questions whose content has changed.
 
 ```bash
 node scripts/check-batch.mjs data/authored/<file>.json --kind set --ids <first>-<last>
 node scripts/check-batch.mjs data/authored/nwssee-upgrades.json --kind nwssee --ids 121-209 --replacements
+node scripts/check-batch.mjs data/authored/nwssee-recent-topics.json --kind nwssee --ids 421-450
+node scripts/check-batch.mjs data/authored/set-recent-topics.json --kind set --ids 451-480
 node scripts/build-questions.cjs
 node validate-data.js
 node --test tests/*.test.mjs

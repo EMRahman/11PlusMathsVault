@@ -212,8 +212,8 @@ for (const { id, distractors } of readAuthored('walk-distractors.json')) setOpti
 
 const SET_SECONDS = { 1: 40, 2: 55, 3: 70 }, NWSSEE_SECONDS = { 1: 75, 2: 105, 3: 135 };
 const AUTHORED = [
-  ['set-number-decimals.json', 'SET'], ['set-fractions-ratio.json', 'SET'], ['set-geometry-measures.json', 'SET'], ['set-percent-algebra-data.json', 'SET'],
-  ['nwssee-number-ratio.json', 'NWSSEE'], ['nwssee-geometry-algebra.json', 'NWSSEE'],
+  ['set-number-decimals.json', 'SET'], ['set-fractions-ratio.json', 'SET'], ['set-geometry-measures.json', 'SET'], ['set-percent-algebra-data.json', 'SET'], ['set-recent-topics.json', 'SET'],
+  ['nwssee-number-ratio.json', 'NWSSEE'], ['nwssee-geometry-algebra.json', 'NWSSEE'], ['nwssee-recent-topics.json', 'NWSSEE'],
 ];
 for (const [file, stage] of AUTHORED) for (const raw of readAuthored(file)) {
   const { distractors, check, check_note, ...q } = raw;

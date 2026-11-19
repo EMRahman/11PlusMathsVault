@@ -421,3 +421,52 @@ test('mixed worksheets keep the options on multiple-choice questions only', () =
   assert.match(worksheetHtml([choice]), /separate answer grid/);
   assert.match(worksheetHtml([written]), /Written answers/);
 });
+
+test('3-year Nonsuch review topics are covered across both NWSSEE and SET written banks', () => {
+  const byId = id => questions.find(q => q.id === id);
+  const deskNew = questions.filter(q => q.id >= 421 && q.id <= 450);
+  const setNew = questions.filter(q => q.id >= 451 && q.id <= 480);
+  assert.equal(deskNew.length, 30);
+  assert.equal(setNew.length, 30);
+  assert.ok(deskNew.every(q => q.mode === 'desk' && q.stage === 'NWSSEE' && q.difficulty >= 2));
+  assert.ok(setNew.every(q => q.mode === 'set' && q.stage === 'SET' && q.difficulty >= 2));
+
+  // Verify coverage across all newly added topic areas and accepted formatting
+  const checks = [
+    [421, '327'], [422, '67'], [423, '77'], [424, '12 minutes'],
+    [425, '22 1/2'], [426, '1/6'], [427, '£2.40'], [428, '8.5'],
+    [429, '2.65 kg'], [430, '9 hours'], [431, '9 days'], [432, '6 days'],
+    [433, '30'], [434, '76'], [435, '120'], [436, '248 cm2'],
+    [437, '24'], [438, '44 m2'], [439, '10°'], [440, '110 miles'],
+    [441, '150'], [442, '90 g'], [443, '14'], [444, '34'],
+    [445, '69'], [446, '17'], [447, '45'], [448, '5, 2'],
+    [449, '1,-2'], [450, '(4, -2)'],
+  ];
+  for (const [id, accepted] of checks) {
+    assert.ok(checkAnswer(accepted, byId(id)), `Q${id} should accept "${accepted}"`);
+  }
+  assert.ok(!checkAnswer('2/12', byId(455)), 'Q455 requires simplest form');
+  assert.ok(!checkAnswer('8/12', byId(477)), 'Q477 requires simplest form');
+  assert.ok(checkAnswer('4,3', byId(478)));
+  assert.ok(!checkAnswer('(3, 4)', byId(478)));
+
+  // All 20 new subtopics provide 3-step tutorial guidance
+  const newSubtopics = new Set([...deskNew, ...setNew].map(q => q.subtopic));
+  assert.equal(newSubtopics.size, 20);
+  for (const q of [...deskNew, ...setNew]) {
+    const t = getTutorial(q);
+    assert.ok(t && Array.isArray(t.steps) && t.steps.length === 3, `Q${q.id} (${q.subtopic}) needs tutorial`);
+  }
+});
+
+test('upgraded legacy desk questions carry content_revision 2 and new Common Hacks have notes', () => {
+  const upgradedIds = [135, 138, 142, 145, 152, 155, 158, 159, 164, 166, 167, 169, 170, 173, 175, 176, 182, 188, 190, 191, 197, 201];
+  for (const id of upgradedIds) {
+    const q = questions.find(x => x.id === id);
+    assert.equal(q.content_revision, 2, `Q${id} should be upgraded`);
+    assert.equal(getTutorial(q), null, `Q${id} uses its own worked solution`);
+  }
+  for (const hackId of ['combined-rates', 'inverse-proportion', 'simultaneous-elimination', 'clock-angles', 'painted-cubes', 'venn-overlap']) {
+    assert.ok(METHOD_NOTES[hackId]?.length === 2 && METHOD_NOTES[hackId].every(n => n.length > 20), hackId);
+  }
+});

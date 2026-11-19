@@ -1,5 +1,15 @@
 # Product Specification: 11+ Maths Vault
 
+## Implementation update — 19 November 2026
+
+Following a 3-year review of Nonsuch/Wallington past-cycle guidance and parent/tutor debriefs on Reddit, Mumsnet and ElevenPlusExams (2024–2026 entry cycles):
+
+- **Expanded Desk banks to 480 total questions:** Added 30 NWSSEE written questions (`421–450` in `data/authored/nwssee-recent-topics.json`) and 30 SET multiple-choice questions (`451–480` in `data/authored/set-recent-topics.json`) across all 10 domains (20 new subtopics), covering Roman numerals, page-digit and round-robin combinatorics, combined work rates, worded simultaneous equations, inverse proportion with mid-task changes, two-set Venn overlaps, cuboid surface area, painted-cube dissection, parallelogram and trapezium area, clock hand angles, three-figure bearings, miles ↔ kilometres, combined weighted means, pie-chart sector angles, fraction probability, offset mirror-line reflections (`x = k`, `y = k`), and 90°/180° rotations.
+- **Upgraded 22 remaining repetitive legacy `desk` clones:** Replaced 22 `rev=1` template clones in `data/authored/nwssee-upgrades.json` (`content_revision: 2`), keeping one clean exemplar per original family and preserving mock paper membership and difficulty counts.
+- **Common Hacks & Tutorials:** Added 6 Common Hacks method cards (`combined-rates`, `inverse-proportion`, `simultaneous-elimination`, `clock-angles`, `painted-cubes`, `venn-overlap`) and step-by-step tutorials for all 20 new subtopics.
+
+See [the 3-year review note](data/authored/exam-evidence.md#3-year-web--community-review-2024–2026-entry-cycles).
+
 ## Implementation update — 9 November 2026
 
 At the user's request for harder questions, strengthened a further 45 exercises: 34 written answers and 11 SET choices. The cumulative review now covers 83 questions. All remaining written warm-ups were replaced with problems combining methods; each NWSSEE mock also received four additional stretch questions. The 300 written questions now have difficulty 2 or 3, while Walk Mode remains an oral warm-up. IDs, skill groups, mock order and unseen reservations are preserved. This harder practice mix is informed by the published samples, not empirically matched to the real papers. See [the follow-up evidence note](data/authored/exam-evidence.md#harder-practice-requested-on-9-november).

@@ -1,0 +1,1228 @@
+[
+  {
+    "id": 451,
+    "topic": "number_operations",
+    "subtopic": "roman_numerals_and_combinatorics",
+    "difficulty": 2,
+    "question": "One stone bridge carries the Roman numeral date MDCCCLXXVI, and another carries MCMXCIV. How many years apart were the two bridges built?",
+    "answer": "118",
+    "unit": null,
+    "answer_format": null,
+    "check": "1994-1876",
+    "distractors": [
+      {
+        "value": "108",
+        "why": "Subtracts 1876 from 1984 after misreading XCIV as 84 instead of 94."
+      },
+      {
+        "value": "122",
+        "why": "Computes 1996 − 1874 after misreading IV as 6 and VI as 4."
+      },
+      {
+        "value": "138",
+        "why": "Misreads MCMXCIV as 2014 (treating XC as 110) before subtracting 1876."
+      },
+      {
+        "value": "318",
+        "why": "Reads MCM as 2100 (1000 + 100 + 1000) instead of 1900, giving 2194 − 1876."
+      }
+    ],
+    "explanation": "Decode each date carefully: MDCCCLXXVI is 1000 + 800 + 70 + 6 = 1876, and MCMXCIV is 1000 + 900 + 90 + 4 = 1994. Subtracting gives 1994 − 1876 = 118 years.",
+    "hints": [
+      "Break each Roman numeral into thousands, hundreds, tens and ones.",
+      "Check subtractive pairs carefully: CM is 900, XC is 90 and IV is 4."
+    ],
+    "pitfall": "Misreading subtractive pairs such as CM, XC or IV by adding instead of subtracting.",
+    "diagram": null
+  },
+  {
+    "id": 452,
+    "topic": "number_operations",
+    "subtopic": "roman_numerals_and_combinatorics",
+    "difficulty": 2,
+    "question": "Nine school teams enter a netball league where each team plays every other team exactly once. How many matches are played altogether?",
+    "answer": "36",
+    "unit": null,
+    "answer_format": null,
+    "check": "9*8/2",
+    "distractors": [
+      {
+        "value": "18",
+        "why": "Doubles 9 (9 × 2 = 18) instead of multiplying 9 by 8 and halving."
+      },
+      {
+        "value": "45",
+        "why": "Computes 9 × 10 ÷ 2 = 45, counting 10 opponents instead of 8."
+      },
+      {
+        "value": "72",
+        "why": "Multiplies 9 × 8 = 72 and forgets to halve to avoid counting each match twice."
+      },
+      {
+        "value": "81",
+        "why": "Squares 9 (9 × 9 = 81), forgetting teams cannot play themselves and matches involve pairs."
+      }
+    ],
+    "explanation": "Each of the 9 teams plays 8 opponents, giving 9 × 8 = 72 pairings. Because every match involves two teams, divide by 2 so no match is counted twice: 72 ÷ 2 = 36 matches.",
+    "hints": [
+      "How many other teams does each single team play?",
+      "Multiply 9 by 8, then halve because Team A playing Team B is the same match as Team B playing Team A."
+    ],
+    "pitfall": "Forgetting to divide by 2, which counts every match twice.",
+    "diagram": null
+  },
+  {
+    "id": 453,
+    "topic": "number_operations",
+    "subtopic": "roman_numerals_and_combinatorics",
+    "difficulty": 3,
+    "question": "A street has houses numbered from 1 to 120 inclusive. How many individual digits are needed to make all the house numbers?",
+    "answer": "252",
+    "unit": null,
+    "answer_format": null,
+    "check": "9*1+90*2+(120-99)*3",
+    "distractors": [
+      {
+        "value": "120",
+        "why": "Counts 1 digit per house instead of counting multi-digit house numbers."
+      },
+      {
+        "value": "231",
+        "why": "Counts only 2 digits each for numbers 100–120: 9 + 180 + 42 = 231."
+      },
+      {
+        "value": "240",
+        "why": "Multiplies 120 × 2, treating all house numbers as having 2 digits."
+      },
+      {
+        "value": "249",
+        "why": "Uses 20 three-digit numbers (120 − 100 = 20) instead of 21, losing 3 digits."
+      }
+    ],
+    "explanation": "Numbers 1–9 use 9 × 1 = 9 digits. Numbers 10–99 are 90 houses using 90 × 2 = 180 digits. Numbers 100–120 are 21 houses using 21 × 3 = 63 digits. Total = 9 + 180 + 63 = 252 digits.",
+    "hints": [
+      "Group the house numbers into 1-digit, 2-digit and 3-digit numbers.",
+      "Remember to include both 100 and 120 when counting the 3-digit houses."
+    ],
+    "pitfall": "Subtracting 120 − 100 = 20 instead of 21 for the count of 3-digit numbers.",
+    "diagram": null
+  },
+  {
+    "id": 454,
+    "topic": "fractions",
+    "subtopic": "work_rate_fractions_set",
+    "difficulty": 2,
+    "question": "A cold tap fills a water butt in 12 minutes, and a hose fills it in 24 minutes. How many minutes does it take to fill the water butt if both are turned on together?",
+    "answer": "8 minutes",
+    "unit": "minutes",
+    "answer_format": null,
+    "check": "1/(1/12+1/24)",
+    "distractors": [
+      {
+        "value": "6 minutes",
+        "why": "Halves the shorter time (12 ÷ 2 = 6), assuming both fill at the faster rate."
+      },
+      {
+        "value": "12 minutes",
+        "why": "Halves 24 minutes instead of adding both filling fractions."
+      },
+      {
+        "value": "18 minutes",
+        "why": "Finds the mean of the two times: (12 + 24) ÷ 2 = 18 minutes."
+      },
+      {
+        "value": "36 minutes",
+        "why": "Adds the two times (12 + 24 = 36) instead of combining their per-minute rates."
+      }
+    ],
+    "explanation": "In 1 minute, the tap fills 1/12 = 2/24 of the butt and the hose fills 1/24. Together they fill 3/24 = 1/8 per minute, so the water butt fills in 8 minutes.",
+    "hints": [
+      "What fraction of the water butt does each fill in 1 minute?",
+      "Add 1/12 and 1/24 to find how much fills in 1 minute."
+    ],
+    "pitfall": "Averaging the two times instead of adding the fractions filled per minute.",
+    "diagram": null
+  },
+  {
+    "id": 455,
+    "topic": "fractions",
+    "subtopic": "work_rate_fractions_set",
+    "difficulty": 3,
+    "question": "Machine A packs 1/6 of an order per hour, and Machine B packs 1/4 of the order per hour. Both machines run together for 2 hours. What fraction of the order is still left to pack? Give your answer in simplest form.",
+    "answer": "1/6",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "1-2*(1/6+1/4)",
+    "distractors": [
+      {
+        "value": "1/3",
+        "why": "Doubles only Machine B (1/6 + 1/4 + 1/4 = 2/3) and subtracts from 1."
+      },
+      {
+        "value": "5/12",
+        "why": "Adds 1/6 + 1/4 = 5/12, finding the fraction packed in 1 hour and stopping."
+      },
+      {
+        "value": "7/12",
+        "why": "Subtracts only 1 hour's work (1 − 5/12 = 7/12) instead of 2 hours."
+      },
+      {
+        "value": "5/6",
+        "why": "Gives the fraction packed in 2 hours (2 × 5/12 = 5/6) instead of the fraction left."
+      }
+    ],
+    "explanation": "In 1 hour both machines pack 1/6 + 1/4 = 2/12 + 3/12 = 5/12. In 2 hours they pack 10/12 = 5/6 of the order, leaving 1 − 5/6 = 1/6 still to pack.",
+    "hints": [
+      "Add 1/6 and 1/4 to find the fraction packed in 1 hour, then double it for 2 hours.",
+      "Subtract the packed fraction from 1 whole order."
+    ],
+    "pitfall": "Giving the fraction completed (5/6) instead of the fraction remaining.",
+    "diagram": null
+  },
+  {
+    "id": 456,
+    "topic": "fractions",
+    "subtopic": "work_rate_fractions_set",
+    "difficulty": 2,
+    "question": "A bag holds 4 red, 6 blue and 2 green marbles. Four more red marbles are added to the bag. If one marble is picked at random, what is the probability that it is NOT blue? Give your answer as a fraction in simplest form.",
+    "answer": "5/8",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "(4+4+2)/(4+6+2+4)",
+    "distractors": [
+      {
+        "value": "1/4",
+        "why": "Counts only the 4 newly added red marbles out of the 16 total: 4/16 = 1/4."
+      },
+      {
+        "value": "3/8",
+        "why": "Finds the probability of picking blue (6/16 = 3/8) instead of NOT blue."
+      },
+      {
+        "value": "1/2",
+        "why": "Forgets to add the 4 extra red marbles, computing (4 + 2)/12 = 6/12 = 1/2."
+      },
+      {
+        "value": "5/6",
+        "why": "Divides the 10 non-blue marbles by the original 12 instead of the new total 16: 10/12 = 5/6."
+      }
+    ],
+    "explanation": "After adding 4 red marbles, the bag has 8 red, 6 blue and 2 green marbles (16 in total). There are 8 + 2 = 10 marbles that are not blue, giving probability 10/16 = 5/8.",
+    "hints": [
+      "Update both the red marbles and the total number of marbles in the bag.",
+      "Count red plus green marbles out of the new total, then simplify."
+    ],
+    "pitfall": "Using the original total of 12 marbles after 4 new marbles were added.",
+    "diagram": null
+  },
+  {
+    "id": 457,
+    "topic": "decimals",
+    "subtopic": "elimination_money_set",
+    "difficulty": 2,
+    "question": "Two sandwiches and 3 drinks cost £9.15 altogether. Two sandwiches and 1 drink cost £6.25 altogether. How much does one sandwich cost?",
+    "answer": "£2.40",
+    "unit": "£",
+    "answer_format": null,
+    "check": "(6.25-(9.15-6.25)/2)/2",
+    "distractors": [
+      {
+        "value": "£1.45",
+        "why": "Finds the cost of 1 drink ((£9.15 − £6.25) ÷ 2 = £1.45) instead of 1 sandwich."
+      },
+      {
+        "value": "£2.90",
+        "why": "Subtracts £9.15 − £6.25 = £2.90 for 2 drinks and stops."
+      },
+      {
+        "value": "£3.35",
+        "why": "Subtracts £2.90 (2 drinks) from £6.25 and forgets to divide by 2."
+      },
+      {
+        "value": "£4.80",
+        "why": "Finds the cost of 2 sandwiches (£6.25 − £1.45 = £4.80) and forgets to halve."
+      }
+    ],
+    "explanation": "The extra 2 drinks add £9.15 − £6.25 = £2.90, so 1 drink costs £1.45. Subtracting 1 drink from £6.25 leaves £4.80 for 2 sandwiches, so 1 sandwich costs £4.80 ÷ 2 = £2.40.",
+    "hints": [
+      "Compare the two bills: the number of sandwiches is the same, so the difference comes from the drinks.",
+      "Find the cost of 1 drink first, then work out 1 sandwich from the £6.25 bill."
+    ],
+    "pitfall": "Stopping at the price of 1 drink or 2 sandwiches.",
+    "diagram": null
+  },
+  {
+    "id": 458,
+    "topic": "decimals",
+    "subtopic": "elimination_money_set",
+    "difficulty": 2,
+    "question": "Five folders and 2 notebooks cost £11.60 altogether. Three folders and 2 notebooks cost £8.20 altogether. How much does one notebook cost?",
+    "answer": "£1.55",
+    "unit": "£",
+    "answer_format": null,
+    "check": "(8.20-3*((11.60-8.20)/2))/2",
+    "distractors": [
+      {
+        "value": "£1.70",
+        "why": "Finds the cost of 1 folder ((£11.60 − £8.20) ÷ 2 = £1.70) instead of 1 notebook."
+      },
+      {
+        "value": "£2.40",
+        "why": "Subtracts 2 folders (£3.40) instead of 3 folders (£5.10) from £8.20, then halves."
+      },
+      {
+        "value": "£3.10",
+        "why": "Finds the cost of 2 notebooks (£8.20 − £5.10 = £3.10) and forgets to divide by 2."
+      },
+      {
+        "value": "£3.40",
+        "why": "Finds the difference (£11.60 − £8.20 = £3.40) for 2 folders and stops."
+      }
+    ],
+    "explanation": "Two extra folders cost £11.60 − £8.20 = £3.40, so 1 folder costs £1.70. Three folders cost 3 × £1.70 = £5.10, leaving £8.20 − £5.10 = £3.10 for 2 notebooks. One notebook costs £1.55.",
+    "hints": [
+      "The 2 notebooks appear in both totals, so the difference in cost is just 2 folders.",
+      "Find 1 folder's price, multiply by 3, subtract from £8.20 and halve."
+    ],
+    "pitfall": "Giving the cost of 1 folder (£1.70) or 2 notebooks (£3.10).",
+    "diagram": null
+  },
+  {
+    "id": 459,
+    "topic": "decimals",
+    "subtopic": "elimination_money_set",
+    "difficulty": 3,
+    "question": "A wooden box holding 12 identical jars weighs 5.45 kg altogether. When 5 jars are taken out, the box with the remaining 7 jars weighs 3.35 kg. What is the mass of the empty box, in kilograms?",
+    "answer": "0.41 kg",
+    "unit": "kg",
+    "answer_format": null,
+    "check": "3.35-7*((5.45-3.35)/5)",
+    "distractors": [
+      {
+        "value": "0.42 kg",
+        "why": "Gives the mass of 1 jar (2.10 ÷ 5 = 0.42 kg) instead of the empty box."
+      },
+      {
+        "value": "0.83 kg",
+        "why": "Subtracts 6 jars (2.52 kg) instead of 7 jars from 3.35 kg: 3.35 − 2.52 = 0.83 kg."
+      },
+      {
+        "value": "1.25 kg",
+        "why": "Subtracts the 5-jar drop (2.10 kg) directly from 3.35 kg: 3.35 − 2.10 = 1.25 kg."
+      },
+      {
+        "value": "2.10 kg",
+        "why": "Finds the mass of the 5 removed jars (5.45 − 3.35 = 2.10 kg) and stops."
+      }
+    ],
+    "explanation": "The 5 removed jars weigh 5.45 − 3.35 = 2.10 kg, so 1 jar weighs 2.10 ÷ 5 = 0.42 kg. Seven jars weigh 7 × 0.42 = 2.94 kg, leaving 3.35 − 2.94 = 0.41 kg for the empty box.",
+    "hints": [
+      "The difference between 5.45 kg and 3.35 kg is the mass of 5 jars alone.",
+      "Find 1 jar's mass, multiply by 7, and subtract from 3.35 kg."
+    ],
+    "pitfall": "Forgetting that the empty box's mass is included in both readings.",
+    "diagram": null
+  },
+  {
+    "id": 460,
+    "topic": "ratio",
+    "subtopic": "inverse_proportion_set",
+    "difficulty": 2,
+    "question": "Twelve gardeners take 5 hours to clear a park. How many hours would it take 15 gardeners working at the same rate?",
+    "answer": "4 hours",
+    "unit": "hours",
+    "answer_format": null,
+    "check": "12*5/15",
+    "distractors": [
+      {
+        "value": "5 hours",
+        "why": "Uses the original 5 hours without adjusting for 15 gardeners."
+      },
+      {
+        "value": "6.25 hours",
+        "why": "Uses direct proportion instead of inverse proportion: 5 ÷ 12 × 15 = 6.25 hours."
+      },
+      {
+        "value": "8 hours",
+        "why": "Adds the 3 extra gardeners directly to 5 hours (5 + 3 = 8 hours)."
+      },
+      {
+        "value": "20 hours",
+        "why": "Divides 60 gardener-hours by the 3 extra gardeners instead of by 15."
+      }
+    ],
+    "explanation": "The park needs 12 × 5 = 60 gardener-hours of work. Shared among 15 gardeners, the work takes 60 ÷ 15 = 4 hours.",
+    "hints": [
+      "More gardeners finish the job in less time, not more.",
+      "Multiply 12 × 5 to find the total gardener-hours, then divide by 15."
+    ],
+    "pitfall": "Applying direct proportion, which wrongly predicts more gardeners take longer.",
+    "diagram": null
+  },
+  {
+    "id": 461,
+    "topic": "ratio",
+    "subtopic": "inverse_proportion_set",
+    "difficulty": 3,
+    "question": "Two gear wheels mesh together. The larger wheel has 36 teeth and the smaller wheel has 24 teeth. While the larger wheel makes 18 complete turns, how many complete turns does the smaller wheel make?",
+    "answer": "27",
+    "unit": null,
+    "answer_format": null,
+    "check": "36*18/24",
+    "distractors": [
+      {
+        "value": "12",
+        "why": "Scales the wrong way using direct proportion: 18 × 24 ÷ 36 = 12 turns."
+      },
+      {
+        "value": "18",
+        "why": "Assumes both meshed wheels make the same 18 turns."
+      },
+      {
+        "value": "24",
+        "why": "Gives the number of teeth on the smaller wheel instead of its turns."
+      },
+      {
+        "value": "30",
+        "why": "Adds the tooth difference (36 − 24 = 12) to 18 turns: 18 + 12 = 30."
+      }
+    ],
+    "explanation": "In 18 turns of the larger wheel, 36 × 18 = 648 teeth pass the meeting point. The smaller wheel must also pass 648 teeth, so it makes 648 ÷ 24 = 27 turns.",
+    "hints": [
+      "How many teeth of the larger wheel pass the mesh during 18 turns?",
+      "Divide the total teeth passed by 24 teeth per turn of the smaller wheel."
+    ],
+    "pitfall": "Multiplying 18 by 24/36 instead of 36/24; the smaller wheel must turn more times.",
+    "diagram": null
+  },
+  {
+    "id": 462,
+    "topic": "ratio",
+    "subtopic": "inverse_proportion_set",
+    "difficulty": 3,
+    "question": "A barn has enough hay to feed 15 horses for 12 days. For how many days will the same hay feed 10 horses?",
+    "answer": "18",
+    "unit": null,
+    "answer_format": null,
+    "check": "15*12/10",
+    "distractors": [
+      {
+        "value": "7",
+        "why": "Subtracts 5 from 12 days (12 − 5 = 7) because there are 5 fewer horses."
+      },
+      {
+        "value": "8",
+        "why": "Uses direct proportion: 12 × 10 ÷ 15 = 8 days."
+      },
+      {
+        "value": "17",
+        "why": "Adds 5 extra days directly to 12 days (12 + 5 = 17)."
+      },
+      {
+        "value": "24",
+        "why": "Doubles 12 days without calculating 180 ÷ 10."
+      }
+    ],
+    "explanation": "The barn holds 15 × 12 = 180 horse-days of hay. Feeding 10 horses takes 180 ÷ 10 = 18 days. Fewer horses make the same hay last longer.",
+    "hints": [
+      "Find the total number of daily horse feeds (horse-days) stored in the barn.",
+      "Divide 15 × 12 by 10 horses."
+    ],
+    "pitfall": "Calculating 12 × 10 ÷ 15 = 8, which would mean fewer horses finish the hay sooner.",
+    "diagram": null
+  },
+  {
+    "id": 463,
+    "topic": "percentages",
+    "subtopic": "venn_overlap_set",
+    "difficulty": 2,
+    "question": "In a club of 80 children, 50% swim, 40% cycle and 25% do neither activity. How many children do both?",
+    "answer": "12",
+    "unit": null,
+    "answer_format": null,
+    "check": "80*(50+40-(100-25))/100",
+    "distractors": [
+      {
+        "value": "8",
+        "why": "Compares 50% + 40% = 90% with 100% instead of 75%, giving 10% of 80 = 8."
+      },
+      {
+        "value": "15",
+        "why": "Finds the overlap percentage (50% + 40% − 75% = 15%) and stops without finding 15% of 80."
+      },
+      {
+        "value": "20",
+        "why": "Finds 25% of 80 = 20, the number who do neither activity."
+      },
+      {
+        "value": "32",
+        "why": "Finds 40% of 80 = 32, the total number who cycle."
+      }
+    ],
+    "explanation": "Children doing at least one activity make up 100% − 25% = 75%. Adding 50% + 40% = 90% counts those doing both twice, so 90% − 75% = 15% do both. 15% of 80 = 12 children.",
+    "hints": [
+      "Subtract 25% from 100% to find what percentage swim or cycle (or both).",
+      "Compare 50% + 40% with 75%, then find that percentage of 80."
+    ],
+    "pitfall": "Ignoring the 25% who do neither, or stopping at 15% without converting to children.",
+    "diagram": null
+  },
+  {
+    "id": 464,
+    "topic": "percentages",
+    "subtopic": "venn_overlap_set",
+    "difficulty": 2,
+    "question": "In a class of 32 pupils, 21 have a dog, 16 have a cat, and 4 have neither pet. How many pupils have both a dog and a cat?",
+    "answer": "9",
+    "unit": null,
+    "answer_format": null,
+    "check": "21+16-(32-4)",
+    "distractors": [
+      {
+        "value": "5",
+        "why": "Subtracts 32 from 21 + 16 (37 − 32 = 5), forgetting the 4 pupils with neither pet."
+      },
+      {
+        "value": "7",
+        "why": "Finds 28 − 21 = 7, the pupils who have a cat only."
+      },
+      {
+        "value": "12",
+        "why": "Finds 28 − 16 = 12, the pupils who have a dog only."
+      },
+      {
+        "value": "28",
+        "why": "Subtracts 4 from 32 (32 − 4 = 28), finding how many have at least one pet."
+      }
+    ],
+    "explanation": "The number of pupils with at least one pet is 32 − 4 = 28. Adding dog and cat owners gives 21 + 16 = 37, which counts dual owners twice. Therefore 37 − 28 = 9 pupils have both pets.",
+    "hints": [
+      "First subtract the 4 pupils with neither pet from 32.",
+      "Compare 21 + 16 with that reduced total to find the overlap."
+    ],
+    "pitfall": "Subtracting 32 instead of 28 from 21 + 16.",
+    "diagram": null
+  },
+  {
+    "id": 465,
+    "topic": "percentages",
+    "subtopic": "venn_overlap_set",
+    "difficulty": 3,
+    "question": "Of 150 pupils in Year 6, 60% belong to Choir, 48% belong to Drama, and 12% belong to neither club. How many pupils belong to Choir ONLY?",
+    "answer": "60",
+    "unit": null,
+    "answer_format": null,
+    "check": "150*(60-(60+48-(100-12)))/100",
+    "distractors": [
+      {
+        "value": "18",
+        "why": "Finds 12% of 150 = 18, the number belonging to neither club."
+      },
+      {
+        "value": "30",
+        "why": "Finds 20% of 150 = 30, the number belonging to both clubs."
+      },
+      {
+        "value": "42",
+        "why": "Finds 28% of 150 = 42, the number belonging to Drama only."
+      },
+      {
+        "value": "90",
+        "why": "Finds all Choir members (60% of 150 = 90) without removing those also in Drama."
+      }
+    ],
+    "explanation": "Those in at least one club make up 100% − 12% = 88%. Since 60% + 48% = 108%, the overlap in both is 108% − 88% = 20%. Choir only is 60% − 20% = 40%, and 40% of 150 = 60 pupils.",
+    "hints": [
+      "Work out the percentage in both clubs using 100% − 12% = 88%.",
+      "Subtract that overlap percentage from 60% before finding the fraction of 150."
+    ],
+    "pitfall": "Giving all Choir members (90) or those in both clubs (30) instead of Choir only.",
+    "diagram": null
+  },
+  {
+    "id": 466,
+    "topic": "geometry",
+    "subtopic": "trapezium_parallelogram_cuboid_set",
+    "difficulty": 2,
+    "question": "The diagram shows a parallelogram with a base of 14 cm, a sloping side of 10 cm and a perpendicular height of 8 cm. What is its area?",
+    "answer": "112 cm²",
+    "unit": "cm²",
+    "answer_format": null,
+    "check": "14*8",
+    "distractors": [
+      {
+        "value": "48 cm²",
+        "why": "Calculates the perimeter 2 × (14 + 10) = 48 instead of the area."
+      },
+      {
+        "value": "56 cm²",
+        "why": "Halves 14 × 8 = 56 as if the shape were a triangle."
+      },
+      {
+        "value": "80 cm²",
+        "why": "Multiplies the sloping side by the height (10 × 8 = 80 cm²) instead of the base."
+      },
+      {
+        "value": "140 cm²",
+        "why": "Multiplies the base by the sloping side (14 × 10 = 140 cm²) instead of the perpendicular height."
+      }
+    ],
+    "explanation": "The area of a parallelogram is base × perpendicular height = 14 × 8 = 112 cm². Do not use the 10 cm sloping side for the area.",
+    "hints": [
+      "Think of cutting a right-angled triangle off one end of the parallelogram and sliding it to the other end to form a rectangle.",
+      "Multiply the base by the perpendicular height, ignoring the 10 cm sloping side."
+    ],
+    "pitfall": "Multiplying base by the sloping side (14 × 10) instead of by the perpendicular height (14 × 8).",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [60, 190],
+            [280, 190],
+            [340, 60],
+            [120, 60]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [120, 60],
+          "to": [120, 190],
+          "dashed": true
+        },
+        {
+          "from": [120, 178],
+          "to": [132, 178],
+          "dashed": false
+        },
+        {
+          "from": [132, 178],
+          "to": [132, 190],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 170,
+          "y": 212,
+          "text": "14 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 78,
+          "y": 120,
+          "text": "10 cm",
+          "anchor": "end"
+        },
+        {
+          "x": 138,
+          "y": 130,
+          "text": "8 cm",
+          "anchor": "start"
+        }
+      ],
+      "description": "A parallelogram with base 14 cm, sloping left side 10 cm, and a dashed vertical perpendicular height line of 8 cm inside with a right-angle mark. Not to scale."
+    }
+  },
+  {
+    "id": 467,
+    "topic": "geometry",
+    "subtopic": "trapezium_parallelogram_cuboid_set",
+    "difficulty": 2,
+    "question": "The diagram shows a trapezium whose parallel sides measure 9 cm and 15 cm. Its perpendicular height is 7 cm. What is the area of the trapezium?",
+    "answer": "84 cm²",
+    "unit": "cm²",
+    "answer_format": null,
+    "check": "(9+15)/2*7",
+    "distractors": [
+      {
+        "value": "21 cm²",
+        "why": "Subtracts the parallel sides instead of adding: ½ × (15 − 9) × 7 = 21 cm²."
+      },
+      {
+        "value": "63 cm²",
+        "why": "Multiplies only the shorter parallel side by the height: 9 × 7 = 63 cm²."
+      },
+      {
+        "value": "105 cm²",
+        "why": "Multiplies only the longer parallel side by the height: 15 × 7 = 105 cm²."
+      },
+      {
+        "value": "168 cm²",
+        "why": "Computes (9 + 15) × 7 = 168 cm² and forgets to divide by 2."
+      }
+    ],
+    "explanation": "Average the two parallel sides: (9 + 15) ÷ 2 = 12 cm. Multiply by the perpendicular height: 12 × 7 = 84 cm².",
+    "hints": [
+      "What is the average of the two parallel sides 9 cm and 15 cm?",
+      "Multiply that average width by the perpendicular height 7 cm."
+    ],
+    "pitfall": "Adding the parallel sides and multiplying by 7 without dividing by 2.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [70, 190],
+            [310, 190],
+            [260, 60],
+            [120, 60]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [120, 60],
+          "to": [120, 190],
+          "dashed": true
+        },
+        {
+          "from": [120, 178],
+          "to": [132, 178],
+          "dashed": false
+        },
+        {
+          "from": [132, 178],
+          "to": [132, 190],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 190,
+          "y": 45,
+          "text": "9 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 190,
+          "y": 212,
+          "text": "15 cm",
+          "anchor": "middle"
+        },
+        {
+          "x": 138,
+          "y": 130,
+          "text": "7 cm",
+          "anchor": "start"
+        }
+      ],
+      "description": "A trapezium with parallel top edge 9 cm, parallel bottom edge 15 cm, and a dashed vertical line marking perpendicular height 7 cm. Not to scale."
+    }
+  },
+  {
+    "id": 468,
+    "topic": "geometry",
+    "subtopic": "trapezium_parallelogram_cuboid_set",
+    "difficulty": 3,
+    "question": "A 3 cm × 3 cm × 3 cm wooden cube is painted red on all six outside faces and then cut into twenty-seven 1 cm cubes. How many of the small cubes have red paint on exactly ONE face?",
+    "answer": "6",
+    "unit": null,
+    "answer_format": null,
+    "check": "6*(3-2)*(3-2)",
+    "distractors": [
+      {
+        "value": "8",
+        "why": "Counts the 8 corner cubes, which actually have 3 red faces each."
+      },
+      {
+        "value": "12",
+        "why": "Counts the 12 edge-middle cubes, which actually have 2 red faces each."
+      },
+      {
+        "value": "18",
+        "why": "Counts 3 cubes per face (6 × 3 = 18) instead of only the centre cube on each face."
+      },
+      {
+        "value": "24",
+        "why": "Counts 4 cubes per face (6 × 4 = 24), double-counting the edge cubes."
+      }
+    ],
+    "explanation": "On each of the 6 outer 3 × 3 faces, the 4 corners have 3 red faces and the 4 edge-middles have 2 red faces. Only the 1 middle square on each face has exactly 1 red face, giving 6 × 1 = 6 cubes.",
+    "hints": [
+      "Look at one 3 × 3 face of the cube: corners touch three faces and edges touch two.",
+      "How many small cubes lie strictly in the centre of each of the 6 faces?"
+    ],
+    "pitfall": "Confusing the 6 face-centre cubes with the 8 corners (3 faces) or 12 edges (2 faces).",
+    "diagram": null
+  },
+  {
+    "id": 469,
+    "topic": "measures",
+    "subtopic": "bearings_clocks_miles_set",
+    "difficulty": 2,
+    "question": "Using the conversion 5 miles = 8 km, how many miles is a 64 km road race?",
+    "answer": "40",
+    "unit": null,
+    "answer_format": null,
+    "check": "64/8*5",
+    "distractors": [
+      {
+        "value": "8",
+        "why": "Divides 64 by 8 to find the number of 8 km groups and forgets to multiply by 5."
+      },
+      {
+        "value": "32",
+        "why": "Divides 64 by 10 then multiplies by 5 (64 ÷ 10 × 5 = 32), using 10 km instead of 8 km."
+      },
+      {
+        "value": "56",
+        "why": "Subtracts 8 from 64 (64 − 8 = 56) instead of scaling proportionally."
+      },
+      {
+        "value": "102.4",
+        "why": "Converts the wrong way round, calculating 64 × 8 ÷ 5 = 102.4."
+      }
+    ],
+    "explanation": "Since 8 km equals 5 miles, split 64 km into 8 km steps: 64 ÷ 8 = 8 steps. Each step is 5 miles, so 8 × 5 = 40 miles.",
+    "hints": [
+      "Should the number of miles be smaller or larger than 64?",
+      "Divide 64 by 8 to count the 8 km blocks, then multiply by 5."
+    ],
+    "pitfall": "Multiplying by 8 and dividing by 5 instead of dividing by 8 and multiplying by 5.",
+    "diagram": null
+  },
+  {
+    "id": 470,
+    "topic": "measures",
+    "subtopic": "bearings_clocks_miles_set",
+    "difficulty": 3,
+    "question": "What is the smaller angle between the hour hand and the minute hand of an analogue clock at 02:30?",
+    "answer": "105°",
+    "unit": "°",
+    "answer_format": null,
+    "check": "30*6-(2*30+30*0.5)",
+    "distractors": [
+      {
+        "value": "90°",
+        "why": "Measures from 3 to 6 (3 × 30° = 90°), assuming the hour hand is already at 3."
+      },
+      {
+        "value": "120°",
+        "why": "Measures from 2 to 6 (4 × 30° = 120°), ignoring that the hour hand moves past 2."
+      },
+      {
+        "value": "135°",
+        "why": "Adds 15° to 120° (120° + 15° = 135°) instead of subtracting 15°."
+      },
+      {
+        "value": "255°",
+        "why": "Gives the larger reflex angle around the clock (360° − 105° = 255°) instead of the smaller angle."
+      }
+    ],
+    "explanation": "Each hour interval is 30°. At 02:30, the minute hand points at 6 (6 × 30° = 180°). The hour hand is halfway between 2 and 3, at 2.5 × 30° = 75°. The angle between them is 180° − 75° = 105°.",
+    "hints": [
+      "At half past 2, the minute hand points to 6. Where exactly is the hour hand?",
+      "Each hour mark is 30° apart, so halfway between 2 and 3 is 15° past 2."
+    ],
+    "pitfall": "Leaving the hour hand directly on the 2 (giving 120°) instead of moving it halfway to 3.",
+    "diagram": null
+  },
+  {
+    "id": 471,
+    "topic": "measures",
+    "subtopic": "bearings_clocks_miles_set",
+    "difficulty": 2,
+    "question": "A walker sets off North-East on a bearing of 045°. She turns 135° clockwise, and then turns 45° anticlockwise. What is her new three-figure bearing?",
+    "answer": "135°",
+    "unit": "°",
+    "answer_format": null,
+    "check": "45+135-45",
+    "distractors": [
+      {
+        "value": "045°",
+        "why": "Subtracts 135° from 180° instead of computing 045° + 135° − 45°."
+      },
+      {
+        "value": "090°",
+        "why": "Subtracts both 45° turns from 180° (180° − 45° − 45° = 090°)."
+      },
+      {
+        "value": "180°",
+        "why": "Computes 045° + 135° = 180° and forgets the 45° anticlockwise turn."
+      },
+      {
+        "value": "225°",
+        "why": "Adds the 45° anticlockwise turn instead of subtracting it: 045° + 135° + 45° = 225°."
+      }
+    ],
+    "explanation": "Turning 135° clockwise from 045° reaches 045° + 135° = 180°. Then turning 45° anticlockwise subtracts 45°, leaving 180° − 45° = 135°.",
+    "hints": [
+      "Clockwise turns add to a bearing; anticlockwise turns subtract from it.",
+      "Start at 45°, add 135°, then subtract 45°."
+    ],
+    "pitfall": "Adding an anticlockwise turn instead of subtracting it.",
+    "diagram": null
+  },
+  {
+    "id": 472,
+    "topic": "algebra",
+    "subtopic": "paired_equations_set",
+    "difficulty": 2,
+    "question": "In a 15-question quiz, a correct answer scores 4 points and a wrong answer loses 1 point. Sam answers all 15 questions and scores 45 points. How many questions did he answer correctly?",
+    "answer": "12",
+    "unit": null,
+    "answer_format": null,
+    "check": "15-(15*4-45)/(4+1)",
+    "distractors": [
+      {
+        "value": "3",
+        "why": "Finds the number of wrong answers ((60 − 45) ÷ 5 = 3) instead of correct answers."
+      },
+      {
+        "value": "9",
+        "why": "Divides the final score by 5 (45 ÷ 5 = 9) instead of finding the shortfall from 60."
+      },
+      {
+        "value": "11",
+        "why": "Divides 45 ÷ 4 = 11 remainder 1, ignoring the 1-point penalty on the remaining 4 questions."
+      },
+      {
+        "value": "15",
+        "why": "Stops at the point shortfall (60 − 45 = 15) without dividing by 5."
+      }
+    ],
+    "explanation": "If all 15 were right, Sam would score 60 points. He scored 60 − 45 = 15 points fewer. Each wrong answer loses 4 + 1 = 5 points compared with a right answer, so he had 15 ÷ 5 = 3 wrong and 15 − 3 = 12 correct.",
+    "hints": [
+      "What would Sam score if all 15 questions were right?",
+      "Every wrong answer drops the maximum score by 5 points (4 not gained plus 1 lost)."
+    ],
+    "pitfall": "Dividing the 15-point shortfall by 4 instead of 5, or giving the number of wrong answers (3).",
+    "diagram": null
+  },
+  {
+    "id": 473,
+    "topic": "algebra",
+    "subtopic": "paired_equations_set",
+    "difficulty": 2,
+    "question": "If a + b = 29 and a − b = 7, what is the value of a × b?",
+    "answer": "198",
+    "unit": null,
+    "answer_format": null,
+    "check": "((29+7)/2)*((29-7)/2)",
+    "distractors": [
+      {
+        "value": "110",
+        "why": "Uses 10 and 11 (from 11 × 10 = 110), miscalculating a from 29 − 7."
+      },
+      {
+        "value": "154",
+        "why": "Uses a = 22 and b = 7 (from 29 − 7 = 22), multiplying 22 × 7 = 154."
+      },
+      {
+        "value": "180",
+        "why": "Halves incorrectly to get a = 18 and b = 10, giving 18 × 10 = 180."
+      },
+      {
+        "value": "203",
+        "why": "Multiplies the two given numbers directly: 29 × 7 = 203."
+      }
+    ],
+    "explanation": "Add the two equations: 2a = 29 + 7 = 36, so a = 18. Then b = 29 − 18 = 11 (check: 18 − 11 = 7). Finally, a × b = 18 × 11 = 198.",
+    "hints": [
+      "Find the larger number a by taking (29 + 7) ÷ 2.",
+      "Once you know a and b, multiply them together."
+    ],
+    "pitfall": "Using 22 and 7 as the two numbers instead of halving 29 + 7 and 29 − 7.",
+    "diagram": null
+  },
+  {
+    "id": 474,
+    "topic": "algebra",
+    "subtopic": "paired_equations_set",
+    "difficulty": 3,
+    "question": "On a balance scale, 2 cylinders and 1 sphere balance 17 cubes. Meanwhile, 1 cylinder and 2 spheres balance 19 cubes. How many cubes will balance 1 cylinder and 1 sphere?",
+    "answer": "12",
+    "unit": null,
+    "answer_format": null,
+    "check": "(17+19)/3",
+    "distractors": [
+      {
+        "value": "2",
+        "why": "Subtracts 19 − 17 = 2 cubes, finding how much heavier a sphere is than a cylinder."
+      },
+      {
+        "value": "9",
+        "why": "Divides the mean (18 ÷ 2 = 9) instead of dividing the combined total 36 by 3."
+      },
+      {
+        "value": "18",
+        "why": "Finds the mean of 17 and 19 ((17 + 19) ÷ 2 = 18), dividing by 2 instead of 3."
+      },
+      {
+        "value": "36",
+        "why": "Adds both scales (17 + 19 = 36) for 3 cylinders and 3 spheres without dividing by 3."
+      }
+    ],
+    "explanation": "Put both weighings together: 3 cylinders and 3 spheres balance 17 + 19 = 36 cubes. Divide everything by 3: 1 cylinder and 1 sphere balance 36 ÷ 3 = 12 cubes.",
+    "hints": [
+      "What happens if you combine everything from both balance scales onto one big scale?",
+      "Three cylinders and three spheres balance 36 cubes, so divide by 3."
+    ],
+    "pitfall": "Dividing 36 by 2 instead of 3, or stopping at 36.",
+    "diagram": null
+  },
+  {
+    "id": 475,
+    "topic": "statistics",
+    "subtopic": "probability_and_combined_mean_set",
+    "difficulty": 2,
+    "question": "Ten pupils in Group A have a mean score of 18, and 15 pupils in Group B have a mean score of 13. What is the mean score of all 25 pupils combined?",
+    "answer": "15",
+    "unit": null,
+    "answer_format": null,
+    "check": "(10*18+15*13)/(10+15)",
+    "distractors": [
+      {
+        "value": "12.5",
+        "why": "Divides 25 pupils by 2 (25 ÷ 2 = 12.5) instead of weighting the scores."
+      },
+      {
+        "value": "15.5",
+        "why": "Takes the simple mean of 18 and 13 ((18 + 13) ÷ 2 = 15.5), ignoring group sizes."
+      },
+      {
+        "value": "16",
+        "why": "Swaps the group sizes when weighting: (15 × 18 + 10 × 13) ÷ 25 = 16."
+      },
+      {
+        "value": "31",
+        "why": "Adds the two means directly (18 + 13 = 31) instead of finding total marks."
+      }
+    ],
+    "explanation": "Group A's total is 10 × 18 = 180 and Group B's total is 15 × 13 = 195. Combined total = 180 + 195 = 375 across 25 pupils, giving a mean of 375 ÷ 25 = 15.",
+    "hints": [
+      "Because Group B is larger than Group A, do not simply average 18 and 13.",
+      "Find the total marks for each group, add them, and divide by 25."
+    ],
+    "pitfall": "Averaging the two means (15.5) instead of weighting by the number of pupils in each group.",
+    "diagram": null
+  },
+  {
+    "id": 476,
+    "topic": "statistics",
+    "subtopic": "probability_and_combined_mean_set",
+    "difficulty": 2,
+    "question": "A pie chart shows how 240 commuters travel to work. The sector for travelling by train has an angle of 135°. How many commuters travel by train?",
+    "answer": "90",
+    "unit": null,
+    "answer_format": null,
+    "check": "240*135/360",
+    "distractors": [
+      {
+        "value": "30",
+        "why": "Finds 45° out of 360° (1/8 of 240 = 30) instead of 135°."
+      },
+      {
+        "value": "45",
+        "why": "Divides 135 by 3 (135 ÷ 3 = 45) instead of finding 135/360 of 240."
+      },
+      {
+        "value": "60",
+        "why": "Uses a 90° quarter circle (1/4 of 240 = 60) instead of 135°."
+      },
+      {
+        "value": "80",
+        "why": "Uses 120° (1/3 of 240 = 80) instead of 135°."
+      }
+    ],
+    "explanation": "Simplify the sector fraction: 135/360 = 3/8 (since 45° is 1/8 of 360°, and 135 = 3 × 45). Then 3/8 of 240 = 3 × 30 = 90 commuters.",
+    "hints": [
+      "Write 135° out of 360° as a simplified fraction.",
+      "Notice that 45° is 1/8 of a full 360° turn."
+    ],
+    "pitfall": "Treating 135° as 135%, or dividing 135° by 360° wrongly.",
+    "diagram": null
+  },
+  {
+    "id": 477,
+    "topic": "statistics",
+    "subtopic": "probability_and_combined_mean_set",
+    "difficulty": 3,
+    "question": "A fair spinner has 12 equal sections numbered 1 to 12. What is the probability that it lands on a number that is either a prime number or a multiple of 4? Give your answer as a fraction in simplest form.",
+    "answer": "2/3",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "(5+3)/12",
+    "distractors": [
+      {
+        "value": "1/4",
+        "why": "Counts only the multiples of 4 (3/12 = 1/4) and ignores the prime numbers."
+      },
+      {
+        "value": "5/12",
+        "why": "Counts only the prime numbers (5/12) and forgets the multiples of 4."
+      },
+      {
+        "value": "7/12",
+        "why": "Forgets that 2 is prime, counting {3, 5, 7, 11} and {4, 8, 12} to get 7/12."
+      },
+      {
+        "value": "3/4",
+        "why": "Wrongly counts 1 as a prime number, getting 9 out of 12 (9/12 = 3/4)."
+      }
+    ],
+    "explanation": "The primes from 1 to 12 are 2, 3, 5, 7 and 11 (five numbers; 1 is not prime). The multiples of 4 are 4, 8 and 12 (three numbers). None overlap, giving 8 favourable sections out of 12: 8/12 = 2/3.",
+    "hints": [
+      "List the prime numbers from 1 to 12 (remember 1 is not prime, and 2 is prime).",
+      "List the multiples of 4 from 1 to 12, count how many distinct numbers are in either list, and simplify."
+    ],
+    "pitfall": "Treating 1 as a prime number, or forgetting that 2 is prime.",
+    "diagram": null
+  },
+  {
+    "id": 478,
+    "topic": "coordinates",
+    "subtopic": "offset_reflection_rotation_set",
+    "difficulty": 2,
+    "question": "Point P (−2, 3) is shown on the grid. If P is reflected in the vertical mirror line x = 1, what are the coordinates of its image?",
+    "answer": "(4, 3)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "1+(1-(-2))",
+      "3"
+    ],
+    "distractors": [
+      {
+        "value": "(2, 3)",
+        "why": "Reflects in the y-axis (x = 0) instead of the mirror line x = 1."
+      },
+      {
+        "value": "(3, 3)",
+        "why": "Steps only 2 units past x = 1 instead of the 3-unit distance from −2 to 1."
+      },
+      {
+        "value": "(-2, -1)",
+        "why": "Reflects vertically in y = 1 instead of horizontally in x = 1."
+      },
+      {
+        "value": "(3, 4)",
+        "why": "Writes the reflected coordinates in (y, x) order instead of (x, y)."
+      }
+    ],
+    "explanation": "Point P (−2, 3) is 3 units left of the vertical line x = 1. Its reflection sits 3 units right of x = 1, at x = 1 + 3 = 4, while y stays 3: (4, 3).",
+    "hints": [
+      "How many squares to the left of the line x = 1 is (−2, 3)?",
+      "Go the exact same distance to the right of x = 1, keeping y = 3."
+    ],
+    "pitfall": "Reflecting in the y-axis (x = 0) instead of the mirror line x = 1.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -2,
+          "y": 3,
+          "label": "P"
+        }
+      ],
+      "description": "A coordinate grid showing point P at (-2, 3). Each grid step is one unit."
+    }
+  },
+  {
+    "id": 479,
+    "topic": "coordinates",
+    "subtopic": "offset_reflection_rotation_set",
+    "difficulty": 2,
+    "question": "Point Q (2, −3) is shown on the grid. If Q is reflected in the horizontal mirror line y = −1, what are the coordinates of its image?",
+    "answer": "(2, 1)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "2",
+      "-1+(-1-(-3))"
+    ],
+    "distractors": [
+      {
+        "value": "(2, 3)",
+        "why": "Reflects in the x-axis (y = 0) instead of the mirror line y = −1."
+      },
+      {
+        "value": "(-4, -3)",
+        "why": "Reflects in the vertical line x = −1 instead of the horizontal line y = −1."
+      },
+      {
+        "value": "(2, 2)",
+        "why": "Steps 3 units above y = −1 instead of the 2-unit distance from −3 to −1."
+      },
+      {
+        "value": "(1, 2)",
+        "why": "Writes the coordinates in (y, x) order instead of (x, y)."
+      }
+    ],
+    "explanation": "Point Q (2, −3) lies 2 units below the horizontal line y = −1. Its reflection lies 2 units above y = −1, at y = −1 + 2 = 1, while x stays 2: (2, 1).",
+    "hints": [
+      "The horizontal line y = −1 keeps x unchanged. How far below y = −1 is y = −3?",
+      "Move 2 units above y = −1 to find the new y-coordinate."
+    ],
+    "pitfall": "Reflecting across y = 0 or confusing y = −1 with x = −1.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": 2,
+          "y": -3,
+          "label": "Q"
+        }
+      ],
+      "description": "A coordinate grid showing point Q at (2, -3). Each grid step is one unit."
+    }
+  },
+  {
+    "id": 480,
+    "topic": "coordinates",
+    "subtopic": "offset_reflection_rotation_set",
+    "difficulty": 3,
+    "question": "Point R (−3, 2) and centre M (−1, 0) are shown on the grid. Point R is rotated 180° about M. What are the new coordinates of R?",
+    "answer": "(1, -2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "-1+(-1-(-3))",
+      "0+(0-2)"
+    ],
+    "distractors": [
+      {
+        "value": "(3, -2)",
+        "why": "Rotates 180° about the origin (0, 0) instead of about M (−1, 0)."
+      },
+      {
+        "value": "(1, 2)",
+        "why": "Reflects R across x = −1 without reversing the vertical offset from M."
+      },
+      {
+        "value": "(-3, -2)",
+        "why": "Reflects R across the x-axis (y = 0) instead of rotating 180° about M."
+      },
+      {
+        "value": "(-2, 1)",
+        "why": "Finds the midpoint between R and M instead of continuing an equal distance past M."
+      }
+    ],
+    "explanation": "To go from R (−3, 2) to M (−1, 0), move 2 right and 2 down. A 180° turn about M continues the exact same step past M: −1 + 2 = 1 and 0 − 2 = −2, giving (1, −2).",
+    "hints": [
+      "Rotating 180° about M places M directly halfway between the original point and its image.",
+      "Describe the step from R to M, then repeat that same step from M."
+    ],
+    "pitfall": "Rotating about the origin (0, 0) instead of the stated centre M (−1, 0).",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -3,
+          "y": 2,
+          "label": "R"
+        },
+        {
+          "x": -1,
+          "y": 0,
+          "label": "M"
+        }
+      ],
+      "description": "A coordinate grid showing point R at (-3, 2) and centre M at (-1, 0). Each grid step is one unit."
+    }
+  }
+]

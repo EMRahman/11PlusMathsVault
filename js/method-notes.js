@@ -63,4 +63,10 @@ export const METHOD_NOTES = {
   'pacing': ['Leaving a difficult question can preserve time to answer others, then return with a fresh approach.', 'Use the paper’s instructions and overall time. Questions need different amounts of time; there is no universal 60-second rule.'],
   'multi-step-decompose': ['Separating the required quantities reveals dependencies, so each calculation answers a clear smaller question.', 'Word problems with several linked steps; keep the final question in view.'],
   'sense-check': ['A correct calculation can still answer the wrong question. Matching the result to the requested quantity and unit checks its meaning.', 'Every problem, particularly unit conversions and labelled ratios.'],
+  'combined-rates': ['Each tap or worker completes 1/t of the whole job per unit of time, and rates per unit time add directly.', 'Filling, emptying or shared work problems where individual completion times are given.'],
+  'inverse-proportion': ['For a uniform task, total effort (workers × days) stays constant regardless of how many workers share it.', 'Tasks where increasing workers, pumps or animals reduces the time or duration proportionally.'],
+  'simultaneous-elimination': ['Adding or subtracting equal values on both sides of balanced statements keeps them balanced while cancelling one unknown.', 'Two-item cost, mass or points puzzles where scaling one order matches a quantity in the other.'],
+  'clock-angles': ['A full clock circle is 360°, so each 5-minute hour mark is 30°. The minute hand advances 6°/min and the hour hand advances 0.5°/min.', 'Finding the angle between clock hands at times that are not on the exact hour.'],
+  'painted-cubes': ['Corners meet 3 faces, edges meet 2 faces, and face interiors meet 1 face; counting each geometric layer avoids double-counting.', 'Solid n × n × n cubes painted externally and cut into unit cubes.'],
+  'venn-overlap': ['Adding A and B counts the intersection twice, so A + B − Both accounts for everyone inside at least one set, leaving Total − Neither.', 'Two-category surveys or club memberships where some members belong to both or neither.'],
 };
