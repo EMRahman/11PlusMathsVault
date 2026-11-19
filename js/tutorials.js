@@ -706,7 +706,7 @@ export const TUTORIALS = {
       "Add rates that work together (and subtract any drain or outflow rate).",
       "Use the combined rate to find either total time (1 ÷ combined rate) or work left after a given time."
     ],
-    "check": "Two taps filling together must always take less time than the faster tap alone.",
+    "check": "Two taps filling together take less time than either tap alone; when a drain opposes a tap, filling takes longer than with the tap alone.",
     "webTitle": "Corbettmaths Primary \u2014 Fractions",
     "webUrl": "https://corbettmathsprimary.com/content/",
     "videoTitle": "Math Antics \u2014 Adding and Subtracting Fractions",
@@ -809,7 +809,7 @@ export const TUTORIALS = {
       "For a horizontal mirror line y = k, keep x unchanged and match the point's vertical distance on the opposite side of k.",
       "For a 90° clockwise turn about the origin, swap step directions: (x, y) moves to (y, −x); for a 180° turn about M, repeat the step from P to M past M."
     ],
-    "check": "Verify that the mirror line or centre of rotation sits exactly halfway between the original point and its image.",
+    "check": "For a single reflection or a 180° rotation, the mirror line or rotation centre sits halfway between the start and image; for a 90° rotation, check equal distance from the centre and a 90° turn.",
     "webTitle": "Corbettmaths Primary \u2014 Reflections & Rotations",
     "webUrl": "https://corbettmathsprimary.com/content/",
     "videoTitle": "Corbettmaths Primary — Reflections",
@@ -1175,6 +1175,43 @@ export function getTutorial(qOrSubtopic) {
         'Remember: an hour has 60 minutes, not 100.'
       ];
       result.check = 'Add elapsed minutes to the start time to confirm the end time.';
+    }
+  }
+
+  // 13. Offset reflections, combined reflection + translation, and 90° / 180° rotations
+  if (sub === 'mirror_lines_and_rotation') {
+    if (text.includes('90°')) {
+      result.concept = '90° Rotation About the Origin';
+      result.steps = [
+        'Read the point as horizontal and vertical steps from the origin (0, 0).',
+        'Turn both step directions by 90° clockwise: right becomes down and up becomes right.',
+        'Write the new coordinate (y, −x).'
+      ];
+      result.check = 'Check that the image is the exact same distance from (0, 0) as the original point and rotated a quarter-turn (90°) around the origin.';
+    } else if (text.includes('180°')) {
+      result.concept = '180° Rotation About a Point M';
+      result.steps = [
+        'Find the horizontal and vertical steps from the original point to the centre M.',
+        'Repeat those exact same steps starting from M to reach the image.',
+        'Write the image coordinates as (x, y).'
+      ];
+      result.check = 'Verify that the rotation centre M sits halfway between the original point and its image.';
+    } else if (text.includes('translate')) {
+      result.concept = 'Offset Reflection Followed by Translation';
+      result.steps = [
+        'Reflect in the stated mirror line first (for y = k, keep x unchanged and match the vertical distance on the opposite side of k).',
+        'Check that the intermediate reflected point and original point are equal distances from the mirror line.',
+        'Apply the translation step to that reflected point.'
+      ];
+      result.check = 'Verify the reflection step first (the mirror line lies halfway between start and intermediate point), then apply the translation shift separately.';
+    } else {
+      result.concept = 'Reflection in an Offset Mirror Line (x = k or y = k)';
+      result.steps = [
+        'Identify whether the mirror line is vertical (x = k) or horizontal (y = k).',
+        'Measure how many units the point sits away from that mirror line.',
+        'Step the exact same distance onto the opposite side of the mirror line.'
+      ];
+      result.check = 'Verify that the mirror line sits halfway between the original point and its reflected image.';
     }
   }
 

@@ -457,6 +457,14 @@ test('3-year Nonsuch review topics are covered across both NWSSEE and SET writte
     const t = getTutorial(q);
     assert.ok(t && Array.isArray(t.steps) && t.steps.length === 3, `Q${q.id} (${q.subtopic}) needs tutorial`);
   }
+
+  // Transformation tutorial sanity checks match each transformation type
+  assert.match(getTutorial(byId(450)).check, /90°/);
+  assert.doesNotMatch(getTutorial(byId(450)).check, /halfway between/);
+  assert.match(getTutorial(byId(449)).check, /intermediate point/);
+  assert.match(getTutorial(byId(448)).check, /mirror line sits halfway/);
+  assert.match(getTutorial(byId(480)).check, /centre M sits halfway/);
+  assert.match(getTutorial(byId(425)).check, /drain/);
 });
 
 test('upgraded legacy desk questions carry content_revision 2 and new Common Hacks have notes', () => {
