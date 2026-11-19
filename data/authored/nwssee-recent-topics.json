@@ -1,0 +1,658 @@
+[
+  {
+    "id": 421,
+    "topic": "number_operations",
+    "subtopic": "combinatorics_and_digits",
+    "difficulty": 3,
+    "question": "A printer numbers every page of a 145-page book from 1 to 145. How many individual digits are printed altogether?",
+    "answer": "327",
+    "unit": null,
+    "answer_format": null,
+    "check": "9*1+90*2+(145-99)*3",
+    "explanation": "Count by the number of digits per page. Pages 1 to 9 have 1 digit each: 9 × 1 = 9 digits. Pages 10 to 99 are 90 pages with 2 digits each: 90 × 2 = 180 digits. Pages 100 to 145 are 46 pages with 3 digits each: 46 × 3 = 138 digits. Total = 9 + 180 + 138 = 327 digits.",
+    "hints": [
+      "Split the pages into 1-digit, 2-digit and 3-digit groups.",
+      "Count carefully how many pages are in 10–99 and 100–145, including both end pages."
+    ],
+    "pitfall": "Thinking there are 45 pages from 100 to 145 instead of 46, or multiplying 145 by 3.",
+    "diagram": null
+  },
+  {
+    "id": 422,
+    "topic": "number_operations",
+    "subtopic": "combinatorics_and_digits",
+    "difficulty": 2,
+    "question": "In a chess tournament, 12 players each play every other player once in the group stage. The top two players then play one final match to decide the champion. How many matches are played in total?",
+    "answer": "67",
+    "unit": null,
+    "answer_format": null,
+    "check": "12*11/2+1",
+    "explanation": "In the group stage, each of the 12 players faces 11 opponents, making 12 × 11 = 132 pairings. Since each match involves two players, halve this to avoid counting matches twice: 132 ÷ 2 = 66 group matches. Adding the single final match gives 66 + 1 = 67 matches.",
+    "hints": [
+      "First find how many group-stage matches take place when 12 players each meet once.",
+      "Count 11 opponents per player, halve to remove duplicates, then add the final match."
+    ],
+    "pitfall": "Forgetting to halve 12 × 11 (counting every match twice), or forgetting the final match.",
+    "diagram": null
+  },
+  {
+    "id": 423,
+    "topic": "number_operations",
+    "subtopic": "combinatorics_and_digits",
+    "difficulty": 2,
+    "question": "One town clock is dated in Roman numerals as MDCCCLXV, and a second clock is dated MCMXLII. How many years later was the second clock built than the first?",
+    "answer": "77",
+    "unit": null,
+    "answer_format": null,
+    "check": "1942-1865",
+    "explanation": "Convert each Roman numeral carefully. M = 1000, DCCC = 800, LX = 60, V = 5, so MDCCCLXV is 1865. For MCMXLII, M = 1000, CM = 900, XL = 40, II = 2, making 1942. Subtracting gives 1942 − 1865 = 77 years later.",
+    "hints": [
+      "Break each Roman numeral into thousands, hundreds, tens and ones.",
+      "Remember subtractive pairs: CM means 1000 − 100 = 900, and XL means 50 − 10 = 40."
+    ],
+    "pitfall": "Reading CM as 1100 or XL as 60 instead of using the subtractive rule.",
+    "diagram": null
+  },
+  {
+    "id": 424,
+    "topic": "fractions",
+    "subtopic": "combined_rates_fractions",
+    "difficulty": 2,
+    "question": "Tap A on its own fills an empty tank in 20 minutes. Tap B on its own fills the same tank in 30 minutes. How many minutes will it take to fill the empty tank if both taps run together?",
+    "answer": "12",
+    "unit": "minutes",
+    "answer_format": null,
+    "check": "1/(1/20+1/30)",
+    "explanation": "In 1 minute, Tap A fills 1/20 of the tank and Tap B fills 1/30. Together in 1 minute they fill 1/20 + 1/30 = 3/60 + 2/60 = 5/60 = 1/12 of the tank. Since they fill 1/12 each minute, the whole tank fills in 12 minutes.",
+    "hints": [
+      "Work out what fraction of the tank each tap fills in 1 minute.",
+      "Add the two 1-minute fractions together to find how long 1 whole tank takes."
+    ],
+    "pitfall": "Averaging 20 and 30 to get 25 minutes; running two taps together must be faster than either tap alone.",
+    "diagram": null
+  },
+  {
+    "id": 425,
+    "topic": "fractions",
+    "subtopic": "combined_rates_fractions",
+    "difficulty": 3,
+    "question": "An inlet tap fills an empty tank in 15 minutes, while a drain pipe can empty a full tank in 45 minutes. If both the tap and the drain pipe are left open when the tank is empty, how many minutes does it take to fill the tank?",
+    "answer": "22.5",
+    "unit": "minutes",
+    "answer_format": null,
+    "answer_alt": [
+      "22 1/2",
+      "22.5 minutes"
+    ],
+    "check": "1/(1/15-1/45)",
+    "explanation": "In 1 minute, the tap adds 1/15 = 3/45 of the tank while the drain removes 1/45. The net gain each minute is 3/45 − 1/45 = 2/45 of the tank. To fill 45/45 takes 45 ÷ 2 = 22.5 minutes.",
+    "hints": [
+      "Find the fraction filled by the tap in 1 minute and the fraction emptied by the drain in 1 minute.",
+      "Subtract the drain's fraction from the tap's fraction to get the net gain per minute."
+    ],
+    "pitfall": "Adding the rates instead of subtracting the drain rate, or dividing 45 by 3 instead of 2.",
+    "diagram": null
+  },
+  {
+    "id": 426,
+    "topic": "fractions",
+    "subtopic": "combined_rates_fractions",
+    "difficulty": 3,
+    "question": "Ali can paint a whole fence in 6 hours working alone, and Bea can paint it in 4 hours working alone. They work together for 2 hours, then stop. What fraction of the fence is left unpainted? Give your answer in simplest form.",
+    "answer": "1/6",
+    "unit": null,
+    "answer_format": "fraction_simplest",
+    "check": "1-2*(1/6+1/4)",
+    "explanation": "In 1 hour, Ali paints 1/6 of the fence and Bea paints 1/4. Together in 1 hour they paint 1/6 + 1/4 = 2/12 + 3/12 = 5/12. In 2 hours they complete 2 × 5/12 = 10/12 = 5/6 of the fence, leaving 1 − 5/6 = 1/6 unpainted.",
+    "hints": [
+      "Add the fractions Ali and Bea each paint in 1 hour.",
+      "Double their 1-hour fraction for 2 hours of work, then subtract from 1 whole fence."
+    ],
+    "pitfall": "Giving the painted fraction (5/6) instead of the fraction left unpainted.",
+    "diagram": null
+  },
+  {
+    "id": 427,
+    "topic": "decimals",
+    "subtopic": "simultaneous_cost_problems",
+    "difficulty": 2,
+    "question": "In a café, 3 teas and 2 scones cost £11.40 altogether. Meanwhile, 2 teas and 2 scones cost £9.20 altogether. What is the cost of one scone, in pounds?",
+    "answer": "2.40",
+    "unit": "£",
+    "answer_format": null,
+    "check": "(9.20-2*(11.40-9.20))/2",
+    "explanation": "Comparing the two orders, the extra tea adds £11.40 − £9.20 = £2.20, so 1 tea costs £2.20. In the second order, 2 teas cost 2 × £2.20 = £4.40, leaving £9.20 − £4.40 = £4.80 for 2 scones. One scone costs £4.80 ÷ 2 = £2.40.",
+    "hints": [
+      "Notice that both orders contain 2 scones. What does the difference between the bills buy?",
+      "Find the price of 1 tea first, then substitute it into the smaller bill to find 2 scones."
+    ],
+    "pitfall": "Stopping at the price of 1 tea (£2.20) or the price of 2 scones (£4.80).",
+    "diagram": null
+  },
+  {
+    "id": 428,
+    "topic": "decimals",
+    "subtopic": "simultaneous_cost_problems",
+    "difficulty": 3,
+    "question": "Four adult tickets and 3 child tickets cost £50.50 altogether. Two adult tickets and 5 child tickets cost £44.50 altogether. How much does one adult ticket cost, in pounds?",
+    "answer": "8.50",
+    "unit": "£",
+    "answer_format": null,
+    "check": "(50.50-3*((2*44.50-50.50)/7))/4",
+    "explanation": "Double the second order so both have 4 adult tickets: 4 adult and 10 child tickets cost 2 × £44.50 = £89.00. Comparing with the first order (£50.50), the extra 7 child tickets cost £89.00 − £50.50 = £38.50, so 1 child ticket is £5.50. Then 4 adult tickets cost £50.50 − 3 × £5.50 = £34.00, so 1 adult ticket costs £8.50.",
+    "hints": [
+      "Double the second group of tickets so both orders include 4 adult tickets.",
+      "Subtract the first order from your doubled order to find the cost of 7 child tickets."
+    ],
+    "pitfall": "Subtracting the two original orders directly without matching the number of adult tickets first.",
+    "diagram": null
+  },
+  {
+    "id": 429,
+    "topic": "decimals",
+    "subtopic": "simultaneous_cost_problems",
+    "difficulty": 3,
+    "question": "A wooden crate holding 8 identical tins of soup weighs 13.45 kg altogether. After 3 tins are removed, the crate and remaining 5 tins weigh 9.40 kg. How many kilograms does the empty crate weigh?",
+    "answer": "2.65",
+    "unit": "kg",
+    "answer_format": null,
+    "check": "9.40-5*((13.45-9.40)/3)",
+    "explanation": "Removing 3 tins drops the total mass by 13.45 − 9.40 = 4.05 kg, so 1 tin weighs 4.05 ÷ 3 = 1.35 kg. Five tins weigh 5 × 1.35 = 6.75 kg. Subtracting the tins from 9.40 kg gives the empty crate mass: 9.40 − 6.75 = 2.65 kg.",
+    "hints": [
+      "Find the weight of the 3 removed tins from the drop in total mass.",
+      "Once you know the mass of 1 tin, subtract 5 tins from 9.40 kg."
+    ],
+    "pitfall": "Dividing 9.40 kg by 5 to find 1 tin's weight, which wrongly splits the crate's mass among the tins.",
+    "diagram": null
+  },
+  {
+    "id": 430,
+    "topic": "ratio",
+    "subtopic": "inverse_proportion_rates",
+    "difficulty": 2,
+    "question": "Six identical printing machines working at the same speed take 15 hours to complete a book order. How many hours would it take 10 of these machines to complete the same order?",
+    "answer": "9",
+    "unit": "hours",
+    "answer_format": null,
+    "check": "6*15/10",
+    "explanation": "The whole order needs 6 × 15 = 90 machine-hours of work. When 10 machines share those 90 machine-hours equally, the time needed is 90 ÷ 10 = 9 hours. More machines finish the same job in fewer hours.",
+    "hints": [
+      "More machines make the job faster, not slower. Find the total machine-hours needed.",
+      "Multiply 6 × 15 to find how long 1 machine would take, then divide by 10."
+    ],
+    "pitfall": "Using direct proportion (15 ÷ 6 × 10 = 25 hours), which wrongly assumes more machines take longer.",
+    "diagram": null
+  },
+  {
+    "id": 431,
+    "topic": "ratio",
+    "subtopic": "inverse_proportion_rates",
+    "difficulty": 3,
+    "question": "A team of 8 workers can repair a roof in 12 days. All 8 workers work for 3 days, and then 4 more workers join them at the same work rate. How many days altogether does the repair take from start to finish?",
+    "answer": "9",
+    "unit": null,
+    "answer_format": null,
+    "answer_alt": [
+      "9 days",
+      "9 day"
+    ],
+    "check": "3+(8*12-8*3)/(8+4)",
+    "explanation": "The whole job takes 8 × 12 = 96 worker-days. In the first 3 days, 8 workers complete 8 × 3 = 24 worker-days, leaving 96 − 24 = 72 worker-days. Now 8 + 4 = 12 workers finish the rest in 72 ÷ 12 = 6 more days. Altogether the repair takes 3 + 6 = 9 days.",
+    "hints": [
+      "Calculate the total worker-days for the roof, then subtract the work done in the first 3 days.",
+      "Divide the remaining worker-days by the new total of 12 workers, then add the initial 3 days."
+    ],
+    "pitfall": "Giving only the extra 6 days instead of the total days from start to finish.",
+    "diagram": null
+  },
+  {
+    "id": 432,
+    "topic": "ratio",
+    "subtopic": "inverse_proportion_rates",
+    "difficulty": 3,
+    "question": "A camp has enough food to feed 45 scouts for 10 days. After 2 days, 15 more scouts arrive at the camp, and everyone eats the same daily ration. For how many more days will the remaining food last?",
+    "answer": "6",
+    "unit": null,
+    "answer_alt": [
+      "6 days",
+      "6 day"
+    ],
+    "check": "(45*10-45*2)/(45+15)",
+    "explanation": "At the start there are 45 × 10 = 450 daily scout rations. After 2 days, 45 × 2 = 90 rations are eaten, leaving 360 rations. With 45 + 15 = 60 scouts now sharing the rations, the food lasts 360 ÷ 60 = 6 more days.",
+    "hints": [
+      "Think in total daily rations: 45 scouts for 10 days gives 450 rations.",
+      "Subtract the rations eaten in the first 2 days, then divide by the new number of scouts."
+    ],
+    "pitfall": "Dividing the remaining rations by 15 new scouts instead of 60 total scouts, or forgetting the first 2 days.",
+    "diagram": null
+  },
+  {
+    "id": 433,
+    "topic": "percentages",
+    "subtopic": "venn_percentage_overlap",
+    "difficulty": 2,
+    "question": "In a year group of 120 pupils, 65% play football, 45% play tennis, and 15% play neither sport. How many pupils play both football and tennis?",
+    "answer": "30",
+    "unit": null,
+    "answer_format": null,
+    "check": "120*(65+45-(100-15))/100",
+    "explanation": "Since 15% play neither sport, 100% − 15% = 85% play at least one sport. Adding the two groups gives 65% + 45% = 110%, which counts those playing both sports twice. Therefore 110% − 85% = 25% play both, which is 25% of 120 = 30 pupils.",
+    "hints": [
+      "Find the percentage of pupils who play at least one of the two sports.",
+      "Compare 65% + 45% with that percentage to find the percentage counted twice."
+    ],
+    "pitfall": "Comparing 65% + 45% with 100% instead of 85%, forgetting the 15% who play neither.",
+    "diagram": null
+  },
+  {
+    "id": 434,
+    "topic": "percentages",
+    "subtopic": "venn_percentage_overlap",
+    "difficulty": 3,
+    "question": "Of 200 visitors to a historic site, 58% visit the castle, 44% visit the maze, and 18% visit neither. How many visitors go to the castle only?",
+    "answer": "76",
+    "unit": null,
+    "answer_format": null,
+    "check": "200*(58-(58+44-(100-18)))/100",
+    "explanation": "Visitors who see at least one attraction make up 100% − 18% = 82%. Since 58% + 44% = 102%, the overlap visiting both is 102% − 82% = 20%. Subtracting this overlap from the 58% castle visitors leaves 38% who visit the castle only: 38% of 200 = 76 visitors.",
+    "hints": [
+      "First find the percentage who visit both the castle and the maze.",
+      "Take the overlap away from the 58% castle visitors to leave castle only."
+    ],
+    "pitfall": "Finding the number who visit both (40) or all castle visitors (116) instead of castle only.",
+    "diagram": null
+  },
+  {
+    "id": 435,
+    "topic": "percentages",
+    "subtopic": "venn_percentage_overlap",
+    "difficulty": 3,
+    "question": "In a language survey of a school year, 70% of pupils study French, 55% study German, and 10% study neither language. If 42 pupils study both French and German, how many pupils were surveyed altogether?",
+    "answer": "120",
+    "unit": null,
+    "answer_format": null,
+    "check": "42/((70+55-(100-10))/100)",
+    "explanation": "Pupils studying at least one language make up 100% − 10% = 90%. Adding 70% + 55% = 125% counts the overlap twice, so 125% − 90% = 35% study both languages. Since 35% is 42 pupils, 5% is 42 ÷ 7 = 6 pupils, giving 100% = 120 pupils altogether.",
+    "hints": [
+      "Work out what percentage of the year group studies both languages.",
+      "Equate that percentage to 42 pupils, then scale back to 100%."
+    ],
+    "pitfall": "Subtracting 100% instead of 90%, which makes the overlap 25% instead of 35%.",
+    "diagram": null
+  },
+  {
+    "id": 436,
+    "topic": "geometry",
+    "subtopic": "surface_area_and_painted_cubes",
+    "difficulty": 2,
+    "question": "A closed cuboid gift box is 10 cm long, 6 cm wide and 4 cm high. What is the total surface area of all six outer faces, in cm²?",
+    "answer": "248",
+    "unit": "cm²",
+    "answer_format": null,
+    "check": "2*(10*6+10*4+6*4)",
+    "explanation": "A cuboid has three matching pairs of opposite faces. The top and bottom are 10 × 6 = 60 cm² each, the front and back are 10 × 4 = 40 cm² each, and the two ends are 6 × 4 = 24 cm² each. Total surface area = 2 × (60 + 40 + 24) = 248 cm².",
+    "hints": [
+      "List the three different rectangle sizes and multiply each by 2.",
+      "Add the areas of the top, front and end faces, then double the sum."
+    ],
+    "pitfall": "Calculating the volume (10 × 6 × 4 = 240) instead of surface area, or adding only three faces without doubling.",
+    "diagram": null
+  },
+  {
+    "id": 437,
+    "topic": "geometry",
+    "subtopic": "surface_area_and_painted_cubes",
+    "difficulty": 3,
+    "question": "A solid wooden cube measuring 4 cm by 4 cm by 4 cm is painted blue on all six outside faces, then cut into 64 small 1 cm cubes. How many of the small cubes have blue paint on exactly two faces?",
+    "answer": "24",
+    "unit": null,
+    "answer_format": null,
+    "check": "12*(4-2)",
+    "explanation": "Cubes with paint on exactly two faces sit along the 12 edges of the large cube, excluding the corners (which have 3 painted faces). Each 4 cm edge has 4 small cubes: 2 corners and 4 − 2 = 2 middle edge cubes. Across 12 edges there are 12 × 2 = 24 such cubes.",
+    "hints": [
+      "Think about where the 2-face painted cubes lie: corners have 3 faces, and face centres have 1 face.",
+      "Count how many cubes sit strictly between two corners along one edge, then multiply by 12 edges."
+    ],
+    "pitfall": "Including the 8 corner cubes, or counting 6 faces instead of 12 edges.",
+    "diagram": null
+  },
+  {
+    "id": 438,
+    "topic": "geometry",
+    "subtopic": "surface_area_and_painted_cubes",
+    "difficulty": 2,
+    "question": "The diagram shows the trapezium cross-section of a canal. Its parallel top and bottom widths are 14 m and 8 m, and its perpendicular depth is 4 m. What is the area of the trapezium, in m²?",
+    "answer": "44",
+    "unit": "m²",
+    "answer_format": null,
+    "check": "(14+8)/2*4",
+    "explanation": "The area of a trapezium equals the average of its two parallel sides multiplied by its perpendicular height: (14 + 8) ÷ 2 × 4 = 11 × 4 = 44 m². Alternatively, split it into an 8 m by 4 m rectangle (32 m²) and two side triangles (total base 6 m, area 12 m²).",
+    "hints": [
+      "Find the mean of the two parallel widths, or split the shape into a rectangle and two triangles.",
+      "Average the parallel sides 14 m and 8 m, then multiply by the perpendicular depth 4 m."
+    ],
+    "pitfall": "Multiplying (14 + 8) × 4 without dividing by 2, or subtracting the parallel sides instead of adding them.",
+    "diagram": {
+      "type": "shape",
+      "polygons": [
+        {
+          "points": [
+            [70, 55],
+            [310, 55],
+            [250, 185],
+            [130, 185]
+          ],
+          "shaded": false
+        }
+      ],
+      "lines": [
+        {
+          "from": [130, 55],
+          "to": [130, 185],
+          "dashed": true
+        },
+        {
+          "from": [130, 173],
+          "to": [142, 173],
+          "dashed": false
+        },
+        {
+          "from": [142, 173],
+          "to": [142, 185],
+          "dashed": false
+        }
+      ],
+      "labels": [
+        {
+          "x": 190,
+          "y": 42,
+          "text": "14 m",
+          "anchor": "middle"
+        },
+        {
+          "x": 190,
+          "y": 205,
+          "text": "8 m",
+          "anchor": "middle"
+        },
+        {
+          "x": 150,
+          "y": 125,
+          "text": "4 m",
+          "anchor": "start"
+        }
+      ],
+      "description": "A trapezium wider at the top than the bottom. The parallel top edge is 14 m, the parallel bottom edge is 8 m, and a dashed vertical line marks the perpendicular height as 4 m. Not to scale."
+    }
+  },
+  {
+    "id": 439,
+    "topic": "measures",
+    "subtopic": "clock_angles_and_miles",
+    "difficulty": 3,
+    "question": "What is the smaller angle, in degrees, between the hour hand and the minute hand of an analogue clock at 04:20?",
+    "answer": "10°",
+    "unit": "°",
+    "answer_format": null,
+    "check": "(4*30+20*0.5)-20*6",
+    "explanation": "Each hour mark is 360° ÷ 12 = 30° apart. At 04:20, the minute hand points directly at the 4 (4 × 30° = 120°). Meanwhile, the hour hand has moved one third of the way from 4 towards 5: 1/3 of 30° = 10°. So the angle between the hands is 10°.",
+    "hints": [
+      "Where is the minute hand at 20 minutes past the hour? Remember each hour mark is 30° apart.",
+      "The hour hand does not stay still at 4: it moves one third of the gap towards 5."
+    ],
+    "pitfall": "Assuming the hour hand stays fixed on the 4, which gives 0°.",
+    "diagram": null
+  },
+  {
+    "id": 440,
+    "topic": "measures",
+    "subtopic": "clock_angles_and_miles",
+    "difficulty": 2,
+    "question": "Using the conversion 5 miles = 8 km, a delivery driver covers a 120 km motorway stage followed by a 35-mile country stage. How many miles does the driver travel in total?",
+    "answer": "110",
+    "unit": null,
+    "answer_format": null,
+    "answer_alt": [
+      "110 miles",
+      "110 mile"
+    ],
+    "check": "120/8*5+35",
+    "explanation": "Convert the 120 km stage into miles using 8 km = 5 miles. Since 120 ÷ 8 = 15, there are 15 groups of 5 miles, giving 15 × 5 = 75 miles. Adding the 35-mile country stage gives 75 + 35 = 110 miles in total.",
+    "hints": [
+      "Convert 120 km into miles before adding the 35-mile stage.",
+      "Find how many 8 km blocks fit into 120 km, then multiply by 5 miles."
+    ],
+    "pitfall": "Multiplying 120 by 8 and dividing by 5 (converting the wrong way) or adding 120 + 35 directly.",
+    "diagram": null
+  },
+  {
+    "id": 441,
+    "topic": "measures",
+    "subtopic": "clock_angles_and_miles",
+    "difficulty": 2,
+    "question": "A ship sails on a three-figure bearing of 065°. It turns 125° clockwise, and then turns 40° anticlockwise. What is its new bearing, in degrees?",
+    "answer": "150°",
+    "unit": "°",
+    "answer_format": null,
+    "check": "65+125-40",
+    "explanation": "Bearings are measured clockwise from North. Starting at 065°, turning 125° clockwise brings the bearing to 65° + 125° = 190°. Turning 40° anticlockwise reduces the clockwise angle from North: 190° − 40° = 150°.",
+    "hints": [
+      "Bearings increase when turning clockwise and decrease when turning anticlockwise.",
+      "Add 125° to 65°, then subtract 40°."
+    ],
+    "pitfall": "Adding the anticlockwise turn instead of subtracting it.",
+    "diagram": null
+  },
+  {
+    "id": 442,
+    "topic": "algebra",
+    "subtopic": "simultaneous_unknowns_puzzles",
+    "difficulty": 2,
+    "question": "On a balance scale, 3 red blocks and 2 blue blocks weigh 410 g altogether. Meanwhile, 3 red blocks and 5 blue blocks weigh 620 g altogether. What is the mass of one red block, in grams?",
+    "answer": "90",
+    "unit": "g",
+    "answer_format": null,
+    "check": "(410-2*((620-410)/3))/3",
+    "explanation": "The extra 3 blue blocks add 620 − 410 = 210 g, so 1 blue block weighs 210 ÷ 3 = 70 g. In the first weighing, 2 blue blocks weigh 140 g, leaving 410 − 140 = 270 g for 3 red blocks. Each red block weighs 270 ÷ 3 = 90 g.",
+    "hints": [
+      "Both weighings have 3 red blocks, so compare the difference in blue blocks.",
+      "Find the mass of one blue block first, then use the 410 g weighing to find one red block."
+    ],
+    "pitfall": "Giving the mass of a blue block (70 g) instead of a red block, or forgetting to divide 270 g by 3.",
+    "diagram": null
+  },
+  {
+    "id": 443,
+    "topic": "algebra",
+    "subtopic": "simultaneous_unknowns_puzzles",
+    "difficulty": 3,
+    "question": "In a 20-question quiz, a player earns 5 points for every correct answer and loses 2 points for every wrong answer. Priya answers all 20 questions and finishes with 58 points. How many questions did she answer correctly?",
+    "answer": "14",
+    "unit": null,
+    "answer_format": null,
+    "check": "20-(20*5-58)/(5+2)",
+    "explanation": "If Priya answered all 20 correctly, she would score 20 × 5 = 100 points. She scored 100 − 58 = 42 points fewer. Changing one right answer to a wrong one loses 5 points and deducts 2 more, a drop of 7 points. So she got 42 ÷ 7 = 6 wrong and 20 − 6 = 14 right.",
+    "hints": [
+      "Start by supposing all 20 answers were correct, giving 100 points.",
+      "How many points are lost each time a right answer is swapped for a wrong one?"
+    ],
+    "pitfall": "Dividing the 42-point shortfall by 5 or by 2 instead of 5 + 2 = 7.",
+    "diagram": null
+  },
+  {
+    "id": 444,
+    "topic": "algebra",
+    "subtopic": "simultaneous_unknowns_puzzles",
+    "difficulty": 3,
+    "question": "Three bags A, B and C hold bolts. Bags A and B together hold 54 bolts, bags B and C together hold 62 bolts, and bags A and C together hold 48 bolts. How many bolts are in bag B?",
+    "answer": "34",
+    "unit": null,
+    "answer_format": null,
+    "check": "(54+62+48)/2-48",
+    "explanation": "Adding all three pairs counts every bag twice: 2 × (A + B + C) = 54 + 62 + 48 = 164 bolts. Dividing by 2 gives A + B + C = 82 bolts altogether. Since A and C together hold 48 bolts, bag B holds 82 − 48 = 34 bolts.",
+    "hints": [
+      "What do you get if you add all three pair totals (54 + 62 + 48) together?",
+      "Halve that sum to find A + B + C, then subtract A + C."
+    ],
+    "pitfall": "Forgetting to divide 164 by 2 before subtracting 48.",
+    "diagram": null
+  },
+  {
+    "id": 445,
+    "topic": "statistics",
+    "subtopic": "combined_mean_and_probability",
+    "difficulty": 2,
+    "question": "In a maths test, the 12 girls in a class have a mean score of 75, and the 18 boys have a mean score of 65. What is the mean score of all 30 pupils in the class?",
+    "answer": "69",
+    "unit": null,
+    "answer_format": null,
+    "check": "(12*75+18*65)/(12+18)",
+    "explanation": "Find the total marks for each group: the girls score 12 × 75 = 900 marks and the boys score 18 × 65 = 1170 marks. Together all 30 pupils score 900 + 1170 = 2070 marks. Dividing by 30 gives a combined mean of 2070 ÷ 30 = 69.",
+    "hints": [
+      "The groups are different sizes, so do not just average 75 and 65.",
+      "Find the total score for the girls and the total score for the boys, then divide by 30."
+    ],
+    "pitfall": "Taking the simple mean of 75 and 65 to get 70, ignoring that there are more boys than girls.",
+    "diagram": null
+  },
+  {
+    "id": 446,
+    "topic": "statistics",
+    "subtopic": "combined_mean_and_probability",
+    "difficulty": 3,
+    "question": "A bag contains 14 blue counters and some red counters. After 4 more red counters are put into the bag, the probability of picking a red counter at random is 3/5. How many red counters were in the bag at first?",
+    "answer": "17",
+    "unit": null,
+    "answer_format": null,
+    "check": "14/2*3-4",
+    "explanation": "After adding 4 red counters, the probability of picking red is 3/5, so the probability of picking blue is 2/5. Those 2/5 represent the 14 blue counters, meaning 1/5 is 7 counters. There are now 3 × 7 = 21 red counters, so originally there were 21 − 4 = 17 red counters.",
+    "hints": [
+      "What fraction of the final bag is blue? Compare that with the 14 blue counters.",
+      "Find the final number of red counters first, then subtract the 4 counters that were added."
+    ],
+    "pitfall": "Leaving the answer as 21 (the final count of red counters) instead of subtracting 4.",
+    "diagram": null
+  },
+  {
+    "id": 447,
+    "topic": "statistics",
+    "subtopic": "combined_mean_and_probability",
+    "difficulty": 2,
+    "question": "A pie chart shows all 180 trees in an orchard. The sector for apple trees has an angle of 144°, and pear trees make up 35% of the orchard. How many trees in the orchard are neither apple nor pear?",
+    "answer": "45",
+    "unit": null,
+    "answer_format": null,
+    "check": "180-180*144/360-180*0.35",
+    "explanation": "A full pie chart has 360°. For 180 trees, every 2° represents 1 tree, so the 144° apple sector holds 144 ÷ 2 = 72 apple trees. Pear trees make up 35% of 180 = 63 trees. The remaining trees are 180 − 72 − 63 = 45 trees.",
+    "hints": [
+      "Convert the 144° sector out of 360° into a number of trees, and also find 35% of 180.",
+      "Subtract both the apple trees and pear trees from 180."
+    ],
+    "pitfall": "Treating 144° as 144 trees or 144%, instead of 144/360 of the 180 trees.",
+    "diagram": null
+  },
+  {
+    "id": 448,
+    "topic": "coordinates",
+    "subtopic": "mirror_lines_and_rotation",
+    "difficulty": 2,
+    "question": "Point P (−3, 2) is shown on the coordinate grid. Reflect P in the vertical mirror line x = 1. Write the coordinates of the reflected point as (x, y).",
+    "answer": "(5, 2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "1+(1-(-3))",
+      "2"
+    ],
+    "explanation": "The vertical mirror line x = 1 runs vertically through x = 1. Point P (−3, 2) sits 4 units to the left of this line (from −3 to 1), so its reflection sits 4 units to the right at x = 1 + 4 = 5. The height y stays at 2, giving (5, 2).",
+    "hints": [
+      "Picture the vertical line passing through 1 on the x-axis. How far left of it is P?",
+      "Place the image the same distance to the right of x = 1, keeping y unchanged."
+    ],
+    "pitfall": "Reflecting in the y-axis (x = 0) to get (3, 2) instead of reflecting in x = 1.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": -3,
+          "y": 2,
+          "label": "P"
+        }
+      ],
+      "description": "A coordinate grid showing point P at (-3, 2). Each grid step is one unit."
+    }
+  },
+  {
+    "id": 449,
+    "topic": "coordinates",
+    "subtopic": "mirror_lines_and_rotation",
+    "difficulty": 3,
+    "question": "Point A (3, 4) is shown on the coordinate grid. Reflect A in the horizontal mirror line y = 1, and then translate the reflected point 2 squares left. Write the final coordinates as (x, y).",
+    "answer": "(1, -2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "3-2",
+      "1-(4-1)"
+    ],
+    "explanation": "Point A (3, 4) is 3 units above the horizontal mirror line y = 1, so reflecting across y = 1 places it 3 units below at y = 1 − 3 = −2, giving (3, −2). Translating 2 squares left subtracts 2 from x, finishing at (1, −2).",
+    "hints": [
+      "Find how many units A sits above the horizontal line y = 1, then go the same distance below it.",
+      "Once reflected, subtract 2 from the x-coordinate for the leftward move."
+    ],
+    "pitfall": "Reflecting in y = 0 to get (3, −4) instead of in y = 1, or moving 2 squares right.",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": 3,
+          "y": 4,
+          "label": "A"
+        }
+      ],
+      "description": "A coordinate grid showing point A at (3, 4). Each grid step is one unit."
+    }
+  },
+  {
+    "id": 450,
+    "topic": "coordinates",
+    "subtopic": "mirror_lines_and_rotation",
+    "difficulty": 3,
+    "question": "Triangle OPQ is shown on the grid with O at (0, 0), P at (2, 4) and Q at (4, 1). The triangle is rotated 90° clockwise about the origin (0, 0). Write the new coordinates of P as (x, y).",
+    "answer": "(4, -2)",
+    "unit": null,
+    "answer_format": "coordinates",
+    "check": [
+      "4",
+      "-2"
+    ],
+    "explanation": "From the origin O(0, 0), P(2, 4) is 2 units right and 4 units up. A 90° clockwise turn about O sends 'up' to 'right' and 'right' to 'down'. So P moves 4 units right and 2 units down from O, landing at (4, −2).",
+    "hints": [
+      "Describe the position of P from the origin as steps right and steps up.",
+      "A 90° clockwise turn rotates 'right' to 'down' and 'up' to 'right'."
+    ],
+    "pitfall": "Rotating anticlockwise to (−4, 2) or simply reflecting in the x-axis to (2, −4).",
+    "diagram": {
+      "type": "coordinates",
+      "points": [
+        {
+          "x": 0,
+          "y": 0,
+          "label": "O"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "label": "P"
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "label": "Q"
+        }
+      ],
+      "join": true,
+      "description": "A coordinate grid showing triangle OPQ with O at (0, 0), P at (2, 4) and Q at (4, 1). Each grid step is one unit."
+    }
+  }
+]

@@ -25,7 +25,7 @@ The current school guidance specifies written answers, final answer only, conten
 
 ## Revising existing questions
 
-`nwssee-upgrades.json` replaces 47 legacy written exercises after their original difficulty ratings are applied. Keep the ID, topic and subtopic so bookmarks and skill groups continue to work. Include `content_revision: 2` (increment it for later substantive changes). Revised questions from the newer SET and NWSSEE banks live in their original source files with the same revision field. Daily practice uses this field to discard an answer saved against older wording. Historical progress is kept; it is a history of earlier attempts, not a claim that the revised question has been passed. Revised questions use their own hints and worked solutions without the older generic tutorial.
+`nwssee-upgrades.json` replaces 69 legacy written exercises after their original difficulty ratings are applied. Keep the ID, topic and subtopic so bookmarks and skill groups continue to work. Include `content_revision: 2` (increment it for later substantive changes). Revised questions from the newer SET and NWSSEE banks live in their original source files with the same revision field. Daily practice uses this field to discard an answer saved against older wording. Historical progress is kept; it is a history of earlier attempts, not a claim that the revised question has been passed. Revised questions use their own hints and worked solutions without the older generic tutorial.
 
 ```bash
 node scripts/check-batch.mjs data/authored/nwssee-upgrades.json --kind nwssee --ids 121-209 --replacements

@@ -34,7 +34,7 @@ const VALID_TOPICS = [
 
 // Oral warm-ups stay evenly spread. The written banks follow the mock paper blueprints.
 const WALK_PER_TOPIC = 12;
-const SET_TOPIC_TARGETS = { number_operations: 27, fractions: 24, decimals: 18, ratio: 18, percentages: 12, geometry: 21, measures: 12, algebra: 9, statistics: 6, coordinates: 3 };
+const SET_TOPIC_TARGETS = { number_operations: 30, fractions: 27, decimals: 21, ratio: 21, percentages: 15, geometry: 24, measures: 15, algebra: 12, statistics: 9, coordinates: 6 };
 const NWSSEE_PAPER_TOPICS = { number_operations: 12, fractions: 9, decimals: 6, ratio: 9, percentages: 6, geometry: 12, measures: 9, algebra: 6, statistics: 3, coordinates: 3 };
 
 const DISPLAY_MAP = ['A', 'B', 'C', 'D', 'E'];
@@ -63,9 +63,9 @@ function test(id, name, passFn) {
 
 // ── D1–D6: Counts and ID ranges ───────────────────────────────
 
-test('D1', 'Total question count = 420', () => ({
-  pass:   questions.length === 420,
-  detail: `Found ${questions.length}, expected 420`,
+test('D1', 'Total question count = 480', () => ({
+  pass:   questions.length === 480,
+  detail: `Found ${questions.length}, expected 480`,
 }));
 
 const walkQs = questions.filter(q => q.mode === 'walk');
@@ -73,8 +73,8 @@ const setQs  = questions.filter(q => q.mode === 'set');
 const deskQs = questions.filter(q => q.mode === 'desk');
 const choiceQs = [...walkQs, ...setQs];
 
-test('D2', 'Walk 120, SET written 150, NWSSEE written 150', () => ({
-  pass:   walkQs.length === 120 && setQs.length === 150 && deskQs.length === 150,
+test('D2', 'Walk 120, SET written 180, NWSSEE written 180', () => ({
+  pass:   walkQs.length === 120 && setQs.length === 180 && deskQs.length === 180,
   detail: `walk ${walkQs.length}, set ${setQs.length}, desk ${deskQs.length}`,
 }));
 
@@ -90,11 +90,11 @@ test('D4', 'All IDs unique', () => {
 });
 
 test('D5', 'Original IDs keep their modes (progress depends on them)', () => {
-  const bad = questions.filter(q => q.id <= 120 ? q.mode !== 'walk' : q.id <= 210 ? q.mode !== 'desk' : q.id <= 360 ? q.mode !== 'set' : q.mode !== 'desk');
+  const bad = questions.filter(q => q.id <= 120 ? q.mode !== 'walk' : q.id <= 210 ? q.mode !== 'desk' : q.id <= 360 ? q.mode !== 'set' : q.id <= 450 ? q.mode !== 'desk' : q.mode !== 'set');
   return { pass: bad.length === 0, detail: bad.map(q => `ID ${q.id}`).join(', ') || 'OK' };
 });
 
-test('D6', 'IDs run continuously from 1 to 420', () => {
+test('D6', 'IDs run continuously from 1 to 480', () => {
   const ids = questions.map(q => q.id).sort((a, b) => a - b);
   return { pass: ids.every((id, i) => id === i + 1), detail: 'OK' };
 });

@@ -114,6 +114,25 @@
     "content_revision": 2
   },
   {
+    "id": 135,
+    "topic": "number_operations",
+    "subtopic": "multi_step_cost",
+    "difficulty": 2,
+    "question": "A school shop buys 8 packs of 18 pencils for £28.80 in total. Twelve pencils are broken and thrown away. The shop sells all the remaining pencils at 35p each. How much profit does the shop make, in pounds?",
+    "answer": "17.40",
+    "unit": "£",
+    "answer_format": null,
+    "check": "(8*18-12)*0.35-28.80",
+    "explanation": "Altogether 8 × 18 = 144 pencils are bought. Removing 12 broken pencils leaves 132 to sell. At 35p each, sales bring in 132 × £0.35 = £46.20 (132 × 30p = £39.60 plus 132 × 5p = £6.60). Profit is sales minus cost: £46.20 − £28.80 = £17.40.",
+    "hints": [
+      "Find how many unbroken pencils are actually sold before working out the sales income.",
+      "Multiply 132 by 35p in pounds, then subtract the £28.80 cost."
+    ],
+    "pitfall": "Selling all 144 pencils without removing the 12 broken ones, or forgetting to subtract the £28.80 cost.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
     "id": 136,
     "topic": "number_operations",
     "subtopic": "multiplication_strategies",
@@ -148,6 +167,25 @@
       "Evaluate the whole expression after trying each possible pair."
     ],
     "pitfall": "Give the value inside the brackets, rather than the value of the whole expression.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 138,
+    "topic": "number_operations",
+    "subtopic": "multi_step_cost",
+    "difficulty": 2,
+    "question": "A club needs 160 badges for an event. A supplier sells boxes of 12 badges for £5.40 per box, and adds 2 free extra badges inside every box bought. How much must the club spend to get at least 160 badges, in pounds?",
+    "answer": "64.80",
+    "unit": "£",
+    "answer_format": null,
+    "check": "12*5.4",
+    "explanation": "Each box provides 12 + 2 = 14 badges. Eleven boxes give 11 × 14 = 154 badges, which is 6 too few. Therefore the club must buy 12 boxes, giving 168 badges. At £5.40 per box, 12 boxes cost 12 × £5.40 = £64.80.",
+    "hints": [
+      "Count both the paid badges and the 2 free badges inside each box.",
+      "Divide 160 by 14 and remember you cannot buy a fraction of a box."
+    ],
+    "pitfall": "Dividing 160 by 12 instead of 14, or rounding 11.4 boxes down instead of up.",
     "diagram": null,
     "content_revision": 2
   },
@@ -190,6 +228,25 @@
     "content_revision": 2
   },
   {
+    "id": 142,
+    "topic": "fractions",
+    "subtopic": "fraction_of_amount",
+    "difficulty": 2,
+    "question": "Box A holds 90 cards, of which 2/3 are blue and the rest are red. Box B holds 60 cards, of which 1/4 are red and the rest are blue. One fifth of the blue cards in Box A are moved into Box B. How many blue cards are now in Box B?",
+    "answer": "57",
+    "unit": null,
+    "answer_format": null,
+    "check": "60*3/4+90*2/3/5",
+    "explanation": "Box A starts with 2/3 of 90 = 60 blue cards. One fifth of these, 60 ÷ 5 = 12 blue cards, move to Box B. In Box B, 1/4 of 60 = 15 cards are red, so 60 − 15 = 45 cards were already blue. Adding the 12 moved cards gives 45 + 12 = 57 blue cards.",
+    "hints": [
+      "Find the starting number of blue cards in each box separately.",
+      "Take 1/5 of Box A's blue cards and add them to Box B's blue cards."
+    ],
+    "pitfall": "Taking 1/5 of all 90 cards in Box A instead of 1/5 of its blue cards, or counting Box B's red cards by mistake.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
     "id": 143,
     "topic": "fractions",
     "subtopic": "fraction_equivalence",
@@ -224,6 +281,25 @@
       "Keep 7/10 of the original juice, then 5/7 of the result."
     ],
     "pitfall": "The second fraction is taken from the remainder, not from the original jug.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 145,
+    "topic": "fractions",
+    "subtopic": "fraction_of_amount",
+    "difficulty": 3,
+    "question": "A shelf holds 120 books. Three quarters of them are fiction and the rest are non-fiction. During the morning, 2/5 of the fiction books and 1/3 of the non-fiction books are borrowed. How many books remain on the shelf?",
+    "answer": "74",
+    "unit": null,
+    "answer_format": null,
+    "check": "120*3/4*(1-2/5)+120*(1-3/4)*(1-1/3)",
+    "explanation": "Fiction books: 3/4 of 120 = 90. Non-fiction: 120 − 90 = 30. Borrowed fiction: 2/5 of 90 = 36, leaving 54 fiction books. Borrowed non-fiction: 1/3 of 30 = 10, leaving 20 non-fiction books. Altogether 54 + 20 = 74 books remain on the shelf.",
+    "hints": [
+      "Split the 120 books into fiction and non-fiction first.",
+      "Work out how many books are borrowed from each group, then subtract from 120."
+    ],
+    "pitfall": "Applying 2/5 or 1/3 to all 120 books instead of to each separate group, or giving the number borrowed instead of remaining.",
     "diagram": null,
     "content_revision": 2
   },
@@ -323,6 +399,25 @@
     "content_revision": 2
   },
   {
+    "id": 152,
+    "topic": "decimals",
+    "subtopic": "money_change",
+    "difficulty": 2,
+    "question": "A shop sells notebooks at £3.60 each with an offer: buy 3 notebooks and get the 4th notebook half-price. Maya takes 8 notebooks and pays with a £30 note. How much change does she receive, in pounds?",
+    "answer": "4.80",
+    "unit": "£",
+    "answer_format": null,
+    "check": "30-2*(3*3.60+3.60/2)",
+    "explanation": "Each group of 4 notebooks contains 3 at full price (£3.60) and 1 at half price (£1.80), costing 3 × £3.60 + £1.80 = £12.60. For 8 notebooks, Maya pays for two groups: 2 × £12.60 = £25.20. Subtracting from £30 gives £30 − £25.20 = £4.80 change.",
+    "hints": [
+      "Group the 8 notebooks into two lots of 4 to apply the offer.",
+      "Work out the cost of 3 full-price notebooks plus 1 half-price notebook, double it, then subtract from £30."
+    ],
+    "pitfall": "Applying the half-price discount only once across 8 notebooks, or giving the total cost instead of the change.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
     "id": 153,
     "topic": "decimals",
     "subtopic": "money_multiplication",
@@ -361,6 +456,28 @@
     "content_revision": 2
   },
   {
+    "id": 155,
+    "topic": "ratio",
+    "subtopic": "volume_ratio",
+    "difficulty": 2,
+    "question": "Tank A has a square base of side 6 cm and is filled with water to a height of 8 cm. All this water is poured into an empty Tank B, which has a square base of side 12 cm and a height of 10 cm. Write the ratio of the new water depth in Tank B to the full height of Tank B in simplest form.",
+    "answer": "1:5",
+    "unit": null,
+    "answer_format": "ratio_simplest",
+    "check": [
+      "2/2",
+      "10/2"
+    ],
+    "explanation": "The water volume is 6 × 6 × 8 = 288 cm³. Tank B has base area 12 × 12 = 144 cm², so the water reaches a depth of 288 ÷ 144 = 2 cm. Comparing this 2 cm depth to Tank B's height of 10 cm gives 2:10, which simplifies to 1:5.",
+    "hints": [
+      "Find the volume of water in Tank A first, then divide by Tank B's base area to find the new depth.",
+      "Compare the new water depth with 10 cm and divide both sides by their highest common factor."
+    ],
+    "pitfall": "Assuming the water depth halves because the base side doubled; doubling both base sides multiplies the base area by 4.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
     "id": 157,
     "topic": "ratio",
     "subtopic": "ratio_sharing",
@@ -376,6 +493,47 @@
       "Find one part using 7 − 4, then find sport’s share before taking away its spending."
     ],
     "pitfall": "The difference in the shares corresponds to the difference in the ratio parts.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 158,
+    "topic": "ratio",
+    "subtopic": "volume_ratio",
+    "difficulty": 2,
+    "question": "Two cuboid boxes both have square bases. The side length of the large box's base is 3 times the side length of the small box's base. The height of the small box is 3 times the height of the large box. Give the ratio of the large box's volume to the small box's volume in simplest form.",
+    "answer": "3:1",
+    "unit": null,
+    "answer_format": "ratio_simplest",
+    "check": [
+      "(3*3*1)/3",
+      "(1*1*3)/3"
+    ],
+    "explanation": "Test with simple lengths: let the small box be 1 cm by 1 cm by 3 cm (volume 3 cm³). Then the large box is 3 cm by 3 cm by 1 cm (volume 9 cm³). The ratio of large volume to small volume is 9:3, which simplifies to 3:1.",
+    "hints": [
+      "Try choosing easy numbers for the small base side and the large height, such as 1 cm.",
+      "Remember that a square base multiplies the side scale factor twice, while height multiplies once."
+    ],
+    "pitfall": "Thinking the scaling factors 3 and 3 cancel out to 1:1; squaring the base side factor gives 9:1 before dividing by 3.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 159,
+    "topic": "ratio",
+    "subtopic": "unitary_method",
+    "difficulty": 3,
+    "question": "Eight identical printers working together take 30 minutes to print a batch of 2400 leaflets. After 15 minutes of printing, 2 printers break down and stop. How many more minutes do the remaining printers need to finish the batch?",
+    "answer": "20",
+    "unit": "minutes",
+    "answer_format": null,
+    "check": "(2400-2400/30*15)/(2400/30/8*6)",
+    "explanation": "All 8 printers print 2400 ÷ 30 = 80 leaflets per minute, so 1 printer prints 10 leaflets per minute. In the first 15 minutes they print 15 × 80 = 1200 leaflets, leaving 1200 leaflets. With 6 printers left, the rate drops to 60 leaflets per minute, taking 1200 ÷ 60 = 20 more minutes.",
+    "hints": [
+      "Find how many leaflets one printer produces per minute, and how many are printed in the first 15 minutes.",
+      "Divide the remaining leaflets by the new combined rate of 6 printers."
+    ],
+    "pitfall": "Adding 20 minutes to 15 minutes to give the total time (35) instead of the extra time needed, or dividing by 2 printers.",
     "diagram": null,
     "content_revision": 2
   },
@@ -418,6 +576,25 @@
     "content_revision": 2
   },
   {
+    "id": 164,
+    "topic": "percentages",
+    "subtopic": "percent_discount",
+    "difficulty": 2,
+    "question": "A coat has a full price of £120 in two shops. Shop A gives 25% off the coat and charges £8 for delivery. Shop B gives 15% off with free delivery. How many pounds cheaper is the cheaper total cost?",
+    "answer": "4",
+    "unit": "£",
+    "answer_format": null,
+    "check": "120*0.85-(120*0.75+8)",
+    "explanation": "At Shop A, 25% of £120 is £30, so the coat is £90, plus £8 delivery gives £98. At Shop B, 15% of £120 is £18, so the coat with free delivery costs £120 − £18 = £102. Shop A is cheaper by £102 − £98 = £4.",
+    "hints": [
+      "Work out the full delivered cost at Shop A and at Shop B separately.",
+      "Remember to add Shop A's £8 delivery fee after taking 25% off £120."
+    ],
+    "pitfall": "Comparing only the percentage discounts without adding Shop A's delivery fee, or giving the cheaper total instead of the difference.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
     "id": 165,
     "topic": "percentages",
     "subtopic": "percent_of_amount",
@@ -433,6 +610,44 @@
       "Add 18 to 45% of 360, then compare that result with the whole school."
     ],
     "pitfall": "An extra number of pupils is not the same as an extra percentage.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 166,
+    "topic": "percentages",
+    "subtopic": "percent_increase",
+    "difficulty": 2,
+    "question": "A club starts with 160 members. Its membership increases by 25% in Year 1, and then increases by 10% of the Year 1 total in Year 2. How many members does the club have at the end of Year 2?",
+    "answer": "220",
+    "unit": null,
+    "answer_format": null,
+    "check": "160*1.25*1.1",
+    "explanation": "In Year 1, 25% of 160 is 40, raising membership to 160 + 40 = 200. In Year 2, the 10% increase is taken from 200, not 160: 10% of 200 is 20. Total membership at the end of Year 2 is 200 + 20 = 220.",
+    "hints": [
+      "Calculate the new number of members after Year 1 before finding Year 2's increase.",
+      "Use 10% of the Year 1 total, rather than 10% of 160."
+    ],
+    "pitfall": "Adding the percentages (25% + 10% = 35% of 160 = 216) instead of applying Year 2's 10% increase to the larger Year 1 total.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 167,
+    "topic": "percentages",
+    "subtopic": "percent_discount",
+    "difficulty": 2,
+    "question": "Theatre tickets have a full price of £20 each. Children receive 35% off the full price, while adults pay full price. A group of 4 adults and 6 children uses an extra £15 group voucher off their final bill. How much does the group pay in pounds?",
+    "answer": "143",
+    "unit": "£",
+    "answer_format": null,
+    "check": "4*20+6*20*0.65-15",
+    "explanation": "Four adult tickets at full price cost 4 × £20 = £80. A child discount of 35% takes £7 off £20, so each child ticket costs £13. Six child tickets cost 6 × £13 = £78, giving £158 altogether. Subtracting the £15 voucher leaves £143.",
+    "hints": [
+      "Price the adult tickets and the discounted child tickets separately.",
+      "Subtract the £15 voucher once from the combined total, not from every ticket."
+    ],
+    "pitfall": "Applying the 35% discount to adult tickets too, or taking £15 off each ticket instead of off the group bill.",
     "diagram": null,
     "content_revision": 2
   },
@@ -453,6 +668,51 @@
     ],
     "pitfall": "An extra number of pupils is not the same as an extra percentage.",
     "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 169,
+    "topic": "percentages",
+    "subtopic": "percent_increase",
+    "difficulty": 2,
+    "question": "A sports club has 240 members, of whom 5/8 are juniors and the rest are seniors. Next season, junior numbers increase by 20% and senior numbers increase by 10%. How many members will the club have altogether next season?",
+    "answer": "279",
+    "unit": null,
+    "answer_format": null,
+    "check": "240*5/8*1.2+240*3/8*1.1",
+    "explanation": "Juniors make up 5/8 of 240 = 150 members, leaving 240 − 150 = 90 seniors. A 20% rise adds 30 juniors, giving 180 juniors. A 10% rise adds 9 seniors, giving 99 seniors. Altogether there will be 180 + 99 = 279 members.",
+    "hints": [
+      "Find how many juniors and how many seniors are in the club at the start.",
+      "Increase the juniors by 20% and the seniors by 10%, then add the two new totals."
+    ],
+    "pitfall": "Applying a 30% increase to all 240 members instead of applying each percentage to its own group.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 170,
+    "topic": "geometry",
+    "subtopic": "compound_area",
+    "difficulty": 2,
+    "question": "The L-shaped floor shown is an 11 m by 8 m rectangle with a 4 m by 3 m corner removed. Flooring packs cover 3 m² each and cost £24 per pack. How much does it cost to buy enough whole packs for the floor, in pounds?",
+    "answer": "624",
+    "unit": "£",
+    "answer_format": null,
+    "check": "26*24",
+    "explanation": "The whole 11 m by 8 m rectangle has area 88 m². Removing the 4 m by 3 m corner (12 m²) leaves 76 m². Twenty-five packs cover only 75 m², leaving 1 m² bare, so 26 whole packs must be bought. At £24 each, 26 × £24 = £624.",
+    "hints": [
+      "Find the L-shape's area by subtracting the missing corner from the full rectangle.",
+      "Divide the area by 3 m² and round up to whole packs before multiplying by £24."
+    ],
+    "pitfall": "Rounding down to 25 packs (leaving part of the floor uncovered) or finding the perimeter instead of the area.",
+    "diagram": {
+      "type": "l_shape",
+      "width": "11 m",
+      "height": "8 m",
+      "cutWidth": "4 m",
+      "cutHeight": "3 m",
+      "description": "11 m by 8 m rectangle with a 4 m by 3 m corner removed."
+    },
     "content_revision": 2
   },
   {
@@ -480,6 +740,32 @@
     "content_revision": 2
   },
   {
+    "id": 173,
+    "topic": "geometry",
+    "subtopic": "compound_area",
+    "difficulty": 2,
+    "question": "The L-shaped courtyard shown is a 14 m by 9 m rectangle with a 5 m by 4 m corner removed. Inside the courtyard is a square flowerbed with perimeter 16 m. The rest of the courtyard is paved. What is the paved area, in m²?",
+    "answer": "90",
+    "unit": "m²",
+    "answer_format": null,
+    "check": "14*9-5*4-(16/4)*(16/4)",
+    "explanation": "The enclosing 14 m by 9 m rectangle has area 126 m². Subtracting the 5 m by 4 m cut-out (20 m²) gives the courtyard area of 106 m². A square with perimeter 16 m has sides of 4 m and area 4 × 4 = 16 m². Paved area = 106 − 16 = 90 m².",
+    "hints": [
+      "Find the total area of the L-shaped courtyard, then find the area of the flowerbed.",
+      "Use the perimeter of the square flowerbed to work out its side length first."
+    ],
+    "pitfall": "Subtracting the flowerbed's perimeter (16) directly as if it were an area, or forgetting the missing corner.",
+    "diagram": {
+      "type": "l_shape",
+      "width": "14 m",
+      "height": "9 m",
+      "cutWidth": "5 m",
+      "cutHeight": "4 m",
+      "description": "14 m by 9 m rectangle with a 5 m by 4 m corner removed."
+    },
+    "content_revision": 2
+  },
+  {
     "id": 174,
     "topic": "geometry",
     "subtopic": "triangle_area",
@@ -500,6 +786,56 @@
       "base": "18 cm",
       "height": "7 cm",
       "description": "Triangle with base 18 cm and perpendicular height 7 cm."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 175,
+    "topic": "geometry",
+    "subtopic": "perimeter",
+    "difficulty": 2,
+    "question": "A rectangular paddock has length 17 m and width 9 m. A 3 m gate fills part of the boundary, and the rest is enclosed using 2 m wide fence panels costing £18 each. How much do the fence panels cost in total, in pounds?",
+    "answer": "450",
+    "unit": "£",
+    "answer_format": null,
+    "check": "25*18",
+    "explanation": "The total perimeter is 2 × (17 + 9) = 52 m. Taking off the 3 m gate leaves 49 m to fence. Since panels are 2 m wide and sold whole, 24 panels cover only 48 m, so 25 panels are required. Total cost = 25 × £18 = £450.",
+    "hints": [
+      "Find the perimeter minus the gate before working out how many panels are needed.",
+      "Twenty-four panels only reach 48 m; round the number of panels up."
+    ],
+    "pitfall": "Using 24.5 panels in the cost calculation or forgetting to remove the 3 m gate.",
+    "diagram": {
+      "type": "rectangle",
+      "width": "17 m",
+      "height": "9 m",
+      "description": "Rectangle with length 17 m and width 9 m."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 176,
+    "topic": "geometry",
+    "subtopic": "compound_area",
+    "difficulty": 2,
+    "question": "The L-shaped hall shown is a 16 m by 10 m rectangle with a 6 m by 3 m corner removed. A rectangular stage measuring 4 m by 3 m inside the hall is left unfloored, and the rest is covered with wood at £15 per m². What is the cost of the wood, in pounds?",
+    "answer": "1950",
+    "unit": "£",
+    "answer_format": null,
+    "check": "(16*10-6*3-4*3)*15",
+    "explanation": "The full rectangle is 16 × 10 = 160 m². Subtract the 6 m by 3 m cut-out (18 m²) to get 142 m² for the hall. Subtract the 4 × 3 = 12 m² unfloored stage, leaving 130 m². Multiplying by £15 gives 130 × £15 = £1950.",
+    "hints": [
+      "Subtract both the missing corner and the unfloored stage from the 16 m by 10 m rectangle.",
+      "Multiply the final floored area in m² by £15."
+    ],
+    "pitfall": "Forgetting to subtract the unfloored stage, or adding the cut-out area instead of subtracting it.",
+    "diagram": {
+      "type": "l_shape",
+      "width": "16 m",
+      "height": "10 m",
+      "cutWidth": "6 m",
+      "cutHeight": "3 m",
+      "description": "16 m by 10 m rectangle with a 6 m by 3 m corner removed."
     },
     "content_revision": 2
   },
@@ -585,6 +921,25 @@
     "content_revision": 2
   },
   {
+    "id": 182,
+    "topic": "measures",
+    "subtopic": "speed_distance_time",
+    "difficulty": 2,
+    "question": "A cyclist rides 30 km from town A to town B at a steady 15 km/h, rests for 15 minutes, then rides back along the same 30 km route at 20 km/h. How many minutes does the whole trip take, including the rest?",
+    "answer": "225",
+    "unit": "minutes",
+    "answer_format": null,
+    "check": "(30/15)*60+15+(30/20)*60",
+    "explanation": "The outward ride takes 30 ÷ 15 = 2 hours (120 minutes). The return ride takes 30 ÷ 20 = 1.5 hours (90 minutes). Adding the 15-minute rest stop gives 120 + 15 + 90 = 225 minutes altogether.",
+    "hints": [
+      "Calculate the time for the outward journey, the rest stop, and the return journey separately.",
+      "Convert each journey time from hours into minutes before adding them."
+    ],
+    "pitfall": "Averaging the two speeds (17.5 km/h) instead of calculating each leg's time separately, or forgetting the rest stop.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
     "id": 183,
     "topic": "measures",
     "subtopic": "time_duration",
@@ -642,6 +997,25 @@
     "content_revision": 2
   },
   {
+    "id": 188,
+    "topic": "algebra",
+    "subtopic": "consecutive_numbers",
+    "difficulty": 2,
+    "question": "Five consecutive even numbers add up to 170. If the next consecutive even number after the largest is added to the list, what is the sum of the smallest and the new largest number?",
+    "answer": "70",
+    "unit": null,
+    "answer_format": null,
+    "check": "(170/5-4)+(170/5+6)",
+    "explanation": "The middle of the five consecutive even numbers is the mean: 170 ÷ 5 = 34. Even numbers differ by 2, so the five numbers are 30, 32, 34, 36, 38. Adding the next even number gives 40. The sum of the smallest and new largest is 30 + 40 = 70.",
+    "hints": [
+      "Divide 170 by 5 to find the middle even number, then list all five numbers.",
+      "Include the extra consecutive even number above the largest before adding smallest and largest."
+    ],
+    "pitfall": "Stepping by 1 instead of 2 for even numbers, or using 38 instead of the new largest number 40.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
     "id": 189,
     "topic": "algebra",
     "subtopic": "simple_equations",
@@ -657,6 +1031,44 @@
       "Adding the original number to both sides gives 6 equal copies plus 9, totalling 93."
     ],
     "pitfall": "Do not treat the second result as a fixed total; it also depends on the number.",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 190,
+    "topic": "algebra",
+    "subtopic": "number_sequences",
+    "difficulty": 3,
+    "question": "Sequence A starts at 7 and adds 5 each time (7, 12, 17, …). Sequence B starts at 95 and subtracts 3 each time (95, 92, 89, …). Which number appears in the exact same position in both sequences?",
+    "answer": "62",
+    "unit": null,
+    "answer_format": null,
+    "check": "7+5*((95-7)/(5+3))",
+    "explanation": "At position 1, the sequences are 95 − 7 = 88 apart. Each step brings them closer by 5 + 3 = 8, so they meet after 88 ÷ 8 = 11 steps (at the 12th term). The 12th term of Sequence A is 7 + 11 × 5 = 62 (check: 95 − 11 × 3 = 62).",
+    "hints": [
+      "Find the starting gap between 7 and 95, and by how much that gap shrinks each step.",
+      "Be careful to find the number itself, not its position number."
+    ],
+    "pitfall": "Giving the position (12) or number of steps (11) instead of the term value (62).",
+    "diagram": null,
+    "content_revision": 2
+  },
+  {
+    "id": 191,
+    "topic": "algebra",
+    "subtopic": "consecutive_numbers",
+    "difficulty": 2,
+    "question": "Four consecutive odd house numbers on one side of a street add up to 168. What is the largest of the four house numbers?",
+    "answer": "45",
+    "unit": null,
+    "answer_format": null,
+    "check": "168/4+3",
+    "explanation": "With four consecutive odd numbers, the mean 168 ÷ 4 = 42 sits halfway between the two middle numbers. Those two odd numbers are 41 and 43, making the four numbers 39, 41, 43 and 45. The largest house number is 45.",
+    "hints": [
+      "Dividing 168 by 4 gives an even number halfway between the two middle odd numbers.",
+      "Step outwards by 2 from the middle pair to find the smallest and largest."
+    ],
+    "pitfall": "Thinking 42 must be one of the numbers; with an even count of odd numbers, the mean is even and lies between the two middle terms.",
     "diagram": null,
     "content_revision": 2
   },
@@ -782,6 +1194,54 @@
     "content_revision": 2
   },
   {
+    "id": 197,
+    "topic": "statistics",
+    "subtopic": "missing_mean",
+    "difficulty": 2,
+    "question": "The five test scores in the table have a mean of 20. Both Test 4 and Test 5 are missing, and Test 5 is 6 marks higher than Test 4. What was the score in Test 5?",
+    "answer": "24",
+    "unit": null,
+    "answer_format": null,
+    "check": "(20*5-(17+23+18)+6)/2",
+    "explanation": "The five scores must total 5 × 20 = 100. The three known scores add up to 17 + 23 + 18 = 58, leaving 100 − 58 = 42 for Tests 4 and 5 together. Since Test 5 is 6 higher, Test 4 is (42 − 6) ÷ 2 = 18 and Test 5 is 18 + 6 = 24.",
+    "hints": [
+      "Find the total needed for all five tests and subtract the three known scores.",
+      "Share the remaining total between Tests 4 and 5 using the 6-mark difference."
+    ],
+    "pitfall": "Dividing 42 by 2 to get 21 and then adding 6 (which gives a difference of 12 instead of 6), or giving Test 4's score.",
+    "diagram": {
+      "type": "table",
+      "caption": "Test scores",
+      "headers": [
+        "Test",
+        "Score"
+      ],
+      "rows": [
+        [
+          "1",
+          17
+        ],
+        [
+          "2",
+          23
+        ],
+        [
+          "3",
+          18
+        ],
+        [
+          "4",
+          "?"
+        ],
+        [
+          "5",
+          "?"
+        ]
+      ]
+    },
+    "content_revision": 2
+  },
+  {
     "id": 198,
     "topic": "statistics",
     "subtopic": "data_comparison",
@@ -880,6 +1340,54 @@
         60
       ],
       "description": "Favourite clubs: Art 40%, Sport 60%."
+    },
+    "content_revision": 2
+  },
+  {
+    "id": 201,
+    "topic": "statistics",
+    "subtopic": "missing_mean",
+    "difficulty": 3,
+    "question": "The table shows four of five test scores, with Test 5 missing. Including Test 5 lowers the mean of all five tests by 3 marks compared with the mean of the first four tests alone. What was the score in Test 5?",
+    "answer": "12",
+    "unit": null,
+    "answer_format": null,
+    "check": "5*((24+28+31+25)/4-3)-(24+28+31+25)",
+    "explanation": "The first four scores total 24 + 28 + 31 + 25 = 108, giving a mean of 108 ÷ 4 = 27. Including Test 5 lowers the mean by 3 to 24. Five scores with a mean of 24 total 5 × 24 = 120, so Test 5 was 120 − 108 = 12.",
+    "hints": [
+      "Find the mean of the four known scores in the table first.",
+      "Subtract 3 from that mean to get the five-test mean, find the new total of all five tests, and subtract 108."
+    ],
+    "pitfall": "Subtracting 3 from the four-test total instead of from the mean, or multiplying 24 by 4 instead of 5.",
+    "diagram": {
+      "type": "table",
+      "caption": "Test scores",
+      "headers": [
+        "Test",
+        "Score"
+      ],
+      "rows": [
+        [
+          "1",
+          24
+        ],
+        [
+          "2",
+          28
+        ],
+        [
+          "3",
+          31
+        ],
+        [
+          "4",
+          25
+        ],
+        [
+          "5",
+          "?"
+        ]
+      ]
     },
     "content_revision": 2
   },
