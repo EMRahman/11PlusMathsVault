@@ -9,7 +9,7 @@ export const TUTORIALS = {
       "Next, do any multiplication and division, working from left to right.",
       "Last, do any addition and subtraction, working from left to right."
     ],
-    "check": "Check that you did every multiplication and division before any adding or taking away.",
+    "check": "Check the order: brackets first, then multiplication and division, then adding and taking away.",
     "webTitle": "Corbettmaths Primary — Order of operations practice questions",
     "webUrl": "https://corbettmathsprimary.com/2018/07/17/order-of-operations-questions/",
     "videoTitle": "Math Antics \u2014 Order Of Operations",

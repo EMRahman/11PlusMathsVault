@@ -399,6 +399,7 @@ test('tutorial guidance does not contradict the new question types', () => {
   assert.match(tutorialFor(301).steps.join(' '), /cannot be decided/);
   assert.match(tutorialFor(307).steps.join(' '), /360°/);
   assert.doesNotMatch(tutorialFor(211).steps.join(' '), /\b15\b|\b25\b/);
+  for (const id of [126, 222, 238]) assert.match(tutorialFor(id).check, /brackets first/, `Q${id} has brackets, so its check must start with them`);
   for (const id of [66, 70, 74]) {
     const t = tutorialFor(id);
     assert.doesNotMatch([...t.steps, t.check].join(' '), /gate|metres/, `Q${id} is a plain rectangle measured in centimetres`);
