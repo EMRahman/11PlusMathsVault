@@ -1511,6 +1511,7 @@ button:disabled { opacity: .55; cursor: default; }
   align-items: center;
   margin-top: .8rem;
 }
+.tutorial-media-actions:empty, .hint-tutorial-actions:empty { display: none; }
 .tutorial-video-toggle {
   display: inline-flex;
   align-items: center;

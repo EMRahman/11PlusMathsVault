@@ -3,829 +3,809 @@
 
 export const TUTORIALS = {
   "order_operations": {
-    "concept": "Hierarchical Operator Precedence (BODMAS / BIDMAS)",
+    "concept": "Order of operations (BIDMAS or BODMAS)",
     "steps": [
-      "Evaluate Brackets first: solve expressions inside ( ) before anything else.",
-      "Execute Division and Multiplication working strictly from left to right (they have equal priority).",
-      "Execute Addition and Subtraction working strictly from left to right (they have equal priority)."
+      "Work out anything in brackets first.",
+      "Next, do any multiplication and division, working from left to right.",
+      "Last, do any addition and subtraction, working from left to right."
     ],
-    "check": "Work the operations backwards or check intermediate values on scrap paper.",
-    "webTitle": "Corbettmaths Primary \u2014 Order of Operations",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Check that you did every multiplication and division before any adding or taking away.",
+    "webTitle": "Corbettmaths Primary — Order of operations practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/17/order-of-operations-questions/",
     "videoTitle": "Math Antics \u2014 Order Of Operations",
     "videoUrl": "https://www.youtube.com/watch?v=dAgfnK528RA",
     "videoId": "dAgfnK528RA"
   },
   "multi_step_cost": {
-    "concept": "Inventory Tracking & Inflow/Outflow Bookkeeping",
+    "concept": "Working out how many are left",
     "steps": [
-      "Calculate Initial Total Inventory: (Number of packs) \u00d7 (Items per pack).",
-      "Calculate Total Items Distributed: (Number of recipients) \u00d7 (Items per recipient).",
-      "Subtract Outflow from Inflow to determine Remaining stock."
+      "Find how many there are to start with: number of packs × number in each pack.",
+      "Find how many are given out: number of groups × number each group gets.",
+      "Take the number given out away from the starting number."
     ],
-    "check": "Sum the remaining items and distributed items; the result must equal the initial count.",
-    "webTitle": "Corbettmaths Primary — Practice Questions",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Add the number left to the number given out. You should get the starting number.",
+    "webTitle": "Corbettmaths Primary — Multiplication practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/21/multiplication-questions/",
     "videoTitle": "Math Antics \u2014 Multi-Digit Multiplication",
     "videoUrl": "https://www.youtube.com/watch?v=FJ5qLWP3Fqo",
     "videoId": "FJ5qLWP3Fqo"
   },
   "multiplication_strategies": {
-    "concept": "Area Models, Factoring and Distributive Decomposition",
+    "concept": "Multiplying by splitting numbers up",
     "steps": [
-      "Identify friendly factors: split 15 into 10 + 5, or decompose 25 as (100 \u00f7 4).",
-      "Decompose the two-digit multiplier and multiply partial products.",
-      "Recombine partial products cleanly on paper."
+      "Split one number into easier parts, such as tens and ones (27 = 20 + 7).",
+      "Multiply the other number by each part.",
+      "Add the answers together. To multiply by 5, you can multiply by 10 and then halve."
     ],
-    "check": "Estimate by rounding factors to the nearest ten to verify order of magnitude.",
-    "webTitle": "Corbettmaths Primary \u2014 Multiplication Strategies",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Estimate first by rounding to the nearest ten. Your answer should be close to the estimate.",
+    "webTitle": "Corbettmaths Primary — Multiplication practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/21/multiplication-questions/",
     "videoTitle": "Math Antics \u2014 Multi-Digit Multiplication Pt 2",
     "videoUrl": "https://www.youtube.com/watch?v=RVYwunbpMHA",
     "videoId": "RVYwunbpMHA"
   },
   "fraction_equivalence": {
-    "concept": "Proportional Invariance & Simplification to Lowest Terms",
+    "concept": "Equivalent fractions and simplifying",
     "steps": [
-      "Divide numerator and denominator by their Highest Common Factor (HCF) to find simplest form.",
-      "For missing numerators: determine scale factor between denominators (d_new \u00f7 d_orig).",
-      "Multiply the numerator by the exact same scale factor."
+      "To simplify, divide the numerator and denominator by the same number, using the biggest number that goes into both.",
+      "To find a missing number, work out what the denominator was multiplied by.",
+      "Multiply the numerator by the same number."
     ],
-    "check": "Cross-multiply numerator and denominator (a \u00d7 d = b \u00d7 c) to confirm equality.",
-    "webTitle": "Corbettmaths Primary \u2014 Equivalent Fractions",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Equivalent fractions are the same size, so both should simplify to the same fraction.",
+    "webTitle": "Corbettmaths Primary — Equivalent fractions practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/24/equivalent-fractions-and-simplifying-fractions-questions/",
     "videoTitle": "Corbettmaths — Equivalent Fractions",
     "videoUrl": "https://www.youtube.com/watch?v=2Gbe6J0JzHE",
     "videoId": "2Gbe6J0JzHE"
   },
   "fraction_of_amount": {
-    "concept": "Remainder Fractioning & Sequential Partitioning",
+    "concept": "A fraction of what is left",
     "steps": [
-      "Calculate the primary group: divide total by denominator and multiply by numerator.",
-      "CRITICAL: Find the remainder (Total \u2212 Primary Group).",
-      "Apply the second fraction strictly to the remainder, not the original total."
+      "Find the first fraction of the total: divide by the denominator, then multiply by the numerator.",
+      "Work out how many are left: the total take away that first group.",
+      "Find the second fraction of what is left, not of the whole total."
     ],
-    "check": "Add all groups together; their sum must equal the original whole.",
-    "webTitle": "Corbettmaths Primary \u2014 Fractions of Amounts",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Add up all the groups. They should make the starting total.",
+    "webTitle": "Corbettmaths Primary — Fractions of amounts practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/17/fractions-of-amounts-questions/",
     "videoTitle": "Math Antics \u2014 Fractions are Parts of Things",
     "videoUrl": "https://www.youtube.com/watch?v=CA9XLJpQp3c",
     "videoId": "CA9XLJpQp3c"
   },
   "fraction_multiplication": {
-    "concept": "Cross-Simplification & Dimension Scaling",
+    "concept": "Multiplying fractions (cancel first)",
     "steps": [
-      "Inspect numerators and denominators diagonally for shared prime factors.",
-      "Cancel common factors before multiplying across.",
-      "Multiply remaining numerators and remaining denominators; simplify if necessary."
+      "Look for a numerator and a denominator that can both be divided by the same number.",
+      "Divide them both by that number (this is called cancelling) before you multiply.",
+      "Multiply the numerators together and the denominators together, then simplify if you can."
     ],
-    "check": "The product of two proper fractions must be smaller than either factor.",
-    "webTitle": "Corbettmaths Primary \u2014 Multiplying Fractions",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Multiplying two fractions that are less than 1 gives an answer smaller than both of them.",
+    "webTitle": "Corbettmaths Primary — Multiplying fractions practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/18/multiplying-fractions-questions/",
     "videoTitle": "Math Antics \u2014 Multiplying Fractions",
     "videoUrl": "https://www.youtube.com/watch?v=qmfXyR7Z6Lk",
     "videoId": "qmfXyR7Z6Lk"
   },
   "fraction_addition": {
-    "concept": "Common Denominators and Unit Fractions",
+    "concept": "Adding fractions",
     "steps": [
-      "Ensure fractions have a common denominator before adding.",
-      "Add only the numerators; keep the denominator unchanged.",
-      "Simplify the resulting fraction to simplest form or convert to a mixed number."
+      "Check the denominators are the same. If they are not, change the fractions so that they are.",
+      "Add the numerators and keep the denominator the same.",
+      "Simplify your answer if you can."
     ],
-    "check": "Never add denominators together.",
-    "webTitle": "Corbettmaths Primary \u2014 Adding Fractions",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Never add the denominators: 1/4 + 1/4 is 2/4, not 2/8.",
+    "webTitle": "Corbettmaths Primary — Adding fractions practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/16/adding-fractions-1-questions/",
     "videoTitle": "Math Antics \u2014 Adding and Subtracting Fractions",
     "videoUrl": "https://www.youtube.com/watch?v=52ZlXsFJULI",
     "videoId": "52ZlXsFJULI"
   },
   "fraction_percent": {
-    "concept": "Fraction to Percentage Conversions",
+    "concept": "Changing fractions into percentages",
     "steps": [
-      "Scale the denominator to 100 if possible (e.g. 2/5 = 40/100 = 40%).",
-      "Alternatively, divide numerator by denominator and multiply by 100.",
-      "Verify common benchmark equivalents (1/2 = 50%, 1/4 = 25%, 3/4 = 75%)."
+      "Per cent means ‘out of 100’.",
+      "Make the denominator 100 by multiplying the numerator and denominator by the same number: 7/20 = 35/100 = 35%.",
+      "If you can’t make 100, divide the numerator by the denominator, then multiply by 100."
     ],
-    "check": "A fraction less than 1 must produce a percentage below 100%.",
-    "webTitle": "Corbettmaths Primary \u2014 Fractions to Percentages",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "A fraction less than 1 must give a percentage less than 100%.",
+    "webTitle": "Corbettmaths Primary — Fractions, decimals and percentages practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/24/fractions-decimals-and-percentages-questions/",
     "videoTitle": "Math Antics \u2014 Fractions and Decimals",
     "videoUrl": "https://www.youtube.com/watch?v=do_IbHId2Os",
     "videoId": "do_IbHId2Os"
   },
   "money_multiplication": {
-    "concept": "Decimal Money Multiplication & Whole-Unit Compensation",
+    "concept": "Multiplying amounts of money",
     "steps": [
-      "Method A: Multiply whole pounds and pence separately, then sum them.",
-      "Method B (Near-Pound): Round up to whole pounds (e.g. \u00a38.00 \u00d7 9 = \u00a372.00) and subtract the excess (15p \u00d7 9 = \u00a31.35) to get \u00a370.65.",
-      "Verify the decimal point position: two decimal places for currency."
+      "Multiply the pounds and the pence separately, then add them together.",
+      "Or round up to whole pounds and take away the extra: £4.95 × 6 = £5 × 6 − 5p × 6 = £30 − 30p = £29.70.",
+      "Money answers have two digits after the decimal point."
     ],
-    "check": "Estimate with whole pounds to confirm the decimal point is placed correctly.",
-    "webTitle": "Corbettmaths Primary \u2014 Multiplying Decimals",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Estimate using whole pounds to check the decimal point is in the right place.",
+    "webTitle": "Corbettmaths Primary — Multiplying decimals practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/20/multiplying-decimals-questions/",
     "videoTitle": "Math Antics \u2014 Decimal Arithmetic",
     "videoUrl": "https://www.youtube.com/watch?v=kwh4SD1ToFc",
     "videoId": "kwh4SD1ToFc"
   },
   "exchange_rate": {
-    "concept": "Proportional Currency Scaling & Directional Reasoning",
+    "concept": "Exchange rates: multiply or divide?",
     "steps": [
-      "Check the rate rule: \u00a31 = r foreign units.",
-      "Determine direction: \u00a3 to foreign = Multiply by r; foreign to \u00a3 = Divide by r.",
-      "Split decimals mentally (e.g. \u00d7 1.15 = 100% + 10% + 5%)."
+      "Read the rate, for example £1 = 1.20 euros.",
+      "Pounds to the other money: multiply by the rate. Back to pounds: divide by the rate.",
+      "Split awkward rates into parts: × 1.15 is the whole amount, plus 10%, plus 5%."
     ],
-    "check": "If 1 pound buys more than 1 euro, you must finish with more euros than pounds.",
-    "webTitle": "Corbettmaths Primary — Practice Questions",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "If £1 buys more than 1 euro, you should end up with more euros than pounds.",
+    "webTitle": "Corbettmaths Primary — Ratio and proportion practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/proportion-questions/",
     "videoTitle": "Corbettmaths Primary — Proportion",
     "videoUrl": "https://www.youtube.com/watch?v=bg283xTWtxc",
     "videoId": "bg283xTWtxc"
   },
   "money_change": {
-    "concept": "Multi-Item Expenditure & Complementary Subtraction",
+    "concept": "Working out change by counting up",
     "steps": [
-      "Calculate total purchase cost: (number of items) \u00d7 (unit price).",
-      "Format cash tendered with two decimal places (\u00a320.00 or \u00a330.00).",
-      "Subtract using counting-up complementary addition across zero."
+      "Work out the total cost: number of items × price of one.",
+      "Write the money handed over with pence too, for example £10.00.",
+      "Count up from the total cost to the money handed over. That is the change."
     ],
-    "check": "Add final change to total cost; the sum must equal the cash note handed over.",
-    "webTitle": "Corbettmaths Primary — Practice Questions",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Add the change to the total cost. You should get the money handed over.",
+    "webTitle": "Corbettmaths Primary — Money practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/24/money-questions/",
     "videoTitle": "Math Antics \u2014 Decimal Arithmetic",
     "videoUrl": "https://www.youtube.com/watch?v=kwh4SD1ToFc",
     "videoId": "kwh4SD1ToFc"
   },
   "decimal_ordering": {
-    "concept": "Place Value Comparison (Tenths, Hundredths, Thousandths)",
+    "concept": "Ordering decimals using place value",
     "steps": [
-      "Pad numbers with trailing zeros so they all have the same number of decimal places.",
-      "Compare digits column by column from left to right starting with tenths.",
-      "Remember: more digits after the point does not automatically mean a larger number."
+      "Add zeros to the end so every number has the same number of decimal places (0.3 becomes 0.300).",
+      "Compare the tenths first, then the hundredths, then the thousandths.",
+      "More digits after the point does not mean a bigger number: 0.3 is bigger than 0.29."
     ],
-    "check": "Read as whole numbers of thousandths (e.g. 0.700 vs 0.650).",
-    "webTitle": "Corbettmaths Primary \u2014 Ordering Decimals",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "With three decimal places each, compare them like whole numbers: 0.300 is 300 thousandths.",
+    "webTitle": "Corbettmaths Primary — Ordering decimals practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/16/ordering-decimals-questions/",
     "videoTitle": "Math Antics \u2014 Decimal Place Value",
     "videoUrl": "https://www.youtube.com/watch?v=kwh4SD1ToFc",
     "videoId": "kwh4SD1ToFc"
   },
   "decimal_addition": {
-    "concept": "Place Value Alignment in Decimal Addition",
+    "concept": "Adding decimals: line up the points",
     "steps": [
-      "Line up the decimal points vertically.",
-      "Add trailing zeros so columns align (tenths under tenths, hundredths under hundredths).",
-      "Add columns from right to left, carrying into the next column as needed."
+      "Write the numbers in columns with the decimal points lined up.",
+      "Fill any gaps with zeros so tenths sit under tenths and hundredths under hundredths.",
+      "Add from the right, carrying into the next column when you need to."
     ],
-    "check": "Subtract the second number from the sum to recover the first number.",
-    "webTitle": "Corbettmaths Primary \u2014 Adding Decimals",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Take the second number away from your answer. You should get the first number.",
+    "webTitle": "Corbettmaths Primary — Adding decimals practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/15/adding-decimals-questions/",
     "videoTitle": "Math Antics \u2014 Decimal Arithmetic",
     "videoUrl": "https://www.youtube.com/watch?v=kwh4SD1ToFc",
     "videoId": "kwh4SD1ToFc"
   },
   "decimal_scaling": {
-    "concept": "Powers of 10 Place-Value Shifts",
+    "concept": "Multiplying decimals by 10, 100 and 1000",
     "steps": [
-      "Multiplying by 10 shifts digits 1 column left; by 100 shifts 2 columns left.",
-      "Never just \"add zeros\" to a decimal number.",
-      "Check the place value of the leading digit."
+      "Multiplying by 10 moves every digit one place to the left. Multiplying by 100 moves them two places.",
+      "Don’t just add zeros to the end of a decimal: 2.5 × 10 is 25, not 2.50.",
+      "Check the place value of the first digit of your answer."
     ],
-    "check": "Divide the result by 100 to verify you recover the original number.",
-    "webTitle": "Corbettmaths Primary \u2014 Multiplying by 10, 100, 1000",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Divide your answer by the same number. You should get back to the number you started with.",
+    "webTitle": "Corbettmaths Primary — Multiplying and dividing by 10, 100 and 1000 practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/24/multiplying-and-dividing-by-10-100-1000-questions/",
     "videoTitle": "Math Antics \u2014 Decimal Arithmetic",
     "videoUrl": "https://www.youtube.com/watch?v=kwh4SD1ToFc",
     "videoId": "kwh4SD1ToFc"
   },
   "rounding": {
-    "concept": "Rounding to 1 Decimal Place (Tenths)",
+    "concept": "Rounding to one decimal place",
     "steps": [
-      "Look at the decider digit in the hundredths column (one place to the right).",
-      "If the decider is 5 or greater, round the tenths digit up by 1 (carrying if 9).",
-      "If the decider is less than 5, leave the tenths digit unchanged."
+      "Look at the hundredths digit, just to the right of the tenths. This is the decider.",
+      "If the decider is 5 or more, round the tenths digit up by 1 (a 9 rolls over into the next column).",
+      "If the decider is 4 or less, keep the tenths digit the same."
     ],
-    "check": "Confirm the rounded number has exactly one digit after the decimal point.",
-    "webTitle": "Corbettmaths Primary \u2014 Rounding Decimals",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Your answer should have exactly one digit after the decimal point.",
+    "webTitle": "Corbettmaths Primary — Rounding practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/rounding-questions/",
     "videoTitle": "Math Antics \u2014 Rounding",
     "videoUrl": "https://www.youtube.com/watch?v=fd-E18EqSVk",
     "videoId": "fd-E18EqSVk"
   },
   "ratio_sharing": {
-    "concept": "The Bar Model Total-Parts Protocol",
+    "concept": "Sharing in a ratio (bar model)",
     "steps": [
-      "Sum the ratio parts: A + B = Total Parts.",
-      "Calculate the unitary value of 1 part: Total Amount \u00f7 Total Parts.",
-      "Multiply the 1-part value by the requested share part count."
+      "Add the numbers in the ratio to find the total number of parts.",
+      "Divide the amount by the total number of parts to find one part.",
+      "Multiply one part by the number of parts the question asks about."
     ],
-    "check": "Calculate both shares and sum them; their total must equal the original amount.",
-    "webTitle": "Corbettmaths Primary \u2014 Ratio: Sharing",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Work out both shares and add them. They should make the amount you started with.",
+    "webTitle": "Corbettmaths Primary — Ratio and proportion practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/proportion-questions/",
     "videoTitle": "Math Antics \u2014 Ratios And Rates",
     "videoUrl": "https://www.youtube.com/watch?v=RQ2nYUBVvqI",
     "videoId": "RQ2nYUBVvqI"
   },
   "volume_ratio": {
-    "concept": "Dimensional Scaling & 2D-to-3D Area-Volume Proportionality",
+    "concept": "Comparing the volumes of two boxes",
     "steps": [
-      "Notice that when height is equal, Volume = (Base Area) \u00d7 h.",
-      "Calculate base areas: side^2 for each square base.",
-      "Simplify the area ratio: a^2 : b^2 to lowest terms."
+      "Volume = area of the base × height, and both boxes are the same height.",
+      "So you only need to compare the base areas: side × side for each square base.",
+      "Write the two areas as a ratio and simplify it."
     ],
-    "check": "Calculate the full volumes explicitly (l \u00d7 w \u00d7 h) to confirm the simplified ratio.",
-    "webTitle": "Corbettmaths Primary \u2014 Volume of a Cuboid",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Work out both full volumes (length × width × height). They should simplify to the same ratio.",
+    "webTitle": "Corbettmaths Primary — Volume of cuboids practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/20/volume-questions/",
     "videoTitle": "Math Antics \u2014 Volume",
     "videoUrl": "https://www.youtube.com/watch?v=qJwecTgce6c",
     "videoId": "qJwecTgce6c"
   },
   "unitary_method": {
-    "concept": "Rate Isolation & Scaled Proportion",
+    "concept": "Find the cost of one, then scale up",
     "steps": [
-      "Isolate the cost of 1 single item: (Batch Cost) \u00f7 (Batch Count).",
-      "Keep the exact decimal or fraction rate.",
-      "Multiply the single unit cost by the new target count."
+      "Find the cost of one item: total cost ÷ number of items.",
+      "Keep the exact amount, including any pence.",
+      "Multiply the cost of one item by the number you need."
     ],
-    "check": "Compare scaling factors (e.g. 15 items is 2.5 times 6 items; multiply cost by 2.5).",
-    "webTitle": "Corbettmaths Primary \u2014 Proportion: Unitary Method",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "More items should cost more, and fewer items should cost less.",
+    "webTitle": "Corbettmaths Primary — Ratio and proportion practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/proportion-questions/",
     "videoTitle": "Corbettmaths Primary — Proportion",
     "videoUrl": "https://www.youtube.com/watch?v=bg283xTWtxc",
     "videoId": "bg283xTWtxc"
   },
   "scaling_recipe": {
-    "concept": "Direct Proportion in Recipes",
+    "concept": "Scaling a recipe up or down",
     "steps": [
-      "Find the amount needed for 1 person: (Total ingredient) \u00f7 (Original people).",
-      "Multiply the 1-person amount by the target number of people.",
-      "Maintain consistent units throughout."
+      "Find the amount for one person: amount ÷ number of people.",
+      "Multiply by the new number of people.",
+      "Keep the same units all the way through."
     ],
-    "check": "If people double, ingredient amounts must double.",
-    "webTitle": "Corbettmaths Primary \u2014 Recipes & Scaling",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "If the number of people doubles, the amount should double too.",
+    "webTitle": "Corbettmaths Primary — Ratio and proportion practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/proportion-questions/",
     "videoTitle": "Corbettmaths — Recipes",
     "videoUrl": "https://www.youtube.com/watch?v=HpbJA9HxuTk",
     "videoId": "HpbJA9HxuTk"
   },
   "ratio_difference": {
-    "concept": "Ratio Sharing with a Given Difference",
+    "concept": "Ratio problems when you know the difference",
     "steps": [
-      "Find the difference in ratio parts: |b \u2212 a| parts.",
-      "Divide the given quantity difference by the part difference to find 1 part.",
-      "Multiply 1 part by the requested category's parts."
+      "Find the difference between the two numbers in the ratio. That many parts make up the difference.",
+      "Divide the difference in the question by that number of parts to find one part.",
+      "Multiply one part by the number of parts the question asks about."
     ],
-    "check": "Never divide the difference by the sum of parts.",
-    "webTitle": "Corbettmaths Primary \u2014 Ratio: Given Difference",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Divide by the difference in parts, not by the total number of parts.",
+    "webTitle": "Corbettmaths Primary — Ratio and proportion practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/proportion-questions/",
     "videoTitle": "Math Antics \u2014 Ratios And Rates",
     "videoUrl": "https://www.youtube.com/watch?v=RQ2nYUBVvqI",
     "videoId": "RQ2nYUBVvqI"
   },
   "percent_discount": {
-    "concept": "Percentage Deduction & Complementary Sale Multipliers",
+    "concept": "Working out a sale price",
     "steps": [
-      "Identify the original price (100%).",
-      "Calculate the discount amount using 10% and 5% building blocks.",
-      "Subtract the discount from the original price to find the final sale price."
+      "The original price is 100%.",
+      "Find the discount using 10% and 5%: 10% is ÷ 10, and 5% is half of that.",
+      "Take the discount away from the original price."
     ],
-    "check": "Alternatively multiply directly by the complement (e.g. 15% off = 85% paid).",
-    "webTitle": "Corbettmaths Primary \u2014 Percentage Increase/Decrease",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Check another way: 15% off means you pay 85% of the price.",
+    "webTitle": "Corbettmaths Primary — Percentages of amounts practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/18/percentages-of-amounts-questions/",
     "videoTitle": "Math Antics \u2014 What Are Percentages?",
     "videoUrl": "https://www.youtube.com/watch?v=WYWPuG-8U5Q",
     "videoId": "WYWPuG-8U5Q"
   },
   "percent_of_amount": {
-    "concept": "Benchmark Component Assembly (10%, 5%, 1%)",
+    "concept": "Building percentages from 10%, 5% and 1%",
     "steps": [
-      "Deconstruct the percentage into pieces: e.g. 35% = 3 \u00d7 10% + 5%.",
-      "Find 10% by dividing by 10; halve that to find 5%.",
-      "Sum the components cleanly on scrap paper."
+      "Split the percentage into easy pieces, for example 35% = 10% + 10% + 10% + 5%.",
+      "Find 10% by dividing by 10. Halve it for 5%. Divide by 100 for 1%.",
+      "Add the pieces together."
     ],
-    "check": "Compare your result against 50% (half of the total) to verify sensibility.",
-    "webTitle": "Corbettmaths Primary \u2014 Percentages of Amounts",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Compare with 50%, which is half. A percentage below 50% should give less than half the amount.",
+    "webTitle": "Corbettmaths Primary — Percentages of amounts practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/18/percentages-of-amounts-questions/",
     "videoTitle": "Math Antics \u2014 Finding A Percent Of A Number",
     "videoUrl": "https://www.youtube.com/watch?v=rR95Cbcjzus",
     "videoId": "rR95Cbcjzus"
   },
   "percent_increase": {
-    "concept": "Additive Proportional Growth",
+    "concept": "Increasing an amount by a percentage",
     "steps": [
-      "Calculate the increase amount using benchmark percentage blocks.",
-      "CRITICAL: Add the increase to the original starting total.",
-      "Confirm the new total is greater than the starting amount."
+      "Work out the increase using pieces such as 10%, 5% and 1%.",
+      "Add the increase to the starting amount. This is the step people often forget.",
+      "Your new amount should be bigger than the starting amount."
     ],
-    "check": "Never submit just the increase amount when the question asks for the new total.",
-    "webTitle": "Corbettmaths Primary \u2014 Percentage Increase/Decrease",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "If the question asks for the new amount, don’t give just the increase.",
+    "webTitle": "Corbettmaths Primary — Percentages of amounts practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/18/percentages-of-amounts-questions/",
     "videoTitle": "Corbettmaths — Increasing & Decreasing by a Percentage",
     "videoUrl": "https://www.youtube.com/watch?v=tUtgC7ZrsRc",
     "videoId": "tUtgC7ZrsRc"
   },
   "compound_area": {
-    "concept": "Subtractive Rectilinear Geometry (Bounding Box Subtraction)",
+    "concept": "Area of an L-shape",
     "steps": [
-      "Calculate the area of the full enclosing rectangle: Length \u00d7 Width.",
-      "Calculate the area of the missing corner cut-out: Cut Length \u00d7 Cut Width.",
-      "Subtract the cut-out area from the enclosing rectangle area."
+      "Find the area of the whole rectangle around the shape: length × width.",
+      "Find the area of the missing corner: its length × its width.",
+      "Take the missing corner away from the whole rectangle."
     ],
-    "check": "Verify by vertically slicing the L-shape into two rectangles and summing their areas.",
-    "webTitle": "Corbettmaths Primary \u2014 Area of Compound Shapes",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Check another way: cut the L-shape into two rectangles and add their areas.",
+    "webTitle": "Corbettmaths Primary — Area of rectangles practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/05/31/area-of-rectangles-questions/",
     "videoTitle": "Math Antics \u2014 Area (Composite Shapes)",
     "videoUrl": "https://www.youtube.com/watch?v=xCdxURXMdFY",
     "videoId": "xCdxURXMdFY"
   },
   "triangle_area": {
-    "concept": "Half-Rectangle Mensuration & Perpendicular Height",
+    "concept": "Area of a triangle",
     "steps": [
-      "Identify the base and perpendicular height (forming a 90\u00b0 right angle).",
-      "Use formula: Area = (base \u00d7 height) \u00f7 2.",
-      "Halve the even dimension before multiplying to keep arithmetic small."
+      "Find the base and the height. The height meets the base at a right angle.",
+      "Area = base × height ÷ 2.",
+      "Halve whichever number is even first to keep the sum easy."
     ],
     "check": "Never use the sloping side as the height.",
-    "webTitle": "Corbettmaths Primary \u2014 Area of a Triangle",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "webTitle": "Corbettmaths Primary — Area of a triangle practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/15/area-of-a-triangle-questions/",
     "videoTitle": "Corbettmaths — Area of a Triangle",
     "videoUrl": "https://www.youtube.com/watch?v=6WsQH1cAYMM",
     "videoId": "6WsQH1cAYMM"
   },
   "perimeter": {
-    "concept": "Boundary Distance with Real-World Deductions",
+    "concept": "Perimeter: the distance all the way round",
     "steps": [
-      "Calculate the complete rectangular perimeter: 2 \u00d7 (Length + Width).",
-      "Deduct the width of any gate or opening that does not require fencing.",
-      "State the answer with the correct unit of length (metres)."
+      "A rectangle has two equal lengths and two equal widths.",
+      "Add one length and one width, then double it: 2 × (length + width).",
+      "Give your answer in the same unit as the sides."
     ],
-    "check": "Add the gate width back to your answer; the sum must equal the complete perimeter.",
-    "webTitle": "Corbettmaths Primary \u2014 Perimeter",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Add all four sides one at a time: length + width + length + width.",
+    "webTitle": "Corbettmaths Primary — Perimeter practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/17/perimeter-questions/",
     "videoTitle": "Math Antics \u2014 Perimeter",
     "videoUrl": "https://www.youtube.com/watch?v=AAY1bsazcgM",
     "videoId": "AAY1bsazcgM"
   },
   "triangle_angles": {
-    "concept": "Interior Angle Sum of a Triangle (180\u00b0)",
+    "concept": "Angles in a triangle add up to 180°",
     "steps": [
-      "Remember that all three angles inside any triangle sum to 180\u00b0.",
-      "Add the two known angles.",
-      "Subtract that sum from 180\u00b0 to find the third angle."
+      "The three angles inside any triangle add up to 180°.",
+      "Add the two angles you know.",
+      "Take that total away from 180°."
     ],
-    "check": "Add all three angles together; their sum must equal exactly 180\u00b0.",
-    "webTitle": "Corbettmaths Primary \u2014 Angles in Triangles",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Add all three angles. They should make exactly 180°.",
+    "webTitle": "Corbettmaths Primary — Angles in a triangle practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/05/31/angles-in-a-triangle-questions/",
     "videoTitle": "Math Antics \u2014 Triangles",
     "videoUrl": "https://www.youtube.com/watch?v=mLeNaZcy-hE",
     "videoId": "mLeNaZcy-hE"
   },
   "rectangle_area": {
-    "concept": "Rectangular Area by Multiplication",
+    "concept": "Area of a rectangle",
     "steps": [
-      "Multiply Length by Width: Area = l \u00d7 w.",
-      "Use square units (cm\u00b2 or m\u00b2).",
-      "Do not confuse with perimeter (distance around the outside)."
+      "Area of a rectangle = length × width.",
+      "Area is measured in square units, such as cm² or m².",
+      "Don’t mix it up with perimeter, which is the distance around the edge."
     ],
-    "check": "Area measures surface coverage in unit squares.",
-    "webTitle": "Corbettmaths Primary \u2014 Area of a Rectangle",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Area tells you how many unit squares (such as 1 cm squares) would cover the shape.",
+    "webTitle": "Corbettmaths Primary — Area of rectangles practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/05/31/area-of-rectangles-questions/",
     "videoTitle": "Math Antics \u2014 Area",
     "videoUrl": "https://www.youtube.com/watch?v=xCdxURXMdFY",
     "videoId": "xCdxURXMdFY"
   },
   "angles_on_line": {
-    "concept": "Angles on a Straight Line (180\u00b0 Half Turn)",
+    "concept": "Angles on a straight line add up to 180°",
     "steps": [
-      "Angles that meet on a straight line add up to 180\u00b0.",
-      "Subtract the known angle from 180\u00b0 to find the missing angle.",
-      "Ensure the answer matches an acute or obtuse angle visually."
+      "Angles on a straight line add up to 180°.",
+      "Take the angle you know away from 180°.",
+      "If one angle is acute (less than 90°), the other must be obtuse (more than 90°)."
     ],
-    "check": "Sum the angles; they must form a half turn of 180\u00b0.",
-    "webTitle": "Corbettmaths Primary \u2014 Angles on a Straight Line",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Add the two angles. They should make 180°, a half turn.",
+    "webTitle": "Corbettmaths Primary — Angle facts practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/19/angles-questions/",
     "videoTitle": "Math Antics \u2014 Angle Basics",
     "videoUrl": "https://www.youtube.com/watch?v=DGKwdHMiqCg",
     "videoId": "DGKwdHMiqCg"
   },
   "speed_distance_time": {
-    "concept": "Rate-Distance-Time Triangle & Closing Speeds",
+    "concept": "Moving towards each other: add the speeds",
     "steps": [
-      "For two objects moving towards each other: Closing Speed = Speed 1 + Speed 2.",
-      "Calculate time in hours: Time = Distance \u00f7 Closing Speed.",
-      "Convert hours to minutes by multiplying by 60."
+      "When two things move towards each other, add their speeds. This is how fast the gap between them closes.",
+      "Time in hours = distance ÷ the two speeds added together.",
+      "To change hours into minutes, multiply by 60."
     ],
-    "check": "Multiply closing speed by time in hours to confirm the total starting gap.",
-    "webTitle": "Corbettmaths \u2014 Speed, Distance, Time",
-    "webUrl": "https://corbettmaths.com/2016/01/01/speed-distance-time/",
+    "check": "Multiply the added speeds by your time in hours. You should get the starting distance.",
+    "webTitle": "Corbettmaths — Speed, distance and time practice questions",
+    "webUrl": "https://corbettmaths.com/2018/04/04/speed/",
     "videoTitle": "Corbettmaths — Speed, Distance, Time",
     "videoUrl": "https://www.youtube.com/watch?v=dHVK7IeLGT8",
     "videoId": "dHVK7IeLGT8"
   },
   "unit_conversion": {
-    "concept": "Metric Place-Value Scaling (Grams to Kilograms)",
+    "concept": "Changing grams into kilograms",
     "steps": [
-      "Calculate total mass in grams first: (Batches) \u00d7 (Grams per batch).",
-      "Convert grams to kilograms by dividing by 1,000 (shift decimal point 3 places left).",
-      "Check if the answer requires a decimal (e.g. 2,250 g = 2.25 kg)."
+      "Work out the total in grams first: number of batches × grams in each batch.",
+      "Change grams to kilograms by dividing by 1000: the digits move three places to the right.",
+      "Your answer may need a decimal, for example 4600 g = 4.6 kg."
     ],
-    "check": "1 kg = 1,000 g. A kilogram number must always be 1,000 times smaller than the gram number.",
-    "webTitle": "Corbettmaths Primary \u2014 Units: Metric",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "1 kg = 1000 g, so the number of kilograms is 1000 times smaller than the number of grams.",
+    "webTitle": "Corbettmaths Primary — Converting units practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/units-questions/",
     "videoTitle": "Changing Between Units of Measurement (Primary Lesson)",
     "videoUrl": "https://www.youtube.com/watch?v=XEdjr-Yru7U",
     "videoId": "XEdjr-Yru7U"
   },
   "time_duration": {
-    "concept": "Base-60 Chronological Bridging & 24-Hour Clock",
+    "concept": "Adding time on the 24-hour clock",
     "steps": [
-      "Add full hours first to advance the base hour.",
-      "Add remaining minutes, bridging to the next hour (regrouping each 60 minutes as 1 hour).",
-      "Write the arrival time in standard 24-hour clock format (HH:MM)."
+      "Add the whole hours of the journey to the start time first.",
+      "Then add the minutes. When you pass 60 minutes, that makes another hour.",
+      "Write the answer on the 24-hour clock, like 09:05 or 17:40."
     ],
-    "check": "Count backwards from arrival time by the journey duration to verify departure time.",
-    "webTitle": "Corbettmaths Primary \u2014 Time Calculations",
-    "webUrl": "https://corbettmathsprimary.com/content/"
+    "check": "Count back from your answer by the journey time. You should reach the start time.",
+    "webTitle": "Corbettmaths Primary — Time practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/time-questions/"
   },
   "mass_difference": {
-    "concept": "Mixed Unit Mass Subtraction",
+    "concept": "Subtracting masses in kg and g",
     "steps": [
-      "Convert kilograms to grams first by multiplying by 1,000.",
-      "Subtract the grams used from the total grams.",
-      "Never subtract grams directly from kilograms."
+      "Change kilograms into grams first: multiply by 1000.",
+      "Take away the grams that were used.",
+      "Never take grams away from kilograms without changing the units first."
     ],
-    "check": "Add the remaining grams to the used grams; the sum must equal the starting mass.",
-    "webTitle": "Corbettmaths Primary — Practice Questions",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Add what is left to what was used. You should get the starting amount.",
+    "webTitle": "Corbettmaths Primary — Converting units practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/units-questions/",
     "videoTitle": "Changing Between Units of Measurement (Primary Lesson)",
     "videoUrl": "https://www.youtube.com/watch?v=XEdjr-Yru7U",
     "videoId": "XEdjr-Yru7U"
   },
   "consecutive_numbers": {
-    "concept": "Mean-Symmetry of Uniformly Spaced Integers",
+    "concept": "Consecutive numbers: start from the middle",
     "steps": [
-      "For 5 consecutive numbers, the middle (3rd) number equals the mean: Sum \u00f7 5.",
-      "Consecutive odd numbers differ by 2 (e.g. m\u22124, m\u22122, m, m+2, m+4).",
-      "The smallest number is two steps below the middle: Middle \u2212 4."
+      "The middle (3rd) number is the total ÷ 5.",
+      "Consecutive odd numbers go up in 2s: middle − 4, middle − 2, middle, middle + 2, middle + 4.",
+      "The smallest number is two steps below the middle: middle − 4."
     ],
-    "check": "List all 5 numbers and sum them; their total must equal the prompt value.",
-    "webTitle": "Corbettmaths Primary — Practice Questions",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Add your five numbers. They should make the total in the question.",
     "videoTitle": "Math Antics \u2014 Mean, Median and Mode",
     "videoUrl": "https://www.youtube.com/watch?v=B1HEzNTGeZ4",
     "videoId": "B1HEzNTGeZ4"
   },
   "simple_equations": {
-    "concept": "Backtracking Function Machines (Inverse Operations)",
+    "concept": "Working backwards to find the number",
     "steps": [
-      "Identify the last operation performed and undo it first (e.g. undo +7 by subtracting 7).",
-      "Undo the first operation (e.g. undo \u00d74 by dividing by 4).",
-      "Isolate the original starting number."
+      "Start with the result and undo the last step first: undo + 7 by taking away 7.",
+      "Then undo the step before it: undo × 4 by dividing by 4.",
+      "What is left is the number you started with."
     ],
-    "check": "Substitute the answer back into the forward calculation to verify.",
-    "webTitle": "Corbettmaths Primary \u2014 Forming and Solving Equations",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Put your answer through the steps in the question. You should get the result.",
+    "webTitle": "Corbettmaths Primary — Think of a number practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/24/think-of-a-number-questions/",
     "videoTitle": "Math Antics \u2014 Solving Basic Equations Pt 1",
     "videoUrl": "https://www.youtube.com/watch?v=l3XzepN03KQ",
     "videoId": "l3XzepN03KQ"
   },
   "number_sequences": {
-    "concept": "Linear Arithmetic Sequences (nth Term Rule)",
+    "concept": "Finding a term further along a sequence",
     "steps": [
-      "Find the common difference d between consecutive terms.",
-      "Count the jumps: from term 1 to term n, there are exactly (n \u2212 1) jumps.",
-      "Calculate: Target Term = Term 1 + (n \u2212 1) \u00d7 d."
+      "Find the gap between neighbouring terms.",
+      "Count the jumps: getting from the 1st term to the 10th term takes 9 jumps.",
+      "The term you want = first term + number of jumps × gap."
     ],
-    "check": "Check with the nth term formula (dn + c) against the first 3 terms.",
-    "webTitle": "Corbettmaths Primary \u2014 Sequences",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Test your working on the 2nd and 3rd terms. It should give the numbers in the question.",
+    "webTitle": "Corbettmaths Primary — Sequences practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/sequences-questions/",
     "videoTitle": "Corbettmaths — The nth Term",
     "videoUrl": "https://www.youtube.com/watch?v=qnVVTBAfNu4",
     "videoId": "qnVVTBAfNu4"
   },
   "function_machines": {
-    "concept": "Sequential Machine Operations",
+    "concept": "Function machines: follow the steps in order",
     "steps": [
-      "Apply operations in their exact left-to-right order.",
-      "Multiply the input first, then add the constant.",
-      "Do not reverse the order of operations for forward machine problems."
+      "Do the steps in the order the machine gives them.",
+      "Here, multiply the number that goes in first, then add.",
+      "Don’t swap the order: multiplying first and adding first give different answers."
     ],
-    "check": "Trace backwards using inverse operations to recover the input.",
-    "webTitle": "Corbettmaths Primary \u2014 Function Machines",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Work backwards from your answer: take away, then divide. You should get the number that went in.",
+    "webTitle": "Corbettmaths — Function machines practice questions",
+    "webUrl": "https://corbettmaths.com/2022/06/15/function-machines-practice-questions/",
     "videoTitle": "Math Antics \u2014 What Is Algebra?",
     "videoUrl": "https://www.youtube.com/watch?v=NybHckSEQBI",
     "videoId": "NybHckSEQBI"
   },
   "missing_mean": {
-    "concept": "Target Sum Reconstruction from Mean Averages",
+    "concept": "Finding a missing number from the mean",
     "steps": [
-      "Calculate required total sum: Mean \u00d7 Count.",
-      "Sum all known values provided in the table.",
-      "Subtract the known sum from the target total to find the missing value."
+      "Total of all the numbers = mean × how many numbers there are.",
+      "Add the numbers you know.",
+      "Take that away from the total to find the missing number."
     ],
-    "check": "Add the missing value to the known scores and divide by Count; it must equal the Mean.",
-    "webTitle": "Corbettmaths Primary \u2014 The Mean Average",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Add all the numbers, including yours, and divide by how many there are. You should get the mean.",
+    "webTitle": "Corbettmaths Primary — The mean practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/17/the-mean-questions/",
     "videoTitle": "Math Antics \u2014 Mean, Median and Mode",
     "videoUrl": "https://www.youtube.com/watch?v=B1HEzNTGeZ4",
     "videoId": "B1HEzNTGeZ4"
   },
   "data_comparison": {
-    "concept": "Comparative Bar Chart Metric Reading",
+    "concept": "Reading and comparing bar charts",
     "steps": [
-      "Calibrate the vertical axis: determine the value of each grid line interval.",
-      "Read the exact bar heights for both requested categories.",
-      "Subtract the smaller count from the larger count."
+      "Check the scale: work out what each line on the axis is worth.",
+      "Read the heights of the two bars you need.",
+      "Take the smaller number away from the bigger one."
     ],
-    "check": "Confirm the question asks for a difference, not a combined total.",
-    "webTitle": "Corbettmaths Primary \u2014 Bar Charts",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "‘How many more’ means find the difference by taking away, not by adding.",
+    "webTitle": "Corbettmaths Primary — Bar charts practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/06/01/bar-chart-questions/",
     "videoTitle": "Corbettmaths — Reading Bar Charts",
     "videoUrl": "https://www.youtube.com/watch?v=3e1SIAPan8E",
     "videoId": "3e1SIAPan8E"
   },
   "line_graphs": {
-    "concept": "Continuous Coordinate Trends & Rate-of-Change Drop",
+    "concept": "Reading changes on a line graph",
     "steps": [
-      "Locate the two target timestamps on the horizontal axis.",
-      "Trace vertically to read the temperature on the vertical axis scale.",
-      "Subtract the later value from the earlier value to determine the fall."
+      "Find the two times on the horizontal axis.",
+      "Go straight up from each time to the line, then across to read the value on the vertical axis.",
+      "Take the smaller reading away from the bigger one to find how much it changed."
     ],
-    "check": "A fall in temperature is a positive magnitude of decrease.",
-    "webTitle": "Corbettmaths Primary \u2014 Line Graphs",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Say whether the line went up or down, and by how much.",
+    "webTitle": "Corbettmaths Primary — Line graphs practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/19/line-graphs-questions/",
     "videoTitle": "Corbettmaths — Line Graphs",
     "videoUrl": "https://www.youtube.com/watch?v=E1fYceXHIr4",
     "videoId": "E1fYceXHIr4"
   },
   "pie_charts": {
-    "concept": "Proportional Sector Population Allocation",
+    "concept": "Using a pie chart to find how many",
     "steps": [
-      "Read the sector percentage associated with the requested category.",
-      "Convert the percentage to a fraction or decimal multiplier.",
-      "Multiply the sector fraction by the total student population."
+      "Find the percentage for the part you need.",
+      "Change it into a fraction, for example 25% = 1/4.",
+      "Find that fraction of the total number."
     ],
-    "check": "Calculate the remaining sector; both groups must add to the total population.",
-    "webTitle": "Corbettmaths Primary \u2014 Pie Charts",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "All the parts of the pie chart should add up to the total.",
+    "webTitle": "Corbettmaths Primary — Pie charts practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/pie-charts-questions/",
     "videoTitle": "Corbettmaths Primary — Reading Pie Charts",
     "videoUrl": "https://www.youtube.com/watch?v=Ruc9n6ho3l4",
     "videoId": "Ruc9n6ho3l4"
   },
   "range": {
-    "concept": "Statistical Spread (Maximum \u2212 Minimum)",
+    "concept": "The range: largest take away smallest",
     "steps": [
-      "Identify the largest number in the data set.",
-      "Identify the smallest number in the data set.",
-      "Subtract: Range = Largest \u2212 Smallest."
+      "Find the largest number.",
+      "Find the smallest number.",
+      "Range = largest − smallest."
     ],
-    "check": "Range is a difference, not an average.",
-    "webTitle": "Corbettmaths Primary \u2014 The Range",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "The range shows how spread out the numbers are. It is a difference, not an average.",
     "videoTitle": "Math Antics \u2014 Mean, Median and Mode",
     "videoUrl": "https://www.youtube.com/watch?v=B1HEzNTGeZ4",
     "videoId": "B1HEzNTGeZ4"
   },
   "translation": {
-    "concept": "Vector Translation on the Cartesian Coordinate Plane",
+    "concept": "Moving a point on a grid",
     "steps": [
-      "Read the starting point (x, y).",
-      "Adjust x for horizontal movement: right = +dx, left = \u2212dx.",
-      "Adjust y for vertical movement: up = +dy, down = \u2212dy.",
-      "Write the new coordinate as (x_new, y_new)."
+      "Start with the point’s coordinates (x, y).",
+      "Moving right adds to x, and moving left takes away from x.",
+      "Moving up adds to y, and moving down takes away from y.",
+      "Write the new point as (x, y)."
     ],
-    "check": "Re-plot the point visually to verify direction on the grid.",
-    "webTitle": "Corbettmaths Primary \u2014 Translations",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Count the moves on the grid to check you went the right way.",
+    "webTitle": "Corbettmaths Primary — Translations practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/16/translations-questions/",
     "videoTitle": "Corbettmaths Primary — Translations",
     "videoUrl": "https://www.youtube.com/watch?v=8Dtz5fBe7_Q",
     "videoId": "8Dtz5fBe7_Q"
   },
   "reflection": {
-    "concept": "Orthogonal Axis Reflection & Sign Inversion",
+    "concept": "Reflecting a point in an axis",
     "steps": [
-      "Identify the mirror line (the y-axis is the vertical line x = 0).",
-      "Vertical distance stays identical: y_new = y.",
-      "Horizontal distance flips to the opposite side: x_new = \u2212x.",
-      "Write the reflected coordinate as (\u2212x, y)."
+      "The y-axis is the vertical line through 0. It is the mirror line.",
+      "The point does not move up or down, so the y-coordinate stays the same.",
+      "The point flips to the other side of the axis, so the x-coordinate changes sign: 5 becomes −5 (x → −x).",
+      "Write the new point as (−x, y)."
     ],
-    "check": "The original and reflected points must be equal distances from the mirror axis.",
-    "webTitle": "Corbettmaths Primary \u2014 Reflections",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "The point and its reflection are the same distance from the y-axis.",
+    "webTitle": "Corbettmaths Primary — Reflections practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/reflections-questions/",
     "videoTitle": "Corbettmaths Primary — Reflections",
     "videoUrl": "https://www.youtube.com/watch?v=LJtKs8SClSI",
     "videoId": "LJtKs8SClSI"
   },
   "rectangle_coordinates": {
-    "concept": "Axis-Aligned Rectangle Geometry & Vertex Matching",
+    "concept": "Finding the missing corner of a rectangle",
     "steps": [
-      "Note that rectangle edges follow grid lines.",
-      "Corner A and Corner B share a horizontal line (same y-coordinate).",
-      "Corner B and Corner C share a vertical line (same x-coordinate).",
-      "Corner D must share the x-coordinate of A and the y-coordinate of C: (x_A, y_C)."
+      "The sides follow the grid lines, so each side goes straight across or straight up and down.",
+      "Corners joined by a side going across have the same y-coordinate. Corners joined by a side going up and down have the same x-coordinate.",
+      "D is joined to both A and C, so it shares one coordinate with A and the other with C.",
+      "Write D as (x, y)."
     ],
-    "check": "Check that side lengths |AB| = |DC| and |BC| = |AD|.",
-    "webTitle": "Corbettmaths Primary \u2014 Coordinates & 2D Shapes",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Opposite sides of a rectangle are equal: AB should match DC, and BC should match AD.",
+    "webTitle": "Corbettmaths Primary — Coordinates practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/16/coordinates-questions/",
     "videoTitle": "Corbettmaths Primary — Coordinates",
     "videoUrl": "https://www.youtube.com/watch?v=6eX4PZJjofI",
     "videoId": "6eX4PZJjofI"
   },
   "coordinate_distance": {
-    "concept": "Horizontal / Vertical Distance on Grid",
+    "concept": "Distance between two points on a grid",
     "steps": [
-      "When y-coordinates are equal, the points lie on the same horizontal line.",
-      "Distance = (larger x) \u2212 (smaller x).",
-      "Count across zero carefully when one coordinate is negative."
+      "If the y-coordinates are the same, the points are on the same horizontal line.",
+      "Distance = larger x − smaller x.",
+      "If one number is negative, count to 0 first, then on from 0."
     ],
-    "check": "Distance is always positive.",
-    "webTitle": "Corbettmaths Primary \u2014 Coordinates",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "A distance is never negative.",
+    "webTitle": "Corbettmaths Primary — Coordinates practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/16/coordinates-questions/",
     "videoTitle": "Corbettmaths Primary — Coordinates",
     "videoUrl": "https://www.youtube.com/watch?v=6eX4PZJjofI",
     "videoId": "6eX4PZJjofI"
   },
   "coordinate_position": {
-    "concept": "Vertical Displacement on Grid",
+    "concept": "Moving a point up or down a grid",
     "steps": [
-      "Moving down decreases the y-coordinate: y_new = y \u2212 move.",
-      "The horizontal x-coordinate remains unchanged.",
-      "Count below zero into negative territory if the move crosses the axis."
+      "Moving down makes the y-coordinate smaller: take away the number of squares.",
+      "The x-coordinate stays the same.",
+      "Keep counting below 0 into negative numbers if you need to."
     ],
-    "check": "Add the move back to y_new to recover the starting y-coordinate.",
-    "webTitle": "Corbettmaths Primary \u2014 Coordinates",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Count back up by the same number of squares. You should reach the starting y-coordinate.",
+    "webTitle": "Corbettmaths Primary — Coordinates practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/16/coordinates-questions/",
     "videoTitle": "Corbettmaths Primary — Coordinates",
     "videoUrl": "https://www.youtube.com/watch?v=6eX4PZJjofI",
     "videoId": "6eX4PZJjofI"
   },
   "factors": {
-    "concept": "Factor Finding and Proper Factors",
+    "concept": "Finding factors in pairs",
     "steps": [
-      "A factor divides a number with zero remainder.",
-      "The largest proper factor of an even number is half that number (N \u00f7 2).",
-      "List factor pairs systematically starting from 1."
+      "A factor goes into a number exactly, with no remainder.",
+      "List the factor pairs in order, starting with 1 × the number.",
+      "For an even number, the biggest factor smaller than the number is half of it."
     ],
-    "check": "Multiply the factor by its pair to verify it equals the original number.",
-    "webTitle": "Corbettmaths Primary \u2014 Factors",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Multiply your factor by its partner in the pair. You should get the original number.",
+    "webTitle": "Corbettmaths Primary — Factors practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/20/factors-questions/",
     "videoTitle": "Corbettmaths — Factors",
     "videoUrl": "https://www.youtube.com/watch?v=YkbMTSqE1vM",
     "videoId": "YkbMTSqE1vM"
   },
   "estimation": {
-    "concept": "Rounding to Friendly Tens for Fast Estimation",
+    "concept": "Estimating by rounding to the nearest ten",
     "steps": [
-      "Round the number to the nearest ten (units digit 5-9 rounds up; 0-4 rounds down).",
-      "Multiply the rounded number by the multiplier.",
-      "State the estimated answer."
+      "Round to the nearest ten: if the ones digit is 5 or more, round up; if it is 4 or less, round down.",
+      "Multiply using the rounded numbers.",
+      "Your estimate should be a round number that is easy to work with."
     ],
-    "check": "Confirm the rounded calculation matches the requested rounding place.",
-    "webTitle": "Corbettmaths Primary \u2014 Estimation",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Check you rounded to the nearest ten, as the question asks, before multiplying.",
+    "webTitle": "Corbettmaths Primary — Rounding practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/rounding-questions/",
     "videoTitle": "Math Antics \u2014 Rounding and Estimation",
     "videoUrl": "https://www.youtube.com/watch?v=fd-E18EqSVk",
     "videoId": "fd-E18EqSVk"
   },
   "combinatorics_and_digits": {
-    "concept": "Counting Digits, Pairings & Roman Numerals",
+    "concept": "Counting digits, matches and Roman numerals",
     "steps": [
-      "Split digit-counting problems into 1-digit (1–9), 2-digit (10–99) and 3-digit (100+) blocks.",
-      "For round-robin pairings of n items, take n × (n − 1) ÷ 2 so pairs are not counted twice.",
-      "For Roman numerals, decode subtractive pairs (CM = 900, XC = 90, XL = 40, IV = 4) before subtracting."
+      "Counting digits: split the numbers into 1-digit (1–9), 2-digit (10–99) and 3-digit (100 and up) groups.",
+      "Everyone plays everyone once: multiply the number of players by one less than that number, then halve, so no match is counted twice.",
+      "Roman numerals: a smaller letter before a bigger one means take it away (CM = 900, XC = 90, XL = 40, IV = 4)."
     ],
-    "check": "Check inclusive page ranges using (last − first + 1).",
-    "webTitle": "Corbettmaths Primary \u2014 Roman Numerals & Number Puzzles",
-    "webUrl": "https://corbettmathsprimary.com/content/"
+    "check": "To count the numbers from one number to another, including both ends, work out last − first + 1."
   },
   "combined_rates_fractions": {
-    "concept": "Combined Work Rates with Unit-Time Fractions",
+    "concept": "Taps and workers working together",
     "steps": [
-      "Turn each completion time T into the fraction completed in 1 unit of time: 1/T.",
-      "Add rates that work together (and subtract any drain or outflow rate).",
-      "Use the combined rate to find either total time (1 ÷ combined rate) or work left after a given time."
+      "Work out the fraction of the job each one does in one minute (or one hour): a tap that takes 10 minutes fills 1/10 of the tank each minute.",
+      "Add the fractions for things working together. Take away the fraction for anything working against them, such as a drain.",
+      "For the whole job, find how long it takes for these amounts to make 1 whole. For what is left, take the part done away from 1."
     ],
-    "check": "Two taps filling together take less time than either tap alone; when a drain opposes a tap, filling takes longer than with the tap alone.",
-    "webTitle": "Corbettmaths Primary \u2014 Fractions",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Two taps together fill faster than either tap alone. With a drain open, filling takes longer than with the tap alone.",
+    "webTitle": "Corbettmaths Primary — Adding fractions practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/16/adding-fractions-2-questions/",
     "videoTitle": "Math Antics \u2014 Adding and Subtracting Fractions",
     "videoUrl": "https://www.youtube.com/watch?v=52ZlXsFJULI",
     "videoId": "52ZlXsFJULI"
   },
   "simultaneous_cost_problems": {
-    "concept": "Comparing Two Combined Orders (Elimination)",
+    "concept": "Comparing two orders to find one price",
     "steps": [
-      "Compare the two totals: if one item has the same count in both orders, subtract to find the extra item's value.",
-      "If neither count matches yet, double or scale one order so one item has equal counts.",
-      "Substitute the first item's value back into the simpler order to find the other item or empty container."
+      "Compare the two orders. If one item appears the same number of times in both, the difference in cost comes from the other item.",
+      "If no item matches yet, double (or multiply) one whole order so that one item does.",
+      "Once you know one price, put it back into the simpler order to find the other price, or the weight of the empty box."
     ],
-    "check": "Plug both found values back into both original orders to verify both totals match.",
-    "webTitle": "Corbettmaths Primary \u2014 Problem Solving",
-    "webUrl": "https://corbettmathsprimary.com/content/"
+    "check": "Put both answers back into both orders. Each total should come out right."
   },
   "inverse_proportion_rates": {
-    "concept": "Inverse Proportion & Total Worker-Days",
+    "concept": "More workers, less time (inverse proportion)",
     "steps": [
-      "Multiply workers (or machines, horses, teeth) by time/turns to find the fixed total effort or distance.",
-      "If part of the job or supply has already been used, subtract that amount first.",
-      "Divide the remaining total by the new number of workers or consumers."
+      "Multiply the number of workers (or machines, horses or gear teeth) by the time (or turns). This gives the total amount of work.",
+      "If some of the job or food has already been used up, take that part away first.",
+      "Divide what is left by the new number of workers (or eaters)."
     ],
-    "check": "More workers sharing the same task must always take fewer hours or days, not more.",
-    "webTitle": "Corbettmaths Primary \u2014 Proportion",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "More workers sharing the same job should take less time, not more.",
     "videoTitle": "Corbettmaths Primary — Proportion",
     "videoUrl": "https://www.youtube.com/watch?v=bg283xTWtxc",
     "videoId": "bg283xTWtxc"
   },
   "venn_percentage_overlap": {
-    "concept": "Two-Set Venn Overlaps (Both, Only & Neither)",
+    "concept": "Venn diagrams: both, only and neither",
     "steps": [
-      "Subtract the 'neither' group from the whole (100% or total count) to find everyone in at least one group.",
-      "Add the two main groups together: A + B counts the overlap ('both') twice.",
-      "Subtract the 'at least one' value from A + B to find the overlap ('both'), then subtract from A if 'A only' is asked."
+      "Take the ‘neither’ group away from the whole (100% or the total) to find everyone in at least one group.",
+      "Add the two groups together. Anyone in both groups has now been counted twice.",
+      "The extra above ‘at least one group’ is the ‘both’ group. For one group ‘only’, take ‘both’ away from that group."
     ],
-    "check": "Verify that (A only) + (Both) + (B only) + (Neither) adds back to the full total.",
-    "webTitle": "Corbettmaths Primary \u2014 Venn Diagrams",
-    "webUrl": "https://corbettmathsprimary.com/content/"
+    "check": "Check that ‘A only’ + ‘both’ + ‘B only’ + ‘neither’ makes the whole total."
   },
   "surface_area_and_painted_cubes": {
-    "concept": "3D Surface Area, Painted Cubes & 2D Mensuration",
+    "concept": "Surface area, painted cubes and areas of shapes",
     "steps": [
-      "For a cuboid's surface area, add the areas of its three distinct rectangle pairs and double: 2(lw + lh + wh).",
-      "For a painted n × n × n cube, corners have 3 painted faces (always 8), edge-middles have 2 (12 × (n − 2)), and face-centres have 1 (6 × (n − 2)²).",
-      "For a parallelogram use base × perpendicular height; for a trapezium use ½ × (a + b) × h."
+      "Surface area of a cuboid: find the areas of the top, the front and one end, add them, then double (there are two of each).",
+      "Painted cube cut into small cubes: the 8 corner cubes have 3 painted faces. Each of the 12 edges has (side − 2) cubes with 2 painted faces. Each of the 6 faces has (side − 2) × (side − 2) cubes with 1 painted face.",
+      "Parallelogram: base × perpendicular height. Trapezium: add the two parallel sides, multiply by the height, then halve."
     ],
-    "check": "On a 3 × 3 × 3 cube, 8 + 12 + 6 + 1 = 27 small cubes in total.",
-    "webTitle": "Corbettmaths Primary \u2014 Area & 3D Shapes",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "All the groups should add up to the number of small cubes. For a 5 × 5 × 5 cube: 8 + 36 + 54 + 27 unpainted inside = 125.",
     "videoTitle": "Math Antics \u2014 Area (Composite Shapes)",
     "videoUrl": "https://www.youtube.com/watch?v=xCdxURXMdFY",
     "videoId": "xCdxURXMdFY"
   },
   "clock_angles_and_miles": {
-    "concept": "Clock Hand Angles, Bearings & Miles–Kilometre Conversion",
+    "concept": "Clock angles, bearings and miles to kilometres",
     "steps": [
-      "Clock angles: each hour mark is 30°. The minute hand moves 6° per minute and the hour hand moves 0.5° per minute.",
-      "Bearings: measure clockwise from North (000°). Add clockwise turns and subtract anticlockwise turns.",
-      "Miles and kilometres: use 5 miles = 8 km (divide km by 8 and multiply by 5 to convert to miles)."
+      "Clock angles: the hour marks are 30° apart. The minute hand turns 6° each minute, and the hour hand turns half a degree each minute.",
+      "Bearings are measured clockwise from North (000°). Add clockwise turns and take away anticlockwise turns.",
+      "Miles and kilometres: 5 miles = 8 km. To change km into miles, divide by 8, then multiply by 5."
     ],
-    "check": "Remember that miles are longer than kilometres, so a distance in miles has a smaller number than in km.",
-    "webTitle": "Corbettmaths Primary \u2014 Measures & Angles",
-    "webUrl": "https://corbettmathsprimary.com/content/"
+    "check": "A mile is longer than a kilometre, so the same distance is a smaller number in miles than in km."
   },
   "simultaneous_unknowns_puzzles": {
-    "concept": "Balancing Unknowns & Paired Equations",
+    "concept": "Finding two unknowns from two clues",
     "steps": [
-      "Write each clue as a balanced statement relating the unknowns.",
-      "Add or subtract two statements (or scale one first) so one unknown cancels out.",
-      "For quiz scoring puzzles, compare the actual score with the maximum possible score and divide by (gain + penalty)."
+      "Write each clue as a short statement, for example 2 apples + 1 pear = 50p.",
+      "Add or take away two statements (doubling one first if needed) so that one unknown disappears.",
+      "Quiz puzzles: find the score if every answer were right. Each wrong answer loses the points for a right answer plus the penalty, so divide the points missing by that amount."
     ],
-    "check": "Substitute your answers back into every condition in the question.",
-    "webTitle": "Corbettmaths Primary \u2014 Forming and Solving Equations",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Put your answers back into every clue in the question. They should all work.",
     "videoTitle": "Math Antics \u2014 Solving Basic Equations Pt 1",
     "videoUrl": "https://www.youtube.com/watch?v=l3XzepN03KQ",
     "videoId": "l3XzepN03KQ"
   },
   "combined_mean_and_probability": {
-    "concept": "Weighted Means, Pie-Chart Angles & Probability",
+    "concept": "Combined means, pie-chart angles and probability",
     "steps": [
-      "Combined mean: find Total = Mean × Count for each group separately, add the totals, then divide by the overall count.",
-      "Pie-chart sectors: use (sector angle ÷ 360°) × total population to convert degrees into counts.",
-      "Probability: write (favourable outcomes) ÷ (total outcomes) after any additions, and simplify the fraction."
+      "Combined mean: find each group’s total (mean × number in the group), add the totals, then divide by the number of people altogether.",
+      "Pie charts: a sector’s share of the whole is its angle ÷ 360°. Multiply that fraction by the total.",
+      "Probability = number of ways it can happen ÷ total number of outcomes. If items are added, change both numbers, then simplify."
     ],
-    "check": "A combined mean must lie closer to the larger group's mean than to the smaller group's mean.",
-    "webTitle": "Corbettmaths Primary \u2014 Averages, Pie Charts & Probability",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "A combined mean is closer to the mean of the bigger group.",
     "videoTitle": "Math Antics \u2014 Mean, Median and Mode",
     "videoUrl": "https://www.youtube.com/watch?v=B1HEzNTGeZ4",
     "videoId": "B1HEzNTGeZ4"
   },
   "mirror_lines_and_rotation": {
-    "concept": "Offset Mirror Lines (x = k, y = k) & Grid Rotations",
+    "concept": "Reflections and rotations on a grid",
     "steps": [
-      "For a vertical mirror line x = k, keep y unchanged and match the point's horizontal distance on the opposite side of k.",
-      "For a horizontal mirror line y = k, keep x unchanged and match the point's vertical distance on the opposite side of k.",
-      "For a 90° clockwise turn about the origin, swap step directions: (x, y) moves to (y, −x); for a 180° turn about M, repeat the step from P to M past M."
+      "Vertical mirror line (like x = 2): y stays the same. Count how far the point is from the line, then go the same distance past it.",
+      "Horizontal mirror line (like y = 3): x stays the same. Count up or down to the line, then the same distance past it.",
+      "A quarter turn (90°) clockwise about (0, 0) moves (x, y) to (y, −x). A half turn about M: go from the point to M, then the same again past M."
     ],
-    "check": "For a single reflection or a 180° rotation, the mirror line or rotation centre sits halfway between the start and image; for a 90° rotation, check equal distance from the centre and a 90° turn.",
-    "webTitle": "Corbettmaths Primary \u2014 Reflections & Rotations",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "For a reflection or a half turn, the mirror line or centre sits halfway between the start and the image.",
+    "webTitle": "Corbettmaths Primary — Reflections practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/31/reflections-questions/",
     "videoTitle": "Corbettmaths Primary — Reflections",
     "videoUrl": "https://www.youtube.com/watch?v=LJtKs8SClSI",
     "videoId": "LJtKs8SClSI"
   },
   "work_rate_fractions_set": {
-    "concept": "Fractions in Combined Rates & Probability",
+    "concept": "Fractions: working together and probability",
     "steps": [
-      "For combined taps or machines, add each 1-minute or 1-hour fraction (1/a + 1/b) using a common denominator.",
-      "For probability after adding items, update both the favourable count and the total count before simplifying.",
-      "Re-read whether the question asks for the completed part, remaining part, or NOT a given colour."
+      "Taps or machines together: add the fraction each one does in a minute (or an hour), using a common denominator.",
+      "Probability after adding items: change both the number of ways it can happen and the total, then simplify.",
+      "Re-read the question: does it ask for the part done, the part left, or NOT a colour?"
     ],
-    "check": "Check that all fractions are simplified to lowest terms.",
-    "webTitle": "Corbettmaths Primary \u2014 Fractions",
-    "webUrl": "https://corbettmathsprimary.com/content/",
+    "check": "Make sure every fraction is in its simplest form.",
+    "webTitle": "Corbettmaths Primary — Adding fractions practice questions",
+    "webUrl": "https://corbettmathsprimary.com/2018/07/16/adding-fractions-2-questions/",
     "videoTitle": "Math Antics \u2014 Adding and Subtracting Fractions",
     "videoUrl": "https://www.youtube.com/watch?v=52ZlXsFJULI",
     "videoId": "52ZlXsFJULI"
@@ -865,35 +845,35 @@ const TUTORIAL_ALIASES = {
 // Replaces the aliased wording where the subtopic is wider than the original tutorial.
 const TUTORIAL_OVERRIDES = {
   long_multiplication: {
-    concept: 'Written Multiplication with Partial Products',
+    concept: 'Long multiplication',
     steps: [
       'Split the second number into tens and ones.',
       'Multiply the first number by each part, carrying carefully.',
-      'Add the partial products to get the answer.'
+      'Add these answers together.'
     ],
-    check: 'Estimate by rounding each number, then check the last digit of your answer against the last digits of the two numbers.'
+    check: 'Estimate by rounding both numbers. Also, multiply the last digits of the two numbers: your answer should end in the same digit.'
   },
   triangle_angle_reasoning: {
-    concept: 'Reasoning About the Angles in a Triangle',
+    concept: 'Reasoning about angles in a triangle',
     steps: [
-      'Remember that the three angles in any triangle add up to 180°.',
+      'The three angles in any triangle add up to 180°.',
       'Turn each fact into an angle: right-angled means one angle is 90°, and isosceles means two angles are equal.',
-      'Find what is left from 180° and share it between the unknown angles as the question says.',
-      'If the facts allow more than one set of angles, the answer cannot be decided.'
+      'Take the angles you know away from 180°, then share what is left between the unknown angles as the question says.',
+      'If the facts allow more than one answer, the answer cannot be decided.'
     ],
-    check: 'Add all three angles together; their sum must equal exactly 180°.'
+    check: 'Add all three angles. They should make exactly 180°.'
   },
   angle_facts_combined: {
-    concept: 'Combining Angle Facts',
+    concept: 'Combining angle facts',
     steps: [
-      'Decide which fact applies: a straight line makes 180°, a full turn at a point makes 360°, and a triangle has 180° inside.',
-      'Remember that when two straight lines cross, opposite angles are equal.',
+      'Decide which fact helps: angles on a straight line make 180°, angles around a point make 360°, and the angles in a triangle make 180°.',
+      'When two straight lines cross, the opposite angles are equal.',
       'Find one missing angle at a time, and use it in the next step.'
     ],
-    check: 'Add the angles in each group; they must make the total for that fact.'
+    check: 'Add the angles in each group. They should make the right total for that fact.'
   },
   area_perimeter_compound: {
-    concept: 'Area and Perimeter of Compound Shapes',
+    concept: 'Area and perimeter of compound shapes',
     steps: [
       'Decide whether the question asks for area (the space inside) or perimeter (the distance around the edge).',
       'For area, split the shape into rectangles, or take the part you do not need away from the full rectangle.',
@@ -918,300 +898,302 @@ export function getTutorial(qOrSubtopic) {
   // 1. Reflection variants: x-axis (walk) vs y-axis (desk)
   if (sub === 'reflection') {
     if (text.includes('x-axis') || mode === 'walk') {
-      result.concept = 'Reflection in the x-axis (Horizontal Mirror Line)';
+      result.concept = 'Reflecting in the x-axis (a horizontal mirror line)';
       result.steps = [
-        'Identify the mirror line: the x-axis is the horizontal line y = 0.',
-        'Horizontal position is unchanged: the x-coordinate stays exactly the same.',
-        'Vertical position reflects across the axis: the y-coordinate changes sign (y → −y).',
-        'Write the reflected coordinate: (x, −y).'
+        'The x-axis is the horizontal line through 0. It is the mirror line.',
+        'The point does not move left or right, so the x-coordinate stays the same.',
+        'The point flips to the other side of the axis, so the y-coordinate changes sign: 5 becomes −5 (y → −y).',
+        'Write the new point as (x, −y).'
       ];
-      result.check = 'A point above the x-axis reflects to the same distance below the x-axis.';
+      result.check = 'A point above the x-axis ends up the same distance below it.';
     } else {
-      result.concept = 'Reflection in the y-axis (Vertical Mirror Line)';
+      result.concept = 'Reflecting in the y-axis (a vertical mirror line)';
       result.steps = [
-        'Identify the mirror line: the y-axis is the vertical line x = 0.',
-        'Vertical position is unchanged: the y-coordinate stays exactly the same.',
-        'Horizontal position reflects across the axis: the x-coordinate changes sign (x → −x).',
-        'Write the reflected coordinate: (−x, y).'
+        'The y-axis is the vertical line through 0. It is the mirror line.',
+        'The point does not move up or down, so the y-coordinate stays the same.',
+        'The point flips to the other side of the axis, so the x-coordinate changes sign: 5 becomes −5 (x → −x).',
+        'Write the new point as (−x, y).'
       ];
-      result.check = 'The original and reflected points must be equal distances from the y-axis.';
+      result.check = 'The point and its reflection are the same distance from the y-axis.';
     }
   }
 
   // 2. Consecutive numbers variants: 3 consecutive numbers (walk) vs 5 consecutive odd numbers (desk)
   if (sub === 'consecutive_numbers') {
     if (text.includes('Three') || text.includes('three') || mode === 'walk') {
-      result.concept = 'Three Consecutive Whole Numbers';
+      result.concept = 'Three consecutive numbers: start from the middle';
       result.steps = [
-        'Find the middle number by dividing the sum by 3: Middle = Sum ÷ 3.',
-        'Consecutive whole numbers have a step size of 1: (Middle − 1), Middle, (Middle + 1).',
-        'To find the largest number, add 1 to the middle: Largest = Middle + 1.'
+        'The middle number is the total ÷ 3.',
+        'Consecutive whole numbers go up in 1s, so the numbers are one less than the middle, the middle, and one more than the middle.',
+        'The largest number is the middle number + 1.'
       ];
-      result.check = 'Add the three numbers (Middle − 1) + Middle + (Middle + 1) to verify they equal the given sum.';
+      result.check = 'Add your three numbers. They should make the total in the question.';
     } else {
-      result.concept = 'Five Consecutive Odd Numbers';
+      result.concept = 'Five consecutive odd numbers: start from the middle';
       result.steps = [
-        'Find the middle (3rd) number by dividing the sum by 5: Middle = Sum ÷ 5.',
-        'Consecutive odd numbers have a step size of 2: (Middle − 4), (Middle − 2), Middle, (Middle + 2), (Middle + 4).',
-        'To find the smallest number, subtract two steps of 2: Smallest = Middle − 4.'
+        'The middle (3rd) number is the total ÷ 5.',
+        'Consecutive odd numbers go up in 2s: middle − 4, middle − 2, middle, middle + 2, middle + 4.',
+        'The smallest number is two steps below the middle: middle − 4.'
       ];
-      result.check = 'Sum all 5 odd numbers; the total must match the prompt value.';
+      result.check = 'Add your five numbers. They should make the total in the question.';
     }
   }
 
   // 3. Fraction of amount variants: remainder multi-step (desk) vs direct fraction of amount (walk)
   if (sub === 'fraction_of_amount') {
     if (text.includes('not blue') || text.includes('remainder') || mode === 'desk') {
-      result.concept = 'Remainder Fractioning & Sequential Partitioning';
+      result.concept = 'A fraction of what is left';
       result.steps = [
-        'Calculate the primary group: divide total by denominator and multiply by numerator.',
-        'CRITICAL STEP: Calculate the non-matching remainder (Total − Primary Group).',
-        'Apply the second fraction strictly to the remainder, not the original total.'
+        'Find the first fraction of the total: divide by the denominator, then multiply by the numerator.',
+        'Work out how many are left: the total take away that first group.',
+        'Find the second fraction of what is left, not of the whole total.'
       ];
-      result.check = 'Sum all parts to verify they equal the starting whole.';
+      result.check = 'Add up all the groups. They should make the starting total.';
     } else {
-      result.concept = 'Fraction of an Amount (Unitary Method)';
+      result.concept = 'Finding a fraction of an amount';
       result.steps = [
-        'Divide the whole amount by the denominator to find the value of 1 equal part.',
-        'Multiply the value of 1 part by the numerator to find the requested share.',
-        'For a proper fraction, the answer must be smaller than the starting total.'
+        'Divide the amount by the denominator to find one equal part.',
+        'Multiply one part by the numerator.',
+        'If the fraction is less than 1, your answer must be smaller than the amount you started with.'
       ];
-      result.check = 'Check by dividing your answer by the numerator, then multiplying by the denominator.';
+      result.check = 'Work backwards: divide your answer by the numerator, then multiply by the denominator. You should get the starting amount.';
     }
   }
 
   // 4. Number sequences variants: next term (walk) vs nth term rule (desk)
   if (sub === 'number_sequences') {
     if (text.includes('comes next') || mode === 'walk') {
-      result.concept = 'Term-to-Term Sequence Rule';
+      result.concept = 'Finding the next term in a sequence';
       result.steps = [
-        'Find the difference between consecutive terms: Difference = Term 2 − Term 1.',
-        'Verify the same difference applies across all given terms.',
-        'Add the difference to the last given term to find the next term.'
+        'Find the gap between neighbouring terms: second term − first term.',
+        'Check the gap is the same all the way along.',
+        'Add the gap to the last term to find the next one.'
       ];
-      result.check = 'Subtract the common difference from your answer to recover the previous term.';
+      result.check = 'Take the gap away from your answer. You should get the last term in the question.';
     } else {
-      result.concept = 'Linear Arithmetic Sequences (nth Term Rule)';
+      result.concept = 'Finding a term further along a sequence';
       result.steps = [
-        'Find the common difference d between consecutive terms.',
-        'Count the jumps: from term 1 to term n, there are exactly (n − 1) jumps.',
-        'Calculate: Target Term = Term 1 + (n − 1) × d.'
+        'Find the gap between neighbouring terms.',
+        'Count the jumps: getting from the 1st term to the 10th term takes 9 jumps.',
+        'The term you want = first term + number of jumps × gap.'
       ];
-      result.check = 'Verify with the linear nth term formula against the first three terms.';
+      result.check = 'Test your working on the 2nd and 3rd terms. It should give the numbers in the question.';
     }
   }
 
   // 5. Perimeter variants: boundary with gate deduction (desk) vs L-shaped corner cutout (walk)
   if (sub === 'perimeter') {
     if (text.includes('gate')) {
-      result.concept = 'Boundary Distance with Gate Deductions';
+      result.concept = 'Perimeter with a gap for a gate';
       result.steps = [
-        'Calculate the complete rectangular perimeter: 2 × (Length + Width).',
-        'Deduct the width of the gate that replaces fencing: Fence = Perimeter − Gate.',
-        'State the answer in metres.'
+        'Find the whole perimeter of the rectangle: 2 × (length + width).',
+        'The gate fills part of the edge, so take its width away: fencing = perimeter − gate.',
+        'Give your answer in metres.'
       ];
-      result.check = 'Add the gate width back to your answer; the sum must equal the complete perimeter.';
+      result.check = 'Add the gate back on to your answer. You should get the whole perimeter.';
     } else if (text.includes('L-shape') || text.includes('corner') || text.includes('cut out')) {
-      result.concept = 'Perimeter of an L-Shaped Cutout';
+      result.concept = 'Perimeter of an L-shape';
       result.steps = [
-        'When a rectangular corner is cut out, the two new inside edges equal the two outside edges removed.',
-        'Therefore, cutting out a rectangular corner leaves the total perimeter unchanged.',
-        'Calculate the perimeter of the original full rectangle: 2 × (Length + Width).'
+        'When a rectangle is cut out of a corner, the two new inside edges are the same length as the two outside edges that were removed.',
+        'So cutting out a corner does not change the perimeter.',
+        'Find the perimeter of the full rectangle: 2 × (length + width).'
       ];
-      result.check = 'Trace all 6 edges around the shape to verify their sum equals 2 × (Length + Width).';
+      result.check = 'Add all 6 edges of the L-shape one at a time. You should get the same answer.';
     }
   }
 
   // 6. Speed, distance, time variants: closing speed (desk) vs minute conversions vs steady distance (walk)
   if (sub === 'speed_distance_time') {
     if (text.includes('towards each other') || text.includes('apart')) {
-      result.concept = 'Rate-Distance-Time Triangle & Closing Speeds';
+      result.concept = 'Moving towards each other: add the speeds';
       result.steps = [
-        'For two objects moving towards each other: Closing Speed = Speed 1 + Speed 2.',
-        'Calculate travel time in hours: Time = Distance ÷ Closing Speed.',
-        'Convert hours to minutes by multiplying by 60.'
+        'When two things move towards each other, add their speeds. This is how fast the gap between them closes.',
+        'Time in hours = distance ÷ the two speeds added together.',
+        'To change hours into minutes, multiply by 60.'
       ];
-      result.check = 'Multiply closing speed by time in hours to confirm the starting gap is covered.';
+      result.check = 'Multiply the added speeds by your time in hours. You should get the starting distance.';
     } else if (text.includes('minutes') && mode === 'desk') {
-      result.concept = 'Speed, Distance, Time & Minute Conversions';
+      result.concept = 'Speed, distance and time in minutes';
       result.steps = [
-        'Use the relationship: Time in hours = Distance ÷ Speed.',
-        'Convert hours into minutes by multiplying by 60: Minutes = Hours × 60.',
-        'Check that speed multiplied by time in hours gives the original distance.'
+        'Time in hours = distance ÷ speed.',
+        'Change hours into minutes by multiplying by 60.',
+        'Check: speed × time in hours should give the distance.'
       ];
-      result.check = 'Divide distance by speed to verify the hours, then convert to minutes.';
+      result.check = 'Your answer is in minutes, so it should be 60 times the number of hours.';
     } else {
-      result.concept = 'Distance at Constant Speed';
+      result.concept = 'Distance at a steady speed';
       result.steps = [
-        'Use the formula: Distance = Speed × Time.',
-        'Multiply the speed (km/h) by the elapsed hours.',
-        'No unit conversion is needed when speed and time use compatible units.'
+        'Distance = speed × time.',
+        'Multiply the distance covered each hour by the number of hours.',
+        'The speed is per hour and the time is in hours, so you don’t need to change any units.'
       ];
-      result.check = 'Divide distance by time to verify it equals the speed.';
+      result.check = 'Divide your distance by the number of hours. You should get the speed.';
     }
   }
 
   // 7. Fraction equivalence variants: odd one out (desk) vs missing numerator
   if (sub === 'fraction_equivalence') {
     if (text.includes('odd one out')) {
-      result.concept = 'Simplifying Fractions to Identify the Odd One Out';
+      result.concept = 'Simplifying fractions to find the odd one out';
       result.steps = [
-        'Simplify each fraction to lowest terms by dividing numerator and denominator by their HCF.',
-        'Compare all simplified forms; four will simplify to the same fraction (2/5).',
-        'The fraction that simplifies to a different value is the odd one out.'
+        'Simplify each fraction: divide the numerator and denominator by the biggest number that goes into both.',
+        'Four of the fractions will simplify to the same fraction.',
+        'The one that simplifies to something different is the odd one out.'
       ];
-      result.check = 'Check each fraction: 6/15 = 2/5, 8/20 = 2/5, 14/35 = 2/5, but 10/24 = 5/12.';
+      result.check = 'Check that the other four really do all simplify to the same fraction.';
     } else {
-      result.concept = 'Equivalent Fractions & Scale Factors';
+      result.concept = 'Finding an equivalent fraction';
       result.steps = [
-        'Find the scale factor between denominators: Factor = New Denominator ÷ Original Denominator.',
-        'Multiply the numerator by the exact same scale factor.',
-        'Confirm both fractions represent the exact same proportion.'
+        'Work out what the denominator was multiplied by: new denominator ÷ old denominator.',
+        'Multiply the numerator by the same number.',
+        'Both fractions should show the same amount.'
       ];
-      result.check = 'Cross-multiply numerator and denominator (a × d = b × c) to confirm equality.';
+      result.check = 'Simplify your new fraction. You should get back to the fraction you started with.';
     }
   }
 
   // 8. Translation variants: 2D vector move (desk) vs single-axis move (walk)
   if (sub === 'translation') {
     if (text.includes('down') || text.includes('up')) {
-      result.concept = 'Two-Dimensional Vector Translation (x ± dx, y ± dy)';
+      result.concept = 'Moving a point across and up or down';
       result.steps = [
-        'Read the starting coordinates (x, y).',
-        'Adjust x for horizontal movement: right = +dx, left = −dx.',
-        'Adjust y for vertical movement: up = +dy, down = −dy.',
-        'Write the new coordinate as (x_new, y_new).'
+        'Start with the point’s coordinates (x, y).',
+        'Moving right adds to x, and moving left takes away from x.',
+        'Moving up adds to y, and moving down takes away from y.',
+        'Write the new point as (x, y).'
       ];
-      result.check = 'Re-plot the point visually to verify direction on the grid.';
+      result.check = 'Count the moves on the grid to check you went the right way.';
     } else {
-      result.concept = 'Single-Axis Coordinate Shift';
+      result.concept = 'Moving a point left or right';
       result.steps = [
-        'A horizontal move changes only the x-coordinate; y remains unchanged.',
-        'Moving right adds to x; moving left subtracts from x.',
-        'Write the new coordinate.'
+        'Moving left or right changes only the x-coordinate.',
+        'Moving right adds to x, and moving left takes away from x.',
+        'Write the new x-coordinate.'
       ];
-      result.check = 'Check that the non-moving coordinate is untouched.';
+      result.check = 'Count along the x-axis to check, going through 0 if you need to.';
     }
   }
 
   // 9. Missing mean variants: 5-score table (desk) vs 3-score mental (walk)
   if (sub === 'missing_mean') {
     if (text.includes('five') || text.includes('Five') || mode === 'desk') {
-      result.concept = 'Reconstructing Missing Value from Mean of 5 Scores';
+      result.concept = 'Finding a missing score from the mean of 5';
       result.steps = [
-        'Calculate total sum needed for all 5 scores: Target Total = Mean × 5.',
-        'Sum the 4 known scores in the table.',
-        'Subtract the known sum from the target total: Missing Score = Target Total − Known Sum.'
+        'Total of all 5 scores = mean × 5.',
+        'Add the 4 scores you know from the table.',
+        'Missing score = total − the 4 scores you know.'
       ];
-      result.check = 'Add all 5 scores together and divide by 5; the result must equal the given mean.';
+      result.check = 'Add all 5 scores and divide by 5. You should get the mean.';
     } else {
-      result.concept = 'Finding a Missing Value from the Mean of 3 Scores';
+      result.concept = 'Finding a missing score from the mean of 3';
       result.steps = [
-        'Calculate total sum of all 3 scores: Target Total = Mean × 3.',
-        'Add the 2 known scores together.',
-        'Subtract the sum of the 2 known scores from the target total.'
+        'Total of all 3 scores = mean × 3.',
+        'Add the 2 scores you know.',
+        'Missing score = total − the 2 scores you know.'
       ];
-      result.check = 'Sum all 3 scores and divide by 3 to verify the mean.';
+      result.check = 'Add all 3 scores and divide by 3. You should get the mean.';
     }
   }
 
   // 10. Data comparison variants: bar chart readings (desk) vs survey counts (walk)
   if (sub === 'data_comparison') {
     if (text.includes('bar chart') || mode === 'desk') {
-      result.concept = 'Reading and Comparing Bar Chart Heights';
+      result.concept = 'Reading and comparing bar charts';
       result.steps = [
-        'Calibrate the vertical axis: check what each grid line represents.',
-        'Read the bar heights for both requested categories.',
-        'Subtract the smaller value from the larger value to find the difference.'
+        'Check the scale: work out what each line on the axis is worth.',
+        'Read the heights of the two bars you need.',
+        'Take the smaller number away from the bigger one.'
       ];
-      result.check = 'Confirm the prompt asks "how many more", which requires subtraction, not addition.';
+      result.check = '‘How many more’ means find the difference by taking away, not by adding.';
     } else {
-      result.concept = 'Comparing Two Survey Counts';
+      result.concept = 'Comparing two survey counts';
       result.steps = [
-        'Identify the counts for both groups.',
-        'Subtract the smaller group from the larger group: Difference = Group 1 − Group 2.',
-        '"How many more" always asks for the difference between counts.'
+        'Find the number for each group.',
+        'Take the smaller number away from the bigger one.',
+        '‘How many more’ always asks for the difference.'
       ];
-      result.check = 'Add the difference to the smaller count; it must equal the larger count.';
+      result.check = 'Add your answer to the smaller number. You should get the bigger number.';
     }
   }
 
   // 11. Unit conversion variants: multi-batch mass (desk) vs direct metric conversions (walk)
   if (sub === 'unit_conversion') {
     if (text.includes('batch') || text.includes('batches')) {
-      result.concept = 'Multi-Batch Mass Scaling & Gram-to-Kilogram Conversion';
+      result.concept = 'Total mass in grams, then in kilograms';
       result.steps = [
-        'Calculate the total mass in grams first: Total Grams = Batches × Grams per Batch.',
-        'Convert grams to kilograms by dividing by 1,000 (shift decimal point 3 places left).',
-        'Ensure the answer is expressed in kilograms with required decimal places.'
+        'Work out the total in grams first: number of batches × grams in each batch.',
+        'Change grams to kilograms by dividing by 1000: the digits move three places to the right.',
+        'Your answer may need a decimal, for example 4600 g = 4.6 kg.'
       ];
-      result.check = '1 kg = 1,000 g. A kilogram number must always be 1,000 times smaller than the gram number.';
+      result.check = '1 kg = 1000 g, so the number of kilograms is 1000 times smaller than the number of grams.';
     } else {
-      result.concept = 'Metric Unit Scaling (Grams, Metres, Litres)';
+      result.concept = 'Converting metric units';
       result.steps = [
-        'Identify the metric conversion factor (1 kg = 1,000 g; 1 L = 1,000 ml; 1 m = 100 cm).',
-        'Converting to smaller units makes the count larger: multiply by the conversion factor.',
-        'Converting to larger units makes the count smaller: divide by the conversion factor.'
+        'Find the link between the units: 1 kg = 1000 g, 1 litre = 1000 ml, 1 m = 100 cm.',
+        'Changing to a smaller unit gives a bigger number, so multiply.',
+        'Changing to a bigger unit gives a smaller number, so divide.'
       ];
-      result.check = 'Ask: should there be more or fewer of the new unit?';
+      result.check = 'Ask yourself: should there be more or fewer of the new unit?';
     }
   }
 
   // 12. Time duration variants: 24-hr arrival calculation (desk) vs elapsed minutes (walk)
   if (sub === 'time_duration') {
     if (text.includes('arrive') || text.includes('24-hour')) {
-      result.concept = '24-Hour Clock Arrival Time Calculation';
+      result.concept = 'Working out an arrival time (24-hour clock)';
       result.steps = [
-        'Add full journey hours to departure time first.',
-        'Add remaining minutes, bridging through the 60-minute hour boundary as needed.',
-        'Format in standard 24-hour time notation (HH:MM).'
+        'Add the whole hours of the journey to the start time first.',
+        'Then add the minutes. When you pass 60 minutes, that makes another hour.',
+        'Write the answer on the 24-hour clock, like 09:05 or 17:40.'
       ];
-      result.check = 'Count backwards from the arrival time by the duration to verify the departure time.';
+      result.check = 'Count back from your answer by the journey time. You should reach the start time.';
     } else {
-      result.concept = 'Calculating Elapsed Minutes Across an Hour Boundary';
+      result.concept = 'Counting minutes across the hour';
       result.steps = [
-        'Bridge to the next full hour: count minutes from start time to the next hour (60 − starting minutes).',
-        'Add the minutes after the full hour.',
+        'Count on from the start time to the next o’clock: 60 − the start minutes.',
+        'Then add any whole hours, and the minutes after the last o’clock.',
         'Remember: an hour has 60 minutes, not 100.'
       ];
-      result.check = 'Add elapsed minutes to the start time to confirm the end time.';
+      result.check = 'Add your minutes to the start time. You should reach the end time.';
     }
   }
 
   // 13. Offset reflections, combined reflection + translation, and 90° / 180° rotations
   if (sub === 'mirror_lines_and_rotation') {
+    // The linked worksheet covers reflections only, so rotations go without it.
+    if (text.includes('90°') || text.includes('180°')) { delete result.webTitle; delete result.webUrl; }
     if (text.includes('90°')) {
-      result.concept = '90° Rotation About the Origin';
+      result.concept = 'Turning a point 90° about (0, 0)';
       result.steps = [
-        'Read the point as horizontal and vertical steps from the origin (0, 0).',
-        'Turn both step directions by 90° clockwise: right becomes down and up becomes right.',
-        'Write the new coordinate (y, −x).'
+        'Describe the point as steps from (0, 0): how far right or left, and how far up or down.',
+        'Turn each step a quarter turn clockwise: right becomes down, and up becomes right.',
+        'So (x, y) becomes (y, −x).'
       ];
-      result.check = 'Check that the image is the exact same distance from (0, 0) as the original point and rotated a quarter-turn (90°) around the origin.';
+      result.check = 'The new point should be the same distance from (0, 0), a quarter turn (90°) clockwise from the old one.';
     } else if (text.includes('180°')) {
-      result.concept = '180° Rotation About a Point M';
+      result.concept = 'A half turn (180°) about a point';
       result.steps = [
-        'Find the horizontal and vertical steps from the original point to the centre M.',
-        'Repeat those exact same steps starting from M to reach the image.',
-        'Write the image coordinates as (x, y).'
+        'Count the steps across and up or down from the point to the centre M.',
+        'From M, make exactly the same steps again in the same direction.',
+        'Write where you land as (x, y).'
       ];
-      result.check = 'Verify that the rotation centre M sits halfway between the original point and its image.';
+      result.check = 'The centre M sits halfway between the point and its image.';
     } else if (text.includes('translate')) {
-      result.concept = 'Offset Reflection Followed by Translation';
+      result.concept = 'Reflecting, then moving a point';
       result.steps = [
-        'Reflect in the stated mirror line first (for y = k, keep x unchanged and match the vertical distance on the opposite side of k).',
-        'Check that the intermediate reflected point and original point are equal distances from the mirror line.',
-        'Apply the translation step to that reflected point.'
+        'Reflect first. For a horizontal mirror line (like y = 3), x stays the same: count to the line, then the same distance past it.',
+        'Check the point and its reflection are the same distance from the mirror line.',
+        'Then move the reflected point as the question says.'
       ];
-      result.check = 'Verify the reflection step first (the mirror line lies halfway between start and intermediate point), then apply the translation shift separately.';
+      result.check = 'Check each part on its own: the mirror line should sit halfway between the start and the reflected point. Then check the move.';
     } else {
-      result.concept = 'Reflection in an Offset Mirror Line (x = k or y = k)';
+      result.concept = 'Reflecting in a mirror line that is not an axis';
       result.steps = [
-        'Identify whether the mirror line is vertical (x = k) or horizontal (y = k).',
-        'Measure how many units the point sits away from that mirror line.',
-        'Step the exact same distance onto the opposite side of the mirror line.'
+        'Is the mirror line vertical (like x = 2) or horizontal (like y = 3)?',
+        'Count how many squares the point is from the mirror line.',
+        'Go the same number of squares past the line, on the other side.'
       ];
-      result.check = 'Verify that the mirror line sits halfway between the original point and its reflected image.';
+      result.check = 'The mirror line sits halfway between the point and its reflection.';
     }
   }
 

@@ -5,7 +5,7 @@ import { checkAnswer } from '../js/validate.js';
 import { dailyPlan, skillProgress, skillKey, followUp, listPapers, paperQuestions, practiceBank, pacedMinutes } from '../js/practice.js';
 import { diagram, TOPICS, answerText } from '../js/content.js';
 import { METHOD_NOTES } from '../js/method-notes.js';
-import { getTutorial } from '../js/tutorials.js';
+import { getTutorial, TUTORIALS } from '../js/tutorials.js';
 import { worksheetHtml } from '../js/print.js';
 import { initState, recordResult, getProgress, getBookmarks, resetAll, getSettings, localDate, saveDaily } from '../js/state.js';
 import { getPlan } from '../js/daily.js';
@@ -246,8 +246,8 @@ test('tutorial guidance matches the specific question variant across modes', () 
 
   const qRemFrac = questions.find(q => q.id === 139);
   const qDirFrac = questions.find(q => q.id === 9);
-  assert.ok(getTutorial(qRemFrac).concept.includes('Remainder'));
-  assert.ok(getTutorial(qDirFrac).concept.includes('Unitary Method'));
+  assert.match(getTutorial(qRemFrac).concept, /what is left/);
+  assert.match(getTutorial(qDirFrac).concept, /fraction of an amount/);
 });
 
 test('chart data is hidden from sighted readers but available to assistive technology', () => {
@@ -399,6 +399,34 @@ test('tutorial guidance does not contradict the new question types', () => {
   assert.match(tutorialFor(301).steps.join(' '), /cannot be decided/);
   assert.match(tutorialFor(307).steps.join(' '), /360°/);
   assert.doesNotMatch(tutorialFor(211).steps.join(' '), /\b15\b|\b25\b/);
+  for (const id of [66, 70, 74]) {
+    const t = tutorialFor(id);
+    assert.doesNotMatch([...t.steps, t.check].join(' '), /gate|metres/, `Q${id} is a plain rectangle measured in centimetres`);
+  }
+});
+test('tutorial titles, steps and checks use plain words and practice links open the matching topic page', () => {
+  for (const t of [...Object.values(TUTORIALS), ...questions.map(q => getTutorial(q)).filter(Boolean)]) {
+    assert.ok(t.concept.length <= 55, `"${t.concept}" is too long for a child-facing title`);
+    assert.doesNotMatch(t.concept, /hierarch|mensuration|orthogonal|protocol|partitioning|invariance|bookkeeping|rectilinear|cartesian|displacement|chronolog|decomposition|inventory|reconstruct/i);
+    for (const line of [...t.steps, t.check]) {
+      assert.doesNotMatch(line, /\b(execute|evaluate|calibrate|isolate|deconstruct|inventory|outflow|inflow|complementary|magnitude|intermediate|substitute|determine|verify|requested|recombine|decompose|partial products?)\b|_new|_orig|\^2/i, `"${t.concept}": ${line}`);
+    }
+    if (!t.webUrl) { assert.equal(t.webTitle, undefined, `"${t.concept}" has a link title but no link`); continue; }
+    // A dated topic page, never the site-wide index that every link used to share.
+    assert.match(t.webUrl, /^https:\/\/corbettmaths(primary)?\.com\/\d{4}\/\d{2}\/\d{2}\/[\w-]+\/$/, `"${t.concept}" should link to a topic page`);
+    assert.match(t.webTitle, /practice questions$/);
+  }
+});
+test('tutorial steps and checks never show the answer to the question they appear with', () => {
+  for (const q of questions) {
+    const t = getTutorial(q);
+    // Q122's answer is 60 minutes; the 60 in its tutorial is the hours-to-minutes factor.
+    if (!t || q.id === 122) continue;
+    const answer = String(q.options ? q.options[q.answer_index] : q.answer).replace(/−/g, '-').replace(q.unit && q.unit !== '%' ? q.unit : '§', '').trim();
+    if (!/^-?\d{2,}%?$|^\d+\/\d+$/.test(answer)) continue; // Single digits appear naturally in method steps.
+    const text = [...t.steps, t.check].join(' ').replace(/−/g, '-');
+    assert.doesNotMatch(text, new RegExp(`(^|[^\\d./])${answer.replace(/[/%]/g, '\\$&')}(?![\\d/]|\\.\\d)`), `Q${q.id}'s tutorial shows its answer, ${answer}`);
+  }
 });
 
 test('Walk Mode mistake notes describe working that gives the chosen value', () => {
@@ -461,7 +489,7 @@ test('3-year Nonsuch review topics are covered across both NWSSEE and SET writte
   // Transformation tutorial sanity checks match each transformation type
   assert.match(getTutorial(byId(450)).check, /90°/);
   assert.doesNotMatch(getTutorial(byId(450)).check, /halfway between/);
-  assert.match(getTutorial(byId(449)).check, /intermediate point/);
+  assert.match(getTutorial(byId(449)).check, /reflected point/);
   assert.match(getTutorial(byId(448)).check, /mirror line sits halfway/);
   assert.match(getTutorial(byId(480)).check, /centre M sits halfway/);
   assert.match(getTutorial(byId(425)).check, /drain/);
