@@ -25,15 +25,18 @@ import { topicOptions } from './content.js';
 async function main() {
   // Show loading overlay (it's visible by default in HTML)
   const overlay = document.getElementById('loading-overlay');
+  let loadingQuestions = false;
 
   try {
     // Initialise state first (schema version check / migration)
     initState();
 
     // Fetch question bank
+    loadingQuestions = true;
     const response = await fetch('data/questions.json');
     if (!response.ok) throw new Error(`Failed to load questions: ${response.status}`);
     const questions = await response.json();
+    loadingQuestions = false;
     for (const id of ['walk-topic-filter', 'desk-topic-filter']) {
       document.getElementById(id).innerHTML = topicOptions();
     }
@@ -58,14 +61,27 @@ async function main() {
 
   } catch (err) {
     console.error('11+ Maths Vault — startup error:', err);
-    overlay.innerHTML = `
-      <p style="color:#ef4444; text-align:center; padding:2rem; max-width:400px">
-        <strong>Could not load questions.</strong><br><br>
-        Make sure you're running the app through a local server (not directly from the file system).<br><br>
-        <code style="font-size:0.8rem; color:#94a3b8">python3 -m http.server</code><br>
-        then open <code style="font-size:0.8rem; color:#94a3b8">http://localhost:8000</code>
-      </p>`;
+    _showStartupError(overlay, loadingQuestions);
   }
+}
+
+// Families get a plain explanation and a retry. Setup help appears only when the page is opened as a file.
+function _showStartupError(overlay, loadingQuestions) {
+  const [title, message] = !loadingQuestions
+    ? ['Something went wrong', 'The app couldn’t start. Please try again.']
+    : navigator.onLine === false
+      ? ['You’re offline', 'Connect to the internet, then try again. Once the app has loaded online, it works offline too.']
+      : ['The questions didn’t load', 'Check your internet connection, then try again.'];
+  overlay.innerHTML = `
+    <div class="startup-error">
+      <p class="startup-error__title">${title}</p>
+      <p>${message}</p>
+      <button type="button" class="btn btn--primary-desk" id="startup-retry-btn">Try again</button>
+      ${location.protocol === 'file:' ? '<p class="muted">Opening the files directly? Serve this folder instead, for example with <code>python3 -m http.server</code>, then visit http://localhost:8000.</p>' : ''}
+    </div>`;
+  const retry = overlay.querySelector('#startup-retry-btn');
+  retry.addEventListener('click', () => window.location.reload());
+  retry.focus();
 }
 
 // ── Settings screen ───────────────────────────────────────────

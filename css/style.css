@@ -1258,6 +1258,8 @@ img { display: block; max-width: 100%; }
   transition: opacity 300ms ease;
 }
 .loading-overlay.hidden { opacity: 0; pointer-events: none; }
+.startup-error { max-width: 26rem; padding: var(--space-8); text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--space-3); }
+.startup-error__title { color: var(--color-text); font-size: var(--text-lg); font-weight: 600; }
 
 .loading-spinner {
   width: 40px;
